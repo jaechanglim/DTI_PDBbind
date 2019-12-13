@@ -109,6 +109,10 @@ class MolDataset(Dataset):
         with open(self.data_dir+'/'+key, 'rb') as f:
             m1, m2 = pickle.load(f)
         
+        #Remove hydrogens
+        m1 = Chem.RemoveHs(m1)
+        m2 = Chem.RemoveHs(m2)
+
         #extract valid amino acids
         m2 = extract_valid_amino_acid(m2, self.amino_acids)
         #if m2 is None : return None
@@ -124,42 +128,42 @@ class MolDataset(Dataset):
         axis = np.random.uniform(-1,1,3)
         m1_rot = rotate(copy.deepcopy(m1), angle, axis, True)
         
-        Y = self.id_to_y[key]
+        affinity = self.id_to_y[key]
    
         #prepare ligand
         n1 = m1.GetNumAtoms()
         d1 = np.array(m1.GetConformers()[0].GetPositions())
         d1_rot = np.array(m1_rot.GetConformers()[0].GetPositions())
         adj1 = GetAdjacencyMatrix(m1)+np.eye(n1)
-        H1 = get_atom_feature(m1, True)
+        h1 = get_atom_feature(m1, True)
 
         #prepare protein
         n2 = m2.GetNumAtoms()
         c2 = m2.GetConformers()[0]
         d2 = np.array(c2.GetPositions())
         adj2 = GetAdjacencyMatrix(m2)+np.eye(n2)
-        H2 = get_atom_feature(m2, False)
+        h2 = get_atom_feature(m2, False)
             
         #prepare distance vector
-        dm = dm_vector(d1,d2)
-        dm_rot = dm_vector(d1_rot,d2)
+        dmv = dm_vector(d1,d2)
+        dmv_rot = dm_vector(d1_rot,d2)
 
         #node indice for aggregation
         valid = np.ones((n1+n2,))
         #pIC50 to class
         #Y = 1 if Y > 6 else 0
-        Y = -Y
+        affinity = -affinity
         
         #if n1+n2 > 300 : return None
         sample = {
-                  'H1':H1, \
-                  'A1': adj1, \
-                  'H2':H2, \
-                  'A2': adj2, \
-                  'DM': dm, \
-                  'DM_rot': dm_rot, \
-                  'V': valid, \
-                  'Y': Y, \
+                  'h1':h1, \
+                  'adj1': adj1, \
+                  'h2':h2, \
+                  'adj2': adj2, \
+                  'dmv': dmv, \
+                  'dmv_rot': dmv_rot, \
+                  'valid': valid, \
+                  'affinity': affinity, \
                   'key': key, \
                   }
 
@@ -183,42 +187,42 @@ class DTISampler(Sampler):
 
 def my_collate_fn(batch):
     n_valid_items = len([0 for item in batch if item is not None])
-    max_natoms1 = max([len(item['H1']) for item in batch if item is not None])
-    max_natoms2 = max([len(item['H2']) for item in batch if item is not None])
+    max_natoms1 = max([len(item['h1']) for item in batch if item is not None])
+    max_natoms2 = max([len(item['h2']) for item in batch if item is not None])
     
-    H1 = np.zeros((n_valid_items, max_natoms1, 56))
-    H2 = np.zeros((n_valid_items, max_natoms2, 56))
-    A1 = np.zeros((n_valid_items, max_natoms1, max_natoms1))
-    A2 = np.zeros((n_valid_items, max_natoms2, max_natoms2))
-    DM = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
-    DM_rot = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
-    V = np.zeros((n_valid_items, max_natoms1+max_natoms2))
-    Y = np.zeros((n_valid_items,))
+    h1 = np.zeros((n_valid_items, max_natoms1, 56))
+    h2 = np.zeros((n_valid_items, max_natoms2, 56))
+    adj1 = np.zeros((n_valid_items, max_natoms1, max_natoms1))
+    adj2 = np.zeros((n_valid_items, max_natoms2, max_natoms2))
+    dmv = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
+    dmv_rot = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
+    valid = np.zeros((n_valid_items, max_natoms1+max_natoms2))
+    affinity = np.zeros((n_valid_items,))
     keys = []
     i = 0
     for j in range(len(batch)):
         if batch[j] is None : continue
-        natom1 = len(batch[j]['H1'])
-        natom2 = len(batch[j]['H2'])
+        natom1 = len(batch[j]['h1'])
+        natom2 = len(batch[j]['h2'])
         
-        H1[i,:natom1] = batch[j]['H1']
-        A1[i,:natom1,:natom1] = batch[j]['A1']
-        H2[i,:natom2] = batch[j]['H2']
-        A2[i,:natom2,:natom2] = batch[j]['A2']
-        DM[i,:natom1,:natom2] = batch[j]['DM']
-        DM_rot[i,:natom1,:natom2] = batch[j]['DM_rot']
-        V[i,:natom1+natom2] = batch[j]['V']
-        Y[i] = batch[j]['Y']
+        h1[i,:natom1] = batch[j]['h1']
+        adj1[i,:natom1,:natom1] = batch[j]['adj1']
+        h2[i,:natom2] = batch[j]['h2']
+        adj2[i,:natom2,:natom2] = batch[j]['adj2']
+        dmv[i,:natom1,:natom2] = batch[j]['dmv']
+        dmv_rot[i,:natom1,:natom2] = batch[j]['dmv_rot']
+        valid[i,:natom1+natom2] = batch[j]['valid']
+        affinity[i] = batch[j]['affinity']
         keys.append(batch[j]['key'])
         i+=1
 
-    H1 = torch.from_numpy(H1).float()
-    A1 = torch.from_numpy(A1).float()
-    H2 = torch.from_numpy(H2).float()
-    A2 = torch.from_numpy(A2).float()
-    DM = torch.from_numpy(DM).float()
-    DM_rot = torch.from_numpy(DM_rot).float()
-    V = torch.from_numpy(V).float()
-    Y = torch.from_numpy(Y).float()
+    h1 = torch.from_numpy(h1).float()
+    adj1 = torch.from_numpy(adj1).float()
+    h2 = torch.from_numpy(h2).float()
+    adj2 = torch.from_numpy(adj2).float()
+    dmv = torch.from_numpy(dmv).float()
+    dmv_rot = torch.from_numpy(dmv_rot).float()
+    valid = torch.from_numpy(valid).float()
+    affinity = torch.from_numpy(affinity).float()
     
-    return H1, A1, H2, A2, DM, DM_rot, V, Y, keys
+    return h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity, keys

@@ -5,7 +5,7 @@ random.seed(0)
 import numpy as np
 from dataset import MolDataset, DTISampler, my_collate_fn
 from torch.utils.data import DataLoader                                     
-from model import DTIPredictor
+import model 
 import os
 import torch
 import time
@@ -29,11 +29,12 @@ parser.add_argument('--ngpu', help = 'ngpu', type = int, default = 1)
 parser.add_argument('--save_dir', help = 'save directory', type = str) 
 parser.add_argument('--restart_file', help = 'restart file', type = str) 
 parser.add_argument('--filename', help='filename', \
-        type = str, default='/home/wykgroup/jaechang/work/data/pdbbind_v2016_refined-set/index/INDEX_refined_data.2016')
+        type = str, default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind/pdb_to_affinity.txt')
 parser.add_argument('--train_output_filename', help='train output filename', type = str, default='train.txt')
 parser.add_argument('--test_output_filename', help='test output filename', type = str, default='test.txt')
 parser.add_argument('--key_dir', help='key directory', type = str, default='keys')
-parser.add_argument('--data_dir', help='data file path', type = str, default='../data_pdbbind/data/')
+parser.add_argument('--data_dir', help='data file path', type = str, \
+                    default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind/data/')
 parser.add_argument("--filter_spacing", help="filter spacing", type=float, default=0.1)
 parser.add_argument("--filter_gamma", help="filter gamma", type=float, default=10)
 parser.add_argument("--dropout_rate", help="dropout rate", type=float, default=0.0)
@@ -47,9 +48,9 @@ os.makedirs(args.save_dir, exist_ok=True)
 
 #Read labels
 with open(args.filename) as f:
-    lines = f.readlines()[6:]
+    lines = f.readlines()
     lines = [l.split() for l in lines]
-    id_to_y = {l[0]:float(l[3]) for l in lines}
+    id_to_y = {l[0]:float(l[1]) for l in lines}
 
 with open(args.key_dir+'/train_keys.pkl', 'rb') as f:
     train_keys = pickle.load(f)
@@ -60,7 +61,7 @@ with open(args.key_dir+'/test_keys.pkl', 'rb') as f:
 #Model
 cmd = utils.set_cuda_visible_device(args.ngpu)
 os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
-model = DTIPredictor(args)
+model = model.DTILJPredictor(args)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = utils.initialize_model(model, device, args.restart_file)
 
@@ -79,7 +80,6 @@ test_data_loader = DataLoader(test_dataset, args.batch_size, \
 optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, \
                              weight_decay=args.weight_decay)
 loss_fn = nn.MSELoss()
-
 
 #train
 for epoch in range(args.num_epochs):
@@ -102,17 +102,16 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(train_data_loader):
         model.zero_grad()
         if sample is None : continue
-        H1, A1, H2, A2, DM, DM_rot, V, Y, keys = sample
+        h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity, keys = sample
 
-        H1, A1, H2, A2, DM, DM_rot, V, Y = \
-                H1.to(device), A1.to(device), H2.to(device), A2.to(device), \
-                DM.to(device), DM_rot.to(device), \
-                V.to(device), Y.to(device)
-        pred1 = model(H1, A1, H2, A2, DM, V)
-        pred2 = model(H1, A1, H2, A2, DM_rot, V)
-        #print ('pred1', torch.max(pred1), torch.min(pred1)) 
-        #print ('pred2', torch.max(pred2), torch.min(pred2)) 
-        loss1 = loss_fn(pred1, Y)
+        h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity = \
+                h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
+                dmv.to(device), dmv_rot.to(device), \
+                valid.to(device), affinity.to(device)
+        pred1 = model(h1, adj1, h2, adj2, dmv, valid)
+        pred2 = model(h1, adj1, h2, adj2, dmv_rot, valid)
+        
+        loss1 = loss_fn(pred1, affinity)
         loss2 = torch.mean(torch.max(torch.zeros_like(pred2), pred1.detach()-pred2+10))
         loss = loss1+loss2*args.loss2_ratio
         
@@ -122,41 +121,40 @@ for epoch in range(args.num_epochs):
         optimizer.step()
         train_losses1.append(loss1.data.cpu().numpy())
         train_losses2.append(loss2.data.cpu().numpy())
-        Y = Y.data.cpu().numpy()
+        affinity = affinity.data.cpu().numpy()
         pred1 = pred1.data.cpu().numpy()
 
         for i in range(len(keys)):
             train_pred1[keys[i]] = pred1[i]
             train_pred2[keys[i]] = pred2[i]
-            train_true[keys[i]] = Y[i]
-            #if pred1[i]>0: print (keys[i], pred1[i], Y[i])
+            train_true[keys[i]] = affinity[i]
     
     model.eval()
     for i_batch, sample in enumerate(test_data_loader):
         model.zero_grad()
         if sample is None : continue
-        H1, A1, H2, A2, DM, DM_rot, V, Y, keys = sample
+        h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity, keys = sample
 
-        H1, A1, H2, A2, DM, DM_rot, V, Y = \
-                H1.to(device), A1.to(device), H2.to(device), A2.to(device), \
-                DM.to(device), DM_rot.to(device),\
-                V.to(device), Y.to(device)
-        with torch.no_grad(): 
-            pred1 = model(H1, A1, H2, A2, DM, V)
-            pred2 = model(H1, A1, H2, A2, DM_rot, V)
-
-        loss1 = loss_fn(pred1, Y)
+        h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity = \
+                h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
+                dmv.to(device), dmv_rot.to(device), \
+                valid.to(device), affinity.to(device)
+        with torch.no_grad():
+            pred1 = model(h1, adj1, h2, adj2, dmv, valid)
+            pred2 = model(h1, adj1, h2, adj2, dmv_rot, valid)
+        
+        loss1 = loss_fn(pred1, affinity)
         loss2 = torch.mean(torch.max(torch.zeros_like(pred2), pred1.detach()-pred2+10))
         loss = loss1+loss2
         test_losses1.append(loss1.data.cpu().numpy())
         test_losses2.append(loss2.data.cpu().numpy())
-        Y = Y.data.cpu().numpy()
+        affinity = affinity.data.cpu().numpy()
         pred1 = pred1.data.cpu().numpy()
 
         for i in range(len(keys)):
             test_pred1[keys[i]] = pred1[i]
             test_pred2[keys[i]] = pred2[i]
-            test_true[keys[i]] = Y[i]
+            test_true[keys[i]] = affinity[i]
 
     #Write prediction
     w_train = open(args.train_output_filename, 'w')
