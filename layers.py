@@ -36,6 +36,7 @@ class MPNN(torch.nn.Module):
         retval = retval.view(x1.size(0), x1.size(1), x1.size(2))
         return retval
 
+
 class EdgeConv(torch.nn.Module):
     def __init__(self, n_edge_feature, n_atom_feature):
         super(EdgeConv, self).__init__()
@@ -45,19 +46,40 @@ class EdgeConv(torch.nn.Module):
         self.M = nn.Linear(n_edge_feature+n_atom_feature, n_atom_feature)
 
     def forward(self, x1, x2, edge, valid_edge):
+        """
+        Dimensions of each variable
+        x1 = [, n_mol1_atom, n_property(args.dim_gnn)]
+        x2 = [, n_mol2_atom, n_property]
+        edge = [, n_mol1_atom, n_mol2_atom, 3]
+        valid_edge = [, n_mol1_atom, n_mol2_atom]
+        new_edge = [, n_mol1_atom, n_mol2_atom, n_property + 3(x,y,z)]
+        m1 = [, n_mol1_atom, n_property]
+        m2 = [, n_mol1_atom, n_property]
+        retval = [, n_mol1_atom, n_property]
 
-        #new_edge = x2.unsqueeze(1).repeat(1,x1.size(1),1,1)
+        1. new_edge -> concat information between mol2 and edge vector
+        2. m1 -> embed the mol1's information
+        3. m2 -> maximum values of certain properties among elements of mol2 at each element in mol1
+        4. relu(m1 + m2) -> return value and this becomes next molecule's information(new_h1 | new_h2)
+
+        :param x1: atom feature matrix one-hot vector of ligand molecule after node embedding
+        :param x2: atom feature matrix one-hot vector of protein molecule after node embedding
+        :param edge: distance matrix between every atoms of m1 and m2
+        :param valid_edge: distance(sum of square of distance matrix) between each molecule's atom
+        :return: message-passed molecule information vector same size with X1
+        """
         new_edge = torch.cat([x2.unsqueeze(1).repeat(1,x1.size(1),1,1), edge], -1)                      
         retval = 0
 
         m1 = self.W(x1)
         #m2 = (self.M(new_edge)*valid_edge.unsqueeze(-1).\
         #                    repeat(1,1,1,m1.size(-1))).max(2)[0]
-        m2 = (self.M(new_edge)*valid_edge.unsqueeze(-1).\
-                            repeat(1,1,1,m1.size(-1))).max(2)[0]
+        m2 = (self.M(new_edge)*
+                valid_edge.unsqueeze(-1).repeat(1,1,1,m1.size(-1))).max(2)[0]
         retval = F.relu(m1+m2)
 
         return retval
+
 
 class IntraNet(torch.nn.Module):
     def __init__(self, n_atom_feature, n_edge_feature):
@@ -93,31 +115,50 @@ class IntraNet(torch.nn.Module):
 
         return retval
 
+
 class GAT_gate(torch.nn.Module):
     def __init__(self, n_in_feature, n_out_feature):
         super(GAT_gate, self).__init__()
         self.W = nn.Linear(n_in_feature, n_out_feature)
         #self.A = nn.Parameter(torch.Tensor(n_out_feature, n_out_feature))
         self.A = nn.Parameter(torch.zeros(size=(n_out_feature, n_out_feature)))
-        self.gate = nn.Linear(n_out_feature*2, 1)
+        self.gate = nn.Linear(n_in_feature + n_out_feature, 1)
         self.leakyrelu = nn.LeakyReLU(0.2)
 
     def forward(self, x, adj):
-        
+        """
+        -graph attention gate
+        h = WX [n_atom * n_out_feature]
+        e = WXA * tr(WX) + tr(WXA * tr(WX)) [n_atom * n_atom]
+        attention = Softmax(torch.where(adj > 1e-6, e, zero_vec) * adj [n_atom * n_atom]
+            => if adjacency element's value bigger than 1e-6(if certain relation exists) then attention value becomes e's element at same location else zero vector's element at same location
+        self.gate(x + zero_vec) [n_atom * 1]
+        h_prime = relu(attention * h) [n_atom * n_out_feature]
+        coeff = Sigmoid(self.gate(x + zero_vec)).repeat(1, 1, X.size(-1)) [n_atom * n_in_feature]
+            => working as coefficient indicating importance ratio between X and att_result. Coefficient multiplies same attention values to all elements in single row.
+        return coeff * X + (1-coeff) * h_prime
+        choose attention component via tr(WXB + tr(WX)) that component at the same place
+        in adjacency matrix has bigger value than 1e-6 then apply softmax function to
+        attention matrix, multiply adjacency matrix to that then multiply it with WX
+        :param x:   atom feature one-hot vector of ligand or protein molecule
+        :param adj: adjacency matrix of ligand or protein molecule
+        :return:    attention-multiplied matrix
+        """
         h = self.W(x)
         e = torch.einsum('ijl,ikl->ijk', (torch.matmul(h,self.A), h))
         e = e + e.permute((0,2,1))
-        zero_vec = -9e15*torch.ones_like(e)
+        zero_vec = -9e15*torch.ones_like(e) # to make softmax result value to zero
         attention = torch.where(adj > 1e-6, e, zero_vec)
         attention = F.softmax(attention, dim=-1)
         #attention = F.dropout(attention, self.dropout, training=self.training)
         #h_prime = torch.matmul(attention, h)
         attention = attention*adj
         h_prime = F.relu(torch.einsum('aij,ajk->aik',(attention, h)))
-       
+
         coeff = torch.sigmoid(self.gate(torch.cat([x,h_prime], -1))).repeat(1,1,x.size(-1))
         retval = coeff*x+(1-coeff)*h_prime
         return retval
+
 
 class GConv_gate(torch.nn.Module):
     def __init__(self, n_in_feature, n_out_feature):
@@ -126,6 +167,16 @@ class GConv_gate(torch.nn.Module):
         self.gate = nn.Linear(n_out_feature*2, 1)
     
     def forward(self, x, adj):
+        """
+        - graph convolution gate
+        gc_result = relu(Adj * (WX))
+        alpha = sigmoid(gc_result).repeat(1, 1, X.size(-1))
+                working as coefficient indicating importance ratio between X and gc_result
+        return alpha * X + (1-alpha) * gc_result
+        :param x:   atom feature one-hot vector of ligand or protein molecule
+        :param adj: adjacency matrix of ligand or protein molecule
+        :return:    graph convolution resulting matrix
+        """
         m = self.W(x)
         m = F.relu(torch.einsum('xjk,xkl->xjl', (adj.clone(), m)))
         coeff = torch.sigmoid(self.gate(torch.cat([x,m], -1))).repeat(1,1,x.size(-1))
@@ -134,11 +185,11 @@ class GConv_gate(torch.nn.Module):
         #x = torch.bmm(adj, x)
         return retval
 
+
 class ConcreteDropout(nn.Module):
     def __init__(self, weight_regularizer=1e-6,
                  dropout_regularizer=1e-5, init_min=0.1, init_max=0.1):
         super(ConcreteDropout, self).__init__()
-
         
         self.weight_regularizer = weight_regularizer
         self.dropout_regularizer = dropout_regularizer
