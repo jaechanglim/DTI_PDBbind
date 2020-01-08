@@ -68,11 +68,20 @@ class DTILJPredictor(torch.nn.Module):
         h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1)
         h = torch.cat([h1_repeat, h2_repeat], -1)
         
-        A = self.cal_A(h).squeeze(-1)*2
-        B = self.cal_B(h).squeeze(-1)*2
-        C = self.cal_C(h).squeeze(-1)*4+1
+        A = self.cal_A(h).squeeze(-1)*4
+        B = self.cal_B(h).squeeze(-1)*4
+        C = self.cal_C(h).squeeze(-1)*4
         
         retval = A*(torch.pow(1-torch.exp(-B*(dm-C)),2)-1)
+        """
+        for i in range(retval.size(1)):
+            for j in range(retval.size(2)):
+                if abs(retval[0,i,j].item()) > 0.01:
+                    print (i, j, retval[0,i,j].item(), dm[0,i,j].item())
+        retval = retval.sum(1).sum(1)
+        print (retval)
+        exit(-1)
+        """                
         retval = retval.sum(1).sum(1)
         return retval
 

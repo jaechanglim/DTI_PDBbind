@@ -12,6 +12,7 @@ import time
 import torch.nn as nn
 import pickle
 from sklearn.metrics import r2_score, roc_auc_score
+from scipy import stats
 from collections import Counter
 import sys
 import glob
@@ -83,6 +84,7 @@ for i_batch, sample in enumerate(test_data_loader):
             h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
             dmv.to(device), dmv_rot.to(device), \
             valid.to(device), affinity.to(device)
+    #print (keys)
     with torch.no_grad():
         pred1 = model(h1, adj1, h2, adj2, dmv, valid)
         pred2 = model(h1, adj1, h2, adj2, dmv_rot, valid)
@@ -114,9 +116,11 @@ test_losses2 = np.mean(np.array(test_losses2))
 #Cal R2
 test_r2 = r2_score([test_true[k] for k in test_true.keys()], \
         [test_pred1[k] for k in test_true.keys()])
-
-
+#Cal R
+slope, intercept, r_value, p_value, std_err = stats.linregress(\
+                [test_true[k] for k in test_true.keys()], \
+                [test_pred1[k] for k in test_true.keys()])
 end = time.time()
-print ("%.3f\t%.3f\t%.3f\t%.3f" \
-    %(test_losses1, test_losses2, test_r2, end-st))
+print ("%.3f\t%.3f\t%.3f\t%.3f\t%.3f" \
+    %(test_losses1, test_losses2, test_r2, r_value, end-st))
     
