@@ -56,7 +56,7 @@ class DTILJPredictor(torch.nn.Module):
         adj12[adj12>1e-3] = 1
         adj12[adj12<1e-3] = 0
         
-        dm[dm<DM_min] = 1e10
+        dm[dm<DM_min] = 1e10 # to ignore too small values that makes morse potential diverge
         
         for i in range(len(self.edgeconv)):
             new_h1 = self.edgeconv[i](h1, h2, dmv, adj12 )
