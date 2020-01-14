@@ -1,6 +1,5 @@
 import argparse
 import random
-random.seed(0)
 import numpy as np
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
@@ -10,9 +9,7 @@ import time
 import torch.nn as nn
 import pickle
 from sklearn.metrics import r2_score, roc_auc_score
-from collections import Counter
-import sys
-import glob
+from scipy import stats
 
 import utils
 import model 
@@ -32,7 +29,6 @@ parser.add_argument('--save_dir', help='save directory', type=str)
 parser.add_argument('--exp_name', help='experiment name', type=str)
 parser.add_argument('--restart_file', help='restart file', type=str) 
 parser.add_argument('--filename', help='filename', \
-        type = str, default='/home/udg/msh/urp/DTI_PDBbind/pdb_to_affinity.txt')
 parser.add_argument('--train_output_filename', help='train output filename', type=str, default='train.txt')
 parser.add_argument('--test_output_filename', help='test output filename', type=str, default='test.txt')
 parser.add_argument('--key_dir', help='key directory', type=str, default='keys')
@@ -42,7 +38,9 @@ parser.add_argument("--filter_spacing", help="filter spacing", type=float, defau
 parser.add_argument("--filter_gamma", help="filter gamma", type=float, default=10)
 parser.add_argument("--dropout_rate", help="dropout rate", type=float, default=0.0)
 parser.add_argument("--loss2_ratio", help="loss2 ratio", type=float, default=1.0)
-
+parser.add_argument("--potential", help="potential", type=str, 
+                    default='morse_all_pair', 
+                    choices=['morse', 'harmonic', 'morse_all_pair'])
 args = parser.parse_args()
 print (args)
 
@@ -64,11 +62,19 @@ with open(args.key_dir+'/test_keys.pkl', 'rb') as f:
 #Model
 cmd = utils.set_cuda_visible_device(args.ngpu)
 os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
-model = model.DTILJPredictor(args)
+
+if args.potential=='morse': model = model.DTIMorse(args)
+elif args.potential=='morse_all_pair': model = model.DTIMorseAllPair(args)
+elif args.potential=='harmonic': model = model.DTIHarmonic(args)
+else: 
+    print (f'No {args.potential} potential')
+    exit(-1)
+
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = utils.initialize_model(model, device, args.restart_file)
 
-print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p.requires_grad))
+print ('number of parameters : ', sum(p.numel() for p in model.parameters() 
+                    if p.requires_grad))
 
 #Dataloader
 train_dataset = MolDataset(train_keys, args.data_dir, id_to_y)
@@ -107,14 +113,14 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(train_data_loader):
         model.zero_grad()
         if sample is None : continue
-        h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity, keys = sample
+        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, valid, affinity, keys = sample
 
-        h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity = \
+        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, valid, affinity = \
                 h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-                dmv.to(device), dmv_rot.to(device), \
+                A_int.to(device), dmv.to(device), dmv_rot.to(device), \
                 valid.to(device), affinity.to(device)
-        pred1 = model(h1, adj1, h2, adj2, dmv, valid)
-        pred2 = model(h1, adj1, h2, adj2, dmv_rot, valid)
+        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, valid).sum(-1)
+        pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, valid).sum(-1)
         
         loss1 = loss_fn(pred1, affinity)
         loss2 = torch.mean(torch.max(torch.zeros_like(pred2), pred1.detach()-pred2+10)) # only consider the prediction values of rotated molecules that difference of value between two molecules are less than 10
@@ -133,7 +139,7 @@ for epoch in range(args.num_epochs):
             train_pred1[keys[i]] = pred1[i]
             train_pred2[keys[i]] = pred2[i]
             train_true[keys[i]] = affinity[i]
-        
+
         tmp_ttime = time.time()
         train_batch_time = tmp_ttime - tmp_st
         tmp_st = tmp_ttime
@@ -153,18 +159,19 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(test_data_loader):
         model.zero_grad()
         if sample is None : continue
-        h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity, keys = sample
+        h1, adj1, h2, adj2, dmv, A_int, dmv_rot, valid, affinity, keys = sample
 
-        h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity = \
+        h1, adj1, h2, adj2, dmv, A_int, dmv_rot, valid, affinity = \
                 h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-                dmv.to(device), dmv_rot.to(device), \
+                A_int.to(device), dmv.to(device), dmv_rot.to(device), \
                 valid.to(device), affinity.to(device)
         with torch.no_grad():
-            pred1 = model(h1, adj1, h2, adj2, dmv, valid)
-            pred2 = model(h1, adj1, h2, adj2, dmv_rot, valid)
+            pred1 = model(h1, adj1, h2, adj2, A_int, dmv, valid).sum(-1)
+            pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, valid).sum(-1)
         
         loss1 = loss_fn(pred1, affinity)
-        loss2 = torch.mean(torch.max(torch.zeros_like(pred2), pred1.detach()-pred2+10))
+        loss2 = torch.mean(torch.max(torch.zeros_like(pred2), 
+                            pred1.detach()-pred2+10))
         loss = loss1+loss2
         test_losses1.append(loss1.data.cpu().numpy())
         test_losses2.append(loss2.data.cpu().numpy())
@@ -175,6 +182,7 @@ for epoch in range(args.num_epochs):
             test_pred1[keys[i]] = pred1[i]
             test_pred2[keys[i]] = pred2[i]
             test_true[keys[i]] = affinity[i]
+        #if i_batch>2: break 
 
         tmp_etime = time.time()
         eval_batch_time = tmp_etime - tmp_st
@@ -198,9 +206,9 @@ for epoch in range(args.num_epochs):
     w_test = open(os.path.join("output", args.exp_name + "_" + args.test_output_filename), 'a')
     
     for k in train_pred1.keys():
-        w_train.write(f'{k}\t{train_true[k]}\t{train_pred1[k]}\t{train_pred2[k]}\n')
+        w_train.write(f'{k}\t{train_true[k]:.3f}\t{train_pred1[k]:.3f}\t{train_pred2[k]:.3f}\n')
     for k in test_pred1.keys():
-        w_test.write(f'{k}\t{test_true[k]}\t{test_pred1[k]}\t{test_pred2[k]}\n')
+        w_test.write(f'{k}\t{test_true[k]:.3f}\t{test_pred1[k]:.3f}\t{test_pred2[k]:.3f}\n')
     end = time.time()
     
     w_train.close()
@@ -212,7 +220,15 @@ for epoch in range(args.num_epochs):
     test_r2 = r2_score([test_true[k] for k in test_true.keys()], \
             [test_pred1[k] for k in test_true.keys()])
 
+    #Cal R 
+    _, _, test_r, _, _ = \
+            stats.linregress([test_true[k] for k in test_true.keys()],                        
+                            [test_pred1[k] for k in test_true.keys()])
+    _, _, train_r, _, _ = \
+            stats.linregress([train_true[k] for k in train_true.keys()],                        
+                            [train_pred1[k] for k in train_true.keys()])
     end = time.time()
+
     print ("epoch: {} train_losses1: {:.4f} train_losses2: {:.4f} test_losses1: {:.4f} test_losses2: {:.4f} train_r2: {:.4f} test_r2: {:.3f} time: {:.3f}"\
             .format(epoch, train_base_loss, train_ss_loss, eval_base_loss, eval_ss_loss, train_r2, test_r2, end-st))
     

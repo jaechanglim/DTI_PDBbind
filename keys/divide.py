@@ -10,15 +10,24 @@ import time
 import sys
 random.seed(0)
 
-keys = glob.glob('../../data_pdbbind/data/*')[:]
+def count_interactions(fn):
+    with open(fn, 'rb') as f:
+        m1, m2, interaction_data = pickle.load(f)
+    n_int = 0
+    for k in interaction_data:
+        n_int+=len(interaction_data[k])
+    return n_int
+
+keys = glob.glob('../../data_pdbbind2/data/*')[:]
+keys = [k for k in keys if count_interactions(k)>0]
 keys = [k.split('/')[-1] for k in keys]
 #print (keys)
-with open('../../data_pdbbind/train_pdbs.txt') as f:
+with open('../../data_pdbbind2/train_pdbs.txt') as f:
     lines = f.readlines()
     lines = [l.strip() for l in lines]
     train_keys = sorted(list( set(keys) & set(lines)))
 
-with open('../../data_pdbbind/test_pdbs.txt') as f:
+with open('../../data_pdbbind2/test_pdbs.txt') as f:
     lines = f.readlines()
     lines = [l.strip() for l in lines]
     test_keys = sorted(list( set(keys) & set(lines)))
