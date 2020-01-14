@@ -122,7 +122,32 @@ def extract_valid_amino_acid(m, amino_acids):
         else:
             ret_m = CombineMols(ret_m, valid_ms[i])
     return ret_m
-                
+
+def position_to_index(positions, target_position):
+    indice = np.where(np.all(positions==target_position,axis=1))[0]
+    diff = positions-np.expand_dims(np.array(target_position), 0)
+    diff = np.sum(np.power(diff, 2), -1)
+    indice = np.where(diff<1e-6)[0]
+    return indice.tolist()
+
+def get_interaction_matrix(d1, d2, interaction_data, interaction_types):
+    n1, n2 = len(d1), len(d2) 
+
+    A = np.zeros((len(interaction_types), n1, n2))
+    for i_type,k in enumerate(interaction_types):
+        for ps in interaction_data[k]:
+            p1, p2 = ps
+            i1 = position_to_index(d1, p1)
+            i2 = position_to_index(d2, p2)
+            if len(i1)==0:
+                i1 = position_to_index(d1, p2)
+                i2 = position_to_index(d2, p1)
+            if len(i1)==0 or len(i2)==0:
+                pass
+            else:
+                i1, i2 = i1[0], i2[0]
+                A[i_type, i1, i2] = 1
+    return A
 
 class MolDataset(Dataset):
     """
@@ -160,7 +185,9 @@ class MolDataset(Dataset):
         self.amino_acids = ['ALA','ARG','ASN','ASP','ASX','CYS','GLU','GLN','GLX',\
                    'GLY','HIS','ILE','LEU','LYS','MET','PHE','PRO','SER',\
                    'THR','TRP','TYR','VAL']
-
+        self.interaction_types = ['saltbridge', 'hbonds', 'pication', 
+                'pistack', 'halogen', 'waterbridge', 'hydrophobic']
+    
     def __len__(self):
         return len(self.keys)
 
@@ -172,8 +199,9 @@ class MolDataset(Dataset):
         4. get adjacency matrix, conformer, atom feature from two rotated molecules, m1 and m2
         """
         key = self.keys[idx]
+        #key = '1x8r'
         with open(self.data_dir+'/'+key, 'rb') as f:
-            m1, m2 = pickle.load(f)
+            m1, m2, interaction_data = pickle.load(f)
         
         #Remove hydrogens
         m1 = Chem.RemoveHs(m1)
@@ -187,8 +215,8 @@ class MolDataset(Dataset):
         #random rotation
         angle = np.random.uniform(0,360,1)[0]
         axis = np.random.uniform(-1,1,3)
-        m1 = rotate(m1, angle, axis, False)
-        m2 = rotate(m2, angle, axis, False)
+        #m1 = rotate(m1, angle, axis, False)
+        #m2 = rotate(m2, angle, axis, False)
         
         angle = np.random.uniform(0,360,1)[0]
         axis = np.random.uniform(-1,1,3)
@@ -216,17 +244,23 @@ class MolDataset(Dataset):
         dmv_rot = dm_vector(d1_rot,d2)
 
         #node indice for aggregation
-        valid = np.ones((n1+n2,))
+        valid = np.ones((n1,))
         #pIC50 to class
         #Y = 1 if Y > 6 else 0
         affinity = -affinity
-        
+        A_int = get_interaction_matrix(d1, d2, interaction_data, 
+                self.interaction_types) 
         #if n1+n2 > 300 : return None
+        #print (np.sum(A_int))
+        #print (interaction_data)
+        #print (np.sum(A_int))
+        #exit(-1)
         sample = {
                   'h1':h1, \
                   'adj1': adj1, \
                   'h2':h2, \
                   'adj2': adj2, \
+                  'A_int': A_int, \
                   'dmv': dmv, \
                   'dmv_rot': dmv_rot, \
                   'valid': valid, \
@@ -278,9 +312,10 @@ def my_collate_fn(batch):
     h2 = np.zeros((n_valid_items, max_natoms2, 56))
     adj1 = np.zeros((n_valid_items, max_natoms1, max_natoms1))
     adj2 = np.zeros((n_valid_items, max_natoms2, max_natoms2))
+    A_int = np.zeros((n_valid_items, 7, max_natoms1, max_natoms2))
     dmv = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
     dmv_rot = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
-    valid = np.zeros((n_valid_items, max_natoms1+max_natoms2))
+    valid = np.zeros((n_valid_items, max_natoms1))
     affinity = np.zeros((n_valid_items,))
     keys = []
     i = 0
@@ -293,9 +328,10 @@ def my_collate_fn(batch):
         adj1[i,:natom1,:natom1] = batch[j]['adj1']
         h2[i,:natom2] = batch[j]['h2']
         adj2[i,:natom2,:natom2] = batch[j]['adj2']
+        A_int[i,:,:natom1,:natom2] = batch[j]['A_int']
         dmv[i,:natom1,:natom2] = batch[j]['dmv']
         dmv_rot[i,:natom1,:natom2] = batch[j]['dmv_rot']
-        valid[i,:natom1+natom2] = batch[j]['valid']
+        valid[i,:natom1] = batch[j]['valid']
         affinity[i] = batch[j]['affinity']
         keys.append(batch[j]['key'])
         i+=1
@@ -306,7 +342,8 @@ def my_collate_fn(batch):
     adj2 = torch.from_numpy(adj2).float()
     dmv = torch.from_numpy(dmv).float()
     dmv_rot = torch.from_numpy(dmv_rot).float()
+    A_int = torch.from_numpy(A_int).float()
     valid = torch.from_numpy(valid).float()
     affinity = torch.from_numpy(affinity).float()
     
-    return h1, adj1, h2, adj2, dmv, dmv_rot, valid, affinity, keys
+    return h1, adj1, h2, adj2, A_int, dmv, dmv_rot, valid, affinity, keys
