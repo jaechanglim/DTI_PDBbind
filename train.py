@@ -29,11 +29,12 @@ parser.add_argument('--save_dir', help='save directory', type=str)
 parser.add_argument('--exp_name', help='experiment name', type=str)
 parser.add_argument('--restart_file', help='restart file', type=str) 
 parser.add_argument('--filename', help='filename', \
+                    default='/home/share/DTI_PDBbind/data_pdbbind/pdb_to_affinity.txt')
 parser.add_argument('--train_output_filename', help='train output filename', type=str, default='train.txt')
 parser.add_argument('--test_output_filename', help='test output filename', type=str, default='test.txt')
 parser.add_argument('--key_dir', help='key directory', type=str, default='keys')
 parser.add_argument('--data_dir', help='data file path', type=str, \
-                    default='/home/udg/msh/urp/DTI_PDBbind/data/')
+                    default='/home/share/DTI_PDBbind/data_pdbbind/data/')
 parser.add_argument("--filter_spacing", help="filter spacing", type=float, default=0.1)
 parser.add_argument("--filter_gamma", help="filter gamma", type=float, default=10)
 parser.add_argument("--dropout_rate", help="dropout rate", type=float, default=0.0)
