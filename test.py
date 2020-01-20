@@ -85,29 +85,40 @@ model.eval()
 for i_batch, sample in enumerate(test_data_loader):
     model.zero_grad()
     if sample is None : continue
-    h1, adj1, h2, adj2, A_int, dmv, dmv_rot, valid, affinity, keys = sample
-    #print (A_int.sum())
-    h1, adj1, h2, adj2, A_int, dmv, dmv_rot, valid, affinity = \
+    h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
+    affinity, sasa, dsasa, rotor, charge1, charge2, \
+    vdw_radius1, vdw_radius2, valid1, valid2, \
+    no_metal1, no_metal2, keys = sample
+
+    h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
+    affinity, sasa, dsasa, rotor, charge1, charge2, \
+    vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
             h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
             A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-            valid.to(device), affinity.to(device)
+            affinity.to(device), sasa.to(device), \
+            dsasa.to(device), rotor.to(device), \
+            charge1.to(device), charge2.to(device), \
+            vdw_radius1.to(device), vdw_radius2.to(device), \
+            valid1.to(device), valid2.to(device), \
+            no_metal1.to(device), no_metal2.to(device), \
+
     with torch.no_grad():
-        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, valid)
-        pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, valid)
-    #print (pred1) 
+        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
+                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+                    valid1, valid2, no_metal1, no_metal2)
     affinity = affinity.data.cpu().numpy()
     pred1 = pred1.data.cpu().numpy()
-    pred2 = pred2.data.cpu().numpy()
+    #pred2 = pred2.data.cpu().numpy()
     
     for i in range(len(keys)):
         test_pred1[keys[i]] = pred1[i]
-        test_pred2[keys[i]] = pred2[i]
+        #test_pred2[keys[i]] = pred2[i]
         test_true[keys[i]] = affinity[i]
     #if i_batch>2: break
 #Write prediction
 w_test = open(args.test_output_filename, 'w')
 
-for k in test_pred1.keys():
+for k in sorted(test_pred1.keys()):
     w_test.write(f'{k}\t{test_true[k]:.3f}\t')
     w_test.write(f'{test_pred1[k].sum():.3f}\t')
     for j in range(test_pred1[k].shape[0]):

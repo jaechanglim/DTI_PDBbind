@@ -14,8 +14,14 @@ import pickle
 from ase import Atoms, Atom
 from rdkit.Chem.rdmolops import CombineMols
 from rdkit.Chem.rdmolops import SplitMolByPDBResidues
+from rdkit.Chem import rdFreeSASA
+from rdkit.Chem.rdMolDescriptors import CalcNumRotatableBonds
+from rdkit.Chem import AllChem
 import copy
 random.seed(0)
+
+interaction_types = ['saltbridge', 'hbonds', 'pication', 
+        'pistack', 'halogen', 'waterbridge', 'hydrophobic', 'metal_complexes']
 
 def one_of_k_encoding(x, allowable_set):
     if x not in allowable_set:
@@ -130,7 +136,7 @@ def position_to_index(positions, target_position):
     indice = np.where(diff<1e-6)[0]
     return indice.tolist()
 
-def get_interaction_matrix(d1, d2, interaction_data, interaction_types):
+def get_interaction_matrix(d1, d2, interaction_data):
     n1, n2 = len(d1), len(d2) 
 
     A = np.zeros((len(interaction_types), n1, n2))
@@ -148,6 +154,46 @@ def get_interaction_matrix(d1, d2, interaction_data, interaction_types):
                 i1, i2 = i1[0], i2[0]
                 A[i_type, i1, i2] = 1
     return A
+
+def classifyAtoms(mol, polar_atoms=[7,8,15,16]):
+	#Taken from https://github.com/mittinatten/freesasa/blob/master/src/classifier.c
+	symbol_radius = {"H": 1.10, "C": 1.70, "N": 1.55, "O": 1.52, "P": 1.80, 
+        "S": 1.80, "SE": 1.90,
+	"F": 1.47, "CL": 1.75, "BR": 1.83, "I": 1.98,
+	"LI": 1.81, "BE": 1.53, "B": 1.92,
+	"NA": 2.27, "MG": 1.74, "AL": 1.84, "SI": 2.10,
+	"K": 2.75, "CA": 2.31, "GA": 1.87, "GE": 2.11, "AS": 1.85,
+	"RB": 3.03, "SR": 2.49, "IN": 1.93, "SN": 2.17, "SB": 2.06, "TE": 2.06}
+
+	radii = [] 
+	for atom in mol.GetAtoms():
+		atom.SetProp("SASAClassName", "Apolar") # mark everything as apolar to start
+		if atom.GetAtomicNum() in polar_atoms: #identify polar atoms and change their marking
+			atom.SetProp("SASAClassName", "Polar") # mark as polar
+		elif atom.GetAtomicNum() == 1:
+			if atom.GetBonds()[0].GetOtherAtom(atom).GetAtomicNum() \
+                                in polar_atoms:
+				atom.SetProp("SASAClassName", "Polar") # mark as polar
+		radii.append(symbol_radius[atom.GetSymbol().upper()])
+	return(radii)
+
+def cal_sasa(m):
+    radii = rdFreeSASA.classifyAtoms(m)
+    radii = classifyAtoms(m)
+    #radii = rdFreeSASA.classifyAtoms(m1)
+    sasa=rdFreeSASA.CalcSASA(m, radii, 
+            query=rdFreeSASA.MakeFreeSasaAPolarAtomQuery())
+    return sasa
+
+def get_vdw_radius(a):
+    atomic_number = a.GetAtomicNum()
+    atomic_number_to_radius = {6: 1.90, 7: 1.8, 8: 1.7, 16: 2.0, 15:2.1, \
+            9:1.5, 17:1.8, 35: 2.0, 53:2.2}
+    if atomic_number in atomic_number_to_radius.keys():
+        return atomic_number_to_radius[atomic_number]
+    return Chem.GetPeriodicTable().GetRvdw(atomic_number)
+
+
 
 class MolDataset(Dataset):
     """
@@ -185,8 +231,7 @@ class MolDataset(Dataset):
         self.amino_acids = ['ALA','ARG','ASN','ASP','ASX','CYS','GLU','GLN','GLX',\
                    'GLY','HIS','ILE','LEU','LYS','MET','PHE','PRO','SER',\
                    'THR','TRP','TYR','VAL']
-        self.interaction_types = ['saltbridge', 'hbonds', 'pication', 
-                'pistack', 'halogen', 'waterbridge', 'hydrophobic']
+
     
     def __len__(self):
         return len(self.keys)
@@ -201,7 +246,7 @@ class MolDataset(Dataset):
         key = self.keys[idx]
         #key = '1x8r'
         with open(self.data_dir+'/'+key, 'rb') as f:
-            m1, m2, interaction_data = pickle.load(f)
+            m1, m1_uff, m2, interaction_data = pickle.load(f)
         
         #Remove hydrogens
         m1 = Chem.RemoveHs(m1)
@@ -243,18 +288,49 @@ class MolDataset(Dataset):
         dmv = dm_vector(d1,d2)
         dmv_rot = dm_vector(d1_rot,d2)
 
-        #node indice for aggregation
-        valid = np.ones((n1,))
-        #pIC50 to class
-        #Y = 1 if Y > 6 else 0
+        #affinity
         affinity = -affinity
-        A_int = get_interaction_matrix(d1, d2, interaction_data, 
-                self.interaction_types) 
-        #if n1+n2 > 300 : return None
-        #print (np.sum(A_int))
-        #print (interaction_data)
-        #print (np.sum(A_int))
-        #exit(-1)
+
+        #get interaction matrix
+        A_int = get_interaction_matrix(d1, d2, interaction_data)
+
+        #cal sasa
+        sasa = cal_sasa(m1)
+        dsasa = sasa-cal_sasa(m1_uff)
+        
+        #count rotatable bonds
+        rotor = CalcNumRotatableBonds(m1)
+
+        #charge
+        AllChem.ComputeGasteigerCharges(m1)
+        AllChem.ComputeGasteigerCharges(m2)
+        charge1 = [float(m1.GetAtomWithIdx(i).GetProp('_GasteigerCharge')) \
+                         for i in range(m1.GetNumAtoms())]
+        charge2 = [float(m2.GetAtomWithIdx(i).GetProp('_GasteigerCharge')) \
+                         for i in range(m2.GetNumAtoms())]
+
+        #partial charge calculated by gasteiger
+        charge1 = np.array(charge1)
+        charge2 = np.array(charge2)
+
+        #There is nan for some cases.
+        charge1 = np.nan_to_num(charge1, nan=0, neginf=0, posinf=0)
+        charge2 = np.nan_to_num(charge2, nan=0, neginf=0, posinf=0)
+
+        #valid
+        valid1 = np.ones((n1,))
+        valid2 = np.ones((n2,))
+
+        #no metal
+        metal_symbols = ['Zn', 'Mn', 'Co', 'Mg', 'Ni', 'Fe', 'Ca', 'Cu']
+        no_metal1 = np.array([1 if a.GetSymbol() not in metal_symbols else 0 
+                for a in m1.GetAtoms()])
+        no_metal2 = np.array([1 if a.GetSymbol() not in metal_symbols else 0 
+                for a in m2.GetAtoms()])
+        #vdw radius
+        vdw_radius1 = np.array([get_vdw_radius(a) for a in m1.GetAtoms()])
+        vdw_radius2 = np.array([get_vdw_radius(a) for a in m2.GetAtoms()])
+
         sample = {
                   'h1':h1, \
                   'adj1': adj1, \
@@ -263,8 +339,18 @@ class MolDataset(Dataset):
                   'A_int': A_int, \
                   'dmv': dmv, \
                   'dmv_rot': dmv_rot, \
-                  'valid': valid, \
                   'affinity': affinity, \
+                  'sasa': sasa, \
+                  'dsasa': dsasa, \
+                  'rotor': rotor, \
+                  'charge1': charge1, \
+                  'charge2': charge2, \
+                  'vdw_radius1': vdw_radius1, \
+                  'vdw_radius2': vdw_radius2, \
+                  'valid1': valid1, \
+                  'valid2': valid2, \
+                  'no_metal1': no_metal1, \
+                  'no_metal2': no_metal2, \
                   'key': key, \
                   }
 
@@ -312,11 +398,22 @@ def my_collate_fn(batch):
     h2 = np.zeros((n_valid_items, max_natoms2, 56))
     adj1 = np.zeros((n_valid_items, max_natoms1, max_natoms1))
     adj2 = np.zeros((n_valid_items, max_natoms2, max_natoms2))
-    A_int = np.zeros((n_valid_items, 7, max_natoms1, max_natoms2))
+    A_int = np.zeros((n_valid_items, len(interaction_types),
+        max_natoms1, max_natoms2))
     dmv = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
     dmv_rot = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
-    valid = np.zeros((n_valid_items, max_natoms1))
     affinity = np.zeros((n_valid_items,))
+    sasa = np.zeros((n_valid_items,))
+    dsasa = np.zeros((n_valid_items,))
+    rotor = np.zeros((n_valid_items,))
+    charge1 = np.zeros((n_valid_items, max_natoms1))
+    charge2 = np.zeros((n_valid_items, max_natoms2))
+    vdw_radius1 = np.zeros((n_valid_items, max_natoms1))
+    vdw_radius2 = np.zeros((n_valid_items, max_natoms2))
+    valid1 = np.zeros((n_valid_items, max_natoms1))
+    valid2 = np.zeros((n_valid_items, max_natoms2))
+    no_metal1 = np.zeros((n_valid_items, max_natoms1))
+    no_metal2 = np.zeros((n_valid_items, max_natoms2))
     keys = []
     i = 0
     for j in range(len(batch)):
@@ -331,8 +428,18 @@ def my_collate_fn(batch):
         A_int[i,:,:natom1,:natom2] = batch[j]['A_int']
         dmv[i,:natom1,:natom2] = batch[j]['dmv']
         dmv_rot[i,:natom1,:natom2] = batch[j]['dmv_rot']
-        valid[i,:natom1] = batch[j]['valid']
         affinity[i] = batch[j]['affinity']
+        sasa[i] = batch[j]['sasa']
+        dsasa[i] = batch[j]['dsasa']
+        rotor[i] = batch[j]['rotor']
+        charge1[i,:natom1] = batch[j]['charge1']
+        charge2[i,:natom2] = batch[j]['charge2']
+        vdw_radius1[i,:natom1] = batch[j]['vdw_radius1']
+        vdw_radius2[i,:natom2] = batch[j]['vdw_radius2']
+        valid1[i,:natom1] = batch[j]['valid1']
+        valid2[i,:natom2] = batch[j]['valid2']
+        no_metal1[i,:natom1] = batch[j]['no_metal1']
+        no_metal2[i,:natom2] = batch[j]['no_metal2']
         keys.append(batch[j]['key'])
         i+=1
 
@@ -343,7 +450,21 @@ def my_collate_fn(batch):
     dmv = torch.from_numpy(dmv).float()
     dmv_rot = torch.from_numpy(dmv_rot).float()
     A_int = torch.from_numpy(A_int).float()
-    valid = torch.from_numpy(valid).float()
     affinity = torch.from_numpy(affinity).float()
-    
-    return h1, adj1, h2, adj2, A_int, dmv, dmv_rot, valid, affinity, keys
+    sasa = torch.from_numpy(sasa).float()
+    dsasa = torch.from_numpy(dsasa).float()
+    rotor = torch.from_numpy(rotor).float()
+    charge1 = torch.from_numpy(charge1).float()
+    charge2 = torch.from_numpy(charge2).float()
+    vdw_radius1 = torch.from_numpy(vdw_radius1).float()
+    vdw_radius2 = torch.from_numpy(vdw_radius2).float()
+    valid1 = torch.from_numpy(valid1).float()
+    valid2 = torch.from_numpy(valid2).float()
+    no_metal1 = torch.from_numpy(no_metal1).float()
+    no_metal2 = torch.from_numpy(no_metal2).float()
+
+    return h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
+           affinity, sasa, dsasa, rotor, charge1, charge2, \
+           vdw_radius1, vdw_radius2, valid1, valid2, \
+           no_metal1, no_metal2, keys\
+
