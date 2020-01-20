@@ -141,7 +141,7 @@ for epoch in range(args.num_epochs):
         loss1 = loss_fn(pred1, affinity)
         # only consider the prediction values of rotated molecules 
         #that difference of value between two molecules are less than 10
-        loss2 = torch.mean(torch.max(torch.zeros_like(pred2), \
+        loss2 = torch.mean(torch.max(torch.zeros_like(pred2), 
                 pred1.detach()-pred2+10)) 
         loss = loss1+loss2*args.loss2_ratio
         loss.backward()
