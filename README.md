@@ -1,6 +1,6 @@
 # DTI_PDBbind
 
-#Train command
+* Train command
 ```
 python -u ../train.py --batch_size=8 \
                    --save_dir=save_harmonic \
@@ -19,32 +19,32 @@ python -u ../train.py --batch_size=8 \
                    > output_harmonic
 ```
 
-#Benchmark command
+* Benchmark command
 ```
 python -u ../benchmark.py > output_benchmark 2> /dev/null
 ```
 
-#Csar1
+* Csar1
 ```
 grep 'R:' test_csar1*
 ```
 
-#Csar1
+* Csar2
 ```
-grep 'R:' test_csar1*
+grep 'R:' test_csar2*
 ```
 
-#Scoring power
+* Scoring power
 ```
 grep 'R:' 'test_casf2013_scoring_power_harmonic_*'
 ```
 
-#Ranking power
+* Ranking power
 ```
 python ../casf2013_benchmark/ranking_power.py result_casf2013_scoring_power_harmonic_200
 ```
 
-#docking power
+* docking power
 ```
 python ../casf2013_benchmark/docking_power.py 'result_casf2013_docking_power_harmonic_*' result_casf2013_scoring_power_harmonic_0
 ```
