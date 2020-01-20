@@ -138,14 +138,15 @@ for epoch in range(args.num_epochs):
                 rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
                 valid1, valid2, no_metal1, no_metal2)
         
-        loss1 = loss_fn(pred1, affinity)
+        loss1 = loss_fn(pred1.sum(-1), affinity)
         # only consider the prediction values of rotated molecules 
         #that difference of value between two molecules are less than 10
-        loss2 = torch.mean(torch.max(torch.zeros_like(pred2), 
-                pred1.detach()-pred2+10)) 
+        loss2 = torch.mean(torch.max(torch.zeros_like(pred2.sum(-1)), 
+                            pred1.sum(-1).detach()-pred2.sum(-1)+10))
         loss = loss1+loss2*args.loss2_ratio
         loss.backward()
-        nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        
+        #nn.utils.clip_grad_norm_(model.parameters(), 1.0)
 
         optimizer.step()
         train_losses1.append(loss1.data.cpu().numpy())
