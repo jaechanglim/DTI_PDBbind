@@ -1,9 +1,8 @@
 import argparse
-import utils
+import random
 import numpy as np
-from dataset import MolDataset, DTISampler, my_collate_fn
-from torch.utils.data import DataLoader                                     
-import model 
+from torch.utils.data import DataLoader
+from torch.utils.tensorboard import SummaryWriter
 import os
 import torch
 import time
@@ -12,36 +11,34 @@ import pickle
 from sklearn.metrics import r2_score, roc_auc_score
 from scipy import stats
 
+import utils
+import model 
+from dataset import MolDataset, DTISampler, my_collate_fn
+
 parser = argparse.ArgumentParser() 
-parser.add_argument('--lr', help="learning rate", type=float, default = 1e-4)
+parser.add_argument('--lr', help="learning rate", type=float, default=1e-4)
 parser.add_argument("--lr_decay", help="learning rate decay", type=float, default=1.0)
-parser.add_argument("--weight_decay", help="weight decay", type=float, default = 0.0)
-parser.add_argument('--num_epochs', help='number of epochs', type = int, default = 10000)
-parser.add_argument('--batch_size', help='batch size', type = int, default = 1)
-parser.add_argument('--num_workers', help = 'number of workers', type = int, default = 7) 
-parser.add_argument('--dim_gnn', help = 'dim_gnn', type = int, default = 32) 
-parser.add_argument("--n_gnn", help="depth of gnn layer", type=int, default = 3)
-parser.add_argument('--ngpu', help = 'ngpu', type = int, default = 1) 
-parser.add_argument('--save_dir', help = 'save directory', type = str) 
-parser.add_argument('--restart_file', help = 'restart file', type = str) 
+parser.add_argument("--weight_decay", help="weight decay", type=float, default=0.0)
+parser.add_argument('--num_epochs', help='number of epochs', type=int, default=100)
+parser.add_argument('--batch_size', help='batch size', type=int, default=1)
+parser.add_argument('--num_workers', help='number of workers', type=int, default=7) 
+parser.add_argument('--dim_gnn', help='dim_gnn', type=int, default=32) 
+parser.add_argument("--n_gnn", help="depth of gnn layer", type=int, default=3)
+parser.add_argument('--ngpu', help='ngpu', type=int, default=1) 
+parser.add_argument('--save_dir', help='save directory', type=str)
+parser.add_argument('--exp_name', help='experiment name', type=str)
+parser.add_argument('--restart_file', help='restart file', type=str) 
 parser.add_argument('--filename', help='filename', \
-        type = str, default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind/pdb_to_affinity.txt')
-parser.add_argument('--train_output_filename', help='train output filename', 
-                    type = str, default='train.txt')
-parser.add_argument('--test_output_filename', help='test output filename', 
-                    type = str, default='test.txt')
-parser.add_argument('--key_dir', help='key directory', type = str, 
-                    default='keys')
-parser.add_argument('--data_dir', help='data file path', type = str, \
-                    default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind/data/')
-parser.add_argument("--filter_spacing", help="filter spacing", type=float, 
-                     default=0.1)
-parser.add_argument("--filter_gamma", help="filter gamma", type=float, 
-                    default=10)
-parser.add_argument("--dropout_rate", help="dropout rate", type=float, 
-                    default=0.0)
-parser.add_argument("--loss2_ratio", help="loss2 ratio", type=float, 
-                    default=1.0)
+                    default='/home/share/DTI_PDBbind/data_pdbbind/pdb_to_affinity.txt')
+parser.add_argument('--train_output_filename', help='train output filename', type=str, default='train.txt')
+parser.add_argument('--test_output_filename', help='test output filename', type=str, default='test.txt')
+parser.add_argument('--key_dir', help='key directory', type=str, default='keys')
+parser.add_argument('--data_dir', help='data file path', type=str, \
+                    default='/home/share/DTI_PDBbind/data_pdbbind/data/')
+parser.add_argument("--filter_spacing", help="filter spacing", type=float, default=0.1)
+parser.add_argument("--filter_gamma", help="filter gamma", type=float, default=10)
+parser.add_argument("--dropout_rate", help="dropout rate", type=float, default=0.0)
+parser.add_argument("--loss2_ratio", help="loss2 ratio", type=float, default=1.0)
 parser.add_argument("--potential", help="potential", type=str, 
                     default='morse_all_pair', 
                     choices=['morse', 'harmonic', 'morse_all_pair'])
@@ -49,7 +46,7 @@ args = parser.parse_args()
 print (args)
 
 #Make directory for save files
-os.makedirs(args.save_dir, exist_ok=True)
+os.makedirs(os.path.join(args.save_dir, args.exp_name), exist_ok=True)
 
 #Read labels
 with open(args.filename) as f:
@@ -95,9 +92,11 @@ optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, \
 loss_fn = nn.MSELoss()
 
 #train
+writer = SummaryWriter(os.path.join("runs", args.exp_name))
 for epoch in range(args.num_epochs):
     st = time.time()
-    
+    tmp_st = st
+
     train_losses1 = []
     train_losses2 = []
     test_losses1 = []
@@ -139,12 +138,14 @@ for epoch in range(args.num_epochs):
                 rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
                 valid1, valid2, no_metal1, no_metal2)
         
-        loss1 = loss_fn(pred1.sum(-1), affinity)
-        loss2 = torch.mean(torch.max(torch.zeros_like(pred2.sum(-1)), 
-                            pred1.sum(-1).detach()-pred2.sum(-1)+10))
+        loss1 = loss_fn(pred1, affinity)
+        # only consider the prediction values of rotated molecules 
+        #that difference of value between two molecules are less than 10
+        loss2 = torch.mean(torch.max(torch.zeros_like(pred2), \
+                pred1.detach()-pred2+10)) 
         loss = loss1+loss2*args.loss2_ratio
         loss.backward()
-        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        nn.utils.clip_grad_norm_(model.parameters(), 1.0)
 
         optimizer.step()
         train_losses1.append(loss1.data.cpu().numpy())
@@ -156,7 +157,21 @@ for epoch in range(args.num_epochs):
             train_pred1[keys[i]] = pred1[i]
             train_pred2[keys[i]] = pred2[i]
             train_true[keys[i]] = affinity[i]
-        #if i_batch>2: break 
+
+        tmp_ttime = time.time()
+        train_batch_time = tmp_ttime - tmp_st
+        tmp_st = tmp_ttime
+        print('TRAIN epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
+                .format(epoch, loss1, loss2, loss, train_batch_time))
+
+    train_base_loss = np.mean(np.array(train_losses1))
+    train_ss_loss = np.mean(np.array(train_losses2))
+    train_total_loss = train_base_loss + train_ss_loss*args.loss2_ratio
+    writer.add_scalars('train',
+                       {'loss': train_base_loss,
+                        'self_sup_loss': train_ss_loss,
+                        'total_loss': train_total_loss},
+                       epoch)
 
     model.eval()
     for i_batch, sample in enumerate(test_data_loader):
@@ -202,10 +217,27 @@ for epoch in range(args.num_epochs):
             test_true[keys[i]] = affinity[i]
         #if i_batch>2: break 
 
-    #Write prediction
-    w_train = open(args.train_output_filename, 'w')
-    w_test = open(args.test_output_filename, 'w')
+        tmp_etime = time.time()
+        eval_batch_time = tmp_etime - tmp_st
+        tmp_st = tmp_etime
+        print('EVAL epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
+                .format(epoch, loss1, loss2, loss, eval_batch_time))
 
+    eval_base_loss = np.mean(np.array(test_losses1))
+    eval_ss_loss = np.mean(np.array(test_losses2))
+    eval_total_loss = eval_base_loss + eval_ss_loss*args.loss2_ratio
+    writer.add_scalars('eval',
+                       {'loss': eval_base_loss,
+                        'self_sup_loss': eval_ss_loss,
+                        'total_loss': eval_total_loss},
+                       epoch)
+
+    #Write prediction
+    if not os.path.exists("output"):
+        os.mkdir("output")
+    w_train = open(os.path.join("output", args.exp_name + "_" + args.train_output_filename), 'a')
+    w_test = open(os.path.join("output", args.exp_name + "_" + args.test_output_filename), 'a')
+    
     for k in train_pred1.keys():
         w_train.write(f'{k}\t{train_true[k]:.3f}\t')
         w_train.write(f'{train_pred1[k].sum():.3f}\t')
@@ -227,12 +259,6 @@ for epoch in range(args.num_epochs):
     w_train.close()
     w_test.close()
 
-    #Cal loss
-    train_losses1 = np.mean(np.array(train_losses1))
-    train_losses2 = np.mean(np.array(train_losses2))
-    test_losses1 = np.mean(np.array(test_losses1))
-    test_losses2 = np.mean(np.array(test_losses2))
-
     #Cal R2
     train_r2 = r2_score([train_true[k] for k in train_true.keys()], \
             [train_pred1[k].sum() for k in train_true.keys()])
@@ -247,12 +273,11 @@ for epoch in range(args.num_epochs):
             stats.linregress([train_true[k] for k in train_true.keys()],                        
                             [train_pred1[k].sum() for k in train_true.keys()])
     end = time.time()
-    print (f"{epoch}\t{train_losses1:.3f}\t{train_losses2:.3f}\t"+ 
-           f"{test_losses1:.3f}\t{test_losses2:.3f}\t" +
-           f"{train_r2:.3f}\t{test_r2:.3f}\t"+
-           f"{train_r:.3f}\t{test_r:.3f}\t{end-st:.3f}")
+
+    print ("epoch: {} train_losses1: {:.4f} train_losses2: {:.4f} test_losses1: {:.4f} test_losses2: {:.4f} train_r2: {:.4f} test_r2: {:.3f} time: {:.3f}"\
+            .format(epoch, train_base_loss, train_ss_loss, eval_base_loss, eval_ss_loss, train_r2, test_r2, end-st))
     
-    name = args.save_dir+'/save_'+str(epoch)+'.pt'
+    name = os.path.join(args.save_dir, args.exp_name, 'save_'+str(epoch)+'.pt')
     torch.save(model.state_dict(), name)
     
     lr = args.lr * ((args.lr_decay)**epoch)

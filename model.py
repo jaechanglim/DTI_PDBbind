@@ -83,7 +83,7 @@ class DTIMorse(torch.nn.Module):
         adj12[adj12>1e-3] = 1
         adj12[adj12<1e-3] = 0
         
-        dm[dm<DM_min] = 1e10
+        dm[dm<DM_min] = 1e10 # to ignore too small values that makes morse potential diverge
         
         # n_edge_feature = 3
         for i in range(len(self.edgeconv)):

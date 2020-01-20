@@ -26,10 +26,11 @@ parser.add_argument('--ngpu', help = 'ngpu', type = int, default = 1)
 parser.add_argument('--restart_file', help = 'restart file', type = str) 
 parser.add_argument('--filename', help='filename', \
         type = str, default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind/pdb_to_affinity.txt')
+parser.add_argument('--exp_name', help='experiment name', type=str)
 parser.add_argument('--test_output_filename', help='test output filename', type = str, default='test.txt')
 parser.add_argument('--key_dir', help='key directory', type = str, default='keys')
 parser.add_argument('--data_dir', help='data file path', type = str, \
-                    default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind/data/')
+                    default='/home/udg/msh/urp/DTI_PDBbind/data/')
 parser.add_argument("--filter_spacing", help="filter spacing", type=float, default=0.1)
 parser.add_argument("--filter_gamma", help="filter gamma", type=float, default=10)
 parser.add_argument("--potential", help="potential", type=str, 
@@ -116,7 +117,8 @@ for i_batch, sample in enumerate(test_data_loader):
         test_true[keys[i]] = affinity[i]
     #if i_batch>2: break
 #Write prediction
-w_test = open(args.test_output_filename, 'w')
+loaded_epoch = args.restart_epoch.split("_")[-1].split(".")[0]
+w_test = open(os.path.join("output", args.exp_name + "_" + args.test_output_filename.split(".")[0] + "_" + loaded_epoch + args.test_output_filename.split(".")[-1]), 'w')
 
 for k in sorted(test_pred1.keys()):
     w_test.write(f'{k}\t{test_true[k]:.3f}\t')
