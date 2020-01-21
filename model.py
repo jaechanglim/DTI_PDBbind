@@ -176,8 +176,8 @@ class DTIHarmonic(torch.nn.Module):
         
         self.intercept = nn.Parameter(torch.tensor([0.0]))
         self.intercept.requires_grad=False
-        self.sasa_coeff = nn.Parameter(torch.tensor([-0.01]))
-        self.dsasa_coeff = nn.Parameter(torch.tensor([-0.0]))
+        self.sasa_coeff = nn.Parameter(torch.tensor([0.0]))
+        self.dsasa_coeff = nn.Parameter(torch.tensor([0.0]))
         self.rotor_coeff = nn.Parameter(torch.tensor([0.0]))
         self.vdw_coeff = nn.Parameter(torch.tensor([0.0]))
         self.coolomb_coeff = nn.Parameter(torch.tensor([0.0]))
@@ -263,7 +263,7 @@ class DTIHarmonic(torch.nn.Module):
         retval = []
         #A_int[:,6,:,:] = 0.0
         for i in range(self.num_interaction_type):
-            A = self.cal_A[i](h).squeeze(-1)*4+1
+            A = self.cal_A[i](h).squeeze(-1)*4
             #B = (self.cal_B[i](h).squeeze(-1)+1)*self.sigma[i]
             B = (self.cal_B[i](h).squeeze(-1)*3+1)/(4*self.sigma[i]*self.sigma[i])
             energy = A*(B*torch.pow(dm-self.C[i],2)-1)

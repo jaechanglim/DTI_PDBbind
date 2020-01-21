@@ -26,7 +26,7 @@ parser.add_argument('--dim_gnn', help='dim_gnn', type=int, default=32)
 parser.add_argument("--n_gnn", help="depth of gnn layer", type=int, default=3)
 parser.add_argument('--ngpu', help='ngpu', type=int, default=1) 
 parser.add_argument('--save_dir', help='save directory', type=str)
-parser.add_argument('--exp_name', help='experiment name', type=str)
+parser.add_argument('--tensorboard_dir', help='tensorboard directory', type=str)
 parser.add_argument('--restart_file', help='restart file', type=str) 
 parser.add_argument('--filename', help='filename', \
                     default='/home/share/DTI_PDBbind/data_pdbbind/pdb_to_affinity.txt')
@@ -46,7 +46,8 @@ args = parser.parse_args()
 print (args)
 
 #Make directory for save files
-os.makedirs(os.path.join(args.save_dir, args.exp_name), exist_ok=True)
+os.makedirs(args.save_dir, exist_ok=True)
+os.makedirs(args.tensorboard_dir, exist_ok=True)
 
 #Read labels
 with open(args.filename) as f:
@@ -92,7 +93,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, \
 loss_fn = nn.MSELoss()
 
 #train
-writer = SummaryWriter(os.path.join("runs", args.exp_name))
+writer = SummaryWriter(args.tensorboard_dir)
 for epoch in range(args.num_epochs):
     st = time.time()
     tmp_st = st
@@ -162,8 +163,8 @@ for epoch in range(args.num_epochs):
         tmp_ttime = time.time()
         train_batch_time = tmp_ttime - tmp_st
         tmp_st = tmp_ttime
-        print('TRAIN epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
-                .format(epoch, loss1, loss2, loss, train_batch_time))
+        #print('TRAIN epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
+        #        .format(epoch, loss1, loss2, loss, train_batch_time))
 
     train_base_loss = np.mean(np.array(train_losses1))
     train_ss_loss = np.mean(np.array(train_losses2))
@@ -221,8 +222,8 @@ for epoch in range(args.num_epochs):
         tmp_etime = time.time()
         eval_batch_time = tmp_etime - tmp_st
         tmp_st = tmp_etime
-        print('EVAL epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
-                .format(epoch, loss1, loss2, loss, eval_batch_time))
+        #print('EVAL epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
+        #        .format(epoch, loss1, loss2, loss, eval_batch_time))
 
     eval_base_loss = np.mean(np.array(test_losses1))
     eval_ss_loss = np.mean(np.array(test_losses2))
@@ -236,8 +237,8 @@ for epoch in range(args.num_epochs):
     #Write prediction
     if not os.path.exists("output"):
         os.mkdir("output")
-    w_train = open(os.path.join("output", args.exp_name + "_" + args.train_output_filename), 'a')
-    w_test = open(os.path.join("output", args.exp_name + "_" + args.test_output_filename), 'a')
+    w_train = open(args.train_output_filename, 'w')
+    w_test = open(args.test_output_filename, 'w')
     
     for k in train_pred1.keys():
         w_train.write(f'{k}\t{train_true[k]:.3f}\t')
@@ -274,11 +275,16 @@ for epoch in range(args.num_epochs):
             stats.linregress([train_true[k] for k in train_true.keys()],                        
                             [train_pred1[k].sum() for k in train_true.keys()])
     end = time.time()
-
-    print ("epoch: {} train_losses1: {:.4f} train_losses2: {:.4f} test_losses1: {:.4f} test_losses2: {:.4f} train_r2: {:.4f} test_r2: {:.3f} time: {:.3f}"\
-            .format(epoch, train_base_loss, train_ss_loss, eval_base_loss, eval_ss_loss, train_r2, test_r2, end-st))
+    if epoch==0: 
+        print ("epoch\ttrain_losses1\ttrain_losses2\t"+
+               "test_losses1\ttest_losses2\t"+
+               "train_r2\ttest_r2\ttrain_r\ttest_r")
+    print (f"{epoch}\t{train_base_loss:.3f}\t{train_ss_loss:.3f}\t"+
+            f"{eval_base_loss:.3f}\t{eval_ss_loss:.3f}\t"+
+            f"{train_r2:.3f}\t{test_r2:.3f}\t"+
+            f"{train_r:.3f}\t{test_r:.3f}\t{end-st:.3f}")
     
-    name = os.path.join(args.save_dir, args.exp_name, 'save_'+str(epoch)+'.pt')
+    name = os.path.join(args.save_dir, 'save_'+str(epoch)+'.pt')
     torch.save(model.state_dict(), name)
     
     lr = args.lr * ((args.lr_decay)**epoch)
