@@ -12,7 +12,7 @@ random.seed(0)
 
 def count_interactions(fn):
     with open(fn, 'rb') as f:
-        m1, m2, interaction_data = pickle.load(f)
+        m1, m1_uff, m2, interaction_data = pickle.load(f)
     n_int = 0
     for k in interaction_data:
         n_int+=len(interaction_data[k])

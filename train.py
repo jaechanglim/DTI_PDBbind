@@ -115,21 +115,39 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(train_data_loader):
         model.zero_grad()
         if sample is None : continue
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, valid, affinity, keys = sample
+        h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
+        affinity, sasa, dsasa, rotor, charge1, charge2, \
+        vdw_radius1, vdw_radius2, valid1, valid2, \
+        no_metal1, no_metal2, keys = sample
 
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, valid, affinity = \
+        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
+        affinity, sasa, dsasa, rotor, charge1, charge2, \
+        vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
                 h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
                 A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-                valid.to(device), affinity.to(device)
-        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, valid).sum(-1)
-        pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, valid).sum(-1)
+                affinity.to(device), sasa.to(device), \
+                dsasa.to(device), rotor.to(device), \
+                charge1.to(device), charge2.to(device), \
+                vdw_radius1.to(device), vdw_radius2.to(device), \
+                valid1.to(device), valid2.to(device), \
+                no_metal1.to(device), no_metal2.to(device), \
+
+        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
+                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+                valid1, valid2, no_metal1, no_metal2)
+        pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
+                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+                valid1, valid2, no_metal1, no_metal2)
         
-        loss1 = loss_fn(pred1, affinity)
-        loss2 = torch.mean(torch.max(torch.zeros_like(pred2), pred1.detach()-pred2+10)) # only consider the prediction values of rotated molecules that difference of value between two molecules are less than 10
+        loss1 = loss_fn(pred1.sum(-1), affinity)
+        # only consider the prediction values of rotated molecules 
+        #that difference of value between two molecules are less than 10
+        loss2 = torch.mean(torch.max(torch.zeros_like(pred2.sum(-1)), 
+                            pred1.sum(-1).detach()-pred2.sum(-1)+10))
         loss = loss1+loss2*args.loss2_ratio
-        
         loss.backward()
-        nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        
+        #nn.utils.clip_grad_norm_(model.parameters(), 1.0)
 
         optimizer.step()
         train_losses1.append(loss1.data.cpu().numpy())
@@ -161,19 +179,34 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(test_data_loader):
         model.zero_grad()
         if sample is None : continue
-        h1, adj1, h2, adj2, dmv, A_int, dmv_rot, valid, affinity, keys = sample
+        h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
+        affinity, sasa, dsasa, rotor, charge1, charge2, \
+        vdw_radius1, vdw_radius2, valid1, valid2, \
+        no_metal1, no_metal2, keys = sample
 
-        h1, adj1, h2, adj2, dmv, A_int, dmv_rot, valid, affinity = \
+        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
+        affinity, sasa, dsasa, rotor, charge1, charge2, \
+        vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
                 h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
                 A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-                valid.to(device), affinity.to(device)
+                affinity.to(device), sasa.to(device), \
+                dsasa.to(device), rotor.to(device), \
+                charge1.to(device), charge2.to(device), \
+                vdw_radius1.to(device), vdw_radius2.to(device), \
+                valid1.to(device), valid2.to(device), \
+                no_metal1.to(device), no_metal2.to(device), \
+
         with torch.no_grad():
-            pred1 = model(h1, adj1, h2, adj2, A_int, dmv, valid).sum(-1)
-            pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, valid).sum(-1)
+            pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
+                    rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+                    valid1, valid2, no_metal1, no_metal2)
+            pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
+                    rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+                    valid1, valid2, no_metal1, no_metal2)
         
-        loss1 = loss_fn(pred1, affinity)
-        loss2 = torch.mean(torch.max(torch.zeros_like(pred2), 
-                            pred1.detach()-pred2+10))
+        loss1 = loss_fn(pred1.sum(-1), affinity)
+        loss2 = torch.mean(torch.max(torch.zeros_like(pred2.sum(-1)), 
+                            pred1.sum(-1).detach()-pred2.sum(-1)+10))
         loss = loss1+loss2
         test_losses1.append(loss1.data.cpu().numpy())
         test_losses2.append(loss2.data.cpu().numpy())
@@ -208,9 +241,21 @@ for epoch in range(args.num_epochs):
     w_test = open(os.path.join("output", args.exp_name + "_" + args.test_output_filename), 'a')
     
     for k in train_pred1.keys():
-        w_train.write(f'{k}\t{train_true[k]:.3f}\t{train_pred1[k]:.3f}\t{train_pred2[k]:.3f}\n')
+        w_train.write(f'{k}\t{train_true[k]:.3f}\t')
+        w_train.write(f'{train_pred1[k].sum():.3f}\t')
+        w_train.write(f'{train_pred2[k].sum():.3f}\t')
+        for j in range(train_pred1[k].shape[0]):
+            w_train.write(f'{train_pred1[k][j]:.3f}\t')
+        w_train.write('\n')
+
     for k in test_pred1.keys():
-        w_test.write(f'{k}\t{test_true[k]:.3f}\t{test_pred1[k]:.3f}\t{test_pred2[k]:.3f}\n')
+        w_test.write(f'{k}\t{test_true[k]:.3f}\t')
+        w_test.write(f'{test_pred1[k].sum():.3f}\t')
+        w_test.write(f'{test_pred2[k].sum():.3f}\t')
+        for j in range(test_pred1[k].shape[0]):
+            w_test.write(f'{test_pred1[k][j]:.3f}\t')
+        w_test.write('\n')
+
     end = time.time()
     
     w_train.close()
@@ -218,17 +263,17 @@ for epoch in range(args.num_epochs):
 
     #Cal R2
     train_r2 = r2_score([train_true[k] for k in train_true.keys()], \
-            [train_pred1[k] for k in train_true.keys()])
+            [train_pred1[k].sum() for k in train_true.keys()])
     test_r2 = r2_score([test_true[k] for k in test_true.keys()], \
-            [test_pred1[k] for k in test_true.keys()])
+            [test_pred1[k].sum() for k in test_true.keys()])
 
     #Cal R 
     _, _, test_r, _, _ = \
             stats.linregress([test_true[k] for k in test_true.keys()],                        
-                            [test_pred1[k] for k in test_true.keys()])
+                            [test_pred1[k].sum() for k in test_true.keys()])
     _, _, train_r, _, _ = \
             stats.linregress([train_true[k] for k in train_true.keys()],                        
-                            [train_pred1[k] for k in train_true.keys()])
+                            [train_pred1[k].sum() for k in train_true.keys()])
     end = time.time()
 
     print ("epoch: {} train_losses1: {:.4f} train_losses2: {:.4f} test_losses1: {:.4f} test_losses2: {:.4f} train_r2: {:.4f} test_r2: {:.3f} time: {:.3f}"\

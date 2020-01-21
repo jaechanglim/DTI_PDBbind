@@ -20,20 +20,24 @@ def set_cuda_visible_device(ngpus):
     import os
     import random
     empty = []
-    fn = f'empty_gpu_check_{random.choice([i for i in range(10000)])}'
-    for i in range(4):
-        os.system(f'nvidia-smi -i {i} | grep "No running" | wc -l > {fn}')
-        with open(fn) as f:
-            out = int(f.read())
-        if int(out)==1:
-            empty.append(i)
-    if len(empty)<ngpus:
-        print ('avaliable gpus are less than required', len(empty), ngpus)
-        exit(-1)
+    if ngpus>0:
+        fn = f'empty_gpu_check_{random.choice([i for i in range(10000)])}'
+        for i in range(4):
+            os.system(f'nvidia-smi -i {i} | grep "No running" | wc -l > {fn}')
+            with open(fn) as f:
+                out = int(f.read())
+            if int(out)==1:
+                empty.append(i)
+            if len(empty)==ngpus: break
+        if len(empty)<ngpus:
+            print ('avaliable gpus are less than required', len(empty), ngpus)
+            exit(-1)
+        os.system(f'rm -f {fn}')        
+    
     cmd = ''
     for i in range(ngpus):        
         cmd+=str(empty[i])+','
-    os.system(f'rm -f {fn}')        
+
     return cmd
 
 def initialize_model(model, device, load_save_file=False):
