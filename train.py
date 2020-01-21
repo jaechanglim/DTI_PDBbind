@@ -14,36 +14,9 @@ from scipy import stats
 import utils
 import model 
 from dataset import MolDataset, DTISampler, my_collate_fn
+import arguments
 
-parser = argparse.ArgumentParser() 
-parser.add_argument('--lr', help="learning rate", type=float, default=1e-4)
-parser.add_argument("--lr_decay", help="learning rate decay", type=float, default=1.0)
-parser.add_argument("--weight_decay", help="weight decay", type=float, default=0.0)
-parser.add_argument('--num_epochs', help='number of epochs', type=int, default=100)
-parser.add_argument('--batch_size', help='batch size', type=int, default=1)
-parser.add_argument('--num_workers', help='number of workers', type=int, default=7) 
-parser.add_argument('--dim_gnn', help='dim_gnn', type=int, default=32) 
-parser.add_argument("--n_gnn", help="depth of gnn layer", type=int, default=3)
-parser.add_argument('--ngpu', help='ngpu', type=int, default=1) 
-parser.add_argument('--save_dir', help='save directory', type=str)
-parser.add_argument('--exp_name', help='experiment name', type=str)
-parser.add_argument('--restart_file', help='restart file', type=str) 
-parser.add_argument('--filename', help='filename', \
-                    default='/home/share/DTI_PDBbind/data_pdbbind/pdb_to_affinity.txt')
-parser.add_argument('--train_output_filename', help='train output filename', type=str, default='train.txt')
-parser.add_argument('--test_output_filename', help='test output filename', type=str, default='test.txt')
-parser.add_argument('--key_dir', help='key directory', type=str, default='keys')
-parser.add_argument('--data_dir', help='data file path', type=str, \
-                    default='/home/share/DTI_PDBbind/data_pdbbind/data/')
-parser.add_argument("--filter_spacing", help="filter spacing", type=float, default=0.1)
-parser.add_argument("--filter_gamma", help="filter gamma", type=float, default=10)
-parser.add_argument("--dropout_rate", help="dropout rate", type=float, default=0.0)
-parser.add_argument("--loss2_ratio", help="loss2 ratio", type=float, default=1.0)
-parser.add_argument("--potential", help="potential", type=str, 
-                    default='morse_all_pair', 
-                    choices=['morse', 'harmonic', 'morse_all_pair', 'harmonic_interaction_specified'])
-args = parser.parse_args()
-print (args)
+args = arguments.parser()
 
 #Make directory for save files
 os.makedirs(os.path.join(args.save_dir, args.exp_name), exist_ok=True)

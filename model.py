@@ -6,16 +6,15 @@ import time
 from multiprocessing import Pool
 from layers import GAT_gate, EdgeConv
 import dataset
-class DTIMorse(torch.nn.Module):
 
+
+class DTIMorse(torch.nn.Module):
     def __init__(self, args):
         super(DTIMorse, self).__init__()
         self.args = args
         self.node_embedding = nn.Linear(56, args.dim_gnn, bias = False)
-
         self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
-        
         self.edgeconv = nn.ModuleList([EdgeConv(3, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
         self.num_interaction_type = len(dataset.interaction_types)
@@ -25,21 +24,18 @@ class DTIMorse(torch.nn.Module):
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         ) for _ in range(self.num_interaction_type)])
-        
         self.cal_B = nn.ModuleList([nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         ) for _ in range(self.num_interaction_type)])
-        
         self.cal_C = nn.ModuleList([nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         ) for _ in range(self.num_interaction_type)])
-        
         self.A = nn.Parameter(torch.tensor([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]))
         self.C = nn.Parameter(torch.tensor(
                 [4.639, 3.184, 4.563, 4.709, 3.356, 4.527, 3.714]))
@@ -212,10 +208,8 @@ class DTIHarmonic(torch.nn.Module):
         super(DTIHarmonic, self).__init__()
         self.args = args
         self.node_embedding = nn.Linear(56, args.dim_gnn, bias = False)
-
         self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
-        
         self.edgeconv = nn.ModuleList([EdgeConv(3, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
         self.num_interaction_type = len(dataset.interaction_types)
@@ -225,21 +219,18 @@ class DTIHarmonic(torch.nn.Module):
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         ) for _ in range(self.num_interaction_type)])
-        
         self.cal_B = nn.ModuleList([nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         ) for _ in range(self.num_interaction_type)])
-        
         self.cal_C = nn.ModuleList([nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         ) for _ in range(self.num_interaction_type)])
-        
         self.cal_coolomb_interaction_A = nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),
@@ -253,7 +244,6 @@ class DTIHarmonic(torch.nn.Module):
                          nn.Sigmoid()
                         )
         self.coolomb_distance = nn.Parameter(torch.tensor([3.0])) 
-        
         self.A = nn.Parameter(torch.tensor([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]))
         self.C = nn.Parameter(torch.tensor(
                 [4.639, 3.184, 4.563, 4.709, 3.356, 4.527, 3.714, 2.313]))
@@ -272,6 +262,7 @@ class DTIHarmonic(torch.nn.Module):
                              nn.Linear(128, 1),
                              nn.Sigmoid()
                          )
+
     def cal_coolomb_interaction(self, dm, h, charge1, charge2, valid1, valid2):
         charge1_repeat = charge1.unsqueeze(2).repeat(1,1,charge2.size(1))
         charge2_repeat = charge2.unsqueeze(1).repeat(1,charge1.size(1),1)
@@ -382,32 +373,26 @@ class DTIHarmonic(torch.nn.Module):
         return retval
 
 class DTIMorseAllPair(torch.nn.Module):
-
     def __init__(self, args):
         super(DTIMorseAllPair, self).__init__()
         self.args = args
         self.node_embedding = nn.Linear(56, args.dim_gnn, bias = False)
-
         self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
-        
         self.edgeconv = nn.ModuleList([EdgeConv(3, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
-        
         self.cal_A = nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         )
-        
         self.cal_B = nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         ) 
-        
         self.cal_C = nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),

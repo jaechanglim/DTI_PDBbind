@@ -173,7 +173,7 @@ def get_interaction_matrix(d1, d2, interaction_data):
     return A
 
 def classifyAtoms(mol, polar_atoms=[7,8,15,16]):
-	"""
+    """
     Taken from
     https://github.com/mittinatten/freesasa/blob/master/src/classifier.c
     """
@@ -185,19 +185,19 @@ def classifyAtoms(mol, polar_atoms=[7,8,15,16]):
 	"K": 2.75, "CA": 2.31, "GA": 1.87, "GE": 2.11, "AS": 1.85,
 	"RB": 3.03, "SR": 2.49, "IN": 1.93, "SN": 2.17, "SB": 2.06, "TE": 2.06}
 
-	radii = [] 
-	for atom in mol.GetAtoms():
+    radii = [] 
+    for atom in mol.GetAtoms():
         # mark everything as apolar to start
-		atom.SetProp("SASAClassName", "Apolar")
+        atom.SetProp("SASAClassName", "Apolar")
         #identify polar atoms and change their marking
-		if atom.GetAtomicNum() in polar_atoms:
-        atom.SetProp("SASAClassName", "Polar") # mark as polar
-		elif atom.GetAtomicNum() == 1:
-			if atom.GetBonds()[0].GetOtherAtom(atom).GetAtomicNum() \
-                                in polar_atoms:
-				atom.SetProp("SASAClassName", "Polar") # mark as polar
-		radii.append(symbol_radius[atom.GetSymbol().upper()])
-	return(radii)
+        if atom.GetAtomicNum() in polar_atoms:
+            atom.SetProp("SASAClassName", "Polar") # mark as polar
+        elif atom.GetAtomicNum() == 1:
+            if atom.GetBonds()[0].GetOtherAtom(atom).GetAtomicNum() \
+              in polar_atoms:
+                atom.SetProp("SASAClassName", "Polar") # mark as polar
+            radii.append(symbol_radius[atom.GetSymbol().upper()])
+    return(radii)
 
 def cal_sasa(m):
     radii = rdFreeSASA.classifyAtoms(m)
