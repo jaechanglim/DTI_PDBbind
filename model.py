@@ -264,6 +264,7 @@ class DTIHarmonic(torch.nn.Module):
         #A_int[:,6,:,:] = 0.0
         for i in range(self.num_interaction_type):
             A = self.cal_A[i](h).squeeze(-1)*4
+            if i==1: A=A+1
             #B = (self.cal_B[i](h).squeeze(-1)+1)*self.sigma[i]
             B = (self.cal_B[i](h).squeeze(-1)*3+1)/(4*self.sigma[i]*self.sigma[i])
             energy = A*(B*torch.pow(dm-self.C[i],2)-1)
