@@ -131,8 +131,11 @@ def position_to_index(positions, target_position):
     return indice.tolist()
 
 def get_interaction_matrix(d1, d2, interaction_data, interaction_types):
+    # d1: distance matrix1 that contains ligand molecule atoms' positions [, # ligand atoms, 3]
+    # d2: distance matrix2 that contains protein molecule atoms' positions [, # protein atoms, 3]
+    # interaction_data: list of tuples of position(x,y,z) that compose the certain interaction
+    # interaction_types: total 7 of interaction types
     n1, n2 = len(d1), len(d2) 
-
     A = np.zeros((len(interaction_types), n1, n2))
     for i_type,k in enumerate(interaction_types):
         for ps in interaction_data[k]:

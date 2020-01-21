@@ -41,7 +41,7 @@ parser.add_argument("--dropout_rate", help="dropout rate", type=float, default=0
 parser.add_argument("--loss2_ratio", help="loss2 ratio", type=float, default=1.0)
 parser.add_argument("--potential", help="potential", type=str, 
                     default='morse_all_pair', 
-                    choices=['morse', 'harmonic', 'morse_all_pair'])
+                    choices=['morse', 'harmonic', 'morse_all_pair', 'harmonic_interaction_specified'])
 args = parser.parse_args()
 print (args)
 
@@ -67,6 +67,7 @@ os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
 if args.potential=='morse': model = model.DTIMorse(args)
 elif args.potential=='morse_all_pair': model = model.DTIMorseAllPair(args)
 elif args.potential=='harmonic': model = model.DTIHarmonic(args)
+elif args.potential=='harmonic_interaction_specified': model = model.DTIHarmonicIS(args)
 else: 
     print (f'No {args.potential} potential')
     exit(-1)

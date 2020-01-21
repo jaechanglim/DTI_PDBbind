@@ -121,8 +121,93 @@ class DTIMorse(torch.nn.Module):
         #exit(-1)
         return retval
 
-class DTIHarmonic(torch.nn.Module):
+class DTIHarmonicIS(torch.nn.Module):
+    def __init__(self, args):
+        super(DTIHarmonicIS, self).__init__()
+        self.args = args
+        self.node_embedding = nn.Linear(56, args.dim_gnn, bias=False)
+        self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
+                                    for _ in range(args.n_gnn)])
+        self.edgeconv = nn.ModuleList([EdgeConv(3, args.dim_gnn) \
+                                    for _ in range(args.n_gnn)])
+        self.num_interaction_type = 7
+        self.cal_A = nn.ModuleList([nn.Sequential(
+                        nn.Linear(args.dim_gnn*2, 128),
+                        nn.ReLU(),
+                        nn.Linear(128, 1),
+                        nn.Sigmoid()
+                       ) for _ in range(self.num_interaction_type)])
 
+        self.cal_B = nn.ModuleList([nn.Sequential(
+                         nn.Linear(args.dim_gnn*2, 128),
+                         nn.ReLU(),
+                         nn.Linear(128, 1),
+                         nn.Sigmoid()
+                        ) for _ in range(self.num_interaction_type)])
+        
+        self.cal_C = nn.ModuleList([nn.Sequential(
+                         nn.Linear(args.dim_gnn*2, 128),
+                         nn.ReLU(),
+                         nn.Linear(128, 1),
+                         nn.Sigmoid()
+                        ) for _ in range(self.num_interaction_type)])
+        
+        self.C = nn.Parameter(torch.tensor(
+                [4.639, 3.184, 4.563, 4.709, 3.356, 4.527, 3.714]))
+        self.B_constraint = [1.159, 0.448, 0.927, 0.902, 0.349, 0.789, 0.198] 
+        self.intercept = nn.Parameter(torch.tensor([0.0]))
+        self.cal_intercept = nn.Sequential(
+                             nn.Linear(args.dim_gnn*1, 128),
+                             nn.ReLU(),
+                             nn.Linear(128, 1),
+                             nn.Sigmoid()
+                         )
+
+    def forward(self, h1, adj1, h2, adj2, A_int, dmv, valid, DM_min=0.5):
+        h1 = self.node_embedding(h1) # [, n_ligand_atom, n_in_feature(dim_gnn)]
+        h2 = self.node_embedding(h2) # [, n_protein_atom, n_in_feature]
+        # attention applied each molecule's property
+        for i in range(len(self.gconv)):
+            h1 = self.gconv[i](h1, adj1) # [, n_ligand_atom, n_out_feature(dim_gnn)]
+            h2 = self.gconv[i](h2, adj2) # [, n_protein_atom, n_out_feature]
+
+        dm = torch.sqrt(torch.pow(dmv, 2).sum(-1)+1e-10)
+        adj12 = dm.clone()
+
+        adj12[adj12>5] = 0
+        adj12[adj12>1e-3] = 1
+        adj12[adj12<1e-3] = 0
+
+        dm[dm<DM_min] = 1e10
+
+        h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) # [, n_ligand_atom, n_protein_atom, n_out_feature(dim_gnn)]
+        h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) # [, n_ligand_atom, n_protein_atom, n_out_feature(dim_gnn)]
+        h = torch.cat([h1_repeat, h2_repeat], -1) # [, n_ligand_atom, n_protein_atom, 2*n_out_feature(dim_gnn)]
+
+        """
+        interaction type - average distance, std, (2*std)^2
+        0. saltbridge - 4.639, 1.159, 5.373
+        1. hbond - 3.184, 0.448, 0.803
+        2. pication - 4.561, 0.927, 3.437
+        3. pistack - 4.708, 0.902, 3.254
+        4. halogen - 3.356, 0.349, 0.487
+        5. waterbridge - 4.528, 0.789, 2.490
+        6. hydrophobic - 3.714, 0.198, 0.157
+        """
+
+        retval = []
+        for i in range(self.num_interaction_type):
+            A = self.cal_A[i](h).squeeze(-1)*4
+            B = self.cal_B[i](h).squeeze(-1)*(2/(3*(self.B_constraint[i]**2)))+(1/(3*(self.B_constraint[i]**2)))
+            energy = A*(B*torch.pow(dm-self.C[i],2)-1)*A_int[:,i,:,:]
+            retval.append(energy)
+        retval = torch.stack(retval, 1).sum(2).sum(2)
+        intercept = self.cal_intercept((h1*valid.unsqueeze(-1)).sum(1))*4
+        retval += intercept/retval.size(-1)
+        return retval
+
+
+class DTIHarmonic(torch.nn.Module):
     def __init__(self, args):
         super(DTIHarmonic, self).__init__()
         self.args = args
