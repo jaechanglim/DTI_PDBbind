@@ -1,25 +1,26 @@
 import argparse
 import random
 import numpy as np
+import torch
+import torch.nn as nn
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 import os
-import torch
 import time
-import torch.nn as nn
 import pickle
 from sklearn.metrics import r2_score, roc_auc_score
 from scipy import stats
 
 import utils
 import model 
-from dataset import MolDataset, DTISampler, my_collate_fn
+from dataset import MolDataset, DTISampler, my_collate_fn, tensor_collate_fn
 import arguments
+import sys
 
-args = arguments.parser()
-
+args = arguments.parser(sys.argv)
 #Make directory for save files
-os.makedirs(os.path.join(args.save_dir, args.exp_name), exist_ok=True)
+os.makedirs(args.save_dir, exist_ok=True)
+os.makedirs(args.tensorboard_dir, exist_ok=True)
 
 #Read labels
 with open(args.filename) as f:
@@ -39,8 +40,7 @@ os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
 
 if args.potential=='morse': model = model.DTIMorse(args)
 elif args.potential=='morse_all_pair': model = model.DTIMorseAllPair(args)
-elif args.potential=='harmonic': model = model.DTIHarmonic(args)
-elif args.potential=='harmonic_interaction_specified': model = model.DTIHarmonicIS(args)
+elif args.potential=='harmonic': model = model._DTIHarmonic(args)
 else: 
     print (f'No {args.potential} potential')
     exit(-1)
@@ -53,12 +53,23 @@ print ('number of parameters : ', sum(p.numel() for p in model.parameters()
 
 #Dataloader
 train_dataset = MolDataset(train_keys, args.data_dir, id_to_y)
-train_data_loader = DataLoader(train_dataset, args.batch_size, \
-		num_workers = args.num_workers, \
-		collate_fn=my_collate_fn, shuffle=True)
+# train_data_loader = DataLoader(train_dataset, args.batch_size, \
+#         	num_workers = args.num_workers, \
+# 		collate_fn=my_collate_fn, shuffle=True)
+train_data_loader = DataLoader(train_dataset,
+                               args.batch_size,
+                               num_workers=args.num_workers,
+                               collate_fn=tensor_collate_fn,
+                               shuffle=True)
+
 test_dataset = MolDataset(test_keys, args.data_dir, id_to_y)
-test_data_loader = DataLoader(test_dataset, args.batch_size, \
-     shuffle=False, num_workers = args.num_workers, collate_fn=my_collate_fn)
+# test_data_loader = DataLoader(test_dataset, args.batch_size, \
+#      shuffle=False, num_workers = args.num_workers, collate_fn=my_collate_fn)
+test_data_loader = DataLoader(test_dataset,
+                              args.batch_size,
+                              num_workers=args.num_workers,
+                              collate_fn=tensor_collate_fn,
+                              shuffle=False)
 
 #Optimizer and loss
 optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, \
@@ -66,7 +77,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, \
 loss_fn = nn.MSELoss()
 
 #train
-writer = SummaryWriter(os.path.join("runs", args.exp_name))
+writer = SummaryWriter(args.tensorboard_dir)
 for epoch in range(args.num_epochs):
     st = time.time()
     tmp_st = st
@@ -88,29 +99,37 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(train_data_loader):
         model.zero_grad()
         if sample is None : continue
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
-        affinity, sasa, dsasa, rotor, charge1, charge2, \
-        vdw_radius1, vdw_radius2, valid1, valid2, \
-        no_metal1, no_metal2, keys = sample
+        # h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
+        # affinity, sasa, dsasa, rotor, charge1, charge2, \
+        # vdw_radius1, vdw_radius2, valid1, valid2, \
+        # no_metal1, no_metal2, keys = sample
 
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-        affinity, sasa, dsasa, rotor, charge1, charge2, \
-        vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
-                h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-                A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-                affinity.to(device), sasa.to(device), \
-                dsasa.to(device), rotor.to(device), \
-                charge1.to(device), charge2.to(device), \
-                vdw_radius1.to(device), vdw_radius2.to(device), \
-                valid1.to(device), valid2.to(device), \
-                no_metal1.to(device), no_metal2.to(device), \
+        # h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
+        # affinity, sasa, dsasa, rotor, charge1, charge2, \
+        # vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
+        #         h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
+        #         A_int.to(device), dmv.to(device), dmv_rot.to(device), \
+        #         affinity.to(device), sasa.to(device), \
+        #         dsasa.to(device), rotor.to(device), \
+        #         charge1.to(device), charge2.to(device), \
+        #         vdw_radius1.to(device), vdw_radius2.to(device), \
+        #         valid1.to(device), valid2.to(device), \
+        #         no_metal1.to(device), no_metal2.to(device), \
 
-        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
-                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                valid1, valid2, no_metal1, no_metal2)
-        pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
-                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                valid1, valid2, no_metal1, no_metal2)
+        # pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
+        #         rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+        #         valid1, valid2, no_metal1, no_metal2)
+        # pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
+        #         rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+        #         valid1, valid2, no_metal1, no_metal2)
+
+        sample = utils.dic_to_device(sample, device)
+        keys = sample['key']
+        affinity = sample['affinity']
+
+
+        pred1 = model(sample)
+        pred2 = model(sample)
         
         loss1 = loss_fn(pred1.sum(-1), affinity)
         # only consider the prediction values of rotated molecules 
@@ -136,8 +155,8 @@ for epoch in range(args.num_epochs):
         tmp_ttime = time.time()
         train_batch_time = tmp_ttime - tmp_st
         tmp_st = tmp_ttime
-        print('TRAIN epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
-                .format(epoch, loss1, loss2, loss, train_batch_time))
+        #print('TRAIN epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
+        #        .format(epoch, loss1, loss2, loss, train_batch_time))
 
     train_base_loss = np.mean(np.array(train_losses1))
     train_ss_loss = np.mean(np.array(train_losses2))
@@ -152,30 +171,39 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(test_data_loader):
         model.zero_grad()
         if sample is None : continue
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
-        affinity, sasa, dsasa, rotor, charge1, charge2, \
-        vdw_radius1, vdw_radius2, valid1, valid2, \
-        no_metal1, no_metal2, keys = sample
 
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-        affinity, sasa, dsasa, rotor, charge1, charge2, \
-        vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
-                h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-                A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-                affinity.to(device), sasa.to(device), \
-                dsasa.to(device), rotor.to(device), \
-                charge1.to(device), charge2.to(device), \
-                vdw_radius1.to(device), vdw_radius2.to(device), \
-                valid1.to(device), valid2.to(device), \
-                no_metal1.to(device), no_metal2.to(device), \
+        # h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
+        # affinity, sasa, dsasa, rotor, charge1, charge2, \
+        # vdw_radius1, vdw_radius2, valid1, valid2, \
+        # no_metal1, no_metal2, keys = sample
+
+        # h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
+        # affinity, sasa, dsasa, rotor, charge1, charge2, \
+        # vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
+        #         h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
+        #         A_int.to(device), dmv.to(device), dmv_rot.to(device), \
+        #         affinity.to(device), sasa.to(device), \
+        #         dsasa.to(device), rotor.to(device), \
+        #         charge1.to(device), charge2.to(device), \
+        #         vdw_radius1.to(device), vdw_radius2.to(device), \
+        #         valid1.to(device), valid2.to(device), \
+        #         no_metal1.to(device), no_metal2.to(device), \
+
+        # with torch.no_grad():
+        #     pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
+        #             rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+        #             valid1, valid2, no_metal1, no_metal2)
+        #     pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
+        #             rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
+        #             valid1, valid2, no_metal1, no_metal2)
+        
+        sample = utils.dic_to_device(sample, device)
+        keys = sample['key']
+        affinity = sample['affinity']
 
         with torch.no_grad():
-            pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
-                    rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                    valid1, valid2, no_metal1, no_metal2)
-            pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
-                    rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                    valid1, valid2, no_metal1, no_metal2)
+            pred1 = model(sample)
+            pred2 = model(sample)
         
         loss1 = loss_fn(pred1.sum(-1), affinity)
         loss2 = torch.mean(torch.max(torch.zeros_like(pred2.sum(-1)), 
@@ -195,8 +223,8 @@ for epoch in range(args.num_epochs):
         tmp_etime = time.time()
         eval_batch_time = tmp_etime - tmp_st
         tmp_st = tmp_etime
-        print('EVAL epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
-                .format(epoch, loss1, loss2, loss, eval_batch_time))
+        #print('EVAL epoch: {}, base_loss: {:.4f}, self_supervised_loss: {:.4f}, total_loss: {:.4f}, time: {:.2f}'\
+        #        .format(epoch, loss1, loss2, loss, eval_batch_time))
 
     eval_base_loss = np.mean(np.array(test_losses1))
     eval_ss_loss = np.mean(np.array(test_losses2))
@@ -210,8 +238,8 @@ for epoch in range(args.num_epochs):
     #Write prediction
     if not os.path.exists("output"):
         os.mkdir("output")
-    w_train = open(os.path.join("output", args.exp_name + "_" + args.train_output_filename), 'a')
-    w_test = open(os.path.join("output", args.exp_name + "_" + args.test_output_filename), 'a')
+    w_train = open(args.train_output_filename, 'w')
+    w_test = open(args.eval_output_filename, 'w')
     
     for k in train_pred1.keys():
         w_train.write(f'{k}\t{train_true[k]:.3f}\t')
@@ -248,11 +276,16 @@ for epoch in range(args.num_epochs):
             stats.linregress([train_true[k] for k in train_true.keys()],                        
                             [train_pred1[k].sum() for k in train_true.keys()])
     end = time.time()
-
-    print ("epoch: {} train_losses1: {:.4f} train_losses2: {:.4f} test_losses1: {:.4f} test_losses2: {:.4f} train_r2: {:.4f} test_r2: {:.3f} time: {:.3f}"\
-            .format(epoch, train_base_loss, train_ss_loss, eval_base_loss, eval_ss_loss, train_r2, test_r2, end-st))
+    if epoch==0: 
+        print ("epoch\ttrain_losses1\ttrain_losses2\t"+
+               "test_losses1\ttest_losses2\t"+
+               "train_r2\ttest_r2\ttrain_r\ttest_r")
+    print (f"{epoch}\t{train_base_loss:.3f}\t{train_ss_loss:.3f}\t"+
+            f"{eval_base_loss:.3f}\t{eval_ss_loss:.3f}\t"+
+            f"{train_r2:.3f}\t{test_r2:.3f}\t"+
+            f"{train_r:.3f}\t{test_r:.3f}\t{end-st:.3f}")
     
-    name = os.path.join(args.save_dir, args.exp_name, 'save_'+str(epoch)+'.pt')
+    name = os.path.join(args.save_dir, 'save_'+str(epoch)+'.pt')
     torch.save(model.state_dict(), name)
     
     lr = args.lr * ((args.lr_decay)**epoch)

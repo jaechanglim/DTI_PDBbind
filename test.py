@@ -18,7 +18,7 @@ from scipy import stats
 import glob
 import arguments
 
-args = arguments.parser()
+args = arguments.parser(sys.argv)
 
 #Read labels
 with open(args.filename) as f:

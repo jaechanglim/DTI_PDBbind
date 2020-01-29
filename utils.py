@@ -1,6 +1,14 @@
 import torch
 import torch.nn as nn
 
+def dic_to_device(dic, device):
+    for dic_key, dic_value in dic.items():
+        if isinstance(dic_value, torch.Tensor):
+            dic_value = dic_value.to(device)
+            dic[dic_key] = dic_value
+    
+    return dic
+
 def load_data(filename):
     data = dict()
     with open(filename) as f:

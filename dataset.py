@@ -18,6 +18,10 @@ from rdkit.Chem import rdFreeSASA
 from rdkit.Chem.rdMolDescriptors import CalcNumRotatableBonds
 from rdkit.Chem import AllChem
 import copy
+
+from collections import defaultdict
+from itertools import chain
+
 random.seed(0)
 
 interaction_types = ['saltbridge', 'hbonds', 'pication', 
@@ -43,7 +47,7 @@ def atom_feature(m, atom_i, i_donor, i_acceptor):
     symbol = atom.GetSymbol()
     degree = atom.GetDegree()
     total_numH = atom.GetTotalNumHs()
-    valance = atom.GetImplicitValence()
+    valence = atom.GetImplicitValence()
     return np.array(one_of_k_encoding_unk(symbol, symbol_list) +
                     one_of_k_encoding_unk(degree, [0, 1, 2, 3, 4, 5]) +
                     one_of_k_encoding_unk(total_numH, [0, 1, 2, 3, 4]) +
@@ -196,11 +200,11 @@ def classifyAtoms(mol, polar_atoms=[7,8,15,16]):
             if atom.GetBonds()[0].GetOtherAtom(atom).GetAtomicNum() \
               in polar_atoms:
                 atom.SetProp("SASAClassName", "Polar") # mark as polar
-            radii.append(symbol_radius[atom.GetSymbol().upper()])
-    return(radii)
+        radii.append(symbol_radius[atom.GetSymbol().upper()])
+    return radii
 
 def cal_sasa(m):
-    radii = rdFreeSASA.classifyAtoms(m)
+    #radii = rdFreeSASA.classifyAtoms(m)
     radii = classifyAtoms(m)
     #radii = rdFreeSASA.classifyAtoms(m1)
     sasa=rdFreeSASA.CalcSASA(m, radii, 
@@ -279,6 +283,7 @@ class MolDataset(Dataset):
         """
         key = self.keys[idx]
         #key = '1x8r'
+
         with open(self.data_dir+'/'+key, 'rb') as f:
             m1, m1_uff, m2, interaction_data = pickle.load(f)
         
@@ -334,7 +339,7 @@ class MolDataset(Dataset):
         
         #count rotatable bonds
         rotor = CalcNumRotatableBonds(m1)
-
+        
         #charge
         AllChem.ComputeGasteigerCharges(m1)
         AllChem.ComputeGasteigerCharges(m2)
@@ -431,7 +436,7 @@ def my_collate_fn(batch):
     shape: [batch_size, 1] 
     :return: list of each dictionary items resized with maximum values of
     atom numbers of ligand and protein
-    """ 
+    """
     n_valid_items = len([0 for item in batch if item is not None])
     max_natoms1 = max([len(item['h1']) for item in batch if item is not None])
     max_natoms2 = max([len(item['h2']) for item in batch if item is not None])
@@ -462,8 +467,10 @@ def my_collate_fn(batch):
         if batch[j] is None : continue
         natom1 = len(batch[j]['h1'])
         natom2 = len(batch[j]['h2'])
-        
+        print(h1.shape)
+        print(batch[j]['h1'].shape)
         h1[i,:natom1] = batch[j]['h1']
+        print(h1)
         adj1[i,:natom1,:natom1] = batch[j]['adj1']
         h2[i,:natom2] = batch[j]['h2']
         adj2[i,:natom2,:natom2] = batch[j]['adj2']
@@ -484,7 +491,7 @@ def my_collate_fn(batch):
         no_metal2[i,:natom2] = batch[j]['no_metal2']
         keys.append(batch[j]['key'])
         i+=1
-
+    print(done)
     h1 = torch.from_numpy(h1).float()
     adj1 = torch.from_numpy(adj1).float()
     h2 = torch.from_numpy(h2).float()
@@ -510,3 +517,72 @@ def my_collate_fn(batch):
            vdw_radius1, vdw_radius2, valid1, valid2, \
            no_metal1, no_metal2, keys\
 
+
+def check_dimension(tensors):
+    size = []
+    for tensor in tensors:
+        if isinstance(tensor, np.ndarray):
+            size.append(tensor.shape)
+        else:
+            size.append(0)
+    size = np.asarray(size)
+
+    return np.max(size, 0)
+
+def collate_tensor(tensor, max_tensor, batch_idx):
+    if isinstance(tensor, np.ndarray):
+        dims = tensor.shape
+        max_dims = max_tensor.shape
+        slice_list = tuple([slice(0, dim) for dim in dims])
+        slice_list = [slice(batch_idx, batch_idx+1), *slice_list]
+        max_tensor[slice_list] = tensor
+    elif isinstance(tensor, str):
+        max_tensor[batch_idx] = tensor
+    else:
+        max_tensor[batch_idx] = tensor
+
+    return max_tensor
+
+def tensor_collate_fn(batch):
+    # batch_items = [it for e in batch for it in e.items() if 'key' != it[0]]
+    batch_items = [it for e in batch for it in e.items()]
+    dim_dict = dict()
+    total_key, total_value = list(zip(*batch_items))
+    batch_size = len(batch)
+    n_element = int(len(batch_items) / batch_size)
+    total_key= total_key[0:n_element]
+    for i, k in enumerate(total_key):
+        value_list = [v for j, v in enumerate(total_value) if j%n_element==i]
+        if isinstance(value_list[0], np.ndarray):
+            dim_dict[k] = np.zeros(np.array(
+                            [batch_size, *check_dimension(value_list)])
+                          )
+        elif isinstance(value_list[0], str):
+            dim_dict[k] = ["" for _ in range(batch_size)]
+        else:
+            dim_dict[k] = np.zeros((batch_size,))
+    # batch_items = [batch_items[i:i+n_element] \
+    #         for i in range(0, len(batch_items), n_element)]
+    # for item in dim_dict.items():
+    #     key, value = item
+    #     print(key, value.shape)
+    # print(done)
+    ret_dict = {}
+    for j in range(batch_size):
+        if batch[j] == None: continue
+        keys = []
+        for key, value in dim_dict.items():
+            value = collate_tensor(batch[j][key], value, j)
+            if not isinstance(value, list):
+                value = torch.from_numpy(value).float()
+            ret_dict[key] = value
+
+    # rdk, rdv = list(zip(*ret_dict.items()))
+    # for k, v in zip(rdk, rdv):
+    #     if isinstance(v, torch.FloatTensor):
+    #         print(k, v.shape)
+    #     else:
+    #         print(k, v)
+    # print(done)
+
+    return ret_dict
