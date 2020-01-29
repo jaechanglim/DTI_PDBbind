@@ -1,9 +1,9 @@
 import os
 
-ngpu=1
+ngpu=0
 ncpu=1
 
-#for t in ['casf2013_screening_power']:
+#for t in ['csar1']:
 for t in ['csar1', 'csar2', 'pdbbind', 'casf2013_scoring_power', \
         'casf2013_docking_power']:
 #for t in ['casf2013_scoring_power', \
@@ -12,7 +12,7 @@ for t in ['csar1', 'csar2', 'pdbbind', 'casf2013_scoring_power', \
     for p in ['harmonic']:
     #for p in ['harmonic', 'morse_all_pair']:
         #for epoch in []:
-        for epoch in [i*10 for i in range(15,31)]:
+        for epoch in [i*10 for i in range(1)]:
             print (t, p, epoch)
             command = f'OMP_NUM_THREADS={ncpu} python -u ../test.py --batch_size=64 '+\
                       f'--num_workers=0 --restart_file=save_{p}/save_{epoch}.pt '+\

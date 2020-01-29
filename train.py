@@ -1,50 +1,23 @@
 import argparse
 import random
 import numpy as np
+import torch
+import torch.nn as nn
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 import os
-import torch
 import time
-import torch.nn as nn
 import pickle
 from sklearn.metrics import r2_score, roc_auc_score
 from scipy import stats
 
 import utils
 import model 
-from dataset import MolDataset, DTISampler, my_collate_fn
+from dataset import MolDataset, DTISampler,  tensor_collate_fn
+import arguments
+import sys
 
-parser = argparse.ArgumentParser() 
-parser.add_argument('--lr', help="learning rate", type=float, default=1e-4)
-parser.add_argument("--lr_decay", help="learning rate decay", type=float, default=1.0)
-parser.add_argument("--weight_decay", help="weight decay", type=float, default=0.0)
-parser.add_argument('--num_epochs', help='number of epochs', type=int, default=100)
-parser.add_argument('--batch_size', help='batch size', type=int, default=1)
-parser.add_argument('--num_workers', help='number of workers', type=int, default=7) 
-parser.add_argument('--dim_gnn', help='dim_gnn', type=int, default=32) 
-parser.add_argument("--n_gnn", help="depth of gnn layer", type=int, default=3)
-parser.add_argument('--ngpu', help='ngpu', type=int, default=1) 
-parser.add_argument('--save_dir', help='save directory', type=str)
-parser.add_argument('--tensorboard_dir', help='tensorboard directory', type=str)
-parser.add_argument('--restart_file', help='restart file', type=str) 
-parser.add_argument('--filename', help='filename', \
-                    default='/home/share/DTI_PDBbind/data_pdbbind/pdb_to_affinity.txt')
-parser.add_argument('--train_output_filename', help='train output filename', type=str, default='train.txt')
-parser.add_argument('--test_output_filename', help='test output filename', type=str, default='test.txt')
-parser.add_argument('--key_dir', help='key directory', type=str, default='keys')
-parser.add_argument('--data_dir', help='data file path', type=str, \
-                    default='/home/share/DTI_PDBbind/data_pdbbind/data/')
-parser.add_argument("--filter_spacing", help="filter spacing", type=float, default=0.1)
-parser.add_argument("--filter_gamma", help="filter gamma", type=float, default=10)
-parser.add_argument("--dropout_rate", help="dropout rate", type=float, default=0.0)
-parser.add_argument("--loss2_ratio", help="loss2 ratio", type=float, default=1.0)
-parser.add_argument("--potential", help="potential", type=str, 
-                    default='morse_all_pair', 
-                    choices=['morse', 'harmonic', 'morse_all_pair'])
-args = parser.parse_args()
-print (args)
-
+args = arguments.parser(sys.argv)
 #Make directory for save files
 os.makedirs(args.save_dir, exist_ok=True)
 os.makedirs(args.tensorboard_dir, exist_ok=True)
@@ -80,12 +53,18 @@ print ('number of parameters : ', sum(p.numel() for p in model.parameters()
 
 #Dataloader
 train_dataset = MolDataset(train_keys, args.data_dir, id_to_y)
-train_data_loader = DataLoader(train_dataset, args.batch_size, \
-		num_workers = args.num_workers, \
-		collate_fn=my_collate_fn, shuffle=True)
+train_data_loader = DataLoader(train_dataset,
+                               args.batch_size,
+                               num_workers=args.num_workers,
+                               collate_fn=tensor_collate_fn,
+                               shuffle=True)
+
 test_dataset = MolDataset(test_keys, args.data_dir, id_to_y)
-test_data_loader = DataLoader(test_dataset, args.batch_size, \
-     shuffle=False, num_workers = args.num_workers, collate_fn=my_collate_fn)
+test_data_loader = DataLoader(test_dataset,
+                              args.batch_size,
+                              num_workers=args.num_workers,
+                              collate_fn=tensor_collate_fn,
+                              shuffle=False)
 
 #Optimizer and loss
 optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, \
@@ -115,33 +94,14 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(train_data_loader):
         model.zero_grad()
         if sample is None : continue
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
-        affinity, sasa, dsasa, rotor, charge1, charge2, \
-        vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
-        valid1, valid2, no_metal1, no_metal2, keys = sample
 
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-        affinity, sasa, dsasa, rotor, charge1, charge2, \
-        vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
-        valid1, valid2, no_metal1, no_metal2 = \
-                h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-                A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-                affinity.to(device), sasa.to(device), \
-                dsasa.to(device), rotor.to(device), \
-                charge1.to(device), charge2.to(device), \
-                vdw_radius1.to(device), vdw_radius2.to(device), \
-                vdw_epsilon.to(device), vdw_sigma.to(device), delta_uff.to(device), \
-                valid1.to(device), valid2.to(device), \
-                no_metal1.to(device), no_metal2.to(device), \
+        sample = utils.dic_to_device(sample, device)
+        keys = sample['key']
+        affinity = sample['affinity']
 
-        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
-                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2, 
-                no_metal1, no_metal2)
-        pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
-                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2, 
-                no_metal1, no_metal2)
+        pred1 = model(sample)
+        pred2 = model(sample)
+        
         loss1 = loss_fn(pred1.sum(-1), affinity)
         # only consider the prediction values of rotated molecules 
         #that difference of value between two molecules are less than 10
@@ -179,34 +139,14 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(test_data_loader):
         model.zero_grad()
         if sample is None : continue
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
-        affinity, sasa, dsasa, rotor, charge1, charge2, \
-        vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
-        valid1, valid2, no_metal1, no_metal2, keys = sample
-
-        h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-        affinity, sasa, dsasa, rotor, charge1, charge2, \
-        vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
-        valid1, valid2, no_metal1, no_metal2 = \
-                h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-                A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-                affinity.to(device), sasa.to(device), \
-                dsasa.to(device), rotor.to(device), \
-                charge1.to(device), charge2.to(device), \
-                vdw_radius1.to(device), vdw_radius2.to(device), \
-                vdw_epsilon.to(device), vdw_sigma.to(device), delta_uff.to(device), \
-                valid1.to(device), valid2.to(device), \
-                no_metal1.to(device), no_metal2.to(device), \
+        
+        sample = utils.dic_to_device(sample, device)
+        keys = sample['key']
+        affinity = sample['affinity']
 
         with torch.no_grad():
-            pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
-                    rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                    vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2, 
-                    no_metal1, no_metal2)
-            pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
-                    rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                    vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2, 
-                    no_metal1, no_metal2)
+            pred1 = model(sample)
+            pred2 = model(sample)
         
         loss1 = loss_fn(pred1.sum(-1), affinity)
         loss2 = torch.mean(torch.max(torch.zeros_like(pred2.sum(-1)), 
@@ -240,7 +180,7 @@ for epoch in range(args.num_epochs):
 
     #Write prediction
     w_train = open(args.train_output_filename, 'w')
-    w_test = open(args.test_output_filename, 'w')
+    w_test = open(args.eval_output_filename, 'w')
     
     for k in train_pred1.keys():
         w_train.write(f'{k}\t{train_true[k]:.3f}\t')

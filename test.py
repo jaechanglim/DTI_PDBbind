@@ -3,7 +3,7 @@ import utils
 import random
 random.seed(0)
 import numpy as np
-from dataset import MolDataset, DTISampler, my_collate_fn
+from dataset import MolDataset, DTISampler, tensor_collate_fn
 from torch.utils.data import DataLoader                                     
 import model 
 import os
@@ -16,28 +16,9 @@ from collections import Counter
 import sys
 from scipy import stats
 import glob
+import arguments
 
-parser = argparse.ArgumentParser() 
-parser.add_argument('--batch_size', help='batch size', type = int, default = 1)
-parser.add_argument('--num_workers', help = 'number of workers', type = int, default = 7) 
-parser.add_argument('--dim_gnn', help = 'dim_gnn', type = int, default = 32) 
-parser.add_argument("--n_gnn", help="depth of gnn layer", type=int, default = 3)
-parser.add_argument('--ngpu', help = 'ngpu', type = int, default = 1) 
-parser.add_argument('--restart_file', help = 'restart file', type = str) 
-parser.add_argument('--filename', help='filename', \
-        type = str, default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind/pdb_to_affinity.txt')
-parser.add_argument('--test_output_filename', help='test output filename', type = str, default='test.txt')
-parser.add_argument('--key_dir', help='key directory', type = str, default='keys')
-parser.add_argument('--data_dir', help='data file path', type = str, \
-                    default='/home/udg/msh/urp/DTI_PDBbind/data/')
-parser.add_argument("--filter_spacing", help="filter spacing", type=float, default=0.1)
-parser.add_argument("--filter_gamma", help="filter gamma", type=float, default=10)
-parser.add_argument("--potential", help="potential", type=str, 
-                    default='morse_all_pair', 
-                    choices=['morse', 'harmonic', 'morse_all_pair'])
-
-args = parser.parse_args()
-print (args)
+args = arguments.parser(sys.argv)
 
 #Read labels
 with open(args.filename) as f:
@@ -55,6 +36,7 @@ os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
 if args.potential=='morse': model = model.DTILJ(args)
 elif args.potential=='morse_all_pair': model = model.DTILJAllPair(args)
 elif args.potential=='harmonic': model = model.DTIHarmonic(args)
+elif args.potential=='harmonic_interaction_specified': model = model.DTIHarmonicIS(args)
 else: 
     print (f'No {args.potential} potential')
     exit(-1)
@@ -65,7 +47,7 @@ print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p
 #Dataloader
 test_dataset = MolDataset(test_keys, args.data_dir, id_to_y)
 test_data_loader = DataLoader(test_dataset, args.batch_size, \
-     shuffle=False, num_workers = args.num_workers, collate_fn=my_collate_fn)
+     shuffle=False, num_workers = args.num_workers, collate_fn=tensor_collate_fn)
 
 #loss
 loss_fn = nn.MSELoss()
@@ -80,35 +62,17 @@ test_pred1 = dict()
 test_pred2 = dict()
 test_true = dict()
 
+
 model.eval()
 for i_batch, sample in enumerate(test_data_loader):
     model.zero_grad()
     if sample is None : continue
-    h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
-    affinity, sasa, dsasa, rotor, charge1, charge2, \
-    vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
-    valid1, valid2, no_metal1, no_metal2, keys = sample
-
-    h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-    affinity, sasa, dsasa, rotor, charge1, charge2, \
-    vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
-    valid1, valid2, no_metal1, no_metal2 = \
-            h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-            A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-            affinity.to(device), sasa.to(device), \
-            dsasa.to(device), rotor.to(device), \
-            charge1.to(device), charge2.to(device), \
-            vdw_radius1.to(device), vdw_radius2.to(device), \
-            vdw_epsilon.to(device), vdw_sigma.to(device), delta_uff.to(device), \
-            valid1.to(device), valid2.to(device), \
-            no_metal1.to(device), no_metal2.to(device), \
+    sample = utils.dic_to_device(sample, device)
+    keys = sample['key']
+    affinity = sample['affinity']
 
     with torch.no_grad():
-        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
-                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2, 
-                no_metal1, no_metal2)
-
+        pred1 = model(sample)
     affinity = affinity.data.cpu().numpy()
     pred1 = pred1.data.cpu().numpy()
     #pred2 = pred2.data.cpu().numpy()
@@ -118,6 +82,15 @@ for i_batch, sample in enumerate(test_data_loader):
         #test_pred2[keys[i]] = pred2[i]
         test_true[keys[i]] = affinity[i]
     #if i_batch>2: break
+
+test_r2 = r2_score([test_true[k].sum(-1) for k in test_true.keys()], \
+        [test_pred1[k].sum(-1) for k in test_true.keys()])
+slope, intercept, r_value, p_value, std_err = \
+        stats.linregress([test_true[k].sum(-1) for k in test_true.keys()],                            
+                        [test_pred1[k].sum(-1) for k in test_true.keys()])
+
+end = time.time()
+
 #Write prediction
 w_test = open(args.test_output_filename, 'w')
 
@@ -127,17 +100,12 @@ for k in sorted(test_pred1.keys()):
     for j in range(test_pred1[k].shape[0]):
         w_test.write(f'{test_pred1[k][j]:.3f}\t')
     w_test.write('\n')
+#w_test.write(f"R2: {test_r2:.3f}\n")
+#w_test.write(f"R: {r_value:.3f}\n")
+#w_test.write(f"Time: {end-st:.3f}\n\n")
 w_test.close()
 
 #Cal R2
-test_r2 = r2_score([test_true[k].sum(-1) for k in test_true.keys()], \
-        [test_pred1[k].sum(-1) for k in test_true.keys()])
-slope, intercept, r_value, p_value, std_err = \
-        stats.linregress([test_true[k].sum(-1) for k in test_true.keys()],                            
-                        [test_pred1[k].sum(-1) for k in test_true.keys()])
-
-
-end = time.time()
 print (f"R2: {test_r2:.3f}")
 print (f"R: {r_value:.3f}")
 print (f"Time: {end-st:.3f}")

@@ -426,99 +426,59 @@ class DTISampler(Sampler):
         return self.num_samples
 
 
-def my_collate_fn(batch):
-    """
-    The function used as argument in torch dataloader.
-    Since there can be many molecules with different atom number, to do calculation with them, we should
-    make their size equally so that in this function we add zero padding to the small size vectors.
-    The 'V' in batch have information of original size of the vector before zero padding.
-    :param batch: shape: [batch_size, 1] containing dictionary which returned by MolDataset
-    :return: list of each dictionary items resized with maximum values of atom numbers of ligand and protein
-    """ 
-    n_valid_items = len([0 for item in batch if item is not None])
-    max_natoms1 = max([len(item['h1']) for item in batch if item is not None])
-    max_natoms2 = max([len(item['h2']) for item in batch if item is not None])
-    
-    h1 = np.zeros((n_valid_items, max_natoms1, 54))
-    h2 = np.zeros((n_valid_items, max_natoms2, 54))
-    adj1 = np.zeros((n_valid_items, max_natoms1, max_natoms1))
-    adj2 = np.zeros((n_valid_items, max_natoms2, max_natoms2))
-    A_int = np.zeros((n_valid_items, len(interaction_types),
-        max_natoms1, max_natoms2))
-    dmv = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
-    dmv_rot = np.zeros((n_valid_items, max_natoms1, max_natoms2, 3))
-    affinity = np.zeros((n_valid_items,))
-    sasa = np.zeros((n_valid_items,))
-    dsasa = np.zeros((n_valid_items,))
-    rotor = np.zeros((n_valid_items,))
-    charge1 = np.zeros((n_valid_items, max_natoms1))
-    charge2 = np.zeros((n_valid_items, max_natoms2))
-    vdw_radius1 = np.zeros((n_valid_items, max_natoms1))
-    vdw_radius2 = np.zeros((n_valid_items, max_natoms2))
-    vdw_epsilon = np.zeros((n_valid_items, max_natoms1, max_natoms2))
-    vdw_sigma = np.zeros((n_valid_items, max_natoms1, max_natoms2))
-    delta_uff = np.zeros((n_valid_items,))
-    valid1 = np.zeros((n_valid_items, max_natoms1))
-    valid2 = np.zeros((n_valid_items, max_natoms2))
-    no_metal1 = np.zeros((n_valid_items, max_natoms1))
-    no_metal2 = np.zeros((n_valid_items, max_natoms2))
-    keys = []
-    i = 0
-    for j in range(len(batch)):
-        if batch[j] is None : continue
-        natom1 = len(batch[j]['h1'])
-        natom2 = len(batch[j]['h2'])
-        
-        h1[i,:natom1] = batch[j]['h1']
-        adj1[i,:natom1,:natom1] = batch[j]['adj1']
-        h2[i,:natom2] = batch[j]['h2']
-        adj2[i,:natom2,:natom2] = batch[j]['adj2']
-        A_int[i,:,:natom1,:natom2] = batch[j]['A_int']
-        dmv[i,:natom1,:natom2] = batch[j]['dmv']
-        dmv_rot[i,:natom1,:natom2] = batch[j]['dmv_rot']
-        affinity[i] = batch[j]['affinity']
-        sasa[i] = batch[j]['sasa']
-        dsasa[i] = batch[j]['dsasa']
-        rotor[i] = batch[j]['rotor']
-        charge1[i,:natom1] = batch[j]['charge1']
-        charge2[i,:natom2] = batch[j]['charge2']
-        vdw_radius1[i,:natom1] = batch[j]['vdw_radius1']
-        vdw_radius2[i,:natom2] = batch[j]['vdw_radius2']
-        vdw_epsilon[i,:natom1,:natom2] = batch[j]['vdw_epsilon']
-        vdw_sigma[i,:natom1,:natom2] = batch[j]['vdw_sigma']
-        delta_uff[i] = batch[j]['delta_uff']
-        valid1[i,:natom1] = batch[j]['valid1']
-        valid2[i,:natom2] = batch[j]['valid2']
-        no_metal1[i,:natom1] = batch[j]['no_metal1']
-        no_metal2[i,:natom2] = batch[j]['no_metal2']
-        keys.append(batch[j]['key'])
-        i+=1
+def check_dimension(tensors):
+    size = []
+    for tensor in tensors:
+        if isinstance(tensor, np.ndarray):
+            size.append(tensor.shape)
+        else:
+            size.append(0)
+    size = np.asarray(size)
 
-    h1 = torch.from_numpy(h1).float()
-    adj1 = torch.from_numpy(adj1).float()
-    h2 = torch.from_numpy(h2).float()
-    adj2 = torch.from_numpy(adj2).float()
-    dmv = torch.from_numpy(dmv).float()
-    dmv_rot = torch.from_numpy(dmv_rot).float()
-    A_int = torch.from_numpy(A_int).float()
-    affinity = torch.from_numpy(affinity).float()
-    sasa = torch.from_numpy(sasa).float()
-    dsasa = torch.from_numpy(dsasa).float()
-    rotor = torch.from_numpy(rotor).float()
-    charge1 = torch.from_numpy(charge1).float()
-    charge2 = torch.from_numpy(charge2).float()
-    vdw_radius1 = torch.from_numpy(vdw_radius1).float()
-    vdw_radius2 = torch.from_numpy(vdw_radius2).float()
-    vdw_epsilon = torch.from_numpy(vdw_epsilon).float()
-    vdw_sigma = torch.from_numpy(vdw_sigma).float()
-    delta_uff = torch.from_numpy(delta_uff).float()
-    valid1 = torch.from_numpy(valid1).float()
-    valid2 = torch.from_numpy(valid2).float()
-    no_metal1 = torch.from_numpy(no_metal1).float()
-    no_metal2 = torch.from_numpy(no_metal2).float()
+    return np.max(size, 0)
 
-    return h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-           affinity, sasa, dsasa, rotor, charge1, charge2, \
-           vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
-           valid1, valid2, no_metal1, no_metal2, keys\
+def collate_tensor(tensor, max_tensor, batch_idx):
+    if isinstance(tensor, np.ndarray):
+        dims = tensor.shape
+        max_dims = max_tensor.shape
+        slice_list = tuple([slice(0, dim) for dim in dims])
+        slice_list = [slice(batch_idx, batch_idx+1), *slice_list]
+        max_tensor[slice_list] = tensor
+    elif isinstance(tensor, str):
+        max_tensor[batch_idx] = tensor
+    else:
+        max_tensor[batch_idx] = tensor
 
+    return max_tensor
+
+def tensor_collate_fn(batch):
+    # batch_items = [it for e in batch for it in e.items() if 'key' != it[0]]
+    batch_items = [it for e in batch for it in e.items()]
+    dim_dict = dict()
+    total_key, total_value = list(zip(*batch_items))
+    batch_size = len(batch)
+    n_element = int(len(batch_items) / batch_size)
+    total_key= total_key[0:n_element]
+    for i, k in enumerate(total_key):
+        value_list = [v for j, v in enumerate(total_value) if j%n_element==i]
+        if isinstance(value_list[0], np.ndarray):
+            dim_dict[k] = np.zeros(np.array(
+                            [batch_size, *check_dimension(value_list)])
+                          )
+        elif isinstance(value_list[0], str):
+            dim_dict[k] = ["" for _ in range(batch_size)]
+        else:
+            dim_dict[k] = np.zeros((batch_size,))
+
+    ret_dict = {}
+    for j in range(batch_size):
+        if batch[j] == None: continue
+        keys = []
+        for key, value in dim_dict.items():
+            value = collate_tensor(batch[j][key], value, j)
+            if not isinstance(value, list):
+                value = torch.from_numpy(value).float()
+            ret_dict[key] = value
+
+
+    return ret_dict
