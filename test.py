@@ -80,32 +80,35 @@ test_pred1 = dict()
 test_pred2 = dict()
 test_true = dict()
 
-
 model.eval()
 for i_batch, sample in enumerate(test_data_loader):
     model.zero_grad()
     if sample is None : continue
     h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
     affinity, sasa, dsasa, rotor, charge1, charge2, \
-    vdw_radius1, vdw_radius2, valid1, valid2, \
-    no_metal1, no_metal2, keys = sample
+    vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
+    valid1, valid2, no_metal1, no_metal2, keys = sample
 
     h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
     affinity, sasa, dsasa, rotor, charge1, charge2, \
-    vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
+    vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
+    valid1, valid2, no_metal1, no_metal2 = \
             h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
             A_int.to(device), dmv.to(device), dmv_rot.to(device), \
             affinity.to(device), sasa.to(device), \
             dsasa.to(device), rotor.to(device), \
             charge1.to(device), charge2.to(device), \
             vdw_radius1.to(device), vdw_radius2.to(device), \
+            vdw_epsilon.to(device), vdw_sigma.to(device), delta_uff.to(device), \
             valid1.to(device), valid2.to(device), \
             no_metal1.to(device), no_metal2.to(device), \
 
     with torch.no_grad():
         pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
                 rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                    valid1, valid2, no_metal1, no_metal2)
+                vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2, 
+                no_metal1, no_metal2)
+
     affinity = affinity.data.cpu().numpy()
     pred1 = pred1.data.cpu().numpy()
     #pred2 = pred2.data.cpu().numpy()

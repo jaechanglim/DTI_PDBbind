@@ -40,9 +40,9 @@ for fn in filenames:
         else:        
             high_success.append(0)
 
-    print (fn)
-    print (f'High success: {sum(high_success)/len(high_success):.3f}', len(high_success))
-    print (f'Low success: {sum(low_success)/len(low_success):.3f}', len(low_success))
+    print (fn, end = '\t')
+    print (f'{sum(high_success)/len(high_success):.3f}', len(high_success), end='\t')
+    print (f'{sum(low_success)/len(low_success):.3f}', len(low_success), end='\t')
     print () 
 
 

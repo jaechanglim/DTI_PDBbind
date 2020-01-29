@@ -18,10 +18,42 @@ from rdkit.Chem import rdFreeSASA
 from rdkit.Chem.rdMolDescriptors import CalcNumRotatableBonds
 from rdkit.Chem import AllChem
 import copy
+from rdkit.Chem.rdmolops import CombineMols
+from rdkit.Chem.rdForceFieldHelpers import GetUFFVdWParams
 random.seed(0)
 
 interaction_types = ['saltbridge', 'hbonds', 'pication', 
         'pistack', 'halogen', 'waterbridge', 'hydrophobic', 'metal_complexes']
+
+def get_epsilon_sigma(m1, m2):
+    n1 = m1.GetNumAtoms()
+    n2 = m2.GetNumAtoms()
+    vdw_epsilon, vdw_sigma = np.zeros((n1, n2)), np.zeros((n1,n2))
+    m_combine = CombineMols(m1,m2)
+    for i1 in range(n1):
+        for i2 in range(n2):
+            param = GetUFFVdWParams(m_combine, i1, i1+i2)
+            if param is None: continue
+            d, e = param
+            vdw_epsilon[i1,i2]=e
+            vdw_sigma[i1,i2]=d
+            #print (i1, i2, e, d)
+    return vdw_epsilon, vdw_sigma            
+
+def cal_charge(m):
+    try:
+        charges = AllChem.CalcEEMcharges(m)
+        AllChem.ComputeGasteigerCharges(m)
+    except:
+        charges = None
+    if charges is None:
+        charges = [float(m.GetAtomWithIdx(i).GetProp('_GasteigerCharge'))
+                    for i in range(m.GetNumAtoms())]
+    else:
+        for i in range(m.GetNumAtoms()):
+            if charges[i]>3 or charges[i]<-3: 
+                charges[i]=float(m.GetAtomWithIdx(i).GetProp('_GasteigerCharge'))
+    return charges
 
 def one_of_k_encoding(x, allowable_set):
     if x not in allowable_set:
@@ -39,7 +71,7 @@ def one_of_k_encoding_unk(x, allowable_set):
 def atom_feature(m, atom_i, i_donor, i_acceptor):
     atom = m.GetAtomWithIdx(atom_i)
     return np.array(one_of_k_encoding_unk(atom.GetSymbol(),
-                                      ['C', 'N', 'O', 'S', 'F', 'P', 'Cl', 'Br', 'B', 'H']) +
+                                      ['C', 'N', 'O', 'S', 'F', 'P', 'Cl', 'Br', 'X']) +
                     one_of_k_encoding_unk(atom.GetDegree(), [0, 1, 2, 3, 4, 5]) +
                     one_of_k_encoding_unk(atom.GetTotalNumHs(), [0, 1, 2, 3, 4]) +
                     one_of_k_encoding_unk(atom.GetImplicitValence(), [0, 1, 2, 3, 4, 5]) +
@@ -53,9 +85,9 @@ def get_atom_feature(m, is_ligand=True):
         H.append(atom_feature(m, i, None, None))
     H = np.array(H)        
     if is_ligand:
-        H = np.concatenate([H, np.zeros((n,28))], 1)
+        H = np.concatenate([H, np.zeros((n,27))], 1)
     else:
-        H = np.concatenate([np.zeros((n,28)), H], 1)
+        H = np.concatenate([np.zeros((n,27)), H], 1)
     return H   
 
 
@@ -193,7 +225,10 @@ def get_vdw_radius(a):
         return atomic_number_to_radius[atomic_number]
     return Chem.GetPeriodicTable().GetRvdw(atomic_number)
 
-
+def cal_uff(m):
+    ffu = AllChem.UFFGetMoleculeForceField(m)
+    e = ffu.CalcEnergy()
+    return e
 
 class MolDataset(Dataset):
     """
@@ -302,12 +337,15 @@ class MolDataset(Dataset):
         rotor = CalcNumRotatableBonds(m1)
 
         #charge
-        AllChem.ComputeGasteigerCharges(m1)
-        AllChem.ComputeGasteigerCharges(m2)
-        charge1 = [float(m1.GetAtomWithIdx(i).GetProp('_GasteigerCharge')) \
-                         for i in range(m1.GetNumAtoms())]
-        charge2 = [float(m2.GetAtomWithIdx(i).GetProp('_GasteigerCharge')) \
-                         for i in range(m2.GetNumAtoms())]
+        charge1 = cal_charge(m1) 
+        charge2 = cal_charge(m2) 
+        
+        """
+        mp1 = AllChem.MMFFGetMoleculeProperties(m1)
+        mp2 = AllChem.MMFFGetMoleculeProperties(m2)
+        charge1 = [mp1.GetMMFFPartialCharge(i) for i in range(m1.GetNumAtoms())]
+        charge2 = [mp2.GetMMFFPartialCharge(i) for i in range(m2.GetNumAtoms())]
+        """
 
         #partial charge calculated by gasteiger
         charge1 = np.array(charge1)
@@ -331,6 +369,10 @@ class MolDataset(Dataset):
         vdw_radius1 = np.array([get_vdw_radius(a) for a in m1.GetAtoms()])
         vdw_radius2 = np.array([get_vdw_radius(a) for a in m2.GetAtoms()])
 
+        vdw_epsilon, vdw_sigma = get_epsilon_sigma(m1, m2)
+        
+        #uff energy difference
+        delta_uff = cal_uff(m1)-cal_uff(m1_uff)
         sample = {
                   'h1':h1, \
                   'adj1': adj1, \
@@ -347,6 +389,9 @@ class MolDataset(Dataset):
                   'charge2': charge2, \
                   'vdw_radius1': vdw_radius1, \
                   'vdw_radius2': vdw_radius2, \
+                  'vdw_epsilon': vdw_epsilon, \
+                  'vdw_sigma': vdw_sigma, \
+                  'delta_uff': delta_uff, \
                   'valid1': valid1, \
                   'valid2': valid2, \
                   'no_metal1': no_metal1, \
@@ -394,8 +439,8 @@ def my_collate_fn(batch):
     max_natoms1 = max([len(item['h1']) for item in batch if item is not None])
     max_natoms2 = max([len(item['h2']) for item in batch if item is not None])
     
-    h1 = np.zeros((n_valid_items, max_natoms1, 56))
-    h2 = np.zeros((n_valid_items, max_natoms2, 56))
+    h1 = np.zeros((n_valid_items, max_natoms1, 54))
+    h2 = np.zeros((n_valid_items, max_natoms2, 54))
     adj1 = np.zeros((n_valid_items, max_natoms1, max_natoms1))
     adj2 = np.zeros((n_valid_items, max_natoms2, max_natoms2))
     A_int = np.zeros((n_valid_items, len(interaction_types),
@@ -410,6 +455,9 @@ def my_collate_fn(batch):
     charge2 = np.zeros((n_valid_items, max_natoms2))
     vdw_radius1 = np.zeros((n_valid_items, max_natoms1))
     vdw_radius2 = np.zeros((n_valid_items, max_natoms2))
+    vdw_epsilon = np.zeros((n_valid_items, max_natoms1, max_natoms2))
+    vdw_sigma = np.zeros((n_valid_items, max_natoms1, max_natoms2))
+    delta_uff = np.zeros((n_valid_items,))
     valid1 = np.zeros((n_valid_items, max_natoms1))
     valid2 = np.zeros((n_valid_items, max_natoms2))
     no_metal1 = np.zeros((n_valid_items, max_natoms1))
@@ -436,6 +484,9 @@ def my_collate_fn(batch):
         charge2[i,:natom2] = batch[j]['charge2']
         vdw_radius1[i,:natom1] = batch[j]['vdw_radius1']
         vdw_radius2[i,:natom2] = batch[j]['vdw_radius2']
+        vdw_epsilon[i,:natom1,:natom2] = batch[j]['vdw_epsilon']
+        vdw_sigma[i,:natom1,:natom2] = batch[j]['vdw_sigma']
+        delta_uff[i] = batch[j]['delta_uff']
         valid1[i,:natom1] = batch[j]['valid1']
         valid2[i,:natom2] = batch[j]['valid2']
         no_metal1[i,:natom1] = batch[j]['no_metal1']
@@ -458,6 +509,9 @@ def my_collate_fn(batch):
     charge2 = torch.from_numpy(charge2).float()
     vdw_radius1 = torch.from_numpy(vdw_radius1).float()
     vdw_radius2 = torch.from_numpy(vdw_radius2).float()
+    vdw_epsilon = torch.from_numpy(vdw_epsilon).float()
+    vdw_sigma = torch.from_numpy(vdw_sigma).float()
+    delta_uff = torch.from_numpy(delta_uff).float()
     valid1 = torch.from_numpy(valid1).float()
     valid2 = torch.from_numpy(valid2).float()
     no_metal1 = torch.from_numpy(no_metal1).float()
@@ -465,6 +519,6 @@ def my_collate_fn(batch):
 
     return h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
            affinity, sasa, dsasa, rotor, charge1, charge2, \
-           vdw_radius1, vdw_radius2, valid1, valid2, \
-           no_metal1, no_metal2, keys\
+           vdw_radius1, vdw_radius2, vdw_epsilon, vdw_sigma, delta_uff, \
+           valid1, valid2, no_metal1, no_metal2, keys\
 
