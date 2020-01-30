@@ -3,7 +3,7 @@ import utils
 import random
 random.seed(0)
 import numpy as np
-from dataset import MolDataset, DTISampler, my_collate_fn
+from dataset import MolDataset, DTISampler, tensor_collate_fn
 from torch.utils.data import DataLoader                                     
 import model 
 import os
@@ -47,7 +47,7 @@ print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p
 #Dataloader
 test_dataset = MolDataset(test_keys, args.data_dir, id_to_y)
 test_data_loader = DataLoader(test_dataset, args.batch_size, \
-     shuffle=False, num_workers = args.num_workers, collate_fn=my_collate_fn)
+     shuffle=False, num_workers = args.num_workers, collate_fn=tensor_collate_fn)
 
 #loss
 loss_fn = nn.MSELoss()
@@ -67,27 +67,12 @@ model.eval()
 for i_batch, sample in enumerate(test_data_loader):
     model.zero_grad()
     if sample is None : continue
-    h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
-    affinity, sasa, dsasa, rotor, charge1, charge2, \
-    vdw_radius1, vdw_radius2, valid1, valid2, \
-    no_metal1, no_metal2, keys = sample
-
-    h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-    affinity, sasa, dsasa, rotor, charge1, charge2, \
-    vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
-            h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-            A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-            affinity.to(device), sasa.to(device), \
-            dsasa.to(device), rotor.to(device), \
-            charge1.to(device), charge2.to(device), \
-            vdw_radius1.to(device), vdw_radius2.to(device), \
-            valid1.to(device), valid2.to(device), \
-            no_metal1.to(device), no_metal2.to(device), \
+    sample = utils.dic_to_device(sample, device)
+    keys = sample['key']
+    affinity = sample['affinity']
 
     with torch.no_grad():
-        pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
-                rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-                    valid1, valid2, no_metal1, no_metal2)
+        pred1 = model(sample)
     affinity = affinity.data.cpu().numpy()
     pred1 = pred1.data.cpu().numpy()
     #pred2 = pred2.data.cpu().numpy()
@@ -107,11 +92,7 @@ slope, intercept, r_value, p_value, std_err = \
 end = time.time()
 
 #Write prediction
-loaded_epoch = args.restart_file.split("_")[-1].split(".")[0]
-front = args.test_output_filename.split(".")[0]
-back = args.test_output_filename.split(".")[-1]
-w_test = open(os.path.join("output", args.exp_name + "_" + front + "_" + loaded_epoch + back), 'w') \
-         if not args.epoch_interval else open(os.path.join("output", args.exp_name + "_" + args.test_output_filename), 'a')
+w_test = open(args.test_output_filename, 'w')
 
 for k in sorted(test_pred1.keys()):
     w_test.write(f'{k}\t{test_true[k]:.3f}\t')
@@ -119,9 +100,9 @@ for k in sorted(test_pred1.keys()):
     for j in range(test_pred1[k].shape[0]):
         w_test.write(f'{test_pred1[k][j]:.3f}\t')
     w_test.write('\n')
-w_test.write(f"R2: {test_r2:.3f}\n")
-w_test.write(f"R: {r_value:.3f}\n")
-w_test.write(f"Time: {end-st:.3f}\n\n")
+#w_test.write(f"R2: {test_r2:.3f}\n")
+#w_test.write(f"R: {r_value:.3f}\n")
+#w_test.write(f"Time: {end-st:.3f}\n\n")
 w_test.close()
 
 #Cal R2

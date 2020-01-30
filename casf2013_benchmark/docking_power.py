@@ -2,7 +2,7 @@ import glob
 import sys
 
 #read rmsd
-rmsd_filenames = glob.glob('/home/jaechang/work/jaechang_horus/work/ML/PDBbind_DTI/data_casf2013_decoy_docking/*_rmsd.dat')
+rmsd_filenames = glob.glob('/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_casf2013_decoy_docking/*_rmsd.dat')
 id_to_rmsd1, id_to_rmsd2 = dict(), dict()
 for fn in rmsd_filenames:
     with open(fn) as f:

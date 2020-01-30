@@ -13,7 +13,7 @@ from scipy import stats
 
 import utils
 import model 
-from dataset import MolDataset, DTISampler, my_collate_fn, tensor_collate_fn
+from dataset import MolDataset, DTISampler,  tensor_collate_fn
 import arguments
 import sys
 
@@ -40,7 +40,7 @@ os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
 
 if args.potential=='morse': model = model.DTIMorse(args)
 elif args.potential=='morse_all_pair': model = model.DTIMorseAllPair(args)
-elif args.potential=='harmonic': model = model._DTIHarmonic(args)
+elif args.potential=='harmonic': model = model.DTIHarmonic(args)
 else: 
     print (f'No {args.potential} potential')
     exit(-1)
@@ -53,9 +53,6 @@ print ('number of parameters : ', sum(p.numel() for p in model.parameters()
 
 #Dataloader
 train_dataset = MolDataset(train_keys, args.data_dir, id_to_y)
-# train_data_loader = DataLoader(train_dataset, args.batch_size, \
-#         	num_workers = args.num_workers, \
-# 		collate_fn=my_collate_fn, shuffle=True)
 train_data_loader = DataLoader(train_dataset,
                                args.batch_size,
                                num_workers=args.num_workers,
@@ -63,8 +60,6 @@ train_data_loader = DataLoader(train_dataset,
                                shuffle=True)
 
 test_dataset = MolDataset(test_keys, args.data_dir, id_to_y)
-# test_data_loader = DataLoader(test_dataset, args.batch_size, \
-#      shuffle=False, num_workers = args.num_workers, collate_fn=my_collate_fn)
 test_data_loader = DataLoader(test_dataset,
                               args.batch_size,
                               num_workers=args.num_workers,
@@ -99,34 +94,10 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(train_data_loader):
         model.zero_grad()
         if sample is None : continue
-        # h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
-        # affinity, sasa, dsasa, rotor, charge1, charge2, \
-        # vdw_radius1, vdw_radius2, valid1, valid2, \
-        # no_metal1, no_metal2, keys = sample
-
-        # h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-        # affinity, sasa, dsasa, rotor, charge1, charge2, \
-        # vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
-        #         h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-        #         A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-        #         affinity.to(device), sasa.to(device), \
-        #         dsasa.to(device), rotor.to(device), \
-        #         charge1.to(device), charge2.to(device), \
-        #         vdw_radius1.to(device), vdw_radius2.to(device), \
-        #         valid1.to(device), valid2.to(device), \
-        #         no_metal1.to(device), no_metal2.to(device), \
-
-        # pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
-        #         rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-        #         valid1, valid2, no_metal1, no_metal2)
-        # pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
-        #         rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-        #         valid1, valid2, no_metal1, no_metal2)
 
         sample = utils.dic_to_device(sample, device)
         keys = sample['key']
         affinity = sample['affinity']
-
 
         pred1 = model(sample)
         pred2 = model(sample)
@@ -138,9 +109,6 @@ for epoch in range(args.num_epochs):
                             pred1.sum(-1).detach()-pred2.sum(-1)+10))
         loss = loss1+loss2*args.loss2_ratio
         loss.backward()
-        
-        #nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-
         optimizer.step()
         train_losses1.append(loss1.data.cpu().numpy())
         train_losses2.append(loss2.data.cpu().numpy())
@@ -171,31 +139,6 @@ for epoch in range(args.num_epochs):
     for i_batch, sample in enumerate(test_data_loader):
         model.zero_grad()
         if sample is None : continue
-
-        # h1, adj1, h2, adj2, A_int, dmv, dmv_rot,  \
-        # affinity, sasa, dsasa, rotor, charge1, charge2, \
-        # vdw_radius1, vdw_radius2, valid1, valid2, \
-        # no_metal1, no_metal2, keys = sample
-
-        # h1, adj1, h2, adj2, A_int, dmv, dmv_rot, \
-        # affinity, sasa, dsasa, rotor, charge1, charge2, \
-        # vdw_radius1, vdw_radius2, valid1, valid2, no_metal1, no_metal2 = \
-        #         h1.to(device), adj1.to(device), h2.to(device), adj2.to(device), \
-        #         A_int.to(device), dmv.to(device), dmv_rot.to(device), \
-        #         affinity.to(device), sasa.to(device), \
-        #         dsasa.to(device), rotor.to(device), \
-        #         charge1.to(device), charge2.to(device), \
-        #         vdw_radius1.to(device), vdw_radius2.to(device), \
-        #         valid1.to(device), valid2.to(device), \
-        #         no_metal1.to(device), no_metal2.to(device), \
-
-        # with torch.no_grad():
-        #     pred1 = model(h1, adj1, h2, adj2, A_int, dmv, sasa, dsasa, 
-        #             rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-        #             valid1, valid2, no_metal1, no_metal2)
-        #     pred2 = model(h1, adj1, h2, adj2, A_int, dmv_rot, sasa, dsasa, 
-        #             rotor, charge1, charge2, vdw_radius1, vdw_radius2, 
-        #             valid1, valid2, no_metal1, no_metal2)
         
         sample = utils.dic_to_device(sample, device)
         keys = sample['key']
@@ -236,8 +179,6 @@ for epoch in range(args.num_epochs):
                        epoch)
 
     #Write prediction
-    if not os.path.exists("output"):
-        os.mkdir("output")
     w_train = open(args.train_output_filename, 'w')
     w_test = open(args.eval_output_filename, 'w')
     
@@ -277,9 +218,8 @@ for epoch in range(args.num_epochs):
                             [train_pred1[k].sum() for k in train_true.keys()])
     end = time.time()
     if epoch==0: 
-        print ("epoch\ttrain_losses1\ttrain_losses2\t"+
-               "test_losses1\ttest_losses2\t"+
-               "train_r2\ttest_r2\ttrain_r\ttest_r")
+        print ("epoch\ttrain_l1\ttrain_l2\ttest_l1\ttest_l2\t"+
+               "train_r2\ttest_r2\ttrain_r\ttest_r\t{time}")
     print (f"{epoch}\t{train_base_loss:.3f}\t{train_ss_loss:.3f}\t"+
             f"{eval_base_loss:.3f}\t{eval_ss_loss:.3f}\t"+
             f"{train_r2:.3f}\t{test_r2:.3f}\t"+
