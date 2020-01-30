@@ -504,7 +504,7 @@ class _DTIHarmonic(torch.nn.Module):
         h1, adj1, h2, adj2, A_int, dmv, _, __, sasa, dsasa, rotor,\
         charge1, charge2, vdw_radius1, vdw_radius2, valid1, valid2,\
         no_metal1, no_metal2, ___ = dic.values()
-
+        
         h1 = self.node_embedding(h1) # [, n_ligand_atom, n_in_feature(dim_gnn)] 
         h2 = self.node_embedding(h2) # [, n_protein_atom, n_in_feature]
         # attention applied each molecule's property
