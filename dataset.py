@@ -20,12 +20,39 @@ from rdkit.Chem import AllChem
 import copy
 from rdkit.Chem.rdmolops import CombineMols
 from rdkit.Chem.rdForceFieldHelpers import GetUFFVdWParams
+from rdkit.Chem import rdForceFieldHelpers
+from rdkit.Chem import ChemicalForceFields
+from rdkit.Chem import rdmolops
+from rdkit.Chem.TorsionFingerprints import CalculateTorsionLists, CalculateTorsionAngles
+import math
+from rdkit.Chem.rdmolops import GetDistanceMatrix
 random.seed(0)
 
 interaction_types = ['saltbridge', 'hbonds', 'pication', 
         'pistack', 'halogen', 'waterbridge', 'hydrophobic', 'metal_complexes']
 
-def get_epsilon_sigma(m1, m2):
+def get_torsion_energy(m):
+    mp = ChemicalForceFields.MMFFGetMoleculeProperties(m)
+    if mp is None: return 0.0
+    ffTerms = ('Bond', 'Angle', 'StretchBend', 'Torsion', 'Oop', 'VdW', 'Ele')
+    iTerm='Torsion'
+    for jTerm in ffTerms:
+        state = (iTerm == jTerm)
+        setMethod = getattr(mp, 'SetMMFF' + jTerm + 'Term')
+        setMethod(state)
+    ff = rdForceFieldHelpers.MMFFGetMoleculeForceField(m, mp)
+    e = ff.CalcEnergy()
+    return e
+
+def get_epsilon_sigma(m1, m2, mmff=True):
+    if mmff:
+        try:
+            return get_epsilon_sigma_mmff(m1,m2)
+        except:
+            return get_epsilon_sigma_uff(m1,m2)
+    return get_epsilon_sigma_uff(m1,m2)        
+
+def get_epsilon_sigma_uff(m1, m2):
     n1 = m1.GetNumAtoms()
     n2 = m2.GetNumAtoms()
     vdw_epsilon, vdw_sigma = np.zeros((n1, n2)), np.zeros((n1,n2))
@@ -39,6 +66,61 @@ def get_epsilon_sigma(m1, m2):
             vdw_sigma[i1,i2]=d
             #print (i1, i2, e, d)
     return vdw_epsilon, vdw_sigma            
+
+def get_epsilon_sigma_mmff(m1, m2):
+    n1 = m1.GetNumAtoms()
+    n2 = m2.GetNumAtoms()
+    vdw_epsilon, vdw_sigma = np.zeros((n1, n2)), np.zeros((n1,n2))
+    m_combine = CombineMols(m1,m2)
+    mp = ChemicalForceFields.MMFFGetMoleculeProperties(m_combine)
+    for i1 in range(n1):
+        for i2 in range(n2):
+            param = mp.GetMMFFVdWParams(i1,i1+i2)
+            if param is None: continue
+            d, e, _, _ = param
+            vdw_epsilon[i1,i2]=e
+            vdw_sigma[i1,i2]=d
+            #print (i1, i2, e, d)
+    return vdw_epsilon, vdw_sigma            
+
+def cal_torsion_energy(m):
+    energy = 0
+    torsion_list, torsion_list_ring = CalculateTorsionLists(m)
+    angles = CalculateTorsionAngles(m, torsion_list, torsion_list_ring)
+    for idx,t in enumerate(torsion_list):
+        indice, _ = t
+        indice, angle = indice[0], angles[idx][0][0]
+        v = rdForceFieldHelpers.GetUFFTorsionParams(m, indice[0], indice[1], 
+                        indice[2], indice[3])
+        hs = [str(m.GetAtomWithIdx(i).GetHybridization()) for i in indice]
+        if set([hs[1], hs[2]])==set(['SP3','SP3']):
+            n, pi_zero = 3, math.pi
+        elif set([hs[1], hs[2]])==set(['SP2', 'SP3']):
+            n, pi_zero = 6, 0.0
+        else:
+            continue
+        energy+=0.5*v*(1-math.cos(n*pi_zero)*math.cos(n*angle/180*math.pi))
+    return energy
+
+def cal_internal_vdw(m):
+    retval=0
+    n = m.GetNumAtoms()
+    c = m.GetConformers()[0]
+    d = np.array(c.GetPositions())
+    dm = distance_matrix(d,d)
+    adj = GetAdjacencyMatrix(m)
+    topological_dm=GetDistanceMatrix(m)
+    for i1 in range(n):
+        for i2 in range(0,i1):
+            param = GetUFFVdWParams(m, i1, i2)
+            if param is None: continue
+            d, e = param
+            d = d*1.0
+            if adj[i1,i2]==1: continue
+            if topological_dm[i1,i2]<4: continue
+            retval+= e*((d/dm[i1,i2])**12-2*((d/dm[i1,i2])**6))
+            #print (i1, i2, e, d)
+    return retval
 
 def cal_charge(m):
     try:
@@ -190,7 +272,7 @@ def get_interaction_matrix(d1, d2, interaction_data):
 def classifyAtoms(mol, polar_atoms=[7,8,15,16]):
 	#Taken from https://github.com/mittinatten/freesasa/blob/master/src/classifier.c
 	symbol_radius = {"H": 1.10, "C": 1.70, "N": 1.55, "O": 1.52, "P": 1.80, 
-        "S": 1.80, "SE": 1.90,
+                "S": 1.80, "SE": 1.90, "FE": 2.05,
 	"F": 1.47, "CL": 1.75, "BR": 1.83, "I": 1.98,
 	"LI": 1.81, "BE": 1.53, "B": 1.92,
 	"NA": 2.27, "MG": 1.74, "AL": 1.84, "SI": 2.10,
@@ -230,6 +312,27 @@ def cal_uff(m):
     e = ffu.CalcEnergy()
     return e
 
+def get_hydrophobic_atom(m):
+    n = m.GetNumAtoms()
+    retval = np.zeros((n,))
+    for i in range(n):
+        a = m.GetAtomWithIdx(i)
+        s = a.GetSymbol()
+        if s.upper() in ['F', 'CL', 'BR', 'I']: 
+            retval[i]=1
+        elif s.upper() in ['C']:
+            n_a = [x.GetSymbol() for x in a.GetNeighbors()]
+            diff = list(set(n_a)-set(['C']))
+            if len(diff)==0: retval[i]=1
+        else:
+            continue
+    return retval
+
+def get_A_hydrophobic(m1,m2):
+    indice1 = get_hydrophobic_atom(m1)
+    indice2 = get_hydrophobic_atom(m2)
+    return np.outer(indice1, indice2)
+
 class MolDataset(Dataset):
     """
     Basic molecule dataset for DTI
@@ -258,7 +361,8 @@ class MolDataset(Dataset):
              -key : key value of the protein-ligand interaction
     """
 
-    def __init__(self, keys, data_dir, id_to_y, random_rotation = 0.0):
+    def __init__(self, keys, data_dir, id_to_y, random_rotation = 0.0,
+                       pos_noise_std=0.0):
         self.keys = keys
         self.data_dir = data_dir
         self.id_to_y = id_to_y
@@ -266,7 +370,7 @@ class MolDataset(Dataset):
         self.amino_acids = ['ALA','ARG','ASN','ASP','ASX','CYS','GLU','GLN','GLX',\
                    'GLY','HIS','ILE','LEU','LYS','MET','PHE','PRO','SER',\
                    'THR','TRP','TYR','VAL']
-
+        self.pos_noise_std=pos_noise_std
     
     def __len__(self):
         return len(self.keys)
@@ -282,13 +386,13 @@ class MolDataset(Dataset):
         #key = '1x8r'
         with open(self.data_dir+'/'+key, 'rb') as f:
             m1, m1_uff, m2, interaction_data = pickle.load(f)
-        
+        #if m2 is None: print (key) 
         #Remove hydrogens
         m1 = Chem.RemoveHs(m1)
         m2 = Chem.RemoveHs(m2)
 
         #extract valid amino acids
-        m2 = extract_valid_amino_acid(m2, self.amino_acids)
+        #m2 = extract_valid_amino_acid(m2, self.amino_acids)
         #if m2 is None : return None
         if m2 is None: print (key)    
         
@@ -308,6 +412,7 @@ class MolDataset(Dataset):
         #prepare ligand
         n1 = m1.GetNumAtoms()
         d1 = np.array(m1.GetConformers()[0].GetPositions())
+        d1 += np.random.normal(0.0, self.pos_noise_std,d1.shape)
         d1_rot = np.array(m1_rot.GetConformers()[0].GetPositions())
         adj1 = GetAdjacencyMatrix(m1)+np.eye(n1)
         h1 = get_atom_feature(m1, True)
@@ -316,19 +421,21 @@ class MolDataset(Dataset):
         n2 = m2.GetNumAtoms()
         c2 = m2.GetConformers()[0]
         d2 = np.array(c2.GetPositions())
+        d2 += np.random.normal(0.0, self.pos_noise_std, d2.shape)
         adj2 = GetAdjacencyMatrix(m2)+np.eye(n2)
-        h2 = get_atom_feature(m2, False)
+        h2 = get_atom_feature(m2, True)
             
         #prepare distance vector
         dmv = dm_vector(d1,d2)
         dmv_rot = dm_vector(d1_rot,d2)
 
         #affinity
-        affinity = -affinity
+        affinity = affinity*-1.36
 
         #get interaction matrix
         A_int = get_interaction_matrix(d1, d2, interaction_data)
-
+        A_int[-2] = get_A_hydrophobic(m1,m2)
+        
         #cal sasa
         sasa = cal_sasa(m1)
         dsasa = sasa-cal_sasa(m1_uff)
@@ -337,8 +444,10 @@ class MolDataset(Dataset):
         rotor = CalcNumRotatableBonds(m1)
 
         #charge
-        charge1 = cal_charge(m1) 
-        charge2 = cal_charge(m2) 
+        #charge1 = cal_charge(m1) 
+        #charge2 = cal_charge(m2) 
+        charge1 = np.zeros((n1,))
+        charge2 = np.zeros((n2,))
         
         """
         mp1 = AllChem.MMFFGetMoleculeProperties(m1)
@@ -369,10 +478,13 @@ class MolDataset(Dataset):
         vdw_radius1 = np.array([get_vdw_radius(a) for a in m1.GetAtoms()])
         vdw_radius2 = np.array([get_vdw_radius(a) for a in m2.GetAtoms()])
 
-        vdw_epsilon, vdw_sigma = get_epsilon_sigma(m1, m2)
+        vdw_epsilon, vdw_sigma = get_epsilon_sigma(m1, m2, False)
         
         #uff energy difference
-        delta_uff = cal_uff(m1)-cal_uff(m1_uff)
+        #delta_uff = cal_uff(m1)-cal_uff(m1_uff)
+        #delta_uff = get_torsion_energy(m1) - get_torsion_energy(m1_uff)
+        #delta_uff = cal_torsion_energy(m1)+cal_internal_vdw(m1)
+        delta_uff = 0.0
         sample = {
                   'h1':h1, \
                   'adj1': adj1, \
@@ -381,6 +493,8 @@ class MolDataset(Dataset):
                   'A_int': A_int, \
                   'dmv': dmv, \
                   'dmv_rot': dmv_rot, \
+                  'pos1': d1, \
+                  'pos2': d2, \
                   'affinity': affinity, \
                   'sasa': sasa, \
                   'dsasa': dsasa, \

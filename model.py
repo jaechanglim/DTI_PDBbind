@@ -7,7 +7,6 @@ from multiprocessing import Pool
 from layers import GAT_gate, EdgeConv
 import dataset
 
-
 class DTIHarmonic(torch.nn.Module):
     def __init__(self, args):
         super(DTIHarmonic, self).__init__()
@@ -17,29 +16,9 @@ class DTIHarmonic(torch.nn.Module):
         self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
         
-        self.edgeconv = nn.ModuleList([EdgeConv(3, args.dim_gnn) \
-                                    for _ in range(args.n_gnn)])
+        #self.edgeconv = nn.ModuleList([EdgeConv(3, args.dim_gnn) \
+        #                            for _ in range(args.n_gnn)])
         self.num_interaction_type = len(dataset.interaction_types)
-        self.cal_A = nn.ModuleList([nn.Sequential(
-                         nn.Linear(args.dim_gnn*2, 128),
-                         nn.ReLU(),
-                         nn.Linear(128, 1),
-                         nn.Sigmoid()
-                        ) for _ in range(self.num_interaction_type)])
-        
-        self.cal_B = nn.ModuleList([nn.Sequential(
-                         nn.Linear(args.dim_gnn*2, 128),
-                         nn.ReLU(),
-                         nn.Linear(128, 1),
-                         nn.Sigmoid()
-                        ) for _ in range(self.num_interaction_type)])
-        
-        self.cal_C = nn.ModuleList([nn.Sequential(
-                         nn.Linear(args.dim_gnn*2, 128),
-                         nn.ReLU(),
-                         nn.Linear(128, 1),
-                         nn.Sigmoid()
-                        ) for _ in range(self.num_interaction_type)])
         
         self.cal_coolomb_interaction_A = nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
@@ -53,6 +32,7 @@ class DTIHarmonic(torch.nn.Module):
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         )
+   
         self.cal_vdw_interaction_A = nn.Sequential(
                          nn.Linear(args.dim_gnn*2, 128),
                          nn.ReLU(),
@@ -71,27 +51,22 @@ class DTIHarmonic(torch.nn.Module):
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         )
-        self.coolomb_distance = nn.Parameter(torch.tensor([3.0])) 
-        
-        self.A = nn.Parameter(torch.tensor([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]))
-        self.C = nn.Parameter(torch.tensor(
-                [4.639, 3.184, 4.563, 4.709, 3.356, 4.527, 3.714, 2.313]))
-        self.sigma = [1.159, 0.448, 0.927, 0.902, 0.349, 0.789, 0.198, 0.317]
-        
+        self.vina_hbond_coeff = nn.Parameter(torch.tensor([1.0])) 
+        self.vina_hydrophobic_coeff = nn.Parameter(torch.tensor([1.0])) 
+        self.vdw_coeff = nn.Parameter(torch.tensor([1.0])) 
+        self.torsion_coeff = nn.Parameter(torch.tensor([1.0]))
+        self.rotor_coeff = nn.Parameter(torch.tensor([1.0]))
         self.intercept = nn.Parameter(torch.tensor([0.0]))
-        self.intercept.requires_grad=False
-        self.sasa_coeff = nn.Parameter(torch.tensor([0.0]))
-        self.dsasa_coeff = nn.Parameter(torch.tensor([0.0]))
-        self.rotor_coeff = nn.Parameter(torch.tensor([0.0]))
-        self.delta_uff_coeff = nn.Parameter(torch.tensor([0.0]))
-        self.vdw_coeff = nn.Parameter(torch.tensor([0.02]))
-        self.coolomb_coeff = nn.Parameter(torch.tensor([0.0]))
-        self.cal_intercept = nn.Sequential(
-                             nn.Linear(args.dim_gnn*1, 128),
-                             nn.ReLU(),
-                             nn.Linear(128, 1),
-                             #nn.Tanh()
-                         )
+
+    def cal_intercept(self, h, valid1, valid2, dm):
+        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
+        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
+        C1 = self.cal_intercept_A(h).squeeze(-1)*0.01
+        C2 = self.cal_intercept_B(h).squeeze(-1)*0.1+0.1
+        retval = C1*torch.exp(-torch.pow(C2*dm, 2))
+        retval = retval*valid1_repeat*valid2_repeat
+        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
+        return retval
 
     def cal_coolomb_interaction(self, dm, h, charge1, charge2, valid1, valid2):
         charge1_repeat = charge1.unsqueeze(2).repeat(1,1,charge2.size(1))
@@ -106,255 +81,151 @@ class DTIHarmonic(torch.nn.Module):
         energy = energy*valid1_repeat*valid2_repeat
         energy = energy.clamp(min=-100, max=100)
         energy = energy.sum(1).sum(1).unsqueeze(-1)
-
         return energy  
+
+    def vina_steric(self, dm, h, vdw_radius1, vdw_radius2, valid1, valid2):
+        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
+        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
+        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
+                .repeat(1,1,vdw_radius2.size(1))
+        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
+                .repeat(1,vdw_radius1.size(1),1)
+        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat
+        dm = dm-dm_0
+        g1 = torch.exp(-torch.pow(dm/0.5,2))*-0.0356  
+        g2 = torch.exp(-torch.pow((dm-3)/2,2))*-0.00516
+        repulsion = dm*dm*0.84
+        zero_vec = torch.zeros_like(repulsion)
+        repulsion = torch.where(dm > 0, zero_vec, repulsion)
+        retval = g1+g2+repulsion
+        retval = retval*valid1_repeat*valid2_repeat
+        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
+        return retval
     
+    def vina_hbond(self, dm, h, vdw_radius1, vdw_radius2, A):
+        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
+                .repeat(1,1,vdw_radius2.size(1))
+        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
+                .repeat(1,vdw_radius1.size(1),1)
+        B = self.cal_vdw_interaction_B(h).squeeze(-1)*0.2
+        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat+B
+        dm = dm-dm_0
+        retval = dm*A/-0.7
+        retval = retval.clamp(min=0.0, max=1.0)
+        retval = retval*-self.vina_hbond_coeff*self.vina_hbond_coeff
+        #retval = retval.clamp(min=0.0, max=1.0)*-0.587
+        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
+        return retval
+    
+    def vina_hydrophobic(self, dm, h, vdw_radius1, vdw_radius2, A):
+        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
+                .repeat(1,1,vdw_radius2.size(1))
+        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
+                .repeat(1,vdw_radius1.size(1),1)
+        B = self.cal_vdw_interaction_B(h).squeeze(-1)*0.2
+        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat+B
+        dm = dm-dm_0
+
+        retval = (-dm+1.5)*A
+        retval = retval.clamp(min=0.0, max=1.0)
+        #retval = retval.clamp(min=0.0, max=1.0)*-0.0351
+        retval = retval*-self.vina_hydrophobic_coeff*self.vina_hydrophobic_coeff
+        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
+        return retval
+ 
     def cal_vdw_interaction(self, dm, h, vdw_radius1, vdw_radius2, 
                             vdw_epsilon, vdw_sigma, valid1, valid2):
         valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
         valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
-        #vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-        #        .repeat(1,1,vdw_radius2.size(1))
-        #vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-        #        .repeat(1,vdw_radius1.size(1),1)
-        #dm_0 = vdw_radius1_repeat+vdw_radius2_repeat
-        B = self.cal_vdw_interaction_B(h).squeeze(-1)*0.6+0.7
-        dm_0 = vdw_sigma*B
+        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
+                .repeat(1,1,vdw_radius2.size(1))
+        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
+                .repeat(1,vdw_radius1.size(1),1)
+
+        B = self.cal_vdw_interaction_B(h).squeeze(-1)*0.2
+        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat+B
+        #dm_0 = vdw_sigma
         dm_0[dm_0<0.0001] = 1
-        N = self.cal_vdw_interaction_N(h).squeeze(-1)*2+5
+        N = self.cal_vdw_interaction_N(h).squeeze(-1)+5.5
         
         vdw1 = torch.pow(dm_0/dm, 2*N)
         vdw2 = -2*torch.pow(dm_0/dm, N)
-        
-        A = self.cal_vdw_interaction_A(h).squeeze(-1)*0.6+0.7
-        A = A*self.vdw_coeff*self.vdw_coeff
-        A = A*vdw_epsilon
 
-        energy = A*(vdw1+vdw2)
-        energy = energy*valid1_repeat*valid2_repeat
+        A = self.cal_vdw_interaction_A(h).squeeze(-1)
+        #A = A*self.vdw_coeff*self.vdw_coeff
+        #A = A*vdw_epsilon
+
+        energy = vdw1+vdw2
         energy = energy.clamp(max=100)
+        energy = energy*valid1_repeat*valid2_repeat
+        energy = A*energy
         energy = energy.sum(1).sum(1).unsqueeze(-1)
-
         return energy  
 
-    def forward(self, sample, DM_min=0.5):
-        h1, adj1, h2, adj2, A_int, dmv, _, _, sasa, dsasa, rotor,\
+    def cal_torsion_energy(self, torsion_energy):
+        retval=torsion_energy*self.vdw_coeff*self.vdw_coeff
+        #retval=torsion_energy*self.torsion_coeff*self.torsion_coeff
+        return retval.unsqueeze(-1)
+
+    def cal_distance_matrix(self, p1, p2, dm_min):
+        p1_repeat = p1.unsqueeze(2).repeat(1,1,p2.size(1),1)
+        p2_repeat = p2.unsqueeze(1).repeat(1,p1.size(1),1,1)
+        dm = torch.sqrt(torch.pow(p1_repeat-p2_repeat, 2).sum(-1)+1e-10)
+        replace_vec = torch.ones_like(dm)*1e10
+        dm = torch.where(dm<dm_min, replace_vec, dm)
+        return dm
+    
+    def forward(self, sample, DM_min=0.5, cal_der_loss=False):
+        h1, adj1, h2, adj2, A_int, dmv, _, pos1, pos2, _, sasa, dsasa, rotor,\
         charge1, charge2, vdw_radius1, vdw_radius2, vdw_epsilon, \
         vdw_sigma, delta_uff, valid1, valid2,\
         no_metal1, no_metal2, _ = sample.values()
 
         h1 = self.node_embedding(h1)  
         h2 = self.node_embedding(h2) 
+        
         for i in range(len(self.gconv)):
             h1 = self.gconv[i](h1, adj1)
-            #h2 = self.gconv[i](h2, adj2) 
-
-        dm = torch.sqrt(torch.pow(dmv, 2).sum(-1)+1e-10)
+            h2 = self.gconv[i](h2, adj2) 
         
-        dm[dm<DM_min] = 1e10
+        pos1.requires_grad=True
+        dm = self.cal_distance_matrix(pos1, pos2, DM_min)
+
         h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
         h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
         h = torch.cat([h1_repeat, h2_repeat], -1) 
         
         retval = []
-        for i in range(self.num_interaction_type):
-            continue
-            #if i not in [1,7]: continue
-            
-            A = self.cal_A[i](h).squeeze(-1)*4
-            B = self.cal_B[i](h).squeeze(-1)*4+1
-            #B = (self.cal_B[i](h).squeeze(-1)*3+1)/(4*self.sigma[i]*self.sigma[i])
-            #energy = A*(B*torch.pow(dm-self.C[i],2)-1)
-            energy = A*(F.tanh(B*(dm-self.C[i]))-1)*0.5
-            energy = energy*A_int[:,i,:,:]
-            #energy = energy.clamp(max=0.0)
-            energy = energy.sum(1).sum(1).unsqueeze(-1)
-            retval.append(energy)
         
-        #hydrophobic contribution
-        #hydrophobic = (self.sasa_coeff*sasa).unsqueeze(-1)
-        #hydrophobic = hydrophobic.clamp(max=0)
-        #retval.append(hydrophobic)
-
-        #flexibility contribution
-        #flexibility = (self.rotor_coeff*rotor).unsqueeze(-1)
-        #flexibility = flexibility.clamp(min=0)
-        #retval.append(flexibility)
-
         #coolomb interaction
-        retval.append(self.cal_coolomb_interaction(dm, h, charge1, charge2, \
-                                                   valid1, valid2))
+        #retval.append(self.cal_coolomb_interaction(dm, h, charge1, charge2, \
+        #                                           valid1, valid2))
         #vdw interaction
         retval.append(self.cal_vdw_interaction(dm, h, vdw_radius1, vdw_radius2, 
                                                vdw_epsilon, vdw_sigma,
                                                no_metal1, no_metal2))
-        #delta uff
-        #delta_uff = delta_uff/20
-        diff_conf_energy = self.delta_uff_coeff*self.delta_uff_coeff*delta_uff
-        diff_conf_energy = diff_conf_energy.unsqueeze(-1)
-        retval.append(diff_conf_energy)
 
-        #intercept
-        intercept = self.cal_intercept((h1*valid1.unsqueeze(-1)).sum(1))
-        #intercept = self.intercept.unsqueeze(-1).repeat(h.size(0), 1)
-        retval.append(intercept)
-        
+        retval.append(self.vina_hbond(dm, h, vdw_radius1, vdw_radius2, A_int[:,1]))
+        retval.append(self.vina_hbond(dm, h, vdw_radius1, vdw_radius2, A_int[:,-1]))
+        retval.append(self.vina_hydrophobic(dm, h, vdw_radius1, vdw_radius2, 
+            A_int[:,-2]))
+        retval.append(self.cal_torsion_energy(delta_uff))
+        #intercept        
+        #intercept = torch.stack([self.intercept 
+        #                        for _ in range(retval[0].size(0))])
+        #retval.append(intercept)
         retval = torch.cat(retval, -1)
-        return retval
-
-class _DTIHarmonic(torch.nn.Module):
-     def __init__(self, args):
-         super(_DTIHarmonic, self).__init__()
-         self.args = args
-         self.node_embedding = nn.Linear(56, args.dim_gnn, bias = False)
-
-         self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
-                                     for _ in range(args.n_gnn)])
-
-         self.edgeconv = nn.ModuleList([EdgeConv(3, args.dim_gnn) \
-                                     for _ in range(args.n_gnn)])
-         self.num_interaction_type = len(dataset.interaction_types)
-         self.cal_A = nn.ModuleList([nn.Sequential(
-                          nn.Linear(args.dim_gnn*2, 128),
-                          nn.ReLU(),
-                          nn.Linear(128, 1),
-                          nn.Sigmoid()
-                         ) for _ in range(self.num_interaction_type)])
-
-         self.cal_B = nn.ModuleList([nn.Sequential(
-                          nn.Linear(args.dim_gnn*2, 128),
-                          nn.ReLU(),
-                          nn.Linear(128, 1),
-                          nn.Sigmoid()
-                         ) for _ in range(self.num_interaction_type)])
-
-         self.cal_C = nn.ModuleList([nn.Sequential(
-                          nn.Linear(args.dim_gnn*2, 128),
-                          nn.ReLU(),
-                          nn.Linear(128, 1),
-                          nn.Sigmoid()
-                         ) for _ in range(self.num_interaction_type)])
-
-         self.cal_coolomb_interaction_A = nn.Sequential(
-                          nn.Linear(args.dim_gnn*2, 128),
-                          nn.ReLU(),
-                          nn.Linear(128, 1),
-                          nn.Sigmoid()
-                         )
-         self.cal_vdw_interaction_A = nn.Sequential(
-                          nn.Linear(args.dim_gnn*2, 128),
-                          nn.ReLU(),
-                          nn.Linear(128, 1),
-                          nn.Sigmoid()
-                         )
-         self.coolomb_distance = nn.Parameter(torch.tensor([3.0])) 
-
-         self.A = nn.Parameter(torch.tensor([0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]))
-         self.C = nn.Parameter(torch.tensor(
-                 [4.639, 3.184, 4.563, 4.709, 3.356, 4.527, 3.714, 2.313]))
-         self.sigma = [1.159, 0.448, 0.927, 0.902, 0.349, 0.789, 0.198, 0.317]
-
-         self.intercept = nn.Parameter(torch.tensor([0.0]))
-         self.intercept.requires_grad=False
-         self.sasa_coeff = nn.Parameter(torch.tensor([0.0]))
-         self.dsasa_coeff = nn.Parameter(torch.tensor([0.0]))
-         self.rotor_coeff = nn.Parameter(torch.tensor([0.0]))
-         self.vdw_coeff = nn.Parameter(torch.tensor([0.0]))
-         self.coolomb_coeff = nn.Parameter(torch.tensor([0.0]))
-         self.cal_intercept = nn.Sequential(
-                              nn.Linear(args.dim_gnn*1, 128),
-                              nn.ReLU(),
-                              nn.Linear(128, 1),
-                              nn.Sigmoid()
-                          )
-
-     def cal_coolomb_interaction(self, dm, h, charge1, charge2, valid1, valid2):
-         charge1_repeat = charge1.unsqueeze(2).repeat(1,1,charge2.size(1))
-         charge2_repeat = charge2.unsqueeze(1).repeat(1,charge1.size(1),1)
-         valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-         valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
-         #A = self.cal_coolomb_interaction_A(h).squeeze(-1)*4
-         A = self.coolomb_coeff 
-         energy = A*charge1_repeat*charge2_repeat/dm
-         energy = energy*valid1_repeat*valid2_repeat
-         energy = energy.clamp(min=-100, max=100)
-         energy = energy.sum(1).sum(1).unsqueeze(-1)
-
-         return energy  
-
-     def cal_vdw_interaction(self, dm, h, vdw_radius1, vdw_radius2, 
-                             valid1, valid2):
-         vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                 .repeat(1,1,vdw_radius2.size(1))
-         vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                 .repeat(1,vdw_radius1.size(1),1)
-         valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-         valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
-         #A = self.cal_vdw_interaction_A(h).squeeze(-1)*1.5
-
-         dm_0 = vdw_radius1_repeat+vdw_radius2_repeat
-
-         vdw1 = torch.pow(dm_0/dm, 8)
-         vdw2 = -2*torch.pow(dm_0/dm, 4)
-         energy = self.vdw_coeff*(vdw1+vdw2)*valid1_repeat*valid2_repeat
-         energy = energy.clamp(max=100)
-         energy = energy.sum(1).sum(1).unsqueeze(-1)
-
-         return energy  
-
-     def forward(self, dic, DM_min=0.5):
-         h1, adj1, h2, adj2, A_int, dmv, _, __, sasa, dsasa, rotor,\
-         charge1, charge2, vdw_radius1, vdw_radius2, valid1, valid2,\
-         no_metal1, no_metal2, ___ = dic.values()
-
-         h1 = self.node_embedding(h1) # [, n_ligand_atom, n_in_feature(dim_gnn)] 
-         h2 = self.node_embedding(h2) # [, n_protein_atom, n_in_feature]
-         # attention applied each molecule's property
-         for i in range(len(self.gconv)):
-             h1 = self.gconv[i](h1, adj1) # [, n_ligand_atom, n_out_feature(dim_gnn)]
-             h2 = self.gconv[i](h2, adj2) # [, n_protein_atom, n_out_feature]
-
-         dm = torch.sqrt(torch.pow(dmv, 2).sum(-1)+1e-10)
-
-         dm[dm<DM_min] = 1e10
-         h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) # [, n_ligand_atom, n_protein_atom, n_out_feature(dim_gnn)]
-         h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) # [, n_ligand_atom, n_protein_atom, n_out_feature(dim_gnn)]
-         h = torch.cat([h1_repeat, h2_repeat], -1) # [, n_ligand_atom, n_protein_atom, 2*n_out_feature(dim_gnn)]
-
-         retval = []
-         #A_int[:,6,:,:] = 0.0
-         for i in range(self.num_interaction_type):
-             A = self.cal_A[i](h).squeeze(-1)*4
-             if i==1: A=A+1
-             #B = (self.cal_B[i](h).squeeze(-1)+1)*self.sigma[i]
-             B = (self.cal_B[i](h).squeeze(-1)*3+1)/(4*self.sigma[i]*self.sigma[i])
-             energy = A*(B*torch.pow(dm-self.C[i],2)-1)
-             energy = energy*A_int[:,i,:,:]
-             energy = energy.clamp(max=0.0)
-             energy = energy.sum(1).sum(1).unsqueeze(-1)
-             retval.append(energy)
-
-         #hydrophobic contribution
-         hydrophobic = (self.sasa_coeff*sasa).unsqueeze(-1)
-         hydrophobic = hydrophobic.clamp(max=0)
-         retval.append(hydrophobic)
-
-         #flexibility contribution
-         flexibility = (self.rotor_coeff*rotor).unsqueeze(-1)
-         flexibility = flexibility.clamp(min=0)
-         retval.append(flexibility)
-
-         #coolomb interaction
-         retval.append(self.cal_coolomb_interaction(dm, h, charge1, charge2, \
-                                                    valid1, valid2))
-         #vdw interaction
-         retval.append(self.cal_vdw_interaction(dm, h, vdw_radius1, vdw_radius2, \
-                                                    no_metal1, no_metal2))
-
-         #intercept
-         intercept = self.intercept.unsqueeze(-1).repeat(h.size(0), 1)
-         retval.append(intercept)
-
-         retval = torch.cat(retval, -1)
-         return retval
-
+        retval = retval/(1+self.rotor_coeff*self.rotor_coeff*rotor.unsqueeze(-1))
+        #retval.sum().backward(retain_graph=True)
+        #minimum_loss = torch.pow(dm.grad.sum(1).sum(1),2).mean()
+        if cal_der_loss:
+            minimum_loss = torch.autograd.grad(retval.sum(), pos1, 
+                    retain_graph=True, create_graph=True)[0]
+            minimum_loss2 = torch.pow(minimum_loss.sum(1), 2).mean()
+            minimum_loss3 = torch.autograd.grad(minimum_loss.sum(), pos1,
+                    retain_graph=True, create_graph=True)[0]                                    
+            minimum_loss3 = -minimum_loss3.sum(1).sum(1).mean()    
+        else:
+            minimum_loss2 = torch.zeros_like(retval).sum()
+            minimum_loss3 = torch.zeros_like(retval).sum()
+        return retval, minimum_loss2, minimum_loss3

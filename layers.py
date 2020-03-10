@@ -43,41 +43,20 @@ class EdgeConv(torch.nn.Module):
 
         self.W = nn.Linear(n_atom_feature, n_atom_feature)
         #self.M = nn.Linear(n_atom_feature, n_atom_feature)
-        self.M = nn.Linear(n_edge_feature+n_atom_feature, n_atom_feature)
+        self.M = nn.Linear(n_atom_feature, n_atom_feature)
+        self.C = nn.GRUCell(n_atom_feature, n_atom_feature)
 
     def forward(self, x1, x2, edge, valid_edge):
-        """
-        Dimensions of each variable
-        x1 = [, n_mol1_atom, n_property(args.dim_gnn)]
-        x2 = [, n_mol2_atom, n_property]
-        edge = [, n_mol1_atom, n_mol2_atom, 3]
-        valid_edge = [, n_mol1_atom, n_mol2_atom]
-        new_edge = [, n_mol1_atom, n_mol2_atom, n_property + 3(x,y,z)]
-        m1 = [, n_mol1_atom, n_property]
-        m2 = [, n_mol1_atom, n_property]
-        retval = [, n_mol1_atom, n_property]
-
-        1. new_edge -> concat information between mol2 and edge vector
-        2. m1 -> embed the mol1's information
-        3. m2 -> maximum values of certain properties among elements of mol2 at each element in mol1
-        4. relu(m1 + m2) -> return value and this becomes next molecule's information(new_h1 | new_h2)
-
-        :param x1: atom feature matrix one-hot vector of ligand molecule after node embedding
-        :param x2: atom feature matrix one-hot vector of protein molecule after node embedding
-        :param edge: distance matrix between every atoms of m1 and m2
-        :param valid_edge: distance(sum of square of distance matrix) between each molecule's atom
-        :return: message-passed molecule information vector same size with X1
-        """
-        new_edge = torch.cat([x2.unsqueeze(1).repeat(1,x1.size(1),1,1), edge], -1)                      
+        new_edge = x2.unsqueeze(1).repeat(1,x1.size(1),1,1)                      
         retval = 0
 
         m1 = self.W(x1)
-        #m2 = (self.M(new_edge)*valid_edge.unsqueeze(-1).\
-        #                    repeat(1,1,1,m1.size(-1))).max(2)[0]
         m2 = (self.M(new_edge)*
-                valid_edge.unsqueeze(-1).repeat(1,1,1,m1.size(-1))).max(2)[0]
+                valid_edge.unsqueeze(-1)).max(2)[0]
         retval = F.relu(m1+m2)
-
+        feature_size = retval.size(-1)
+        retval = self.C(retval.reshape(-1, feature_size), x1.reshape(-1, feature_size))
+        retval = retval.reshape(x1.size(0), x1.size(1), x1.size(2))
         return retval
 
 
@@ -165,22 +144,14 @@ class GConv_gate(torch.nn.Module):
         super(GConv_gate, self).__init__()
         self.W = nn.Linear(n_in_feature, n_out_feature)
         self.gate = nn.Linear(n_out_feature*2, 1)
+        self.C = nn.GRUCell(n_atom_feature, n_atom_feature)
     
     def forward(self, x, adj):
-        """
-        - graph convolution gate
-        gc_result = relu(Adj * (WX))
-        alpha = sigmoid(gc_result).repeat(1, 1, X.size(-1))
-                working as coefficient indicating importance ratio between X and gc_result
-        return alpha * X + (1-alpha) * gc_result
-        :param x:   atom feature one-hot vector of ligand or protein molecule
-        :param adj: adjacency matrix of ligand or protein molecule
-        :return:    graph convolution resulting matrix
-        """
         m = self.W(x)
         m = F.relu(torch.einsum('xjk,xkl->xjl', (adj.clone(), m)))
-        coeff = torch.sigmoid(self.gate(torch.cat([x,m], -1))).repeat(1,1,x.size(-1))
-        retval = coeff*x+(1-coeff)*m
+        feature_size = m.size(-1)
+        retval = self.C(m.reshape(-1, feature_size), x.reshape(-1, feature_size))
+        retval = retval.reshape(x.size(0), x.size(1), x.size(2))
 
         #x = torch.bmm(adj, x)
         return retval

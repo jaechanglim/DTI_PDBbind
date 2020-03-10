@@ -38,14 +38,6 @@ def parser(command):
                         help='data file path',
                         type=str,
                         default=home+'/data/')
-    parser.add_argument("--filter_spacing",
-                        help="filter spacing",
-                        type=float,
-                        default=0.1)
-    parser.add_argument("--filter_gamma",
-                        help="filter gamma",
-                        type=float,
-                        default=10)
     parser.add_argument("--potential",
                         help="potential",
                         type=str, 
@@ -54,6 +46,18 @@ def parser(command):
                                  'harmonic',
                                  'morse_all_pair',
                                  'harmonic_interaction_specified'])
+    parser.add_argument("--pos_noise_std",
+                        help="std of noise added to the position",
+                        type=float,
+                        default=0.0)
+    parser.add_argument("--filter_gamma", 
+                        help="filter gamma", 
+                        type=float, 
+                        default=10.0)
+    parser.add_argument("--filter_spacing", 
+                        help="filter spacing", 
+                        type=float, 
+                        default=0.05)
 
     # for train
     if "train.py" in command[0]:
@@ -73,20 +77,56 @@ def parser(command):
                             help='number of epochs', 
                             type=int, 
                             default=100)
-        parser.add_argument('--train_output_filename',
-                            help='train output filename',
+        parser.add_argument('--train_result_filename',
+                            help='train result filename',
                             type=str,
-                            default='train.txt')
-        parser.add_argument('--eval_output_filename',
-                            help='evaluation output filename',
+                            default='train_result.txt')
+        parser.add_argument('--test_result_filename',
+                            help='test result filename',
                             type=str,
-                            default='eval.txt')
+                            default='test_result.txt')
+        parser.add_argument('--train_result_docking_filename',
+                            help='train result docking_filename',
+                            type=str,
+                            default='train_result_docking.txt')
+        parser.add_argument('--test_result_docking_filename',
+                            help='test result docking filename',
+                            type=str,
+                            default='test_result_docking.txt')
+        parser.add_argument('--train_result_screening_filename',
+                            help='train result screening filename',
+                            type=str,
+                            default='train_result_screening.txt')
+        parser.add_argument('--test_result_screening_filename',
+                            help='test result screening filename',
+                            type=str,
+                            default='test_result_screening.txt')
         parser.add_argument("--dropout_rate",
                             help="dropout rate",
                             type=float,
                             default=0.0)
-        parser.add_argument("--loss2_ratio",
-                            help="loss2 ratio",
+        parser.add_argument("--loss_der1_ratio",
+                            help="loss der1 ratio",
+                            type=float,
+                            default=1.0)
+        parser.add_argument("--loss_der2_ratio",
+                            help="loss der2 ratio",
+                            type=float,
+                            default=1.0)
+        parser.add_argument("--min_loss_der2",
+                            help="min loss der2",
+                            type=float,
+                            default=-100000000.0)
+        parser.add_argument("--loss_docking_ratio",
+                            help="loss docking ratio",
+                            type=float,
+                            default=1.0)
+        parser.add_argument("--min_loss_docking",
+                            help="min loss docking",
+                            type=float,
+                            default=-1.0)
+        parser.add_argument("--loss_screening_ratio",
+                            help="loss screening ratio",
                             type=float,
                             default=1.0)
         parser.add_argument("--save_dir",
@@ -95,20 +135,37 @@ def parser(command):
         parser.add_argument("--tensorboard_dir",
                             help='save directory of tensorboard log files',
                             type=str)
+        parser.add_argument('--filename2',
+                            help='filename2',
+                            default=home+'/pdb_to_affinity.txt')
+        parser.add_argument('--key_dir2',
+                            help='key directory',
+                            type=str,
+                            default='/home/udg/msh/urp/DTI_PDBbind/keys')
+        parser.add_argument('--data_dir2',
+                            help='data file path',
+                            type=str,
+                            default=home+'/data/')
+        parser.add_argument('--filename3',
+                            help='filename',
+                            default=home+'/pdb_to_affinity.txt')
+        parser.add_argument('--key_dir3',
+                            help='key directory',
+                            type=str,
+                            default='/home/udg/msh/urp/DTI_PDBbind/keys')
+        parser.add_argument('--data_dir3',
+                            help='data file path',
+                            type=str,
+                            default=home+'/data/')
+        parser.add_argument('--edgeconv', action='store_true', 
+                            help='edge conv')
 
     # for test
     if "test.py" in command[0]:
-        parser.add_argument('--test_output_filename',
-                            help='test output filename',
+        parser.add_argument('--test_result_filename',
+                            help='test result filename',
                             type=str,
-                            default='test.txt')
-
-    # for multi test
-    if "multi_test" in command[0]:
-        parser.add_argument('--epoch_interval',
-                            help='epoch interval for test',
-                            type=int,
-                            default=0)
+                            default='test_result.txt')
 
     args = parser.parse_args(arg_command)
     print (args)

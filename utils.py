@@ -26,10 +26,10 @@ def load_data(filename):
 def set_cuda_visible_device(ngpus):
     import subprocess
     import os
-    import random
+    import numpy as np
     empty = []
     if ngpus>0:
-        fn = f'empty_gpu_check_{random.choice([i for i in range(10000)])}'
+        fn = f'/tmp/empty_gpu_check_{np.random.randint(0,10000000,1)[0]}'
         for i in range(4):
             os.system(f'nvidia-smi -i {i} | grep "No running" | wc -l > {fn}')
             with open(fn) as f:
@@ -69,3 +69,46 @@ def initialize_model(model, device, load_save_file=False):
       model = nn.DataParallel(model)
     model.to(device)
     return model
+
+def read_data(filename, key_dir):
+    import pickle
+    with open(filename) as f:
+        lines = f.readlines()
+        lines = [l.split() for l in lines]
+        id_to_y = {l[0]:float(l[1]) for l in lines}
+    with open(f'{key_dir}/train_keys.pkl', 'rb') as f:
+        train_keys = pickle.load(f)
+    with open(f'{key_dir}/test_keys.pkl', 'rb') as f:
+        test_keys = pickle.load(f)
+    return train_keys, test_keys, id_to_y        
+
+def get_dataset_dataloader(train_keys, test_keys, data_dir, id_to_y, 
+                batch_size, num_workers, pos_noise_std):
+    from torch.utils.data import DataLoader
+    from dataset import MolDataset, tensor_collate_fn
+    train_dataset = MolDataset(train_keys, data_dir, id_to_y, 
+                               pos_noise_std=pos_noise_std)
+    train_dataloader = DataLoader(train_dataset,
+                                   batch_size,
+                                   num_workers=num_workers,
+                                   collate_fn=tensor_collate_fn,
+                                   shuffle=True)
+
+    test_dataset = MolDataset(test_keys, data_dir, id_to_y)
+    test_dataloader = DataLoader(test_dataset,
+                                  batch_size,
+                                  num_workers=num_workers,
+                                  collate_fn=tensor_collate_fn,
+                                  shuffle=False)
+    return train_dataset, train_dataloader, test_dataset, test_dataloader
+
+def write_result(filename, pred, true):
+    with open(filename, 'w')  as w:
+        for k in pred.keys():
+            w.write(f'{k}\t{true[k]:.3f}\t')
+            w.write(f'{pred[k].sum():.3f}\t')
+            w.write(f'{0.0}\t')
+            for j in range(pred[k].shape[0]):
+                w.write(f'{pred[k][j]:.3f}\t')
+            w.write('\n')
+    return

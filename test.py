@@ -42,6 +42,12 @@ else:
     exit(-1)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = utils.initialize_model(model, device, args.restart_file)
+
+#print (model.vina_hbond_coeff)
+#print (model.vina_hydrophobic_coeff)
+#print (model.torsion_coeff)
+#print (model.vdw_coeff)
+#exit(-1)
 print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p.requires_grad))
 
 #Dataloader
@@ -72,7 +78,7 @@ for i_batch, sample in enumerate(test_data_loader):
     affinity = sample['affinity']
 
     with torch.no_grad():
-        pred1 = model(sample)
+        pred1, _, _ = model(sample)
     affinity = affinity.data.cpu().numpy()
     pred1 = pred1.data.cpu().numpy()
     #pred2 = pred2.data.cpu().numpy()
