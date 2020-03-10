@@ -98,7 +98,7 @@ slope, intercept, r_value, p_value, std_err = \
 end = time.time()
 
 #Write prediction
-w_test = open(args.test_output_filename, 'w')
+w_test = open(args.test_result_filename, 'w')
 
 for k in sorted(test_pred1.keys()):
     w_test.write(f'{k}\t{test_true[k]:.3f}\t')

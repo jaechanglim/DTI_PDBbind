@@ -26,7 +26,7 @@ def bootstrap_confidence(true, pred, n=10000, confidence=0.9 ):
 
 #filename
 filename = sys.argv[1]
-n_bootstrap = sys.argv[2]
+n_bootstrap = int(sys.argv[2])
 filenames = glob.glob(f'{filename}*')
 filenames = sorted(filenames, key=lambda x:int(x.split('_')[-1]))
 for fn in filenames:
