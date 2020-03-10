@@ -34,7 +34,10 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
         sample = utils.dic_to_device(sample, device)
         keys, affinity = sample['key'], sample['affinity']
 
-        loss_all = 0.0 
+        loss_all = 0.0
+        cal_der_loss = False
+        if args.loss_der1_ratio>0.0 or args.loss_der2_ratio>0.0: 
+            cal_der_loss=True
         pred, loss_der1, loss_der2 = model(sample, cal_der_loss=True)
         loss = loss_fn(pred.sum(-1), affinity)
         loss_der2 = loss_der2.clamp(min=args.min_loss_der2)

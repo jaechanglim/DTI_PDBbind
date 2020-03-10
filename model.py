@@ -15,9 +15,13 @@ class DTIHarmonic(torch.nn.Module):
 
         self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
-        
-        #self.edgeconv = nn.ModuleList([EdgeConv(3, args.dim_gnn) \
-        #                            for _ in range(args.n_gnn)])
+        if args.edgeconv: 
+            num_filter = int(10.0/args.filter_spacing)+1 
+            self.filter_center = torch.Tensor([args.filter_spacing*i for i 
+                    in range(num_filter)])
+            self.filter_gamma = args.filter_gamma
+            self.edgeconv = nn.ModuleList([EdgeConv(num_filter, args.dim_gnn) \
+                                        for _ in range(args.n_gnn)])
         self.num_interaction_type = len(dataset.interaction_types)
         
         self.cal_coolomb_interaction_A = nn.Sequential(
@@ -190,6 +194,24 @@ class DTIHarmonic(torch.nn.Module):
         
         pos1.requires_grad=True
         dm = self.cal_distance_matrix(pos1, pos2, DM_min)
+        if self.args.edgeconv:
+            edge = dm.unsqueeze(-1).repeat(1,1,1,self.filter_center.size(-1))
+            filter_center = self.filter_center.unsqueeze(0).\
+                            unsqueeze(0).unsqueeze(0).to(h1.device)
+
+            edge = torch.exp(-torch.pow(edge-filter_center,2)*self.filter_gamma)
+            edge = edge.detach()
+            adj12 = dm.clone()
+
+            adj12[adj12>5] = 0
+            adj12[adj12>1e-3] = 1
+            adj12[adj12<1e-3] = 0
+            
+            for i in range(len(self.edgeconv)):
+                new_h1 = self.edgeconv[i](h1, h2, edge, adj12) # [, n_ligand_atom, n_out_feature(dim_gnn)]
+                new_h2 = self.edgeconv[i](h2, h1, \
+                        edge.permute(0,2,1,3), adj12.permute(0,2,1)) # [, n_protein_atom, n_out_feature(dim_gnn)]
+                h1, h2 = new_h1, new_h2
 
         h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
         h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
