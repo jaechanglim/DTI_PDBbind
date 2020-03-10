@@ -57,9 +57,7 @@ def parser(command):
     parser.add_argument("--filter_spacing", 
                         help="filter spacing", 
                         type=float, 
-                        default=0.05)
-    parser.add_argument('--edgeconv', action='store_true', 
-                        help='edge conv')
+                        default=0.5)
 
     # for train
     if "train.py" in command[0]:
@@ -159,7 +157,8 @@ def parser(command):
                             help='data file path',
                             type=str,
                             default=home+'/data/')
-
+        parser.add_argument('--edgeconv', action='store_true', 
+                            help='edge conv')
 
     # for test
     if "test.py" in command[0]:

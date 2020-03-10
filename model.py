@@ -155,7 +155,7 @@ class DTIHarmonic(torch.nn.Module):
         vdw1 = torch.pow(dm_0/dm, 2*N)
         vdw2 = -2*torch.pow(dm_0/dm, N)
 
-        A = self.cal_vdw_interaction_A(h).squeeze(-1)
+        A = self.cal_vdw_interaction_A(h).squeeze(-1)*0.03
         #A = A*self.vdw_coeff*self.vdw_coeff
         #A = A*vdw_epsilon
 
@@ -201,7 +201,7 @@ class DTIHarmonic(torch.nn.Module):
 
             edge = torch.exp(-torch.pow(edge-filter_center,2)*self.filter_gamma)
             edge = edge.detach()
-            adj12 = dm.clone()
+            adj12 = dm.clone().detach()
 
             adj12[adj12>5] = 0
             adj12[adj12>1e-3] = 1
