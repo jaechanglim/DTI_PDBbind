@@ -22,6 +22,7 @@ python -u ../train.py --batch_size=8 \
 * Benchmark command
 ```
 python -u ../benchmark.py > output_benchmark 2> /dev/null
+>>> 0.7
 ```
 
 * Csar1
