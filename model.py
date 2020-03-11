@@ -155,7 +155,7 @@ class DTIHarmonic(torch.nn.Module):
         vdw1 = torch.pow(dm_0/dm, 2*N)
         vdw2 = -2*torch.pow(dm_0/dm, N)
 
-        A = self.cal_vdw_interaction_A(h).squeeze(-1)*0.03
+        A = self.cal_vdw_interaction_A(h).squeeze(-1)*0.0356
         #A = A*self.vdw_coeff*self.vdw_coeff
         #A = A*vdw_epsilon
 

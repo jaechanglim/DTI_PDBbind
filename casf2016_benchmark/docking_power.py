@@ -1,28 +1,32 @@
 import glob
 import sys
+import numpy as np
+from scipy import stats
+
+def bootstrap_confidence(values, n=10000, confidence=0.9 ):
+    metrics = []
+    for _ in range(n):
+        indice = np.random.randint(0, len(values), len(values))
+        sampled = [values[i] for i in indice]
+        metrics.append(sum(sampled)/len(sampled))
+    metrics = np.array(metrics)       
+    return stats.t.interval(confidence, len(metrics)-1, 
+                loc=np.mean(metrics), scale=np.std(metrics))
 
 #read rmsd
-rmsd_filenames = glob.glob('/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_casf2013_decoy_docking/*_rmsd.dat')
-id_to_rmsd1, id_to_rmsd2 = dict(), dict()
+rmsd_filenames = glob.glob('/home/wykgroup/jaechang/work/data/CASF-2016/decoys_docking/*_rmsd.dat')
+id_to_rmsd = dict()
 for fn in rmsd_filenames:
     with open(fn) as f:
-        lines = f.readlines()
+        lines = f.readlines()[1:]
     lines = [l.strip().split() for l in lines]
     for l in lines:
-        id_to_rmsd1[l[0]] = float(l[1])
-        id_to_rmsd2[l[0]] = float(l[2])
+        id_to_rmsd[l[0]] = float(l[1])
 
 #read data
 decoy_filenames = glob.glob(sys.argv[1])
+n_bootstrap = int(sys.argv[2])
 decoy_filenames = sorted(decoy_filenames, key=lambda x:int(x.split('_')[-1]))
-ref_filename = sys.argv[2]
-with open(ref_filename) as f:
-    lines = f.readlines()
-    lines = [l.split() for l in lines]
-    ref_to_pred = {l[0]:float(l[2]) for l in lines}
-    for l in lines: 
-        id_to_rmsd1[l[0]]=0.0
-        id_to_rmsd2[l[0]]=0.0
 
 for fn in decoy_filenames:
     with open(fn) as f:
@@ -35,15 +39,10 @@ for fn in decoy_filenames:
     pdbs = sorted(list(set([k.split()[0].split('_')[0] for k in id_to_pred.keys()])))
     pdb_success=[]
     for pdb in pdbs:
-        if pdb not in ref_to_pred.keys(): continue
         selected_keys = [k for k in id_to_pred.keys() if pdb in k]
         pred = [id_to_pred[k] for k in selected_keys]
-
-        selected_keys.append(pdb)
-        pred.append(ref_to_pred[pdb])
-
         pred, sorted_keys = zip(*sorted(zip(pred, selected_keys)))
-        rmsd = [id_to_rmsd2[k] for k in sorted_keys]
+        rmsd = [id_to_rmsd[k] for k in sorted_keys]
         top_n_success = []
         #print (pdb, sorted_keys[:3], pred[:3], rmsd[:3])
         for top_n in [1,2,3]:
@@ -53,8 +52,11 @@ for fn in decoy_filenames:
                 top_n_success.append(0)
         pdb_success.append(top_n_success)                
     
+
     print (fn, end='\t')
     for top_n in [1,2,3]:
         success = [s[top_n-1] for s in pdb_success]
         print (f'{sum(success)/len(success):.3f}', end='\t')
-    print ()
+    top1_success = [s[0] for s in pdb_success]
+    confidence_interval = bootstrap_confidence(top1_success, n_bootstrap)
+    print (f'[{confidence_interval[0]:.5f} ~ {confidence_interval[1]:.5f}]')
