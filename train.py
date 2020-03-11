@@ -19,7 +19,7 @@ import sys
 args = arguments.parser(sys.argv)
 
 def run(model, data_iter, data_iter2, data_iter3, train_mode):
-    model.train() if train_mode else model.eval
+    model.train() if train_mode else model.eval()
     losses, losses_der1, losses_der2, losses_docking, losses_screening = \
             [], [], [], [], []
     
