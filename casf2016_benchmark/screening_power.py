@@ -1,6 +1,18 @@
 import sys
 import glob
 import statistics
+import numpy as np
+from scipy import stats
+
+def bootstrap_confidence(values, n=10000, confidence=0.9 ):
+    metrics = []
+    for _ in range(n):
+        indice = np.random.randint(0, len(values), len(values))
+        sampled = [values[i] for i in indice]
+        metrics.append(sum(sampled)/len(sampled))
+    metrics = np.array(metrics)       
+    return stats.t.interval(confidence, len(metrics)-1, 
+                loc=np.mean(metrics), scale=np.std(metrics))
 
 def choose_best_pose(id_to_pred):
     """
@@ -26,20 +38,21 @@ def choose_best_pose(id_to_pred):
 
 true_binder_list = []
 #make cluster
-with open('/home/wykgroup/jaechang/work/data/CASF-2013/power_screening/TargetInfo.dat') as f:
+with open('/home/wykgroup/jaechang/work/data/CASF-2016/power_screening/TargetInfo.dat') as f:
     lines = f.readlines()[9:]
     for l in lines:
         l = l.split()
-        true_binder_list+=[(l[0], a) for a in l[1:]]
+        true_binder_list+=[(l[0], a) for a in l[1:6]]
 
 filename = sys.argv[1]
+n_bootstrap = int(sys.argv[2])
 filenames = glob.glob(filename)
 #filenames = sorted(filenames, key=lambda x:int(x.split('_')[-1]))
-
 
 for fn in filenames:
     ntb_top = []
     ntb_total = []
+    high_affinity_success = []
     with open(fn) as f:
         lines = f.readlines()
         lines = [l.split() for l in lines]
@@ -54,30 +67,39 @@ for fn in filenames:
         preds, selected_keys = zip(*sorted(zip(preds, selected_keys)))
         true_binders = [k for k in selected_keys 
                 if (k.split('_')[0], k.split('_')[1]) in true_binder_list]
-        ntb_top_pdb, ntb_total_pdb = [], []
+        ntb_top_pdb, ntb_total_pdb, high_affinity_success_pdb = [], [], []
         for top_n in [0.01, 0.05, 0.1]:
             n=int(top_n*len(selected_keys))
             top_keys = selected_keys[:n]
             n_top_true_binder = len(list(set(top_keys)&set(true_binders)))
             ntb_top_pdb.append(n_top_true_binder)
             ntb_total_pdb.append(len(true_binders)*top_n)
+            if f'{pdb}_{pdb}' in top_keys: 
+                high_affinity_success_pdb.append(1)
+            else:
+                high_affinity_success_pdb.append(0)
         ntb_top.append(ntb_top_pdb)
         ntb_total.append(ntb_total_pdb)
+        high_affinity_success.append(high_affinity_success_pdb)
     for i in range(3):
         ef = []
         for j in range(len(ntb_total)):
             if ntb_total[j][i]==0: continue
             ef.append(ntb_top[j][i]/ntb_total[j][i])
+        if i==0:
+            confidence_interval = bootstrap_confidence(ef, n_bootstrap)
         print (f'{statistics.mean(ef):.3f}', end='\t')            
-    print ()
+    print (f'[{confidence_interval[0]:.5f} ~ {confidence_interval[1]:.5f}]', end='\t')
     for i in range(3):
         success = []
         for j in range(len(ntb_total)):
-            if ntb_top[j][i]>0: 
+            if high_affinity_success[j][i]>0: 
                 success.append(1)
             else:
                 success.append(0)
+        if i==0:
+            confidence_interval = bootstrap_confidence(success, n_bootstrap)
         print (f'{statistics.mean(success):.3f}', end='\t')            
-    print ()
+    print (f'[{confidence_interval[0]:.5f} ~ {confidence_interval[1]:.5f}]')
 
 
