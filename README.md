@@ -61,7 +61,8 @@ python ../casf2016_benchmark/ranking_power.py result_casf2016_scoring_power_1.0_
 >>> result_casf2016_scoring_power_1.0_0 -0.068  -0.072  -0.486  [-0.20008 ~ 0.06654]
 ```
 
-* docking power (not yet implemented)
+* docking power
 ```
-#python ../casf2013_benchmark/docking_power.py 'result_casf2013_docking_power_harmonic_*' result_casf2013_scoring_power_harmonic_0
+python ../casf2016_benchmark/screening_power.py total_result.txt 100
+>>> total_result.txt    4.912   4.070   2.842   [2.84558 ~ 7.02811] 0.175   0.439   0.509   [0.10545 ~ 0.26052]
 ```

@@ -81,6 +81,7 @@ for fn in filenames:
         ntb_top.append(ntb_top_pdb)
         ntb_total.append(ntb_total_pdb)
         high_affinity_success.append(high_affinity_success_pdb)
+    print (f'{fn}', end='\t')
     for i in range(3):
         ef = []
         for j in range(len(ntb_total)):
