@@ -22,10 +22,10 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
     model.train() if train_mode else model.eval()
     losses, losses_der1, losses_der2, losses_docking, losses_screening = \
             [], [], [], [], []
-    
     save_pred, save_true, save_pred_docking, save_true_docking, \
             save_pred_screening, save_true_screening = \
             dict(), dict(), dict(), dict(), dict(), dict()
+
     i_batch = 0
     while True:
         model.zero_grad()
@@ -36,7 +36,7 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
 
         loss_all = 0.0 
         cal_der_loss = False
-        if args.loss_der1_ratio>0 or args.loss_der2_ratio>0.0:
+        if args.loss_der1_ratio > 0 or args.loss_der2_ratio > 0.0:
             cal_der_loss = True
 
         pred, loss_der1, loss_der2 = model(sample, cal_der_loss=cal_der_loss)
@@ -47,9 +47,9 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
         loss_all += loss_der2*args.loss_der2_ratio
         
         #loss4
-        loss_docking = torch.zeros((1,))
+        loss_docking = torch.zeros((1, ))
         keys_docking = []
-        if args.loss_docking_ratio>0.0:
+        if args.loss_docking_ratio > 0.0:
             sample_docking = next(data_iter2, None)
             sample_docking = utils.dic_to_device(sample_docking, device)
             keys_docking, affinity_docking = \
@@ -57,18 +57,19 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
             pred_docking, _, _ = model(sample_docking)
             loss_docking = (affinity_docking-pred_docking.sum(-1))
             loss_docking = loss_docking.clamp(args.min_loss_docking).mean()
-            loss_all+=loss_docking*args.loss_docking_ratio
+            loss_all += loss_docking * args.loss_docking_ratio
 
-        loss_screening = torch.zeros((1,))
+        loss_screening = torch.zeros((1, ))
         keys_screening = []
-        if args.loss_screening_ratio>0.0:
+        if args.loss_screening_ratio > 0.0:
             sample_screening = next(data_iter3, None)
             sample_screening = utils.dic_to_device(sample_screening, device)
             keys_screening, affinity_screening = \
                     sample_screening['key'], sample_screening['affinity']
             pred_screening, _, _ = model(sample_screening)
-            loss_screening = (affinity_screening-pred_screening.sum(-1)).clamp(min=0.0).mean()
-            loss_all+=loss_screening*args.loss_screening_ratio
+            loss_screening = affinity_screening-pred_screening.sum(-1)
+            loss_screening = loss_screening.clamp(min=0.0).mean()
+            loss_all += loss_screening * args.loss_screening_ratio
         
         if train_mode:
             loss_all.backward()
@@ -84,19 +85,19 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
             save_pred[keys[i]] = pred[i]
             save_true[keys[i]] = affinity[i]
         
-        if len(keys_docking)>0:
+        if len(keys_docking) > 0:
             pred_docking = pred_docking.data.cpu().numpy()
             for i in range(len(keys_docking)):
                 save_pred_docking[keys_docking[i]] = pred_docking[i]
                 save_true_docking[keys_docking[i]] = affinity_docking[i]
         
-        if len(keys_screening)>0:
+        if len(keys_screening) > 0:
             pred_screening = pred_screening.data.cpu().numpy()
             for i in range(len(keys_screening)):
                 save_pred_screening[keys_screening[i]] = pred_screening[i]
                 save_true_screening[keys_screening[i]] = affinity_screening[i]
         
-        i_batch+=1
+        i_batch += 1
 
     losses = np.mean(np.array(losses))
     losses_der1 = np.mean(np.array(losses_der1))
@@ -116,14 +117,18 @@ cmd = utils.set_cuda_visible_device(args.ngpu)
 os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
 
 #Read labels
-train_keys, test_keys, id_to_y = utils.read_data(args.filename, args.key_dir)
-train_keys2, test_keys2, id_to_y2 = utils.read_data(args.filename2, args.key_dir2)
-train_keys3, test_keys3, id_to_y3 = utils.read_data(args.filename3, args.key_dir3)
+train_keys, test_keys, id_to_y = utils.read_data(args.filename,
+                                                 args.key_dir)
+train_keys2, test_keys2, id_to_y2 = utils.read_data(args.filename2,
+                                                    args.key_dir2)
+train_keys3, test_keys3, id_to_y3 = utils.read_data(args.filename3,
+                                                    args.key_dir3)
 
 #Model
 if args.potential=='morse': model = model.DTIMorse(args)
 elif args.potential=='morse_all_pair': model = model.DTIMorseAllPair(args)
 elif args.potential=='harmonic': model = model.DTIHarmonic(args)
+elif args.potential=='msh_harmonic': model = model.msh_DTIHarmonic(args)
 else: 
     print (f'No {args.potential} potential')
     exit(-1)
@@ -147,7 +152,8 @@ train_dataset3, train_dataloader3, test_dataset3, test_dataloader3 = \
                 id_to_y3, args.batch_size, args.num_workers, args.pos_noise_std)
 
 #Optimizer and loss
-optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, \
+optimizer = torch.optim.Adam(model.parameters(),
+                             lr=args.lr,
                              weight_decay=args.weight_decay)
 loss_fn = nn.MSELoss()
 
@@ -188,6 +194,7 @@ for epoch in range(args.num_epochs):
             test_pred, test_true, test_pred_docking, test_true_docking, \
             test_pred_screening, test_true_screening = \
             run(model, test_data_iter, test_data_iter2, test_data_iter3, False)
+
     #Write tensorboard
     writer.add_scalars('train',
                        {'loss': train_losses,

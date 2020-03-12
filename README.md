@@ -22,7 +22,7 @@ python -u ../train.py --batch_size=8 \
                    --data_dir=/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_v2019/data/ \
                    --filename=/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_v2019/pdb_to_affinity.txt \
                    --key_dir=../keys_pdbbind_v2019/ \
-                   --data_dir2=/home/wykgroup/udg/mseok/data/DTI_PDBbind/docking_data/\
+                   --data_dir2=/home/wykgroup/udg/mseok/data/data_pdbbind_v2016_docking_nowater/docking_data/\
                    --filename2=../keys_pdbbind_v2019_docking/pdb_to_affinity.txt \
                    --key_dir2=../keys_pdbbind_v2019_docking/ \
                    --data_dir3=/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_random_nowater/data/\
@@ -60,8 +60,12 @@ python ../casf2016_benchmark/scoring_power.py result_casf2016_scoring_power_1.0_
 python ../casf2016_benchmark/ranking_power.py result_casf2016_scoring_power_1.0_0 100
 >>> result_casf2016_scoring_power_1.0_0 -0.068  -0.072  -0.486  [-0.20008 ~ 0.06654]
 ```
-
 * docking power
+```
+python ../casf2016_benchmark/docking_power.py result_casf2016_docking_power_0.0_0.0_0.0_100 100
+>>> result_casf2016_docking_power_0.0_0.0_0.0_100	0.589	0.723	0.807	[0.54214 ~ 0.63162]
+```
+* screening power
 ```
 python ../casf2016_benchmark/screening_power.py total_result.txt 100
 >>> total_result.txt    4.912   4.070   2.842   [2.84558 ~ 7.02811] 0.175   0.439   0.509   [0.10545 ~ 0.26052]

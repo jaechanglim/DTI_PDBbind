@@ -2,6 +2,7 @@ import torch
 import torch.nn.functional as F
 import torch.nn as nn
 import time
+import numpy as np
 
 class MPNN(torch.nn.Module):
     def __init__(self, n_edge_feature, n_atom_feature):
@@ -206,3 +207,192 @@ class ConcreteDropout(nn.Module):
         drop_prob = torch.sigmoid(drop_prob / temp)
         random_tensor = 1 - drop_prob
         retain_prob = 1 - p
+
+
+class MultiHeadAttention(nn.Module):
+    def __init__(self, args, ninfo):
+        super(MultiHeadAttention, self).__init__()
+        self.args = args
+        self.ninfo = ninfo
+        self.ligand_wq = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.ligand_wk = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.ligand_wv = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.protein_wq = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.protein_wk = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.protein_wv = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.batch = args.batch_size 
+        if args.ngpu:
+            shape = (self.batch//args.ngpu, ninfo, args.dim_gnn)
+        elif args.ngpu_on_train:
+            shape = (self.batch//args.ngpu_on_train, ninfo, args.dim_gnn)
+        else:
+            shape = (self.batch, ninfo, args.dim_gnn)
+        self.seed_vector = np.ones(shape, dtype=np.float64)
+        self.depth = args.dim_gnn // ninfo
+        self.q = nn.Parameter(torch.from_numpy(self.seed_vector).float(),
+                              requires_grad=True)
+        self.scale = nn.Parameter(torch.sqrt(torch.FloatTensor([self.depth])),
+                                  requires_grad=False)
+        self.softmax = nn.Softmax(dim=-1)
+
+    def forward(self, x):
+        '''
+        1. cut input X into ninfo number of tensors
+        2. calculate multiple attentions for each tensors
+        3. concat all attention and multiply to all tensors
+        '''
+        batch_size = self.q.shape[0]
+        ligand = x.sum(-1).unsqueeze(-1)
+        ligand_embedded = ligand.repeat(1, 1, self.args.dim_gnn)
+        protein = x.sum(1).unsqueeze(-1)
+        protein_embedded = protein.repeat(1, 1, self.args.dim_gnn)
+
+        ligand_q = self.ligand_wq(self.q)
+        ligand_k = self.ligand_wk(ligand_embedded)
+        ligand_v = self.ligand_wv(ligand_embedded)
+        ligand_q = self._split_heads(ligand_q)
+        ligand_k = self._split_heads(ligand_k)
+        ligand_v = self._split_heads(ligand_v)
+
+        protein_q = self.protein_wq(self.q)
+        protein_k = self.protein_wk(protein_embedded)
+        protein_v = self.protein_wv(protein_embedded)
+        protein_q = self._split_heads(protein_q)
+        protein_k = self._split_heads(protein_k)
+        protein_v = self._split_heads(protein_v)
+
+        ligand_h = self._multi_head_attention(ligand_q, ligand_k, ligand_v)
+        ligand_h = ligand_h.view(batch_size, -1, self.ninfo, self.depth)
+
+        protein_h = self._multi_head_attention(protein_q, protein_k, protein_v)
+        protein_h = protein_h.view(batch_size, -1, self.ninfo, self.depth)
+
+        total_h = torch.cat([ligand_h, protein_h], -1)
+        total_h = total_h.sum(-1)
+        
+        return total_h
+
+
+    def _split_heads(self, x):
+        x = x.view(x.shape[0], -1, self.ninfo, self.depth)
+        x = x.permute((0,2,1,3))
+
+        return x
+
+
+    def _multi_head_attention(self, xq, xk, xv):
+        matmul_qk = torch.matmul(xq, torch.transpose(xk, 2, 3))
+        attn = matmul_qk / self.scale
+        attn = self.softmax(attn)
+        out = torch.matmul(attn, xv)
+
+        return out
+
+
+class NewMultiHeadAttention(nn.Module):
+    def __init__(self, args, ninfo):
+        super(NewMultiHeadAttention, self).__init__()
+        self.args = args
+        self.ninfo = ninfo
+        self.embedding = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.wq = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.wk = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.wv = nn.Linear(args.dim_gnn, args.dim_gnn)
+        self.batch = args.batch_size 
+        self.seed_vector = np.ones((self.batch, 4, args.dim_gnn),
+                                   dtype=np.float64)
+        self.depth = args.dim_gnn // ninfo
+        self.q = nn.Parameter(torch.from_numpy(self.seed_vector).float(),
+                              requires_grad=True)
+        self.scale = nn.Parameter(torch.sqrt(torch.FloatTensor([self.depth])),
+                                  requires_grad=False)
+        self.softmax = nn.Softmax(dim=-1)
+
+    def forward(self, x):
+        '''
+        1. cut input X into ninfo number of tensors
+        2. calculate multiple attentions for each tensors
+        3. concat all attention and multiply to all tensors
+        '''
+        batch_size = self.q.shape[0]
+        info = torch.einsum('ijk,ikl->ijl', x, torch.transpose(x, 1, 2))
+        info = info.sum(-1).unsqueeze(-1).repeat(1, 1, self.args.dim_gnn)
+        info_embedded = self.embedding(info)
+
+        q = self.wq(self.q)
+        k = self.wk(info_embedded)
+        v = self.wv(info_embedded)
+        
+        split_q = self._split_heads(q)
+        split_k = self._split_heads(k)
+        split_v = self._split_heads(v)
+
+        h = self._multi_head_attention(split_q, split_k, split_v)
+        h = h.view(batch_size, -1, self.args.dim_gnn)
+        
+        return h
+
+
+    def _split_heads(self, x):
+        x = x.view(x.shape[0], -1, self.ninfo, self.depth)
+        x = x.permute((0,2,1,3))
+
+        return x
+
+
+    def _multi_head_attention(self, xq, xk, xv):
+        matmul_qk = torch.matmul(xq, torch.transpose(xk, 2, 3))
+        attn = matmul_qk / self.scale
+        attn = self.softmax(attn)
+        out = torch.matmul(attn, xv)
+
+        return out
+
+
+class GraphAttention(nn.Module):
+    def __init__(self, args, ninfo):
+        super(GraphAttention, self).__init__()
+        self.args = args
+        self.ninfo = ninfo # 4
+        self.wq = [nn.Linear(args.dim_gnn, args.dim_gnn) \
+                   for _ in range(args.n_gnn)]
+        self.wk = [nn.Linear(args.dim_gnn, args.dim_gnn) \
+                   for _ in range(args.n_gnn)]
+        self.wv = [nn.Linear(args.dim_gnn, args.dim_gnn) \
+                   for _ in range(args.n_gnn)]
+        self.tanh = nn.Tanh()
+        self.relu = nn.ReLU()
+
+    def forward(self, x):
+        x_info = torch.einsum('ijk,ikl->ijl', x, torch.transpose(x, 1, 2))
+        # x_info = x.sum(-1)
+        embedded = self._arbit_embedding(x_info)
+        h_list = []
+        for i in range(self.args.n_gnn):
+            q = self.wq[i](embedded)
+            k = self.wk[i](embedded)
+            v = self.wv[i](embedded)
+            attn = self._attn_matrix(q, v, x_info)
+            h = torch.bmm(attn, v)
+            h_list.append(h)
+        h = torch.cat(h_list, -1)
+        h = self._arbit_embedding(h)
+        h = self.relu(h)
+
+        return h
+
+    def _arbit_embedding(self, vec):
+        dim = vec.shape[-1]
+        embedding = nn.Linear(dim, self.args.dim_gnn)
+        embedded = embedding(vec)
+
+        return embedded
+
+    def _attn_matrix(self, q, k, info):
+        scale = torch.sqrt(torch.Tensor([k.shape[-1]]))
+        attn = torch.einsum('ijk,ikl->ijl', q, torch.transpose(k, 1, 2))
+        attn = torch.bmm(attn, info)
+        attn /= scale
+        attn = self.tanh(attn)
+
+        return attn
