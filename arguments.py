@@ -4,14 +4,7 @@ def parser(command):
     arg_command = command[1:]
     home = '/home/share/DTI_PDBbind2/data_pdbbind2'
     parser = argparse.ArgumentParser(description='parser for train and test')
-    parser.add_argument('--batch_size', 
-                        help='batch size', 
-                        type=int, 
-                        default=1)
-    parser.add_argument('--num_workers', 
-                        help='number of workers', 
-                        type=int, 
-                        default=7) 
+
     parser.add_argument('--dim_gnn',
                         help='dim_gnn',
                         type=int,
@@ -27,21 +20,10 @@ def parser(command):
     parser.add_argument('--restart_file',
                         help='restart file',
                         type=str) 
-    parser.add_argument('--filename',
-                        help='filename',
-                        default=home+'/pdb_to_affinity.txt')
-    parser.add_argument('--key_dir',
-                        help='key directory',
-                        type=str,
-                        default='/home/udg/msh/urp/DTI_PDBbind/keys')
-    parser.add_argument('--data_dir',
-                        help='data file path',
-                        type=str,
-                        default=home+'/data/')
     parser.add_argument("--potential",
                         help="potential",
                         type=str, 
-                        default='morse_all_pair', 
+                        default='harmonic', 
                         choices=['morse',
                                  'harmonic',
                                  'morse_all_pair',
@@ -60,6 +42,48 @@ def parser(command):
                         default=0.5)
     parser.add_argument('--edgeconv', action='store_true', 
                         help='edge conv')
+    parser.add_argument('--no_rotor_penalty', action='store_true', 
+                        help='rotor penaly')
+    parser.add_argument("--dropout_rate",
+                        help="dropout rate",
+                        type=float,
+                        default=0.0)
+    parser.add_argument("--vdw_N",
+                        help="vdw N",
+                        type=float,
+                        default=6.0)
+    parser.add_argument("--max_vdw_interaction",
+                        help="max vdw _interaction",
+                        type=float,
+                        default=0.0356)
+    parser.add_argument("--min_vdw_interaction",
+                        help="min vdw _interaction",
+                        type=float,
+                        default=0.0178)
+    parser.add_argument("--dev_vdw_radius",
+                        help="deviation of vdw radius",
+                        type=float,
+                        default=0.0)
+    if "train.py" in command[0] or "test.py" in command[0]:
+        parser.add_argument('--filename',
+                            help='filename',
+                            default=home+'/pdb_to_affinity.txt')
+        parser.add_argument('--key_dir',
+                            help='key directory',
+                            type=str,
+                            default='/home/udg/msh/urp/DTI_PDBbind/keys')
+        parser.add_argument('--data_dir',
+                            help='data file path',
+                            type=str,
+                            default=home+'/data/')
+        parser.add_argument('--batch_size', 
+                            help='batch size', 
+                            type=int, 
+                            default=1)
+        parser.add_argument('--num_workers', 
+                            help='number of workers', 
+                            type=int, 
+                            default=7) 
 
     # for train
     if "train.py" in command[0]:
@@ -103,10 +127,6 @@ def parser(command):
                             help='test result screening filename',
                             type=str,
                             default='test_result_screening.txt')
-        parser.add_argument("--dropout_rate",
-                            help="dropout rate",
-                            type=float,
-                            default=0.0)
         parser.add_argument("--loss_der1_ratio",
                             help="loss der1 ratio",
                             type=float,
@@ -128,6 +148,10 @@ def parser(command):
                             type=float,
                             default=-1.0)
         parser.add_argument("--loss_screening_ratio",
+                            help="loss screening ratio",
+                            type=float,
+                            default=1.0)
+        parser.add_argument("--loss_screening2_ratio",
                             help="loss screening ratio",
                             type=float,
                             default=1.0)
@@ -159,7 +183,17 @@ def parser(command):
                             help='data file path',
                             type=str,
                             default=home+'/data/')
-
+        parser.add_argument('--filename4',
+                            help='filename',
+                            default=home+'/pdb_to_affinity.txt')
+        parser.add_argument('--key_dir4',
+                            help='key directory',
+                            type=str,
+                            default='/home/udg/msh/urp/DTI_PDBbind/keys')
+        parser.add_argument('--data_dir4',
+                            help='data file path',
+                            type=str,
+                            default=home+'/data/')
 
     # for test
     if "test.py" in command[0]:
@@ -168,6 +202,20 @@ def parser(command):
                             type=str,
                             default='test_result.txt')
 
+    # for predict
+    if "predict.py" in command[0]:
+        parser.add_argument('--ligand_files',
+                            help='list of ligand file',
+                            nargs='+',
+                            type=str,)
+        parser.add_argument('--protein_files',
+                            help='list of protein file',
+                            nargs='+',
+                            type=str,)
+        parser.add_argument('--output_files',
+                            help='list of output file',
+                            nargs='+',
+                            type=str,)
+
     args = parser.parse_args(arg_command)
-    print (args)
     return args

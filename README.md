@@ -17,8 +17,9 @@ python -u ../train.py --batch_size=8 \
                    --loss_der1_ratio=10.0 \
                    --loss_der2_ratio=10.0 \
                    --min_loss_der2=-20.0 \
-                   --loss_docking_ratio=0.0 \
-                   --loss_screening_ratio=1.0 \
+                   --loss_docking_ratio=10.0 \
+                   --loss_screening_ratio=5.0 \
+                   --loss_screening2_ratio=5.0 \
                    --data_dir=/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_v2019/data/ \
                    --filename=/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_v2019/pdb_to_affinity.txt \
                    --key_dir=../keys_pdbbind_v2019/ \
@@ -28,9 +29,15 @@ python -u ../train.py --batch_size=8 \
                    --data_dir3=/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_random_nowater/data/\
                    --filename3=/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_random_nowater/pdb_to_affinity.txt \
                    --key_dir3=../keys_pdbbind_random_nowater/ \
+                   --data_dir4=../../data_pdbbind_v2019_cross/data/\
+                   --filename4=../../data_pdbbind_v2019_cross/pdb_to_affinity_{dr}.txt \
+                   --key_dir4=../keys_pdbbind_v2019_cross/ \
                    --num_workers=9 \
                    --potential='harmonic' \
                    --num_epochs=1001 \
+                   --dropout_rate=0.1 \
+                   --edgeconv \
+                   --dev_vdw_radius=0.2 \
                    > output_1.0 2> /dev/null 
 ```
 

@@ -17,8 +17,9 @@ import arguments
 import sys
 
 args = arguments.parser(sys.argv)
+print (args)
 
-def run(model, data_iter, data_iter2, data_iter3, train_mode):
+def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
     model.train() if train_mode else model.eval()
     losses, losses_der1, losses_der2, losses_docking, losses_screening = \
             [], [], [], [], []
@@ -71,6 +72,18 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
             loss_screening = loss_screening.clamp(min=0.0).mean()
             loss_all += loss_screening * args.loss_screening_ratio
         
+        loss_screening2 = torch.zeros((1, ))
+        keys_screening2 = []
+        if args.loss_screening2_ratio > 0.0:
+            sample_screening2 = next(data_iter4, None)
+            sample_screening2 = utils.dic_to_device(sample_screening2, device)
+            keys_screening2, affinity_screening2 = \
+                    sample_screening2['key'], sample_screening2['affinity']
+            pred_screening2, _, _ = model(sample_screening2)
+            loss_screening2 = affinity_screening2-pred_screening2.sum(-1)
+            loss_screening2 = loss_screening2.clamp(min=0.0).mean()
+            loss_all += loss_screening2 * args.loss_screening2_ratio
+        
         if train_mode:
             loss_all.backward()
             optimizer.step()
@@ -79,6 +92,7 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
         losses_der2.append(loss_der2.data.cpu().numpy())
         losses_docking.append(loss_docking.data.cpu().numpy())
         losses_screening.append(loss_screening.data.cpu().numpy())
+        losses_screening.append(loss_screening2.data.cpu().numpy())
         affinity = affinity.data.cpu().numpy()
         pred = pred.data.cpu().numpy()
         for i in range(len(keys)):
@@ -96,6 +110,12 @@ def run(model, data_iter, data_iter2, data_iter3, train_mode):
             for i in range(len(keys_screening)):
                 save_pred_screening[keys_screening[i]] = pred_screening[i]
                 save_true_screening[keys_screening[i]] = affinity_screening[i]
+        
+        if len(keys_screening2) > 0:
+            pred_screening2 = pred_screening2.data.cpu().numpy()
+            for i in range(len(keys_screening2)):
+                save_pred_screening[keys_screening2[i]] = pred_screening2[i]
+                save_true_screening[keys_screening2[i]] = affinity_screening2[i]
         
         i_batch += 1
 
@@ -123,6 +143,8 @@ train_keys2, test_keys2, id_to_y2 = utils.read_data(args.filename2,
                                                     args.key_dir2)
 train_keys3, test_keys3, id_to_y3 = utils.read_data(args.filename3,
                                                     args.key_dir3)
+train_keys4, test_keys4, id_to_y4 = utils.read_data(args.filename4,
+                                                    args.key_dir4)
 
 #Model
 if args.potential=='morse': model = model.DTIMorse(args)
@@ -146,10 +168,13 @@ train_dataset, train_dataloader, test_dataset, test_dataloader = \
                 id_to_y, args.batch_size, args.num_workers, args.pos_noise_std)
 train_dataset2, train_dataloader2, test_dataset2, test_dataloader2 = \
         utils.get_dataset_dataloader(train_keys2, test_keys2, args.data_dir2, 
-                id_to_y2, args.batch_size, args.num_workers, args.pos_noise_std)
+                id_to_y2, args.batch_size, args.num_workers, 0.0)
 train_dataset3, train_dataloader3, test_dataset3, test_dataloader3 = \
         utils.get_dataset_dataloader(train_keys3, test_keys3, args.data_dir3, 
-                id_to_y3, args.batch_size, args.num_workers, args.pos_noise_std)
+                id_to_y3, args.batch_size, args.num_workers, 0.0)
+train_dataset4, train_dataloader4, test_dataset4, test_dataloader4 = \
+        utils.get_dataset_dataloader(train_keys4, test_keys4, args.data_dir4, 
+                id_to_y4, args.batch_size, args.num_workers, 0.0)
 
 #Optimizer and loss
 optimizer = torch.optim.Adam(model.parameters(),
@@ -176,24 +201,28 @@ for epoch in range(args.num_epochs):
             dict(), dict(), dict(), dict(), dict(), dict()
 
     #iterator
-    train_data_iter, train_data_iter2, train_data_iter3 = \
-            iter(train_dataloader), iter(train_dataloader2), iter(train_dataloader3)
-    test_data_iter, test_data_iter2, test_data_iter3 = \
-            iter(test_dataloader), iter(test_dataloader2), iter(test_dataloader3)
+    train_data_iter, train_data_iter2, train_data_iter3 , train_data_iter4 = \
+            iter(train_dataloader), iter(train_dataloader2), \
+            iter(train_dataloader3), iter(train_dataloader4)
+    test_data_iter, test_data_iter2, test_data_iter3, test_data_iter4 = \
+            iter(test_dataloader), iter(test_dataloader2), \
+            iter(test_dataloader3), iter(test_dataloader4)
 
     #Train
     train_losses, train_losses_der1, train_losses_der2, \
             train_losses_docking, train_losses_screening, \
             train_pred, train_true, train_pred_docking, train_true_docking, \
             train_pred_screening, train_true_screening = \
-            run(model, train_data_iter, train_data_iter2, train_data_iter3, True)
+            run(model, train_data_iter, train_data_iter2, train_data_iter3, 
+                    train_data_iter4, True)
     
     #Test
     test_losses, test_losses_der1, test_losses_der2, \
             test_losses_docking, test_losses_screening, \
             test_pred, test_true, test_pred_docking, test_true_docking, \
             test_pred_screening, test_true_screening = \
-            run(model, test_data_iter, test_data_iter2, test_data_iter3, False)
+            run(model, test_data_iter, test_data_iter2, test_data_iter3, 
+                    test_data_iter4, False)
 
     #Write tensorboard
     writer.add_scalars('train',

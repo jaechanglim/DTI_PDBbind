@@ -112,3 +112,56 @@ def write_result(filename, pred, true):
                 w.write(f'{pred[k][j]:.3f}\t')
             w.write('\n')
     return
+
+def extract_binding_pocket(ligand, pdb):
+    from Bio.PDB import PDBParser, PDBIO
+    from Bio.PDB.PDBIO import Select
+    import os
+    import numpy as np
+    from rdkit import Chem
+    from scipy.spatial import distance_matrix
+
+    parser = PDBParser()
+    if not os.path.exists(pdb) : 
+        #print ('AAAAAAAAAAA')
+        return None
+    structure = parser.get_structure('protein', pdb)
+    #print (count_residue(structure))
+    ligand_positions = ligand.GetConformer().GetPositions()
+
+    class GlySelect(Select):
+        def accept_residue(self, residue):
+            residue_positions = np.array([np.array(list(atom.get_vector())) \
+                for atom in residue.get_atoms() if 'H' not in atom.get_id()])
+            #print (residue_positions)
+            min_dis = np.min(distance_matrix(residue_positions, ligand_positions))
+            if min_dis < 5.0:
+                return 1
+            else:
+                return 0
+    io = PDBIO()
+    io.set_structure(structure)
+
+    np.random.seed()
+    fn = 'BS_tmp_'+str(np.random.randint(0,100000,1)[0])+'.pdb'
+    #fd, fpath = tempfile.mkstemp(prefix='BS_tmp', dir=os.getcwd(), text=True)
+    io.save(fn, GlySelect())
+    #structure = parser.get_structure('protein', fn)
+    #if count_residue(structure)<10: return None
+    #print (count_residue(structure))
+    m2 = Chem.MolFromPDBFile(fn)
+    #os.unlink(fpath)
+    os.system('rm -f ' + fn)
+
+    return m2
+
+def read_molecule(filename):
+    from rdkit import Chem
+    if filename[-4:]=='.sdf':
+        return Chem.SDMolSupplier(filename)[0]
+    elif filename[-5:]=='.mol2':
+        return Chem.MolFromMol2File(filename)
+    else:
+        print (f'{filename} is wrong filename')
+    exit(-1)
+    return None

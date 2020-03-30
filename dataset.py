@@ -277,8 +277,8 @@ def classifyAtoms(mol, polar_atoms=[7,8,15,16]):
 	"LI": 1.81, "BE": 1.53, "B": 1.92,
 	"NA": 2.27, "MG": 1.74, "AL": 1.84, "SI": 2.10,
 	"K": 2.75, "CA": 2.31, "GA": 1.87, "GE": 2.11, "AS": 1.85,
-	"RB": 3.03, "SR": 2.49, "IN": 1.93, "SN": 2.17, "SB": 2.06, "TE": 2.06
-        "MN": 2.5}
+	"RB": 3.03, "SR": 2.49, "IN": 1.93, "SN": 2.17, "SB": 2.06, "TE": 2.06,
+        "MN": 2.05}
 
 	radii = [] 
 	for atom in mol.GetAtoms():
@@ -301,9 +301,11 @@ def cal_sasa(m):
     return sasa
 
 def get_vdw_radius(a):
+    metal_symbols = ['Zn', 'Mn', 'Co', 'Mg', 'Ni', 'Fe', 'Ca', 'Cu']
     atomic_number = a.GetAtomicNum()
     atomic_number_to_radius = {6: 1.90, 7: 1.8, 8: 1.7, 16: 2.0, 15:2.1, \
-            9:1.5, 17:1.8, 35: 2.0, 53:2.2}
+            9:1.5, 17:1.8, 35: 2.0, 53:2.2, 30:1.2, 25:1.2, 26:1.2, 27:1.2, \
+            12:1.2, 28:1.2, 20:1.2, 29:1.2}
     if atomic_number in atomic_number_to_radius.keys():
         return atomic_number_to_radius[atomic_number]
     return Chem.GetPeriodicTable().GetRvdw(atomic_number)
@@ -334,33 +336,190 @@ def get_A_hydrophobic(m1,m2):
     indice2 = get_hydrophobic_atom(m2)
     return np.outer(indice1, indice2)
 
+def get_hbond_donor_indice(m):
+    """
+    indice = m.GetSubstructMatches(HDonorSmarts)
+    if len(indice)==0: return np.array([])
+    indice = np.array([i for i in indice])[:,0]
+
+    return indice
+    """
+    #smarts = ['[!$([#6,H0,-,-2,-3])]', '[!H0;#7,#8,#9]']
+    smarts = ["[!#6;!H0]"]
+    indice = []
+    for s in smarts:
+        s = Chem.MolFromSmarts(s)
+        indice += [i[0] for i in m.GetSubstructMatches(s)]
+    indice = np.array(indice)
+    return indice
+
+def get_hbond_acceptor_indice(m):
+    #smarts = ['[!$([#6,F,Cl,Br,I,o,s,nX3,#7v5,#15v5,#16v4,#16v6,*+1,*+2,*+3])]', 
+    #          '[#6,#7;R0]=[#8]']
+    smarts = ["[$([!#6;+0]);!$([F,Cl,Br,I]);!$([o,s,nX3]);!$([Nv5,Pv5,Sv4,Sv6])]"]
+    indice = []
+    for s in smarts:
+        s = Chem.MolFromSmarts(s)
+        indice += [i[0] for i in m.GetSubstructMatches(s)]
+    indice = np.array(indice)
+    return indice
+
+def get_A_hbond(m1, m2):
+    h_acc_indice1 = get_hbond_acceptor_indice(m1)
+    h_acc_indice2 = get_hbond_acceptor_indice(m2)
+    h_donor_indice1 = get_hbond_donor_indice(m1)
+    h_donor_indice2 = get_hbond_donor_indice(m2)
+    A = np.zeros((m1.GetNumAtoms(), m2.GetNumAtoms()))
+    
+    for i in h_acc_indice1: 
+        for j in h_donor_indice2: 
+            A[i,j] = 1
+    for i in h_donor_indice1: 
+        for j in h_acc_indice2: 
+            A[i,j] = 1
+    
+    return A
+
+def get_A_metal_complexes(m1, m2):
+    h_acc_indice1 = get_hbond_acceptor_indice(m1)
+    h_acc_indice2 = get_hbond_acceptor_indice(m2)
+    metal_symbols = ['Zn', 'Mn', 'Co', 'Mg', 'Ni', 'Fe', 'Ca', 'Cu']
+    metal_indice1 = np.array([i for i in range(m1.GetNumAtoms()) 
+            if m1.GetAtomWithIdx(i).GetSymbol() in metal_symbols])
+    metal_indice2 = np.array([i for i in range(m2.GetNumAtoms()) 
+            if m2.GetAtomWithIdx(i).GetSymbol() in metal_symbols])
+    A = np.zeros((m1.GetNumAtoms(), m2.GetNumAtoms()))
+    
+    for i in h_acc_indice1: 
+        for j in metal_indice2: 
+            A[i,j] = 1
+    for i in metal_indice1: 
+        for j in h_acc_indice2: 
+            A[i,j] = 1
+    return A
+
+def mol_to_feature(m1, m1_uff, m2, interaction_data, pos_noise_std):
+    #Remove hydrogens
+    m1 = Chem.RemoveHs(m1)
+    m2 = Chem.RemoveHs(m2)
+
+    #extract valid amino acids
+    #m2 = extract_valid_amino_acid(m2, self.amino_acids)
+    
+    #random rotation
+    angle = np.random.uniform(0,360,1)[0]
+    axis = np.random.uniform(-1,1,3)
+    #m1 = rotate(m1, angle, axis, False)
+    #m2 = rotate(m2, angle, axis, False)
+    
+    angle = np.random.uniform(0,360,1)[0]
+    axis = np.random.uniform(-1,1,3)
+    m1_rot = rotate(copy.deepcopy(m1), angle, axis, True)
+    
+    #prepare ligand
+    n1 = m1.GetNumAtoms()
+    d1 = np.array(m1.GetConformers()[0].GetPositions())
+    d1 += np.random.normal(0.0, pos_noise_std,d1.shape)
+    d1_rot = np.array(m1_rot.GetConformers()[0].GetPositions())
+    adj1 = GetAdjacencyMatrix(m1)+np.eye(n1)
+    h1 = get_atom_feature(m1, True)
+
+    #prepare protein
+    n2 = m2.GetNumAtoms()
+    c2 = m2.GetConformers()[0]
+    d2 = np.array(c2.GetPositions())
+    d2 += np.random.normal(0.0, pos_noise_std, d2.shape)
+    adj2 = GetAdjacencyMatrix(m2)+np.eye(n2)
+    h2 = get_atom_feature(m2, True)
+        
+    #prepare distance vector
+    dmv = dm_vector(d1,d2)
+    dmv_rot = dm_vector(d1_rot,d2)
+
+    #get interaction matrix
+    #A_int = get_interaction_matrix(d1, d2, interaction_data)
+    A_int = np.zeros((len(interaction_types), m1.GetNumAtoms(), m2.GetNumAtoms()))
+    A_int[-2] = get_A_hydrophobic(m1,m2)
+    A_int[1] = get_A_hbond(m1,m2)
+    A_int[-1] = get_A_metal_complexes(m1, m2) 
+    
+    #cal sasa
+    sasa = cal_sasa(m1)
+    dsasa = sasa-cal_sasa(m1_uff)
+    
+    #count rotatable bonds
+    rotor = CalcNumRotatableBonds(m1)
+
+    #charge
+    #charge1 = cal_charge(m1) 
+    #charge2 = cal_charge(m2) 
+    charge1 = np.zeros((n1,))
+    charge2 = np.zeros((n2,))
+    
+    """
+    mp1 = AllChem.MMFFGetMoleculeProperties(m1)
+    mp2 = AllChem.MMFFGetMoleculeProperties(m2)
+    charge1 = [mp1.GetMMFFPartialCharge(i) for i in range(m1.GetNumAtoms())]
+    charge2 = [mp2.GetMMFFPartialCharge(i) for i in range(m2.GetNumAtoms())]
+    """
+
+    #partial charge calculated by gasteiger
+    charge1 = np.array(charge1)
+    charge2 = np.array(charge2)
+
+    #There is nan for some cases.
+    charge1 = np.nan_to_num(charge1, nan=0, neginf=0, posinf=0)
+    charge2 = np.nan_to_num(charge2, nan=0, neginf=0, posinf=0)
+
+    #valid
+    valid1 = np.ones((n1,))
+    valid2 = np.ones((n2,))
+
+    #no metal
+    metal_symbols = ['Zn', 'Mn', 'Co', 'Mg', 'Ni', 'Fe', 'Ca', 'Cu']
+    no_metal1 = np.array([1 if a.GetSymbol() not in metal_symbols else 0 
+            for a in m1.GetAtoms()])
+    no_metal2 = np.array([1 if a.GetSymbol() not in metal_symbols else 0 
+            for a in m2.GetAtoms()])
+    #vdw radius
+    vdw_radius1 = np.array([get_vdw_radius(a) for a in m1.GetAtoms()])
+    vdw_radius2 = np.array([get_vdw_radius(a) for a in m2.GetAtoms()])
+
+    vdw_epsilon, vdw_sigma = get_epsilon_sigma(m1, m2, False)
+    
+    #uff energy difference
+    #delta_uff = cal_uff(m1)-cal_uff(m1_uff)
+    #delta_uff = get_torsion_energy(m1) - get_torsion_energy(m1_uff)
+    #delta_uff = cal_torsion_energy(m1)+cal_internal_vdw(m1)
+    delta_uff = 0.0
+    sample = {
+              'h1':h1, \
+              'adj1': adj1, \
+              'h2':h2, \
+              'adj2': adj2, \
+              'A_int': A_int, \
+              'dmv': dmv, \
+              'dmv_rot': dmv_rot, \
+              'pos1': d1, \
+              'pos2': d2, \
+              'sasa': sasa, \
+              'dsasa': dsasa, \
+              'rotor': rotor, \
+              'charge1': charge1, \
+              'charge2': charge2, \
+              'vdw_radius1': vdw_radius1, \
+              'vdw_radius2': vdw_radius2, \
+              'vdw_epsilon': vdw_epsilon, \
+              'vdw_sigma': vdw_sigma, \
+              'delta_uff': delta_uff, \
+              'valid1': valid1, \
+              'valid2': valid2, \
+              'no_metal1': no_metal1, \
+              'no_metal2': no_metal2, \
+              }
+    return sample
+
 class MolDataset(Dataset):
-    """
-    Basic molecule dataset for DTI
-    :param keys: each ligand-protein pair information keys
-    :param data_dir: directory for ligand-protein molecule
-                     that can find information with param 'keys'
-    :param id_to_y: value 10 if high interaction exist else 0
-                    this is dictionary with param 'keys'
-    :return: dictionary
-             -h1 :  atom feature one-hot vector of ligand molecule(m1)
-                    shape: [# of ligand molecule's atom, property]
-             -adj1 :  adjacency matrix of ligand molecule(m1)
-                      shape: [# of ligand molecule's atom, # of ligand molecule's atom]
-             -h2 :  atom feature one-hot vector of protein moleucule(m2)
-                    shape: [# of protein molecule's atom, property]
-             -adj2 :  adjacency matrix of protein molecule(m2)
-                      shape: [# of protein molecule's atom, # of protein molecule's atom]
-             -dmv :  distance matrix vector between every atoms of m1 and m2
-                     shape: [# of ligand molecule's atom, # of protein molecule's atom, 3]
-             -dmv_rot : distance matrix vector between every atoms of rotated version m1 and m2
-                        shape: [# of ligand molecule's atom, # of protein molecule's atom, 3]
-             -valid :   true valid atom indices which will be used after 'my_collate_fn' makes each molecules'
-                        vector and adjacency matrices into same size with zero padding and calculate property
-                        shape: [# of ligand molecule's atom]
-             -affinity :   the property value whether 1 or 0 -> interaction on = 1, interaction off = 0
-             -key : key value of the protein-ligand interaction
-    """
 
     def __init__(self, keys, data_dir, id_to_y, random_rotation = 0.0,
                        pos_noise_std=0.0):
@@ -377,143 +536,13 @@ class MolDataset(Dataset):
         return len(self.keys)
 
     def __getitem__(self, idx):
-        """
-        1. get each keys from train_keys, test_keys
-        2. get two molecules from pickle file containing key in the name at data directory
-        3. extract valid amino acid residue from the molecule(m2)
-        4. get adjacency matrix, conformer, atom feature from two rotated molecules, m1 and m2
-        """
         key = self.keys[idx]
-        #key = '1x8r'
         with open(self.data_dir+'/'+key, 'rb') as f:
             m1, m1_uff, m2, interaction_data = pickle.load(f)
-        #if m2 is None: print (key) 
-        #Remove hydrogens
-        m1 = Chem.RemoveHs(m1)
-        m2 = Chem.RemoveHs(m2)
-
-        #extract valid amino acids
-        #m2 = extract_valid_amino_acid(m2, self.amino_acids)
-        #if m2 is None : return None
-        if m2 is None: print (key)    
         
-        #random rotation
-        angle = np.random.uniform(0,360,1)[0]
-        axis = np.random.uniform(-1,1,3)
-        #m1 = rotate(m1, angle, axis, False)
-        #m2 = rotate(m2, angle, axis, False)
-        
-        angle = np.random.uniform(0,360,1)[0]
-        axis = np.random.uniform(-1,1,3)
-        m1_rot = rotate(copy.deepcopy(m1), angle, axis, True)
-        
-        # label
-        affinity = self.id_to_y[key]
-   
-        #prepare ligand
-        n1 = m1.GetNumAtoms()
-        d1 = np.array(m1.GetConformers()[0].GetPositions())
-        d1 += np.random.normal(0.0, self.pos_noise_std,d1.shape)
-        d1_rot = np.array(m1_rot.GetConformers()[0].GetPositions())
-        adj1 = GetAdjacencyMatrix(m1)+np.eye(n1)
-        h1 = get_atom_feature(m1, True)
-
-        #prepare protein
-        n2 = m2.GetNumAtoms()
-        c2 = m2.GetConformers()[0]
-        d2 = np.array(c2.GetPositions())
-        d2 += np.random.normal(0.0, self.pos_noise_std, d2.shape)
-        adj2 = GetAdjacencyMatrix(m2)+np.eye(n2)
-        h2 = get_atom_feature(m2, True)
-            
-        #prepare distance vector
-        dmv = dm_vector(d1,d2)
-        dmv_rot = dm_vector(d1_rot,d2)
-
-        #affinity
-        affinity = affinity*-1.36
-
-        #get interaction matrix
-        A_int = get_interaction_matrix(d1, d2, interaction_data)
-        A_int[-2] = get_A_hydrophobic(m1,m2)
-        
-        #cal sasa
-        sasa = cal_sasa(m1)
-        dsasa = sasa-cal_sasa(m1_uff)
-        
-        #count rotatable bonds
-        rotor = CalcNumRotatableBonds(m1)
-
-        #charge
-        #charge1 = cal_charge(m1) 
-        #charge2 = cal_charge(m2) 
-        charge1 = np.zeros((n1,))
-        charge2 = np.zeros((n2,))
-        
-        """
-        mp1 = AllChem.MMFFGetMoleculeProperties(m1)
-        mp2 = AllChem.MMFFGetMoleculeProperties(m2)
-        charge1 = [mp1.GetMMFFPartialCharge(i) for i in range(m1.GetNumAtoms())]
-        charge2 = [mp2.GetMMFFPartialCharge(i) for i in range(m2.GetNumAtoms())]
-        """
-
-        #partial charge calculated by gasteiger
-        charge1 = np.array(charge1)
-        charge2 = np.array(charge2)
-
-        #There is nan for some cases.
-        charge1 = np.nan_to_num(charge1, nan=0, neginf=0, posinf=0)
-        charge2 = np.nan_to_num(charge2, nan=0, neginf=0, posinf=0)
-
-        #valid
-        valid1 = np.ones((n1,))
-        valid2 = np.ones((n2,))
-
-        #no metal
-        metal_symbols = ['Zn', 'Mn', 'Co', 'Mg', 'Ni', 'Fe', 'Ca', 'Cu']
-        no_metal1 = np.array([1 if a.GetSymbol() not in metal_symbols else 0 
-                for a in m1.GetAtoms()])
-        no_metal2 = np.array([1 if a.GetSymbol() not in metal_symbols else 0 
-                for a in m2.GetAtoms()])
-        #vdw radius
-        vdw_radius1 = np.array([get_vdw_radius(a) for a in m1.GetAtoms()])
-        vdw_radius2 = np.array([get_vdw_radius(a) for a in m2.GetAtoms()])
-
-        vdw_epsilon, vdw_sigma = get_epsilon_sigma(m1, m2, False)
-        
-        #uff energy difference
-        #delta_uff = cal_uff(m1)-cal_uff(m1_uff)
-        #delta_uff = get_torsion_energy(m1) - get_torsion_energy(m1_uff)
-        #delta_uff = cal_torsion_energy(m1)+cal_internal_vdw(m1)
-        delta_uff = 0.0
-        sample = {
-                  'h1':h1, \
-                  'adj1': adj1, \
-                  'h2':h2, \
-                  'adj2': adj2, \
-                  'A_int': A_int, \
-                  'dmv': dmv, \
-                  'dmv_rot': dmv_rot, \
-                  'pos1': d1, \
-                  'pos2': d2, \
-                  'affinity': affinity, \
-                  'sasa': sasa, \
-                  'dsasa': dsasa, \
-                  'rotor': rotor, \
-                  'charge1': charge1, \
-                  'charge2': charge2, \
-                  'vdw_radius1': vdw_radius1, \
-                  'vdw_radius2': vdw_radius2, \
-                  'vdw_epsilon': vdw_epsilon, \
-                  'vdw_sigma': vdw_sigma, \
-                  'delta_uff': delta_uff, \
-                  'valid1': valid1, \
-                  'valid2': valid2, \
-                  'no_metal1': no_metal1, \
-                  'no_metal2': no_metal2, \
-                  'key': key, \
-                  }
-
+        sample = mol_to_feature(m1, m1_uff, m2, interaction_data, self.pos_noise_std)
+        sample['affinity'] = self.id_to_y[key]*-1.36
+        sample['key'] = key
         return sample
 
 

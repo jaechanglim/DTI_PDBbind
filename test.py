@@ -19,6 +19,7 @@ import glob
 import arguments
 
 args = arguments.parser(sys.argv)
+print (args)
 
 #Read labels
 with open(args.filename) as f:

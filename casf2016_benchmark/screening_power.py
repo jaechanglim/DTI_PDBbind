@@ -89,6 +89,7 @@ for fn in filenames:
             ef.append(ntb_top[j][i]/ntb_total[j][i])
         if i==0:
             confidence_interval = bootstrap_confidence(ef, n_bootstrap)
+        #if i==0: print (ef)
         print (f'{statistics.mean(ef):.3f}', end='\t')            
     print (f'[{confidence_interval[0]:.5f} ~ {confidence_interval[1]:.5f}]', end='\t')
     for i in range(3):
