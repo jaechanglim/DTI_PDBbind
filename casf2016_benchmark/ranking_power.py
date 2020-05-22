@@ -18,9 +18,10 @@ def predictive_index(pred, true):
     ws, cs = [], []
     for i in range(n):
         for j in range(i+1, n):
-            w = true[j] - true[i]
+            w = abs(true[j] - true[i])
             c=-1
             if (pred[j]-pred[i])*(true[j]-true[i])>0: c=1
+            elif true[j]-true[i]==0: c=0
             ws.append(w)
             cs.append(c)
     ws = np.array(ws)
