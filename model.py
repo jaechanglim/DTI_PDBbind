@@ -117,7 +117,7 @@ class DTIHarmonic(torch.nn.Module):
         retval = dm*A/-0.7
         retval = retval.clamp(min=0.0, max=1.0)
 
-        pair = retval.detach()
+        pair = retval.clone().detach()
         pair[pair>0] = 1
         n_ligand_hbond = pair.sum(2)
         n_ligand_hbond[n_ligand_hbond<0.001] = 1
