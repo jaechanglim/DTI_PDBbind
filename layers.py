@@ -396,3 +396,33 @@ class GraphAttention(nn.Module):
         attn = self.tanh(attn)
 
         return attn
+
+
+class ConvBlock(nn.Module):
+    def __init__(self, in_feature, out_feature, do=0.0, stride=1, kernel=3, pad=1, bn=True):
+        super(ConvBlock, self).__init__()
+        self.block = []
+        self.block.append(nn.Conv3d(in_feature, out_feature, kernel, stride, pad))
+        if bn:
+            self.block.append(nn.BatchNorm3d(out_feature))
+        self.block.append(nn.ReLU())
+        if do != 0:
+            self.block.append(nn.Dropout3d(p=do))
+        self.block = nn.Sequential(*self.block)
+
+    def forward(self, input):
+        return self.block(input)
+
+
+class PredictBlock(nn.Module):
+    def __init__(self, in_feature, out_feature, dropout, is_last):
+        super(PredictBlock, self).__init__()
+        self.block = []
+        self.block.append(nn.Linear(in_feature, out_feature))
+        if not is_last:
+            self.block.append(nn.Dropout(p=dropout))
+            self.block.append(nn.ReLU())
+        self.block = nn.Sequential(*self.block)
+
+    def forward(self, input):
+        return self.block(input)

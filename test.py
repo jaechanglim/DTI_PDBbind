@@ -37,7 +37,8 @@ os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
 if args.potential=='morse': model = model.DTILJ(args)
 elif args.potential=='morse_all_pair': model = model.DTILJAllPair(args)
 elif args.potential=='harmonic': model = model.DTIHarmonic(args)
-elif args.potential=='harmonic_interaction_specified': model = model.DTIHarmonicIS(args)
+elif args.potential=='gnn': model = model.GNN(args)
+elif args.potential=='cnn3d': model = model.CNN3D(args)
 else: 
     print (f'No {args.potential} potential')
     exit(-1)

@@ -17,7 +17,8 @@ import arguments
 import sys
 
 args = arguments.parser(sys.argv)
-print (args)
+if not args.restart_file:
+    print (args)
 
 def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
     model.train() if train_mode else model.eval()
@@ -44,8 +45,8 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
         loss = loss_fn(pred.sum(-1), affinity)
         loss_der2 = loss_der2.clamp(min=args.min_loss_der2)
         loss_all += loss
-        loss_all += loss_der1*args.loss_der1_ratio
-        loss_all += loss_der2*args.loss_der2_ratio
+        loss_all += loss_der1.sum()*args.loss_der1_ratio
+        loss_all += loss_der2.sum()*args.loss_der2_ratio
         
         #loss4
         loss_docking = torch.zeros((1, ))
@@ -150,7 +151,8 @@ train_keys4, test_keys4, id_to_y4 = utils.read_data(args.filename4,
 if args.potential=='morse': model = model.DTIMorse(args)
 elif args.potential=='morse_all_pair': model = model.DTIMorseAllPair(args)
 elif args.potential=='harmonic': model = model.DTIHarmonic(args)
-elif args.potential=='msh_harmonic': model = model.msh_DTIHarmonic(args)
+elif args.potential=='gnn': model = model.GNN(args)
+elif args.potential=='cnn3d': model = model.CNN3D(args)
 else: 
     print (f'No {args.potential} potential')
     exit(-1)
@@ -158,8 +160,9 @@ else:
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = utils.initialize_model(model, device, args.restart_file)
 
-print ('number of parameters : ', sum(p.numel() for p in model.parameters() 
-                    if p.requires_grad))
+if not args.restart_file:
+    print ('number of parameters : ', sum(p.numel() for p in model.parameters() 
+                        if p.requires_grad))
 
 #Dataloader
 
@@ -184,7 +187,11 @@ loss_fn = nn.MSELoss()
 
 #train
 writer = SummaryWriter(args.tensorboard_dir)
-for epoch in range(args.num_epochs):
+if args.restart_file:
+    restart_epoch = int(args.restart_file.split("_")[-1].split(".")[0])
+else:
+    restart_epoch = 0
+for epoch in range(restart_epoch, args.num_epochs):
     st = time.time()
     tmp_st = st
 
@@ -284,7 +291,9 @@ for epoch in range(args.num_epochs):
            f"{train_r:.3f}\t{test_r:.3f}\t{end-st:.3f}")
     
     name = os.path.join(args.save_dir, 'save_'+str(epoch)+'.pt')
-    torch.save(model.state_dict(), name)
+    save_every = 1 if not args.save_every else args.save_every
+    if epoch % save_every == 0:
+        torch.save(model.state_dict(), name)
     
     lr = args.lr * ((args.lr_decay)**epoch)
     for param_group in optimizer.param_groups:
