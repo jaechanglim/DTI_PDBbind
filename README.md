@@ -77,3 +77,7 @@ python ../casf2016_benchmark/docking_power.py result_casf2016_docking_power_0.0_
 python ../casf2016_benchmark/screening_power.py total_result.txt 100
 >>> total_result.txt    4.912   4.070   2.842   [2.84558 ~ 7.02811] 0.175   0.439   0.509   [0.10545 ~ 0.26052]
 ```
+* Prediction
+```
+OMP_NUM_THREADS=1 python ../predict.py --ligand_file=/home/wykgroup/jaechang/work/data/docking/malt1_6h4a/result_split_sdf/scaffold_414324_4.sdf --protein_file=/home/wykgroup/jaechang/work/malt1/6h4a/6h4a_protein.pdb --output_file=result/scaffold_414324_4.out --restart_file=../random/save_0/save_1000.pt --local_opt --ligand_opt_output_file=/dev/null --n_gnn=3 --dim_gnn=128 --edgeconv --ngpu=0 --dev_vdw_radius=0.2
+```
