@@ -27,7 +27,8 @@ def parser(command):
                         choices=['morse',
                                  'harmonic',
                                  'morse_all_pair',
-                                 'harmonic_interaction_specified'])
+                                 'gnn',
+                                 'cnn3d'])
     parser.add_argument("--pos_noise_std",
                         help="std of noise added to the position",
                         type=float,
@@ -158,6 +159,10 @@ def parser(command):
         parser.add_argument("--save_dir",
                             help='save directory of model save files',
                             type=str)
+        parser.add_argument("--save_every",
+                            help='saver every n epoch',
+                            type=int,
+                            default=1)
         parser.add_argument("--tensorboard_dir",
                             help='save directory of tensorboard log files',
                             type=str)
