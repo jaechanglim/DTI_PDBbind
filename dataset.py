@@ -26,6 +26,7 @@ from rdkit.Chem import rdmolops
 from rdkit.Chem.TorsionFingerprints import CalculateTorsionLists, CalculateTorsionAngles
 import math
 from rdkit.Chem.rdmolops import GetDistanceMatrix
+from rdkit.Chem.Lipinski import RotatableBondSmarts
 random.seed(0)
 
 interaction_types = ['saltbridge', 'hbonds', 'pication', 
@@ -448,8 +449,9 @@ def mol_to_feature(m1, m1_uff, m2, interaction_data, pos_noise_std):
     dsasa = sasa-cal_sasa(m1_uff)
     
     #count rotatable bonds
-    rotor = CalcNumRotatableBonds(m1)
-
+    #rotor = CalcNumRotatableBonds(m1)
+    dm = distance_matrix(d1, d2)
+    rotor = count_active_rotatable_bond(m1, dm)
     #charge
     #charge1 = cal_charge(m1) 
     #charge2 = cal_charge(m2) 
@@ -518,6 +520,31 @@ def mol_to_feature(m1, m1_uff, m2, interaction_data, pos_noise_std):
               'no_metal2': no_metal2, \
               }
     return sample
+
+def is_atoms_in_same_ring(i,j,ssr):
+    for s in ssr:
+        if i in s and j in s: return True
+    return False        
+
+def count_active_rotatable_bond(m, dm):
+    rot_atom_pairs = m.GetSubstructMatches(RotatableBondSmarts)
+    ssr = Chem.GetSymmSSSR(m)
+    n = m.GetNumAtoms()
+    RT = np.zeros((n,))
+    for pair in rot_atom_pairs:
+        if is_atoms_in_same_ring(pair[0], pair[1], ssr): continue
+        RT[pair[0]]+=0.5
+        RT[pair[1]]+=0.5 
+    RT_copy = np.copy(RT)
+    min_dm = np.min(dm, 1)
+    RT[RT>1] = 0.5        
+    RT[min_dm>4] = 0.0
+    #print (CalcNumRotatableBonds(m), sum(RT_copy), sum(RT))
+    
+    hydrophobic_indice = get_hydrophobic_atom(m)
+    for i in range(len(RT)):
+        if hydrophobic_indice[i]==0: RT[i]=RT[i]*0.5
+    return sum(RT)
 
 class MolDataset(Dataset):
 

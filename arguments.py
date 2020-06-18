@@ -216,6 +216,12 @@ def parser(command):
                             help='list of output file',
                             nargs='+',
                             type=str,)
+        parser.add_argument('--ligand_opt_output_files',
+                            help='list of output file',
+                            nargs='+',
+                            type=str,)
+        parser.add_argument('--local_opt', action='store_true', 
+                            help='local_opt')
 
     args = parser.parse_args(arg_command)
     return args

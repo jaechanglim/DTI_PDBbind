@@ -55,11 +55,11 @@ class DTIHarmonic(torch.nn.Module):
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         )
-        self.vina_hbond_coeff = nn.Parameter(torch.tensor([1.0])) 
-        self.vina_hydrophobic_coeff = nn.Parameter(torch.tensor([0.5])) 
+        self.vina_hbond_coeff = nn.Parameter(torch.tensor([0.7])) 
+        self.vina_hydrophobic_coeff = nn.Parameter(torch.tensor([0.3])) 
         self.vdw_coeff = nn.Parameter(torch.tensor([1.0])) 
         self.torsion_coeff = nn.Parameter(torch.tensor([1.0]))
-        self.rotor_coeff = nn.Parameter(torch.tensor([0.5]))
+        self.rotor_coeff = nn.Parameter(torch.tensor([1.0]))
         self.intercept = nn.Parameter(torch.tensor([0.0]))
 
     def cal_intercept(self, h, valid1, valid2, dm):
@@ -188,23 +188,19 @@ class DTIHarmonic(torch.nn.Module):
         replace_vec = torch.ones_like(dm)*1e10
         dm = torch.where(dm<dm_min, replace_vec, dm)
         return dm
-    
-    def forward(self, sample, DM_min=0.5, cal_der_loss=False):
-        h1, adj1, h2, adj2, A_int, dmv, _, pos1, pos2, sasa, dsasa, rotor,\
-        charge1, charge2, vdw_radius1, vdw_radius2, vdw_epsilon, \
-        vdw_sigma, delta_uff, valid1, valid2,\
-        no_metal1, no_metal2, _, _ = sample.values()
 
-        h1 = self.node_embedding(h1)  
-        h2 = self.node_embedding(h2) 
+    def get_embedding_vector(self, sample):
+        h1 = self.node_embedding(sample['h1'])  
+        h2 = self.node_embedding(sample['h2']) 
         
         for i in range(len(self.gconv)):
-            h1 = self.gconv[i](h1, adj1)
-            h2 = self.gconv[i](h2, adj2) 
+            h1 = self.gconv[i](h1, sample['adj1'])
+            h2 = self.gconv[i](h2, sample['adj2']) 
             h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)
             h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
+        pos1, pos2 = sample['pos1'], sample['pos2']
         pos1.requires_grad=True
-        dm = self.cal_distance_matrix(pos1, pos2, DM_min)
+        dm = self.cal_distance_matrix(pos1, pos2, 0.5)
         if self.args.edgeconv:
             edge = dm.unsqueeze(-1).repeat(1,1,1,self.filter_center.size(-1))
             filter_center = self.filter_center.unsqueeze(0).\
@@ -219,51 +215,67 @@ class DTIHarmonic(torch.nn.Module):
             adj12[adj12<1e-3] = 0
             
             for i in range(len(self.edgeconv)):
-                new_h1 = self.edgeconv[i](h1, h2, edge, adj12) # [, n_ligand_atom, n_out_feature(dim_gnn)]
+                new_h1 = self.edgeconv[i](h1, h2, edge, adj12) 
                 new_h2 = self.edgeconv[i](h2, h1, \
-                        edge.permute(0,2,1,3), adj12.permute(0,2,1)) # [, n_protein_atom, n_out_feature(dim_gnn)]
+                        edge.permute(0,2,1,3), adj12.permute(0,2,1))
                 h1, h2 = new_h1, new_h2
                 h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)
                 h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
+        return h1, h2
 
+    def forward(self, sample, DM_min=0.5, cal_der_loss=False):
+
+        h1, h2 = self.get_embedding_vector(sample)
         h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
         h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
         h = torch.cat([h1_repeat, h2_repeat], -1) 
+
+        dm = self.cal_distance_matrix(sample['pos1'], sample['pos2'], 0.5)
         
         retval = []
         
         #coolomb interaction
         #retval.append(self.cal_coolomb_interaction(dm, h, charge1, charge2, \
         #                                           valid1, valid2))
-        #vdw interaction
-        retval.append(self.cal_vdw_interaction(dm, h, vdw_radius1, vdw_radius2, 
-                                               vdw_epsilon, vdw_sigma,
-                                               no_metal1, no_metal2))
+        
 
+        vdw_radius1, vdw_radius2, A_int = \
+                sample['vdw_radius1'], sample['vdw_radius2'], sample['A_int']
+
+        #vdw interaction
+        retval.append(self.cal_vdw_interaction(dm, h, vdw_radius1, vdw_radius2,
+                            sample['vdw_epsilon'], sample['vdw_sigma'], 
+                            sample['no_metal1'], sample['no_metal2']))
+        #hbond
         retval.append(self.vina_hbond(dm, h, vdw_radius1, vdw_radius2, A_int[:,1]))
+        
+        #metal complex
         retval.append(self.vina_hbond(dm, h, vdw_radius1, vdw_radius2, A_int[:,-1]))
+        
+        #hydrophobic
         retval.append(self.vina_hydrophobic(dm, h, vdw_radius1, vdw_radius2, 
             A_int[:,-2]))
-        retval.append(self.cal_torsion_energy(delta_uff))
-        #intercept        
-        #intercept = torch.stack([self.intercept 
-        #                        for _ in range(retval[0].size(0))])
-        #retval.append(intercept)
+        
+        #torsion
+        retval.append(self.cal_torsion_energy(sample['delta_uff']))
+
+        #rotal penalty
         retval = torch.cat(retval, -1)
         if not self.args.no_rotor_penalty: 
-            retval = retval/(1+self.rotor_coeff*self.rotor_coeff*rotor.unsqueeze(-1))
-        #retval.sum().backward(retain_graph=True)
-        #minimum_loss = torch.pow(dm.grad.sum(1).sum(1),2).mean()
+            penalty = 1+self.rotor_coeff*self.rotor_coeff*sample['rotor']
+            retval = retval/penalty.unsqueeze(-1)
+        
         if cal_der_loss:
-            minimum_loss = torch.autograd.grad(retval.sum(), pos1, 
+            minimum_loss = torch.autograd.grad(retval.sum(), sample['pos1'], 
                     retain_graph=True, create_graph=True)[0]
             minimum_loss2 = torch.pow(minimum_loss.sum(1), 2).mean()
-            minimum_loss3 = torch.autograd.grad(minimum_loss.sum(), pos1,
+            minimum_loss3 = torch.autograd.grad(minimum_loss.sum(), sample['pos1'],
                     retain_graph=True, create_graph=True)[0]                                    
             minimum_loss3 = -minimum_loss3.sum(1).sum(1).mean()    
         else:
             minimum_loss2 = torch.zeros_like(retval).sum()
             minimum_loss3 = torch.zeros_like(retval).sum()
+        
         return retval, minimum_loss2, minimum_loss3
 
 

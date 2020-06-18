@@ -44,10 +44,10 @@ else:
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 model = utils.initialize_model(model, device, args.restart_file)
 
-#print (model.vina_hbond_coeff)
-#print (model.vina_hydrophobic_coeff)
-#print (model.torsion_coeff)
-#print (model.vdw_coeff)
+print (f'vina_hbond_coeff: {model.vina_hbond_coeff.data.cpu().numpy()[0]:.3f}')
+print (f'vina_hydrophobic_coeff: {model.vina_hydrophobic_coeff.data.cpu().numpy()[0]:.3f}')
+print (f'rotor_coeff: {model.rotor_coeff.data.cpu().numpy()[0]:.3f}')
+print (f'vdw_coeff: {model.vdw_coeff.data.cpu().numpy()[0]:.3f}')
 #exit(-1)
 print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p.requires_grad))
 
