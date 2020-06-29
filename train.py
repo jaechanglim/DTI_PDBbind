@@ -153,6 +153,7 @@ elif args.potential=='morse_all_pair': model = model.DTIMorseAllPair(args)
 elif args.potential=='harmonic': model = model.DTIHarmonic(args)
 elif args.potential=='gnn': model = model.GNN(args)
 elif args.potential=='cnn3d': model = model.CNN3D(args)
+elif args.potential=='cnn3d_kdeep': model = model.CNN3D_KDEEP(args)
 else: 
     print (f'No {args.potential} potential')
     exit(-1)
