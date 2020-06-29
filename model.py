@@ -487,3 +487,223 @@ class CNN3D(nn.Module):
         fig = plt.figure(idx)
         ax = fig.gca(projection='3d')
         ax.voxels(voxels, facecolors=colors, edgecolor='k')
+
+
+class CNN3D_KDEEP(nn.Module):
+    def __init__(self, args):
+        super(CNN3D_KDEEP, self).__init__()
+        self.args = args
+        lattice_dim = args.lattice_dim
+        scaling = args.scaling
+        lattice_size = int(lattice_dim / scaling)
+        self.conv1 = self._add_act(nn.Conv3d(54, 96, 2, 2, 0))
+        self.fire2_squeeze = self._add_act(nn.Conv3d(96, 16, 3, 1, 1))
+        self.fire2_expand1 = self._add_act(nn.Conv3d(16, 64, 3, 1, 1))
+        self.fire2_expand2 = self._add_act(nn.Conv3d(16, 64, 3, 1, 1))
+
+        self.fire3_squeeze = self._add_act(nn.Conv3d(128, 16, 3, 1, 1))
+        self.fire3_expand1 = self._add_act(nn.Conv3d(16, 64, 3, 1, 1))
+        self.fire3_expand2 = self._add_act(nn.Conv3d(16, 64, 3, 1, 1))
+
+        self.fire4_squeeze = self._add_act(nn.Conv3d(128, 32, 3, 1, 1))
+        self.fire4_expand1 = self._add_act(nn.Conv3d(32, 128, 3, 1, 1))
+        self.fire4_expand2 = self._add_act(nn.Conv3d(32, 128, 3, 1, 1))
+        self.max_pooling4 = nn.MaxPool3d(2, 3, 1)
+
+        self.fire5_squeeze = self._add_act(nn.Conv3d(256, 32, 3, 1, 1))
+        self.fire5_expand1 = self._add_act(nn.Conv3d(32, 128, 3, 1, 1))
+        self.fire5_expand2 = self._add_act(nn.Conv3d(32, 128, 3, 1, 1))
+
+        self.fire6_squeeze = self._add_act(nn.Conv3d(256, 48, 3, 1, 1))
+        self.fire6_expand1 = self._add_act(nn.Conv3d(48, 192, 3, 1, 1))
+        self.fire6_expand2 = self._add_act(nn.Conv3d(48, 192, 3, 1, 1))
+
+        self.fire7_squeeze = self._add_act(nn.Conv3d(384, 48, 3, 1, 1))
+        self.fire7_expand1 = self._add_act(nn.Conv3d(48, 192, 3, 1, 1))
+        self.fire7_expand2 = self._add_act(nn.Conv3d(48, 192, 3, 1, 1))
+
+        self.fire8_squeeze = self._add_act(nn.Conv3d(384, 64, 3, 1, 1))
+        self.fire8_expand1 = self._add_act(nn.Conv3d(64, 256, 3, 1, 1))
+        self.fire8_expand2 = self._add_act(nn.Conv3d(64, 256, 3, 1, 1))
+
+        self.avg_pooling8 = nn.AvgPool3d(3, 2, 0)
+
+        self.linear = nn.Linear(4096, 1)
+
+    def forward(self, sample, DM_min=0.5, cal_der_loss=False):
+        h1, adj1, h2, adj2, A_int, dmv, _, pos1, pos2, \
+        sasa, dsasa, rotor, charge1, charge2, vdw_radius1, vdw_radius2, \
+        vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2,\
+        no_metal1, no_metal2, _, _ = sample.values()
+
+        batch_size = pos1.shape[0]
+        lattice = self._get_lattice(pos1, pos2, vdw_radius1, vdw_radius2,
+                                    h1, h2, self.args.lattice_dim)
+
+        if self.args.grid_rotation:
+            lattice = lattice.detach().cpu().numpy() # B, 54, 40, 40, 40
+            angle = torch.randint(low=0, high=4, size=(3,))
+            lattice = np.rot90(lattice, k=angle[0].item(), axes=(2, 3))
+            lattice = np.rot90(lattice, k=angle[1].item(), axes=(3, 4))
+            lattice = np.rot90(lattice, k=angle[2].item(), axes=(4, 2))
+            lattice = torch.from_numpy(lattice.copy()).to(h1.device)
+        # print(lattice.shape)
+
+        lattice = self.conv1(lattice)
+        # print(lattice.shape)
+        lattice = self.fire2_squeeze(lattice)
+        lattice1 = self.fire2_expand2(lattice)
+        lattice2 = self.fire2_expand2(lattice)
+        lattice = torch.cat([lattice1, lattice2], dim=1)
+        # print(lattice.shape)
+        lattice = self.fire3_squeeze(lattice)
+        lattice1 = self.fire3_expand2(lattice)
+        lattice2 = self.fire3_expand2(lattice)
+        lattice = torch.cat([lattice1, lattice2], dim=1)
+        # print(lattice.shape)
+        lattice = self.fire4_squeeze(lattice)
+        lattice1 = self.fire4_expand2(lattice)
+        lattice2 = self.fire4_expand2(lattice)
+        lattice = torch.cat([lattice1, lattice2], dim=1)
+        # print(lattice.shape)
+        lattice = self.max_pooling4(lattice)
+        lattice = self.fire5_squeeze(lattice)
+        lattice1 = self.fire5_expand2(lattice)
+        lattice2 = self.fire5_expand2(lattice)
+        lattice = torch.cat([lattice1, lattice2], dim=1)
+        # print(lattice.shape)
+        lattice = self.fire6_squeeze(lattice)
+        lattice1 = self.fire6_expand2(lattice)
+        lattice2 = self.fire6_expand2(lattice)
+        lattice = torch.cat([lattice1, lattice2], dim=1)
+        # print(lattice.shape)
+        lattice = self.fire7_squeeze(lattice)
+        lattice1 = self.fire7_expand2(lattice)
+        lattice2 = self.fire7_expand2(lattice)
+        lattice = torch.cat([lattice1, lattice2], dim=1)
+        # print(lattice.shape)
+        lattice = self.fire8_squeeze(lattice)
+        lattice1 = self.fire8_expand2(lattice)
+        lattice2 = self.fire8_expand2(lattice)
+        lattice = torch.cat([lattice1, lattice2], dim=1)
+        # print(lattice.shape)
+        lattice = self.avg_pooling8(lattice)
+        # print(lattice.shape)
+
+        lattice = lattice.view(lattice.shape[0], -1)
+        retval = self.linear(lattice)
+        # print(retval.shape)
+
+        minimum_loss2 = torch.zeros_like(retval).sum()
+        minimum_loss3 = torch.zeros_like(retval).sum()
+
+        return retval, minimum_loss2, minimum_loss3
+
+
+    def _get_lattice(self, pos1, pos2, vr1, vr2, h1, h2, lattice_dim):
+        n_feature = h1.shape[-1]
+        device = pos1.device
+        batch_size = pos1.size(0)
+        
+        lattice_size = int(lattice_dim / self.args.scaling)
+        lattice = torch.zeros(batch_size,
+                              lattice_size,
+                              lattice_size,
+                              lattice_size,
+                              n_feature)
+        nz_pos1 = (pos1.sum(-1) == 0).unsqueeze(-1)
+        nz_pos1_max = (nz_pos1 * -1e10).to(device)
+        nz_pos1_min = (nz_pos1 * 1e10).to(device)
+        batch_max = torch.max(pos1 + nz_pos1_max, dim=1)[0]
+        batch_min = torch.min(pos1 + nz_pos1_min, dim=1)[0]
+
+        batch_diff = batch_max - batch_min
+        sub = ((batch_min + batch_diff/2)).unsqueeze(1)
+        lattice = lattice.to(device)
+
+        moved_pos1 = ((pos1-sub)+lattice_dim/2)
+        moved_pos2 = ((pos2-sub)+lattice_dim/2)
+
+        grid = torch.zeros([lattice_size, lattice_size, lattice_size])
+        grid = torch.transpose(torch.stack(torch.where(grid==0)), 0, 1)
+        grid = grid * self.args.scaling
+        grid = grid.to(device)
+
+        sum1 = torch.zeros(batch_size,
+                           lattice_size,
+                           lattice_size,
+                           lattice_size,
+                           n_feature).to(device)
+        for i in range(moved_pos1.size(1)):
+            pe1 = moved_pos1[:, i, :]
+            he1 = h1[:, i, :]
+            vre1 = vr1[:, i]
+            mp1 = pe1.unsqueeze(1).repeat(1, grid.size(0), 1)
+            g1r = grid.unsqueeze(0).repeat(pe1.size(0), 1, 1)
+            de1 = torch.sqrt(torch.pow(mp1-g1r, 2).sum(-1))
+            ce1 = 1 - torch.exp(-torch.pow(vre1.unsqueeze(-1)/de1, 12))
+            ce1 = ce1.view(-1, lattice_size, lattice_size, lattice_size)
+            he1 = he1.unsqueeze(1).repeat(1, lattice_size, 1)
+            he1 = he1.unsqueeze(1).repeat(1, lattice_size, 1, 1)
+            he1 = he1.unsqueeze(1).repeat(1, lattice_size, 1, 1, 1)
+            mul1 = he1 * ce1.unsqueeze(-1)
+            sum1 += mul1
+
+        sum2 = torch.zeros(batch_size,
+                           lattice_size,
+                           lattice_size,
+                           lattice_size,
+                           n_feature).to(device)
+        for i in range(moved_pos2.size(1)):
+            pe2 = moved_pos2[:, i, :]
+            he2 = h2[:, i, :]
+            vre2 = vr2[:, i]
+            mp2 = pe2.unsqueeze(1).repeat(1, grid.size(0), 1)
+            g2r = grid.unsqueeze(0).repeat(pe2.size(0), 1, 1)
+            de2 = torch.sqrt(torch.pow(mp2-g2r, 2).sum(-1))
+            ce2 = 1 - torch.exp(-torch.pow(vre2.unsqueeze(-1)/de2, 12))
+            ce2 = ce2.view(-1, lattice_size, lattice_size, lattice_size)
+            he2 = he2.unsqueeze(1).repeat(1, lattice_size, 1)
+            he2 = he2.unsqueeze(1).repeat(1, lattice_size, 1, 1)
+            he2 = he2.unsqueeze(1).repeat(1, lattice_size, 1, 1, 1)
+            mul2 = he2 * ce2.unsqueeze(-1)
+            sum2 += mul2
+
+        lattice = sum1 + sum2
+        lattice = lattice.permute(0, 4, 2, 3, 1)
+
+        return lattice
+
+
+    def _plot(self, lattice, idx):
+        lattice = lattice.permute(0, 4, 2, 3, 1) # b, f, y, z, x
+        lattice_0 = lattice[0].sum(-1)
+        lattice_1 = lattice[1].sum(-1)
+
+        voxels_0 = (lattice_0 != 0)
+        voxels_1 = (lattice_1 != 0)
+        voxels = voxels_0 | voxels_1
+
+        colors = np.empty(voxels.shape, dtype=object)
+        colors[voxels_0] = 'green'
+        colors[voxels_1] = 'red'
+        if lattice.shape[0] > 2:
+            lattice_2 = lattice[2].sum(-1)
+            lattice_3 = lattice[3].sum(-1)
+            voxels_2 = (lattice_2 != 0)
+            voxels_3 = (lattice_3 != 0)
+            voxels = voxels | voxels_2 | voxels_3
+            colors[voxels_2] = 'yellow'
+            colors[voxels_3] = 'purple'
+
+        fig = plt.figure(idx)
+        ax = fig.gca(projection='3d')
+        ax.voxels(voxels, facecolors=colors, edgecolor='k')
+
+    def _add_act(self, func, act='relu'):
+        func_list = []
+        func_list.append(func)
+        if act == 'relu':
+            func_list.append(nn.ReLU())
+
+        return nn.Sequential(*func_list)

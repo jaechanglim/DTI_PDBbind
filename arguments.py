@@ -28,7 +28,8 @@ def parser(command):
                                  'harmonic',
                                  'morse_all_pair',
                                  'gnn',
-                                 'cnn3d'])
+                                 'cnn3d',
+                                 'cnn3d_kdeep'])
     parser.add_argument("--pos_noise_std",
                         help="std of noise added to the position",
                         type=float,
@@ -85,6 +86,17 @@ def parser(command):
                             help='number of workers', 
                             type=int, 
                             default=7) 
+        parser.add_argument('--grid_rotation',
+                            help='whether rotate the grid or not',
+                            action='store_true')
+        parser.add_argument('--lattice_dim',
+                            help='lattice size for 3D CNN',
+                            type=int,
+                            default=20)
+        parser.add_argument('--scaling',
+                            help='scaling constant for 3D CNN',
+                            type=float,
+                            default=0.5)
 
     # for train
     if "train.py" in command[0]:

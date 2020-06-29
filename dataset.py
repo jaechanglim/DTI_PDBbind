@@ -449,9 +449,9 @@ def mol_to_feature(m1, m1_uff, m2, interaction_data, pos_noise_std):
     dsasa = sasa-cal_sasa(m1_uff)
     
     #count rotatable bonds
-    #rotor = CalcNumRotatableBonds(m1)
-    dm = distance_matrix(d1, d2)
-    rotor = count_active_rotatable_bond(m1, dm)
+    rotor = CalcNumRotatableBonds(m1)
+    # dm = distance_matrix(d1, d2)
+    # rotor = count_active_rotatable_bond(m1, dm)
     #charge
     #charge1 = cal_charge(m1) 
     #charge2 = cal_charge(m2) 
