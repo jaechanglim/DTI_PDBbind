@@ -1,13 +1,10 @@
-import argparse
 import utils
 import numpy as np
 import model 
 import os
 import torch
 import time
-import torch.nn as nn
 import sys
-import glob
 import arguments
 import dataset
 from rdkit.Chem.rdmolops import GetAdjacencyMatrix, GetDistanceMatrix
@@ -155,7 +152,7 @@ def write_molecule(filename, m, pos):
         w.close()
     return
 
-def local_optimize(model, lf, pf, of, loof, args):
+def local_optimize(model, lf, pf, of, loof, args, device):
     st = time.time()
 
     #read ligand and protein. Then, convert to rdkit object
@@ -258,7 +255,7 @@ def local_optimize(model, lf, pf, of, loof, args):
 
     return
 
-def predict(model, lf, pf, of, args):
+def predict(model, lf, pf, of, args, device):
     st = time.time()
 
     #read ligand and protein. Then, convert to rdkit object
@@ -294,6 +291,7 @@ if __name__=="__main__":
     else: 
         print (f'No {args.potential} potential')
         exit(-1)
+
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model = utils.initialize_model(model, device, args.restart_file)
     model.eval()
@@ -301,8 +299,7 @@ if __name__=="__main__":
     if args.local_opt:            
         for lf, pf, of, loof in zip(args.ligand_files, args.protein_files, 
                 args.output_files, args.ligand_opt_output_files):
-            local_optimize(model, lf, pf, of, loof, args)     
+            local_optimize(model, lf, pf, of, loof, args, device)     
     else:
         for lf, pf, of in zip(args.ligand_files, args.protein_files, args.output_files):
-            predict(model, lf, pf, of, args)     
-
+            predict(model, lf, pf, of, args, device)     
