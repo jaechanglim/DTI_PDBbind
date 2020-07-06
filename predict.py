@@ -202,6 +202,7 @@ def local_optimize(model, lf, pf, of, loof, args, device):
         initial_dm_internal = model.cal_distance_matrix(pos1, pos1, 0.5)
         topological_dm=torch.from_numpy(GetDistanceMatrix(m1))
 
+
     #optimizer
     pos1.requires_grad = True
     optimizer = torch.optim.Adam([pos1], lr=0.01)
@@ -235,10 +236,14 @@ def local_optimize(model, lf, pf, of, loof, args, device):
         loss.backward()
         optimizer.step()
         #print (iter, vdw+hbond1+hbond2+hydrophobic, internal_vdw, dev_fix_distance)
+    
+    #rotor penalty
+    rotor_penalty = 1+model.rotor_coeff*model.rotor_coeff*sample['rotor']
 
     pos1 = pos1.data.cpu().numpy()[0]
     initial_pos1 = initial_pos1.data.cpu().numpy()[0]
     pred = torch.stack([vdw, hbond1, hbond2, hydrophobic])
+    pred = pred/rotor_penalty
     pred = pred.data.cpu().numpy()
     initial_pred = initial_pred.data.cpu().numpy()
     extra_data = {'Initial prediction': f'{np.sum(initial_pred):.3f} Kcal/mol',
