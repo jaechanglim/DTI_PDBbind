@@ -1,13 +1,10 @@
-import argparse
 import utils
 import numpy as np
 import model 
 import os
 import torch
 import time
-import torch.nn as nn
 import sys
-import glob
 import arguments
 import dataset
 from rdkit.Chem.rdmolops import GetAdjacencyMatrix, GetDistanceMatrix
@@ -137,7 +134,7 @@ def write_molecule(filename, m, pos):
         w.close()
     return
 
-def local_optimize(model, lf, pf, of, loof, args):
+def local_optimize(model, lf, pf, of, loof, args, device):
     st = time.time()
 
     #read ligand and protein. Then, convert to rdkit object
@@ -187,6 +184,7 @@ def local_optimize(model, lf, pf, of, loof, args):
         initial_dm_internal = model.cal_distance_matrix(pos1, pos1, 0.5)
         topological_dm=torch.from_numpy(GetDistanceMatrix(m1))
 
+
     #optimizer
     pos1.requires_grad = True
     optimizer = torch.optim.Adam([pos1], lr=0.01)
@@ -220,6 +218,9 @@ def local_optimize(model, lf, pf, of, loof, args):
         loss.backward()
         optimizer.step()
         #print (iter, vdw+hbond1+hbond2+hydrophobic, internal_vdw, dev_fix_distance)
+    
+    #rotor penalty
+    rotor_penalty = 1+model.rotor_coeff*model.rotor_coeff*sample['rotor']
 
     lig_vdw = cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N, is_last=True)
     lig_hbond1 = cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, A_int[:,1], is_last=True)
@@ -230,6 +231,7 @@ def local_optimize(model, lf, pf, of, loof, args):
     pos1 = pos1.data.cpu().numpy()[0]
     initial_pos1 = initial_pos1.data.cpu().numpy()[0]
     pred = torch.stack([vdw, hbond1, hbond2, hydrophobic])
+    pred = pred/rotor_penalty
     pred = pred.data.cpu().numpy()
     initial_pred = initial_pred.data.cpu().numpy()
     extra_data = {'Initial prediction': f'{np.sum(initial_pred):.3f} Kcal/mol',
@@ -246,7 +248,7 @@ def local_optimize(model, lf, pf, of, loof, args):
 
     return lig_energy
 
-def predict(model, lf, pf, of, args):
+def predict(model, lf, pf, of, args, device):
     st = time.time()
 
     #read ligand and protein. Then, convert to rdkit object
@@ -282,6 +284,7 @@ if __name__=="__main__":
     else: 
         print (f'No {args.potential} potential')
         exit(-1)
+
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     model = utils.initialize_model(model, device, args.restart_file)
     model.eval()
@@ -298,4 +301,3 @@ if __name__=="__main__":
     else:
         for lf, pf, of in zip(args.ligand_files, args.protein_files, args.output_files):
             predict(model, lf, pf, of, args)     
-    
