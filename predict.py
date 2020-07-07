@@ -16,31 +16,6 @@ from rdkit import Chem
 #print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p.requires_grad))
 def write(of, model, pred, time, args, extra_data=None):
     with open(f'{of}', 'w') as w:
-        """
-        w.write("\n")
-        w.write("                             ..:::::::::::::::.... \n" )
-        w.write("                   .::== .#%*  +++++++++++++++++++: =##= .:.. \n")
-        w.write("           .::=+++++++: =@@@  +++++++++++++++++++. #@@# .+++++==:. \n" )
-        w.write("         .:=+++++++++++:    .=++++++++++++++++++++.    .+++++++++=:            \n" )
-        w.write("               ..:==++++++++++++++++++++++++++++++++++++++=::.\n" )
-        w.write("                       ..:::====++++++++++++++===:::.. \n" )
-        w.write("                             .:+**************\n")
-        w.write("                         .:++++=. +++++++++=+++: \n")
-        w.write("                  .+++=++++=.     +++++++++= :+++. \n")
-        w.write("                  +++++:.         +++++++++=   =+++:=: \n")
-        w.write("                   .::.           +++++++++=     :+++++ \n")
-        w.write("                                  ++=::::++=      :+++: \n")
-        w.write("                                  ++:    ++= \n")
-        w.write("                                  ++:    ++= \n" )
-        w.write("                             .::::++:    ++=.::: \n")
-        w.write("                            .*++++++:    +++++++* \n" )
-        w.write("\n")
-        #w.write("          .,,**////////((((((((((((((((((((######################(/*..           \n")
-        #w.write(",,******///////////////((((((((((((((((((((#####################%%%%%%%%%%%%#(/,.\n")
-        #w.write("                  ..,**////((((((((((((((((##########((((/*,..                   \n")
-        w.write("\n")
-        w.write("\n")
-        """
         w.write('#Parameter\n')
         w.write(f'Local opt: {args.local_opt}\n')
         w.write(f'Hbond coeff: {model.vina_hbond_coeff.data.cpu().numpy()[0]:.3f}\n')
@@ -63,16 +38,18 @@ def write(of, model, pred, time, args, extra_data=None):
         w.write(f'\nTime : {time} s\n')
     return
 
-def cal_vdw_energy(dm, dm_0, vdw_A, vdw_N):
+def cal_vdw_energy(dm, dm_0, vdw_A, vdw_N, is_last=False):
     vdw1 = torch.pow(dm_0/dm, 2*vdw_N)
     vdw2 = -2*torch.pow(dm_0/dm, vdw_N)
     energy = vdw1+vdw2
     energy = energy.clamp(max=100)
     energy = vdw_A*energy
+    if is_last:
+        return energy.sum(-1)[0]
     energy = energy.sum()
     return energy
 
-def cal_hbond_energy(dm, dm_0, coeff, A):
+def cal_hbond_energy(dm, dm_0, coeff, A, is_last=False):
     eff_dm = dm-dm_0
     energy = eff_dm*A/-0.7
     energy = energy.clamp(min=0.0, max=1.0)
@@ -84,23 +61,28 @@ def cal_hbond_energy(dm, dm_0, coeff, A):
 
     energy = energy/(n_ligand_hbond.unsqueeze(-1))
     energy = energy*-coeff
+    if is_last:
+        return energy.sum(-1)[0]
     energy = energy.sum()
     return energy
 
-def cal_hydrophobic_energy(dm, dm_0, coeff, A):
+def cal_hydrophobic_energy(dm, dm_0, coeff, A, is_last=False):
     eff_dm = dm-dm_0
     energy = (-eff_dm+1.5)*A
     energy = energy.clamp(min=0.0, max=1.0)
     energy = energy*-coeff
+    if is_last: return energy.sum(-1)[0]
     energy = energy.sum()
     return energy
 
-def cal_internal_vdw_energy(dm, topological_dm, epsilon, sigma):
+def cal_internal_vdw_energy(dm, topological_dm, epsilon, sigma, is_last=False):
     dm = dm.squeeze(0)
     energy1 = torch.pow(sigma/dm, 12)
     energy2 = -2*torch.pow(sigma/dm, 6)
     energy = epsilon*(energy1+energy2)
     energy[topological_dm<4] = 0.0
+    if is_last:
+        return energy.sum(-1)[0]
     energy = energy.sum()
     return energy
 
@@ -239,6 +221,12 @@ def local_optimize(model, lf, pf, of, loof, args):
         optimizer.step()
         #print (iter, vdw+hbond1+hbond2+hydrophobic, internal_vdw, dev_fix_distance)
 
+    lig_vdw = cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N, is_last=True)
+    lig_hbond1 = cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, A_int[:,1], is_last=True)
+    lig_hbond2 = cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, A_int[:,-1], is_last=True)
+    lig_hydrophobic = cal_hydrophobic_energy(dm, sum_vdw_radius, hydrophobic_coeff, A_int[:,-2], is_last=True)
+    lig_energy = lig_vdw+lig_hbond1+lig_hbond2+lig_hydrophobic
+
     pos1 = pos1.data.cpu().numpy()[0]
     initial_pos1 = initial_pos1.data.cpu().numpy()[0]
     pred = torch.stack([vdw, hbond1, hbond2, hydrophobic])
@@ -256,7 +244,7 @@ def local_optimize(model, lf, pf, of, loof, args):
     write(of, model, pred, end-st, args, extra_data)
     write_molecule(loof, m1, pos1)
 
-    return
+    return lig_energy
 
 def predict(model, lf, pf, of, args):
     st = time.time()
@@ -301,8 +289,13 @@ if __name__=="__main__":
     if args.local_opt:            
         for lf, pf, of, loof in zip(args.ligand_files, args.protein_files, 
                 args.output_files, args.ligand_opt_output_files):
-            local_optimize(model, lf, pf, of, loof, args)     
+            lig_energy = local_optimize(model, lf, pf, of, loof, args)     
+        
+        if args.ligand_prop:
+            for e in lig_energy:
+                print(f"{float(e):.2f}", end=' ')
+        
     else:
         for lf, pf, of in zip(args.ligand_files, args.protein_files, args.output_files):
             predict(model, lf, pf, of, args)     
-
+    
