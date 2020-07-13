@@ -62,6 +62,22 @@ def parser(command):
                         help="min vdw _interaction",
                         type=float,
                         default=0.0178)
+    parser.add_argument("--max_hydrophobic_interaction",
+                        help="max hydrophobic interaction",
+                        type=float,
+                        default=0.05)
+    parser.add_argument("--min_hydrophobic_interaction",
+                        help="min hydrophobic interaction",
+                        type=float,
+                        default=0.02)
+    parser.add_argument("--max_hbond_interaction",
+                        help="max hbond interaction",
+                        type=float,
+                        default=0.7)
+    parser.add_argument("--min_hbond_interaction",
+                        help="min hbond interaction",
+                        type=float,
+                        default=0.3)
     parser.add_argument("--dev_vdw_radius",
                         help="deviation of vdw radius",
                         type=float,

@@ -88,6 +88,7 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
         if train_mode:
             loss_all.backward()
             optimizer.step()
+        
         losses.append(loss.data.cpu().numpy())
         losses_der1.append(loss_der1.data.cpu().numpy())
         losses_der2.append(loss_der2.data.cpu().numpy())

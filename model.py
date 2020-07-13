@@ -59,125 +59,62 @@ class DTIHarmonic(nn.Module):
                          nn.Linear(128, 1),
                          nn.Sigmoid()
                         )
-        self.vina_hbond_coeff = nn.Parameter(torch.tensor([0.7])) 
-        self.vina_hydrophobic_coeff = nn.Parameter(torch.tensor([0.3])) 
+        self.cal_hbond_interaction_A = nn.Sequential(
+                         nn.Linear(args.dim_gnn*2, 128),
+                         nn.ReLU(),
+                         nn.Linear(128, 1),
+                         nn.Sigmoid()
+                        )
+        self.cal_hydrophobic_interaction_A = nn.Sequential(
+                         nn.Linear(args.dim_gnn*2, 128),
+                         nn.ReLU(),
+                         nn.Linear(128, 1),
+                         nn.Sigmoid()
+                        )
+        
+        self.vina_hbond_coeff = nn.Parameter(torch.tensor([0.474])) 
+        self.vina_hydrophobic_coeff = nn.Parameter(torch.tensor([0.167])) 
+        self.rotor_coeff = nn.Parameter(torch.tensor([0.192]))
+        
         self.vdw_coeff = nn.Parameter(torch.tensor([1.0])) 
         self.torsion_coeff = nn.Parameter(torch.tensor([1.0]))
-        self.rotor_coeff = nn.Parameter(torch.tensor([1.0]))
+        self.npolar_coeff = nn.Parameter(torch.tensor([0.5]))
+        self.npolar_intercept = nn.Parameter(torch.tensor([1.0]))
         self.intercept = nn.Parameter(torch.tensor([0.0]))
 
-    def cal_intercept(self, h, valid1, valid2, dm):
+    def cal_vdw_energy(self, dm, dm_0, vdw_A, vdw_N, valid1, valid2):
         valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
         valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
-        C1 = self.cal_intercept_A(h).squeeze(-1)*0.01
-        C2 = self.cal_intercept_B(h).squeeze(-1)*0.1+0.1
-        retval = C1*torch.exp(-torch.pow(C2*dm, 2))
-        retval = retval*valid1_repeat*valid2_repeat
-        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
-        return retval
-
-    def cal_coolomb_interaction(self, dm, h, charge1, charge2, valid1, valid2):
-        charge1_repeat = charge1.unsqueeze(2).repeat(1,1,charge2.size(1))
-        charge2_repeat = charge2.unsqueeze(1).repeat(1,charge1.size(1),1)
-        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
-        A = self.cal_coolomb_interaction_A(h).squeeze(-1)
-        #A = self.coolomb_coeff*self.coolomb_coeff 
-        N = self.cal_coolomb_interaction_N(h).squeeze(-1)*2+1
-        charge12 = charge1_repeat*charge2_repeat
-        energy = A*charge12*torch.pow(1/dm, N)
-        energy = energy*valid1_repeat*valid2_repeat
-        energy = energy.clamp(min=-100, max=100)
-        energy = energy.sum(1).sum(1).unsqueeze(-1)
-        return energy  
-
-    def vina_steric(self, dm, h, vdw_radius1, vdw_radius2, valid1, valid2):
-        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
-        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                .repeat(1,1,vdw_radius2.size(1))
-        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                .repeat(1,vdw_radius1.size(1),1)
-        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat
-        dm = dm-dm_0
-        g1 = torch.exp(-torch.pow(dm/0.5,2))*-0.0356  
-        g2 = torch.exp(-torch.pow((dm-3)/2,2))*-0.00516
-        repulsion = dm*dm*0.84
-        zero_vec = torch.zeros_like(repulsion)
-        repulsion = torch.where(dm > 0, zero_vec, repulsion)
-        retval = g1+g2+repulsion
-        retval = retval*valid1_repeat*valid2_repeat
-        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
-        return retval
-    
-    def vina_hbond(self, dm, h, vdw_radius1, vdw_radius2, A):
-        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                .repeat(1,1,vdw_radius2.size(1))
-        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                .repeat(1,vdw_radius1.size(1),1)
-        B = self.cal_vdw_interaction_B(h).squeeze(-1)*self.args.dev_vdw_radius
-        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat+B
-        dm = dm-dm_0
-        retval = dm*A/-0.7
-        retval = retval.clamp(min=0.0, max=1.0)
-
-        coeff = self.vina_hbond_coeff*self.vina_hbond_coeff
-        retval = retval*-coeff
-        #retval = retval.clamp(min=0.0, max=1.0)*-0.587
-        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
-        return retval
-    
-    def vina_hydrophobic(self, dm, h, vdw_radius1, vdw_radius2, A):
-        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                .repeat(1,1,vdw_radius2.size(1))
-        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                .repeat(1,vdw_radius1.size(1),1)
-        B = self.cal_vdw_interaction_B(h).squeeze(-1)*self.args.dev_vdw_radius
-        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat+B
-        dm = dm-dm_0
-
-        retval = (-dm+1.5)*A
-        retval = retval.clamp(min=0.0, max=1.0)
-        #retval = retval.clamp(min=0.0, max=1.0)*-0.0351
-        retval = retval*-self.vina_hydrophobic_coeff*self.vina_hydrophobic_coeff
-        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
-        return retval
- 
-    def cal_vdw_interaction(self, dm, h, vdw_radius1, vdw_radius2, 
-                            vdw_epsilon, vdw_sigma, valid1, valid2):
-        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
-        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                .repeat(1,1,vdw_radius2.size(1))
-        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                .repeat(1,vdw_radius1.size(1),1)
-
-        B = self.cal_vdw_interaction_B(h).squeeze(-1)*self.args.dev_vdw_radius
-        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat + B
-        #dm_0 = vdw_sigma
-        dm_0[dm_0<0.0001] = 1
-        #N = self.cal_vdw_interaction_N(h).squeeze(-1)+5.5
-        N = self.args.vdw_N
-        vdw1 = torch.pow(dm_0/dm, 2*N)
-        vdw2 = -2*torch.pow(dm_0/dm, N)
-
-        A = self.cal_vdw_interaction_A(h).squeeze(-1)
-        A = A*(self.args.max_vdw_interaction-self.args.min_vdw_interaction)
-        A = A + self.args.min_vdw_interaction
-        #A = A*self.vdw_coeff*self.vdw_coeff
-        #A = A*vdw_epsilon
-
-        energy = vdw1+vdw2
+        vdw1 = torch.pow(dm_0/dm, 2*vdw_N)
+        vdw2 = -2*torch.pow(dm_0/dm, vdw_N)
+        energy = (vdw1+vdw2)*valid1_repeat*valid2_repeat
         energy = energy.clamp(max=100)
-        energy = energy*valid1_repeat*valid2_repeat
-        energy = A*energy
-        energy = energy.sum(1).sum(1).unsqueeze(-1)
-        return energy  
+        energy = vdw_A*energy
+        energy = energy.sum([1,2])
+        return energy
 
-    def cal_torsion_energy(self, torsion_energy):
-        retval=torsion_energy*self.vdw_coeff*self.vdw_coeff
-        #retval=torsion_energy*self.torsion_coeff*self.torsion_coeff
-        return retval.unsqueeze(-1)
+    def cal_hbond_energy(self, dm, dm_0, coeff, A):
+        eff_dm = dm-dm_0
+        energy = eff_dm*A/-0.7
+        energy = energy.clamp(min=0.0, max=1.0)
+
+        pair = energy.detach()
+        pair[pair>0] = 1
+        n_ligand_hbond = pair.sum(2)
+        n_ligand_hbond[n_ligand_hbond<0.001] = 1
+
+        energy = energy/(n_ligand_hbond.unsqueeze(-1))
+        energy = energy*-coeff
+        energy = energy.sum([1,2])
+        return energy
+
+    def cal_hydrophobic_energy(self, dm, dm_0, coeff, A):
+        eff_dm = dm-dm_0
+        energy = (-eff_dm+1.5)*A
+        energy = energy.clamp(min=0.0, max=1.0)
+        energy = energy*-coeff
+        energy = energy.sum([1,2])
+        return energy
 
     def cal_distance_matrix(self, p1, p2, dm_min):
         p1_repeat = p1.unsqueeze(2).repeat(1,1,p2.size(1),1)
@@ -222,43 +159,55 @@ class DTIHarmonic(nn.Module):
         return h1, h2
 
     def forward(self, sample, DM_min=0.5, cal_der_loss=False):
-
+        #get embedding vector
         h1, h2 = self.get_embedding_vector(sample)
         h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
         h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
         h = torch.cat([h1_repeat, h2_repeat], -1) 
 
-        dm = self.cal_distance_matrix(sample['pos1'], sample['pos2'], 0.5)
+        #vdw radius parameter
+        dev_vdw_radius = self.cal_vdw_interaction_B(h).squeeze(-1)
+        dev_vdw_radius = dev_vdw_radius*self.args.dev_vdw_radius
+        vdw_radius1, vdw_radius2 = sample['vdw_radius1'], sample['vdw_radius2']
+        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
+                .repeat(1,1,vdw_radius2.size(1))
+        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
+                .repeat(1,vdw_radius1.size(1),1)
+        sum_vdw_radius = vdw_radius1_repeat+vdw_radius2_repeat+dev_vdw_radius
         
-        retval = []
-        
-        #coolomb interaction
-        #retval.append(self.cal_coolomb_interaction(dm, h, charge1, charge2, \
-        #                                           valid1, valid2))
-        
-
-        vdw_radius1, vdw_radius2, A_int = \
-                sample['vdw_radius1'], sample['vdw_radius2'], sample['A_int']
-
         #vdw interaction
-        retval.append(self.cal_vdw_interaction(dm, h, vdw_radius1, vdw_radius2,
-                            sample['vdw_epsilon'], sample['vdw_sigma'], 
-                            sample['no_metal1'], sample['no_metal2']))
+        vdw_N = self.args.vdw_N
+        vdw_A = self.cal_vdw_interaction_A(h).squeeze(-1)
+        vdw_A = vdw_A*(self.args.max_vdw_interaction-self.args.min_vdw_interaction)
+        vdw_A = vdw_A + self.args.min_vdw_interaction
+
         #hbond
-        retval.append(self.vina_hbond(dm, h, vdw_radius1, vdw_radius2, A_int[:,1]))
-        
-        #metal complex
-        retval.append(self.vina_hbond(dm, h, vdw_radius1, vdw_radius2, A_int[:,-1]))
+        hbond_A = self.cal_hbond_interaction_A(h).squeeze(-1)
+        hbond_A = hbond_A*(self.args.max_hbond_interaction
+                                -self.args.min_hbond_interaction)
+        hbond_A = hbond_A + self.args.min_hbond_interaction
         
         #hydrophobic
-        retval.append(self.vina_hydrophobic(dm, h, vdw_radius1, vdw_radius2, 
-            A_int[:,-2]))
+        hydrophobic_A = self.cal_hydrophobic_interaction_A(h).squeeze(-1)
+        hydrophobic_A = hydrophobic_A*(self.args.max_hydrophobic_interaction
+                                    -self.args.min_hydrophobic_interaction)
+        hydrophobic_A = hydrophobic_A + self.args.min_hydrophobic_interaction
         
-        #torsion
-        retval.append(self.cal_torsion_energy(sample['delta_uff']))
+        pos1, pos2, A_int = sample['pos1'], sample['pos2'], sample['A_int']
+
+        #distance matrix 
+        dm = self.cal_distance_matrix(pos1, pos2, 0.5)
+       
+        #calculate energy
+        vdw = self.cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N, 
+                                        sample['valid1'], sample['valid2'])
+        hbond1 = self.cal_hbond_energy(dm, sum_vdw_radius, hbond_A, A_int[:,1])
+        hbond2 = self.cal_hbond_energy(dm, sum_vdw_radius, hbond_A, A_int[:,-1])
+        hydrophobic = self.cal_hydrophobic_energy(dm, sum_vdw_radius, 
+                                            hydrophobic_A, A_int[:,-2])
 
         #rotal penalty
-        retval = torch.cat(retval, -1)
+        retval = torch.stack([vdw, hbond1, hbond2, hydrophobic], -1)
         if not self.args.no_rotor_penalty: 
             penalty = 1+self.rotor_coeff*self.rotor_coeff*sample['rotor']
             retval = retval/penalty.unsqueeze(-1)

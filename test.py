@@ -28,7 +28,7 @@ with open(args.filename) as f:
     id_to_y = {l[0]:float(l[1]) for l in lines}
 
 with open(args.key_dir+'/test_keys.pkl', 'rb') as f:
-    test_keys = pickle.load(f)
+    test_keys = pickle.load(f)[:]
 
 
 #Model

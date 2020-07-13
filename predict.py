@@ -63,37 +63,7 @@ def write(of, model, pred, time, args, extra_data=None):
         w.write(f'\nTime : {time} s\n')
     return
 
-def cal_vdw_energy(dm, dm_0, vdw_A, vdw_N):
-    vdw1 = torch.pow(dm_0/dm, 2*vdw_N)
-    vdw2 = -2*torch.pow(dm_0/dm, vdw_N)
-    energy = vdw1+vdw2
-    energy = energy.clamp(max=100)
-    energy = vdw_A*energy
-    energy = energy.sum()
-    return energy
 
-def cal_hbond_energy(dm, dm_0, coeff, A):
-    eff_dm = dm-dm_0
-    energy = eff_dm*A/-0.7
-    energy = energy.clamp(min=0.0, max=1.0)
-
-    pair = energy.detach()
-    pair[pair>0] = 1
-    n_ligand_hbond = pair.sum(2)
-    n_ligand_hbond[n_ligand_hbond<0.001] = 1
-
-    energy = energy/(n_ligand_hbond.unsqueeze(-1))
-    energy = energy*-coeff
-    energy = energy.sum()
-    return energy
-
-def cal_hydrophobic_energy(dm, dm_0, coeff, A):
-    eff_dm = dm-dm_0
-    energy = (-eff_dm+1.5)*A
-    energy = energy.clamp(min=0.0, max=1.0)
-    energy = energy*-coeff
-    energy = energy.sum()
-    return energy
 
 def cal_internal_vdw_energy(dm, topological_dm, epsilon, sigma):
     dm = dm.squeeze(0)
@@ -155,7 +125,7 @@ def write_molecule(filename, m, pos):
         w.close()
     return
 
-def local_optimize(model, lf, pf, of, loof, args):
+def local_optimize(model, lf, pf, of, loof, args, device):
     st = time.time()
 
     #read ligand and protein. Then, convert to rdkit object
@@ -214,11 +184,14 @@ def local_optimize(model, lf, pf, of, loof, args):
         dm = model.cal_distance_matrix(pos1, pos2, 0.5)
         dm_internal = model.cal_distance_matrix(pos1, pos1, 0.1)
         
-        vdw = cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N)
-        hbond1 = cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, A_int[:,1])
-        hbond2 = cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, A_int[:,-1])
-        hydrophobic = cal_hydrophobic_energy(dm, sum_vdw_radius, 
-                                            hydrophobic_coeff, A_int[:,-2])
+        vdw = model.cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N, 
+                                    sample['valid1'], sample['valid2']).sum()
+        hbond1 = model.cal_hbond_energy(dm, sum_vdw_radius, 
+                                        hbond_coeff, A_int[:,1]).sum()
+        hbond2 = model.cal_hbond_energy(dm, sum_vdw_radius, 
+                                        hbond_coeff, A_int[:,-1]).sum()
+        hydrophobic = model.cal_hydrophobic_energy(dm, sum_vdw_radius, 
+                                            hydrophobic_coeff, A_int[:,-2]).sum()
 
         #constraint
         internal_vdw = cal_internal_vdw_energy(dm_internal, topological_dm,
@@ -232,16 +205,22 @@ def local_optimize(model, lf, pf, of, loof, args):
             initial_pos1 = pos1.clone().detach() 
 
         #loss
-        loss = vdw+hbond1+hbond2+hydrophobic
+        loss = (vdw+hbond1+hbond2+hydrophobic).sum()
         loss = loss + torch.max(internal_vdw, initial_internal_vdw)
         loss = loss + dev_fix_distance
         loss.backward()
         optimizer.step()
         #print (iter, vdw+hbond1+hbond2+hydrophobic, internal_vdw, dev_fix_distance)
-
+    
     pos1 = pos1.data.cpu().numpy()[0]
     initial_pos1 = initial_pos1.data.cpu().numpy()[0]
     pred = torch.stack([vdw, hbond1, hbond2, hydrophobic])
+    
+    #rotor penalty
+    rotor_penalty = 1+model.rotor_coeff*model.rotor_coeff*sample['rotor']
+    pred = pred/rotor_penalty
+    initial_pred = initial_pred/rotor_penalty
+    
     pred = pred.data.cpu().numpy()
     initial_pred = initial_pred.data.cpu().numpy()
     extra_data = {'Initial prediction': f'{np.sum(initial_pred):.3f} Kcal/mol',
@@ -258,7 +237,7 @@ def local_optimize(model, lf, pf, of, loof, args):
 
     return
 
-def predict(model, lf, pf, of, args):
+def predict(model, lf, pf, of, args, device):
     st = time.time()
 
     #read ligand and protein. Then, convert to rdkit object
@@ -301,8 +280,8 @@ if __name__=="__main__":
     if args.local_opt:            
         for lf, pf, of, loof in zip(args.ligand_files, args.protein_files, 
                 args.output_files, args.ligand_opt_output_files):
-            local_optimize(model, lf, pf, of, loof, args)     
+            local_optimize(model, lf, pf, of, loof, args, device)     
     else:
         for lf, pf, of in zip(args.ligand_files, args.protein_files, args.output_files):
-            predict(model, lf, pf, of, args)     
+            predict(model, lf, pf, of, args, device)     
 
