@@ -255,6 +255,8 @@ def parser(command):
                             type=str,)
         parser.add_argument('--local_opt', action='store_true', 
                             help='local_opt')
-
+        parser.add_argument('--ligand_prop', action='store_true',
+                            help='ligand_prop')
+    
     args = parser.parse_args(arg_command)
     return args

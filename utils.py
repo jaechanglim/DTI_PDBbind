@@ -143,7 +143,7 @@ def extract_binding_pocket(ligand, pdb):
     io.set_structure(structure)
 
     np.random.seed()
-    fn = 'BS_tmp_'+str(np.random.randint(0,100000,1)[0])+'.pdb'
+    fn = '/tmp/BS_tmp_'+str(np.random.randint(0,100000,1)[0])+'.pdb'
     #fd, fpath = tempfile.mkstemp(prefix='BS_tmp', dir=os.getcwd(), text=True)
     io.save(fn, GlySelect())
     #structure = parser.get_structure('protein', fn)

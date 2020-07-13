@@ -178,7 +178,7 @@ def rotate(molecule, angle, axis, fix_com=False):
     """
     Since edge of each molecules are changing by different orientation,
     this funciton used to make molecules rotation-invariant and enables further
-    self-supervised leanring.
+    self-supervised learning.
     
     :param molecule: rdkit molecule object
     :param anble: angle to rotate,
@@ -614,7 +614,7 @@ def collate_tensor(tensor, max_tensor, batch_idx):
         max_dims = max_tensor.shape
         slice_list = tuple([slice(0, dim) for dim in dims])
         slice_list = [slice(batch_idx, batch_idx+1), *slice_list]
-        max_tensor[slice_list] = tensor
+        max_tensor[tuple(slice_list)] = tensor
     elif isinstance(tensor, str):
         max_tensor[batch_idx] = tensor
     else:
