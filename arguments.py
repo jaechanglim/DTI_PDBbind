@@ -242,5 +242,5 @@ def parser(command):
         parser.add_argument('--ligand_prop', action='store_true',
                             help='ligand_prop')
     
-    args = parser.parse_args(arg_command)
+    args = parser.parse_known_args(arg_command)
     return args
