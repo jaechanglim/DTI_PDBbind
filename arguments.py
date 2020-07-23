@@ -50,8 +50,12 @@ def parser(command):
                         help="dropout rate",
                         type=float,
                         default=0.0)
-    parser.add_argument("--vdw_N",
-                        help="vdw N",
+    parser.add_argument("--vdw_N_short",
+                        help="vdw_N short",
+                        type=float,
+                        default=6.0)
+    parser.add_argument("--vdw_N_long",
+                        help="vdw_N long",
                         type=float,
                         default=6.0)
     parser.add_argument("--max_vdw_interaction",
@@ -184,6 +188,14 @@ def parser(command):
                             help="loss screening ratio",
                             type=float,
                             default=1.0)
+        parser.add_argument("--loss_dev_vdw_radius_ratio",
+                            help="loss_dev_vdw_radius_ratio",
+                            type=float,
+                            default=1.0)
+        parser.add_argument("--loss_purterb_ratio",
+                            help="loss_purterb_ratio",
+                            type=float,
+                            default=0.0)
         parser.add_argument("--save_dir",
                             help='save directory of model save files',
                             type=str)
@@ -258,5 +270,5 @@ def parser(command):
         parser.add_argument('--ligand_prop', action='store_true',
                             help='ligand_prop')
     
-    args = parser.parse_args(arg_command)
+    args, _ = parser.parse_known_args(arg_command)
     return args

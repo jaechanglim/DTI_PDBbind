@@ -81,7 +81,7 @@ for i_batch, sample in enumerate(test_data_loader):
     affinity = sample['affinity']
 
     with torch.no_grad():
-        pred1, _, _ = model(sample)
+        pred1, _, _, _ = model(sample)
     affinity = affinity.data.cpu().numpy()
     pred1 = pred1.data.cpu().numpy()
     #pred2 = pred2.data.cpu().numpy()

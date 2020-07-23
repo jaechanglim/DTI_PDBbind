@@ -35,56 +35,12 @@ def write(of, model, pred, time, args, extra_data=None):
         w.write(f'\nTime : {time} s\n')
     return
 
-<<<<<<< HEAD
-
-=======
-def cal_vdw_energy(dm, dm_0, vdw_A, vdw_N, is_last=False):
-    vdw1 = torch.pow(dm_0/dm, 2*vdw_N)
-    vdw2 = -2*torch.pow(dm_0/dm, vdw_N)
-    energy = vdw1+vdw2
-    energy = energy.clamp(max=100)
-    energy = vdw_A*energy
-    if is_last:
-        return energy.sum(-1)[0]
-    energy = energy.sum()
-    return energy
-
-def cal_hbond_energy(dm, dm_0, coeff, A, is_last=False):
-    eff_dm = dm-dm_0
-    energy = eff_dm*A/-0.7
-    energy = energy.clamp(min=0.0, max=1.0)
-
-    pair = energy.detach()
-    pair[pair>0] = 1
-    n_ligand_hbond = pair.sum(2)
-    n_ligand_hbond[n_ligand_hbond<0.001] = 1
-
-    energy = energy/(n_ligand_hbond.unsqueeze(-1))
-    energy = energy*-coeff
-    if is_last:
-        return energy.sum(-1)[0]
-    energy = energy.sum()
-    return energy
-
-def cal_hydrophobic_energy(dm, dm_0, coeff, A, is_last=False):
-    eff_dm = dm-dm_0
-    energy = (-eff_dm+1.5)*A
-    energy = energy.clamp(min=0.0, max=1.0)
-    energy = energy*-coeff
-    if is_last: return energy.sum(-1)[0]
-    energy = energy.sum()
-    return energy
->>>>>>> 51954eaec940f7aee4841d882309a0f340a6585f
-
-def cal_internal_vdw_energy(dm, topological_dm, epsilon, sigma, is_last=False):
+def cal_internal_vdw_energy(dm, topological_dm, epsilon, sigma):
     dm = dm.squeeze(0)
     energy1 = torch.pow(sigma/dm, 12)
     energy2 = -2*torch.pow(sigma/dm, 6)
     energy = epsilon*(energy1+energy2)
     energy[topological_dm<4] = 0.0
-    if is_last:
-        return energy.sum(-1)[0]
-    energy = energy.sum()
     return energy
 
 def make_ring_matrix(m):
@@ -170,7 +126,7 @@ def local_optimize(model, lf, pf, of, loof, args, device):
         sum_vdw_radius = vdw_radius1_repeat+vdw_radius2_repeat+dev_vdw_radius
         
         #vdw interaction
-        vdw_N = args.vdw_N
+        vdw_N_short, vdw_N_long = args.vdw_N_short, args.vdw_N_long
         vdw_A = model.cal_vdw_interaction_A(h).squeeze(-1)
         vdw_A = vdw_A*(args.max_vdw_interaction-args.min_vdw_interaction)
         vdw_A = vdw_A + args.min_vdw_interaction
@@ -198,7 +154,7 @@ def local_optimize(model, lf, pf, of, loof, args, device):
         dm = model.cal_distance_matrix(pos1, pos2, 0.5)
         dm_internal = model.cal_distance_matrix(pos1, pos1, 0.1)
         
-        vdw = model.cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N, 
+        vdw = model.cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N_short, vdw_N_long, 
                                     sample['valid1'], sample['valid2']).sum()
         hbond1 = model.cal_hbond_energy(dm, sum_vdw_radius, 
                                         hbond_coeff, A_int[:,1]).sum()
@@ -209,7 +165,7 @@ def local_optimize(model, lf, pf, of, loof, args, device):
 
         #constraint
         internal_vdw = cal_internal_vdw_energy(dm_internal, topological_dm,
-                                                    epsilon, sigma)
+                                                    epsilon, sigma).sum()
         dev_fix_distance = torch.pow(initial_dm_internal-dm_internal,2).squeeze()
         dev_fix_distance = (dev_fix_distance*fix_pair).sum()
         
@@ -226,31 +182,21 @@ def local_optimize(model, lf, pf, of, loof, args, device):
         optimizer.step()
         #print (iter, vdw+hbond1+hbond2+hydrophobic, internal_vdw, dev_fix_distance)
     
-<<<<<<< HEAD
-    pos1 = pos1.data.cpu().numpy()[0]
-    initial_pos1 = initial_pos1.data.cpu().numpy()[0]
-    pred = torch.stack([vdw, hbond1, hbond2, hydrophobic])
-    
-    #rotor penalty
-    rotor_penalty = 1+model.rotor_coeff*model.rotor_coeff*sample['rotor']
-    pred = pred/rotor_penalty
-    initial_pred = initial_pred/rotor_penalty
-    
-=======
     #rotor penalty
     rotor_penalty = 1+model.rotor_coeff*model.rotor_coeff*sample['rotor']
 
-    lig_vdw = cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N, is_last=True)
-    lig_hbond1 = cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, A_int[:,1], is_last=True)
-    lig_hbond2 = cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, A_int[:,-1], is_last=True)
-    lig_hydrophobic = cal_hydrophobic_energy(dm, sum_vdw_radius, hydrophobic_coeff, A_int[:,-2], is_last=True)
+    lig_vdw = model.cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N_short, 
+                                    vdw_N_long).sum(-1)
+    lig_hbond1 = model.cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, 
+                                A_int[:,1]).sum(-1)
+    lig_hbond2 = model.cal_hbond_energy(dm, sum_vdw_radius, hbond_coeff, A_int[:,-1]).sum(-1)
+    lig_hydrophobic = model.cal_hydrophobic_energy(dm, sum_vdw_radius, hydrophobic_coeff, A_int[:,-2]).sum(-1)
     lig_energy = lig_vdw+lig_hbond1+lig_hbond2+lig_hydrophobic
 
     pos1 = pos1.data.cpu().numpy()[0]
     initial_pos1 = initial_pos1.data.cpu().numpy()[0]
     pred = torch.stack([vdw, hbond1, hbond2, hydrophobic])
     pred = pred/rotor_penalty
->>>>>>> 51954eaec940f7aee4841d882309a0f340a6585f
     pred = pred.data.cpu().numpy()
     initial_pred = initial_pred.data.cpu().numpy()
     extra_data = {'Initial prediction': f'{np.sum(initial_pred):.3f} Kcal/mol',
@@ -282,7 +228,7 @@ def predict(model, lf, pf, of, args, device):
     sample = utils.dic_to_device(sample, device)
 
     #run prediction
-    pred, _, _ = model(sample, cal_der_loss=False)
+    pred, _, _, _ = model(sample, cal_der_loss=False)
     pred = pred.data.cpu().numpy()[0]
     end = time.time()
     

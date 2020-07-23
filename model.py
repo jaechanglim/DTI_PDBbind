@@ -85,9 +85,21 @@ class DTIHarmonic(nn.Module):
     def cal_vdw_energy(self, dm, dm_0, vdw_A, vdw_N, valid1, valid2):
         valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
         valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
-        vdw1 = torch.pow(dm_0/dm, 2*vdw_N)
-        vdw2 = -2*torch.pow(dm_0/dm, vdw_N)
-        energy = (vdw1+vdw2)*valid1_repeat*valid2_repeat
+
+        vdw_N_short, vdw_N_long = vdw_N
+
+        #short range energy
+        vdw_short1 = torch.pow(dm_0/dm, 2*vdw_N_short)
+        vdw_short2 = -2*torch.pow(dm_0/dm, vdw_N_short)
+        energy_short = (vdw_short1+vdw_short2)*valid1_repeat*valid2_repeat
+        
+        #long range energy
+        vdw_long1 = torch.pow(dm_0/dm, 2*vdw_N_long)
+        vdw_long2 = -2*torch.pow(dm_0/dm, vdw_N_long)
+        energy_long = (vdw_long1+vdw_long2)*valid1_repeat*valid2_repeat
+
+        #total energy
+        energy = torch.where(dm > dm_0, energy_long, energy_short)
         energy = energy.clamp(max=100)
         energy = vdw_A*energy
         energy = energy.sum([1,2])
@@ -167,7 +179,7 @@ class DTIHarmonic(nn.Module):
 
         #vdw radius parameter
         dev_vdw_radius = self.cal_vdw_interaction_B(h).squeeze(-1)
-        dev_vdw_radius = dev_vdw_radius*self.args.dev_vdw_radius
+        #dev_vdw_radius = dev_vdw_radius*self.args.dev_vdw_radius
         vdw_radius1, vdw_radius2 = sample['vdw_radius1'], sample['vdw_radius2']
         vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
                 .repeat(1,1,vdw_radius2.size(1))
@@ -176,7 +188,6 @@ class DTIHarmonic(nn.Module):
         sum_vdw_radius = vdw_radius1_repeat+vdw_radius2_repeat+dev_vdw_radius
         
         #vdw interaction
-        vdw_N = self.args.vdw_N
         vdw_A = self.cal_vdw_interaction_A(h).squeeze(-1)
         vdw_A = vdw_A*(self.args.max_vdw_interaction-self.args.min_vdw_interaction)
         vdw_A = vdw_A + self.args.min_vdw_interaction
@@ -199,8 +210,9 @@ class DTIHarmonic(nn.Module):
         dm = self.cal_distance_matrix(pos1, pos2, 0.5)
        
         #calculate energy
-        vdw = self.cal_vdw_energy(dm, sum_vdw_radius, vdw_A, vdw_N, 
-                                        sample['valid1'], sample['valid2'])
+        vdw = self.cal_vdw_energy(dm, sum_vdw_radius, vdw_A, 
+                                  (self.args.vdw_N_short, self.args.vdw_N_long), 
+                                  sample['valid1'], sample['valid2'])
         hbond1 = self.cal_hbond_energy(dm, sum_vdw_radius, hbond_A, A_int[:,1])
         hbond2 = self.cal_hbond_energy(dm, sum_vdw_radius, hbond_A, A_int[:,-1])
         hydrophobic = self.cal_hydrophobic_energy(dm, sum_vdw_radius, 
@@ -222,8 +234,9 @@ class DTIHarmonic(nn.Module):
         else:
             minimum_loss2 = torch.zeros_like(retval).sum()
             minimum_loss3 = torch.zeros_like(retval).sum()
-        
-        return retval, minimum_loss2, minimum_loss3
+       
+        dev_vdw_radius_loss = torch.pow(dev_vdw_radius, 2).mean()
+        return retval, minimum_loss2, minimum_loss3, dev_vdw_radius_loss
 
 
 class GNN(nn.Module):

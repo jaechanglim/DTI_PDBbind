@@ -15,15 +15,17 @@ import model
 
 import arguments
 import sys
+import copy
 
 args = arguments.parser(sys.argv)
 if not args.restart_file:
     print (args)
 
-def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
+def run(model, data_iter, data_iter_perturb, 
+                data_iter2, data_iter3, data_iter4, train_mode):
     model.train() if train_mode else model.eval()
-    losses, losses_der1, losses_der2, losses_docking, losses_screening = \
-            [], [], [], [], []
+    losses, losses_der1, losses_der2, losses_docking, losses_screening, \
+            losses_dev_vdw_radius = [], [], [], [], [], []
     save_pred, save_true, save_pred_docking, save_true_docking, \
             save_pred_screening, save_true_screening = \
             dict(), dict(), dict(), dict(), dict(), dict()
@@ -37,64 +39,90 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
         keys, affinity = sample['key'], sample['affinity']
 
         loss_all = 0.0 
+        
+        #loss purterb
+        loss_purterb = torch.zeros(())
+        if args.loss_purterb_ratio > 0.0:
+            sample_purterb = dict(sample)
+            dev=torch.normal(0, args.pos_noise_std, size=sample_purterb['pos1'].size())
+            dev=dev.mean(1, keepdim=True).to(sample_purterb['pos1'].device)
+            sample_purterb['pos1']=sample_purterb['pos1']+dev
+            pred_purterb, _, _, _ = model(sample_purterb)
+        
         cal_der_loss = False
         if args.loss_der1_ratio > 0 or args.loss_der2_ratio > 0.0:
             cal_der_loss = True
 
-        pred, loss_der1, loss_der2 = model(sample, cal_der_loss=cal_der_loss)
+        pred, loss_der1, loss_der2, loss_dev = \
+                                model(sample, cal_der_loss=cal_der_loss)
         loss = loss_fn(pred.sum(-1), affinity)
         loss_der2 = loss_der2.clamp(min=args.min_loss_der2)
         loss_all += loss
         loss_all += loss_der1.sum()*args.loss_der1_ratio
         loss_all += loss_der2.sum()*args.loss_der2_ratio
+        loss_all += loss_dev*args.loss_dev_vdw_radius_ratio 
         
-        #loss4
-        loss_docking = torch.zeros((1, ))
+        if args.loss_purterb_ratio > 0.0:
+            loss_purterb = (pred.sum(-1)-pred_purterb.sum(-1))
+            loss_purterb = loss_purterb.clamp(0.0).mean()
+            loss_all += loss_purterb * args.loss_purterb_ratio
+
+        #loss_docking
+        loss_docking, loss_dev_docking = torch.zeros(()), torch.zeros(())
         keys_docking = []
         if args.loss_docking_ratio > 0.0:
             sample_docking = next(data_iter2, None)
             sample_docking = utils.dic_to_device(sample_docking, device)
             keys_docking, affinity_docking = \
                     sample_docking['key'], sample_docking['affinity']
-            pred_docking, _, _ = model(sample_docking)
+            pred_docking, _, _, loss_dev_docking = model(sample_docking)
             loss_docking = (affinity_docking-pred_docking.sum(-1))
             loss_docking = loss_docking.clamp(args.min_loss_docking).mean()
             loss_all += loss_docking * args.loss_docking_ratio
+            loss_all += loss_dev_docking*args.loss_dev_vdw_radius_ratio 
 
-        loss_screening = torch.zeros((1, ))
+        loss_screening, loss_dev_screening1 = torch.zeros(( )), torch.zeros(( ))
         keys_screening = []
         if args.loss_screening_ratio > 0.0:
             sample_screening = next(data_iter3, None)
             sample_screening = utils.dic_to_device(sample_screening, device)
             keys_screening, affinity_screening = \
                     sample_screening['key'], sample_screening['affinity']
-            pred_screening, _, _ = model(sample_screening)
+            pred_screening, _, _ , loss_dev_screening1= model(sample_screening)
             loss_screening = affinity_screening-pred_screening.sum(-1)
             loss_screening = loss_screening.clamp(min=0.0).mean()
             loss_all += loss_screening * args.loss_screening_ratio
+            loss_all += loss_dev_screening1*args.loss_dev_vdw_radius_ratio 
         
-        loss_screening2 = torch.zeros((1, ))
+        loss_screening2, loss_dev_screening2 = torch.zeros(( )), torch.zeros(( ))
         keys_screening2 = []
         if args.loss_screening2_ratio > 0.0:
             sample_screening2 = next(data_iter4, None)
             sample_screening2 = utils.dic_to_device(sample_screening2, device)
             keys_screening2, affinity_screening2 = \
                     sample_screening2['key'], sample_screening2['affinity']
-            pred_screening2, _, _ = model(sample_screening2)
+            pred_screening2, _, _, loss_dev_screening2 = model(sample_screening2)
             loss_screening2 = affinity_screening2-pred_screening2.sum(-1)
             loss_screening2 = loss_screening2.clamp(min=0.0).mean()
             loss_all += loss_screening2 * args.loss_screening2_ratio
+            loss_all += loss_dev_screening2*args.loss_dev_vdw_radius_ratio 
         
         if train_mode:
             loss_all.backward()
             optimizer.step()
         
+        # save loss
         losses.append(loss.data.cpu().numpy())
         losses_der1.append(loss_der1.data.cpu().numpy())
         losses_der2.append(loss_der2.data.cpu().numpy())
         losses_docking.append(loss_docking.data.cpu().numpy())
         losses_screening.append(loss_screening.data.cpu().numpy())
         losses_screening.append(loss_screening2.data.cpu().numpy())
+        #losses_dev_vdw_radius.append(loss_dev.data.cpu().numpy())
+        #losses_dev_vdw_radius.append(loss_dev_docking.data.cpu().numpy())
+        #losses_dev_vdw_radius.append(loss_dev_screening1.data.cpu().numpy())
+        #losses_dev_vdw_radius.append(loss_dev_screening2.data.cpu().numpy())
+        losses_dev_vdw_radius.append(loss_purterb.data.cpu().numpy())
         affinity = affinity.data.cpu().numpy()
         pred = pred.data.cpu().numpy()
         for i in range(len(keys)):
@@ -120,15 +148,15 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
                 save_true_screening[keys_screening2[i]] = affinity_screening2[i]
         
         i_batch += 1
-
     losses = np.mean(np.array(losses))
     losses_der1 = np.mean(np.array(losses_der1))
     losses_der2 = np.mean(np.array(losses_der2))
     losses_docking = np.mean(np.array(losses_docking))
     losses_screening = np.mean(np.array(losses_screening))
+    losses_dev_vdw_radius = np.mean(np.array(losses_dev_vdw_radius))
     return losses, losses_der1, losses_der2, losses_docking, losses_screening, \
-            save_pred, save_true, save_pred_docking, save_true_docking, \
-            save_pred_screening, save_true_screening \
+            losses_dev_vdw_radius, save_pred, save_true, save_pred_docking, \
+            save_true_docking, save_pred_screening, save_true_screening \
 
 #Make directory for save files
 os.makedirs(args.save_dir, exist_ok=True)
@@ -170,7 +198,10 @@ if not args.restart_file:
 
 train_dataset, train_dataloader, test_dataset, test_dataloader = \
         utils.get_dataset_dataloader(train_keys, test_keys, args.data_dir, 
-                id_to_y, args.batch_size, args.num_workers, args.pos_noise_std)
+                id_to_y, args.batch_size, args.num_workers, 0.0)
+_, train_dataloader_perturb, _, test_dataloader_perturb = \
+        utils.get_dataset_dataloader(train_keys, test_keys, args.data_dir, 
+                id_to_y, args.batch_size, args.num_workers, 0.0)
 train_dataset2, train_dataloader2, test_dataset2, test_dataloader2 = \
         utils.get_dataset_dataloader(train_keys2, test_keys2, args.data_dir2, 
                 id_to_y2, args.batch_size, args.num_workers, 0.0)
@@ -210,28 +241,34 @@ for epoch in range(restart_epoch, args.num_epochs):
             dict(), dict(), dict(), dict(), dict(), dict()
 
     #iterator
-    train_data_iter, train_data_iter2, train_data_iter3 , train_data_iter4 = \
-            iter(train_dataloader), iter(train_dataloader2), \
+    train_data_iter, train_data_iter_perturb, train_data_iter2, \
+            train_data_iter3 , train_data_iter4 = \
+            iter(train_dataloader), iter(train_dataloader_perturb), \
+            iter(train_dataloader2), \
             iter(train_dataloader3), iter(train_dataloader4)
-    test_data_iter, test_data_iter2, test_data_iter3, test_data_iter4 = \
-            iter(test_dataloader), iter(test_dataloader2), \
+    test_data_iter, test_data_iter_perturb, test_data_iter2, \
+            test_data_iter3, test_data_iter4 = \
+            iter(test_dataloader), iter(test_dataloader_perturb), \
+            iter(test_dataloader2), \
             iter(test_dataloader3), iter(test_dataloader4)
 
     #Train
     train_losses, train_losses_der1, train_losses_der2, \
-            train_losses_docking, train_losses_screening, \
-            train_pred, train_true, train_pred_docking, train_true_docking, \
-            train_pred_screening, train_true_screening = \
-            run(model, train_data_iter, train_data_iter2, train_data_iter3, 
-                    train_data_iter4, True)
+    train_losses_docking, train_losses_screening, train_losses_dev_vdw_radius, \
+    train_pred, train_true, train_pred_docking, train_true_docking, \
+    train_pred_screening, train_true_screening = \
+    run(model, train_data_iter, train_data_iter_perturb, 
+            train_data_iter2, train_data_iter3, 
+            train_data_iter4, True)
     
     #Test
     test_losses, test_losses_der1, test_losses_der2, \
-            test_losses_docking, test_losses_screening, \
-            test_pred, test_true, test_pred_docking, test_true_docking, \
-            test_pred_screening, test_true_screening = \
-            run(model, test_data_iter, test_data_iter2, test_data_iter3, 
-                    test_data_iter4, False)
+    test_losses_docking, test_losses_screening, test_losses_dev_vdw_radius, \
+    test_pred, test_true, test_pred_docking, test_true_docking, \
+    test_pred_screening, test_true_screening = \
+    run(model, test_data_iter, test_data_iter_perturb, 
+            test_data_iter2, test_data_iter3, 
+            test_data_iter4, False)
 
     #Write tensorboard
     writer.add_scalars('train',
@@ -240,6 +277,7 @@ for epoch in range(restart_epoch, args.num_epochs):
                         'loss_der2': train_losses_der2,
                         'loss_docking': train_losses_docking,
                         'loss_screening': train_losses_screening,
+                        'loss_dev': train_losses_dev_vdw_radius,
                         },
                        epoch)
     writer.add_scalars('test',
@@ -248,6 +286,7 @@ for epoch in range(restart_epoch, args.num_epochs):
                         'loss_der2': test_losses_der2,
                         'loss_docking': test_losses_docking,
                         'loss_screening': test_losses_screening,
+                        'loss_dev': test_losses_dev_vdw_radius,
                         },
                        epoch)
 
@@ -277,18 +316,21 @@ for epoch in range(restart_epoch, args.num_epochs):
     _, _, train_r, _, _ = \
             stats.linregress([train_true[k] for k in train_true.keys()],                        
                             [train_pred[k].sum() for k in train_true.keys()])
+
     end = time.time()
     if epoch==0: 
         print ("epoch\ttrain_l\ttrain_l_der1\ttrain_l_der2\ttrain_l_docking\t"+
-                "train_l_screening\ttest_l\ttest_l_der1\ttest_l_der2\t"+
-                "test_l_docking\ttest_l_screening\t"+
+                "train_l_screening\ttrain_l_dev\ttest_l\ttest_l_der1\ttest_l_der2\t"+
+                "test_l_docking\ttest_l_screening\ttest_l_dev\t"+
                 "train_r2\ttest_r2\ttrain_r\ttest_r\ttime")
     print (f"{epoch}\t{train_losses:.3f}\t{train_losses_der1:.3f}\t"+
            f"{train_losses_der2:.3f}\t{train_losses_docking:.3f}\t"+
            f"{train_losses_screening:.3f}\t"+
+           f"{train_losses_dev_vdw_radius:.3f}\t"+
            f"{test_losses:.3f}\t{test_losses_der1:.3f}\t"+
            f"{test_losses_der2:.3f}\t{test_losses_docking:.3f}\t"+
            f"{test_losses_screening:.3f}\t"+
+           f"{test_losses_dev_vdw_radius:.3f}\t"+
            f"{train_r2:.3f}\t{test_r2:.3f}\t"+
            f"{train_r:.3f}\t{test_r:.3f}\t{end-st:.3f}")
     
