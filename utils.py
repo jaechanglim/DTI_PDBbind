@@ -76,6 +76,7 @@ def read_data(filename, key_dir):
         lines = f.readlines()
         lines = [l.split() for l in lines]
         id_to_y = {l[0]:float(l[1]) for l in lines}
+
     with open(f'{key_dir}/train_keys.pkl', 'rb') as f:
         train_keys = pickle.load(f)
     with open(f'{key_dir}/test_keys.pkl', 'rb') as f:

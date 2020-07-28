@@ -21,9 +21,17 @@ args = arguments.parser(sys.argv)
 if not args.restart_file:
     print (args)
 
-def run(model, data_iter, data_iter_perturb, 
-                data_iter2, data_iter3, data_iter4, train_mode):
-    model.train() if train_mode else model.eval()
+def run(model, data_iter_docking, data_iter_screening1, data_iter_screening2, 
+        data_loader, data_loader_docking, 
+        data_loader_screening1, data_loader_screening2, train_mode):
+    
+    if train_mode:
+        model.train()
+        model.training = True
+    else:
+        model.eval()
+        model.training = False
+
     losses, losses_der1, losses_der2, losses_docking, losses_screening, \
             losses_dev_vdw_radius = [], [], [], [], [], []
     save_pred, save_true, save_pred_docking, save_true_docking, \
@@ -31,23 +39,16 @@ def run(model, data_iter, data_iter_perturb,
             dict(), dict(), dict(), dict(), dict(), dict()
 
     i_batch = 0
+    data_iter = iter(data_loader)
     while True:
         model.zero_grad()
         sample = next(data_iter, None)
         if sample is None: break
+
         sample = utils.dic_to_device(sample, device)
         keys, affinity = sample['key'], sample['affinity']
 
         loss_all = 0.0 
-        
-        #loss purterb
-        loss_purterb = torch.zeros(())
-        if args.loss_purterb_ratio > 0.0:
-            sample_purterb = dict(sample)
-            dev=torch.normal(0, args.pos_noise_std, size=sample_purterb['pos1'].size())
-            dev=dev.mean(1, keepdim=True).to(sample_purterb['pos1'].device)
-            sample_purterb['pos1']=sample_purterb['pos1']+dev
-            pred_purterb, _, _, _ = model(sample_purterb)
         
         cal_der_loss = False
         if args.loss_der1_ratio > 0 or args.loss_der2_ratio > 0.0:
@@ -61,18 +62,17 @@ def run(model, data_iter, data_iter_perturb,
         loss_all += loss_der1.sum()*args.loss_der1_ratio
         loss_all += loss_der2.sum()*args.loss_der2_ratio
         loss_all += loss_dev*args.loss_dev_vdw_radius_ratio 
-        
-        if args.loss_purterb_ratio > 0.0:
-            loss_purterb = (pred.sum(-1)-pred_purterb.sum(-1))
-            loss_purterb = loss_purterb.clamp(0.0).mean()
-            loss_all += loss_purterb * args.loss_purterb_ratio
 
         #loss_docking
         loss_docking, loss_dev_docking = torch.zeros(()), torch.zeros(())
         keys_docking = []
         if args.loss_docking_ratio > 0.0:
-            sample_docking = next(data_iter2, None)
+            sample_docking = next(data_iter_docking, None)
+            if sample_docking is None:
+                data_iter_docking = iter(data_loader_docking)
+                sample_docking = next(data_iter_docking, None)
             sample_docking = utils.dic_to_device(sample_docking, device)
+            
             keys_docking, affinity_docking = \
                     sample_docking['key'], sample_docking['affinity']
             pred_docking, _, _, loss_dev_docking = model(sample_docking)
@@ -84,8 +84,12 @@ def run(model, data_iter, data_iter_perturb,
         loss_screening, loss_dev_screening1 = torch.zeros(( )), torch.zeros(( ))
         keys_screening = []
         if args.loss_screening_ratio > 0.0:
-            sample_screening = next(data_iter3, None)
+            sample_screening = next(data_iter_screening1, None)
+            if sample_screening is None: 
+                data_iter_screening1 = iter(data_loader_screening1)
+                sample_screening = next(data_iter_screening1, None)
             sample_screening = utils.dic_to_device(sample_screening, device)
+            
             keys_screening, affinity_screening = \
                     sample_screening['key'], sample_screening['affinity']
             pred_screening, _, _ , loss_dev_screening1= model(sample_screening)
@@ -97,8 +101,12 @@ def run(model, data_iter, data_iter_perturb,
         loss_screening2, loss_dev_screening2 = torch.zeros(( )), torch.zeros(( ))
         keys_screening2 = []
         if args.loss_screening2_ratio > 0.0:
-            sample_screening2 = next(data_iter4, None)
+            sample_screening2 = next(data_iter_screening2, None)
+            if sample_screening2 is None: 
+                data_iter_screening2 = iter(data_loader_screening2)
+                sample_screening2 = next(data_iter_screening2, None)
             sample_screening2 = utils.dic_to_device(sample_screening2, device)
+            
             keys_screening2, affinity_screening2 = \
                     sample_screening2['key'], sample_screening2['affinity']
             pred_screening2, _, _, loss_dev_screening2 = model(sample_screening2)
@@ -118,11 +126,10 @@ def run(model, data_iter, data_iter_perturb,
         losses_docking.append(loss_docking.data.cpu().numpy())
         losses_screening.append(loss_screening.data.cpu().numpy())
         losses_screening.append(loss_screening2.data.cpu().numpy())
-        #losses_dev_vdw_radius.append(loss_dev.data.cpu().numpy())
-        #losses_dev_vdw_radius.append(loss_dev_docking.data.cpu().numpy())
-        #losses_dev_vdw_radius.append(loss_dev_screening1.data.cpu().numpy())
-        #losses_dev_vdw_radius.append(loss_dev_screening2.data.cpu().numpy())
-        losses_dev_vdw_radius.append(loss_purterb.data.cpu().numpy())
+        losses_dev_vdw_radius.append(loss_dev.data.cpu().numpy())
+        losses_dev_vdw_radius.append(loss_dev_docking.data.cpu().numpy())
+        losses_dev_vdw_radius.append(loss_dev_screening1.data.cpu().numpy())
+        losses_dev_vdw_radius.append(loss_dev_screening2.data.cpu().numpy())
         affinity = affinity.data.cpu().numpy()
         pred = pred.data.cpu().numpy()
         for i in range(len(keys)):
@@ -199,9 +206,6 @@ if not args.restart_file:
 train_dataset, train_dataloader, test_dataset, test_dataloader = \
         utils.get_dataset_dataloader(train_keys, test_keys, args.data_dir, 
                 id_to_y, args.batch_size, args.num_workers, 0.0)
-_, train_dataloader_perturb, _, test_dataloader_perturb = \
-        utils.get_dataset_dataloader(train_keys, test_keys, args.data_dir, 
-                id_to_y, args.batch_size, args.num_workers, 0.0)
 train_dataset2, train_dataloader2, test_dataset2, test_dataloader2 = \
         utils.get_dataset_dataloader(train_keys2, test_keys2, args.data_dir2, 
                 id_to_y2, args.batch_size, args.num_workers, 0.0)
@@ -224,6 +228,17 @@ if args.restart_file:
     restart_epoch = int(args.restart_file.split("_")[-1].split(".")[0])
 else:
     restart_epoch = 0
+
+#iterator
+train_data_iter, train_data_iter_docking, \
+        train_data_iter_screening1, train_data_iter_screening2 = \
+        iter(train_dataloader),  iter(train_dataloader2), \
+        iter(train_dataloader3), iter(train_dataloader4)
+test_data_iter, test_data_iter_docking, \
+        test_data_iter_screening1, test_data_iter_screening2 = \
+        iter(test_dataloader), iter(test_dataloader2), \
+        iter(test_dataloader3), iter(test_dataloader4)
+
 for epoch in range(restart_epoch, args.num_epochs):
     st = time.time()
     tmp_st = st
@@ -240,35 +255,24 @@ for epoch in range(restart_epoch, args.num_epochs):
             test_pred_screening, test_true_screening = \
             dict(), dict(), dict(), dict(), dict(), dict()
 
-    #iterator
-    train_data_iter, train_data_iter_perturb, train_data_iter2, \
-            train_data_iter3 , train_data_iter4 = \
-            iter(train_dataloader), iter(train_dataloader_perturb), \
-            iter(train_dataloader2), \
-            iter(train_dataloader3), iter(train_dataloader4)
-    test_data_iter, test_data_iter_perturb, test_data_iter2, \
-            test_data_iter3, test_data_iter4 = \
-            iter(test_dataloader), iter(test_dataloader_perturb), \
-            iter(test_dataloader2), \
-            iter(test_dataloader3), iter(test_dataloader4)
 
     #Train
     train_losses, train_losses_der1, train_losses_der2, \
     train_losses_docking, train_losses_screening, train_losses_dev_vdw_radius, \
     train_pred, train_true, train_pred_docking, train_true_docking, \
     train_pred_screening, train_true_screening = \
-    run(model, train_data_iter, train_data_iter_perturb, 
-            train_data_iter2, train_data_iter3, 
-            train_data_iter4, True)
+    run(model, train_data_iter_docking, train_data_iter_screening1, 
+            train_data_iter_screening2, train_dataloader, train_dataloader2, 
+            train_dataloader3, train_dataloader4, True)
     
     #Test
     test_losses, test_losses_der1, test_losses_der2, \
     test_losses_docking, test_losses_screening, test_losses_dev_vdw_radius, \
     test_pred, test_true, test_pred_docking, test_true_docking, \
     test_pred_screening, test_true_screening = \
-    run(model, test_data_iter, test_data_iter_perturb, 
-            test_data_iter2, test_data_iter3, 
-            test_data_iter4, False)
+    run(model, test_data_iter_docking, test_data_iter_screening1, 
+            test_data_iter_screening2, test_dataloader, test_dataloader2,
+            test_dataloader3, test_dataloader4, False)
 
     #Write tensorboard
     writer.add_scalars('train',
