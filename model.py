@@ -179,7 +179,7 @@ class DTIHarmonic(nn.Module):
 
         #vdw radius parameter
         dev_vdw_radius = self.cal_vdw_interaction_B(h).squeeze(-1)
-        #dev_vdw_radius = dev_vdw_radius*self.args.dev_vdw_radius
+        dev_vdw_radius = dev_vdw_radius*self.args.dev_vdw_radius
         vdw_radius1, vdw_radius2 = sample['vdw_radius1'], sample['vdw_radius2']
         vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
                 .repeat(1,1,vdw_radius2.size(1))

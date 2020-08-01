@@ -85,7 +85,8 @@ def parser(command):
     parser.add_argument("--dev_vdw_radius",
                         help="deviation of vdw radius",
                         type=float,
-                        default=0.0)
+                        default=1.0)
+
     if "train.py" in command[0] or "test.py" in command[0]:
         parser.add_argument('--filename',
                             help='filename',
