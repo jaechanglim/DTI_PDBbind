@@ -1,11 +1,14 @@
-import torch
-import torch.nn.functional as F
-import torch.nn as nn
-from utils import *
 import time
 from multiprocessing import Pool
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from utils import *
 from layers import GAT_gate, EdgeConv, MultiHeadAttention
 import dataset
+import logging
+logging.getLogger("dataset").setLevel(logging.CRITICAL)
+
 
 class DTIHarmonic(torch.nn.Module):
     def __init__(self, args):
@@ -62,6 +65,20 @@ class DTIHarmonic(torch.nn.Module):
         self.rotor_coeff = nn.Parameter(torch.tensor([0.5]))
         self.intercept = nn.Parameter(torch.tensor([0.0]))
 
+        # Soojung edit start
+        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.var_agg = args.var_agg
+        self.var_abs = args.var_abs
+        self.cal_variance_h = nn.Sequential(
+                            nn.Linear(args.dim_gnn*2, 128),
+                            nn.ReLU(),
+                            nn.Linear(128, 1)
+                            )
+        a = torch.rand(1, dtype=torch.float32, device=device, requires_grad=True)
+        b = torch.rand(1, dtype=torch.float32, device=device, requires_grad=True) ** 2
+        self.cal_variance_r = lambda x: a * torch.exp(-b * x)
+        # Soojung edit end
+
     def cal_intercept(self, h, valid1, valid2, dm):
         valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
         valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
@@ -117,11 +134,12 @@ class DTIHarmonic(torch.nn.Module):
         retval = dm*A/-0.7
         retval = retval.clamp(min=0.0, max=1.0)
 
-        pair = retval.detach()
-        pair[pair>0] = 1
-        n_ligand_hbond = pair.sum(2)
-        n_ligand_hbond[n_ligand_hbond<0.001] = 1
-        retval = retval/(n_ligand_hbond.unsqueeze(-1))
+        # pair = retval.detach()
+        # pair = retval.clone().detach()
+        # pair[pair>0] = 1
+        # n_ligand_hbond = pair.sum(2)
+        # n_ligand_hbond[n_ligand_hbond<0.001] = 1
+        # retval = retval/(n_ligand_hbond.unsqueeze(-1))
 
         coeff = self.vina_hbond_coeff*self.vina_hbond_coeff
         retval = retval*-coeff
@@ -190,6 +208,12 @@ class DTIHarmonic(torch.nn.Module):
         return dm
     
     def forward(self, sample, DM_min=0.5, cal_der_loss=False):
+        # Soojung edit start
+        dropout = False
+        if self.training or (not self.training and self.args.mc_dropout):
+            dropout = True
+        # Soojung edit end
+
         h1, adj1, h2, adj2, A_int, dmv, _, pos1, pos2, sasa, dsasa, rotor,\
         charge1, charge2, vdw_radius1, vdw_radius2, vdw_epsilon, \
         vdw_sigma, delta_uff, valid1, valid2,\
@@ -200,9 +224,11 @@ class DTIHarmonic(torch.nn.Module):
         
         for i in range(len(self.gconv)):
             h1 = self.gconv[i](h1, adj1)
-            h2 = self.gconv[i](h2, adj2) 
-            h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)
-            h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
+            h2 = self.gconv[i](h2, adj2)
+            # Soojung edit start
+            h1 = F.dropout(h1, training=dropout, p=self.args.dropout_rate)
+            h2 = F.dropout(h2, training=dropout, p=self.args.dropout_rate)
+            # Soojung edit end
         pos1.requires_grad=True
         dm = self.cal_distance_matrix(pos1, pos2, DM_min)
         if self.args.edgeconv:
@@ -223,13 +249,37 @@ class DTIHarmonic(torch.nn.Module):
                 new_h2 = self.edgeconv[i](h2, h1, \
                         edge.permute(0,2,1,3), adj12.permute(0,2,1)) # [, n_protein_atom, n_out_feature(dim_gnn)]
                 h1, h2 = new_h1, new_h2
-                h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)
-                h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
+                # Soojung edit start
+                h1 = F.dropout(h1, training=dropout, p=self.args.dropout_rate)
+                h2 = F.dropout(h2, training=dropout, p=self.args.dropout_rate)
+                # Soojung edit end
 
-        h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
-        h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
-        h = torch.cat([h1_repeat, h2_repeat], -1) 
-        
+        h1_size, h2_size = h1.size(1), h2.size(1)
+        h1 = h1.unsqueeze(2).repeat(1, 1, h2_size, 1)
+        h2 = h2.unsqueeze(1).repeat(1, h1_size, 1, 1)
+        h = torch.cat([h1, h2], -1)
+        h_var = self.cal_variance_h(h).squeeze()
+        r_var = self.cal_variance_r(dm)
+
+        var = h_var * r_var
+        if self.var_agg == 'mean':
+            var = var.mean(dim=(-1, -2))
+        elif self.var_agg == 'sum':
+            var = var.sum(dim=(-1, -2))
+        elif self.var_agg == 'product':
+            var = torch.prod(var, dim=-1)
+            var = torch.prod(var, dim=-1)
+
+        if self.var_abs == 'abs':
+            var = torch.abs(var)
+            var = torch.clamp(var, min=1e-5)
+        elif self.var_abs == 'sqr':
+            var = var ** 2
+            var = torch.clamp(var, min=1e-5)
+        elif self.var_abs == 'clip':
+            var = torch.clamp(var, min=1e-5)
+        # Soojung edit end
+
         retval = []
         
         #coolomb interaction
@@ -245,7 +295,8 @@ class DTIHarmonic(torch.nn.Module):
         retval.append(self.vina_hydrophobic(dm, h, vdw_radius1, vdw_radius2, 
             A_int[:,-2]))
         retval.append(self.cal_torsion_energy(delta_uff))
-        #intercept        
+
+        #intercept
         #intercept = torch.stack([self.intercept 
         #                        for _ in range(retval[0].size(0))])
         #retval.append(intercept)
@@ -264,6 +315,7 @@ class DTIHarmonic(torch.nn.Module):
         else:
             minimum_loss2 = torch.zeros_like(retval).sum()
             minimum_loss3 = torch.zeros_like(retval).sum()
-        return retval, minimum_loss2, minimum_loss3
+
+        return retval, minimum_loss2, minimum_loss3, var
 
 

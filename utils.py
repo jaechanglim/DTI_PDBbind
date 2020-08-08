@@ -1,6 +1,19 @@
 import torch
 import torch.nn as nn
 
+
+# Soojung edit start
+def loss_var(pred_var, pred, affinity, log=True):
+    mse = (pred - affinity) ** 2
+    if log:
+        loss = mse * 0.5 * torch.exp(-pred_var)
+        loss += 0.5 * pred_var
+    else:
+        loss = mse * 0.5 / pred_var
+        loss += 0.5 * torch.log(pred_var)
+    return loss.mean(-1)
+
+
 def dic_to_device(dic, device):
     for dic_key, dic_value in dic.items():
         if isinstance(dic_value, torch.Tensor):
@@ -48,12 +61,14 @@ def set_cuda_visible_device(ngpus):
 
     return cmd
 
-def initialize_model(model, device, load_save_file=False):
+# Soojung edit start
+def initialize_model(model, device, load_save_file=False, file_path=''):
     if load_save_file:
         if device.type=='cpu':
-            model.load_state_dict(torch.load(load_save_file, map_location='cpu')) 
+            model.load_state_dict(torch.load(file_path, map_location='cpu'), strict=False)
         else:
-            model.load_state_dict(torch.load(load_save_file)) 
+            model.load_state_dict(torch.load(file_path), strict=False)
+    # Soojung edit end
     else:
         for param in model.parameters():
             if param.dim() == 1:
@@ -101,6 +116,19 @@ def get_dataset_dataloader(train_keys, test_keys, data_dir, id_to_y,
                                   collate_fn=tensor_collate_fn,
                                   shuffle=False)
     return train_dataset, train_dataloader, test_dataset, test_dataloader
+
+# Soojung edit
+def write_result_var(filename, pred, true, var):
+    with open(filename, 'w')  as w:
+        for k in pred.keys():
+            w.write(f'{k}\t{true[k]:.3f}\t')
+            w.write(f'{pred[k].sum():.3f}\t')
+            w.write(f'{var[k].sum():.3f}\t')
+            w.write(f'{0.0}\t')
+            for j in range(pred[k].shape[0]):
+                w.write(f'{pred[k][j]:.3f}\t')
+            w.write('\n')
+    return
 
 def write_result(filename, pred, true):
     with open(filename, 'w')  as w:

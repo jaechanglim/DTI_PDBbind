@@ -1,28 +1,42 @@
-import argparse
-import random
-import numpy as np
-import torch
-import torch.nn as nn
-
-from torch.utils.tensorboard import SummaryWriter
 import os
 import time
+import sys
+import arguments
+import argparse
+import random
+
+import numpy as np
 import pickle
 from sklearn.metrics import r2_score, roc_auc_score
 from scipy import stats
+import matplotlib.pyplot as plt
+import seaborn as sb
+
+import torch
+import torch.nn.functional as F
+import torch.nn as nn
+from torch.utils.tensorboard import SummaryWriter
+
 import utils
 import model 
 
-import arguments
-import sys
+
+def fix_seeds(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
 
 args = arguments.parser(sys.argv)
 print (args)
 
 def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
+    # fix_seeds(42)
     model.train() if train_mode else model.eval()
-    losses, losses_der1, losses_der2, losses_docking, losses_screening = \
-            [], [], [], [], []
+    # soojung add
+    losses, losses_der1, losses_der2, losses_docking, losses_screening, losses_var= \
+            [], [], [], [], [], []
     save_pred, save_true, save_pred_docking, save_true_docking, \
             save_pred_screening, save_true_screening = \
             dict(), dict(), dict(), dict(), dict(), dict()
@@ -40,12 +54,19 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
         if args.loss_der1_ratio > 0 or args.loss_der2_ratio > 0.0:
             cal_der_loss = True
 
-        pred, loss_der1, loss_der2 = model(sample, cal_der_loss=cal_der_loss)
-        loss = loss_fn(pred.sum(-1), affinity)
+        # Soojung edit start
+        pred, loss_der1, loss_der2, var = model(sample, cal_der_loss=cal_der_loss)
+        total_pred = pred.sum(-1)
+        loss = loss_fn(total_pred, affinity)
         loss_der2 = loss_der2.clamp(min=args.min_loss_der2)
-        loss_all += loss
         loss_all += loss_der1*args.loss_der1_ratio
         loss_all += loss_der2*args.loss_der2_ratio
+
+        if args.train_with_uncertainty:
+            loss_var = utils.loss_var(var, total_pred, affinity, log=args.var_log)
+            loss_all += loss_var * args.loss_var_ratio
+            losses_var.append(loss_var.data.cpu().numpy())
+        # Soojung edit end
         
         #loss4
         loss_docking = torch.zeros((1, ))
@@ -55,7 +76,7 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
             sample_docking = utils.dic_to_device(sample_docking, device)
             keys_docking, affinity_docking = \
                     sample_docking['key'], sample_docking['affinity']
-            pred_docking, _, _ = model(sample_docking)
+            pred_docking, _, _, _ = model(sample_docking)
             loss_docking = (affinity_docking-pred_docking.sum(-1))
             loss_docking = loss_docking.clamp(args.min_loss_docking).mean()
             loss_all += loss_docking * args.loss_docking_ratio
@@ -67,11 +88,11 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
             sample_screening = utils.dic_to_device(sample_screening, device)
             keys_screening, affinity_screening = \
                     sample_screening['key'], sample_screening['affinity']
-            pred_screening, _, _ = model(sample_screening)
+            pred_screening, _, _, _ = model(sample_screening)
             loss_screening = affinity_screening-pred_screening.sum(-1)
             loss_screening = loss_screening.clamp(min=0.0).mean()
             loss_all += loss_screening * args.loss_screening_ratio
-        
+
         loss_screening2 = torch.zeros((1, ))
         keys_screening2 = []
         if args.loss_screening2_ratio > 0.0:
@@ -79,13 +100,12 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
             sample_screening2 = utils.dic_to_device(sample_screening2, device)
             keys_screening2, affinity_screening2 = \
                     sample_screening2['key'], sample_screening2['affinity']
-            pred_screening2, _, _ = model(sample_screening2)
+            pred_screening2, _, _, _ = model(sample_screening2)
             loss_screening2 = affinity_screening2-pred_screening2.sum(-1)
             loss_screening2 = loss_screening2.clamp(min=0.0).mean()
             loss_all += loss_screening2 * args.loss_screening2_ratio
-        
         if train_mode:
-            loss_all.backward()
+            loss_all.backward(retain_graph=True)
             optimizer.step()
         losses.append(loss.data.cpu().numpy())
         losses_der1.append(loss_der1.data.cpu().numpy())
@@ -93,6 +113,7 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
         losses_docking.append(loss_docking.data.cpu().numpy())
         losses_screening.append(loss_screening.data.cpu().numpy())
         losses_screening.append(loss_screening2.data.cpu().numpy())
+
         affinity = affinity.data.cpu().numpy()
         pred = pred.data.cpu().numpy()
         for i in range(len(keys)):
@@ -116,25 +137,31 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
             for i in range(len(keys_screening2)):
                 save_pred_screening[keys_screening2[i]] = pred_screening2[i]
                 save_true_screening[keys_screening2[i]] = affinity_screening2[i]
-        
         i_batch += 1
 
     losses = np.mean(np.array(losses))
     losses_der1 = np.mean(np.array(losses_der1))
     losses_der2 = np.mean(np.array(losses_der2))
+
+    losses_var = np.mean(np.array(losses_var))
+
     losses_docking = np.mean(np.array(losses_docking))
     losses_screening = np.mean(np.array(losses_screening))
-    return losses, losses_der1, losses_der2, losses_docking, losses_screening, \
+    total_losses = losses + losses_der1 + losses_der2 + losses_var + losses_docking + losses_screening
+    return losses, losses_der1, losses_der2, losses_docking, losses_screening, losses_var, \
             save_pred, save_true, save_pred_docking, save_true_docking, \
-            save_pred_screening, save_true_screening \
+            save_pred_screening, save_true_screening, \
+            total_losses
 
 #Make directory for save files
 os.makedirs(args.save_dir, exist_ok=True)
 os.makedirs(args.tensorboard_dir, exist_ok=True)
 
+
 #Set GPU
 cmd = utils.set_cuda_visible_device(args.ngpu)
 os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
+
 
 #Read labels
 train_keys, test_keys, id_to_y = utils.read_data(args.filename,
@@ -145,7 +172,7 @@ train_keys3, test_keys3, id_to_y3 = utils.read_data(args.filename3,
                                                     args.key_dir3)
 train_keys4, test_keys4, id_to_y4 = utils.read_data(args.filename4,
                                                     args.key_dir4)
-
+print("finished reading label")
 #Model
 if args.potential=='morse': model = model.DTIMorse(args)
 elif args.potential=='morse_all_pair': model = model.DTIMorseAllPair(args)
@@ -156,7 +183,9 @@ else:
     exit(-1)
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-model = utils.initialize_model(model, device, args.restart_file)
+# Soojung edit start
+model = utils.initialize_model(model, device, load_save_file=args.load_save_file, file_path=args.restart_file)
+# Soojung edit end
 
 print ('number of parameters : ', sum(p.numel() for p in model.parameters() 
                     if p.requires_grad))
@@ -176,6 +205,8 @@ train_dataset4, train_dataloader4, test_dataset4, test_dataloader4 = \
         utils.get_dataset_dataloader(train_keys4, test_keys4, args.data_dir4, 
                 id_to_y4, args.batch_size, args.num_workers, 0.0)
 
+# ===================================================
+
 #Optimizer and loss
 optimizer = torch.optim.Adam(model.parameters(),
                              lr=args.lr,
@@ -184,7 +215,15 @@ loss_fn = nn.MSELoss()
 
 #train
 writer = SummaryWriter(args.tensorboard_dir)
-for epoch in range(args.num_epochs):
+min_test_loss = 10000
+
+
+if args.restart_file:
+    restart_epoch = int(args.restart_file.split("_")[-1].split(".")[0])
+else:
+    restart_epoch = 0
+
+for epoch in range(restart_epoch, args.num_epochs):
     st = time.time()
     tmp_st = st
 
@@ -207,36 +246,38 @@ for epoch in range(args.num_epochs):
     test_data_iter, test_data_iter2, test_data_iter3, test_data_iter4 = \
             iter(test_dataloader), iter(test_dataloader2), \
             iter(test_dataloader3), iter(test_dataloader4)
-
     #Train
     train_losses, train_losses_der1, train_losses_der2, \
-            train_losses_docking, train_losses_screening, \
+            train_losses_docking, train_losses_screening, train_losses_var, \
             train_pred, train_true, train_pred_docking, train_true_docking, \
-            train_pred_screening, train_true_screening = \
+            train_pred_screening, train_true_screening, train_total_losses = \
             run(model, train_data_iter, train_data_iter2, train_data_iter3, 
                     train_data_iter4, True)
-    
     #Test
     test_losses, test_losses_der1, test_losses_der2, \
-            test_losses_docking, test_losses_screening, \
+            test_losses_docking, test_losses_screening, test_losses_var, \
             test_pred, test_true, test_pred_docking, test_true_docking, \
-            test_pred_screening, test_true_screening = \
+            test_pred_screening, test_true_screening, test_total_losses = \
             run(model, test_data_iter, test_data_iter2, test_data_iter3, 
                     test_data_iter4, False)
 
     #Write tensorboard
     writer.add_scalars('train',
-                       {'loss': train_losses,
+                       {'total_loss': train_total_losses,
+                        'loss': train_losses,
                         'loss_der1': train_losses_der1,
                         'loss_der2': train_losses_der2,
+                        'loss_var': train_losses_var,
                         'loss_docking': train_losses_docking,
                         'loss_screening': train_losses_screening,
                         },
                        epoch)
     writer.add_scalars('test',
-                       {'loss': test_losses,
+                       {'total_loss': test_total_losses,
+                        'loss': test_losses,
                         'loss_der1': test_losses_der1,
                         'loss_der2': test_losses_der2,
+                        'loss_var': test_losses_var,
                         'loss_docking': test_losses_docking,
                         'loss_screening': test_losses_screening,
                         },
@@ -271,20 +312,25 @@ for epoch in range(args.num_epochs):
     end = time.time()
     if epoch==0: 
         print ("epoch\ttrain_l\ttrain_l_der1\ttrain_l_der2\ttrain_l_docking\t"+
-                "train_l_screening\ttest_l\ttest_l_der1\ttest_l_der2\t"+
-                "test_l_docking\ttest_l_screening\t"+
+                "train_l_screening\ttrain_l_var\ttest_l\ttest_l_der1\ttest_l_der2\t"+
+                "test_l_docking\ttest_l_screening\ttest_l_var\t"+
                 "train_r2\ttest_r2\ttrain_r\ttest_r\ttime")
     print (f"{epoch}\t{train_losses:.3f}\t{train_losses_der1:.3f}\t"+
            f"{train_losses_der2:.3f}\t{train_losses_docking:.3f}\t"+
            f"{train_losses_screening:.3f}\t"+
+           f"{train_losses_var:.3f}\t"+
            f"{test_losses:.3f}\t{test_losses_der1:.3f}\t"+
            f"{test_losses_der2:.3f}\t{test_losses_docking:.3f}\t"+
            f"{test_losses_screening:.3f}\t"+
+           f"{test_losses_var:.3f}\t"+
            f"{train_r2:.3f}\t{test_r2:.3f}\t"+
            f"{train_r:.3f}\t{test_r:.3f}\t{end-st:.3f}")
-    
+
+
     name = os.path.join(args.save_dir, 'save_'+str(epoch)+'.pt')
-    torch.save(model.state_dict(), name)
+    # save_every = 1 if not args.save_every else args.save_every
+    if epoch % args.save_every == 0:
+        torch.save(model.state_dict(), name)
     
     lr = args.lr * ((args.lr_decay)**epoch)
     for param_group in optimizer.param_groups:
