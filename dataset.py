@@ -27,7 +27,6 @@ from rdkit.Chem.TorsionFingerprints import CalculateTorsionLists, CalculateTorsi
 import math
 from rdkit.Chem.rdmolops import GetDistanceMatrix
 from rdkit.Chem.Lipinski import RotatableBondSmarts
-
 random.seed(0)
 
 interaction_types = ['saltbridge', 'hbonds', 'pication',
@@ -188,7 +187,11 @@ def rotate(molecule, angle, axis, fix_com=False):
     Since edge of each molecules are changing by different orientation,
     this funciton used to make molecules rotation-invariant and enables further
     self-supervised learning.
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 91e5d2c6a358c3495e69bbfb88438549302e8d9f
     :param molecule: rdkit molecule object
     :param anble: angle to rotate,
                   random value between 0, 360

@@ -11,8 +11,7 @@ def str2bool(v):
 
 
 def parser(command):
-    arg_command = command[2:]
-    run_name = command[1]
+    arg_command = command[1:]
     parser = argparse.ArgumentParser(description='parser for train and test', conflict_handler='resolve')
 
     parser.add_argument('--dim_gnn',
@@ -38,7 +37,9 @@ def parser(command):
                         choices=['morse',
                                  'harmonic',
                                  'morse_all_pair',
-                                 'harmonic_interaction_specified'])
+                                 'gnn',
+                                 'cnn3d',
+                                 'cnn3d_kdeep'])
     parser.add_argument("--pos_noise_std",
                         help="std of noise added to the position",
                         type=float,
@@ -105,6 +106,17 @@ def parser(command):
                             help='number of workers', 
                             type=int, 
                             default=7) 
+        parser.add_argument('--grid_rotation',
+                            help='whether rotate the grid or not',
+                            action='store_true')
+        parser.add_argument('--lattice_dim',
+                            help='lattice size for 3D CNN',
+                            type=int,
+                            default=20)
+        parser.add_argument('--scaling',
+                            help='scaling constant for 3D CNN',
+                            type=float,
+                            default=0.5)
 
     # for train
     if "train.py" in command[0]:
@@ -157,27 +169,27 @@ def parser(command):
         parser.add_argument('--train_result_filename',
                             help='train result filename',
                             type=str,
-                            default='./result/'+run_name+'train_result.txt')
+                            default='./result/train_result.txt')
         parser.add_argument('--test_result_filename',
                             help='test result filename',
                             type=str,
-                            default='./result/'+run_name+'test_result.txt')
+                            default='./result/test_result.txt')
         parser.add_argument('--train_result_docking_filename',
                             help='train result docking_filename',
                             type=str,
-                            default='./result/'+run_name+'train_result_docking.txt')
+                            default='./result/train_result_docking.txt')
         parser.add_argument('--test_result_docking_filename',
                             help='test result docking filename',
                             type=str,
-                            default='./result/'+run_name+'test_result_docking.txt')
+                            default='./result/test_result_docking.txt')
         parser.add_argument('--train_result_screening_filename',
                             help='train result screening filename',
                             type=str,
-                            default='./result/'+run_name+'train_result_screening.txt')
+                            default='./result/train_result_screening.txt')
         parser.add_argument('--test_result_screening_filename',
                             help='test result screening filename',
                             type=str,
-                            default='./result/'+run_name+'test_result_screening.txt')
+                            default='./result/test_result_screening.txt')
         parser.add_argument("--loss_der1_ratio",
                             help="loss der1 ratio",
                             type=float,
@@ -208,16 +220,15 @@ def parser(command):
                             default=5.0)
         parser.add_argument("--save_dir",
                             help='save directory of model save files',
-                            type=str,
-                            default='save/'+run_name)
+                            type=str)
         parser.add_argument("--save_every",
-                            help='save every n epoch',
+                            help='saver every n epoch',
                             type=int,
-                            default=5)
+                            default=1)
         parser.add_argument("--tensorboard_dir",
                             help='save directory of tensorboard log files',
                             type=str,
-                            default='run/'+run_name)
+                            default='run/run01'+)
         parser.add_argument('--filename2',
                             help='filename2',
                             default='./data/keys_pdbbind_v2019_docking_nowater/pdb_to_affinity.txt')
@@ -257,7 +268,7 @@ def parser(command):
         parser.add_argument('--test_result_filename',
                             help='test result filename',
                             type=str,
-                            default='./result/'+'test'+run_name+'test_result.txt')
+                            default='./result/test_result.txt')
         parser.add_argument('--var_log',
                             help='log var or var',
                             type=str2bool,
@@ -277,6 +288,14 @@ def parser(command):
                             help='list of output file',
                             nargs='+',
                             type=str,)
-
-    args = parser.parse_args(arg_command)
+        parser.add_argument('--ligand_opt_output_files',
+                            help='list of output file',
+                            nargs='+',
+                            type=str,)
+        parser.add_argument('--local_opt', action='store_true', 
+                            help='local_opt')
+        parser.add_argument('--ligand_prop', action='store_true',
+                            help='ligand_prop')
+    
+    args = parser.parse_known_args(arg_command)
     return args

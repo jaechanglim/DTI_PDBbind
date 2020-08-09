@@ -20,10 +20,10 @@ from torch.utils.tensorboard import SummaryWriter
 import utils
 import model
 
+
 args = arguments.parser(sys.argv)
 if not args.restart_file:
     print (args)
-
 
 def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
     model.train() if train_mode else model.eval()
@@ -56,6 +56,7 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
         loss_all += loss
         loss_all += loss_der1.sum() * args.loss_der1_ratio
         loss_all += loss_der2.sum() * args.loss_der2_ratio
+
 
         if args.train_with_uncertainty:
             loss_var = utils.loss_var(var, total_pred, affinity, log=args.var_log)
@@ -167,6 +168,7 @@ train_keys3, test_keys3, id_to_y3 = utils.read_data(args.filename3,
 train_keys4, test_keys4, id_to_y4 = utils.read_data(args.filename4,
                                                     args.key_dir4)
 print("finished reading label")
+
 # Model
 if args.potential == 'morse':
     model = model.DTIMorse(args)
@@ -190,8 +192,7 @@ model = utils.initialize_model(model, device, load_save_file=args.load_save_file
 # Soojung edit end
 
 if not args.restart_file:
-    print ('number of parameters : ', sum(p.numel() for p in model.parameters()
-                                          if p.requires_grad))
+    print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p.requires_grad))
 
 # Dataloader
 
@@ -222,7 +223,7 @@ if args.restart_file:
     restart_epoch = int(args.restart_file.split("_")[-1].split(".")[0])
 else:
     restart_epoch = 0
-
+    
 for epoch in range(restart_epoch, args.num_epochs):
     st = time.time()
     tmp_st = st
@@ -310,6 +311,7 @@ for epoch in range(restart_epoch, args.num_epochs):
         stats.linregress([train_true[k] for k in train_true.keys()],
                          [train_pred[k].sum() for k in train_true.keys()])
     end = time.time()
+
     if epoch == 0:
         print ("epoch\ttrain_l\ttrain_l_der1\ttrain_l_der2\ttrain_l_docking\t" +
                "train_l_screening\ttrain_l_var\ttest_l\ttest_l_der1\ttest_l_der2\t" +
