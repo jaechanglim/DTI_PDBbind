@@ -41,6 +41,18 @@ python -u ../train.py --batch_size=8 \
                    > output_1.0 2> /dev/null 
 ```
 
+* If you train with uncertainty estimator, add this to command
+```
+--train_with_uncertainty
+--mc_dropout=True
+--n_mc_sampling=3 
+--dropout_rate=0.2
+--loss_var_ratio=1e-4,
+--var_abs='abs'
+--var_agg='product'
+--var_log=False
+```
+
 * Benchmark command
 ```
 python -u ../benchmark.py > output_benchmark 2> /dev/null
