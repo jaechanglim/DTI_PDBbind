@@ -188,7 +188,7 @@ else:
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 # Soojung edit start
-model = utils.initialize_model(model, device, load_save_file=args.load_save_file, file_path=args.restart_file)
+model = utils.initialize_model(model, device, load_save_file=args.restart_file)
 # Soojung edit end
 
 if not args.restart_file:

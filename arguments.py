@@ -12,7 +12,8 @@ def str2bool(v):
 
 def parser(command):
     arg_command = command[1:]
-    parser = argparse.ArgumentParser(description='parser for train and test', conflict_handler='resolve')
+    parser = argparse.ArgumentParser(description='parser for train and test')
+    # parser = argparse.ArgumentParser(description='parser for train and test', conflict_handler='resolve')
 
     parser.add_argument('--dim_gnn',
                         help='dim_gnn',
@@ -28,8 +29,7 @@ def parser(command):
                         default=1) 
     parser.add_argument('--restart_file',
                         help='restart file',
-                        type=str,
-                        default='')
+                        type=str)
     parser.add_argument("--potential",
                         help="potential",
                         type=str,
@@ -124,14 +124,6 @@ def parser(command):
                             help='train with aleatoric uncertainty or not',
                             type=str2bool,
                             default=False)
-        parser.add_argument('--load_save_file',
-                            help="load file or not",
-                            type=str2bool,
-                            default=False)
-        parser.add_argument('--save_all',
-                            help="save all model, or only save model with min loss",
-                            type=str2bool,
-                            default=True)
         parser.add_argument('--var_agg',
                             help='var agg',
                             type=str,
