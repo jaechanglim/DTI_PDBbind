@@ -117,18 +117,6 @@ def get_dataset_dataloader(train_keys, test_keys, data_dir, id_to_y,
                                   shuffle=False)
     return train_dataset, train_dataloader, test_dataset, test_dataloader
 
-# Soojung edit
-def write_result_var(filename, pred, true, var):
-    with open(filename, 'w')  as w:
-        for k in pred.keys():
-            w.write(f'{k}\t{true[k]:.3f}\t')
-            w.write(f'{pred[k].sum():.3f}\t')
-            w.write(f'{var[k].sum():.3f}\t')
-            w.write(f'{0.0}\t')
-            for j in range(pred[k].shape[0]):
-                w.write(f'{pred[k][j]:.3f}\t')
-            w.write('\n')
-    return
 
 def write_result(filename, pred, true):
     with open(filename, 'w')  as w:
