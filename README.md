@@ -43,7 +43,7 @@ python -u ../train.py --batch_size=8 \
 
 * If you train with uncertainty estimator, add this to command
 ```
---dropout_rate=0.
+--dropout_rate=0.2
 --train_with_uncertainty
 --loss_var_ratio=1e-4,
 --var_abs='abs'
