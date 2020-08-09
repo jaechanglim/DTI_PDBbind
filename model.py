@@ -69,7 +69,6 @@ class DTIHarmonic(nn.Module):
         self.rotor_coeff = nn.Parameter(torch.tensor([1.0]))
         self.intercept = nn.Parameter(torch.tensor([0.0]))
 
-        # Soojung edit start
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         self.var_agg = args.var_agg
         self.var_abs = args.var_abs
@@ -81,7 +80,6 @@ class DTIHarmonic(nn.Module):
         a = torch.rand(1, dtype=torch.float32, device=device, requires_grad=True)
         b = torch.rand(1, dtype=torch.float32, device=device, requires_grad=True) ** 2
         self.cal_variance_r = lambda x: a * torch.exp(-b * x)
-        # Soojung edit end
 
     def cal_intercept(self, h, valid1, valid2, dm):
         valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
@@ -204,7 +202,6 @@ class DTIHarmonic(nn.Module):
         return dm
 
     def get_embedding_vector(self, sample):
-        # Soojung edit 
         dropout = False
         if self.training or (not self.training and self.args.mc_dropout):
             dropout = True
@@ -244,7 +241,6 @@ class DTIHarmonic(nn.Module):
         return h1, h2
       
     def forward(self, sample, DM_min=0.5, cal_der_loss=False):
-        # Soojung edit start
         h1, h2 = self.get_embedding_vector(sample)
         h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
         h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
@@ -271,7 +267,6 @@ class DTIHarmonic(nn.Module):
             var = torch.clamp(var, min=1e-5)
         elif self.var_abs == 'clip':
             var = torch.clamp(var, min=1e-5)
-        # Soojung edit end
         
         retval = []
         

@@ -122,8 +122,7 @@ def parser(command):
     if "train.py" in command[0]:
         parser.add_argument('--train_with_uncertainty',
                             help='train with aleatoric uncertainty or not',
-                            type=str2bool,
-                            default=False)
+                            action='store_true')
         parser.add_argument('--var_agg',
                             help='var agg',
                             type=str,

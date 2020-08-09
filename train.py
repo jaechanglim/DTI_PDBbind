@@ -25,7 +25,6 @@ if not args.restart_file:
 
 def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
     model.train() if train_mode else model.eval()
-    # soojung add
     losses, losses_der1, losses_der2, losses_docking, losses_screening, losses_var = \
         [], [], [], [], [], []
     save_pred, save_true, save_pred_docking, save_true_docking, \
@@ -45,7 +44,6 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
         if args.loss_der1_ratio > 0 or args.loss_der2_ratio > 0.0:
             cal_der_loss = True
 
-        # Soojung edit start
         pred, loss_der1, loss_der2, var = model(sample, cal_der_loss=cal_der_loss)
         total_pred = pred.sum(-1)
         loss = loss_fn(total_pred, affinity)
@@ -55,12 +53,11 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
         loss_all += loss_der1.sum() * args.loss_der1_ratio
         loss_all += loss_der2.sum() * args.loss_der2_ratio
 
-
         if args.train_with_uncertainty:
             loss_var = utils.loss_var(var, total_pred, affinity, log=args.var_log)
             loss_all += loss_var * args.loss_var_ratio
             losses_var.append(loss_var.data.cpu().numpy())
-        # Soojung edit end
+
 
         # loss4
         loss_docking = torch.zeros((1,))
@@ -185,15 +182,13 @@ else:
     exit(-1)
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-# Soojung edit start
 model = utils.initialize_model(model, device, load_save_file=args.restart_file)
-# Soojung edit end
+
 
 if not args.restart_file:
     print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p.requires_grad))
 
 # Dataloader
-
 train_dataset, train_dataloader, test_dataset, test_dataloader = \
     utils.get_dataset_dataloader(train_keys, test_keys, args.data_dir,
                                  id_to_y, args.batch_size, args.num_workers, args.pos_noise_std)

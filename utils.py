@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 
 
-# Soojung edit start
 def loss_var(pred_var, pred, affinity, log=True):
     mse = (pred - affinity) ** 2
     if log:
