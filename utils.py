@@ -61,14 +61,13 @@ def set_cuda_visible_device(ngpus):
 
     return cmd
 
-# Soojung edit start
-def initialize_model(model, device, load_save_file=False, file_path=''):
+
+def initialize_model(model, device, load_save_file=False):
     if load_save_file:
         if device.type=='cpu':
-            model.load_state_dict(torch.load(file_path, map_location='cpu'), strict=False)
+            model.load_state_dict(torch.load(load_save_file, map_location='cpu'), strict=False)
         else:
-            model.load_state_dict(torch.load(file_path), strict=False)
-    # Soojung edit end
+            model.load_state_dict(torch.load(load_save_file), strict=False)
     else:
         for param in model.parameters():
             if param.dim() == 1:
