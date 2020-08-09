@@ -228,7 +228,7 @@ def parser(command):
         parser.add_argument("--tensorboard_dir",
                             help='save directory of tensorboard log files',
                             type=str,
-                            default='run/run01'+)
+                            default='run/run01')
         parser.add_argument('--filename2',
                             help='filename2',
                             default='./data/keys_pdbbind_v2019_docking_nowater/pdb_to_affinity.txt')
