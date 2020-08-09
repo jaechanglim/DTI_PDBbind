@@ -133,9 +133,7 @@ def run(model, data_iter, data_iter2, data_iter3, data_iter4, train_mode):
     losses = np.mean(np.array(losses))
     losses_der1 = np.mean(np.array(losses_der1))
     losses_der2 = np.mean(np.array(losses_der2))
-
     losses_var = np.mean(np.array(losses_var))
-
     losses_docking = np.mean(np.array(losses_docking))
     losses_screening = np.mean(np.array(losses_screening))
     total_losses = losses + losses_der1 + losses_der2 + losses_var + losses_docking + losses_screening
