@@ -202,17 +202,21 @@ class DTIHarmonic(nn.Module):
         replace_vec = torch.ones_like(dm)*1e10
         dm = torch.where(dm<dm_min, replace_vec, dm)
         return dm
-   
 
     def get_embedding_vector(self, sample):
+        # Soojung edit 
+        dropout = False
+        if self.training or (not self.training and self.args.mc_dropout):
+            dropout = True
+
         h1 = self.node_embedding(sample['h1'])  
         h2 = self.node_embedding(sample['h2']) 
         
         for i in range(len(self.gconv)):
             h1 = self.gconv[i](h1, sample['adj1'])
             h2 = self.gconv[i](h2, sample['adj2']) 
-            h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)
-            h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
+            h1 = F.dropout(h1, training=dropout, p=self.args.dropout_rate)
+            h2 = F.dropout(h2, training=dropout, p=self.args.dropout_rate)
         pos1, pos2 = sample['pos1'], sample['pos2']
 
         pos1.requires_grad=True
@@ -235,16 +239,12 @@ class DTIHarmonic(nn.Module):
                 new_h2 = self.edgeconv[i](h2, h1, \
                         edge.permute(0,2,1,3), adj12.permute(0,2,1))
                 h1, h2 = new_h1, new_h2
-                h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)
-                h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
+                h1 = F.dropout(h1, training=dropout, p=self.args.dropout_rate)
+                h2 = F.dropout(h2, training=dropout, p=self.args.dropout_rate)
         return h1, h2
       
     def forward(self, sample, DM_min=0.5, cal_der_loss=False):
         # Soojung edit start
-        dropout = False
-        if self.training or (not self.training and self.args.mc_dropout):
-            dropout = True
-
         h1, h2 = self.get_embedding_vector(sample)
         h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
         h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
