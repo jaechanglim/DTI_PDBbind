@@ -1,14 +1,23 @@
 import argparse
 
+
+def str2bool(v):
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeEror('Boolean value expected')
+
+
 def parser(command):
     arg_command = command[1:]
-    home = '/home/share/DTI_PDBbind2/data_pdbbind2'
     parser = argparse.ArgumentParser(description='parser for train and test')
 
     parser.add_argument('--dim_gnn',
                         help='dim_gnn',
                         type=int,
-                        default=32) 
+                        default=128)
     parser.add_argument("--n_gnn",
                         help="depth of gnn layer",
                         type=int,
@@ -19,10 +28,11 @@ def parser(command):
                         default=1) 
     parser.add_argument('--restart_file',
                         help='restart file',
-                        type=str) 
+                        type=str,
+                        default='')
     parser.add_argument("--potential",
                         help="potential",
-                        type=str, 
+                        type=str,
                         default='harmonic', 
                         choices=['morse',
                                  'harmonic',
@@ -46,10 +56,6 @@ def parser(command):
                         help='edge conv')
     parser.add_argument('--no_rotor_penalty', action='store_true', 
                         help='rotor penaly')
-    parser.add_argument("--dropout_rate",
-                        help="dropout rate",
-                        type=float,
-                        default=0.0)
     parser.add_argument("--vdw_N",
                         help="vdw N",
                         type=float,
@@ -65,23 +71,37 @@ def parser(command):
     parser.add_argument("--dev_vdw_radius",
                         help="deviation of vdw radius",
                         type=float,
-                        default=0.0)
-    if "train.py" in command[0] or "test.py" in command[0]:
+                        default=0.2)
+
+    parser.add_argument('--n_mc_sampling',
+                        help='number of mc sampling',
+                        type=int,
+                        default=3)
+    parser.add_argument('--mc_dropout',
+                        help='to turn on or off MC dropout',
+                        type=str2bool,
+                        default=True)
+    parser.add_argument("--dropout_rate",
+                        help="dropout rate",
+                        type=float,
+                        default=0.2)
+
+    if "train.py" in command[0] or "test.py" in command[0] or "test_with_uncertainty.py" in command[0]:
         parser.add_argument('--filename',
                             help='filename',
-                            default=home+'/pdb_to_affinity.txt')
+                            default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_v2019/pdb_to_affinity.txt')
         parser.add_argument('--key_dir',
                             help='key directory',
                             type=str,
-                            default='/home/udg/msh/urp/DTI_PDBbind/keys')
+                            default='./data/keys_pdbbind_v2019/')
         parser.add_argument('--data_dir',
                             help='data file path',
                             type=str,
-                            default=home+'/data/')
+                            default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_v2019/data/')
         parser.add_argument('--batch_size', 
                             help='batch size', 
                             type=int, 
-                            default=1)
+                            default=8)
         parser.add_argument('--num_workers', 
                             help='number of workers', 
                             type=int, 
@@ -100,6 +120,26 @@ def parser(command):
 
     # for train
     if "train.py" in command[0]:
+        parser.add_argument('--train_with_uncertainty',
+                            help='train with aleatoric uncertainty or not',
+                            action='store_true')
+        parser.add_argument('--var_agg',
+                            help='var agg',
+                            type=str,
+                            default='product')
+        parser.add_argument('--var_abs',
+                            help='var abs',
+                            type=str,
+                            default='abs')
+        parser.add_argument('--var_log',
+                            help='log var or var',
+                            type=str2bool,
+                            default=False)
+        parser.add_argument("--loss_var_ratio",
+                            help="loss var ratio",
+                            type=float,
+                            default=1e-4)
+
         parser.add_argument('--lr',
                             help="learning rate",
                             type=float, 
@@ -116,46 +156,47 @@ def parser(command):
                             help='number of epochs', 
                             type=int, 
                             default=100)
+
         parser.add_argument('--train_result_filename',
                             help='train result filename',
                             type=str,
-                            default='train_result.txt')
+                            default='./result/train_result.txt')
         parser.add_argument('--test_result_filename',
                             help='test result filename',
                             type=str,
-                            default='test_result.txt')
+                            default='./result/test_result.txt')
         parser.add_argument('--train_result_docking_filename',
                             help='train result docking_filename',
                             type=str,
-                            default='train_result_docking.txt')
+                            default='./result/train_result_docking.txt')
         parser.add_argument('--test_result_docking_filename',
                             help='test result docking filename',
                             type=str,
-                            default='test_result_docking.txt')
+                            default='./result/test_result_docking.txt')
         parser.add_argument('--train_result_screening_filename',
                             help='train result screening filename',
                             type=str,
-                            default='train_result_screening.txt')
+                            default='./result/train_result_screening.txt')
         parser.add_argument('--test_result_screening_filename',
                             help='test result screening filename',
                             type=str,
-                            default='test_result_screening.txt')
+                            default='./result/test_result_screening.txt')
         parser.add_argument("--loss_der1_ratio",
                             help="loss der1 ratio",
                             type=float,
-                            default=1.0)
+                            default=10.0)
         parser.add_argument("--loss_der2_ratio",
                             help="loss der2 ratio",
                             type=float,
-                            default=1.0)
+                            default=10.0)
         parser.add_argument("--min_loss_der2",
                             help="min loss der2",
                             type=float,
-                            default=-100000000.0)
+                            default=-20.0)
         parser.add_argument("--loss_docking_ratio",
                             help="loss docking ratio",
                             type=float,
-                            default=1.0)
+                            default=10.0)
         parser.add_argument("--min_loss_docking",
                             help="min loss docking",
                             type=float,
@@ -163,61 +204,67 @@ def parser(command):
         parser.add_argument("--loss_screening_ratio",
                             help="loss screening ratio",
                             type=float,
-                            default=1.0)
+                            default=5.0)
         parser.add_argument("--loss_screening2_ratio",
                             help="loss screening ratio",
                             type=float,
-                            default=1.0)
+                            default=5.0)
         parser.add_argument("--save_dir",
                             help='save directory of model save files',
-                            type=str)
+                            type=str,
+                            default='results/run01')
         parser.add_argument("--save_every",
                             help='saver every n epoch',
                             type=int,
                             default=1)
         parser.add_argument("--tensorboard_dir",
                             help='save directory of tensorboard log files',
-                            type=str)
+                            type=str,
+                            default='run/run01')
         parser.add_argument('--filename2',
                             help='filename2',
-                            default=home+'/pdb_to_affinity.txt')
+                            default='./data/keys_pdbbind_v2019_docking_nowater/pdb_to_affinity.txt')
         parser.add_argument('--key_dir2',
                             help='key directory',
                             type=str,
-                            default='/home/udg/msh/urp/DTI_PDBbind/keys')
+                            default='./data/keys_pdbbind_v2019_docking_nowater/')
         parser.add_argument('--data_dir2',
                             help='data file path',
                             type=str,
-                            default=home+'/data/')
+                            default='/home/wykgroup/udg/mseok/data/data_pdbbind_v2016_docking_nowater/data')
         parser.add_argument('--filename3',
                             help='filename',
-                            default=home+'/pdb_to_affinity.txt')
+                            default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_random_nowater/pdb_to_affinity.txt')
         parser.add_argument('--key_dir3',
                             help='key directory',
                             type=str,
-                            default='/home/udg/msh/urp/DTI_PDBbind/keys')
+                            default='./data/keys_pdbbind_random_nowater/')
         parser.add_argument('--data_dir3',
                             help='data file path',
                             type=str,
-                            default=home+'/data/')
+                            default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_random_nowater/data')
         parser.add_argument('--filename4',
                             help='filename',
-                            default=home+'/pdb_to_affinity.txt')
+                            default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_v2019_cross/pdb_to_affinity.txt')
         parser.add_argument('--key_dir4',
                             help='key directory',
                             type=str,
-                            default='/home/udg/msh/urp/DTI_PDBbind/keys')
+                            default='./data/keys_pdbbind_v2019_cross/')
         parser.add_argument('--data_dir4',
                             help='data file path',
                             type=str,
-                            default=home+'/data/')
+                            default='/home/wykgroup/jaechang/work/ML/PDBbind_DTI/data_pdbbind_v2019_cross/data')
 
     # for test
-    if "test.py" in command[0]:
+    if "test.py" in command[0] or "test_with_uncertainty.py" in command[0]:
         parser.add_argument('--test_result_filename',
                             help='test result filename',
                             type=str,
-                            default='test_result.txt')
+                            default='./result/test_result.txt')
+        parser.add_argument('--var_log',
+                            help='log var or var',
+                            type=str2bool,
+                            default=False)
 
     # for predict
     if "predict.py" in command[0]:
@@ -242,5 +289,5 @@ def parser(command):
         parser.add_argument('--ligand_prop', action='store_true',
                             help='ligand_prop')
     
-    args = parser.parse_known_args(arg_command)
+    args = parser.parse_args(arg_command)
     return args
