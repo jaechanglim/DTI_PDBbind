@@ -1,8 +1,6 @@
 import os
 import time
 import sys
-import arguments
-import argparse
 import random
 
 import numpy as np
@@ -13,12 +11,12 @@ import matplotlib.pyplot as plt
 import seaborn as sb
 
 import torch
-import torch.nn.functional as F
 import torch.nn as nn
 from torch.utils.tensorboard import SummaryWriter
 
 import utils
 import model
+import arguments
 
 
 args = arguments.parser(sys.argv)

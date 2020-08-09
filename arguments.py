@@ -13,7 +13,6 @@ def str2bool(v):
 def parser(command):
     arg_command = command[1:]
     parser = argparse.ArgumentParser(description='parser for train and test')
-    # parser = argparse.ArgumentParser(description='parser for train and test', conflict_handler='resolve')
 
     parser.add_argument('--dim_gnn',
                         help='dim_gnn',
@@ -29,7 +28,8 @@ def parser(command):
                         default=1) 
     parser.add_argument('--restart_file',
                         help='restart file',
-                        type=str)
+                        type=str,
+                        default='')
     parser.add_argument("--potential",
                         help="potential",
                         type=str,
@@ -212,7 +212,8 @@ def parser(command):
                             default=5.0)
         parser.add_argument("--save_dir",
                             help='save directory of model save files',
-                            type=str)
+                            type=str,
+                            default='results/run01')
         parser.add_argument("--save_every",
                             help='saver every n epoch',
                             type=int,
@@ -289,5 +290,5 @@ def parser(command):
         parser.add_argument('--ligand_prop', action='store_true',
                             help='ligand_prop')
     
-    args = parser.parse_known_args(arg_command)
+    args = parser.parse_args(arg_command)
     return args
