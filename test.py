@@ -1,23 +1,25 @@
-import argparse
-import utils
-import random
-random.seed(0)
-import numpy as np
-from dataset import MolDataset, DTISampler, tensor_collate_fn
-from torch.utils.data import DataLoader                                     
-import model 
 import os
-import torch
+import random
+import sys
+import glob
+import argparse
 import time
-import torch.nn as nn
+from collections import Counter
+
+import numpy as np
 import pickle
 from sklearn.metrics import r2_score, roc_auc_score
-from collections import Counter
-import sys
 from scipy import stats
-import glob
-import arguments
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader
 
+import arguments
+import utils
+from dataset import MolDataset, DTISampler, tensor_collate_fn
+import model
+
+random.seed(0)
 args = arguments.parser(sys.argv)
 print (args)
 
@@ -81,16 +83,13 @@ for i_batch, sample in enumerate(test_data_loader):
     affinity = sample['affinity']
 
     with torch.no_grad():
-        pred1, _, _ = model(sample)
+        pred1, _, _, _ = model(sample)
     affinity = affinity.data.cpu().numpy()
     pred1 = pred1.data.cpu().numpy()
-    #pred2 = pred2.data.cpu().numpy()
     
     for i in range(len(keys)):
         test_pred1[keys[i]] = pred1[i]
-        #test_pred2[keys[i]] = pred2[i]
         test_true[keys[i]] = affinity[i]
-    #if i_batch>2: break
 
 test_r2 = r2_score([test_true[k].sum(-1) for k in test_true.keys()], \
         [test_pred1[k].sum(-1) for k in test_true.keys()])
@@ -102,16 +101,12 @@ end = time.time()
 
 #Write prediction
 w_test = open(args.test_result_filename, 'w')
-
 for k in sorted(test_pred1.keys()):
     w_test.write(f'{k}\t{test_true[k]:.3f}\t')
     w_test.write(f'{test_pred1[k].sum():.3f}\t')
     for j in range(test_pred1[k].shape[0]):
         w_test.write(f'{test_pred1[k][j]:.3f}\t')
     w_test.write('\n')
-#w_test.write(f"R2: {test_r2:.3f}\n")
-#w_test.write(f"R: {r_value:.3f}\n")
-#w_test.write(f"Time: {end-st:.3f}\n\n")
 w_test.close()
 
 #Cal R2

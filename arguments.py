@@ -80,7 +80,7 @@ def parser(command):
     parser.add_argument('--mc_dropout',
                         help='to turn on or off MC dropout',
                         type=str2bool,
-                        default=True)
+                        default=False)
     parser.add_argument("--dropout_rate",
                         help="dropout rate",
                         type=float,

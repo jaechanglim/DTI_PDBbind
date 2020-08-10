@@ -1,14 +1,17 @@
-import utils
-import numpy as np
-import model 
 import os
-import torch
 import time
 import sys
-import arguments
-import dataset
+
+import numpy as np
+import torch
 from rdkit.Chem.rdmolops import GetAdjacencyMatrix, GetDistanceMatrix
 from rdkit import Chem
+
+import arguments
+import dataset
+import model
+import utils
+
 
 #print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p.requires_grad))
 def write(of, model, pred, time, args, extra_data=None):
@@ -263,7 +266,7 @@ def predict(model, lf, pf, of, args, device):
     sample = utils.dic_to_device(sample, device)
 
     #run prediction
-    pred, _, _ = model(sample, cal_der_loss=False)
+    pred, _, _, _ = model(sample, cal_der_loss=False)
     pred = pred.data.cpu().numpy()[0]
     end = time.time()
     
