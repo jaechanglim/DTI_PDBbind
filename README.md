@@ -45,6 +45,7 @@ python -u ../train.py --batch_size=8 \
 ```
 --dropout_rate=0.2
 --train_with_uncertainty
+--mc_dropout=True
 --loss_var_ratio=1e-4,
 --var_abs='abs'
 --var_agg='product'
