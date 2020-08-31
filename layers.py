@@ -38,9 +38,9 @@ class MPNN(torch.nn.Module):
         return retval
 
 
-class EdgeConv(torch.nn.Module):
+class InteractionNet(torch.nn.Module):
     def __init__(self, n_edge_feature, n_atom_feature):
-        super(EdgeConv, self).__init__()
+        super(InteractionNet, self).__init__()
 
         self.W = nn.Linear(n_atom_feature, n_atom_feature)
         #self.M = nn.Linear(n_atom_feature, n_atom_feature)

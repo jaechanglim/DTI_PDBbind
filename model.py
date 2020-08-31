@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 import utils
-from layers import GAT_gate, EdgeConv, MultiHeadAttention, ConvBlock, PredictBlock
+from layers import GAT_gate, InteractionNet, MultiHeadAttention, ConvBlock, PredictBlock
 import dataset
 
 
@@ -22,12 +22,12 @@ class DTIHarmonic(nn.Module):
 
         self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
-        if args.edgeconv: 
+        if args.interaction_net: 
             num_filter = int(10.0/args.filter_spacing)+1 
             self.filter_center = torch.Tensor([args.filter_spacing*i for i 
                     in range(num_filter)])
             self.filter_gamma = args.filter_gamma
-            self.edgeconv = nn.ModuleList([EdgeConv(num_filter, args.dim_gnn) \
+            self.interaction_net = nn.ModuleList([InteractionNet(num_filter, args.dim_gnn) \
                                         for _ in range(args.n_gnn)])
         self.num_interaction_type = len(dataset.interaction_types)
         
@@ -218,7 +218,7 @@ class DTIHarmonic(nn.Module):
 
         pos1.requires_grad=True
         dm = self.cal_distance_matrix(pos1, pos2, 0.5)
-        if self.args.edgeconv:
+        if self.args.interaction_net:
             edge = dm.unsqueeze(-1).repeat(1,1,1,self.filter_center.size(-1))
             filter_center = self.filter_center.unsqueeze(0).\
                             unsqueeze(0).unsqueeze(0).to(h1.device)
@@ -231,9 +231,9 @@ class DTIHarmonic(nn.Module):
             adj12[adj12>1e-3] = 1
             adj12[adj12<1e-3] = 0
             
-            for i in range(len(self.edgeconv)):
-                new_h1 = self.edgeconv[i](h1, h2, edge, adj12) 
-                new_h2 = self.edgeconv[i](h2, h1, \
+            for i in range(len(self.interaction_net)):
+                new_h1 = self.interaction_net[i](h1, h2, edge, adj12) 
+                new_h2 = self.interaction_net[i](h2, h1, \
                         edge.permute(0,2,1,3), adj12.permute(0,2,1))
                 h1, h2 = new_h1, new_h2
                 h1 = F.dropout(h1, training=dropout, p=self.args.dropout_rate)
@@ -323,12 +323,12 @@ class GNN(nn.Module):
 
         self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
                                     for _ in range(args.n_gnn)])
-        if args.edgeconv: 
+        if args.interaction_net: 
             num_filter = int(10.0/args.filter_spacing)+1 
             self.filter_center = torch.Tensor([args.filter_spacing*i for i 
                     in range(num_filter)])
             self.filter_gamma = args.filter_gamma
-            self.edgeconv = nn.ModuleList([EdgeConv(num_filter, args.dim_gnn) \
+            self.interaction_net = nn.ModuleList([InteractionNet(num_filter, args.dim_gnn) \
                                         for _ in range(args.n_gnn)])
 
         if self.training:
@@ -370,7 +370,7 @@ class GNN(nn.Module):
             h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
 
         dm = self.cal_distance_matrix(pos1, pos2, DM_min)
-        if self.args.edgeconv:
+        if self.args.interaction_net:
             edge = dm.unsqueeze(-1).repeat(1,1,1,self.filter_center.size(-1))
             filter_center = self.filter_center.unsqueeze(0).\
                             unsqueeze(0).unsqueeze(0).to(h1.device)
@@ -383,9 +383,9 @@ class GNN(nn.Module):
             adj12[adj12>1e-3] = 1
             adj12[adj12<1e-3] = 0
             
-            for i in range(len(self.edgeconv)):
-                new_h1 = self.edgeconv[i](h1, h2, edge, adj12) # [, n_ligand_atom, n_out_feature(dim_gnn)]
-                new_h2 = self.edgeconv[i](h2, h1, \
+            for i in range(len(self.interaction_net)):
+                new_h1 = self.interaction_net[i](h1, h2, edge, adj12) # [, n_ligand_atom, n_out_feature(dim_gnn)]
+                new_h2 = self.interaction_net[i](h2, h1, \
                         edge.permute(0,2,1,3), adj12.permute(0,2,1)) # [, n_protein_atom, n_out_feature(dim_gnn)]
                 h1, h2 = new_h1, new_h2
                 h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)

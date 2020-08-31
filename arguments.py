@@ -52,7 +52,7 @@ def parser(command):
                         help="filter spacing", 
                         type=float, 
                         default=0.5)
-    parser.add_argument('--edgeconv', action='store_true', 
+    parser.add_argument('--interaction_net', action='store_true', 
                         help='edge conv')
     parser.add_argument('--no_rotor_penalty', action='store_true', 
                         help='rotor penaly')
