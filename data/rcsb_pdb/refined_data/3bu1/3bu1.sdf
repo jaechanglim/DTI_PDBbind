@@ -1,0 +1,94 @@
+3BU1_HSM_A_301
+  RCSB PDB08012018403D
+Coordinates from PDB:3BU1:A:301 Model:1 without hydrogens
+  8  8  0  0  0  0            999 V2000
+   18.1750   22.9850    7.5870   N 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3610   23.1390    8.7890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2830   24.1870    8.5480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5020   24.4820    9.8120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0040   24.9860   10.9670   N 0  0  0  0  0  0  0  0  0  0  0  0
+   14.1430   24.2900    9.9970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9900   25.1060   11.8470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.8510   24.6830   11.2560   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  2  0  0  0  0
+  5  7  2  0  0  0  0
+  6  8  1  0  0  0  0
+  7  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+3BU1_HSM_A_301
+
+>  <ChemCompId>
+HSM
+
+>  <PdbId>
+3BU1
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N3
+
+>  <Name>
+HISTAMINE
+
+>  <SystematicName>
+2-(1H-imidazol-4-yl)ethanamine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H9 N3
+
+>  <MolecularWeight>
+111.145
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H9N3/c6-2-1-5-3-7-4-8-5/h3-4H,1-2,6H2,(H,7,8)
+
+>  <InChIKey>
+NTYJJOPFIAHURM-UHFFFAOYSA-N
+
+>  <SMILES>
+c1c(nc[nH]1)CCN
+
+$$$$

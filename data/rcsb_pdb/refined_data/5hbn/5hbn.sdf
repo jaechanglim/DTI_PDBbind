@@ -1,0 +1,109 @@
+5HBN_RPI_A_206
+  RCSB PDB08022001353D
+Coordinates from PDB:5HBN:A:206 Model:1 without hydrogens
+ 16 15  0  0  0  0            999 V2000
+   22.1890   27.4970    8.3830   P 0  0  0  0  0  0  0  0  0  0  0  0
+   25.4120   26.2620   15.2920   N 0  0  0  0  0  0  0  0  0  0  0  0
+   25.4230   27.4320   14.4660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.6160   27.1440   13.2220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.4000   26.2780   12.2680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.8490   27.0790   11.0740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.7320   27.2440   10.2090   N 0  0  0  0  0  0  0  0  0  0  0  0
+   24.8900   27.2340    8.8160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.0810   27.0770    8.3230   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.7730   27.3680    7.9360   N 0  0  0  0  0  0  0  0  0  0  0  0
+   21.5470   26.1600    8.0690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.6080   28.5570    7.4810   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.0190   27.8420    9.8330   O 0  0  0  0  0  0  0  0  0  0  0  0
+   24.8510   28.6530   15.1620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.7520   29.1680   14.7890   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.4980   29.1780   16.1050   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 12  1  2  0  0  0  0
+ 10  1  1  0  0  0  0
+ 10  8  1  0  0  0  0
+ 11  1  1  0  0  0  0
+  9  8  2  0  0  0  0
+  1 13  1  0  0  0  0
+  8  7  1  0  0  0  0
+  7  6  1  0  0  0  0
+  6  5  1  0  0  0  0
+  5  4  1  0  0  0  0
+  4  3  1  0  0  0  0
+  3 14  1  0  0  0  0
+  3  2  1  0  0  0  0
+ 15 14  2  0  0  0  0
+ 14 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+5HBN_RPI_A_206
+
+>  <ChemCompId>
+RPI
+
+>  <PdbId>
+5HBN
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+206
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N4 O5 P
+
+>  <Name>
+phospho-arginine
+
+>  <SystematicName>
+(2~{S})-2-azanyl-5-[(~{N}-phosphonocarbamimidoyl)amino]pentanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+L-peptide linking
+
+>  <Formula>
+C6 H15 N4 O5 P
+
+>  <MolecularWeight>
+254.181
+
+>  <ModifiedDate>
+2016-10-07
+
+>  <Parent>
+ARG
+
+>  <OneLetterCode>
+R
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H15N4O5P/c7-4(5(11)12)2-1-3-9-6(8)10-16(13,14)15/h4H,1-3,7H2,(H,11,12)(H5,8,9,10,13,14,15)/t4-/m0/s1
+
+>  <InChIKey>
+CCTIOCVIZPCTGO-BYPYZUCNSA-N
+
+>  <SMILES>
+[H]/N=C(/NCCC[C@@H](C(=O)O)N)\NP(=O)(O)O
+
+$$$$

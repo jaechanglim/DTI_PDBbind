@@ -1,0 +1,93 @@
+4Y3Y_DCL_A_412
+  RCSB PDB08022000253D
+Coordinates from PDB:4Y3Y:A:412 Model:1 without hydrogens
+  8  7  0  0  0  0            999 V2000
+    2.1790    5.1960    8.8640   N 0  0  0  0  0  0  0  0  0  0  0  0
+    2.2560    6.5190    9.5270   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.6150    6.3810   10.9000   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.6160    7.6590    8.7180   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.5430    9.0200    9.4250   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.8420   10.0630    8.5700   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9280    9.4970    9.8050   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.1920    6.4910   10.8000   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+M  END
+>  <InstanceId>
+4Y3Y_DCL_A_412
+
+>  <ChemCompId>
+DCL
+
+>  <PdbId>
+4Y3Y
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+412
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O
+
+>  <Name>
+2-AMINO-4-METHYL-PENTAN-1-OL
+
+>  <SystematicName>
+(2S)-2-azanyl-4-methyl-pentan-1-ol
+
+>  <Synonyms>
+LEUCINOL
+
+>  <Type>
+peptide-like
+
+>  <Formula>
+C6 H15 N O
+
+>  <MolecularWeight>
+117.189
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+X
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H15NO/c1-5(2)3-6(7)4-8/h5-6,8H,3-4,7H2,1-2H3/t6-/m0/s1
+
+>  <InChIKey>
+VPSSPAXIFBTOHY-LURJTMIESA-N
+
+>  <SMILES>
+CC(C)C[C@@H](CO)N
+
+$$$$

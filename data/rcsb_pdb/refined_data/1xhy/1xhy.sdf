@@ -1,0 +1,108 @@
+1XHY_KAI_A_1001
+  RCSB PDB08012016223D
+Coordinates from PDB:1XHY:A:1001 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+   12.5840    7.2410   24.6640   N 0  0  0  0  0  0  0  0  0  0  0  0
+   13.0020    8.6420   24.3830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0920   10.3470   22.8180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9690    9.3740   24.2830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.7070    6.3650   24.8550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9130    7.1570   24.4620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0390    6.9700   22.9400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.5200    8.5810   24.5590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7450    5.7410   22.4050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4890    9.6650   24.0820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.8130    6.1160   26.3680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.9650    6.4240   27.2290   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7330    5.5370   21.0590   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3310    4.9990   23.1790   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9050    5.5720   26.8230   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  5  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3 10  2  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+  9 13  1  0  0  0  0
+  9 14  2  0  0  0  0
+ 11 12  2  0  0  0  0
+ 11 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+1XHY_KAI_A_1001
+
+>  <ChemCompId>
+KAI
+
+>  <PdbId>
+1XHY
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N O4
+
+>  <Name>
+3-(CARBOXYMETHYL)-4-ISOPROPENYLPROLINE
+
+>  <SystematicName>
+(2S,3S,4S)-3-(carboxymethyl)-4-prop-1-en-2-yl-pyrrolidine-2-carboxylic acid
+
+>  <Synonyms>
+KAINATE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H15 N O4
+
+>  <MolecularWeight>
+213.23
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H15NO4/c1-5(2)7-4-11-9(10(14)15)6(7)3-8(12)13/h6-7,9,11H,1,3-4H2,2H3,(H,12,13)(H,14,15)/t6-,7+,9-/m0/s1
+
+>  <InChIKey>
+VLSMHEGGTFMBBZ-OOZYFLPDSA-N
+
+>  <SMILES>
+CC(=C)[C@H]1CN[C@@H]([C@H]1CC(=O)O)C(=O)O
+
+$$$$

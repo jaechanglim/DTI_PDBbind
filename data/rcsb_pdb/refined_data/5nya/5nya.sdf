@@ -1,0 +1,98 @@
+5NYA_FB2_A_302
+  RCSB PDB08022002363D
+Coordinates from PDB:5NYA:A:302 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   -4.4830    6.3740   14.7790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8460    6.2420   15.0900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.3060    5.0980   15.7210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4280    4.0750   16.0530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0410    4.1870   15.7470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5990    5.3570   15.1170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9860    2.6060   16.8490   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4290    2.6720   18.1990   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.4340    2.6490   16.7100   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3860    1.3420   16.0420   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  2  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  7  9  2  0  0  0  0
+  7  8  2  0  0  0  0
+  7 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+5NYA_FB2_A_302
+
+>  <ChemCompId>
+FB2
+
+>  <PdbId>
+5NYA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O2 S
+
+>  <Name>
+benzenesulfonamide
+
+>  <SystematicName>
+benzenesulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C6 H7 N O2 S
+
+>  <MolecularWeight>
+157.19
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H7NO2S/c7-10(8,9)6-4-2-1-3-5-6/h1-5H,(H2,7,8,9)
+
+>  <InChIKey>
+KHBQMWCZKVMBLN-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)S(=O)(=O)N
+
+$$$$

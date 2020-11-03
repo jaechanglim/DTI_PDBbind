@@ -1,0 +1,122 @@
+3C2F_PRP_A_300
+  RCSB PDB08012018413D
+Coordinates from PDB:3C2F:A:300 Model:1 without hydrogens
+ 22 22  0  0  0  0            999 V2000
+   26.5970  -14.9160   44.8780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.5310  -16.2310   44.1890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.1200  -15.8080   42.8930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.3290  -15.0710   43.3870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.9310  -14.1700   42.3660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.6820  -15.2160   46.2470   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.4640  -17.0060   44.9050   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.3920  -16.9790   42.1370   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.7660  -14.2910   44.3940   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.1340  -13.6660   42.8690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.7660  -12.3470   42.3340   P 0  0  0  0  0  0  0  0  0  0  0  0
+   29.8540  -11.2580   42.5240   O 0  0  0  0  0  0  0  0  0  0  0  0
+   31.8320  -12.2400   43.2740   O 0  0  0  0  0  0  0  0  0  0  0  0
+   31.1140  -12.7350   40.9880   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.7910  -14.3490   47.2120   P 0  0  0  0  0  0  0  0  0  0  0  0
+   25.1360  -13.3750   46.3210   O 0  0  0  0  0  0  0  0  0  0  0  0
+   24.9390  -15.2630   47.9850   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.0470  -13.7300   48.3130   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.7510  -12.1520   47.8570   P 0  0  0  0  0  0  0  0  0  0  0  0
+   26.6800  -11.1230   47.8450   O 0  0  0  0  0  0  0  0  0  0  0  0
+   28.4720  -12.3180   46.6040   O 0  0  0  0  0  0  0  0  0  0  0  0
+   28.6610  -12.0220   49.0140   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6 15  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 14  1  0  0  0  0
+ 15 16  2  0  0  0  0
+ 15 17  1  0  0  0  0
+ 15 18  1  0  0  0  0
+ 18 19  1  0  0  0  0
+ 19 20  2  0  0  0  0
+ 19 21  1  0  0  0  0
+ 19 22  1  0  0  0  0
+M  END
+>  <InstanceId>
+3C2F_PRP_A_300
+
+>  <ChemCompId>
+PRP
+
+>  <PdbId>
+3C2F
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O14 P3
+
+>  <Name>
+1-O-pyrophosphono-5-O-phosphono-alpha-D-ribofuranose
+
+>  <SystematicName>
+[(2R,3R,4S,5R)-3,4-dihydroxy-5-(phosphonooxymethyl)oxolan-2-yl] phosphono hydrogen phosphate
+
+>  <Synonyms>
+ALPHA-PHOSPHORIBOSYLPYROPHOSPHORIC ACID; 1-O-pyrophosphono-5-O-phosphono-alpha-D-ribose; 1-O-pyrophosphono-5-O-phosphono-D-ribose; 1-O-pyrophosphono-5-O-phosphono-ribose
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C5 H13 O14 P3
+
+>  <MolecularWeight>
+390.07
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+RIB
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H13O14P3/c6-3-2(1-16-20(8,9)10)17-5(4(3)7)18-22(14,15)19-21(11,12)13/h2-7H,1H2,(H,14,15)(H2,8,9,10)(H2,11,12,13)/t2-,3-,4-,5-/m1/s1
+
+>  <InChIKey>
+PQGCEDQWHSBAJP-TXICZTDVSA-N
+
+>  <SMILES>
+C([C@@H]1[C@H]([C@H]([C@H](O1)O[P@@](=O)(O)OP(=O)(O)O)O)O)OP(=O)(O)O
+
+$$$$

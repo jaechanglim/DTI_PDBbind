@@ -1,0 +1,94 @@
+1LGW_1AN_A_401
+  RCSB PDB08012015233D
+Coordinates from PDB:1LGW:A:401 Model:1 without hydrogens
+  8  8  0  0  0  0            999 V2000
+   26.0520    5.6090    5.5940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.7970    6.7770    5.7660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.1130    5.0130    4.3400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.5720    7.3600    4.7520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.9300    5.5430    3.3420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.6380    6.7380    3.5080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.4580    7.2140    2.5000   N 0  0  0  0  0  0  0  0  0  0  0  0
+   26.9420    4.9350    2.2100   F 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  3  5  2  0  0  0  0
+  4  6  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  8  1  0  0  0  0
+  6  7  1  0  0  0  0
+M  END
+>  <InstanceId>
+1LGW_1AN_A_401
+
+>  <ChemCompId>
+1AN
+
+>  <PdbId>
+1LGW
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N F
+
+>  <Name>
+2-FLUOROANILINE
+
+>  <SystematicName>
+2-fluoroaniline
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H6 F N
+
+>  <MolecularWeight>
+111.117
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H6FN/c7-5-3-1-2-4-6(5)8/h1-4H,8H2
+
+>  <InChIKey>
+FTZQXOJYPFINKJ-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(c(c1)N)F
+
+$$$$

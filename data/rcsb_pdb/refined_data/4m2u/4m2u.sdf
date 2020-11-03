@@ -1,0 +1,117 @@
+4M2U_ETS_A_302
+  RCSB PDB08012022283D
+Coordinates from PDB:4M2U:A:302 Model:1 without hydrogens
+ 19 20  0  0  0  0            999 V2000
+   15.1710    3.5450   15.6720   S 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1270    2.1520   15.8960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.4440    2.2250   15.2700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.4600    3.5510   14.6820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.7240    3.9180   13.9270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.8240    5.3970   13.5950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5880    5.9550   12.9580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2900    5.9180   14.2020   S 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3450    4.3020   14.8260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4470    0.8200   16.8300   S 0  0  0  0  0  0  0  0  0  0  0  0
+   15.9340    0.9220   18.2040   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.9990    0.9660   16.7230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0700   -0.5590   16.2440   N 0  0  0  0  0  0  0  0  0  0  0  0
+   18.6830    3.1280   12.7030   N 0  0  0  0  0  0  0  0  0  0  0  0
+   17.8730    7.3560   12.5020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5980    6.7600   15.3240   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9960    6.2150   13.6350   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.9070    3.1180   11.9390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.0380    2.0840   10.8520   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2 10  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5 14  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7 15  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 16  2  0  0  0  0
+  8 17  2  0  0  0  0
+ 10 11  2  0  0  0  0
+ 10 12  2  0  0  0  0
+ 10 13  1  0  0  0  0
+ 14 18  1  0  0  0  0
+ 18 19  1  0  0  0  0
+M  END
+>  <InstanceId>
+4M2U_ETS_A_302
+
+>  <ChemCompId>
+ETS
+
+>  <PdbId>
+4M2U
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O4 S3
+
+>  <Name>
+(4S-TRANS)-4-(ETHYLAMINO)-5,6-DIHYDRO-6-METHYL-4H-THIENO(2,3-B)THIOPYRAN-2-SULFONAMIDE-7,7-DIOXIDE
+
+>  <SystematicName>
+(4S,6S)-4-(ethylamino)-6-methyl-7,7-bis(oxidanylidene)-5,6-dihydro-4H-thieno[2,3-b]thiopyran-2-sulfonamide
+
+>  <Synonyms>
+Dorzolamide
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H16 N2 O4 S3
+
+>  <MolecularWeight>
+324.44
+
+>  <ModifiedDate>
+2013-08-12
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H16N2O4S3/c1-3-12-8-4-6(2)18(13,14)10-7(8)5-9(17-10)19(11,15)16/h5-6,8,12H,3-4H2,1-2H3,(H2,11,15,16)/t6-,8-/m0/s1
+
+>  <InChIKey>
+IAVUPMFITXYVAF-XPUUQOCRSA-N
+
+>  <SMILES>
+CCN[C@H]1C[C@@H](S(=O)(=O)c2c1cc(s2)S(=O)(=O)N)C
+
+$$$$

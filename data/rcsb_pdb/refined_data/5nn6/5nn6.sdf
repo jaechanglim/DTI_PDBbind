@@ -1,0 +1,106 @@
+5NN6_MIG_A_1013
+  RCSB PDB08022002343D
+Coordinates from PDB:5NN6:A:1013 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+  -17.2770  -34.7580   94.0600   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.5440  -30.1440   96.3220   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.3190  -32.3980   94.3060   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.3330  -30.7800   96.7230   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.6130  -31.0370   98.3700   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.3070  -34.1640   94.9240   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.2270  -31.3520   97.0260   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.1050  -32.7150   94.4660   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.6850  -32.6960   94.5510   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.4960  -31.8180   94.8750   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.4010  -31.6600   96.3870   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.7040  -31.1150   96.9550   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.9160  -31.9560   96.5260   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.9140  -32.0510   95.0540   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  6  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3 10  1  0  0  0  0
+  4 11  1  0  0  0  0
+  5 12  1  0  0  0  0
+  6  8  1  0  0  0  0
+  7 13  1  0  0  0  0
+  8 14  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 14  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+5NN6_MIG_A_1013
+
+>  <ChemCompId>
+MIG
+
+>  <PdbId>
+5NN6
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1013
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O5
+
+>  <Name>
+(2R,3R,4R,5S)-1-(2-hydroxyethyl)-2-(hydroxymethyl)piperidine-3,4,5-triol
+
+>  <SystematicName>
+(1R,2R,3R,4R,5S)-1-(2-hydroxyethyl)-2-(hydroxymethyl)piperidine-3,4,5-triol
+
+>  <Synonyms>
+Miglitol
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H17 N O5
+
+>  <MolecularWeight>
+207.224
+
+>  <ModifiedDate>
+2016-04-12
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H17NO5/c10-2-1-9-3-6(12)8(14)7(13)5(9)4-11/h5-8,10-14H,1-4H2/t5-,6+,7-,8-/m1/s1
+
+>  <InChIKey>
+IBAQFPQHRJAVAV-ULAWRXDQSA-N
+
+>  <SMILES>
+C1[C@@H]([C@H]([C@@H]([C@H]([N@@]1CCO)CO)O)O)O
+
+$$$$

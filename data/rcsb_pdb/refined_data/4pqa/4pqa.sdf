@@ -1,0 +1,106 @@
+4PQA_X8Z_A_401
+  RCSB PDB08012022543D
+Coordinates from PDB:4PQA:A:401 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   18.4770   21.1320   -8.3120   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.2550   20.4460   -7.3280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.2940   19.4970   -6.8100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.1360   18.1460   -7.4970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.0300   16.8250   -6.6420   S 0  0  0  0  0  0  0  0  0  0  0  0
+   20.6810   20.0770   -7.0600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.1050   20.4890   -6.6600   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0120   21.3380   -7.1250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4830   22.7300   -7.4270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.9380   23.3970   -8.2900   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5030   23.2510   -6.7520   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7810   19.7470   -5.4450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5010   20.3840   -4.9240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0230   21.3750   -5.9690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  6  1  0  0  0  0
+  4  5  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7 12  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 14  1  0  0  0  0
+  9 10  2  0  0  0  0
+  9 11  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+4PQA_X8Z_A_401
+
+>  <ChemCompId>
+X8Z
+
+>  <PdbId>
+4PQA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O3 S
+
+>  <Name>
+L-CAPTOPRIL
+
+>  <SystematicName>
+(2S)-1-[(2S)-2-methyl-3-sulfanyl-propanoyl]pyrrolidine-2-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H15 N O3 S
+
+>  <MolecularWeight>
+217.285
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+PRO CC8
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H15NO3S/c1-6(5-14)8(11)10-4-2-3-7(10)9(12)13/h6-7,14H,2-5H2,1H3,(H,12,13)/t6-,7+/m1/s1
+
+>  <InChIKey>
+FAKRSMQSSFJEIM-RQJHMYQMSA-N
+
+>  <SMILES>
+C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O
+
+$$$$

@@ -1,0 +1,111 @@
+3SUW_GC2_A_2000
+  RCSB PDB08012020303D
+Coordinates from PDB:3SUW:A:2000 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+   33.2480   19.8410  -15.7720   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.1730   19.5670  -16.9790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.0320   20.1210  -17.8330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.0240   18.7900  -17.6570   N 0  0  0  0  0  0  0  0  0  0  0  0
+   35.2240   18.1370  -17.0710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.8470   16.9430  -16.1580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.3320   15.8820  -16.9380   O 0  0  0  0  0  0  0  0  0  0  0  0
+   36.0380   16.3970  -15.3160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.5190   15.6520  -14.2210   O 0  0  0  0  0  0  0  0  0  0  0  0
+   36.1330   19.1680  -16.3460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   37.3200   18.4010  -15.8570   N 0  0  0  0  0  0  0  0  0  0  0  0
+   36.9060   17.5080  -14.7560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.4090   19.1990  -15.2600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   39.2370   18.1000  -14.5660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.2240   17.0150  -14.1400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.5830   15.7220  -14.6760   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 12  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 12 15  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+3SUW_GC2_A_2000
+
+>  <ChemCompId>
+GC2
+
+>  <PdbId>
+3SUW
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2000
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O4
+
+>  <Name>
+6-ACETAMIDO-6-DEOXY-CASTANOSPERMINE
+
+>  <SystematicName>
+N-[(1S,4S,6S,7R,8R,8aR)-1,7,8-trihydroxy-1,2,3,5,6,7,8,8a-octahydroindolizin-6-yl]ethanamide
+
+>  <Synonyms>
+N-[(1S,6S,7R,8R,8AR)-1,7,8-TRIHYDROXYOCTAHYDROINDOLIZIN-6-YL]ACETAMIDE
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C10 H18 N2 O4
+
+>  <MolecularWeight>
+230.261
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H18N2O4/c1-5(13)11-6-4-12-3-2-7(14)8(12)10(16)9(6)15/h6-10,14-16H,2-4H2,1H3,(H,11,13)/t6-,7-,8+,9+,10+/m0/s1
+
+>  <InChIKey>
+IHKWXDCSAKJQKM-SRQGCSHVSA-N
+
+>  <SMILES>
+CC(=O)N[C@H]1C[N@@]2CC[C@@H]([C@@H]2[C@H]([C@@H]1O)O)O
+
+$$$$

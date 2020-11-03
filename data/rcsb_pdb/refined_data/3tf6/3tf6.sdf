@@ -1,0 +1,98 @@
+3TF6_DBH_A_216
+  RCSB PDB08012020333D
+Coordinates from PDB:3TF6:A:216 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   28.5090   82.0240   62.9500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.7540   81.9040   63.0850   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.6670   80.8400   62.5360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.8420   80.9670   61.4410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.0460   79.9180   61.0470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.7040   79.6370   63.2390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.5320   79.5260   64.3250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.9120   78.5510   62.8370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.0830   78.7140   61.7320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.9390   77.3210   63.4940   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  6  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  9  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+3TF6_DBH_A_216
+
+>  <ChemCompId>
+DBH
+
+>  <PdbId>
+3TF6
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+216
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+1
+
+>  <ObservedFormula>
+C7 O3
+
+>  <Name>
+2,3-DIHYDROXY-BENZOIC ACID
+
+>  <SystematicName>
+2,3-dihydroxybenzoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H6 O4
+
+>  <MolecularWeight>
+154.12
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H6O4/c8-5-3-1-2-4(6(5)9)7(10)11/h1-3,8-9H,(H,10,11)
+
+>  <InChIKey>
+GLDQAMYCGOIJDV-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c(c(c1)O)O)C(=O)O
+
+$$$$

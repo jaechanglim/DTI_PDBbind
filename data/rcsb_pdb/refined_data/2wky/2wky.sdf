@@ -1,0 +1,113 @@
+2WKY_IBC_A_1260
+  RCSB PDB08012018093D
+Coordinates from PDB:2WKY:A:1260 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   29.6390    2.2440   76.8850   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.6440    2.3560   76.1510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.8780    3.3040   75.3740   O 0  0  0  0  0  0  0  0  0  0  0  0
+   31.6770    1.2270   76.2010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.8270    1.6070   75.3690   N 0  0  0  0  0  0  0  0  0  0  0  0
+   32.1410    1.0080   77.6440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.3570    0.0820   77.6990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.1380   -1.2620   77.4230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.6010    0.6450   77.9750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.8430    0.0290   78.0890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.2010   -1.3110   77.9680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.5650   -2.0120   76.7650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.0610   -2.1990   76.9810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.4140   -3.3860   76.7860   O 0  0  0  0  0  0  0  0  0  0  0  0
+   32.0460   -3.1810   77.1220   N 0  0  0  0  0  0  0  0  0  0  0  0
+   31.9110   -1.9110   77.4990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.8550   -1.4030   77.8680   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  2  0  0  0  0
+  8 13  2  0  0  0  0
+  8 16  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  2  0  0  0  0
+ 16 17  1  0  0  0  0
+M  END
+>  <InstanceId>
+2WKY_IBC_A_1260
+
+>  <ChemCompId>
+IBC
+
+>  <PdbId>
+2WKY
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1260
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N2 O4
+
+>  <Name>
+3-(3-HYDROXY-7,8-DIHYDRO-6H-CYCLOHEPTA[D]ISOXAZOL-4-YL)-L-ALANINE
+
+>  <SystematicName>
+(2S)-2-amino-3-(3-hydroxy-7,8-dihydro-6H-cyclohepta[d][1,2]oxazol-4-yl)propanoic acid
+
+>  <Synonyms>
+2-AMINO-3-(3-HYDROXY-7,8-DIHYDRO-6H-CYCLOHEPTA[D]-4-ISOXAZOLYL)PROPIONIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H14 N2 O4
+
+>  <MolecularWeight>
+238.24
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H14N2O4/c12-7(11(15)16)5-6-3-1-2-4-8-9(6)10(14)13-17-8/h3,7H,1-2,4-5,12H2,(H,13,14)(H,15,16)/t7-/m0/s1
+
+>  <InChIKey>
+HJEPOXZLPHUVFE-ZETCQYMHSA-N
+
+>  <SMILES>
+C1CC=C(c2c(onc2O)C1)C[C@@H](C(=O)O)N
+
+$$$$

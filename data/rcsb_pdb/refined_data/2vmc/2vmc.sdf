@@ -1,0 +1,108 @@
+2VMC_NGA_A_505
+  RCSB PDB08012018033D
+Coordinates from PDB:2VMC:A:505 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+   11.1170   10.2320  122.9420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.3170    9.6660  121.5380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.1750   10.1330  120.6020   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.8000    9.8220  121.2070   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.7690   10.3350  122.6620   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.4520   10.0070  123.3540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.7080    9.3390  121.1950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9660    9.9080  120.5910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.6050   10.0740  120.9860   N 0  0  0  0  0  0  0  0  0  0  0  0
+   12.1550    9.7630  123.8070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.2690    9.5750  119.2780   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.5320    8.4190  121.1580   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.8490    9.8330  123.4620   O 0  0  0  0  0  0  0  0  0  0  0  0
+    7.4320   10.7420  124.5960   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.6820    8.2830  121.8350   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  1  0  0  0  0
+  1 13  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  9  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 12  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 13  1  0  0  0  0
+  6 14  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  7 15  2  0  0  0  0
+M  END
+>  <InstanceId>
+2VMC_NGA_A_505
+
+>  <ChemCompId>
+NGA
+
+>  <PdbId>
+2VMC
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+505
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O6
+
+>  <Name>
+2-acetamido-2-deoxy-beta-D-galactopyranose
+
+>  <SystematicName>
+N-[(2R,3R,4R,5R,6R)-2,4,5-trihydroxy-6-(hydroxymethyl)oxan-3-yl]ethanamide
+
+>  <Synonyms>
+N-acetyl-beta-D-galactosamine; 2-acetamido-2-deoxy-beta-D-galactose; 2-acetamido-2-deoxy-D-galactose; 2-acetamido-2-deoxy-galactose; N-ACETYL-D-GALACTOSAMINE
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C8 H15 N O6
+
+>  <MolecularWeight>
+221.208
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H15NO6/c1-3(11)9-5-7(13)6(12)4(2-10)15-8(5)14/h4-8,10,12-14H,2H2,1H3,(H,9,11)/t4-,5-,6+,7-,8-/m1/s1
+
+>  <InChIKey>
+OVRNDRQMDRJTHS-JAJWTYFOSA-N
+
+>  <SMILES>
+CC(=O)N[C@@H]1[C@H]([C@H]([C@H](O[C@H]1O)CO)O)O
+
+$$$$

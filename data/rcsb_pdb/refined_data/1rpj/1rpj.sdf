@@ -1,0 +1,102 @@
+1RPJ_ALL_A_291
+  RCSB PDB08012015533D
+Coordinates from PDB:1RPJ:A:291 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+    4.8590    7.1330   10.4580   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.1900    8.5360   11.0230   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.7500    8.6290   12.4810   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.2470    8.3340   12.5700   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9950    6.9600   11.9330   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.5900    6.4550   12.0040   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.2420    7.0060    9.1070   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.5850    8.7610   10.9250   O 0  0  0  0  0  0  0  0  0  0  0  0
+    5.4730    7.5950   13.2340   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.7870    8.2700   13.9250   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.4670    6.9210   10.5920   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.6840    7.3450   11.2990   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  7  1  0  0  0  0
+  1 11  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+1RPJ_ALL_A_291
+
+>  <ChemCompId>
+ALL
+
+>  <PdbId>
+1RPJ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+291
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O6
+
+>  <Name>
+beta-D-allopyranose
+
+>  <SystematicName>
+(2R,3R,4R,5S,6R)-6-(hydroxymethyl)oxane-2,3,4,5-tetrol
+
+>  <Synonyms>
+beta-D-allose; D-allose; allose; D-ALLOPYRANOSE
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C6 H12 O6
+
+>  <MolecularWeight>
+180.156
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3-,4-,5-,6-/m1/s1
+
+>  <InChIKey>
+WQZGKKKJIJFFOK-QZABAPFNSA-N
+
+>  <SMILES>
+C([C@@H]1[C@H]([C@H]([C@H]([C@@H](O1)O)O)O)O)O
+
+$$$$

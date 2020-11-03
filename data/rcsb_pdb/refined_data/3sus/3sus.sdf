@@ -1,0 +1,107 @@
+3SUS_GNL_A_2000
+  RCSB PDB08012020303D
+Coordinates from PDB:3SUS:A:2000 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+  -35.4970  -18.9580  -15.9290   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.0010  -20.0150  -15.7780   S 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.1140  -17.9510  -17.0600   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.2990  -18.7670  -18.0160   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.3640  -16.6830  -16.5490   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.3990  -15.6270  -17.5280   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.9200  -16.1510  -15.2040   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.2660  -15.6640  -15.3800   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.9120  -17.2890  -14.1730   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.8040  -18.3330  -14.6730   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.3990  -16.8750  -12.7870   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.1650  -17.9440  -11.8680   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.1880  -19.3960  -17.2780   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.5030  -20.5080  -18.0620   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2 13  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  4 13  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+3SUS_GNL_A_2000
+
+>  <ChemCompId>
+GNL
+
+>  <PdbId>
+3SUS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2000
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O4 S
+
+>  <Name>
+(3aR,5R,6R,7R,7aR)-5-(hydroxymethyl)-2-methyl-5,6,7,7a-tetrahydro-3aH-pyrano[3,2-d][1,3]thiazole-6,7-diol
+
+>  <SystematicName>
+(3aR,5R,6R,7R,7aR)-5-(hydroxymethyl)-2-methyl-5,6,7,7a-tetrahydro-3aH-pyrano[3,2-d][1,3]thiazole-6,7-diol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H13 N O4 S
+
+>  <MolecularWeight>
+219.258
+
+>  <ModifiedDate>
+2012-06-01
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H13NO4S/c1-3-9-5-7(12)6(11)4(2-10)13-8(5)14-3/h4-8,10-12H,2H2,1H3/t4-,5-,6+,7-,8-/m1/s1
+
+>  <InChIKey>
+DRHXTSWSUAJOJZ-JAJWTYFOSA-N
+
+>  <SMILES>
+CC1=N[C@@H]2[C@H]([C@H]([C@H](O[C@@H]2S1)CO)O)O
+
+$$$$

@@ -1,0 +1,101 @@
+4AIA_ADK_A_400
+  RCSB PDB08012021073D
+Coordinates from PDB:4AIA:A:400 Model:1 without hydrogens
+ 11 12  0  0  0  0            999 V2000
+   30.5610  -19.8250    2.7660   N 0  0  0  0  0  0  0  0  0  0  0  0
+   29.7040  -20.8150    2.4760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.9060  -22.1390    2.2820   N 0  0  0  0  0  0  0  0  0  0  0  0
+   28.8360  -22.9570    1.9950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.6130  -22.4810    1.9080   N 0  0  0  0  0  0  0  0  0  0  0  0
+   27.4230  -21.1340    2.1200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.1920  -20.6440    2.0520   N 0  0  0  0  0  0  0  0  0  0  0  0
+   28.4630  -20.3160    2.4140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.5560  -19.0100    2.6660   N 0  0  0  0  0  0  0  0  0  0  0  0
+   29.8380  -18.6900    2.8940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.2850  -22.7350    2.3440   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+4AIA_ADK_A_400
+
+>  <ChemCompId>
+ADK
+
+>  <PdbId>
+4AIA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+400
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N5
+
+>  <Name>
+3-METHYL-3H-PURIN-6-YLAMINE
+
+>  <SystematicName>
+3-methylpurin-6-amine
+
+>  <Synonyms>
+3-METHYLADENINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H7 N5
+
+>  <MolecularWeight>
+149.153
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H7N5/c1-11-3-10-5(7)4-6(11)9-2-8-4/h2-3H,7H2,1H3
+
+>  <InChIKey>
+FSASIHFSFGAIJM-UHFFFAOYSA-N
+
+>  <SMILES>
+Cn1cnc(c-2ncnc12)N
+
+$$$$

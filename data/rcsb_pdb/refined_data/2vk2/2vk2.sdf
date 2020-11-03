@@ -1,0 +1,102 @@
+2VK2_GZL_A_1298
+  RCSB PDB08012018023D
+Coordinates from PDB:2VK2:A:1298 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   34.3220   26.9450   14.7440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.8010   26.6480   13.5370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.0400   27.6390   12.6760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.1000   29.1180   12.9430   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.2940   29.7790   11.8100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.9660   26.0270   15.4710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.8690   25.3890   13.0900   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.4680   27.5390   11.3110   O 0  0  0  0  0  0  0  0  0  0  0  0
+   32.8910   29.6460   14.1440   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.5140   28.8280   10.6890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.3350   31.0980   11.6130   O 0  0  0  0  0  0  0  0  0  0  0  0
+   32.4950   28.9300    9.7000   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5 10  1  0  0  0  0
+  5 11  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 10 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+2VK2_GZL_A_1298
+
+>  <ChemCompId>
+GZL
+
+>  <PdbId>
+2VK2
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1298
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O6
+
+>  <Name>
+beta-D-galactofuranose
+
+>  <SystematicName>
+(2R,5S)-5-(1,2-dihydroxyethyl)oxolane-2,3,4-triol
+
+>  <Synonyms>
+beta-D-galactose; D-galactose; galactose
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C6 H12 O6
+
+>  <MolecularWeight>
+180.156
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C6H12O6/c7-1-2(8)5-3(9)4(10)6(11)12-5/h2-11H,1H2/t2-,3-,4-,5+,6-/m1/s1
+
+>  <InChIKey>
+AVVWPBAENSWJCB-DGPNFKTASA-N
+
+>  <SMILES>
+C(C([C@H]1C(C([C@@H](O1)O)O)O)O)O
+
+$$$$

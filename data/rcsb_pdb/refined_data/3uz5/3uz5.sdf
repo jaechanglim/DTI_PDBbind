@@ -1,0 +1,101 @@
+3UZ5_0CU_A_291
+  RCSB PDB08012020443D
+Coordinates from PDB:3UZ5:A:291 Model:1 without hydrogens
+ 11 12  0  0  0  0            999 V2000
+   21.1480    0.2970    7.1730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.2750   -0.6720    6.8550   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.8650   -0.4370    5.6970   N 0  0  0  0  0  0  0  0  0  0  0  0
+   20.3720    0.6020    5.1920   N 0  0  0  0  0  0  0  0  0  0  0  0
+   21.2000    1.1480    6.0710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.9950    2.2760    6.0660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.7460    2.5020    7.2050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.7340    3.8940    7.2520  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   22.7260    1.6610    8.3150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.8920    0.5550    8.3170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.8180   -0.5640    9.6560  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+ 11 10  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  1  0  0  0  0
+  3  4  2  0  0  0  0
+ 10  1  2  0  0  0  0
+ 10  9  1  0  0  0  0
+  1  5  1  0  0  0  0
+  4  5  1  0  0  0  0
+  9  7  2  0  0  0  0
+  5  6  2  0  0  0  0
+  7  6  1  0  0  0  0
+  7  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+3UZ5_0CU_A_291
+
+>  <ChemCompId>
+0CU
+
+>  <PdbId>
+3UZ5
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+291
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N3 Cl2
+
+>  <Name>
+5,7-dichloro-1H-benzotriazole
+
+>  <SystematicName>
+5,7-bis(chloranyl)-1H-benzotriazole
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H3 Cl2 N3
+
+>  <MolecularWeight>
+188.014
+
+>  <ModifiedDate>
+2012-06-01
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H3Cl2N3/c7-3-1-4(8)6-5(2-3)9-11-10-6/h1-2H,(H,9,10,11)
+
+>  <InChIKey>
+JIEIAVACOCLACU-UHFFFAOYSA-N
+
+>  <SMILES>
+c1c(cc(c2c1nn[nH]2)Cl)Cl
+
+$$$$

@@ -1,0 +1,91 @@
+5AVF_TAU_A_501
+  RCSB PDB08022000493D
+Coordinates from PDB:5AVF:A:501 Model:1 without hydrogens
+  7  6  0  0  0  0            999 V2000
+   24.2800  141.5860  146.1420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.8320  142.8770  145.4200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.0530  140.4160  145.2930   N 0  0  0  0  0  0  0  0  0  0  0  0
+   24.9530  143.4550  144.2830   S 0  0  0  0  0  0  0  0  0  0  0  0
+   24.3980  144.6820  143.6880   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.2020  143.8080  144.9910   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.2030  142.4030  143.2950   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4  6  1  0  0  0  0
+  4  7  2  0  0  0  0
+M  END
+>  <InstanceId>
+5AVF_TAU_A_501
+
+>  <ChemCompId>
+TAU
+
+>  <PdbId>
+5AVF
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+501
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O3 S
+
+>  <Name>
+2-AMINOETHANESULFONIC ACID
+
+>  <SystematicName>
+2-aminoethanesulfonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H7 N O3 S
+
+>  <MolecularWeight>
+125.147
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H7NO3S/c3-1-2-7(4,5)6/h1-3H2,(H,4,5,6)
+
+>  <InChIKey>
+XOAAWQZATWQOTB-UHFFFAOYSA-N
+
+>  <SMILES>
+C(CS(=O)(=O)O)N
+
+$$$$

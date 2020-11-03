@@ -1,0 +1,113 @@
+3G30_G30_A_1
+  RCSB PDB08012019043D
+Coordinates from PDB:3G30:A:1 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   29.0860   41.1310   96.9280   F 0  0  0  0  0  0  0  0  0  0  0  0
+   28.2640   41.1230   95.8540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.8170   41.0060   94.5780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.0130   41.0020   93.4450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.6260   41.1070   93.5820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.8390   41.0910   92.4970   F 0  0  0  0  0  0  0  0  0  0  0  0
+   26.8730   41.2340   96.0350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.0120   41.2360   94.9280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.6590   41.3230   94.9960   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.9540   42.0920   95.8330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.3470   42.3120   96.9770   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.6670   42.7550   95.3370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.5450   42.0450   94.5160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.4750   42.1010   96.0400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.6680   40.6060   94.0400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.6420   39.8730   93.9640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.7930   40.1930   93.6830   O 0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  0  0  0  0
+  3  2  2  0  0  0  0
+  2  7  1  0  0  0  0
+  4  3  1  0  0  0  0
+  4  5  2  0  0  0  0
+  6  5  1  0  0  0  0
+  5  8  1  0  0  0  0
+  8  7  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 12 10  1  0  0  0  0
+ 10 11  2  0  0  0  0
+ 13 12  1  0  0  0  0
+ 12 14  1  0  0  0  0
+ 15 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 17 15  2  0  0  0  0
+ 16 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+3G30_G30_A_1
+
+>  <ChemCompId>
+G30
+
+>  <PdbId>
+3G30
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N O3 F2
+
+>  <Name>
+(1S,2R)-2-[(2,5-difluorophenyl)carbamoyl]cyclopropanecarboxylic acid
+
+>  <SystematicName>
+(1S,2R)-2-[(2,5-difluorophenyl)carbamoyl]cyclopropane-1-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H9 F2 N O3
+
+>  <MolecularWeight>
+241.191
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H9F2NO3/c12-5-1-2-8(13)9(3-5)14-10(15)6-4-7(6)11(16)17/h1-3,6-7H,4H2,(H,14,15)(H,16,17)/t6-,7+/m1/s1
+
+>  <InChIKey>
+QTWGHTBKFVANGX-RQJHMYQMSA-N
+
+>  <SMILES>
+c1cc(c(cc1F)NC(=O)[C@@H]2C[C@@H]2C(=O)O)F
+
+$$$$

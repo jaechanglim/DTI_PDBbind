@@ -1,0 +1,107 @@
+3K5X_P8D_A_401
+  RCSB PDB08012019333D
+Coordinates from PDB:3K5X:A:401 Model:1 without hydrogens
+ 15 14  0  0  0  0            999 V2000
+  -24.9770   32.0890  -15.4850   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.7790   30.1720  -16.4460   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.4010   30.6870  -15.2160   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.6610   29.4480  -14.7410   P 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.2570   29.8510  -13.0780   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.7880   30.0400  -12.8560   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.6010   28.8240  -13.3640   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.0390   30.4630  -11.3930   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.6100   31.8570  -10.9160   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.0960   28.0730  -14.7130   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.8740   29.5180  -15.7730   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -29.8290   28.9360  -13.4050   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.9860   27.7990  -13.7320   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.8840   32.8360  -11.6360   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.0080   31.9010   -9.8270   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  2  0  0  0  0
+  4 11  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  7 12  1  0  0  0  0
+  7 13  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 14  1  0  0  0  0
+  9 15  2  0  0  0  0
+M  END
+>  <InstanceId>
+3K5X_P8D_A_401
+
+>  <ChemCompId>
+P8D
+
+>  <PdbId>
+3K5X
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O6 P
+
+>  <Name>
+phosphinate pseudodipeptide L-Ala-D-Asp
+
+>  <SystematicName>
+(2R)-2-[[[(1R)-1-azanylethyl]-hydroxy-phosphoryl]methyl]butanedioic acid
+
+>  <Synonyms>
+(2R)-2-{[(R)-[(1R)-1-aminoethyl](hydroxy)phosphoryl]methyl}butanedioic acid
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H14 N O6 P
+
+>  <MolecularWeight>
+239.163
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H14NO6P/c1-4(8)15(13,14)3-5(7(11)12)2-6(9)10/h4-5H,2-3,8H2,1H3,(H,9,10)(H,11,12)(H,13,14)/t4-,5+/m1/s1
+
+>  <InChIKey>
+LWODXTSWCZWQHR-UHNVWZDZSA-N
+
+>  <SMILES>
+C[C@H](N)[P@@](=O)(C[C@H](CC(=O)O)C(=O)O)O
+
+$$$$

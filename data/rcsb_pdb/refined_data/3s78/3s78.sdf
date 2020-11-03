@@ -1,0 +1,96 @@
+3S78_EVJ_B_1
+  RCSB PDB08012020263D
+Coordinates from PDB:3S78:B:1 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   15.1890    1.0860   16.7460   S 0  0  0  0  0  0  0  0  0  0  0  0
+   13.7220    1.2040   16.7090   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.7410    3.7540   15.5160   S 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7350    2.4350   15.9070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7090    1.1490   18.1090   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.0180    2.7150   15.4410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.1310    3.9740   14.7950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.9370    4.7100   14.7420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6570   -0.2200   16.0090   N 0  0  0  0  0  0  0  0  0  0  0  0
+  4  1  1  0  0  0  0
+  5  1  2  0  0  0  0
+  2  1  2  0  0  0  0
+  1  9  1  0  0  0  0
+  8  3  1  0  0  0  0
+  4  3  1  0  0  0  0
+  6  4  2  0  0  0  0
+  7  6  1  0  0  0  0
+  7  8  2  0  0  0  0
+M  END
+>  <InstanceId>
+3S78_EVJ_B_1
+
+>  <ChemCompId>
+EVJ
+
+>  <PdbId>
+3S78
+
+>  <ChainId>
+B
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N O2 S2
+
+>  <Name>
+thiophene-2-sulfonamide
+
+>  <SystematicName>
+thiophene-2-sulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H5 N O2 S2
+
+>  <MolecularWeight>
+163.218
+
+>  <ModifiedDate>
+2011-10-14
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H5NO2S2/c5-9(6,7)4-2-1-3-8-4/h1-3H,(H2,5,6,7)
+
+>  <InChIKey>
+KTFDYVNEGTXQCV-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(sc1)S(=O)(=O)N
+
+$$$$

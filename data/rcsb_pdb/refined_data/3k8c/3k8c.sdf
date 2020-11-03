@@ -1,0 +1,105 @@
+3K8C_RES_A_160
+  RCSB PDB08012019343D
+Coordinates from PDB:3K8C:A:160 Model:1 without hydrogens
+ 14 13  0  0  0  0            999 V2000
+   43.3420   29.4030   13.9430   O 0  0  0  0  0  0  0  0  0  0  0  0
+   42.8750   29.3410   12.5080   P 0  0  0  0  0  0  0  0  0  0  0  0
+   43.5170   28.2360   11.7370   O 0  0  0  0  0  0  0  0  0  0  0  0
+   42.7470   30.6890   11.8190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   41.3290   28.8380   12.6630   O 0  0  0  0  0  0  0  0  0  0  0  0
+   40.2460   29.7510   12.9070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   39.0120   28.9000   13.1820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   39.2770   28.0340   14.2890   O 0  0  0  0  0  0  0  0  0  0  0  0
+   37.7080   29.6540   13.4520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   37.6510   30.8890   12.7220   O 0  0  0  0  0  0  0  0  0  0  0  0
+   36.5660   28.7040   13.1410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.4010   28.1380   12.0600   O 0  0  0  0  0  0  0  0  0  0  0  0
+   35.7500   28.4440   14.1500   N 0  0  0  0  0  0  0  0  0  0  0  0
+   34.7040   27.5710   13.9200   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 11 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+3K8C_RES_A_160
+
+>  <ChemCompId>
+RES
+
+>  <PdbId>
+3K8C
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+160
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N O8 P
+
+>  <Name>
+4-PHOSPHO-D-ERYTHRONOHYDROXAMIC ACID
+
+>  <SystematicName>
+[(2R,3R)-2,3-dihydroxy-4-(hydroxyamino)-4-oxo-butyl] dihydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H10 N O8 P
+
+>  <MolecularWeight>
+231.098
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H10NO8P/c6-2(1-13-14(10,11)12)3(7)4(8)5-9/h2-3,6-7,9H,1H2,(H,5,8)(H2,10,11,12)/t2-,3-/m1/s1
+
+>  <InChIKey>
+JJQQOJRGUHNREK-PWNYCUMCSA-N
+
+>  <SMILES>
+C([C@H]([C@H](C(=O)NO)O)O)OP(=O)(O)O
+
+$$$$

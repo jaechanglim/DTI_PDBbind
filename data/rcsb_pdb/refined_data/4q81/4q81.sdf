@@ -1,0 +1,98 @@
+4Q81_7MH_A_303
+  RCSB PDB08012022583D
+Coordinates from PDB:4Q81:A:303 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   17.0950    1.3910   12.4500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3690    1.8500   13.6830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.9930    3.1580   13.8090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3690    3.5910   14.9640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9470    5.0430   15.1000   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0720    2.6980   15.9530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4410    1.3790   15.8200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0650    0.2340   17.0870   S 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1420    0.9710   14.7110   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5470   -0.3030   14.6050   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  9  1  0  0  0  0
+  3  4  1  0  0  0  0
+ 10  9  1  0  0  0  0
+  9  7  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  2  0  0  0  0
+  7  6  1  0  0  0  0
+  7  8  2  0  0  0  0
+M  END
+>  <InstanceId>
+4Q81_7MH_A_303
+
+>  <ChemCompId>
+7MH
+
+>  <PdbId>
+4Q81
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O S
+
+>  <Name>
+1-hydroxy-4,6-dimethylpyridine-2(1H)-thione
+
+>  <SystematicName>
+4,6-dimethyl-1-oxidanyl-pyridine-2-thione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H9 N O S
+
+>  <MolecularWeight>
+155.217
+
+>  <ModifiedDate>
+2015-03-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H9NOS/c1-5-3-6(2)8(9)7(10)4-5/h3-4,9H,1-2H3
+
+>  <InChIKey>
+OZNBIIYHOPDSLX-UHFFFAOYSA-N
+
+>  <SMILES>
+CC1=CC(=S)N(C(=C1)C)O
+
+$$$$

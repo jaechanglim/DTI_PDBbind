@@ -1,0 +1,98 @@
+3PPR_4CS_A_401
+  RCSB PDB08012020103D
+Coordinates from PDB:3PPR:A:401 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   31.7120   12.8040    9.9750   O 0  0  0  0  0  0  0  0  0  0  0  0
+   32.5830   13.2390    9.3870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.7780   12.6640    9.4210   O 0  0  0  0  0  0  0  0  0  0  0  0
+   32.5220   14.6700    8.8700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.7870   15.3830    9.2650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.7550   16.8290    8.8800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.4780   17.4300    9.1480   N 0  0  0  0  0  0  0  0  0  0  0  0
+   31.3980   16.6850    9.6700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.1910   17.3770   10.2750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.3440   15.2880    9.3970   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+3PPR_4CS_A_401
+
+>  <ChemCompId>
+4CS
+
+>  <PdbId>
+3PPR
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N2 O2
+
+>  <Name>
+(4S)-2-METHYL-1,4,5,6-TETRAHYDROPYRIMIDINE-4-CARBOXYLIC ACID
+
+>  <SystematicName>
+(4S)-2-methyl-1,4,5,6-tetrahydropyrimidine-4-carboxylic acid
+
+>  <Synonyms>
+ECTOINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H10 N2 O2
+
+>  <MolecularWeight>
+142.156
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C6H10N2O2/c1-4-7-3-2-5(8-4)6(9)10/h5H,2-3H2,1H3,(H,7,8)(H,9,10)/t5-/m0/s1
+
+>  <InChIKey>
+WQXNXVUDBPYKBA-YFKPBYRVSA-N
+
+>  <SMILES>
+CC1=N[C@@H](CCN1)C(=O)O
+
+$$$$

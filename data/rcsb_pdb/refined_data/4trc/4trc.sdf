@@ -1,0 +1,99 @@
+4TRC_ADE_A_301
+  RCSB PDB08012023173D
+Coordinates from PDB:4TRC:A:301 Model:1 without hydrogens
+ 10 11  0  0  0  0            999 V2000
+   41.6440   34.4080  -11.4140   N 0  0  0  0  0  0  0  0  0  0  0  0
+   41.9310   33.6110  -12.5560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   42.8670   34.2360  -13.2660   N 0  0  0  0  0  0  0  0  0  0  0  0
+   43.1800   35.3950  -12.6170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.0880   36.4190  -12.9150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.8730   36.3520  -14.0980   N 0  0  0  0  0  0  0  0  0  0  0  0
+   44.2140   37.4840  -12.0840   N 0  0  0  0  0  0  0  0  0  0  0  0
+   43.4570   37.5580  -10.9740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   42.5210   36.4960  -10.6480   N 0  0  0  0  0  0  0  0  0  0  0  0
+   42.4000   35.4750  -11.4580   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+4TRC_ADE_A_301
+
+>  <ChemCompId>
+ADE
+
+>  <PdbId>
+4TRC
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N5
+
+>  <Name>
+ADENINE
+
+>  <SystematicName>
+9H-purin-6-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H5 N5
+
+>  <MolecularWeight>
+135.127
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H5N5/c6-4-3-5(9-1-7-3)10-2-8-4/h1-2H,(H3,6,7,8,9,10)
+
+>  <InChIKey>
+GFFGJBXGBJISGV-UHFFFAOYSA-N
+
+>  <SMILES>
+c1[nH]c2c(n1)c(ncn2)N
+
+$$$$

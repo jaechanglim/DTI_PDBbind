@@ -1,0 +1,109 @@
+5FDC_5WN_A_302
+  RCSB PDB08022001213D
+Coordinates from PDB:5FDC:A:302 Model:1 without hydrogens
+ 15 16  0  0  0  0            999 V2000
+   -5.4850    0.8080   16.6230   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.7660    1.2500   16.1610   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2070    0.7620   18.0240   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1940   -0.6550   16.0200   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3540    1.7870   16.0160   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0350    5.6080   13.7600   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9900    3.9390   14.2090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7630    3.4010   14.2220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7450    4.3660   13.8520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3150    5.6460   13.5630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3100    4.2300   13.7350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5370    5.3190   13.3550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1210    6.5770   13.0720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5300    6.7590   13.1740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4790    1.9650   14.5780   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 13 14  2  0  0  0  0
+ 13 12  1  0  0  0  0
+ 14 10  1  0  0  0  0
+ 12 11  2  0  0  0  0
+ 10  6  1  0  0  0  0
+ 10  9  2  0  0  0  0
+ 11  9  1  0  0  0  0
+  6  7  1  0  0  0  0
+  9  8  1  0  0  0  0
+  7  8  2  0  0  0  0
+  8 15  1  0  0  0  0
+ 15  5  1  0  0  0  0
+  5  1  1  0  0  0  0
+  4  1  1  0  0  0  0
+  2  1  2  0  0  0  0
+  1  3  2  0  0  0  0
+M  END
+>  <InstanceId>
+5FDC_5WN_A_302
+
+>  <ChemCompId>
+5WN
+
+>  <PdbId>
+5FDC
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N2 O2 S2
+
+>  <Name>
+3-[(sulfamoylamino)methyl]-1-benzothiophene
+
+>  <SystematicName>
+3-[(sulfamoylamino)methyl]-1-benzothiophene
+
+>  <Synonyms>
+JNJ-26990990
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H10 N2 O2 S2
+
+>  <MolecularWeight>
+242.318
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H10N2O2S2/c10-15(12,13)11-5-7-6-14-9-4-2-1-3-8(7)9/h1-4,6,11H,5H2,(H2,10,12,13)
+
+>  <InChIKey>
+AWSKBQNOSRREEY-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)c(cs2)CNS(=O)(=O)N
+
+$$$$

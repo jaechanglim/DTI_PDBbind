@@ -1,0 +1,111 @@
+4MO8_2VQ_A_302
+  RCSB PDB08012022323D
+Coordinates from PDB:4MO8:A:302 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   -5.2720    1.0160   16.3920   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6950    1.3190   17.6640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.6160    1.4200   16.1170   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2660    1.7550   15.3610   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3770    1.4240   13.9240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7620    2.6430   13.1590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0370    5.6360   14.2580   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8430    3.0400   12.0910   N 0  3  0  0  0  0  0  0  0  0  0  0
+   -2.5170    3.8890   12.9950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0460    5.0460   13.5560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0960    4.8550   14.1470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3780    5.0870   14.8300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8330    3.7600   13.3880   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6440    3.2610   11.9030   O 0  5  0  0  0  0  0  0  0  0  0  0
+   -2.4650    2.1620   11.4940   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1640   -0.5580   16.1400   N 0  0  0  0  0  0  0  0  0  0  0  0
+ 15  8  2  0  0  0  0
+ 14  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 13  1  0  0  0  0
+  9 10  2  0  0  0  0
+  6 13  1  0  0  0  0
+  6  5  1  0  0  0  0
+ 13 11  1  0  0  0  0
+ 10  7  1  0  0  0  0
+  5  4  1  0  0  0  0
+ 11  7  2  0  0  0  0
+ 11 12  1  0  0  0  0
+  4  1  1  0  0  0  0
+  3  1  2  0  0  0  0
+ 16  1  1  0  0  0  0
+  1  2  2  0  0  0  0
+M  CHG  2   8   1  14  -1
+M  END
+>  <InstanceId>
+4MO8_2VQ_A_302
+
+>  <ChemCompId>
+2VQ
+
+>  <PdbId>
+4MO8
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N5 O4 S
+
+>  <Name>
+N-[2-(2-methyl-5-nitro-1H-imidazol-1-yl)ethyl]sulfamide
+
+>  <SystematicName>
+2-methyl-5-nitro-1-[2-(sulfamoylamino)ethyl]imidazole
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H11 N5 O4 S
+
+>  <MolecularWeight>
+249.248
+
+>  <ModifiedDate>
+2013-10-25
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H11N5O4S/c1-5-8-4-6(11(12)13)10(5)3-2-9-16(7,14)15/h4,9H,2-3H2,1H3,(H2,7,14,15)
+
+>  <InChIKey>
+AVSMSXHPIYIKIJ-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1ncc(n1CCNS(=O)(=O)N)[N+](=O)[O-]
+
+$$$$

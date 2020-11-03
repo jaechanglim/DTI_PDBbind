@@ -1,0 +1,102 @@
+3P58_P58_A_263
+  RCSB PDB08012020063D
+Coordinates from PDB:3P58:A:263 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   -6.0560    3.8860   15.0950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.3050    1.7730   16.8420   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.9680    0.0320   16.2240   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8820    1.1590   10.4940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7370    2.5580   10.7550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6980    0.2420   11.5640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4700    3.0050   12.0660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4200    0.6900   12.8780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0060    2.4630   14.5590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6820    1.6540   16.2110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2880    2.0620   13.1080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2840    2.6460   15.2760   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1 12  1  0  0  0  0
+ 10  2  1  0  0  0  0
+ 10  3  2  0  0  0  0
+  4  5  2  0  0  0  0
+  4  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  7 11  2  0  0  0  0
+  8 11  1  0  0  0  0
+ 11  9  1  0  0  0  0
+  9 12  1  0  0  0  0
+ 12 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+3P58_P58_A_263
+
+>  <ChemCompId>
+P58
+
+>  <PdbId>
+3P58
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+263
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N S2
+
+>  <Name>
+benzyl(methyl)carbamodithioic acid
+
+>  <SystematicName>
+methyl(phenylmethyl)carbamodithioic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H11 N S2
+
+>  <MolecularWeight>
+197.32
+
+>  <ModifiedDate>
+2011-10-14
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H11NS2/c1-10(9(11)12)7-8-5-3-2-4-6-8/h2-6H,7H2,1H3,(H,11,12)
+
+>  <InChIKey>
+KVRJHAJGPHILSK-UHFFFAOYSA-N
+
+>  <SMILES>
+CN(Cc1ccccc1)C(=S)S
+
+$$$$

@@ -1,0 +1,96 @@
+3S75_EVG_B_1
+  RCSB PDB08012020263D
+Coordinates from PDB:3S75:B:1 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   17.0670    2.5030   16.0570   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0520    0.9700   16.9280   S 0  0  0  0  0  0  0  0  0  0  0  0
+   13.5960    1.0410   16.7320   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7100    2.3280   16.1050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5330    1.0750   18.2480   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0260    3.4050   15.4380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0610    4.2190   14.9220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.2940    3.6920   15.2910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6060   -0.3130   16.2160   N 0  0  0  0  0  0  0  0  0  0  0  0
+  8  1  1  0  0  0  0
+  4  1  1  0  0  0  0
+  4  2  1  0  0  0  0
+  5  2  2  0  0  0  0
+  2  3  2  0  0  0  0
+  2  9  1  0  0  0  0
+  6  4  2  0  0  0  0
+  7  6  1  0  0  0  0
+  7  8  2  0  0  0  0
+M  END
+>  <InstanceId>
+3S75_EVG_B_1
+
+>  <ChemCompId>
+EVG
+
+>  <PdbId>
+3S75
+
+>  <ChainId>
+B
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N O3 S
+
+>  <Name>
+furan-2-sulfonamide
+
+>  <SystematicName>
+furan-2-sulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H5 N O3 S
+
+>  <MolecularWeight>
+147.152
+
+>  <ModifiedDate>
+2011-10-14
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H5NO3S/c5-9(6,7)4-2-1-3-8-4/h1-3H,(H2,5,6,7)
+
+>  <InChIKey>
+RHBMVXBGYGIDJN-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(oc1)S(=O)(=O)N
+
+$$$$

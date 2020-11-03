@@ -1,0 +1,105 @@
+5EW0_3C7_A_302
+  RCSB PDB08022001173D
+Coordinates from PDB:5EW0:A:302 Model:1 without hydrogens
+ 13 14  0  0  0  0            999 V2000
+    3.8560   -0.6710   86.3190   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.6950    1.5430   88.6450   O 0  0  0  0  0  0  0  0  0  0  0  0
+    5.0040    0.8930   87.6460   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.4720    1.4280   86.6200   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.7060   -0.6460   87.5650   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0120   -0.8070   88.8450   N 0  0  0  0  0  0  0  0  0  0  0  0
+    4.3690   -2.2170   89.2750   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.6530   -2.1630   90.1660   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3240   -1.4300   91.7930   S 0  0  0  0  0  0  0  0  0  0  0  0
+    2.3340   -1.3840   86.8740   S 0  0  0  0  0  0  0  0  0  0  0  0
+    2.5540   -0.7980   88.5750   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8280   -1.5650   89.6940   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8980   -2.9490   89.9850   S 0  0  0  0  0  0  0  0  0  0  0  0
+  4  3  2  0  0  0  0
+  3  5  1  0  0  0  0
+  3  2  1  0  0  0  0
+  9  8  1  0  0  0  0
+  5  1  1  0  0  0  0
+  5  6  1  0  0  0  0
+  1 10  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  1  0  0  0  0
+  8  7  1  0  0  0  0
+  7 13  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 13 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+5EW0_3C7_A_302
+
+>  <ChemCompId>
+3C7
+
+>  <PdbId>
+5EW0
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O2 S3
+
+>  <Name>
+(3R,5R,7aS)-5-(sulfanylmethyl)tetrahydro[1,3]thiazolo[4,3-b][1,3]thiazole-3-carboxylic acid
+
+>  <SystematicName>
+(3R,5R,7aS)-5-(sulfanylmethyl)-3,5,7,7a-tetrahydro-2H-[1,3]thiazolo[3,2-c][1,3]thiazole-3-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H11 N O2 S3
+
+>  <MolecularWeight>
+237.363
+
+>  <ModifiedDate>
+2014-09-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H11NO2S3/c9-7(10)4-2-12-6-3-13-5(1-11)8(4)6/h4-6,11H,1-3H2,(H,9,10)/t4-,5+,6-/m0/s1
+
+>  <InChIKey>
+ZTWVMVSSSBGFHH-JKUQZMGJSA-N
+
+>  <SMILES>
+C1[C@H](N2[C@@H](S1)CS[C@@H]2CS)C(=O)O
+
+$$$$

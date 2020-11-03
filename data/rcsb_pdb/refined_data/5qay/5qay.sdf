@@ -1,0 +1,109 @@
+5QAY_X6P_A_301
+  RCSB PDB08022002503D
+Coordinates from PDB:5QAY:A:301 Model:1 without hydrogens
+ 15 16  0  0  0  0            999 V2000
+   14.2840  -90.8050  150.8660   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2070  -91.2820  149.8360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.3110  -96.8690  149.8290   O 0  0  0  0  0  0  0  0  0  0  0  0
+   12.9450  -91.1680  151.0400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.5340  -89.6820  152.6350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6230  -89.9060  151.8460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.2420  -92.1870  150.2410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.5640  -91.8940  149.0620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.9280  -92.9010  148.3550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.9550  -94.2030  148.8250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.6180  -94.5070  150.0090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.5840  -95.8950  150.5890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.2690  -93.4960  150.7070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.4760  -90.4720  152.1330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.8380  -95.9830  151.8050   O 0  0  0  0  0  0  0  0  0  0  0  0
+  9 10  2  0  0  0  0
+  9  8  1  0  0  0  0
+ 10 11  1  0  0  0  0
+  8  7  2  0  0  0  0
+  3 12  2  0  0  0  0
+  2  1  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11 13  2  0  0  0  0
+  7 13  1  0  0  0  0
+  7  4  1  0  0  0  0
+ 12 15  1  0  0  0  0
+  1  4  1  0  0  0  0
+  1  6  1  0  0  0  0
+  4 14  2  0  0  0  0
+  6  5  2  0  0  0  0
+ 14  5  1  0  0  0  0
+M  END
+>  <InstanceId>
+5QAY_X6P_A_301
+
+>  <ChemCompId>
+X6P
+
+>  <PdbId>
+5QAY
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N O2
+
+>  <Name>
+3-(1-methylpyrrol-2-yl)benzoic acid
+
+>  <SystematicName>
+3-(1-methylpyrrol-2-yl)benzoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H11 N O2
+
+>  <MolecularWeight>
+201.221
+
+>  <ModifiedDate>
+2018-01-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H11NO2/c1-13-7-3-6-11(13)9-4-2-5-10(8-9)12(14)15/h2-8H,1H3,(H,14,15)
+
+>  <InChIKey>
+UIRGFNLTEWMULM-UHFFFAOYSA-N
+
+>  <SMILES>
+Cn1cccc1c2cccc(c2)C(=O)O
+
+$$$$

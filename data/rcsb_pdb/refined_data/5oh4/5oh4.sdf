@@ -1,0 +1,94 @@
+5OH4_9UZ_A_202
+  RCSB PDB08022002413D
+Coordinates from PDB:5OH4:A:202 Model:1 without hydrogens
+  8  8  0  0  0  0            999 V2000
+   21.3260   15.8530   -7.4900   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.3820   16.4900   -7.4660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.3780   16.0840   -8.2120   N 0  0  0  0  0  0  0  0  0  0  0  0
+   22.5980   17.7140   -6.5940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.7110   18.6190   -7.1340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.9440   17.8610   -7.5800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.5990   16.5700   -8.2650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.4470   15.9540   -8.8880   O 0  0  0  0  0  0  0  0  0  0  0  0
+  8  7  2  0  0  0  0
+  7  3  1  0  0  0  0
+  7  6  1  0  0  0  0
+  3  2  1  0  0  0  0
+  6  5  1  0  0  0  0
+  1  2  2  0  0  0  0
+  2  4  1  0  0  0  0
+  5  4  1  0  0  0  0
+M  END
+>  <InstanceId>
+5OH4_9UZ_A_202
+
+>  <ChemCompId>
+9UZ
+
+>  <PdbId>
+5OH4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+202
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N O2
+
+>  <Name>
+piperidine-2,6-dione
+
+>  <SystematicName>
+piperidine-2,6-dione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H7 N O2
+
+>  <MolecularWeight>
+113.115
+
+>  <ModifiedDate>
+2018-10-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H7NO2/c7-4-2-1-3-5(8)6-4/h1-3H2,(H,6,7,8)
+
+>  <InChIKey>
+KNCYXPMJDCCGSJ-UHFFFAOYSA-N
+
+>  <SMILES>
+C1CC(=O)NC(=O)C1
+
+$$$$

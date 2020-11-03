@@ -1,0 +1,112 @@
+3KMX_G00_A_501
+  RCSB PDB08012019363D
+Coordinates from PDB:3KMX:A:501 Model:1 without hydrogens
+ 17 17  0  0  0  0            999 V2000
+   24.4870   11.2810   20.2330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.4530    8.8070   24.6810   N 0  0  0  0  0  0  0  0  0  0  0  0
+   25.6050   11.8530   19.6080   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.4300   10.5390   23.6510   S 0  0  0  0  0  0  0  0  0  0  0  0
+   23.1830   13.4880   19.3380  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   24.5610   10.0300   20.9290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.8010   10.8630   25.7860   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4070    9.4880   21.5660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.1650   10.1840   21.5110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.0840   11.4300   20.8220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.2400   11.9680   20.1880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.7140   10.9650   19.4430   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.8650   11.4180   20.3380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.6880   10.2350   20.8140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.5140   10.5600   22.0620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.9360    9.5880   22.1700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.6760    9.9830   24.7750   C 0  0  0  0  0  0  0  0  0  0  0  0
+  3  1  1  0  0  0  0
+ 11  1  2  0  0  0  0
+  1  6  1  0  0  0  0
+  2 17  2  0  0  0  0
+ 12  3  1  0  0  0  0
+ 16  4  1  0  0  0  0
+  4 17  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6  8  2  0  0  0  0
+ 17  7  1  0  0  0  0
+  9  8  1  0  0  0  0
+ 10  9  2  0  0  0  0
+  9 16  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+3KMX_G00_A_501
+
+>  <ChemCompId>
+G00
+
+>  <PdbId>
+3KMX
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+501
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N2 O S Cl
+
+>  <Name>
+4-butoxy-3-chlorobenzyl imidothiocarbamate
+
+>  <SystematicName>
+(4-butoxy-3-chloro-phenyl)methyl carbamimidothioate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H17 Cl N2 O S
+
+>  <MolecularWeight>
+272.794
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H17ClN2OS/c1-2-3-6-16-11-5-4-9(7-10(11)13)8-17-12(14)15/h4-5,7H,2-3,6,8H2,1H3,(H3,14,15)
+
+>  <InChIKey>
+IONZMLSFEITLRK-UHFFFAOYSA-N
+
+>  <SMILES>
+[H]/N=C(/N)\SCc1ccc(c(c1)Cl)OCCCC
+
+$$$$

@@ -1,0 +1,111 @@
+2XDX_WOE_A_1224
+  RCSB PDB08012018153D
+Coordinates from PDB:2XDX:A:1224 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+    7.8430    1.1960   11.3880   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.1520    0.0690   10.8440   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.6110    0.1980    9.5910   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.0840    1.3720    9.0780   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.5590    1.3950    7.8060   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.5890    0.2530    7.0220   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.1200   -0.9240    7.5200   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.6510   -0.9650    8.8020   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.2110   -2.2400    9.3090   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1140   -2.9860    8.5920   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.5540   -4.1750    9.1470   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.6710   -5.1730    8.2680  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1690   -4.6230   10.3490   N 0  0  0  0  0  0  0  0  0  0  0  0
+    7.2720   -3.8210   11.0000   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.8410   -4.2230   12.2520   N 0  0  0  0  0  0  0  0  0  0  0  0
+    6.7980   -2.6350   10.5260   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  2  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+  9 16  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11 13  2  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 14 16  2  0  0  0  0
+M  END
+>  <InstanceId>
+2XDX_WOE_A_1224
+
+>  <ChemCompId>
+WOE
+
+>  <PdbId>
+2XDX
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1224
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N3 O Cl
+
+>  <Name>
+4-CHLORO-6-(2-METHOXYPHENYL)PYRIMIDIN-2-AMINE
+
+>  <SystematicName>
+4-chloro-6-(2-methoxyphenyl)pyrimidin-2-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C11 H10 Cl N3 O
+
+>  <MolecularWeight>
+235.67
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H10ClN3O/c1-16-9-5-3-2-4-7(9)8-6-10(12)15-11(13)14-8/h2-6H,1H3,(H2,13,14,15)
+
+>  <InChIKey>
+SYQGHXNIIBJJKO-UHFFFAOYSA-N
+
+>  <SMILES>
+COc1ccccc1c2cc(nc(n2)N)Cl
+
+$$$$

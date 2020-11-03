@@ -1,0 +1,104 @@
+5ELW_5LD_A_303
+  RCSB PDB08022001153D
+Coordinates from PDB:5ELW:A:303 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+  -41.0200  -24.3020   12.3270   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.4800  -23.6580   11.0740   P 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.0110  -23.2910   11.2320   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.6630  -24.4680    9.8230   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -41.4630  -22.1360   10.9120   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.9370  -21.0850    9.9450   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -41.7560  -19.8980   10.0310   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.9440  -21.4760    8.4910   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.9690  -20.6970    7.7070   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.8440  -19.3260    7.9170   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -38.9140  -18.9460    7.0170   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -38.4990  -20.0050    6.3010   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.1500  -21.0750    6.7360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  4  2  2  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  8  6  1  0  0  0  0
+  8  9  1  0  0  0  0
+  6  7  1  0  0  0  0
+ 13  9  1  0  0  0  0
+ 13 12  2  0  0  0  0
+  9 10  1  0  0  0  0
+ 12 11  1  0  0  0  0
+ 10 11  2  0  0  0  0
+M  END
+>  <InstanceId>
+5ELW_5LD_A_303
+
+>  <ChemCompId>
+5LD
+
+>  <PdbId>
+5ELW
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N3 O4 P
+
+>  <Name>
+[(2R)-2-hydroxy-3-(1H-1,2,4-triazol-1-yl)propyl]phosphonic acid
+
+>  <SystematicName>
+[(2R)-2-oxidanyl-3-(1,2,4-triazol-1-yl)propyl]phosphonic acid
+
+>  <Synonyms>
+(R)-C348
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H10 N3 O4 P
+
+>  <MolecularWeight>
+207.124
+
+>  <ModifiedDate>
+2019-09-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H10N3O4P/c9-5(2-13(10,11)12)1-8-4-6-3-7-8/h3-5,9H,1-2H2,(H2,10,11,12)/t5-/m1/s1
+
+>  <InChIKey>
+ZXKJPBBOMRHTCH-RXMQYKEDSA-N
+
+>  <SMILES>
+c1ncn(n1)C[C@H](CP(=O)(O)O)O
+
+$$$$

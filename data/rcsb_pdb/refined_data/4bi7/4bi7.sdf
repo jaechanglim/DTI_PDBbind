@@ -1,0 +1,95 @@
+4BI7_PGA_A_401
+  RCSB PDB08012021143D
+Coordinates from PDB:4BI7:A:401 Model:1 without hydrogens
+  9  8  0  0  0  0            999 V2000
+    1.4030  -19.7380  -23.6400   P 0  0  0  0  0  0  0  0  0  0  0  0
+    2.0190  -18.2680  -23.9140   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.3620  -20.4670  -22.7310   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.0450  -19.6360  -22.9750   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.2470  -20.4900  -24.9360   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.3870  -17.9870  -23.6650   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.7190  -16.5960  -24.1640   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.2570  -15.7280  -23.4100   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.4570  -16.3210  -25.3640   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  2  0  0  0  0
+  1  4  1  0  0  0  0
+  1  5  1  0  0  0  0
+  2  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+4BI7_PGA_A_401
+
+>  <ChemCompId>
+PGA
+
+>  <PdbId>
+4BI7
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 O6 P
+
+>  <Name>
+2-PHOSPHOGLYCOLIC ACID
+
+>  <SystematicName>
+2-phosphonooxyethanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H5 O6 P
+
+>  <MolecularWeight>
+156.031
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H5O6P/c3-2(4)1-8-9(5,6)7/h1H2,(H,3,4)(H2,5,6,7)
+
+>  <InChIKey>
+ASCFNMCAHFUBCO-UHFFFAOYSA-N
+
+>  <SMILES>
+C(C(=O)O)OP(=O)(O)O
+
+$$$$

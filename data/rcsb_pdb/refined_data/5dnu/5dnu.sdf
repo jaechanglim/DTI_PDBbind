@@ -1,0 +1,101 @@
+5DNU_KKN_A_301
+  RCSB PDB08022001073D
+Coordinates from PDB:5DNU:A:301 Model:1 without hydrogens
+ 11 12  0  0  0  0            999 V2000
+   16.2080  -14.2280    1.9920   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.8260  -15.5860    2.1180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4860  -16.0340    3.3770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4200  -15.2590    4.4730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7800  -13.9570    4.3540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1540  -13.4500    3.1030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0520  -16.0800    5.4920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.8710  -17.2970    4.9540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.5260  -18.3370    5.5190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1260  -17.2540    3.6330   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.8200  -15.7570    6.9730   C 0  0  0  0  0  0  0  0  0  0  0  0
+  6  1  1  0  0  0  0
+  6  5  2  0  0  0  0
+  1  2  1  0  0  0  0
+  5  4  1  0  0  0  0
+  2  3  2  0  0  0  0
+  4  3  1  0  0  0  0
+  4  7  2  0  0  0  0
+  3 10  1  0  0  0  0
+  7 11  1  0  0  0  0
+  7  8  1  0  0  0  0
+ 10  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+M  END
+>  <InstanceId>
+5DNU_KKN_A_301
+
+>  <ChemCompId>
+KKN
+
+>  <PdbId>
+5DNU
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O3
+
+>  <Name>
+3-methyl-2H-furo[2,3-c]pyran-2-one
+
+>  <SystematicName>
+3-methylfuro[2,3-c]pyran-2-one
+
+>  <Synonyms>
+Karrikin KAR1
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H6 O3
+
+>  <MolecularWeight>
+150.131
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H6O3/c1-5-6-2-3-10-4-7(6)11-8(5)9/h2-4H,1H3
+
+>  <InChIKey>
+JUTMAMXOAOYKHT-UHFFFAOYSA-N
+
+>  <SMILES>
+CC1=C2C=COC=C2OC1=O
+
+$$$$

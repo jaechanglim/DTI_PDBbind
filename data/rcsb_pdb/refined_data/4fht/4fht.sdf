@@ -1,0 +1,100 @@
+4FHT_DHB_A_201
+  RCSB PDB08012021423D
+Coordinates from PDB:4FHT:A:201 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   33.3450   39.6320   23.2620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.3430   40.3070   22.5840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.4970   41.6470   22.2640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.5030   42.3090   21.5790   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.6540   42.3170   22.6270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.7970   43.6470   22.3080   O 0  0  0  0  0  0  0  0  0  0  0  0
+   34.6620   41.6470   23.3090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.5080   40.3020   23.6270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.1640   38.1910   23.6070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.3900   37.4690   22.9240   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.7180   37.7180   24.6320   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  8  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  9 10  2  0  0  0  0
+  9 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+4FHT_DHB_A_201
+
+>  <ChemCompId>
+DHB
+
+>  <PdbId>
+4FHT
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O4
+
+>  <Name>
+3,4-DIHYDROXYBENZOIC ACID
+
+>  <SystematicName>
+3,4-dihydroxybenzoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H6 O4
+
+>  <MolecularWeight>
+154.12
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H6O4/c8-5-2-1-4(7(10)11)3-6(5)9/h1-3,8-9H,(H,10,11)
+
+>  <InChIKey>
+YQUVCSBJEUQKSH-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c(cc1C(=O)O)O)O
+
+$$$$

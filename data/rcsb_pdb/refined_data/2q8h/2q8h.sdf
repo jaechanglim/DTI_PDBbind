@@ -1,0 +1,89 @@
+2Q8H_TF4_A_438
+  RCSB PDB08012017483D
+Coordinates from PDB:2Q8H:A:438 Model:1 without hydrogens
+  6  5  0  0  0  0            999 V2000
+    0.5640   38.7870   -9.6890   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.9860   38.4800   -9.2930   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8260   39.3890   -9.2660   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.0510   37.5060  -10.8710  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+    0.4830   40.5390  -10.1650  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+    2.2950   37.3190   -8.9940   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  4  1  0  0  0  0
+  1  5  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+2Q8H_TF4_A_438
+
+>  <ChemCompId>
+TF4
+
+>  <PdbId>
+2Q8H
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+438
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 O2 Cl2
+
+>  <Name>
+DICHLORO-ACETIC ACID
+
+>  <SystematicName>
+2,2-dichloroethanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H2 Cl2 O2
+
+>  <MolecularWeight>
+128.942
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H2Cl2O2/c3-1(4)2(5)6/h1H,(H,5,6)
+
+>  <InChIKey>
+JXTHNDFMNIQAHM-UHFFFAOYSA-N
+
+>  <SMILES>
+C(C(=O)O)(Cl)Cl
+
+$$$$

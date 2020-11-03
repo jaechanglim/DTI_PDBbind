@@ -1,0 +1,114 @@
+3C79_IM4_A_301
+  RCSB PDB08012018423D
+Coordinates from PDB:3C79:A:301 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   55.2750  -20.5120   -6.9230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   54.2610  -20.4010   -7.9300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   53.0290  -19.8510   -7.6560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.8910  -19.7340   -8.6580  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   52.9340  -19.3680   -6.3650   N 0  0  0  0  0  0  0  0  0  0  0  0
+   53.8530  -19.4780   -5.3920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   55.0840  -20.0910   -5.6230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   56.1960  -20.1820   -4.5260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   55.6380  -20.1150   -3.1670   N 0  0  0  0  0  0  0  0  0  0  0  0
+   55.5980  -18.9470   -2.3080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   54.9030  -19.4350   -1.0100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   54.6560  -20.8390   -1.2930   N 0  0  0  0  0  0  0  0  0  0  0  0
+   55.0810  -21.1370   -2.5310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   55.0280  -22.3550   -3.0860   N 0  0  0  0  0  0  0  0  0  0  0  0
+   54.5070  -23.2770   -2.4490   N 0  3  0  0  0  0  0  0  0  0  0  0
+   54.4070  -24.7610   -2.9580   O 0  0  0  0  0  0  0  0  0  0  0  0
+   53.9980  -22.9420   -1.1440   O 0  5  0  0  0  0  0  0  0  0  0  0
+  1  7  1  0  0  0  0
+  2  1  2  0  0  0  0
+  2  3  1  0  0  0  0
+  3  5  2  0  0  0  0
+  4  3  1  0  0  0  0
+  5  6  1  0  0  0  0
+  7  6  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 13  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 12 11  1  0  0  0  0
+ 13 12  1  0  0  0  0
+ 14 13  2  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 17  1  0  0  0  0
+ 16 15  2  0  0  0  0
+M  CHG  2  15   1  17  -1
+M  END
+>  <InstanceId>
+3C79_IM4_A_301
+
+>  <ChemCompId>
+IM4
+
+>  <PdbId>
+3C79
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N5 O2 Cl
+
+>  <Name>
+(2E)-1-[(6-chloropyridin-3-yl)methyl]-N-nitroimidazolidin-2-imine
+
+>  <SystematicName>
+(NE)-N-[1-[(6-chloropyridin-3-yl)methyl]imidazolidin-2-ylidene]nitramide
+
+>  <Synonyms>
+imidacloprid
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H10 Cl N5 O2
+
+>  <MolecularWeight>
+255.661
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H10ClN5O2/c10-8-2-1-7(5-12-8)6-14-4-3-11-9(14)13-15(16)17/h1-2,5H,3-4,6H2,(H,11,13)
+
+>  <InChIKey>
+YWTYJOPNNQFBPC-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(ncc1CN\2CCN/C2=N\[N+](=O)[O-])Cl
+
+$$$$

@@ -1,0 +1,107 @@
+4N5D_2FQ_A_401
+  RCSB PDB08012022353D
+Coordinates from PDB:4N5D:A:401 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+  -28.5910  -28.5110    4.6200   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.6130  -28.2170    3.9440   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.7340  -27.9420    2.4770   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.9680  -28.0520    1.9360   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.6360  -27.6060    1.7500   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.3600  -28.1230    4.5170   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.2570  -28.4080    5.9480   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.2320  -27.7840    3.8010   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.3610  -27.5210    2.4100   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.1740  -27.1770    1.7590   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.9880  -27.0920    2.3510   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.0390  -27.7020    4.4000   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.9670  -27.3680    3.6700   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.6530  -27.3100    4.3600   C 0  0  0  0  0  0  0  0  0  0  0  0
+  5  9  1  0  0  0  0
+  5  3  2  0  0  0  0
+ 10 11  2  0  0  0  0
+ 10  9  1  0  0  0  0
+  4  3  1  0  0  0  0
+ 11 13  1  0  0  0  0
+  9  8  2  0  0  0  0
+  3  2  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 12  2  0  0  0  0
+  8 12  1  0  0  0  0
+  8  6  1  0  0  0  0
+  2  6  1  0  0  0  0
+  2  1  2  0  0  0  0
+  6  7  1  0  0  0  0
+M  END
+>  <InstanceId>
+4N5D_2FQ_A_401
+
+>  <ChemCompId>
+2FQ
+
+>  <PdbId>
+4N5D
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N4 O
+
+>  <Name>
+6-amino-2,8-dimethylpyrido[2,3-d]pyrimidin-7(8H)-one
+
+>  <SystematicName>
+6-azanyl-2,8-dimethyl-pyrido[2,3-d]pyrimidin-7-one
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H10 N4 O
+
+>  <MolecularWeight>
+190.202
+
+>  <ModifiedDate>
+2013-12-13
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H10N4O/c1-5-11-4-6-3-7(10)9(14)13(2)8(6)12-5/h3-4H,10H2,1-2H3
+
+>  <InChIKey>
+SSAYTTNQRVNWAL-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1ncc2c(n1)N(C(=O)C(=C2)N)C
+
+$$$$

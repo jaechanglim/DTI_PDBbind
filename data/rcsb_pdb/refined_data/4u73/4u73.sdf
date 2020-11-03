@@ -1,0 +1,102 @@
+4U73_Q02_A_404
+  RCSB PDB08012023293D
+Coordinates from PDB:4U73:A:404 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   22.3290   -2.3310   12.7250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.8670   -2.6160   11.3020   P 0  0  0  0  0  0  0  0  0  0  0  0
+   21.7660   -1.4690   10.6080   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.5380   -3.3280   11.2420   O 0  0  0  0  0  0  0  0  0  0  0  0
+   23.1940   -3.6020   10.4920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.1970   -2.9390    9.7350   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4570   -4.9940   10.8910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.5160   -5.6780   10.3450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.7650   -6.9970   10.6740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.9430   -7.6910   11.5130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.8910   -7.0080   12.0650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.6330   -5.6820   11.7430   C 0  0  0  0  0  0  0  0  0  0  0  0
+  3  2  2  0  0  0  0
+  9  8  2  0  0  0  0
+  9 10  1  0  0  0  0
+  8  7  1  0  0  0  0
+ 10 11  2  0  0  0  0
+  1  2  1  0  0  0  0
+  2  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  7  5  1  0  0  0  0
+  7 12  2  0  0  0  0
+ 11 12  1  0  0  0  0
+  5  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+4U73_Q02_A_404
+
+>  <ChemCompId>
+Q02
+
+>  <PdbId>
+4U73
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+404
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O3 P
+
+>  <Name>
+[(R)-amino(phenyl)methyl]phosphonic acid
+
+>  <SystematicName>
+[(R)-azanyl(phenyl)methyl]phosphonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H10 N O3 P
+
+>  <MolecularWeight>
+187.133
+
+>  <ModifiedDate>
+2015-03-20
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H10NO3P/c8-7(12(9,10)11)6-4-2-1-3-5-6/h1-5,7H,8H2,(H2,9,10,11)/t7-/m1/s1
+
+>  <InChIKey>
+ZKFNOUUKULVDOB-SSDOTTSWSA-N
+
+>  <SMILES>
+c1ccc(cc1)[C@H](N)P(=O)(O)O
+
+$$$$

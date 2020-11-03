@@ -1,0 +1,101 @@
+4B33_1NP_A_1351
+  RCSB PDB08012021113D
+Coordinates from PDB:4B33:A:1351 Model:1 without hydrogens
+ 11 12  0  0  0  0            999 V2000
+   19.1830    9.3790   -2.2300   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.2270    8.0280   -2.1330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.2930    7.3510   -2.6930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.2820    8.0900   -3.3370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.3580    7.4250   -3.9060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.2150    7.3280   -1.4880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.2920    5.9440   -1.4130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3540    5.2550   -1.9740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.3660    5.9680   -2.6220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.4460    5.3030   -3.1960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.4400    6.0410   -3.8340   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5 11  1  0  0  0  0
+  6  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  2  0  0  0  0
+M  END
+>  <InstanceId>
+4B33_1NP_A_1351
+
+>  <ChemCompId>
+1NP
+
+>  <PdbId>
+4B33
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1351
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 O
+
+>  <Name>
+1-NAPHTHOL
+
+>  <SystematicName>
+naphthalen-1-ol
+
+>  <Synonyms>
+naphthalen-1-ol
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H8 O
+
+>  <MolecularWeight>
+144.17
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H8O/c11-10-7-3-5-8-4-1-2-6-9(8)10/h1-7,11H
+
+>  <InChIKey>
+KJCVRFUGPWSIIH-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)cccc2O
+
+$$$$

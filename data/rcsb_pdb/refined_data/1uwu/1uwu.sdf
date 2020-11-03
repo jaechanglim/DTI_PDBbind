@@ -1,0 +1,104 @@
+1UWU_GOX_A_1490
+  RCSB PDB08012016073D
+Coordinates from PDB:1UWU:A:1490 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   74.5520   21.0060   89.4610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   75.0040   21.1720   90.6950   N 0  0  0  0  0  0  0  0  0  0  0  0
+   73.8000   22.2220   88.8780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   74.7720   19.7820   88.7940   N 0  0  0  0  0  0  0  0  0  0  0  0
+   75.8450   20.1790   91.2060   O 0  0  0  0  0  0  0  0  0  0  0  0
+   72.7420   22.5540   89.7360   O 0  0  0  0  0  0  0  0  0  0  0  0
+   73.2510   21.9150   87.4810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   72.9960   23.2170   86.9110   O 0  0  0  0  0  0  0  0  0  0  0  0
+   74.2960   21.0370   86.7040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   73.9330   20.9240   85.3500   O 0  0  0  0  0  0  0  0  0  0  0  0
+   74.3700   19.6410   87.3900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   75.3780   18.6410   86.7940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   76.6830   19.1360   86.9310   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  3  6  1  0  0  0  0
+  3  7  1  0  0  0  0
+  4 11  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+1UWU_GOX_A_1490
+
+>  <ChemCompId>
+GOX
+
+>  <PdbId>
+1UWU
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1490
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N2 O5
+
+>  <Name>
+(2S,3S,4R,5R)-6-(HYDROXYAMINO)-2-(HYDROXYMETHYL)-2,3,4,5-TETRAHYDROPYRIDINE-3,4,5-TRIOL
+
+>  <SystematicName>
+(2Z,3S,4S,5R,6R)-2-hydroxyimino-6-(hydroxymethyl)piperidine-3,4,5-triol
+
+>  <Synonyms>
+D-GLUCONHYDROXIMO-1,5-LACTAM
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H12 N2 O5
+
+>  <MolecularWeight>
+192.17
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H12N2O5/c9-1-2-3(10)4(11)5(12)6(7-2)8-13/h2-5,9-13H,1H2,(H,7,8)/t2-,3-,4+,5-/m1/s1
+
+>  <InChIKey>
+VBXHGXTYZGYTQG-SQOUGZDYSA-N
+
+>  <SMILES>
+C([C@@H]1[C@H]([C@@H]([C@H](/C(=N/O)/N1)O)O)O)O
+
+$$$$

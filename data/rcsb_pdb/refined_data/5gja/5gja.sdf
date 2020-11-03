@@ -1,0 +1,96 @@
+5GJA_6PC_A_402
+  RCSB PDB08022001293D
+Coordinates from PDB:5GJA:A:402 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   37.4950    0.4980    5.0510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   37.1570   -1.8260    4.9410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.7790   -1.6310    4.9980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.4120    1.7030    5.0990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.2910   -0.3730    5.0840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.1140    0.7010    5.1100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   39.6930    1.5730    5.1060   O 0  0  0  0  0  0  0  0  0  0  0  0
+   37.8430    2.8330    5.1880   O 0  0  0  0  0  0  0  0  0  0  0  0
+   37.9860   -0.7560    4.9660   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  4  1  0  0  0  0
+  1  6  2  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  9  2  0  0  0  0
+  3  5  2  0  0  0  0
+  4  7  2  0  0  0  0
+  4  8  1  0  0  0  0
+  5  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+5GJA_6PC_A_402
+
+>  <ChemCompId>
+6PC
+
+>  <PdbId>
+5GJA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+402
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O2
+
+>  <Name>
+PYRIDINE-2-CARBOXYLIC ACID
+
+>  <SystematicName>
+pyridine-2-carboxylic acid
+
+>  <Synonyms>
+PICOLINIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H5 N O2
+
+>  <MolecularWeight>
+123.109
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H5NO2/c8-6(9)5-3-1-2-4-7-5/h1-4H,(H,8,9)
+
+>  <InChIKey>
+SIOXPEMLGUPBBT-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccnc(c1)C(=O)O
+
+$$$$

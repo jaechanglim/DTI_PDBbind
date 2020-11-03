@@ -1,0 +1,116 @@
+3T84_SG6_A_300
+  RCSB PDB08012020323D
+Coordinates from PDB:3T84:A:300 Model:1 without hydrogens
+ 19 19  0  0  0  0            999 V2000
+   16.8280   -0.9160   11.7370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7780   -0.7360   13.1360   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3060    0.2350   11.0090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9720    1.4900   11.2790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.0290    1.7470   12.7340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3890    0.5030   13.5480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.1020   -1.2750   11.2620   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2090   -0.0490    9.6460   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5180    2.5410   10.4690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.8980    2.4350   13.2230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.8500    4.0770   14.6020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0510    3.4480   13.9750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.1990    3.8120   14.3640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.4320    0.6120   15.0700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2230    0.9770   15.6230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4380    0.0960   16.5130   S 0  0  0  0  0  0  0  0  0  0  0  0
+   14.0740    0.4180   16.9500   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0570    0.6770   17.7030   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.8140   -1.4290   16.4490   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  7  1  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6 14  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 16 17  2  0  0  0  0
+ 16 18  2  0  0  0  0
+ 16 19  1  0  0  0  0
+M  END
+>  <InstanceId>
+3T84_SG6_A_300
+
+>  <ChemCompId>
+SG6
+
+>  <PdbId>
+3T84
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O9 S
+
+>  <Name>
+4-O-acetyl-6-O-sulfamoyl-alpha-D-galactopyranose
+
+>  <SystematicName>
+[(2R,3R,4R,5R,6S)-4,5,6-tris(oxidanyl)-2-(sulfamoyloxymethyl)oxan-3-yl] ethanoate
+
+>  <Synonyms>
+4-O-acetyl-6-O-sulfamoyl-alpha-D-galactose; 4-O-acetyl-6-O-sulfamoyl-D-galactose; 4-O-acetyl-6-O-sulfamoyl-galactose
+
+>  <Type>
+D-saccharide, alpha linking
+
+>  <Formula>
+C8 H15 N O9 S
+
+>  <MolecularWeight>
+301.271
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+GLA
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H15NO9S/c1-3(10)17-7-4(2-16-19(9,14)15)18-8(13)6(12)5(7)11/h4-8,11-13H,2H2,1H3,(H2,9,14,15)/t4-,5-,6-,7+,8+/m1/s1
+
+>  <InChIKey>
+FXBYYANFSLVRSY-YQXRAVKXSA-N
+
+>  <SMILES>
+CC(=O)O[C@H]1[C@H](O[C@@H]([C@@H]([C@H]1O)O)O)COS(=O)(=O)N
+
+$$$$

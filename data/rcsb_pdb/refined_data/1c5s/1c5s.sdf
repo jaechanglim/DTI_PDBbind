@@ -1,0 +1,104 @@
+1C5S_ESX_A_246
+  RCSB PDB08012014403D
+Coordinates from PDB:1C5S:A:246 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+   46.0670   18.1780   54.2560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   45.8750   19.2150   53.3870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   46.5760   18.4090   55.4250   N 0  0  0  0  0  0  0  0  0  0  0  0
+   45.7310   17.0050   53.8170   N 0  3  0  0  0  0  0  0  0  0  0  0
+   45.0680   18.9640   51.7180   S 0  0  0  0  0  0  0  0  0  0  0  0
+   45.2060   20.6700   51.2840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   45.8110   21.3380   52.3400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   46.1700   20.5660   53.4500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.8030   21.3060   50.1230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   45.0050   22.6670   49.9900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   45.6130   23.3700   51.0240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   46.0110   22.7070   52.1910   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  2  0  0  0  0
+  2  5  1  0  0  0  0
+  2  8  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  6  9  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7 12  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+M  CHG  1   4   1
+M  END
+>  <InstanceId>
+1C5S_ESX_A_246
+
+>  <ChemCompId>
+ESX
+
+>  <PdbId>
+1C5S
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+246
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N2 S
+
+>  <Name>
+BENZO[B]THIOPHENE-2-CARBOXAMIDINE
+
+>  <SystematicName>
+[amino-(1-benzothiophen-2-yl)methylidene]azanium
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H9 N2 S
+
+>  <MolecularWeight>
+177.246
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H8N2S/c10-9(11)8-5-6-3-1-2-4-7(6)12-8/h1-5H,(H3,10,11)/p+1
+
+>  <InChIKey>
+JZWDLUGQTRKBNA-UHFFFAOYSA-O
+
+>  <SMILES>
+c1ccc2c(c1)cc(s2)C(=[NH2+])N
+
+$$$$

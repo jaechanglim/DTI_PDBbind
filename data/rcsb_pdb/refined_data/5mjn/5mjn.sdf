@@ -1,0 +1,115 @@
+5MJN_7O8_A_302
+  RCSB PDB08022002233D
+Coordinates from PDB:5MJN:A:302 Model:1 without hydrogens
+ 18 19  0  0  0  0            999 V2000
+   -1.2990   11.4440   13.9460  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8430    9.7980   13.5210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4250    9.2970   12.3150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7900    7.9110   12.3330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5780    9.0900   14.6920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0100    7.8140   14.7180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4120    7.1680   13.5890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9470    5.7880   13.6210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8300    5.6810   13.7200   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8130    4.2420   14.6770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7110    3.4140   14.7600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8830    2.3210   15.5810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1530    3.5350   15.4390   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3500    2.1760   15.8120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0660    0.9290   16.8580   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4650    1.0860   18.1170   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.4470    1.0810   16.7120   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6570   -0.4980   16.1470   N 0  0  0  0  0  0  0  0  0  0  0  0
+  3  4  2  0  0  0  0
+  3  2  1  0  0  0  0
+  4  7  1  0  0  0  0
+  2  1  1  0  0  0  0
+  2  5  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7  6  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  2  0  0  0  0
+ 10 13  1  0  0  0  0
+  5  6  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 12 14  2  0  0  0  0
+ 14 15  1  0  0  0  0
+ 18 15  1  0  0  0  0
+ 17 15  2  0  0  0  0
+ 15 16  2  0  0  0  0
+M  END
+>  <InstanceId>
+5MJN_7O8_A_302
+
+>  <ChemCompId>
+7O8
+
+>  <PdbId>
+5MJN
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N O2 S3 Cl
+
+>  <Name>
+5-[(4-chlorophenyl)methylsulfanyl]thiophene-2-sulfonamide
+
+>  <SystematicName>
+5-[(4-chlorophenyl)methylsulfanyl]thiophene-2-sulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H10 Cl N O2 S3
+
+>  <MolecularWeight>
+319.851
+
+>  <ModifiedDate>
+2017-12-01
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H10ClNO2S3/c12-9-3-1-8(2-4-9)7-16-10-5-6-11(17-10)18(13,14)15/h1-6H,7H2,(H2,13,14,15)
+
+>  <InChIKey>
+YITSBZGLCZKZEB-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(ccc1CSc2ccc(s2)S(=O)(=O)N)Cl
+
+$$$$

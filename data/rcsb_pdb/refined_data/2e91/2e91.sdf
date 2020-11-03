@@ -1,0 +1,110 @@
+2E91_ZOL_A_901
+  RCSB PDB08012016533D
+Coordinates from PDB:2E91:A:901 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   28.9780   43.4940    5.0900   O 0  0  0  0  0  0  0  0  0  0  0  0
+   29.5310   44.9490    4.6960   P 0  0  0  0  0  0  0  0  0  0  0  0
+   28.9690   45.3700    3.2410   O 0  0  0  0  0  0  0  0  0  0  0  0
+   31.0030   45.0270    4.8460   O 0  0  0  0  0  0  0  0  0  0  0  0
+   28.6380   46.1140    5.8410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.8200   45.7440    5.6160   P 0  0  0  0  0  0  0  0  0  0  0  0
+   26.5750   44.2930    6.2630   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.0330   46.8350    6.4970   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.4830   45.7670    4.1690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   28.9140   47.4520    5.4150   O 0  0  0  0  0  0  0  0  0  0  0  0
+   29.1060   45.8650    7.2780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.4500   46.7580    8.2490   N 0  0  0  0  0  0  0  0  0  0  0  0
+   28.3730   48.0790    8.1550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.7660   48.4950    9.2680   N 0  0  0  0  0  0  0  0  0  0  0  0
+   27.4810   47.4440   10.0340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.9080   46.3560    9.3960   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  2  0  0  0  0
+  2  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  6  9  2  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 16  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  2  0  0  0  0
+M  END
+>  <InstanceId>
+2E91_ZOL_A_901
+
+>  <ChemCompId>
+ZOL
+
+>  <PdbId>
+2E91
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+901
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N2 O7 P2
+
+>  <Name>
+ZOLEDRONIC ACID
+
+>  <SystematicName>
+(1-hydroxy-2-imidazol-1-yl-1-phosphono-ethyl)phosphonic acid
+
+>  <Synonyms>
+(1-HYDROXY-2-IMIDAZOL-1-YLETHYLIDENE)DIPHOSPHONIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H10 N2 O7 P2
+
+>  <MolecularWeight>
+272.09
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H10N2O7P2/c8-5(15(9,10)11,16(12,13)14)3-7-2-1-6-4-7/h1-2,4,8H,3H2,(H2,9,10,11)(H2,12,13,14)
+
+>  <InChIKey>
+XRASPMIURGNCCH-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cn(cn1)CC(O)(P(=O)(O)O)P(=O)(O)O
+
+$$$$

@@ -1,0 +1,107 @@
+6F20_C9E_A_201
+  RCSB PDB08022004363D
+Coordinates from PDB:6F20:A:201 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+    3.1180   -9.0640  -16.5960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0420   -8.6750  -14.6400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5850   -7.8760  -15.8550   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.3830   -9.8290  -15.3070   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.0000   -8.1550  -17.3230   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.6950   -8.9980  -16.4420   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.5800  -10.3810  -14.8430   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.8750   -8.4550  -17.5240   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.5950   -9.9060  -15.6370   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.1860   -7.6590  -18.3600   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8000   -7.5080  -18.2980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5010   -7.9820  -17.2040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0090   -7.2660  -18.0670   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1670   -7.9350  -15.9880   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 10 11  2  0  0  0  0
+ 10  8  1  0  0  0  0
+ 11  5  1  0  0  0  0
+ 13 12  2  0  0  0  0
+  8  1  2  0  0  0  0
+  5 12  1  0  0  0  0
+  5  6  2  0  0  0  0
+ 12 14  1  0  0  0  0
+  1  6  1  0  0  0  0
+  1  9  1  0  0  0  0
+  6  4  1  0  0  0  0
+ 14  3  1  0  0  0  0
+  3  2  1  0  0  0  0
+  9  7  1  0  0  0  0
+  4  7  2  0  0  0  0
+M  END
+>  <InstanceId>
+6F20_C9E_A_201
+
+>  <ChemCompId>
+C9E
+
+>  <PdbId>
+6F20
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O2
+
+>  <Name>
+Ethyl 1H-pyrrolo[2,3-b]pyridine-4-carboxylate
+
+>  <SystematicName>
+ethyl 1~{H}-pyrrolo[2,3-b]pyridine-4-carboxylate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H10 N2 O2
+
+>  <MolecularWeight>
+190.199
+
+>  <ModifiedDate>
+2018-03-02
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H10N2O2/c1-2-14-10(13)8-4-6-12-9-7(8)3-5-11-9/h3-6H,2H2,1H3,(H,11,12)
+
+>  <InChIKey>
+CKCBQXQNAUHBDX-UHFFFAOYSA-N
+
+>  <SMILES>
+CCOC(=O)c1ccnc2c1cc[nH]2
+
+$$$$

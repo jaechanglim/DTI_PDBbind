@@ -1,0 +1,100 @@
+6H29_FK8_A_302
+  RCSB PDB08022004553D
+Coordinates from PDB:6H29:A:302 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   -5.6460    1.0500   16.7870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.3480    4.0010   16.0240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0020    4.7200   14.1610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9280    6.3350   15.6680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.5900    3.7120   14.9050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.0350    2.9430   16.8240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1920    6.0180   14.5670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.4960    5.3200   16.3820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3440   -0.0560   16.1250   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0440    1.5020   17.7400   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.7330    1.6480   16.2760   O 0  0  0  0  0  0  0  0  0  0  0  0
+  3  7  2  0  0  0  0
+  3  5  1  0  0  0  0
+  7  4  1  0  0  0  0
+  5  2  2  0  0  0  0
+  4  8  2  0  0  0  0
+  2  8  1  0  0  0  0
+  2  6  1  0  0  0  0
+  9  1  1  0  0  0  0
+ 11  1  1  0  0  0  0
+ 11  6  1  0  0  0  0
+  1 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+6H29_FK8_A_302
+
+>  <ChemCompId>
+FK8
+
+>  <PdbId>
+6H29
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O2
+
+>  <Name>
+(phenylmethyl) carbamate
+
+>  <SystematicName>
+(phenylmethyl) carbamate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H9 N O2
+
+>  <MolecularWeight>
+151.163
+
+>  <ModifiedDate>
+2018-08-31
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H9NO2/c9-8(10)11-6-7-4-2-1-3-5-7/h1-5H,6H2,(H2,9,10)
+
+>  <InChIKey>
+PUJDIJCNWFYVJX-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)COC(=O)N
+
+$$$$

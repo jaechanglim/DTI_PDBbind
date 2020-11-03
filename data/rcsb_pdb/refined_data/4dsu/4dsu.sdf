@@ -1,0 +1,97 @@
+4DSU_BZI_A_203
+  RCSB PDB08012021313D
+Coordinates from PDB:4DSU:A:203 Model:1 without hydrogens
+  9 10  0  0  0  0            999 V2000
+   25.3580   12.5330   11.4010   N 0  0  0  0  0  0  0  0  0  0  0  0
+   25.1260   12.5100   12.6810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.9620   13.1600   12.9550   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4470   13.6130   11.7500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.3120   14.3250   11.3890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.0870   14.6230   10.0610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.9860   14.2130    9.0860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.1130   13.5130    9.4220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.3580   13.2000   10.7620   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4  9  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+M  END
+>  <InstanceId>
+4DSU_BZI_A_203
+
+>  <ChemCompId>
+BZI
+
+>  <PdbId>
+4DSU
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+203
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N2
+
+>  <Name>
+BENZIMIDAZOLE
+
+>  <SystematicName>
+1H-benzimidazole
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H6 N2
+
+>  <MolecularWeight>
+118.136
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H6N2/c1-2-4-7-6(3-1)8-5-9-7/h1-5H,(H,8,9)
+
+>  <InChIKey>
+HYZJCKYKOHLVJF-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)[nH]cn2
+
+$$$$

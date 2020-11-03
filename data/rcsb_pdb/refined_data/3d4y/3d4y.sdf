@@ -1,0 +1,107 @@
+3D4Y_MVL_A_1049
+  RCSB PDB08012018483D
+Coordinates from PDB:3D4Y:A:1049 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+   30.9340   65.6600   10.2270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.8310   65.9680    9.4220   N 0  0  0  0  0  0  0  0  0  0  0  0
+   32.5490   66.0090    8.2860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.2980   65.8130    7.4150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.9510   66.2590    7.9880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.8310   65.6510    7.1850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.1610   65.7970   11.5000   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.7570   66.0700   10.2400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.4730   65.5630   11.4940   N 0  0  0  0  0  0  0  0  0  0  0  0
+   33.6670   65.4600    7.6320   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.1470   64.3740    9.9060   O 0  0  0  0  0  0  0  0  0  0  0  0
+   31.4580   66.6910    6.2940   O 0  0  0  0  0  0  0  0  0  0  0  0
+   32.3960   65.5560    9.6900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.5810   66.1010    7.6760   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  2  0  0  0  0
+  1 13  1  0  0  0  0
+  2  5  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 10  1  0  0  0  0
+  3 13  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 12  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6 14  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+ 11 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+3D4Y_MVL_A_1049
+
+>  <ChemCompId>
+MVL
+
+>  <PdbId>
+3D4Y
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1049
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N2 O4
+
+>  <Name>
+(5R,6R,7S,8R)-5-(HYDROXYMETHYL)-5,6,7,8-TETRAHYDROIMIDAZO[1,2-A]PYRIDINE-6,7,8-TRIOL
+
+>  <SystematicName>
+(5R,6R,7S,8R)-5-(hydroxymethyl)-5,6,7,8-tetrahydroimidazo[1,2-a]pyridine-6,7,8-triol
+
+>  <Synonyms>
+Mannoimidazole
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C8 H12 N2 O4
+
+>  <MolecularWeight>
+200.192
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H12N2O4/c11-3-4-5(12)6(13)7(14)8-9-1-2-10(4)8/h1-2,4-7,11-14H,3H2/t4-,5-,6+,7+/m1/s1
+
+>  <InChIKey>
+RZRDQZQPTISYKY-JWXFUTCRSA-N
+
+>  <SMILES>
+c1cn2c(n1)[C@H]([C@H]([C@@H]([C@H]2CO)O)O)O
+
+$$$$

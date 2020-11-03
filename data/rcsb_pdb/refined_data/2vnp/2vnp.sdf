@@ -1,0 +1,105 @@
+2VNP_DED_A_1182
+  RCSB PDB08012018033D
+Coordinates from PDB:2VNP:A:1182 Model:1 without hydrogens
+ 14 13  0  0  0  0            999 V2000
+   -1.6720    0.6250   21.3870   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7210    1.0690   19.9630   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5470    0.2950   18.9090   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4380    0.2670   20.0930   P 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7330   -1.3280   20.2100   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0170   -1.5140   19.2030   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0500   -2.9650   18.2660   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7260   -2.3000   19.3890   P 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0540   -3.5270   20.4160   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4590   -3.4010   21.8150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4040   -4.7010   22.6530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6100   -5.9260   21.8220   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8970   -6.5730   22.1070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3750   -5.9280   20.3750   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  4  1  0  0  0  0
+  2  4  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  8  1  0  0  0  0
+  6  8  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+2VNP_DED_A_1182
+
+>  <ChemCompId>
+DED
+
+>  <PdbId>
+2VNP
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1182
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N O7 P2
+
+>  <Name>
+2-DIMETHYLAMINO-ETHYL-DIPHOSPHATE
+
+>  <SystematicName>
+2-dimethylaminoethyl phosphono hydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H13 N O7 P2
+
+>  <MolecularWeight>
+249.096
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H13NO7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h3-4H2,1-2H3,(H,9,10)(H2,6,7,8)
+
+>  <InChIKey>
+QGKJQRINUQGSJM-UHFFFAOYSA-N
+
+>  <SMILES>
+CN(C)CCO[P@@](=O)(O)OP(=O)(O)O
+
+$$$$

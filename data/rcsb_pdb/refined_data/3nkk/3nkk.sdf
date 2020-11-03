@@ -1,0 +1,100 @@
+3NKK_JLZ_A_1
+  RCSB PDB08012019553D
+Coordinates from PDB:3NKK:A:1 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   26.9000   14.8450   19.1010   F 0  0  0  0  0  0  0  0  0  0  0  0
+   27.8350   14.4520   18.2380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.5800   13.3020   18.5000   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.5550   12.9020   17.5860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.7920   13.6370   16.4250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.0490   14.7880   16.1600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.0690   15.1900   17.0770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.3350   15.5590   14.8890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.9450   16.7720   14.8650   N 0  0  0  0  0  0  0  0  0  0  0  0
+   29.9550   14.9930   13.8850   N 0  0  0  0  0  0  0  0  0  0  0  0
+   28.3140   12.5010   19.7780   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+3NKK_JLZ_A_1
+
+>  <ChemCompId>
+JLZ
+
+>  <PdbId>
+3NKK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N2 F
+
+>  <Name>
+3-fluoro-4-methylbenzenecarboximidamide
+
+>  <SystematicName>
+3-fluoro-4-methyl-benzenecarboximidamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H9 F N2
+
+>  <MolecularWeight>
+152.169
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H9FN2/c1-5-2-3-6(8(10)11)4-7(5)9/h2-4H,1H3,(H3,10,11)
+
+>  <InChIKey>
+PWQHQNWOXBOOTJ-UHFFFAOYSA-N
+
+>  <SMILES>
+[H]/N=C(/c1ccc(c(c1)F)C)\N
+
+$$$$

@@ -1,0 +1,106 @@
+5EH8_5O6_A_303
+  RCSB PDB08022001133D
+Coordinates from PDB:5EH8:A:303 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   20.9270   10.0590   14.5660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.6130    9.1710   13.5200   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.7420    8.1250   13.8860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.6530    8.3930   14.7040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.7850    7.3710   15.0590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.0140    6.1130   14.5540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.0750    5.0150   14.9610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5810    5.2840   15.0290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.6840    3.8410   15.2450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9900    2.5850   15.7180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5330    1.9010   16.6290   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.8750    2.2440   15.2620   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.1130    5.8360   13.7500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.9660    6.8600   13.3950   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 14 13  2  0  0  0  0
+ 14  3  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  1  0  0  0  0
+ 13  6  1  0  0  0  0
+  3  4  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6  5  2  0  0  0  0
+  4  5  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+ 12 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+5EH8_5O6_A_303
+
+>  <ChemCompId>
+5O6
+
+>  <PdbId>
+5EH8
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 O3
+
+>  <Name>
+(~{E})-3-(4-methoxyphenyl)but-2-enoic acid
+
+>  <SystematicName>
+(~{E})-3-(4-methoxyphenyl)but-2-enoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H12 O3
+
+>  <MolecularWeight>
+192.211
+
+>  <ModifiedDate>
+2016-02-26
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H12O3/c1-8(7-11(12)13)9-3-5-10(14-2)6-4-9/h3-7H,1-2H3,(H,12,13)/b8-7+
+
+>  <InChIKey>
+FUINODAYLGQWJL-BQYQJAHWSA-N
+
+>  <SMILES>
+C/C(=C\C(=O)O)/c1ccc(cc1)OC
+
+$$$$

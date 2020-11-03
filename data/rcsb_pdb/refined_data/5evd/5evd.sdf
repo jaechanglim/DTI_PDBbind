@@ -1,0 +1,109 @@
+5EVD_VC2_A_401
+  RCSB PDB08022001173D
+Coordinates from PDB:5EVD:A:401 Model:1 without hydrogens
+ 15 16  0  0  0  0            999 V2000
+  -17.3000   23.7570   -0.8950   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.2590   24.4430   -0.6990   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.2670   24.2310   -0.0150   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.2040   25.8010   -1.3800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.4000   26.0640   -2.1280   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.0340   25.7700   -2.3910   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.6930   26.0350   -1.7950   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.9600   24.5650   -3.2390   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.4070   27.1540   -3.5400   S 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.1890   27.0310   -3.1500   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.6190   28.3950   -2.7200   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.2800   28.2380   -1.0890   S 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.5000   26.4500   -1.2620   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.8330   26.2550   -1.9790   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.2560   26.7900   -1.0070   S 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+  5 13  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  6  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+5EVD_VC2_A_401
+
+>  <ChemCompId>
+VC2
+
+>  <PdbId>
+5EVD
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O2 S3
+
+>  <Name>
+(3S,5S,7aR)-2,2-dimethyl-5-(sulfanylmethyl)tetrahydro[1,3]thiazolo[4,3-b][1,3]thiazole-3-carboxylic acid
+
+>  <SystematicName>
+(3S,5S,7aR)-2,2-dimethyl-5-(sulfanylmethyl)-3,5,7,7a-tetrahydro-[1,3]thiazolo[4,3-b][1,3]thiazole-3-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H15 N O2 S3
+
+>  <MolecularWeight>
+265.416
+
+>  <ModifiedDate>
+2014-11-21
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H15NO2S3/c1-9(2)7(8(11)12)10-5(3-13)14-4-6(10)15-9/h5-7,13H,3-4H2,1-2H3,(H,11,12)/t5-,6+,7-/m0/s1
+
+>  <InChIKey>
+IKSIYRPSHTUWIX-XVMARJQXSA-N
+
+>  <SMILES>
+CC1([C@@H](N2[C@H](S1)CS[C@H]2CS)C(=O)O)C
+
+$$$$

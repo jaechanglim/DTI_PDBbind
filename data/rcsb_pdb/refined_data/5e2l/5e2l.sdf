@@ -1,0 +1,102 @@
+5E2L_DPN_A_507
+  RCSB PDB08022001103D
+Coordinates from PDB:5E2L:A:507 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   92.8700  -39.2950   13.8260   N 0  0  0  0  0  0  0  0  0  0  0  0
+   94.0280  -39.6400   14.6970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   93.6870  -40.8530   15.5150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   92.8990  -41.6790   14.9920   O 0  0  0  0  0  0  0  0  0  0  0  0
+   94.1730  -40.9920   16.6360   O 0  0  0  0  0  0  0  0  0  0  0  0
+   95.2770  -39.9070   13.8550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   96.5030  -39.2650   14.4710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   96.4900  -37.9330   14.8890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   97.6670  -40.0160   14.5920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   97.6220  -37.3710   15.4510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   98.8110  -39.4440   15.1610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   98.7880  -38.1180   15.5890   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  5  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+  9 11  2  0  0  0  0
+ 10 12  2  0  0  0  0
+ 11 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+5E2L_DPN_A_507
+
+>  <ChemCompId>
+DPN
+
+>  <PdbId>
+5E2L
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+507
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O2
+
+>  <Name>
+D-PHENYLALANINE
+
+>  <SystematicName>
+(2R)-2-azanyl-3-phenyl-propanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+D-PEPTIDE LINKING
+
+>  <Formula>
+C9 H11 N O2
+
+>  <MolecularWeight>
+165.189
+
+>  <ModifiedDate>
+2013-02-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+F
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H11NO2/c10-8(9(11)12)6-7-4-2-1-3-5-7/h1-5,8H,6,10H2,(H,11,12)/t8-/m1/s1
+
+>  <InChIKey>
+COLNVLDHVKWLRT-MRVPVSSYSA-N
+
+>  <SMILES>
+c1ccc(cc1)C[C@H](C(=O)O)N
+
+$$$$

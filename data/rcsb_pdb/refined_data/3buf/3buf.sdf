@@ -1,0 +1,100 @@
+3BUF_AEG_A_394
+  RCSB PDB08012018403D
+Coordinates from PDB:3BUF:A:394 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+  -18.4800   40.2670   93.5670   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.1480   39.3720   94.0320   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.0020   41.6410   93.1150   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.9010   39.2740   92.5510   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.7490   40.5500   93.5790   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.1120   40.6300   93.5950   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.6090   41.5360   93.1120   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.7570   39.2880   94.0210   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.9870   40.3610   93.5600   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.4320   39.0320   92.8300   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.0940   39.7920   91.1230   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  4  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  5  2  0  0  0  0
+  2  8  1  0  0  0  0
+  3  5  1  0  0  0  0
+  3  7  2  0  0  0  0
+  4 10  1  0  0  0  0
+  4 11  1  0  0  0  0
+  5  6  1  0  0  0  0
+  7  9  1  0  0  0  0
+  8  9  2  0  0  0  0
+M  END
+>  <InstanceId>
+3BUF_AEG_A_394
+
+>  <ChemCompId>
+AEG
+
+>  <PdbId>
+3BUF
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+394
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O
+
+>  <Name>
+4-[(2R)-2-aminopropyl]phenol
+
+>  <SystematicName>
+4-[(2R)-2-aminopropyl]phenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H13 N O
+
+>  <MolecularWeight>
+151.206
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H13NO/c1-7(10)6-8-2-4-9(11)5-3-8/h2-5,7,11H,6,10H2,1H3/t7-/m1/s1
+
+>  <InChIKey>
+GIKNHHRFLCDOEU-SSDOTTSWSA-N
+
+>  <SMILES>
+C[C@H](Cc1ccc(cc1)O)N
+
+$$$$

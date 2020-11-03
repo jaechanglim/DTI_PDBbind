@@ -1,0 +1,115 @@
+6GNR_6J3_A_201
+  RCSB PDB08022004503D
+Coordinates from PDB:6GNR:A:201 Model:1 without hydrogens
+ 18 19  0  0  0  0            999 V2000
+    1.2440    0.5550    0.1730   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7480    1.7530    0.1420   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9230    1.9980    0.3980   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.8550    2.8960   -0.2280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4470    2.6380   -0.6410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2910    3.7100   -0.9940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7680    5.0160   -0.9030   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.5010    5.3010   -0.5040   N 0  0  0  0  0  0  0  0  0  0  0  0
+    1.2980    4.2630   -0.1680   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.5600    4.5250    0.2290   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.1940    5.7320    0.4730   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.1330    6.1800   -0.4530   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.4290    5.4190   -1.7360   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.7860    7.3840   -0.1620   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.9580    8.0210   -1.2710  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+    4.5570    8.1280    0.9950   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.6180    7.6360    1.9170   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9500    6.4560    1.6660   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  5  6  2  0  0  0  0
+  5  4  1  0  0  0  0
+  2  4  1  0  0  0  0
+  2  3  1  0  0  0  0
+  6  7  1  0  0  0  0
+  4  9  2  0  0  0  0
+  7  8  2  0  0  0  0
+  9  8  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 18  2  0  0  0  0
+ 11 12  1  0  0  0  0
+ 13 12  1  0  0  0  0
+ 18 17  1  0  0  0  0
+ 12 14  2  0  0  0  0
+ 17 16  2  0  0  0  0
+ 14 16  1  0  0  0  0
+ 14 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+6GNR_6J3_A_201
+
+>  <ChemCompId>
+6J3
+
+>  <PdbId>
+6GNR
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 N2 O2 Cl
+
+>  <Name>
+2-(3-chloro-2-methylanilino)pyridine-3-carboxylic acid
+
+>  <SystematicName>
+2-[(3-chloranyl-2-methyl-phenyl)amino]pyridine-3-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H11 Cl N2 O2
+
+>  <MolecularWeight>
+262.692
+
+>  <ModifiedDate>
+2016-09-30
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H11ClN2O2/c1-8-10(14)5-2-6-11(8)16-12-9(13(17)18)4-3-7-15-12/h2-7H,1H3,(H,15,16)(H,17,18)
+
+>  <InChIKey>
+CLOMYZFHNHFSIQ-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1c(cccc1Cl)Nc2c(cccn2)C(=O)O
+
+$$$$

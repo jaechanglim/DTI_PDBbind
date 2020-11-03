@@ -1,0 +1,102 @@
+2H6B_3C4_A_302
+  RCSB PDB08012017063D
+Coordinates from PDB:2H6B:A:302 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   53.2510   88.0740   28.3190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   52.5970   87.0540   28.0370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.0630   86.3290   28.9230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   52.4540   86.7190   26.5650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.9990   85.3280   26.1800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.6920   85.0620   26.1910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.2510   83.8980   25.8960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.0440   82.7510   25.4830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.5090   81.4960   25.1070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   53.7040   81.8820   25.0730  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   52.4920   83.0870   25.4850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.8830   84.3450   25.8440   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  5 12  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  8 11  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+M  END
+>  <InstanceId>
+2H6B_3C4_A_302
+
+>  <ChemCompId>
+3C4
+
+>  <PdbId>
+2H6B
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O3 Cl
+
+>  <Name>
+(3-CHLORO-4-HYDROXYPHENYL)ACETIC ACID
+
+>  <SystematicName>
+2-(3-chloro-4-hydroxy-phenyl)ethanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H7 Cl O3
+
+>  <MolecularWeight>
+186.592
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H7ClO3/c9-6-3-5(4-8(11)12)1-2-7(6)10/h1-3,10H,4H2,(H,11,12)
+
+>  <InChIKey>
+IYTUKSIOQKTZEG-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c(cc1CC(=O)O)Cl)O
+
+$$$$

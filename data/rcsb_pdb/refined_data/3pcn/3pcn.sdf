@@ -1,0 +1,102 @@
+3PCN_DHY_M_550
+  RCSB PDB08012020083D
+Coordinates from PDB:3PCN:M:550 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   14.0730   11.5350   40.5930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.3540   10.1820   40.2180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.1580    9.2130   41.1660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.7400    9.5050   42.4530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.4970   10.8170   42.8440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.6720   11.8540   41.8900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.4480   12.6880   39.6060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6910   13.5590   40.1290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.8150   13.1380   39.7260   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4930   14.5000   40.8920   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.3350    7.8810   40.8960   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.5820    8.3990   43.2670   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  1  7  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 12  1  0  0  0  0
+  5  6  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+3PCN_DHY_M_550
+
+>  <ChemCompId>
+DHY
+
+>  <PdbId>
+3PCN
+
+>  <ChainId>
+M
+
+>  <ResidueNumber>
+550
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O4
+
+>  <Name>
+2-(3,4-DIHYDROXYPHENYL)ACETIC ACID
+
+>  <SystematicName>
+2-(3,4-dihydroxyphenyl)ethanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H8 O4
+
+>  <MolecularWeight>
+168.147
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H8O4/c9-6-2-1-5(3-7(6)10)4-8(11)12/h1-3,9-10H,4H2,(H,11,12)
+
+>  <InChIKey>
+CFFZDZCDUFSOFZ-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c(cc1CC(=O)O)O)O
+
+$$$$

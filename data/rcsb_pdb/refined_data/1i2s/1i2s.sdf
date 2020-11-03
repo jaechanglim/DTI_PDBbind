@@ -1,0 +1,103 @@
+1I2S_CIT_A_1300
+  RCSB PDB08012015073D
+Coordinates from PDB:1I2S:A:1300 Model:1 without hydrogens
+ 13 12  0  0  0  0            999 V2000
+   24.9790   -4.7030   12.9270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.8350   -4.3210   13.6680   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.5880   -3.8930   12.1800   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.3520   -6.2090   13.1670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.2260   -6.3710   14.4710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.4960   -5.7060   14.2300   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.4080   -7.9180   14.7860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.0150   -8.1090   16.2380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.4180   -7.1790   17.0030   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.0780   -9.4750   16.6260   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.5230   -5.6980   15.7250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.9130   -4.6430   16.2870   O 0  0  0  0  0  0  0  0  0  0  0  0
+   24.3840   -6.4300   16.1620   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  5 11  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 11 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+1I2S_CIT_A_1300
+
+>  <ChemCompId>
+CIT
+
+>  <PdbId>
+1I2S
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O7
+
+>  <Name>
+CITRIC ACID
+
+>  <SystematicName>
+2-hydroxypropane-1,2,3-tricarboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H8 O7
+
+>  <MolecularWeight>
+192.124
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H8O7/c7-3(8)1-6(13,5(11)12)2-4(9)10/h13H,1-2H2,(H,7,8)(H,9,10)(H,11,12)
+
+>  <InChIKey>
+KRKNYBCHXYNGOX-UHFFFAOYSA-N
+
+>  <SMILES>
+C(C(=O)O)C(CC(=O)O)(C(=O)O)O
+
+$$$$

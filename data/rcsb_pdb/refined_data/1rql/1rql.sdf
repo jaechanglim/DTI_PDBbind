@@ -1,0 +1,89 @@
+1RQL_VSO_B_600
+  RCSB PDB08012015533D
+Coordinates from PDB:1RQL:B:600 Model:1 without hydrogens
+  6  5  0  0  0  0            999 V2000
+   84.8300   -7.4100    8.2160   O 0  0  0  0  0  0  0  0  0  0  0  0
+   85.7460   -6.3030    8.2720   S 0  0  0  0  0  0  0  0  0  0  0  0
+   86.5700   -6.3720    6.7510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   87.5300   -5.4880    6.4420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   86.7950   -6.4560    9.2190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   85.0870   -5.0090    8.3100   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  5  2  0  0  0  0
+  2  6  2  0  0  0  0
+  3  4  2  0  0  0  0
+M  END
+>  <InstanceId>
+1RQL_VSO_B_600
+
+>  <ChemCompId>
+VSO
+
+>  <PdbId>
+1RQL
+
+>  <ChainId>
+B
+
+>  <ResidueNumber>
+600
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 O3 S
+
+>  <Name>
+VINYLSULPHONIC ACID
+
+>  <SystematicName>
+ethenesulfonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H4 O3 S
+
+>  <MolecularWeight>
+108.116
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H4O3S/c1-2-6(3,4)5/h2H,1H2,(H,3,4,5)
+
+>  <InChIKey>
+NLVXSWCKKBEXTG-UHFFFAOYSA-N
+
+>  <SMILES>
+C=CS(=O)(=O)O
+
+$$$$

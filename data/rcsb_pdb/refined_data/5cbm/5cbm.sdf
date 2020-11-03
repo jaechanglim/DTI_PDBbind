@@ -1,0 +1,110 @@
+5CBM_4ZN_A_704
+  RCSB PDB08022000563D
+Coordinates from PDB:5CBM:A:704 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+  172.1170   12.6210   85.6860   N 0  0  0  0  0  0  0  0  0  0  0  0
+  171.9530   14.6640   84.3600   C 0  0  0  0  0  0  0  0  0  0  0  0
+  171.3130   16.9530   84.7400   C 0  0  0  0  0  0  0  0  0  0  0  0
+  170.2580   15.6830   83.0050   C 0  0  0  0  0  0  0  0  0  0  0  0
+  175.6560   16.1580   84.7710   C 0  0  0  0  0  0  0  0  0  0  0  0
+  175.3610   14.7920   84.1910   C 0  0  0  0  0  0  0  0  0  0  0  0
+  174.4380   13.8050   85.3710   P 0  0  0  0  0  0  0  0  0  0  0  0
+  174.3940   14.5080   86.7780   O 0  0  0  0  0  0  0  0  0  0  0  0
+  175.1090   12.5020   85.5380   O 0  0  0  0  0  0  0  0  0  0  0  0
+  172.7830   13.4400   84.7140   C 0  0  0  0  0  0  0  0  0  0  0  0
+  172.0860   15.8450   85.0700   C 0  0  0  0  0  0  0  0  0  0  0  0
+  170.3910   16.8640   83.7070   C 0  0  0  0  0  0  0  0  0  0  0  0
+  171.0300   14.5850   83.3330   C 0  0  0  0  0  0  0  0  0  0  0  0
+  175.1310   17.1690   83.7960   C 0  0  0  0  0  0  0  0  0  0  0  0
+  174.4830   18.1650   84.2020   O 0  0  0  0  0  0  0  0  0  0  0  0
+  175.3430   16.9850   82.5740   O 0  0  0  0  0  0  0  0  0  0  0  0
+  9  7  2  0  0  0  0
+  8  7  1  0  0  0  0
+  6  5  1  0  0  0  0
+  6  7  1  0  0  0  0
+  5 14  1  0  0  0  0
+  7 10  1  0  0  0  0
+ 14 16  2  0  0  0  0
+ 14 15  1  0  0  0  0
+  1 10  1  0  0  0  0
+ 10  2  1  0  0  0  0
+ 11  2  2  0  0  0  0
+ 11  3  1  0  0  0  0
+  2 13  1  0  0  0  0
+  3 12  2  0  0  0  0
+ 13  4  2  0  0  0  0
+ 12  4  1  0  0  0  0
+M  END
+>  <InstanceId>
+5CBM_4ZN_A_704
+
+>  <ChemCompId>
+4ZN
+
+>  <PdbId>
+5CBM
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+704
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+4
+
+>  <ObservedFormula>
+C10 N O4 P
+
+>  <Name>
+(2S)-2-{[(R)-[(R)-amino(phenyl)methyl](hydroxy)phosphoryl]methyl}-4-methylpentanoic acid
+
+>  <SystematicName>
+(2S)-2-[[[(R)-azanyl(phenyl)methyl]-oxidanyl-phosphoryl]methyl]-4-methyl-pentanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C14 H22 N O4 P
+
+>  <MolecularWeight>
+299.303
+
+>  <ModifiedDate>
+2020-06-01
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C14H22NO4P/c1-10(2)8-12(14(16)17)9-20(18,19)13(15)11-6-4-3-5-7-11/h3-7,10,12-13H,8-9,15H2,1-2H3,(H,16,17)(H,18,19)/t12-,13-/m1/s1
+
+>  <InChIKey>
+RUYPIGFYJMPICK-CHWSQXEVSA-N
+
+>  <SMILES>
+CC(C)C[C@H](CP(=O)([C@H](c1ccccc1)N)O)C(=O)O
+
+$$$$

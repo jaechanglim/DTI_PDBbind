@@ -1,0 +1,106 @@
+5CT2_CXS_A_301
+  RCSB PDB08022001003D
+Coordinates from PDB:5CT2:A:301 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   19.1960   17.2830   34.9300   S 0  0  0  0  0  0  0  0  0  0  0  0
+   20.3980   18.1630   34.8120   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.5430   15.8550   34.6410   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.5800   17.4270   36.2230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.0090   17.7950   33.6340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.0630   16.6520   33.2650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.8030   17.1730   32.5910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4950   16.2750   31.4650   N 0  0  0  0  0  0  0  0  0  0  0  0
+   14.0950   15.8510   31.3660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.9690   15.0320   30.0630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.5360   14.7890   29.6110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.7130   16.0770   29.5560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.7330   16.7760   30.9160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.1690   17.1020   31.3410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  2  0  0  0  0
+  1  4  1  0  0  0  0
+  1  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 14  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+5CT2_CXS_A_301
+
+>  <ChemCompId>
+CXS
+
+>  <PdbId>
+5CT2
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O3 S
+
+>  <Name>
+3-CYCLOHEXYL-1-PROPYLSULFONIC ACID
+
+>  <SystematicName>
+3-(cyclohexylamino)propane-1-sulfonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H19 N O3 S
+
+>  <MolecularWeight>
+221.317
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H19NO3S/c11-14(12,13)8-4-7-10-9-5-2-1-3-6-9/h9-10H,1-8H2,(H,11,12,13)
+
+>  <InChIKey>
+PJWWRFATQTVXHA-UHFFFAOYSA-N
+
+>  <SMILES>
+C1CCC(CC1)NCCCS(=O)(=O)O
+
+$$$$

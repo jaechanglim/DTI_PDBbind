@@ -1,0 +1,97 @@
+1TPW_PGH_A_250
+  RCSB PDB08012016023D
+Coordinates from PDB:1TPW:A:250 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   23.5110   30.2180   18.4800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.6930   31.1730   18.6660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.1110   30.1470   17.2260   N 0  0  0  0  0  0  0  0  0  0  0  0
+   22.0640   29.3220   16.8830   O 0  0  0  0  0  0  0  0  0  0  0  0
+   23.0650   29.5380   19.3960   O 0  0  0  0  0  0  0  0  0  0  0  0
+   24.5710   32.0020   19.8200   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.2880   34.0300   21.0850   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.2220   33.5850   18.8230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.9070   32.1410   20.8130   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.8280   32.9410   20.1530   P 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  5  2  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  1  0  0  0  0
+  6 10  1  0  0  0  0
+  7 10  2  0  0  0  0
+  8 10  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1TPW_PGH_A_250
+
+>  <ChemCompId>
+PGH
+
+>  <PdbId>
+1TPW
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+250
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O6 P
+
+>  <Name>
+PHOSPHOGLYCOLOHYDROXAMIC ACID
+
+>  <SystematicName>
+[2-(hydroxyamino)-2-oxo-ethyl] dihydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H6 N O6 P
+
+>  <MolecularWeight>
+171.046
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H6NO6P/c4-2(3-5)1-9-10(6,7)8/h5H,1H2,(H,3,4)(H2,6,7,8)
+
+>  <InChIKey>
+BAXHHWZKQZIJID-UHFFFAOYSA-N
+
+>  <SMILES>
+C(C(=O)NO)OP(=O)(O)O
+
+$$$$

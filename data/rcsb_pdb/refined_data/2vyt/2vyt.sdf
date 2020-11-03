@@ -1,0 +1,99 @@
+2VYT_MLZ_A_1244
+  RCSB PDB08012018053D
+Coordinates from PDB:2VYT:A:1244 Model:1 without hydrogens
+ 11 10  0  0  0  0            999 V2000
+   17.6830   40.2970   48.9730   N 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3700   41.6580   49.3880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.0690   41.6900   50.8880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7250   43.0640   51.4300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2240   42.9580   52.8560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.8760   44.3210   53.4210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3350   44.2160   54.8090   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1190   45.6160   55.2690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.5230   42.6010   49.0710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.2460   43.7070   48.5550   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.6860   42.2240   49.3410   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  9  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  9 10  2  0  0  0  0
+  9 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+2VYT_MLZ_A_1244
+
+>  <ChemCompId>
+MLZ
+
+>  <PdbId>
+2VYT
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1244
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N2 O2
+
+>  <Name>
+N-METHYL-LYSINE
+
+>  <SystematicName>
+(2S)-2-amino-6-methylamino-hexanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+L-PEPTIDE LINKING
+
+>  <Formula>
+C7 H16 N2 O2
+
+>  <MolecularWeight>
+160.214
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+LYS
+
+>  <OneLetterCode>
+K
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H16N2O2/c1-9-5-3-2-4-6(8)7(10)11/h6,9H,2-5,8H2,1H3,(H,10,11)/t6-/m0/s1
+
+>  <InChIKey>
+PQNASZJZHFPQLE-LURJTMIESA-N
+
+>  <SMILES>
+CNCCCC[C@@H](C(=O)O)N
+
+$$$$

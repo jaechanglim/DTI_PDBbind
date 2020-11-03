@@ -1,0 +1,91 @@
+3IP9_ABU_A_357
+  RCSB PDB08012019213D
+Coordinates from PDB:3IP9:A:357 Model:1 without hydrogens
+  7  6  0  0  0  0            999 V2000
+   23.2710   20.8850   16.0950   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.2420   19.5810   16.7240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.0550   19.5790   18.2340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.7890   18.4570   18.9450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.1120   17.0970   19.0140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.2950   16.4220   20.2110   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.8190   16.4840   18.0250   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  5  7  1  0  0  0  0
+M  END
+>  <InstanceId>
+3IP9_ABU_A_357
+
+>  <ChemCompId>
+ABU
+
+>  <PdbId>
+3IP9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+357
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N O2
+
+>  <Name>
+GAMMA-AMINO-BUTANOIC ACID
+
+>  <SystematicName>
+4-azanylbutanoic acid
+
+>  <Synonyms>
+GAMMA(AMINO)-BUTYRIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H9 N O2
+
+>  <MolecularWeight>
+103.12
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H9NO2/c5-3-1-2-4(6)7/h1-3,5H2,(H,6,7)
+
+>  <InChIKey>
+BTCSSZJGUNDROE-UHFFFAOYSA-N
+
+>  <SMILES>
+C(CC(=O)O)CN
+
+$$$$

@@ -1,0 +1,105 @@
+2XDK_XDK_A_1226
+  RCSB PDB08012018153D
+Coordinates from PDB:2XDK:A:1226 Model:1 without hydrogens
+ 13 14  0  0  0  0            999 V2000
+    6.2120    4.1810    9.3060   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.8060    4.2540    7.9860   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.8580    3.2030    7.1600   N 0  0  0  0  0  0  0  0  0  0  0  0
+    6.3050    2.0380    7.6540   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.7250    1.8730    8.9730   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.2110    0.5550    9.4690   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.7280    0.1430   10.6520   N 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1040   -0.2210    8.7530   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.4900   -1.4350    9.2720   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.0230   -1.8670   10.4440   N 0  0  0  0  0  0  0  0  0  0  0  0
+    7.1480   -1.0650   11.0960   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.6440   -1.5080   12.2960   N 0  0  0  0  0  0  0  0  0  0  0  0
+    6.6690    2.9810    9.8090   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 13  2  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5 13  1  0  0  0  0
+  6  7  2  0  0  0  0
+  6  8  1  0  0  0  0
+  7 11  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  2  0  0  0  0
+ 11 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+2XDK_XDK_A_1226
+
+>  <ChemCompId>
+XDK
+
+>  <PdbId>
+2XDK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1226
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N4
+
+>  <Name>
+2-AMINO-4-PYRIDYL-PYRIMIDINE
+
+>  <SystematicName>
+4-pyridin-3-ylpyrimidin-2-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H8 N4
+
+>  <MolecularWeight>
+172.187
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H8N4/c10-9-12-5-3-8(13-9)7-2-1-4-11-6-7/h1-6H,(H2,10,12,13)
+
+>  <InChIKey>
+LQHQKYWYKPLKCH-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(cnc1)c2ccnc(n2)N
+
+$$$$

@@ -1,0 +1,102 @@
+4Y4J_LNR_A_412
+  RCSB PDB08022000253D
+Coordinates from PDB:4Y4J:A:412 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   -5.8870    2.7370   11.1760   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7160    2.0970   10.9360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5310    2.7820   10.7060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7300    0.6980   10.8850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9010    0.0520   11.1390   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5610    0.0190   10.5920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3870    0.7070   10.3590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3580    2.1000   10.4130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0740    2.8520   10.1300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2270    3.8040    9.0800   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6020    3.6220   11.3500   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.6210    4.4030   11.0880   N 0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  0  0  0  0
+  3  2  2  0  0  0  0
+  2  4  1  0  0  0  0
+  8  3  1  0  0  0  0
+  6  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  7  6  1  0  0  0  0
+  8  7  2  0  0  0  0
+  9  8  1  0  0  0  0
+ 11  9  1  0  0  0  0
+ 10  9  1  0  0  0  0
+ 12 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+4Y4J_LNR_A_412
+
+>  <ChemCompId>
+LNR
+
+>  <PdbId>
+4Y4J
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+412
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O3
+
+>  <Name>
+L-NOREPINEPHRINE
+
+>  <SystematicName>
+4-[(1R)-2-azanyl-1-oxidanyl-ethyl]benzene-1,2-diol
+
+>  <Synonyms>
+NORADRENALINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H11 N O3
+
+>  <MolecularWeight>
+169.178
+
+>  <ModifiedDate>
+2012-05-16
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H11NO3/c9-4-8(12)5-1-2-6(10)7(11)3-5/h1-3,8,10-12H,4,9H2/t8-/m0/s1
+
+>  <InChIKey>
+SFLSHLFXELFNJZ-QMMMGPOBSA-N
+
+>  <SMILES>
+c1cc(c(cc1[C@H](CN)O)O)O
+
+$$$$

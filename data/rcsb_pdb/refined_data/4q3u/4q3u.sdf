@@ -1,0 +1,101 @@
+4Q3U_NNH_A_405
+  RCSB PDB08012022573D
+Coordinates from PDB:4Q3U:A:405 Model:1 without hydrogens
+ 12 11  0  0  0  0            999 V2000
+  -44.3650   17.4280   38.8280   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -43.5840   18.2620   37.9430   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -42.4150   17.4940   37.3300   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -41.4770   18.2850   36.7420   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -42.9750   19.5210   38.5760   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -42.1870   19.2020   39.8460   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -41.6100   20.4520   40.2940   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -41.3820   20.8830   41.6450   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -41.7730   19.9150   42.7000   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.8590   22.0490   41.8810   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -41.6070   20.2050   43.9990   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -42.2120   16.2840   37.2820   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  5  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3 12  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  2  0  0  0  0
+  9 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+4Q3U_NNH_A_405
+
+>  <ChemCompId>
+NNH
+
+>  <PdbId>
+4Q3U
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+405
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N4 O3
+
+>  <Name>
+NOR-N-OMEGA-HYDROXY-L-ARGININE
+
+>  <SystematicName>
+(2S)-2-amino-4-[(N-hydroxycarbamimidoyl)amino]butanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+L-PEPTIDE LINKING
+
+>  <Formula>
+C5 H12 N4 O3
+
+>  <MolecularWeight>
+176.174
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+ARG
+
+>  <OneLetterCode>
+R
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H12N4O3/c6-3(4(10)11)1-2-8-5(7)9-12/h3,12H,1-2,6H2,(H,10,11)(H3,7,8,9)/t3-/m0/s1
+
+>  <InChIKey>
+KOBHCUDVWOTEKO-VKHMYHEASA-N
+
+>  <SMILES>
+[H]/N=C(/NCC[C@@H](C(=O)O)N)\NO
+
+$$$$

@@ -1,0 +1,106 @@
+4RUY_3W6_A_302
+  RCSB PDB08012023123D
+Coordinates from PDB:4RUY:A:302 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   -1.9780    8.0000   14.4900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0740    7.2250   13.1970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4050    5.7910   13.5120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7560    5.7300   13.8940   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.1800    4.5680   14.5130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6130    4.5940   14.9480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1210    3.5290   15.5770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2520    2.3280   15.8240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9380    0.9620   16.6870   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4240    1.0920   18.0360   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.3860    1.0700   16.6190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3910   -0.3980   16.0050   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9590    2.3140   15.4400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3840    3.5040   14.7350   C 0  0  0  0  0  0  0  0  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5 14  2  0  0  0  0
+  5  6  1  0  0  0  0
+ 14 13  1  0  0  0  0
+  6  7  2  0  0  0  0
+ 13  8  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+ 12  9  1  0  0  0  0
+ 11  9  2  0  0  0  0
+  9 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+4RUY_3W6_A_302
+
+>  <ChemCompId>
+3W6
+
+>  <PdbId>
+4RUY
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O3 S
+
+>  <Name>
+4-propoxybenzenesulfonamide
+
+>  <SystematicName>
+4-propoxybenzenesulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H13 N O3 S
+
+>  <MolecularWeight>
+215.269
+
+>  <ModifiedDate>
+2015-04-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H13NO3S/c1-2-7-13-8-3-5-9(6-4-8)14(10,11)12/h3-6H,2,7H2,1H3,(H2,10,11,12)
+
+>  <InChIKey>
+GWLVKQMJYAXAFM-UHFFFAOYSA-N
+
+>  <SMILES>
+CCCOc1ccc(cc1)S(=O)(=O)N
+
+$$$$

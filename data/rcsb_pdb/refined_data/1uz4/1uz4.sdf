@@ -1,0 +1,100 @@
+1UZ4_IFL_A_1432
+  RCSB PDB08012016073D
+Coordinates from PDB:1UZ4:A:1432 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   73.7830   13.6110   34.8480   O 0  0  0  0  0  0  0  0  0  0  0  0
+   74.1710   12.7470   33.8070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   73.0980   12.9000   32.6800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   72.1200   11.8380   32.7920   O 0  0  0  0  0  0  0  0  0  0  0  0
+   73.6370   12.7820   31.2260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   74.8610   12.2400   31.0840   N 0  0  0  0  0  0  0  0  0  0  0  0
+   75.8340   12.0650   32.1660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   75.5890   13.0490   33.3080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   76.7530   12.9580   34.3400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   76.7790   11.6340   34.9250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   72.8590   12.9750   30.2750   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  2  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1UZ4_IFL_A_1432
+
+>  <ChemCompId>
+IFL
+
+>  <PdbId>
+1UZ4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1432
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O4
+
+>  <Name>
+(3S,4R,5R)-3,4-DIHYDROXY-5-(HYDROXYMETHYL)PIPERIDIN-2-ONE
+
+>  <SystematicName>
+(3S,4R,5R)-3,4-dihydroxy-5-(hydroxymethyl)piperidin-2-one
+
+>  <Synonyms>
+ISOFAGOMINE LACTAM
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H11 N O4
+
+>  <MolecularWeight>
+161.156
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H11NO4/c8-2-3-1-7-6(11)5(10)4(3)9/h3-5,8-10H,1-2H2,(H,7,11)/t3-,4-,5+/m1/s1
+
+>  <InChIKey>
+ARBXEMIAJIJEQI-WDCZJNDASA-N
+
+>  <SMILES>
+C1[C@@H]([C@H]([C@@H](C(=O)N1)O)O)CO
+
+$$$$

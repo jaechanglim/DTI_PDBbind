@@ -1,0 +1,104 @@
+5MGK_7MW_A_1901
+  RCSB PDB08022002223D
+Coordinates from PDB:5MGK:A:1901 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+ -105.3940   37.0360   25.5320   C 0  0  0  0  0  0  0  0  0  0  0  0
+ -105.4340   38.0760   26.6280   C 0  0  0  0  0  0  0  0  0  0  0  0
+ -106.8210   38.6430   26.8150   C 0  0  0  0  0  0  0  0  0  0  0  0
+ -107.7990   37.9840   26.5260   O 0  0  0  0  0  0  0  0  0  0  0  0
+ -106.9740   40.0380   27.3680   C 0  0  0  0  0  0  0  0  0  0  0  0
+ -105.9320   40.8890   27.6860   C 0  0  0  0  0  0  0  0  0  0  0  0
+ -106.4740   42.0260   28.1450   N 0  0  0  0  0  0  0  0  0  0  0  0
+ -107.8150   41.9410   28.1320   C 0  0  0  0  0  0  0  0  0  0  0  0
+ -108.1580   40.6920   27.6470   C 0  0  0  0  0  0  0  0  0  0  0  0
+ -108.7610   43.0270   28.5820   C 0  0  0  0  0  0  0  0  0  0  0  0
+ -109.9180   43.0230   28.2150   O 0  0  0  0  0  0  0  0  0  0  0  0
+ -108.2810   44.0330   29.4360   O 0  0  0  0  0  0  0  0  0  0  0  0
+ -109.0520   45.2120   29.4430   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  4  3  2  0  0  0  0
+  2  3  1  0  0  0  0
+  3  5  1  0  0  0  0
+  5  9  1  0  0  0  0
+  5  6  2  0  0  0  0
+  9  8  2  0  0  0  0
+  6  7  1  0  0  0  0
+  8  7  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 11 10  2  0  0  0  0
+ 10 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+5MGK_7MW_A_1901
+
+>  <ChemCompId>
+7MW
+
+>  <PdbId>
+5MGK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1901
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O3
+
+>  <Name>
+methyl 4-propanoyl-1~{H}-pyrrole-2-carboxylate
+
+>  <SystematicName>
+methyl 4-propanoyl-1~{H}-pyrrole-2-carboxylate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H11 N O3
+
+>  <MolecularWeight>
+181.189
+
+>  <ModifiedDate>
+2017-04-07
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H11NO3/c1-3-8(11)6-4-7(10-5-6)9(12)13-2/h4-5,10H,3H2,1-2H3
+
+>  <InChIKey>
+GMDIDIYLWBUNEW-UHFFFAOYSA-N
+
+>  <SMILES>
+CCC(=O)c1cc([nH]c1)C(=O)OC
+
+$$$$

@@ -1,0 +1,103 @@
+4AHS_AKH_A_1216
+  RCSB PDB08012021063D
+Coordinates from PDB:4AHS:A:1216 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+  -15.5130   20.2680  -10.7570   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.5350   19.9790  -11.6690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.4470   20.9660  -12.3540   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.2890   20.0010  -13.1750   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.7740   19.2290  -10.2400   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.0580   17.9310  -10.6550   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.0660   17.6140  -11.5690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.3240   16.1750  -11.9280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.0720   15.9140  -12.9330   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.8200   18.6790  -12.0610   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.8020   15.2980  -11.1610   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.8760   18.6150  -12.9730   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  5  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2 10  2  0  0  0  0
+  3  4  2  0  0  0  0
+  4 12  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 10  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 11  2  0  0  0  0
+ 12 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+4AHS_AKH_A_1216
+
+>  <ChemCompId>
+AKH
+
+>  <PdbId>
+4AHS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1216
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 O3
+
+>  <Name>
+1-BENZOFURAN-7-CARBOXYLIC ACID
+
+>  <SystematicName>
+1-benzofuran-7-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C9 H6 O3
+
+>  <MolecularWeight>
+162.142
+
+>  <ModifiedDate>
+2014-09-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H6O3/c10-9(11)7-3-1-2-6-4-5-12-8(6)7/h1-5H,(H,10,11)
+
+>  <InChIKey>
+QMHILIQFOBNARN-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc2ccoc2c(c1)C(=O)O
+
+$$$$

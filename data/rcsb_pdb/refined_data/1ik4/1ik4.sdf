@@ -1,0 +1,97 @@
+1IK4_PGH_A_153
+  RCSB PDB08012015093D
+Coordinates from PDB:1IK4:A:153 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   86.1180  -15.6070   65.3720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   85.7010  -14.6110   66.4400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   87.2920  -16.1290   65.5670   N 0  0  0  0  0  0  0  0  0  0  0  0
+   87.7330  -17.0480   64.6530   O 0  0  0  0  0  0  0  0  0  0  0  0
+   85.2920  -15.8030   64.4670   O 0  0  0  0  0  0  0  0  0  0  0  0
+   84.9090  -13.6700   65.7870   O 0  0  0  0  0  0  0  0  0  0  0  0
+   82.6140  -12.9430   66.6190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   84.7290  -12.3590   68.3190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   84.1870  -11.0950   65.8320   O 0  0  0  0  0  0  0  0  0  0  0  0
+   84.2080  -12.4360   66.7460   P 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  5  2  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  1  0  0  0  0
+  6 10  1  0  0  0  0
+  7 10  2  0  0  0  0
+  8 10  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1IK4_PGH_A_153
+
+>  <ChemCompId>
+PGH
+
+>  <PdbId>
+1IK4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+153
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O6 P
+
+>  <Name>
+PHOSPHOGLYCOLOHYDROXAMIC ACID
+
+>  <SystematicName>
+[2-(hydroxyamino)-2-oxo-ethyl] dihydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H6 N O6 P
+
+>  <MolecularWeight>
+171.046
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H6NO6P/c4-2(3-5)1-9-10(6,7)8/h5H,1H2,(H,3,4)(H2,6,7,8)
+
+>  <InChIKey>
+BAXHHWZKQZIJID-UHFFFAOYSA-N
+
+>  <SMILES>
+C(C(=O)NO)OP(=O)(O)O
+
+$$$$

@@ -1,0 +1,103 @@
+4EJ8_1F1_A_106
+  RCSB PDB08012021363D
+Coordinates from PDB:4EJ8:A:106 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+    9.0430   22.5950   24.5300   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.5420   23.6900   24.3310   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.8840   24.7720   24.7620   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.8600   23.7930   23.6100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.4600   25.0400   23.4130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.6780   25.1920   22.7460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.2840   24.0240   22.2810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.4820   23.8190   21.5900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.5930   22.4480   21.3660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.5070   21.8430   21.9030   N 0  0  0  0  0  0  0  0  0  0  0  0
+   12.6960   22.7730   22.4670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.4710   22.6290   23.1300   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4 12  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+ 11  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+ 10  9  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 12 11  2  0  0  0  0
+M  END
+>  <InstanceId>
+4EJ8_1F1_A_106
+
+>  <ChemCompId>
+1F1
+
+>  <PdbId>
+4EJ8
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+106
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O2
+
+>  <Name>
+1H-indole-6-carboxylic acid
+
+>  <SystematicName>
+1H-indole-6-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H7 N O2
+
+>  <MolecularWeight>
+161.157
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H7NO2/c11-9(12)7-2-1-6-3-4-10-8(6)5-7/h1-5,10H,(H,11,12)
+
+>  <InChIKey>
+GHTDODSYDCPOCW-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(cc2c1cc[nH]2)C(=O)O
+
+$$$$

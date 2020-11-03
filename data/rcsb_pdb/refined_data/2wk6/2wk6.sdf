@@ -1,0 +1,96 @@
+2WK6_IUR_A_1482
+  RCSB PDB08012018083D
+Coordinates from PDB:2WK6:A:1482 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   16.6580   16.1180   45.6180   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4900   16.7150   46.1710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.8440   17.6110   45.6880   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0900   16.1560   47.4150   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7070   15.1100   48.1510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2390   14.7370   49.2240   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9130   14.5550   47.5070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3380   15.0780   46.2740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.9680   13.0080   48.4700   I 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  8  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+2WK6_IUR_A_1482
+
+>  <ChemCompId>
+IUR
+
+>  <PdbId>
+2WK6
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1482
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N2 O2 I
+
+>  <Name>
+5-IODOURACIL
+
+>  <SystematicName>
+5-iodo-1H-pyrimidine-2,4-dione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H3 I N2 O2
+
+>  <MolecularWeight>
+237.983
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H3IN2O2/c5-2-1-6-4(9)7-3(2)8/h1H,(H2,6,7,8,9)
+
+>  <InChIKey>
+KSNXJLQDQOIRIP-UHFFFAOYSA-N
+
+>  <SMILES>
+C1=C(C(=O)NC(=O)N1)I
+
+$$$$

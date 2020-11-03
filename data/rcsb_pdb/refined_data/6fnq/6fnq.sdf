@@ -1,0 +1,107 @@
+6FNQ_AVJ_A_401
+  RCSB PDB08022004413D
+Coordinates from PDB:6FNQ:A:401 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+    7.8840   17.6830   17.3230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.1710   17.5710   16.8070   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.6890   18.5790   15.2980   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.6750   15.9520   13.3890   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.2580   16.3960   14.9910   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.0630   13.1130   14.8120   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.5000   15.0240   16.5360   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.4020   12.6950   16.2480   N 0  0  0  0  0  0  0  0  0  0  0  0
+    8.5890   11.8290   14.5460   N 0  0  0  0  0  0  0  0  0  0  0  0
+    7.4520   16.1530   14.6040   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.3320   13.6410   15.8630   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.5680   11.5880   15.4250   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.6310   16.1900   15.5510   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.8150   17.4880   16.2270   N 0  3  0  0  0  0  0  0  0  0  0  0
+  1 14  1  0  0  0  0
+  2 14  1  0  0  0  0
+  3 14  1  0  0  0  0
+  4 10  2  0  0  0  0
+  5 10  1  0  0  0  0
+  6  9  1  0  0  0  0
+  6 11  2  0  0  0  0
+  7 11  1  0  0  0  0
+  7 13  1  0  0  0  0
+  8 11  1  0  0  0  0
+  8 12  1  0  0  0  0
+  9 12  2  0  0  0  0
+ 10 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  CHG  1  14   1
+M  END
+>  <InstanceId>
+6FNQ_AVJ_A_401
+
+>  <ChemCompId>
+AVJ
+
+>  <PdbId>
+6FNQ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N3 O2
+
+>  <Name>
+N,N,N-trimethyl-histidine
+
+>  <SystematicName>
+[(2S)-3-(1H-imidazol-5-yl)-1-oxidanyl-1-oxidanylidene-propan-2-yl]-trimethyl-azanium
+
+>  <Synonyms>
+Hercynine
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H16 N3 O2
+
+>  <MolecularWeight>
+198.242
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+HIS
+
+>  <OneLetterCode>
+H
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H15N3O2/c1-12(2,3)8(9(13)14)4-7-5-10-6-11-7/h5-6,8H,4H2,1-3H3,(H-,10,11,13,14)/p+1/t8-/m0/s1
+
+>  <InChIKey>
+GPPYTCRVKHULJH-QMMMGPOBSA-O
+
+>  <SMILES>
+C[N+](C)(C)[C@@H](Cc1cnc[nH]1)C(=O)O
+
+$$$$

@@ -1,0 +1,108 @@
+1WHT_BZS_A_430
+  RCSB PDB08012016183D
+Coordinates from PDB:1WHT:A:430 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+   66.2650   32.3170   71.9920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.8040   33.7440   72.3260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   64.4170   33.8480   73.0340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.3680   33.0550   72.3240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.8890   35.2680   73.1360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.8640   35.9840   71.8330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.8890   35.7060   70.8730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   64.8570   36.9340   71.5690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.9350   36.4120   69.6660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   64.8970   37.6770   70.3890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.9190   37.3880   69.4310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   66.1820   31.3660   72.8620   O 0  0  0  0  0  0  0  0  0  0  0  0
+   66.7490   32.1670   70.8690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   62.3620   32.8050   72.9780   O 0  0  0  0  0  0  0  0  0  0  0  0
+   63.5310   32.7750   71.1280   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 12  2  0  0  0  0
+  1 13  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  4 14  2  0  0  0  0
+  4 15  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  6  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  8 10  2  0  0  0  0
+  9 11  2  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+1WHT_BZS_A_430
+
+>  <ChemCompId>
+BZS
+
+>  <PdbId>
+1WHT
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+430
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 O4
+
+>  <Name>
+L-BENZYLSUCCINIC ACID
+
+>  <SystematicName>
+(2R)-2-(phenylmethyl)butanedioic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H12 O4
+
+>  <MolecularWeight>
+208.211
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H12O4/c12-10(13)7-9(11(14)15)6-8-4-2-1-3-5-8/h1-5,9H,6-7H2,(H,12,13)(H,14,15)/t9-/m1/s1
+
+>  <InChIKey>
+GTOFKXZQQDSVFH-SECBINFHSA-N
+
+>  <SMILES>
+c1ccc(cc1)C[C@H](CC(=O)O)C(=O)O
+
+$$$$

@@ -1,0 +1,96 @@
+4K7N_MCT_A_201
+  RCSB PDB08012022123D
+Coordinates from PDB:4K7N:A:201 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+  -28.0760   -8.5200  -44.4080   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.0030   -9.7900  -44.9760   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.7600  -10.9110  -44.1930   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.6590  -12.1660  -44.7230   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.6210  -10.7530  -42.8150   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.4160  -11.8550  -42.0450   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.7150   -9.4840  -42.2400   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.9430   -8.3730  -43.0370   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.2990   -7.3980  -45.2090   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  8  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+M  END
+>  <InstanceId>
+4K7N_MCT_A_201
+
+>  <ChemCompId>
+MCT
+
+>  <PdbId>
+4K7N
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O2
+
+>  <Name>
+4-METHYLCATECHOL
+
+>  <SystematicName>
+4-methylbenzene-1,2-diol
+
+>  <Synonyms>
+4-METHYL-1,2-BENZENEDIOL
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H8 O2
+
+>  <MolecularWeight>
+124.137
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H8O2/c1-5-2-3-6(8)7(9)4-5/h2-4,8-9H,1H3
+
+>  <InChIKey>
+ZBCATMYQYDCTIZ-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1ccc(c(c1)O)O
+
+$$$$

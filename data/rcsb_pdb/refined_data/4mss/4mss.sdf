@@ -1,0 +1,106 @@
+4MSS_2CZ_A_401
+  RCSB PDB08012022333D
+Coordinates from PDB:4MSS:A:401 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   68.3050   -9.2640    2.7750   N 0  0  0  0  0  0  0  0  0  0  0  0
+   67.5930   -8.0090    2.6690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   69.0590   -6.3810    3.6610   N 0  0  0  0  0  0  0  0  0  0  0  0
+   67.7830   -7.0440    3.7880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   67.7990   -7.6970    5.1730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   67.6650   -6.7080    6.1710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   66.6520   -8.6420    5.4080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   66.6590   -8.8410    6.8250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   66.6470   -9.9680    4.6480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.5510   -9.9890    3.7230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   67.8130  -10.2660    3.7420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   69.1680   -4.9520    3.5580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   68.1730   -4.2590    3.5090   O 0  0  0  0  0  0  0  0  0  0  0  0
+   70.5500   -4.3200    3.4630   C 0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  0  0  0  0
+  2  4  1  0  0  0  0
+  1 11  1  0  0  0  0
+ 14 12  1  0  0  0  0
+ 13 12  2  0  0  0  0
+ 12  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+ 10  9  1  0  0  0  0
+ 11  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  9  7  1  0  0  0  0
+  5  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  7  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+4MSS_2CZ_A_401
+
+>  <ChemCompId>
+2CZ
+
+>  <PdbId>
+4MSS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N2 O4
+
+>  <Name>
+N-[(3S,4R,5R,6S)-4,5,6-trihydroxyazepan-3-yl]acetamide
+
+>  <SystematicName>
+N-[(3S,4R,5R,6S)-4,5,6-tris(oxidanyl)azepan-3-yl]ethanamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H16 N2 O4
+
+>  <MolecularWeight>
+204.224
+
+>  <ModifiedDate>
+2013-10-25
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H16N2O4/c1-4(11)10-5-2-9-3-6(12)8(14)7(5)13/h5-9,12-14H,2-3H2,1H3,(H,10,11)/t5-,6-,7+,8+/m0/s1
+
+>  <InChIKey>
+RGHXJBVAPJFIEQ-RULNZFCNSA-N
+
+>  <SMILES>
+CC(=O)N[C@H]1CNC[C@@H]([C@H]([C@@H]1O)O)O
+
+$$$$

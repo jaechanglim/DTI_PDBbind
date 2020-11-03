@@ -1,0 +1,94 @@
+4Q9Y_M3T_A_302
+  RCSB PDB08012022583D
+Coordinates from PDB:4Q9Y:A:302 Model:1 without hydrogens
+  8  8  0  0  0  0            999 V2000
+   15.9600    4.5290   13.8660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5160    3.7140   14.9220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.9760    2.4060   15.0330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5290    1.5880   16.0940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1450   -0.1610   16.2430   S 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6510    2.0770   17.0050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.1900    3.3910   16.8930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6350    4.2050   15.8360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  8  7  2  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  2  0  0  0  0
+  7  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+4Q9Y_M3T_A_302
+
+>  <ChemCompId>
+M3T
+
+>  <PdbId>
+4Q9Y
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 S
+
+>  <Name>
+3-methylbenzenethiol
+
+>  <SystematicName>
+3-methylbenzenethiol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H8 S
+
+>  <MolecularWeight>
+124.203
+
+>  <ModifiedDate>
+2015-03-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H8S/c1-6-3-2-4-7(8)5-6/h2-5,8H,1H3
+
+>  <InChIKey>
+WRXOZRLZDJAYDR-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1cccc(c1)S
+
+$$$$

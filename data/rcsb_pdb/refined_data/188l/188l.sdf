@@ -1,0 +1,94 @@
+188L_OXE_A_400
+  RCSB PDB08012014323D
+Coordinates from PDB:188L:A:400 Model:1 without hydrogens
+  8  8  0  0  0  0            999 V2000
+   27.2140    7.4650    4.4890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.5750    6.9460    3.2690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.2520    5.6280    2.9580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.4320    4.8790    3.8100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.0190    5.4030    5.0400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.4360    6.6760    5.4130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.6430    8.8780    4.7960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.4530    7.7660    2.3490   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  1  7  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+M  END
+>  <InstanceId>
+188L_OXE_A_400
+
+>  <ChemCompId>
+OXE
+
+>  <PdbId>
+188L
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+400
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8
+
+>  <Name>
+ORTHO-XYLENE
+
+>  <SystematicName>
+1,2-dimethylbenzene
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H10
+
+>  <MolecularWeight>
+106.165
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H10/c1-7-5-3-4-6-8(7)2/h3-6H,1-2H3
+
+>  <InChIKey>
+CTQNGGLPUBDAKN-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1ccccc1C
+
+$$$$

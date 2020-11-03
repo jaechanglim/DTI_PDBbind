@@ -1,0 +1,120 @@
+4X24_TDI_A_301
+  RCSB PDB08022000173D
+Coordinates from PDB:4X24:A:301 Model:1 without hydrogens
+ 20 22  0  0  0  0            999 V2000
+   14.8510   -6.4650   19.2960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.1090   -7.4060   20.5370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.9010   -8.5940   20.7960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2410   -8.6060   20.2240   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.1500   -9.4550   15.1140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.2490   -8.1340   15.4210   S 0  0  0  0  0  0  0  0  0  0  0  0
+   10.2850   -8.2290   17.2090   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.1600   -7.4590   17.9120   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.1180   -7.7280   19.4160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.0120   -6.7060   19.9370   N 0  0  0  0  0  0  0  0  0  0  0  0
+   10.5760   -6.7150   21.2860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.7940   -7.6110   21.1870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.9150   -8.8610   21.7670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.1520   -9.4170   21.5490   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0490   -9.6700   20.4330   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6490   -7.5420   19.5040   N 0  0  0  0  0  0  0  0  0  0  0  0
+   13.5990   -6.3910   19.7860   N 0  0  0  0  0  0  0  0  0  0  0  0
+   10.2710   -5.6010   19.0170   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.3740   -5.9610   17.8500   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1530   -5.2710   18.0620   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1 16  2  0  0  0  0
+  1 17  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2 12  1  0  0  0  0
+  2 17  2  0  0  0  0
+  3  4  2  0  0  0  0
+  3 14  1  0  0  0  0
+  4 15  1  0  0  0  0
+  4 16  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 19  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10 18  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 13 14  1  0  0  0  0
+ 18 19  1  0  0  0  0
+ 19 20  1  0  0  0  0
+M  END
+>  <InstanceId>
+4X24_TDI_A_301
+
+>  <ChemCompId>
+TDI
+
+>  <PdbId>
+4X24
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 N5 O S
+
+>  <Name>
+(3R,4S)-1-[(4-AMINO-5H-PYRROLO[3,2-D]PYRIMIDIN-7-YL)METHYL]-4-[(METHYLSULFANYL)METHYL]PYRROLIDIN-3-OL
+
+>  <SystematicName>
+(1S,3R,4S)-1-[(4-amino-5H-pyrrolo[4,5-d]pyrimidin-7-yl)methyl]-4-(methylsulfanylmethyl)pyrrolidin-3-ol
+
+>  <Synonyms>
+(3R,4S)-1-[9-DEAZAADENIN-9-YL)METHYL]-3-HYDROXY-4-(METHYLTHIOMETHYL)PYRROLIDINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H19 N5 O S
+
+>  <MolecularWeight>
+293.388
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H19N5OS/c1-20-6-9-4-18(5-10(9)19)3-8-2-15-12-11(8)16-7-17-13(12)14/h2,7,9-10,15,19H,3-6H2,1H3,(H2,14,16,17)/t9-,10+/m1/s1
+
+>  <InChIKey>
+NTHMDFGHOCNNOE-ZJUUUORDSA-N
+
+>  <SMILES>
+CSC[C@H]1C[N@](C[C@@H]1O)Cc2c[nH]c3c2ncnc3N
+
+$$$$

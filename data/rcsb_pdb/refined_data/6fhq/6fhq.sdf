@@ -1,0 +1,98 @@
+6FHQ_DE5_A_2003
+  RCSB PDB08022004393D
+Coordinates from PDB:6FHQ:A:2003 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   19.5760    2.6540    7.8640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3530    1.1520    8.2600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.1450    4.5030    4.7880   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.2010    2.9320    6.5660   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.2820    4.1890    6.0840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.4140    0.9130    9.7410   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.2540    5.8320    4.5050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.4960    6.6050    5.5850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.5500    5.6300    6.9500   S 0  0  0  0  0  0  0  0  0  0  0  0
+   19.9870    3.4960    8.6890   O 0  0  0  0  0  0  0  0  0  0  0  0
+  7  3  1  0  0  0  0
+  7  8  2  0  0  0  0
+  3  5  2  0  0  0  0
+  8  9  1  0  0  0  0
+  5  4  1  0  0  0  0
+  5  9  1  0  0  0  0
+  4  1  1  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  2  0  0  0  0
+  2  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+6FHQ_DE5_A_2003
+
+>  <ChemCompId>
+DE5
+
+>  <PdbId>
+6FHQ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2003
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N3 O S
+
+>  <Name>
+2-azanyl-~{N}-(1,3-thiazol-2-yl)ethanamide
+
+>  <SystematicName>
+2-azanyl-~{N}-(1,3-thiazol-2-yl)ethanamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H7 N3 O S
+
+>  <MolecularWeight>
+157.194
+
+>  <ModifiedDate>
+2018-03-16
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H7N3OS/c6-3-4(9)8-5-7-1-2-10-5/h1-2H,3,6H2,(H,7,8,9)
+
+>  <InChIKey>
+JVRRHVNPKGSGSX-UHFFFAOYSA-N
+
+>  <SMILES>
+c1csc(n1)NC(=O)CN
+
+$$$$

@@ -1,0 +1,98 @@
+3H78_BE2_A_350
+  RCSB PDB08012019113D
+Coordinates from PDB:3H78:A:350 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+  -28.0390   -7.5810  -42.4160   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.7840   -6.8400  -41.4460   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.8380   -7.2180  -43.3060   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.3950   -8.9440  -42.5070   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.9970   -9.6730  -41.3720   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.4240  -10.9360  -41.5300   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.1960   -9.2260  -40.1030   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.2070  -11.4790  -42.7910   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.5660  -10.7490  -43.9260   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.1610   -9.4980  -43.7810   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+3H78_BE2_A_350
+
+>  <ChemCompId>
+BE2
+
+>  <PdbId>
+3H78
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+350
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O2
+
+>  <Name>
+2-AMINOBENZOIC ACID
+
+>  <SystematicName>
+2-aminobenzoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+L-PEPTIDE LINKING
+
+>  <Formula>
+C7 H7 N O2
+
+>  <MolecularWeight>
+137.136
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+X
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H7NO2/c8-6-4-2-1-3-5(6)7(9)10/h1-4H,8H2,(H,9,10)
+
+>  <InChIKey>
+RWZYAGGXGHYGMB-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(c(c1)C(=O)O)N
+
+$$$$

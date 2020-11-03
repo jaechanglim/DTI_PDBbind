@@ -1,0 +1,96 @@
+3F37_2MY_A_2001
+  RCSB PDB08012018593D
+Coordinates from PDB:3F37:A:2001 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   31.4450    0.2680   34.3700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.6670    0.2810   35.2910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.5450    0.1430   36.6640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.6870    0.1310   37.4520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.9540    0.2190   36.8970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.0790    0.3230   35.5240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.4560    0.4190   34.8680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.9440    0.3410   34.7310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.1200    0.4390   33.3930   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+3F37_2MY_A_2001
+
+>  <ChemCompId>
+2MY
+
+>  <PdbId>
+3F37
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O
+
+>  <Name>
+2,6-dimethylphenol
+
+>  <SystematicName>
+2,6-dimethylphenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H10 O
+
+>  <MolecularWeight>
+122.164
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H10O/c1-6-4-3-5-7(2)8(6)9/h3-5,9H,1-2H3
+
+>  <InChIKey>
+NXXYKOUNUYWIHA-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1cccc(c1O)C
+
+$$$$

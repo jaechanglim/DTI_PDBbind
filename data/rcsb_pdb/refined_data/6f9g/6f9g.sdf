@@ -1,0 +1,89 @@
+6F9G_PUT_A_401
+  RCSB PDB08022004383D
+Coordinates from PDB:6F9G:A:401 Model:1 without hydrogens
+  6  5  0  0  0  0            999 V2000
+   53.7720   71.5710   41.4200   N 0  0  0  0  0  0  0  0  0  0  0  0
+   53.0160   71.0060   40.3170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.7070   71.7730   40.1420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.9940   73.1930   39.6600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.5850   73.1470   38.2520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   53.3450   74.3600   38.0100   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+6F9G_PUT_A_401
+
+>  <ChemCompId>
+PUT
+
+>  <PdbId>
+6F9G
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N2
+
+>  <Name>
+1,4-DIAMINOBUTANE
+
+>  <SystematicName>
+butane-1,4-diamine
+
+>  <Synonyms>
+PUTRESCINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H12 N2
+
+>  <MolecularWeight>
+88.151
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H12N2/c5-3-1-2-4-6/h1-6H2
+
+>  <InChIKey>
+KIDHWZJUCRJVML-UHFFFAOYSA-N
+
+>  <SMILES>
+C(CCN)CN
+
+$$$$

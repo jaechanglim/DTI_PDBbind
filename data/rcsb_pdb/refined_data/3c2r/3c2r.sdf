@@ -1,0 +1,102 @@
+3C2R_PHT_A_300
+  RCSB PDB08012018413D
+Coordinates from PDB:3C2R:A:300 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+  -21.9230  -14.2250   22.7120   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.4620  -14.5330   21.1630   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.1670  -16.8040   23.6570   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.4790  -17.0310   24.6760   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.6850  -16.5870   22.5250   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.9250  -14.8170   22.2550   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.2690  -17.8320   24.5850   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.6930  -16.8470   23.7880   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.5100  -15.9740   23.0700   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.8940  -16.1000   23.1500   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.4690  -17.0880   23.9460   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.6540  -17.9550   24.6660   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  6  2  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  5  1  0  0  0  0
+  3  8  1  0  0  0  0
+  6  9  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7 12  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+M  END
+>  <InstanceId>
+3C2R_PHT_A_300
+
+>  <ChemCompId>
+PHT
+
+>  <PdbId>
+3C2R
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O4
+
+>  <Name>
+PHTHALIC ACID
+
+>  <SystematicName>
+phthalic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H6 O4
+
+>  <MolecularWeight>
+166.131
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H6O4/c9-7(10)5-3-1-2-4-6(5)8(11)12/h1-4H,(H,9,10)(H,11,12)
+
+>  <InChIKey>
+XNGIFLGASWRNHJ-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(c(c1)C(=O)O)C(=O)O
+
+$$$$

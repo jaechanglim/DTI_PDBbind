@@ -1,0 +1,108 @@
+1MY4_IWD_A_601
+  RCSB PDB08012015293D
+Coordinates from PDB:1MY4:A:601 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+   77.7800   26.8970   42.4860   N 0  0  0  0  0  0  0  0  0  0  0  0
+   77.8930   25.6330   41.9020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   77.9750   24.6180   42.5330   O 0  0  0  0  0  0  0  0  0  0  0  0
+   77.8640   25.6520   40.4920   N 0  0  0  0  0  0  0  0  0  0  0  0
+   77.7610   26.7580   39.6760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   77.7620   26.6720   38.4710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   77.6260   28.0790   40.4410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   77.3390   29.9640   39.4640   I 0  0  0  0  0  0  0  0  0  0  0  0
+   77.6270   28.0220   41.7730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   77.7150   27.0080   43.9230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   76.4170   26.4680   44.4430   C 0  0  0  0  0  0  0  0  0  0  0  0
+   75.3110   27.4610   44.1640   N 0  0  0  0  0  0  0  0  0  0  0  0
+   76.4300   26.1310   45.9150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   75.5960   26.6480   46.6090   O 0  0  0  0  0  0  0  0  0  0  0  0
+   77.3860   25.3470   46.2810   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 13 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+1MY4_IWD_A_601
+
+>  <ChemCompId>
+IWD
+
+>  <PdbId>
+1MY4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+601
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N3 O4 I
+
+>  <Name>
+2-AMINO-3-(5-IODO-2,4-DIOXO-3,4-DIHYDRO-2H-PYRIMIDIN-1-YL)-PROPIONIC ACID
+
+>  <SystematicName>
+(2S)-2-amino-3-(5-iodo-2,4-dioxo-pyrimidin-1-yl)propanoic acid
+
+>  <Synonyms>
+IODO-WILLARDIINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H8 I N3 O4
+
+>  <MolecularWeight>
+325.061
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H8IN3O4/c8-3-1-11(2-4(9)6(13)14)7(15)10-5(3)12/h1,4H,2,9H2,(H,13,14)(H,10,12,15)/t4-/m0/s1
+
+>  <InChIKey>
+AXXYLTBQIQBTES-BYPYZUCNSA-N
+
+>  <SMILES>
+C1=C(C(=O)NC(=O)N1C[C@@H](C(=O)O)N)I
+
+$$$$

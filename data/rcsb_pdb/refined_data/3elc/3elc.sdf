@@ -1,0 +1,115 @@
+3ELC_F01_A_901
+  RCSB PDB08012018563D
+Coordinates from PDB:3ELC:A:901 Model:1 without hydrogens
+ 18 19  0  0  0  0            999 V2000
+   33.4890    5.9290   42.1690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   34.0770    5.1880   41.3840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.1160    5.7190   40.6310   N 0  0  0  0  0  0  0  0  0  0  0  0
+   35.7990    4.9410   39.7360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.7780    5.4860   39.0410   N 0  0  0  0  0  0  0  0  0  0  0  0
+   35.4660    3.6140   39.5750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.1470    2.8770   38.6830   F 0  0  0  0  0  0  0  0  0  0  0  0
+   34.4390    3.0440   40.3140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.7190    3.8330   41.2360   N 0  0  0  0  0  0  0  0  0  0  0  0
+   32.6250    3.2510   42.0570   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.2060    2.0040   42.5090   O 0  0  0  0  0  0  0  0  0  0  0  0
+   32.2030    0.9780   42.3810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.8990   -0.3640   42.0750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.5860   -0.3160   40.7990   O 0  0  0  0  0  0  0  0  0  0  0  0
+   31.3890    1.3990   41.1660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.1050    0.8310   41.2270   O 0  0  0  0  0  0  0  0  0  0  0  0
+   31.3250    2.9070   41.3220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.2220    3.2500   42.1540   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  9  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10 17  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 15  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 15 17  1  0  0  0  0
+ 17 18  1  0  0  0  0
+M  END
+>  <InstanceId>
+3ELC_F01_A_901
+
+>  <ChemCompId>
+F01
+
+>  <PdbId>
+3ELC
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+901
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N3 O5 F
+
+>  <Name>
+4-amino-1-[(2R,3R,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]-5-fluoro-pyrimidin-2-one
+
+>  <SystematicName>
+4-amino-1-[(2R,3R,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]-5-fluoro-pyrimidin-2-one
+
+>  <Synonyms>
+4-amino-5-fluoro-1-((2R,3S,4R,5R)-tetrahydro-3,4-dihydroxy-5-(hydroxymethyl)furan-2-yl)pyrimidin-2(1H)-one
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H12 F N3 O5
+
+>  <MolecularWeight>
+261.207
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H12FN3O5/c10-3-1-13(9(17)12-7(3)11)8-6(16)5(15)4(2-14)18-8/h1,4-6,8,14-16H,2H2,(H2,11,12,17)/t4-,5-,6-,8-/m1/s1
+
+>  <InChIKey>
+STRZQWQNZQMHQR-UAKXSSHOSA-N
+
+>  <SMILES>
+C1=C(C(=NC(=O)N1[C@H]2[C@@H]([C@@H]([C@H](O2)CO)O)O)N)F
+
+$$$$

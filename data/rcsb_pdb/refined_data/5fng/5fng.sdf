@@ -1,0 +1,106 @@
+5FNG_YIE_A_1263
+  RCSB PDB08022001243D
+Coordinates from PDB:5FNG:A:1263 Model:1 without hydrogens
+ 13 14  0  0  0  0            999 V2000
+   -6.8500    6.4070   12.4530  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1380    5.0150   13.1600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0310    4.8880   14.5260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4660    3.7660   15.0580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.9710    2.7650   14.2210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0720    2.9150   12.8550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6620    4.0380   12.3180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2920    1.5040   14.7400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8160    1.1850   16.0770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.7770    0.2820   16.1730   N 0  5  0  0  0  0  0  0  0  0  0  0
+   -6.0630    0.2270   17.5000   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2810    1.1230   18.1370   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4800    1.7450   17.2400   N 0  0  0  0  0  0  0  0  0  0  0  0
+  6  7  2  0  0  0  0
+  6  5  1  0  0  0  0
+  4  3  1  0  0  0  0
+  4  5  2  0  0  0  0
+  7  2  1  0  0  0  0
+  3  2  2  0  0  0  0
+  5  8  1  0  0  0  0
+  2  1  1  0  0  0  0
+  9  8  1  0  0  0  0
+  9 13  2  0  0  0  0
+  9 10  1  0  0  0  0
+ 13 12  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 12 11  2  0  0  0  0
+M  CHG  1  10  -1
+M  END
+>  <InstanceId>
+5FNG_YIE_A_1263
+
+>  <ChemCompId>
+YIE
+
+>  <PdbId>
+5FNG
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1263
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N4 Cl
+
+>  <Name>
+5-[(4-chlorophenyl)methyl]-1,2,3-triaza-4-azanidacyclopenta-2,5-diene
+
+>  <SystematicName>
+5-[(4-chlorophenyl)methyl]-1,2,3-triaza-4-azanidacyclopenta-2,5-diene
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C8 H6 Cl N4
+
+>  <MolecularWeight>
+193.613
+
+>  <ModifiedDate>
+2016-02-26
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H6ClN4/c9-7-3-1-6(2-4-7)5-8-10-12-13-11-8/h1-4H,5H2/q-1
+
+>  <InChIKey>
+OWOYHKRGEMFARF-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(ccc1Cc2[n-]nnn2)Cl
+
+$$$$

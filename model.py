@@ -10,7 +10,11 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 import utils
-from layers import GAT_gate, InteractionNet, MultiHeadAttention, ConvBlock, PredictBlock
+from layers import GAT_gate
+from layers import InteractionNet
+from layers import MultiHeadAttention
+from layers import ConvBlock
+from layers import PredictBlock
 import dataset
 
 
@@ -18,72 +22,76 @@ class DTIHarmonic(nn.Module):
     def __init__(self, args):
         super(DTIHarmonic, self).__init__()
         self.args = args
-        self.node_embedding = nn.Linear(54, args.dim_gnn, bias = False)
+        self.node_embedding = nn.Linear(54, args.dim_gnn, bias=False)
 
-        self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
+        self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn)
                                     for _ in range(args.n_gnn)])
-        if args.interaction_net: 
-            num_filter = int(10.0/args.filter_spacing)+1 
-            self.filter_center = torch.Tensor([args.filter_spacing*i for i 
-                    in range(num_filter)])
+        if args.interaction_net:
+            num_filter = int(10.0/args.filter_spacing)+1
+            self.filter_center = torch.Tensor([args.filter_spacing*i for i
+                                               in range(num_filter)])
             self.filter_gamma = args.filter_gamma
-            self.interaction_net = nn.ModuleList([InteractionNet(num_filter, args.dim_gnn) \
-                                        for _ in range(args.n_gnn)])
+            self.interaction_net = nn.ModuleList(
+                [InteractionNet(num_filter, args.dim_gnn)
+                 for _ in range(args.n_gnn)])
         self.num_interaction_type = len(dataset.interaction_types)
-        
+
         self.cal_coolomb_interaction_A = nn.Sequential(
-                         nn.Linear(args.dim_gnn*2, 128),
-                         nn.ReLU(),
-                         nn.Linear(128, 1),
-                         nn.Sigmoid()
-                        )
+            nn.Linear(args.dim_gnn*2, 128),
+            nn.ReLU(),
+            nn.Linear(128, 1),
+            nn.Sigmoid()
+        )
         self.cal_coolomb_interaction_N = nn.Sequential(
-                         nn.Linear(args.dim_gnn*2, 128),
-                         nn.ReLU(),
-                         nn.Linear(128, 1),
-                         nn.Sigmoid()
-                        )
-   
+            nn.Linear(args.dim_gnn*2, 128),
+            nn.ReLU(),
+            nn.Linear(128, 1),
+            nn.Sigmoid()
+        )
+
         self.cal_vdw_interaction_A = nn.Sequential(
-                         nn.Linear(args.dim_gnn*2, 128),
-                         nn.ReLU(),
-                         nn.Linear(128, 1),
-                         nn.Sigmoid()
-                        )
+            nn.Linear(args.dim_gnn*2, 128),
+            nn.ReLU(),
+            nn.Linear(128, 1),
+            nn.Sigmoid()
+        )
         self.cal_vdw_interaction_B = nn.Sequential(
-                         nn.Linear(args.dim_gnn*2, 128),
-                         nn.ReLU(),
-                         nn.Linear(128, 1),
-                         nn.Tanh()
-                        )
+            nn.Linear(args.dim_gnn*2, 128),
+            nn.ReLU(),
+            nn.Linear(128, 1),
+            nn.Tanh()
+        )
         self.cal_vdw_interaction_N = nn.Sequential(
-                         nn.Linear(args.dim_gnn*2, 128),
-                         nn.ReLU(),
-                         nn.Linear(128, 1),
-                         nn.Sigmoid()
-                        )
-        self.vina_hbond_coeff = nn.Parameter(torch.tensor([0.7])) 
-        self.vina_hydrophobic_coeff = nn.Parameter(torch.tensor([0.3])) 
-        self.vdw_coeff = nn.Parameter(torch.tensor([1.0])) 
+            nn.Linear(args.dim_gnn*2, 128),
+            nn.ReLU(),
+            nn.Linear(128, 1),
+            nn.Sigmoid()
+        )
+        self.vina_hbond_coeff = nn.Parameter(torch.tensor([0.7]))
+        self.vina_hydrophobic_coeff = nn.Parameter(torch.tensor([0.3]))
+        self.vdw_coeff = nn.Parameter(torch.tensor([1.0]))
         self.torsion_coeff = nn.Parameter(torch.tensor([1.0]))
         self.rotor_coeff = nn.Parameter(torch.tensor([1.0]))
         self.intercept = nn.Parameter(torch.tensor([0.0]))
 
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        self.var_agg = args.var_agg
-        self.var_abs = args.var_abs
-        self.cal_variance_h = nn.Sequential(
-                            nn.Linear(args.dim_gnn*2, 128),
-                            nn.ReLU(),
-                            nn.Linear(128, 1)
-                            )
-        a = torch.rand(1, dtype=torch.float32, device=device, requires_grad=True)
-        b = torch.rand(1, dtype=torch.float32, device=device, requires_grad=True) ** 2
-        self.cal_variance_r = lambda x: a * torch.exp(-b * x)
+        if args.with_uncertainty:
+            self.var_agg = args.var_agg
+            self.var_abs = args.var_abs
+            self.cal_variance_h = nn.Sequential(
+                nn.Linear(args.dim_gnn*2, 128),
+                nn.ReLU(),
+                nn.Linear(128, 1)
+            )
+            a = torch.rand(1, dtype=torch.float32,
+                           device=device, requires_grad=True)
+            b = torch.rand(1, dtype=torch.float32,
+                           device=device, requires_grad=True) ** 2
+            self.cal_variance_r = lambda x: a * torch.exp(-b * x)
 
     def cal_intercept(self, h, valid1, valid2, dm):
-        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
+        valid1_repeat = valid1.unsqueeze(2).repeat(1, 1, valid2.size(1))
+        valid2_repeat = valid2.unsqueeze(1).repeat(1, valid1.size(1), 1)
         C1 = self.cal_intercept_A(h).squeeze(-1)*0.01
         C2 = self.cal_intercept_B(h).squeeze(-1)*0.1+0.1
         retval = C1*torch.exp(-torch.pow(C2*dm, 2))
@@ -92,31 +100,31 @@ class DTIHarmonic(nn.Module):
         return retval
 
     def cal_coolomb_interaction(self, dm, h, charge1, charge2, valid1, valid2):
-        charge1_repeat = charge1.unsqueeze(2).repeat(1,1,charge2.size(1))
-        charge2_repeat = charge2.unsqueeze(1).repeat(1,charge1.size(1),1)
-        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
+        charge1_repeat = charge1.unsqueeze(2).repeat(1, 1, charge2.size(1))
+        charge2_repeat = charge2.unsqueeze(1).repeat(1, charge1.size(1), 1)
+        valid1_repeat = valid1.unsqueeze(2).repeat(1, 1, valid2.size(1))
+        valid2_repeat = valid2.unsqueeze(1).repeat(1, valid1.size(1), 1)
         A = self.cal_coolomb_interaction_A(h).squeeze(-1)
-        #A = self.coolomb_coeff*self.coolomb_coeff 
+        #A = self.coolomb_coeff*self.coolomb_coeff
         N = self.cal_coolomb_interaction_N(h).squeeze(-1)*2+1
         charge12 = charge1_repeat*charge2_repeat
         energy = A*charge12*torch.pow(1/dm, N)
         energy = energy*valid1_repeat*valid2_repeat
         energy = energy.clamp(min=-100, max=100)
         energy = energy.sum(1).sum(1).unsqueeze(-1)
-        return energy  
+        return energy
 
     def vina_steric(self, dm, h, vdw_radius1, vdw_radius2, valid1, valid2):
-        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
+        valid1_repeat = valid1.unsqueeze(2).repeat(1, 1, valid2.size(1))
+        valid2_repeat = valid2.unsqueeze(1).repeat(1, valid1.size(1), 1)
         vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                .repeat(1,1,vdw_radius2.size(1))
+            .repeat(1, 1, vdw_radius2.size(1))
         vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                .repeat(1,vdw_radius1.size(1),1)
+            .repeat(1, vdw_radius1.size(1), 1)
         dm_0 = vdw_radius1_repeat+vdw_radius2_repeat
         dm = dm-dm_0
-        g1 = torch.exp(-torch.pow(dm/0.5,2))*-0.0356  
-        g2 = torch.exp(-torch.pow((dm-3)/2,2))*-0.00516
+        g1 = torch.exp(-torch.pow(dm/0.5, 2))*-0.0356
+        g2 = torch.exp(-torch.pow((dm-3)/2, 2))*-0.00516
         repulsion = dm*dm*0.84
         zero_vec = torch.zeros_like(repulsion)
         repulsion = torch.where(dm > 0, zero_vec, repulsion)
@@ -124,12 +132,12 @@ class DTIHarmonic(nn.Module):
         retval = retval*valid1_repeat*valid2_repeat
         retval = retval.sum(-1).sum(-1).unsqueeze(-1)
         return retval
-    
+
     def vina_hbond(self, dm, h, vdw_radius1, vdw_radius2, A):
         vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                .repeat(1,1,vdw_radius2.size(1))
+            .repeat(1, 1, vdw_radius2.size(1))
         vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                .repeat(1,vdw_radius1.size(1),1)
+            .repeat(1, vdw_radius1.size(1), 1)
         B = self.cal_vdw_interaction_B(h).squeeze(-1)*self.args.dev_vdw_radius
         dm_0 = vdw_radius1_repeat+vdw_radius2_repeat+B
         dm = dm-dm_0
@@ -140,12 +148,12 @@ class DTIHarmonic(nn.Module):
         #retval = retval.clamp(min=0.0, max=1.0)*-0.587
         retval = retval.sum(-1).sum(-1).unsqueeze(-1)
         return retval
-    
+
     def vina_hydrophobic(self, dm, h, vdw_radius1, vdw_radius2, A):
         vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                .repeat(1,1,vdw_radius2.size(1))
+            .repeat(1, 1, vdw_radius2.size(1))
         vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                .repeat(1,vdw_radius1.size(1),1)
+            .repeat(1, vdw_radius1.size(1), 1)
         B = self.cal_vdw_interaction_B(h).squeeze(-1)*self.args.dev_vdw_radius
         dm_0 = vdw_radius1_repeat+vdw_radius2_repeat+B
         dm = dm-dm_0
@@ -153,23 +161,24 @@ class DTIHarmonic(nn.Module):
         retval = (-dm+1.5)*A
         retval = retval.clamp(min=0.0, max=1.0)
         #retval = retval.clamp(min=0.0, max=1.0)*-0.0351
-        retval = retval*-self.vina_hydrophobic_coeff*self.vina_hydrophobic_coeff
+        retval = retval * -self.vina_hydrophobic_coeff \
+            * self.vina_hydrophobic_coeff
         retval = retval.sum(-1).sum(-1).unsqueeze(-1)
         return retval
- 
-    def cal_vdw_interaction(self, dm, h, vdw_radius1, vdw_radius2, 
+
+    def cal_vdw_interaction(self, dm, h, vdw_radius1, vdw_radius2,
                             vdw_epsilon, vdw_sigma, valid1, valid2):
-        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
+        valid1_repeat = valid1.unsqueeze(2).repeat(1, 1, valid2.size(1))
+        valid2_repeat = valid2.unsqueeze(1).repeat(1, valid1.size(1), 1)
         vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-                .repeat(1,1,vdw_radius2.size(1))
+            .repeat(1, 1, vdw_radius2.size(1))
         vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-                .repeat(1,vdw_radius1.size(1),1)
+            .repeat(1, vdw_radius1.size(1), 1)
 
         B = self.cal_vdw_interaction_B(h).squeeze(-1)*self.args.dev_vdw_radius
         dm_0 = vdw_radius1_repeat+vdw_radius2_repeat + B
         #dm_0 = vdw_sigma
-        dm_0[dm_0<0.0001] = 1
+        dm_0[dm_0 < 0.0001] = 1
         #N = self.cal_vdw_interaction_N(h).squeeze(-1)+5.5
         N = self.args.vdw_N
         vdw1 = torch.pow(dm_0/dm, 2*N)
@@ -186,150 +195,160 @@ class DTIHarmonic(nn.Module):
         energy = energy*valid1_repeat*valid2_repeat
         energy = A*energy
         energy = energy.sum(1).sum(1).unsqueeze(-1)
-        return energy  
+        return energy
 
     def cal_torsion_energy(self, torsion_energy):
-        retval=torsion_energy*self.vdw_coeff*self.vdw_coeff
-        #retval=torsion_energy*self.torsion_coeff*self.torsion_coeff
+        retval = torsion_energy*self.vdw_coeff*self.vdw_coeff
+        # retval=torsion_energy*self.torsion_coeff*self.torsion_coeff
         return retval.unsqueeze(-1)
 
     def cal_distance_matrix(self, p1, p2, dm_min):
-        p1_repeat = p1.unsqueeze(2).repeat(1,1,p2.size(1),1)
-        p2_repeat = p2.unsqueeze(1).repeat(1,p1.size(1),1,1)
+        p1_repeat = p1.unsqueeze(2).repeat(1, 1, p2.size(1), 1)
+        p2_repeat = p2.unsqueeze(1).repeat(1, p1.size(1), 1, 1)
         dm = torch.sqrt(torch.pow(p1_repeat-p2_repeat, 2).sum(-1)+1e-10)
         replace_vec = torch.ones_like(dm)*1e10
-        dm = torch.where(dm<dm_min, replace_vec, dm)
+        dm = torch.where(dm < dm_min, replace_vec, dm)
         return dm
 
     def get_embedding_vector(self, sample):
         dropout = False
-        if self.training or (not self.training and self.args.mc_dropout):
+        if self.training or (not self.training and self.args.with_uncertainty):
             dropout = True
 
-        h1 = self.node_embedding(sample['h1'])  
-        h2 = self.node_embedding(sample['h2']) 
-        
+        h1 = self.node_embedding(sample["h1"])
+        h2 = self.node_embedding(sample["h2"])
+
         for i in range(len(self.gconv)):
-            h1 = self.gconv[i](h1, sample['adj1'])
-            h2 = self.gconv[i](h2, sample['adj2']) 
+            h1 = self.gconv[i](h1, sample["adj1"])
+            h2 = self.gconv[i](h2, sample["adj2"])
             h1 = F.dropout(h1, training=dropout, p=self.args.dropout_rate)
             h2 = F.dropout(h2, training=dropout, p=self.args.dropout_rate)
-        pos1, pos2 = sample['pos1'], sample['pos2']
+        pos1, pos2 = sample["pos1"], sample["pos2"]
 
-        pos1.requires_grad=True
+        pos1.requires_grad = True
         dm = self.cal_distance_matrix(pos1, pos2, 0.5)
         if self.args.interaction_net:
-            edge = dm.unsqueeze(-1).repeat(1,1,1,self.filter_center.size(-1))
+            edge = dm.unsqueeze(-1).repeat(1, 1, 1,
+                                           self.filter_center.size(-1))
             filter_center = self.filter_center.unsqueeze(0).\
-                            unsqueeze(0).unsqueeze(0).to(h1.device)
+                unsqueeze(0).unsqueeze(0).to(h1.device)
 
-            edge = torch.exp(-torch.pow(edge-filter_center,2)*self.filter_gamma)
+            edge = torch.exp(-torch.pow(edge-filter_center, 2)
+                             * self.filter_gamma)
             edge = edge.detach()
             adj12 = dm.clone().detach()
 
-            adj12[adj12>5] = 0
-            adj12[adj12>1e-3] = 1
-            adj12[adj12<1e-3] = 0
-            
+            adj12[adj12 > 5] = 0
+            adj12[adj12 > 1e-3] = 1
+            adj12[adj12 < 1e-3] = 0
+
             for i in range(len(self.interaction_net)):
-                new_h1 = self.interaction_net[i](h1, h2, edge, adj12) 
-                new_h2 = self.interaction_net[i](h2, h1, \
-                        edge.permute(0,2,1,3), adj12.permute(0,2,1))
+                new_h1 = self.interaction_net[i](h1, h2, edge, adj12)
+                new_h2 = self.interaction_net[i](h2, h1,
+                                                 edge.permute(0, 2, 1, 3),
+                                                 adj12.permute(0, 2, 1))
                 h1, h2 = new_h1, new_h2
                 h1 = F.dropout(h1, training=dropout, p=self.args.dropout_rate)
                 h2 = F.dropout(h2, training=dropout, p=self.args.dropout_rate)
         return h1, h2
-      
+
     def forward(self, sample, DM_min=0.5, cal_der_loss=False):
         h1, h2 = self.get_embedding_vector(sample)
-        h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
-        h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
-        h = torch.cat([h1_repeat, h2_repeat], -1) 
+        h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1)
+        h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1)
+        h = torch.cat([h1_repeat, h2_repeat], -1)
 
-        dm = self.cal_distance_matrix(sample['pos1'], sample['pos2'], 0.5)
-        h_var = self.cal_variance_h(h).squeeze()
-        r_var = self.cal_variance_r(dm)
+        dm = self.cal_distance_matrix(sample["pos1"], sample["pos2"], 0.5)
+        if self.args.with_uncertainty:
+            h_var = self.cal_variance_h(h).squeeze()
+            r_var = self.cal_variance_r(dm)
 
-        var = h_var * r_var
-        if self.var_agg == 'mean':
-            var = var.mean(dim=(-1, -2))
-        elif self.var_agg == 'sum':
-            var = var.sum(dim=(-1, -2))
-        elif self.var_agg == 'product':
-            var = torch.prod(var, dim=-1)
-            var = torch.prod(var, dim=-1)
+            var = h_var * r_var
+            if self.var_agg == "mean":
+                var = var.mean(dim=(-1, -2))
+            elif self.var_agg == "sum":
+                var = var.sum(dim=(-1, -2))
+            elif self.var_agg == "product":
+                var = torch.prod(var, dim=-1)
+                var = torch.prod(var, dim=-1)
 
-        if self.var_abs == 'abs':
-            var = torch.abs(var)
-            var = torch.clamp(var, min=1e-5)
-        elif self.var_abs == 'sqr':
-            var = var ** 2
-            var = torch.clamp(var, min=1e-5)
-        elif self.var_abs == 'clip':
-            var = torch.clamp(var, min=1e-5)
-        
+            if self.var_abs == "abs":
+                var = torch.abs(var)
+                var = torch.clamp(var, min=1e-5)
+            elif self.var_abs == "sqr":
+                var = var ** 2
+                var = torch.clamp(var, min=1e-5)
+            elif self.var_abs == "clip":
+                var = torch.clamp(var, min=1e-5)
+
         retval = []
-        
-        #coolomb interaction
-        #retval.append(self.cal_coolomb_interaction(dm, h, charge1, charge2, \
-        #                                           valid1, valid2))
-        
-
         vdw_radius1, vdw_radius2, A_int = \
-                sample['vdw_radius1'], sample['vdw_radius2'], sample['A_int']
+            sample["vdw_radius1"], sample["vdw_radius2"], sample["A_int"]
 
-        #vdw interaction
+        # vdw interaction
         retval.append(self.cal_vdw_interaction(dm, h, vdw_radius1, vdw_radius2,
-                            sample['vdw_epsilon'], sample['vdw_sigma'], 
-                            sample['no_metal1'], sample['no_metal2']))
-        #hbond
-        retval.append(self.vina_hbond(dm, h, vdw_radius1, vdw_radius2, A_int[:,1]))
-        
-        #metal complex
-        retval.append(self.vina_hbond(dm, h, vdw_radius1, vdw_radius2, A_int[:,-1]))
-        
-        #hydrophobic
-        retval.append(self.vina_hydrophobic(dm, h, vdw_radius1, vdw_radius2, 
-            A_int[:,-2]))
-        
-        #torsion
-        retval.append(self.cal_torsion_energy(sample['delta_uff']))
+                                               sample["vdw_epsilon"],
+                                               sample["vdw_sigma"],
+                                               sample["no_metal1"],
+                                               sample["no_metal2"]))
+        # hbond
+        retval.append(self.vina_hbond(
+            dm, h, vdw_radius1, vdw_radius2, A_int[:, 1]))
 
+        # metal complex
+        retval.append(self.vina_hbond(
+            dm, h, vdw_radius1, vdw_radius2, A_int[:, -1]))
+
+        # hydrophobic
+        retval.append(self.vina_hydrophobic(dm, h, vdw_radius1, vdw_radius2,
+                                            A_int[:, -2]))
+
+        # torsion
+        retval.append(self.cal_torsion_energy(sample["delta_uff"]))
 
         retval = torch.cat(retval, -1)
-        if not self.args.no_rotor_penalty: 
-            penalty = 1+self.rotor_coeff*self.rotor_coeff*sample['rotor']
+        if not self.args.no_rotor_penalty:
+            penalty = 1+self.rotor_coeff*self.rotor_coeff*sample["rotor"]
             retval = retval/penalty.unsqueeze(-1)
-        
+
         if cal_der_loss:
-            minimum_loss = torch.autograd.grad(retval.sum(), sample['pos1'], 
-                    retain_graph=True, create_graph=True)[0]
+            minimum_loss = torch.autograd.grad(retval.sum(),
+                                               sample["pos1"],
+                                               retain_graph=True,
+                                               create_graph=True)[0]
             minimum_loss2 = torch.pow(minimum_loss.sum(1), 2).mean()
-            minimum_loss3 = torch.autograd.grad(minimum_loss.sum(), sample['pos1'],
-                    retain_graph=True, create_graph=True)[0]                                    
-            minimum_loss3 = -minimum_loss3.sum(1).sum(1).mean()    
+            minimum_loss3 = torch.autograd.grad(minimum_loss.sum(),
+                                                sample["pos1"],
+                                                retain_graph=True,
+                                                create_graph=True)[0]
+            minimum_loss3 = -minimum_loss3.sum(1).sum(1).mean()
         else:
             minimum_loss2 = torch.zeros_like(retval).sum()
             minimum_loss3 = torch.zeros_like(retval).sum()
 
-        return retval, minimum_loss2, minimum_loss3, var
+        if self.args.with_uncertainty:
+            retval = retval, minimum_loss2, minimum_loss3, var
+        else:
+            retval = retval, minimum_loss2, minimum_loss3
+        return retval
 
 
 class GNN(nn.Module):
     def __init__(self, args):
         super(GNN, self).__init__()
         self.args = args
-        self.node_embedding = nn.Linear(54, args.dim_gnn, bias = False)
+        self.node_embedding = nn.Linear(54, args.dim_gnn, bias=False)
 
-        self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn) \
+        self.gconv = nn.ModuleList([GAT_gate(args.dim_gnn, args.dim_gnn)
                                     for _ in range(args.n_gnn)])
-        if args.interaction_net: 
-            num_filter = int(10.0/args.filter_spacing)+1 
-            self.filter_center = torch.Tensor([args.filter_spacing*i for i 
-                    in range(num_filter)])
+        if args.interaction_net:
+            num_filter = int(10.0/args.filter_spacing)+1
+            self.filter_center = torch.Tensor([args.filter_spacing*i for i
+                                               in range(num_filter)])
             self.filter_gamma = args.filter_gamma
-            self.interaction_net = nn.ModuleList([InteractionNet(num_filter, args.dim_gnn) \
-                                        for _ in range(args.n_gnn)])
+            self.interaction_net = nn.ModuleList(
+                [InteractionNet(num_filter, args.dim_gnn)
+                 for _ in range(args.n_gnn)])
 
         if self.training:
             self.predict = \
@@ -347,60 +366,68 @@ class GNN(nn.Module):
                                nn.Linear(args.dim_gnn//2, 1)])
 
     def cal_distance_matrix(self, p1, p2, dm_min):
-        p1_repeat = p1.unsqueeze(2).repeat(1,1,p2.size(1),1)
-        p2_repeat = p2.unsqueeze(1).repeat(1,p1.size(1),1,1)
+        p1_repeat = p1.unsqueeze(2).repeat(1, 1, p2.size(1), 1)
+        p2_repeat = p2.unsqueeze(1).repeat(1, p1.size(1), 1, 1)
         dm = torch.sqrt(torch.pow(p1_repeat-p2_repeat, 2).sum(-1)+1e-10)
         replace_vec = torch.ones_like(dm)*1e10
-        dm = torch.where(dm<dm_min, replace_vec, dm)
+        dm = torch.where(dm < dm_min, replace_vec, dm)
         return dm
 
     def forward(self, sample, DM_min=0.5, cal_der_loss=False):
         h1, adj1, h2, adj2, A_int, dmv, _, pos1, pos2, sasa, dsasa, rotor,\
-        charge1, charge2, vdw_radius1, vdw_radius2, vdw_epsilon, \
-        vdw_sigma, delta_uff, valid1, valid2,\
-        no_metal1, no_metal2, _, _ = sample.values()
+            charge1, charge2, vdw_radius1, vdw_radius2, vdw_epsilon, \
+            vdw_sigma, delta_uff, valid1, valid2,\
+            no_metal1, no_metal2, _, _ = sample.values()
 
-        h1 = self.node_embedding(h1)  
-        h2 = self.node_embedding(h2) 
-        
+        h1 = self.node_embedding(h1)
+        h2 = self.node_embedding(h2)
+
         for i in range(len(self.gconv)):
             h1 = self.gconv[i](h1, adj1)
-            h2 = self.gconv[i](h2, adj2) 
-            h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)
-            h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
+            h2 = self.gconv[i](h2, adj2)
+            h1 = F.dropout(h1, training=self.training,
+                           p=self.args.dropout_rate)
+            h2 = F.dropout(h2, training=self.training,
+                           p=self.args.dropout_rate)
 
         dm = self.cal_distance_matrix(pos1, pos2, DM_min)
         if self.args.interaction_net:
-            edge = dm.unsqueeze(-1).repeat(1,1,1,self.filter_center.size(-1))
+            edge = dm.unsqueeze(-1).repeat(1, 1, 1,
+                                           self.filter_center.size(-1))
             filter_center = self.filter_center.unsqueeze(0).\
-                            unsqueeze(0).unsqueeze(0).to(h1.device)
+                unsqueeze(0).unsqueeze(0).to(h1.device)
 
-            edge = torch.exp(-torch.pow(edge-filter_center,2)*self.filter_gamma)
+            edge = torch.exp(-torch.pow(edge-filter_center, 2)
+                             * self.filter_gamma)
             edge = edge.detach()
             adj12 = dm.clone().detach()
 
-            adj12[adj12>5] = 0
-            adj12[adj12>1e-3] = 1
-            adj12[adj12<1e-3] = 0
-            
-            for i in range(len(self.interaction_net)):
-                new_h1 = self.interaction_net[i](h1, h2, edge, adj12) # [, n_ligand_atom, n_out_feature(dim_gnn)]
-                new_h2 = self.interaction_net[i](h2, h1, \
-                        edge.permute(0,2,1,3), adj12.permute(0,2,1)) # [, n_protein_atom, n_out_feature(dim_gnn)]
-                h1, h2 = new_h1, new_h2
-                h1 = F.dropout(h1, training=self.training, p=self.args.dropout_rate)
-                h2 = F.dropout(h2, training=self.training, p=self.args.dropout_rate)
+            adj12[adj12 > 5] = 0
+            adj12[adj12 > 1e-3] = 1
+            adj12[adj12 < 1e-3] = 0
 
-        h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1) 
-        h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1) 
-        valid1_repeat = valid1.unsqueeze(2).repeat(1,1,valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1,valid1.size(1),1)
+            for i in range(len(self.interaction_net)):
+                # [, n_ligand_atom, n_out_feature(dim_gnn)]
+                new_h1 = self.interaction_net[i](h1, h2, edge, adj12)
+                new_h2 = self.interaction_net[i](h2, h1,
+                                                 edge.permute(0, 2, 1, 3),
+                                                 adj12.permute(0, 2, 1))
+                h1, h2 = new_h1, new_h2
+                h1 = F.dropout(h1, training=self.training,
+                               p=self.args.dropout_rate)
+                h2 = F.dropout(h2, training=self.training,
+                               p=self.args.dropout_rate)
+
+        h1_repeat = h1.unsqueeze(2).repeat(1, 1, h2.size(1), 1)
+        h2_repeat = h2.unsqueeze(1).repeat(1, h1.size(1), 1, 1)
+        valid1_repeat = valid1.unsqueeze(2).repeat(1, 1, valid2.size(1))
+        valid2_repeat = valid2.unsqueeze(1).repeat(1, valid1.size(1), 1)
         h1_repeat = h1_repeat * valid1_repeat.unsqueeze(-1)
         h2_repeat = h2_repeat * valid2_repeat.unsqueeze(-1)
 
-        h1 = (h1 * valid1.unsqueeze(-1)).sum(1) # [, n_out_feature(dim_gnn)]
-        h2 = (h2 * valid2.unsqueeze(-1)).sum(1) # [, n_out_feature(dim_gnn)]
-        h = torch.cat((h1, h2), -1) # [, 2*n_out_feature(dim_gnn)]
+        h1 = (h1 * valid1.unsqueeze(-1)).sum(1)  # [, n_out_feature(dim_gnn)]
+        h2 = (h2 * valid2.unsqueeze(-1)).sum(1)  # [, n_out_feature(dim_gnn)]
+        h = torch.cat((h1, h2), -1)  # [, 2*n_out_feature(dim_gnn)]
         retval = self._linear(h, self.predict, nn.ReLU())
 
         minimum_loss2 = torch.zeros_like(retval).sum()
@@ -429,13 +456,12 @@ class CNN3D(nn.Module):
 
         # self.predict = PredictBlock(64*40*40*40, 1, args.dropout_rate, True)
         self.predict = PredictBlock(128*40*40*40, 1, args.dropout_rate, True)
-        
 
     def forward(self, sample, DM_min=0.5, cal_der_loss=False):
         h1, adj1, h2, adj2, A_int, dmv, _, pos1, pos2, \
-        sasa, dsasa, rotor, charge1, charge2, vdw_radius1, vdw_radius2, \
-        vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2,\
-        no_metal1, no_metal2, _, _ = sample.values()
+            sasa, dsasa, rotor, charge1, charge2, vdw_radius1, vdw_radius2, \
+            vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2,\
+            no_metal1, no_metal2, _, _ = sample.values()
 
         batch_size = pos1.shape[0]
         h1 = h1 * valid1.unsqueeze(-1)
@@ -443,7 +469,7 @@ class CNN3D(nn.Module):
         pos1 = pos1 * valid1.unsqueeze(-1)
         pos2 = pos2 * valid2.unsqueeze(-1)
         lattice = self._get_lattice(batch_size, pos1, pos2, h1, h2, self.size)
-        lattice = lattice.detach().cpu().numpy() # B, 54, 40, 40, 40
+        lattice = lattice.detach().cpu().numpy()  # B, 54, 40, 40, 40
         angle = torch.randint(low=0, high=4, size=(3,))
         lattice = np.rot90(lattice, k=angle[0].item(), axes=(2, 3))
         lattice = np.rot90(lattice, k=angle[1].item(), axes=(3, 4))
@@ -471,11 +497,13 @@ class CNN3D(nn.Module):
         batch_min = torch.min(pos1 + nz_pos1_min.to(device), dim=1)[0]
         batch_diff = batch_max - batch_min
         sub = ((batch_min + batch_diff/2)).unsqueeze(1)
-        index1 = ((pos1 - sub + lattice_size / 2) // 0.5).type(torch.IntTensor) # index
-        index2 = ((pos2 - sub + lattice_size / 2) // 0.5).type(torch.IntTensor) # index
+        index1 = ((pos1 - sub + lattice_size / 2) //
+                  0.5).type(torch.IntTensor)  # index
+        index2 = ((pos2 - sub + lattice_size / 2) //
+                  0.5).type(torch.IntTensor)  # index
         lattice = lattice.to(device)
 
-        # fill lattice with h1, h2's one-hot vector
+        # fill lattice with h1, h2"s one-hot vector
         batch_pos_feat1 = zip(index1, h1)
         for i, (batch_pos1, batch_feat1) in enumerate(batch_pos_feat1):
             pos_feat1 = zip(batch_pos1, batch_feat1)
@@ -497,12 +525,12 @@ class CNN3D(nn.Module):
                     continue
                 lattice[j][x2][y2][z2] = feature2
 
-        lattice = lattice.permute(0, 4, 2, 3, 1) # b, f, y, z, x
+        lattice = lattice.permute(0, 4, 2, 3, 1)  # b, f, y, z, x
 
         return lattice
 
     def _plot(self, lattice, idx):
-        lattice = lattice.permute(0, 4, 2, 3, 1) # b, f, y, z, x
+        lattice = lattice.permute(0, 4, 2, 3, 1)  # b, f, y, z, x
         lattice_0 = lattice[0].sum(-1)
         lattice_1 = lattice[1].sum(-1)
 
@@ -511,20 +539,20 @@ class CNN3D(nn.Module):
         voxels = voxels_0 | voxels_1
 
         colors = np.empty(voxels.shape, dtype=object)
-        colors[voxels_0] = 'green'
-        colors[voxels_1] = 'red'
+        colors[voxels_0] = "green"
+        colors[voxels_1] = "red"
         if lattice.shape[0] > 2:
             lattice_2 = lattice[2].sum(-1)
             lattice_3 = lattice[3].sum(-1)
             voxels_2 = (lattice_2 != 0)
             voxels_3 = (lattice_3 != 0)
             voxels = voxels | voxels_2 | voxels_3
-            colors[voxels_2] = 'yellow'
-            colors[voxels_3] = 'purple'
+            colors[voxels_2] = "yellow"
+            colors[voxels_3] = "purple"
 
         fig = plt.figure(idx)
-        ax = fig.gca(projection='3d')
-        ax.voxels(voxels, facecolors=colors, edgecolor='k')
+        ax = fig.gca(projection="3d")
+        ax.voxels(voxels, facecolors=colors, edgecolor="k")
 
 
 class CNN3D_KDEEP(nn.Module):
@@ -570,16 +598,16 @@ class CNN3D_KDEEP(nn.Module):
 
     def forward(self, sample, DM_min=0.5, cal_der_loss=False):
         h1, adj1, h2, adj2, A_int, dmv, _, pos1, pos2, \
-        sasa, dsasa, rotor, charge1, charge2, vdw_radius1, vdw_radius2, \
-        vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2,\
-        no_metal1, no_metal2, _, _ = sample.values()
+            sasa, dsasa, rotor, charge1, charge2, vdw_radius1, vdw_radius2, \
+            vdw_epsilon, vdw_sigma, delta_uff, valid1, valid2,\
+            no_metal1, no_metal2, _, _ = sample.values()
 
         batch_size = pos1.shape[0]
         lattice = self._get_lattice(pos1, pos2, vdw_radius1, vdw_radius2,
                                     h1, h2, self.args.lattice_dim)
 
         if self.args.grid_rotation:
-            lattice = lattice.detach().cpu().numpy() # B, 54, 40, 40, 40
+            lattice = lattice.detach().cpu().numpy()  # B, 54, 40, 40, 40
             angle = torch.randint(low=0, high=4, size=(3,))
             lattice = np.rot90(lattice, k=angle[0].item(), axes=(2, 3))
             lattice = np.rot90(lattice, k=angle[1].item(), axes=(3, 4))
@@ -637,12 +665,11 @@ class CNN3D_KDEEP(nn.Module):
 
         return retval, minimum_loss2, minimum_loss3
 
-
     def _get_lattice(self, pos1, pos2, vr1, vr2, h1, h2, lattice_dim):
         n_feature = h1.shape[-1]
         device = pos1.device
         batch_size = pos1.size(0)
-        
+
         lattice_size = int(lattice_dim / self.args.scaling)
         lattice = torch.zeros(batch_size,
                               lattice_size,
@@ -663,7 +690,7 @@ class CNN3D_KDEEP(nn.Module):
         moved_pos2 = ((pos2-sub)+lattice_dim/2)
 
         grid = torch.zeros([lattice_size, lattice_size, lattice_size])
-        grid = torch.transpose(torch.stack(torch.where(grid==0)), 0, 1)
+        grid = torch.transpose(torch.stack(torch.where(grid == 0)), 0, 1)
         grid = grid * self.args.scaling
         grid = grid.to(device)
 
@@ -712,9 +739,8 @@ class CNN3D_KDEEP(nn.Module):
 
         return lattice
 
-
     def _plot(self, lattice, idx):
-        lattice = lattice.permute(0, 4, 2, 3, 1) # b, f, y, z, x
+        lattice = lattice.permute(0, 4, 2, 3, 1)  # b, f, y, z, x
         lattice_0 = lattice[0].sum(-1)
         lattice_1 = lattice[1].sum(-1)
 
@@ -723,25 +749,25 @@ class CNN3D_KDEEP(nn.Module):
         voxels = voxels_0 | voxels_1
 
         colors = np.empty(voxels.shape, dtype=object)
-        colors[voxels_0] = 'green'
-        colors[voxels_1] = 'red'
+        colors[voxels_0] = "green"
+        colors[voxels_1] = "red"
         if lattice.shape[0] > 2:
             lattice_2 = lattice[2].sum(-1)
             lattice_3 = lattice[3].sum(-1)
             voxels_2 = (lattice_2 != 0)
             voxels_3 = (lattice_3 != 0)
             voxels = voxels | voxels_2 | voxels_3
-            colors[voxels_2] = 'yellow'
-            colors[voxels_3] = 'purple'
+            colors[voxels_2] = "yellow"
+            colors[voxels_3] = "purple"
 
         fig = plt.figure(idx)
-        ax = fig.gca(projection='3d')
-        ax.voxels(voxels, facecolors=colors, edgecolor='k')
+        ax = fig.gca(projection="3d")
+        ax.voxels(voxels, facecolors=colors, edgecolor="k")
 
-    def _add_act(self, func, act='relu'):
+    def _add_act(self, func, act="relu"):
         func_list = []
         func_list.append(func)
-        if act == 'relu':
+        if act == "relu":
             func_list.append(nn.ReLU())
 
         return nn.Sequential(*func_list)

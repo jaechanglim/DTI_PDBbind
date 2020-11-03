@@ -1,0 +1,100 @@
+4AVS_N7P_A_208
+  RCSB PDB08012021093D
+Coordinates from PDB:4AVS:A:208 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   16.5450   15.5850   58.4540   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3940   15.9630   57.2300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4300   16.7020   56.9370   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3170   15.5830   56.1390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.6450   15.4350   56.6320   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3880   16.4750   57.3780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.5370   16.2370   57.7540   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.7410   17.7790   57.6550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.1590   14.1440   56.3020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.2190   13.5700   55.2980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9150   14.2700   55.5660   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10  9  1  0  0  0  0
+ 11  4  1  0  0  0  0
+  9  5  1  0  0  0  0
+  5  4  1  0  0  0  0
+  5  6  1  0  0  0  0
+  4  2  1  0  0  0  0
+  8  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  2  3  2  0  0  0  0
+  2  1  1  0  0  0  0
+M  END
+>  <InstanceId>
+4AVS_N7P_A_208
+
+>  <ChemCompId>
+N7P
+
+>  <PdbId>
+4AVS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+208
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O3
+
+>  <Name>
+1-ACETYL-L-PROLINE
+
+>  <SystematicName>
+(2~{S})-1-ethanoylpyrrolidine-2-carboxylic acid
+
+>  <Synonyms>
+N-ACETYLPROLINE
+
+>  <Type>
+L-peptide linking
+
+>  <Formula>
+C7 H11 N O3
+
+>  <MolecularWeight>
+157.167
+
+>  <ModifiedDate>
+2016-08-08
+
+>  <Parent>
+PRO
+
+>  <OneLetterCode>
+P
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H11NO3/c1-5(9)8-4-2-3-6(8)7(10)11/h6H,2-4H2,1H3,(H,10,11)/t6-/m0/s1
+
+>  <InChIKey>
+GNMSLDIYJOSUSW-LURJTMIESA-N
+
+>  <SMILES>
+CC(=O)N1CCC[C@H]1C(=O)O
+
+$$$$

@@ -1,0 +1,106 @@
+5LTN_XI7_A_205
+  RCSB PDB08022002153D
+Coordinates from PDB:5LTN:A:205 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+  -35.2540  -19.1680    7.1270   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.3440  -18.7520    6.8360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.9600  -19.2190    5.5800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.4120  -20.2080    5.2000   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.8760  -18.7330    4.8520   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.0710  -17.8070    7.7290   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.2920  -16.5850    6.8960   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.5930  -15.3070    7.5730   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.3660  -15.2010    8.9290   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.6650  -13.9880    9.5150   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -38.1610  -12.9630    8.7270   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -38.3810  -13.0850    7.3710   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -38.0870  -14.2910    6.7790   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.2290  -16.5380    5.6940   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  2  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7 14  2  0  0  0  0
+  8  9  1  0  0  0  0
+  8 13  2  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+5LTN_XI7_A_205
+
+>  <ChemCompId>
+XI7
+
+>  <PdbId>
+5LTN
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+205
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 O4
+
+>  <Name>
+2-4-DIOXO-4-PHENYLBUTANOIC ACID
+
+>  <SystematicName>
+2,4-dioxo-4-phenyl-butanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C10 H8 O4
+
+>  <MolecularWeight>
+192.168
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H8O4/c11-8(6-9(12)10(13)14)7-4-2-1-3-5-7/h1-5H,6H2,(H,13,14)
+
+>  <InChIKey>
+JGKFWCXVYCDKDU-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)C(=O)CC(=O)C(=O)O
+
+$$$$

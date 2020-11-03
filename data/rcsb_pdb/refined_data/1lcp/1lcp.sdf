@@ -1,0 +1,97 @@
+1LCP_PLU_A_500
+  RCSB PDB08012015223D
+Coordinates from PDB:1LCP:A:500 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   -1.7910   58.9830   45.2250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4330   59.5420   43.9460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8830   59.0740   43.6130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0270   57.5570   43.5480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3960   59.6900   42.2990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6470   59.2930   46.3660   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1880   59.7830   45.5110   P 0  0  0  0  0  0  0  0  0  0  0  0
+    0.2770   59.3250   46.9120   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3540   61.3360   45.5000   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.7680   59.3490   44.3880   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  1  7  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+  7 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1LCP_PLU_A_500
+
+>  <ChemCompId>
+PLU
+
+>  <PdbId>
+1LCP
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+500
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N O3 P
+
+>  <Name>
+LEUCINE PHOSPHONIC ACID
+
+>  <SystematicName>
+[(1R)-1-amino-3-methyl-butyl]phosphonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H14 N O3 P
+
+>  <MolecularWeight>
+167.143
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H14NO3P/c1-4(2)3-5(6)10(7,8)9/h4-5H,3,6H2,1-2H3,(H2,7,8,9)/t5-/m1/s1
+
+>  <InChIKey>
+HGCAUCAWEADMPM-RXMQYKEDSA-N
+
+>  <SMILES>
+CC(C)C[C@H](N)P(=O)(O)O
+
+$$$$

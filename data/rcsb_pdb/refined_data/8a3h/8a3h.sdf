@@ -1,0 +1,130 @@
+8A3H_IDC_A_500
+  RCSB PDB08022007073D
+Coordinates from PDB:8A3H:A:500 Model:1 without hydrogens
+ 25 27  0  0  0  0            999 V2000
+   60.7210   46.8410   36.9070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   61.0520   48.2560   36.5130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   60.4620   49.2150   37.5340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   58.9580   48.9890   37.6380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   58.7260   47.5060   38.0050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   57.2960   47.0880   38.0840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.4950   48.3600   36.4680   O 0  0  0  0  0  0  0  0  0  0  0  0
+   60.6970   50.5800   37.1370   O 0  0  0  0  0  0  0  0  0  0  0  0
+   58.4120   49.8290   38.6670   O 0  0  0  0  0  0  0  0  0  0  0  0
+   59.3050   46.6870   36.9510   O 0  0  0  0  0  0  0  0  0  0  0  0
+   56.6540   47.2650   36.8140   O 0  0  0  0  0  0  0  0  0  0  0  0
+   61.6240   41.9130   36.4280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   60.5480   42.3120   35.4530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   60.6870   43.7830   35.0390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   61.1990   44.5900   36.2520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.6230   44.1860   36.5810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.2620   44.9630   37.7590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   60.4970   41.4310   34.3250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   59.4320   44.2030   34.6000   O 0  0  0  0  0  0  0  0  0  0  0  0
+   61.1810   45.9910   35.8830   O 0  0  0  0  0  0  0  0  0  0  0  0
+   62.5550   42.7540   36.9350   N 0  0  0  0  0  0  0  0  0  0  0  0
+   62.4410   44.8280   38.9460   O 0  0  0  0  0  0  0  0  0  0  0  0
+   61.7790   40.7160   36.9890   N 0  0  0  0  0  0  0  0  0  0  0  0
+   62.8540   40.7640   37.8690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.3150   42.0400   37.8410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  1  0  0  0  0
+  1 20  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6 11  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 21  1  0  0  0  0
+ 12 23  2  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 18  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 14 19  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 15 20  1  0  0  0  0
+ 16 17  1  0  0  0  0
+ 16 21  1  0  0  0  0
+ 17 22  1  0  0  0  0
+ 21 25  1  0  0  0  0
+ 23 24  1  0  0  0  0
+ 24 25  2  0  0  0  0
+M  END
+>  <InstanceId>
+8A3H_IDC_A_500
+
+>  <ChemCompId>
+IDC
+
+>  <PdbId>
+8A3H
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+500
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C14 N2 O9
+
+>  <Name>
+(5R,6R,7R,8S)-7,8-dihydroxy-5-(hydroxymethyl)-5,6,7,8-tetrahydroimidazo[1,2-a]pyridin-6-yl beta-D-glucopyranoside
+
+>  <SystematicName>
+(2R,3R,4S,5S,6R)-2-[[(5R,6R,7R,8S)-7,8-dihydroxy-5-(hydroxymethyl)-5,6,7,8-tetrahydroimidazo[2,1-f]pyridin-6-yl]oxy]-6- (hydroxymethyl)oxane-3,4,5-triol
+
+>  <Synonyms>
+5-HYDROXYMETHYL-5,6,7,8-TETRAHYDRO-IMIDAZO[1,2-A]PYRIDIN-6YL-7,8-DIOL-GLUCOPYRANOSIDE; IMIDAZOLE-DERIVED CELLOBIOSE; (5R,6R,7R,8S)-7,8-dihydroxy-5-(hydroxymethyl)-5,6,7,8-tetrahydroimidazo[1,2-a]pyridin-6-yl beta-D-glucoside; (5R,6R,7R,8S)-7,8-dihydroxy-5-(hydroxymethyl)-5,6,7,8-tetrahydroimidazo[1,2-a]pyridin-6-yl D-glucoside; (5R,6R,7R,8S)-7,8-dihydroxy-5-(hydroxymethyl)-5,6,7,8-tetrahydroimidazo[1,2-a]pyridin-6-yl glucoside
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C14 H22 N2 O9
+
+>  <MolecularWeight>
+362.332
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+BGC
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C14H22N2O9/c17-3-5-12(9(21)10(22)13-15-1-2-16(5)13)25-14-11(23)8(20)7(19)6(4-18)24-14/h1-2,5-12,14,17-23H,3-4H2/t5-,6-,7-,8+,9-,10-,11-,12-,14+/m1/s1
+
+>  <InChIKey>
+CSXOUJBOYXGFCL-OFKZETBZSA-N
+
+>  <SMILES>
+c1cn2c(n1)[C@@H]([C@H]([C@@H]([C@H]2CO)O[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)O)O
+
+$$$$

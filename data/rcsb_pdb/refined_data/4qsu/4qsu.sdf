@@ -1,0 +1,96 @@
+4QSU_TDR_A_1210
+  RCSB PDB08012023033D
+Coordinates from PDB:4QSU:A:1210 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   26.9440   45.8230  -10.8790   N 0  0  0  0  0  0  0  0  0  0  0  0
+   27.1450   44.8740  -11.8150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.2230   44.7540  -12.4420   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.2140   43.9550  -12.1000   N 0  0  0  0  0  0  0  0  0  0  0  0
+   25.0170   43.9480  -11.4890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.2220   43.0670  -11.8770   O 0  0  0  0  0  0  0  0  0  0  0  0
+   24.7380   44.9880  -10.4570   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4320   45.0580   -9.6950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.7650   45.9180  -10.2040   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  2  0  0  0  0
+M  END
+>  <InstanceId>
+4QSU_TDR_A_1210
+
+>  <ChemCompId>
+TDR
+
+>  <PdbId>
+4QSU
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1210
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N2 O2
+
+>  <Name>
+THYMINE
+
+>  <SystematicName>
+5-methyl-1H-pyrimidine-2,4-dione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H6 N2 O2
+
+>  <MolecularWeight>
+126.113
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H6N2O2/c1-3-2-6-5(9)7-4(3)8/h2H,1H3,(H2,6,7,8,9)
+
+>  <InChIKey>
+RWQNBRDOKXIBIV-UHFFFAOYSA-N
+
+>  <SMILES>
+CC1=CNC(=O)NC1=O
+
+$$$$

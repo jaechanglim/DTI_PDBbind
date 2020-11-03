@@ -1,0 +1,98 @@
+3UXK_BHO_A_361
+  RCSB PDB08012020433D
+Coordinates from PDB:3UXK:A:361 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   51.7760  -52.3830   17.6340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.4590  -52.3880   18.1100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   49.7080  -51.2100   18.0950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.2470  -50.0300   17.6140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.5530  -50.0240   17.1410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.3080  -51.1920   17.1520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.5800  -53.6610   17.6540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   53.7590  -53.7570   17.3640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   51.7400  -54.6900   18.0570   N 0  0  0  0  0  0  0  0  0  0  0  0
+   51.8740  -56.0120   18.2600   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  1  7  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  7  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+3UXK_BHO_A_361
+
+>  <ChemCompId>
+BHO
+
+>  <PdbId>
+3UXK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+361
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O2
+
+>  <Name>
+BENZHYDROXAMIC ACID
+
+>  <SystematicName>
+N-hydroxybenzamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H7 N O2
+
+>  <MolecularWeight>
+137.136
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H7NO2/c9-7(8-10)6-4-2-1-3-5-6/h1-5,10H,(H,8,9)
+
+>  <InChIKey>
+VDEUYMSGMPQMIK-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)C(=O)NO
+
+$$$$

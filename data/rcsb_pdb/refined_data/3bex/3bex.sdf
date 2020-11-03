@@ -1,0 +1,107 @@
+3BEX_PAU_A_248
+  RCSB PDB08012018383D
+Coordinates from PDB:3BEX:A:248 Model:1 without hydrogens
+ 15 14  0  0  0  0            999 V2000
+    3.7490   13.6700   18.2660   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.5470   12.5230   16.2990   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.3430   13.8310   17.0230   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3890   11.6250   17.1540   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.2270   12.7970   14.9760   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.1870   11.9050   16.0200   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4120   12.7940   15.2560   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.1500   10.5570   15.3360   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.3850    9.5210   16.0300   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8950   10.4820   14.1180   N 0  0  0  0  0  0  0  0  0  0  0  0
+    2.7530    9.2730   13.3530   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.4880    9.4070   12.0210   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0250   10.5080   11.1050   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.3810   11.4360   11.5100   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.3820   10.4150    9.9400   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  2  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 15  2  0  0  0  0
+M  END
+>  <InstanceId>
+3BEX_PAU_A_248
+
+>  <ChemCompId>
+PAU
+
+>  <PdbId>
+3BEX
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+248
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O5
+
+>  <Name>
+PANTOTHENOIC ACID
+
+>  <SystematicName>
+3-[[(2R)-3,3-dimethyl-2,4-bis(oxidanyl)butanoyl]amino]propanoic acid
+
+>  <Synonyms>
+N-[(2R)-2,4-DIHYDROXY-3,3-DIMETHYLBUTANOYL]-BETA-ALANINE
+
+>  <Type>
+peptide-like
+
+>  <Formula>
+C9 H17 N O5
+
+>  <MolecularWeight>
+219.235
+
+>  <ModifiedDate>
+2011-08-11
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+A
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H17NO5/c1-9(2,5-11)7(14)8(15)10-4-3-6(12)13/h7,11,14H,3-5H2,1-2H3,(H,10,15)(H,12,13)/t7-/m0/s1
+
+>  <InChIKey>
+GHOKWGTUZJEAQD-ZETCQYMHSA-N
+
+>  <SMILES>
+CC(C)(CO)[C@H](C(=O)NCCC(=O)O)O
+
+$$$$

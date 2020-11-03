@@ -1,0 +1,100 @@
+1TNI_PBN_A_900
+  RCSB PDB08012016013D
+Coordinates from PDB:1TNI:A:900 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   29.0920   15.5130   14.1370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.8140   15.8390   15.4380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.8910   15.4650   16.5610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.5580   14.6080   17.6300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.1700   13.2680   17.1930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.5220   12.4630   16.2720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.8790   11.1320   16.1840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.8630   10.5610   16.9830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.5100   11.3480   17.9030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.1550   12.6880   17.9960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.8680   14.9520   13.0270   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 11  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  5 10  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+1TNI_PBN_A_900
+
+>  <ChemCompId>
+PBN
+
+>  <PdbId>
+1TNI
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+900
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N
+
+>  <Name>
+4-PHENYLBUTYLAMINE
+
+>  <SystematicName>
+4-phenylbutan-1-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H15 N
+
+>  <MolecularWeight>
+149.233
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H15N/c11-9-5-4-8-10-6-2-1-3-7-10/h1-3,6-7H,4-5,8-9,11H2
+
+>  <InChIKey>
+AGNFWIZBEATIAK-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)CCCCN
+
+$$$$

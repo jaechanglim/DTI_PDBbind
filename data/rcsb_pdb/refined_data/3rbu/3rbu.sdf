@@ -1,0 +1,105 @@
+3RBU_G88_A_1800
+  RCSB PDB08012020203D
+Coordinates from PDB:3RBU:A:1800 Model:1 without hydrogens
+ 14 13  0  0  0  0            999 V2000
+  -37.4720   18.3070   39.8580   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.6850   17.6860   39.0960   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.6890   16.4160   39.0090   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.8390   18.4320   38.3800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.9700   19.9870   38.4110   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.7070   20.6380   37.8050   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.6330   20.5090   38.8410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.6840   21.2680   39.8520   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.7150   19.6550   38.6640   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.1740   20.1830   36.3760   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.0120   21.5630   35.7480   P 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.5450   22.3330   36.9730   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.6630   21.0830   35.2560   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.7770   22.6610   34.9530   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6 10  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 14  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 11 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+3RBU_G88_A_1800
+
+>  <ChemCompId>
+G88
+
+>  <PdbId>
+3RBU
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1800
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O7 P
+
+>  <Name>
+(2S)-2-(PHOSPHONOMETHYL)PENTANEDIOIC ACID
+
+>  <SystematicName>
+(2S)-2-(phosphonomethyl)pentanedioic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H11 O7 P
+
+>  <MolecularWeight>
+226.121
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C6H11O7P/c7-5(8)2-1-4(6(9)10)3-14(11,12)13/h4H,1-3H2,(H,7,8)(H,9,10)(H2,11,12,13)/t4-/m1/s1
+
+>  <InChIKey>
+ISEYJGQFXSTPMQ-SCSAIBSYSA-N
+
+>  <SMILES>
+C(CC(=O)O)[C@H](CP(=O)(O)O)C(=O)O
+
+$$$$

@@ -1,0 +1,105 @@
+5JI8_6KT_A_301
+  RCSB PDB08022001553D
+Coordinates from PDB:5JI8:A:301 Model:1 without hydrogens
+ 13 14  0  0  0  0            999 V2000
+    4.9940    8.1450    9.4500   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.9380    7.7450    7.2730   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.0080    7.4470    8.2730   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.4570   10.9770   10.2100   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.9850    6.3520    8.0940   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1890   12.0620   10.8370   N 0  0  0  0  0  0  0  0  0  0  0  0
+    6.8850    9.4800    8.6350   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.9140    9.1260    9.6130   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.8930    8.7580    7.4460   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.7520   10.5280    8.9860   N 0  0  0  0  0  0  0  0  0  0  0  0
+    6.1180   10.1720   11.0040   S 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0850    6.2550    8.8560   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.1300    5.4440    6.9660   N 0  0  0  0  0  0  0  0  0  0  0  0
+ 13  5  1  0  0  0  0
+  2  9  2  0  0  0  0
+  2  3  1  0  0  0  0
+  9  7  1  0  0  0  0
+  5  3  1  0  0  0  0
+  5 12  2  0  0  0  0
+  3  1  2  0  0  0  0
+  7 10  1  0  0  0  0
+  7  8  2  0  0  0  0
+ 10  4  2  0  0  0  0
+  1  8  1  0  0  0  0
+  8 11  1  0  0  0  0
+  4  6  1  0  0  0  0
+  4 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+5JI8_6KT_A_301
+
+>  <ChemCompId>
+6KT
+
+>  <PdbId>
+5JI8
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N3 O S
+
+>  <Name>
+2-amino-1,3-benzothiazole-6-carboxamide
+
+>  <SystematicName>
+2-azanyl-1,3-benzothiazole-6-carboxamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H7 N3 O S
+
+>  <MolecularWeight>
+193.226
+
+>  <ModifiedDate>
+2016-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H7N3OS/c9-7(12)4-1-2-5-6(3-4)13-8(10)11-5/h1-3H,(H2,9,12)(H2,10,11)
+
+>  <InChIKey>
+HPRLVAQRFQEQPF-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc2c(cc1C(=O)N)sc(n2)N
+
+$$$$

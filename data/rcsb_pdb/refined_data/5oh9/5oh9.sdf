@@ -1,0 +1,92 @@
+5OH9_9UT_A_202
+  RCSB PDB08022002413D
+Coordinates from PDB:5OH9:A:202 Model:1 without hydrogens
+  7  7  0  0  0  0            999 V2000
+   25.6510   17.3690   -8.7840   O 0  0  0  0  0  0  0  0  0  0  0  0
+   24.6180   17.5380   -8.1320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.5710   16.7290   -8.3210   N 0  0  0  0  0  0  0  0  0  0  0  0
+   24.3960   18.7780   -7.0100   S 0  0  0  0  0  0  0  0  0  0  0  0
+   22.7260   18.2160   -6.6140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.5270   16.9780   -7.5100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.5550   16.2280   -7.4700   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  3  2  1  0  0  0  0
+  3  6  1  0  0  0  0
+  2  4  1  0  0  0  0
+  6  7  2  0  0  0  0
+  6  5  1  0  0  0  0
+  4  5  2  0  0  0  0
+M  END
+>  <InstanceId>
+5OH9_9UT_A_202
+
+>  <ChemCompId>
+9UT
+
+>  <PdbId>
+5OH9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+202
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C3 N O2 S
+
+>  <Name>
+1,3-thiazole-2,4-dione
+
+>  <SystematicName>
+1,3-thiazole-2,4-dione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C3 H3 N O2 S
+
+>  <MolecularWeight>
+117.126
+
+>  <ModifiedDate>
+2018-10-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C3H3NO2S/c5-2-1-7-3(6)4-2/h1,7H,(H,4,5,6)
+
+>  <InChIKey>
+OKCMWAHWBYXJPD-UHFFFAOYSA-N
+
+>  <SMILES>
+C1=SC(=O)NC1=O
+
+$$$$

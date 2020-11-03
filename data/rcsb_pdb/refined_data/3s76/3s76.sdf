@@ -1,0 +1,96 @@
+3S76_EVH_A_262
+  RCSB PDB08012020263D
+Coordinates from PDB:3S76:A:262 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   15.0860    0.9930   16.8190   S 0  0  0  0  0  0  0  0  0  0  0  0
+   16.8070    2.4100   15.2290   N 0  0  0  0  0  0  0  0  0  0  0  0
+   13.6070    1.0220   16.7830   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5410    2.2220   15.7360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7150    1.2740   18.0590   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.7400    3.2040   15.2620   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4510    3.9750   14.3880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7520    3.4900   14.3940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6610   -0.3330   16.2070   N 0  0  0  0  0  0  0  0  0  0  0  0
+  4  1  1  0  0  0  0
+  9  1  1  0  0  0  0
+  3  1  2  0  0  0  0
+  1  5  2  0  0  0  0
+  8  2  1  0  0  0  0
+  2  4  1  0  0  0  0
+  6  4  2  0  0  0  0
+  7  6  1  0  0  0  0
+  7  8  2  0  0  0  0
+M  END
+>  <InstanceId>
+3S76_EVH_A_262
+
+>  <ChemCompId>
+EVH
+
+>  <PdbId>
+3S76
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+262
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C3 N3 O2 S
+
+>  <Name>
+1H-imidazole-2-sulfonamide
+
+>  <SystematicName>
+1H-imidazole-2-sulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C3 H5 N3 O2 S
+
+>  <MolecularWeight>
+147.156
+
+>  <ModifiedDate>
+2011-10-14
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C3H5N3O2S/c4-9(7,8)3-5-1-2-6-3/h1-2H,(H,5,6)(H2,4,7,8)
+
+>  <InChIKey>
+PMTLRCDQMKXMRZ-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cnc([nH]1)S(=O)(=O)N
+
+$$$$

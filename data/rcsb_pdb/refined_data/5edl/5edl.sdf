@@ -1,0 +1,116 @@
+5EDL_VIB_A_201
+  RCSB PDB08022001123D
+Coordinates from PDB:5EDL:A:201 Model:1 without hydrogens
+ 18 19  0  0  0  0            999 V2000
+    5.6770   19.1820   62.9070   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.9870   17.7270   61.1020   N 0  0  0  0  0  0  0  0  0  0  0  0
+   12.3960   19.3690   57.2480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.3670   15.6290   57.3070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   12.6150   15.3140   56.1520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.1550   16.6070   55.5240   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.9800   17.5530   57.6930   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.6810   16.5650   56.7010   S 0  0  0  0  0  0  0  0  0  0  0  0
+   11.0760   17.1820   56.4240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.2110   18.3980   57.1890   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.8790   18.6330   57.9850   N 0  3  0  0  0  0  0  0  0  0  0  0
+    9.6950   19.8110   58.8270   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.8230   18.5820   61.0160   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.8510   18.5020   61.9270   N 0  0  0  0  0  0  0  0  0  0  0  0
+    6.7650   19.3170   61.8280   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.6780   20.2280   60.8070   N 0  0  0  0  0  0  0  0  0  0  0  0
+    7.6590   20.3250   59.8730   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.7420   19.4910   59.9930   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1 15  1  0  0  0  0
+  2 13  1  0  0  0  0
+  3 10  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  9  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7 11  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 18  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 18  2  0  0  0  0
+ 14 15  2  0  0  0  0
+ 15 16  1  0  0  0  0
+ 16 17  2  0  0  0  0
+ 17 18  1  0  0  0  0
+M  CHG  1  11   1
+M  END
+>  <InstanceId>
+5EDL_VIB_A_201
+
+>  <ChemCompId>
+VIB
+
+>  <PdbId>
+5EDL
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N4 O S
+
+>  <Name>
+3-(4-AMINO-2-METHYL-PYRIMIDIN-5-YLMETHYL)-5-(2-HYDROXY-ETHYL)-4-METHYL-THIAZOL-3-IUM
+
+>  <SystematicName>
+2-[3-[(4-amino-2-methyl-pyrimidin-5-yl)methyl]-4-methyl-1,3-thiazol-3-ium-5-yl]ethanol
+
+>  <Synonyms>
+THIAMIN; VITAMIN B1
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H17 N4 O S
+
+>  <MolecularWeight>
+265.355
+
+>  <ModifiedDate>
+2020-01-26
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H17N4OS/c1-8-11(3-4-17)18-7-16(8)6-10-5-14-9(2)15-12(10)13/h5,7,17H,3-4,6H2,1-2H3,(H2,13,14,15)/q+1
+
+>  <InChIKey>
+JZRWCGZRTZMZEH-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1c(sc[n+]1Cc2cnc(nc2N)C)CCO
+
+$$$$

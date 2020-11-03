@@ -1,0 +1,104 @@
+4RUZ_3W8_A_302
+  RCSB PDB08012023123D
+Coordinates from PDB:4RUZ:A:302 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   -2.1510    7.2420   12.9790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4600    5.8620   13.5080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8340    5.8460   13.8130   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2930    4.7080   14.4950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.7380    4.6560   14.8940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2320    3.5870   15.5530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3110    2.4440   15.8740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9470    1.0690   16.7570   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4420    1.1680   18.1100   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.3800    1.1120   16.8140   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4030   -0.2880   16.0380   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0040    2.4840   15.5240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.4670    3.6740   14.7830   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4 13  2  0  0  0  0
+  4  5  1  0  0  0  0
+ 13 12  1  0  0  0  0
+  5  6  2  0  0  0  0
+ 12  7  2  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+ 11  8  1  0  0  0  0
+  8 10  2  0  0  0  0
+  8  9  2  0  0  0  0
+M  END
+>  <InstanceId>
+4RUZ_3W8_A_302
+
+>  <ChemCompId>
+3W8
+
+>  <PdbId>
+4RUZ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O3 S
+
+>  <Name>
+4-ethoxybenzenesulfonamide
+
+>  <SystematicName>
+4-ethoxybenzenesulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H11 N O3 S
+
+>  <MolecularWeight>
+201.243
+
+>  <ModifiedDate>
+2015-04-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H11NO3S/c1-2-12-7-3-5-8(6-4-7)13(9,10)11/h3-6H,2H2,1H3,(H2,9,10,11)
+
+>  <InChIKey>
+ILKGEOVHANZEFC-UHFFFAOYSA-N
+
+>  <SMILES>
+CCOc1ccc(cc1)S(=O)(=O)N
+
+$$$$

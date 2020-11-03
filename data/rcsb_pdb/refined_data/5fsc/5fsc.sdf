@@ -1,0 +1,110 @@
+5FSC_G8Z_A_302
+  RCSB PDB08022001253D
+Coordinates from PDB:5FSC:A:302 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+    0.7360   29.4920   23.3250   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.1810   29.4740   24.5950   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.4670   30.7570   25.4190   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.1140   30.6530   26.9540   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.0240   29.8020   27.6120   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.4080   28.6480   28.0820   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.0900   31.9580   27.7460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4310   31.7760   29.0380   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7390   33.0060   26.9410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1070   32.7190   26.9880   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.2260   31.8540   24.8070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1480   33.0820   25.4980   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.1240   33.5110   25.6830   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.0530   33.4890   24.6350   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.4690   33.2870   25.2140   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.9070   33.5990   26.4810   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 12  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  2  0  0  0  0
+M  END
+>  <InstanceId>
+5FSC_G8Z_A_302
+
+>  <ChemCompId>
+G8Z
+
+>  <PdbId>
+5FSC
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 O6
+
+>  <Name>
+prop-2-en-1-yl 4-O-methyl-alpha-D-mannopyranoside
+
+>  <SystematicName>
+(2S,3S,4R,5S,6R)-6-(hydroxymethyl)-5-methoxy-2-prop-2-enoxy-oxane-3,4-diol
+
+>  <Synonyms>
+Allyl-Alpha-4-Methyl-Mannoside; prop-2-en-1-yl 4-O-methyl-alpha-D-mannoside; prop-2-en-1-yl 4-O-methyl-D-mannoside; prop-2-en-1-yl 4-O-methyl-mannoside
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C10 H18 O6
+
+>  <MolecularWeight>
+234.246
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+MAN
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H18O6/c1-3-4-15-10-8(13)7(12)9(14-2)6(5-11)16-10/h3,6-13H,1,4-5H2,2H3/t6-,7-,8+,9-,10+/m1/s1
+
+>  <InChIKey>
+VOIKDSWIMJSKCR-SPFKKGSWSA-N
+
+>  <SMILES>
+CO[C@@H]1[C@H](O[C@@H]([C@H]([C@H]1O)O)OCC=C)CO
+
+$$$$

@@ -1,0 +1,98 @@
+6GNP_F4Z_A_201
+  RCSB PDB08022004503D
+Coordinates from PDB:6GNP:A:201 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+  -16.5390    4.4130   38.8050   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.7640    4.9480   38.9980   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.9880    4.2220   38.7130   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.1350    4.6640   38.8710   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.7970    2.9560   38.2350   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.5590    2.4500   38.0530   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.4150    3.0990   38.3080   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.8520    2.4000   38.0550  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.4990    0.8340   37.4400  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.9290    6.5580   39.6070  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  9  6  1  0  0  0  0
+  6  5  1  0  0  0  0
+  6  7  2  0  0  0  0
+  8  7  1  0  0  0  0
+  5  3  2  0  0  0  0
+  7  1  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  2  1  0  0  0  0
+  1  2  2  0  0  0  0
+  2 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+6GNP_F4Z_A_201
+
+>  <ChemCompId>
+F4Z
+
+>  <PdbId>
+6GNP
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N O Cl3
+
+>  <Name>
+3,5,6-trichloro-2-pyridinol
+
+>  <SystematicName>
+3,5,6-tris(chloranyl)pyridin-2-ol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H2 Cl3 N O
+
+>  <MolecularWeight>
+198.434
+
+>  <ModifiedDate>
+2018-07-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H2Cl3NO/c6-2-1-3(7)5(10)9-4(2)8/h1H,(H,9,10)
+
+>  <InChIKey>
+WCYYAQFQZQEUEN-UHFFFAOYSA-N
+
+>  <SMILES>
+c1c(c(nc(c1Cl)Cl)O)Cl
+
+$$$$

@@ -1,0 +1,108 @@
+4OCQ_A2G_A_401
+  RCSB PDB08012022443D
+Coordinates from PDB:4OCQ:A:401 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+   86.4850   83.7740  118.6790   O 0  0  0  0  0  0  0  0  0  0  0  0
+   86.8710   83.6770  117.2860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   86.0150   84.5210  116.4670   O 0  0  0  0  0  0  0  0  0  0  0  0
+   86.8080   82.2060  116.8210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   87.1010   82.0950  115.3810   N 0  0  0  0  0  0  0  0  0  0  0  0
+   85.4410   81.5620  117.1720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   85.4300   80.1800  116.7650   O 0  0  0  0  0  0  0  0  0  0  0  0
+   85.2160   81.6680  118.6700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   86.2810   80.9650  119.3700   O 0  0  0  0  0  0  0  0  0  0  0  0
+   85.2090   83.1750  119.0020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   84.9400   83.4410  120.4730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   84.7460   84.8530  120.6420   O 0  0  0  0  0  0  0  0  0  0  0  0
+   88.0970   81.3150  114.9320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   88.8120   80.6190  115.6590   O 0  0  0  0  0  0  0  0  0  0  0  0
+   88.3000   81.3290  113.4140   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1 10  1  0  0  0  0
+  2  1  1  0  0  0  0
+  2  4  1  0  0  0  0
+  3  2  1  0  0  0  0
+  4  6  1  0  0  0  0
+  5  4  1  0  0  0  0
+  6  8  1  0  0  0  0
+  6  7  1  0  0  0  0
+  8  9  1  0  0  0  0
+ 10  8  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 13  5  1  0  0  0  0
+ 14 13  2  0  0  0  0
+ 15 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+4OCQ_A2G_A_401
+
+>  <ChemCompId>
+A2G
+
+>  <PdbId>
+4OCQ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O6
+
+>  <Name>
+2-acetamido-2-deoxy-alpha-D-galactopyranose
+
+>  <SystematicName>
+N-[(2S,3R,4R,5R,6R)-2,4,5-trihydroxy-6-(hydroxymethyl)oxan-3-yl]ethanamide
+
+>  <Synonyms>
+N-acetyl-alpha-D-galactosamine; 2-acetamido-2-deoxy-alpha-D-galactose; 2-acetamido-2-deoxy-D-galactose; 2-acetamido-2-deoxy-galactose; N-ACETYL-2-DEOXY-2-AMINO-GALACTOSE
+
+>  <Type>
+D-saccharide, alpha linking
+
+>  <Formula>
+C8 H15 N O6
+
+>  <MolecularWeight>
+221.208
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H15NO6/c1-3(11)9-5-7(13)6(12)4(2-10)15-8(5)14/h4-8,10,12-14H,2H2,1H3,(H,9,11)/t4-,5-,6+,7-,8+/m1/s1
+
+>  <InChIKey>
+OVRNDRQMDRJTHS-CBQIKETKSA-N
+
+>  <SMILES>
+CC(=O)N[C@@H]1[C@H]([C@H]([C@H](O[C@@H]1O)CO)O)O
+
+$$$$

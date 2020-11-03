@@ -1,0 +1,102 @@
+4RPN_PCI_D_401
+  RCSB PDB08012023113D
+Coordinates from PDB:4RPN:D:401 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   48.5720   79.9620   76.1920   O 0  0  0  0  0  0  0  0  0  0  0  0
+   49.3480   80.2310   77.3130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.2570   81.2710   77.2880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.4850   82.2530   75.8610  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   51.0010   81.5220   78.4220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.1430   82.8250   78.4380  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   50.8540   80.7620   79.5710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.8640   81.1500   80.9470  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   49.9410   79.7240   79.5860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   49.6900   78.7480   81.0150  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   49.1800   79.4620   78.4570   C 0  0  0  0  0  0  0  0  0  0  0  0
+   48.0320   78.1410   78.4830  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2 11  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  2  0  0  0  0
+ 11 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+4RPN_PCI_D_401
+
+>  <ChemCompId>
+PCI
+
+>  <PdbId>
+4RPN
+
+>  <ChainId>
+D
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O Cl5
+
+>  <Name>
+PENTACHLOROPHENOL
+
+>  <SystematicName>
+2,3,4,5,6-pentachlorophenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H Cl5 O
+
+>  <MolecularWeight>
+266.337
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6HCl5O/c7-1-2(8)4(10)6(12)5(11)3(1)9/h12H
+
+>  <InChIKey>
+IZUPBVBPLAPZRR-UHFFFAOYSA-N
+
+>  <SMILES>
+c1(c(c(c(c(c1Cl)Cl)Cl)Cl)Cl)O
+
+$$$$

@@ -1,0 +1,102 @@
+1E4H_PBR_A_998
+  RCSB PDB08012014483D
+Coordinates from PDB:1E4H:A:998 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   45.4350    1.4780    4.0820  Br 0  0  0  0  0  0  0  0  0  0  0  0
+   45.4760    1.4980    7.4080  Br 0  0  0  0  0  0  0  0  0  0  0  0
+   43.0000    0.0000    9.0860  Br 0  0  0  0  0  0  0  0  0  0  0  0
+   40.5240   -1.4980    7.4080  Br 0  0  0  0  0  0  0  0  0  0  0  0
+   40.5650   -1.4780    4.0820  Br 0  0  0  0  0  0  0  0  0  0  0  0
+   43.0000    0.0000    3.0340   O 0  0  0  0  0  0  0  0  0  0  0  0
+   44.0570    0.6320    5.0620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.0700    0.6370    6.4750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   43.0000    0.0000    7.1900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   41.9300   -0.6370    6.4750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   41.9400   -0.6320    5.0620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   43.0000    0.0000    4.3690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  7  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6 12  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7 12  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+M  END
+>  <InstanceId>
+1E4H_PBR_A_998
+
+>  <ChemCompId>
+PBR
+
+>  <PdbId>
+1E4H
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+998
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O Br5
+
+>  <Name>
+PENTABROMOPHENOL
+
+>  <SystematicName>
+2,3,4,5,6-pentabromophenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H Br5 O
+
+>  <MolecularWeight>
+488.592
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6HBr5O/c7-1-2(8)4(10)6(12)5(11)3(1)9/h12H
+
+>  <InChIKey>
+SVHOVVJFOWGYJO-UHFFFAOYSA-N
+
+>  <SMILES>
+c1(c(c(c(c(c1Br)Br)Br)Br)Br)O
+
+$$$$

@@ -1,0 +1,96 @@
+6CSS_FBJ_A_804
+  RCSB PDB08022004173D
+Coordinates from PDB:6CSS:A:804 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   27.7330   -2.9620   -6.7190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.6180   -3.8640   -7.8120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.2950   -4.8640   -8.5750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.2740   -5.1610   -9.7500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.3360   -4.0460   -9.6020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.8550   -3.1490   -8.4210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.3170   -2.7910   -6.9070   N 0  0  0  0  0  0  0  0  0  0  0  0
+   28.2760   -2.4390   -5.7540   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.5130   -2.0740   -6.0770   O 0  0  0  0  0  0  0  0  0  0  0  0
+  4  5  1  0  0  0  0
+  4  3  1  0  0  0  0
+  5  6  1  0  0  0  0
+  3  2  2  0  0  0  0
+  6  2  1  0  0  0  0
+  2  1  1  0  0  0  0
+  7  1  1  0  0  0  0
+  7  9  1  0  0  0  0
+  1  8  2  0  0  0  0
+M  END
+>  <InstanceId>
+6CSS_FBJ_A_804
+
+>  <ChemCompId>
+FBJ
+
+>  <PdbId>
+6CSS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+804
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O2
+
+>  <Name>
+N-hydroxycyclopent-1-ene-1-carboxamide
+
+>  <SystematicName>
+~{N}-oxidanylcyclopentene-1-carboxamide
+
+>  <Synonyms>
+cyclopentenylhydroxamate
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H9 N O2
+
+>  <MolecularWeight>
+127.141
+
+>  <ModifiedDate>
+2018-05-25
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H9NO2/c8-6(7-9)5-3-1-2-4-5/h3,9H,1-2,4H2,(H,7,8)
+
+>  <InChIKey>
+RYYGSXXWQSXKRP-UHFFFAOYSA-N
+
+>  <SMILES>
+C1CC=C(C1)C(=O)NO
+
+$$$$

@@ -1,0 +1,102 @@
+4Y3J_HIC_A_415
+  RCSB PDB08022000253D
+Coordinates from PDB:4Y3J:A:415 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   -3.1270    2.6700    7.0940   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.4090    4.1060    7.3670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7820    4.8120    6.0590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.4960    4.2220    4.9920   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.2100    4.7850    8.0380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.7700    4.0610    9.2700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4300    3.9240    9.5930   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5410    3.4370   10.2050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3660    3.2190   10.7000   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6830    2.8970   11.1110   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0730    2.1140   12.2900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3280    5.9320    6.1500   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  5  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3 12  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  7  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+4Y3J_HIC_A_415
+
+>  <ChemCompId>
+HIC
+
+>  <PdbId>
+4Y3J
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+415
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N3 O2
+
+>  <Name>
+4-METHYL-HISTIDINE
+
+>  <SystematicName>
+(2S)-2-amino-3-(1-methylimidazol-4-yl)propanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+L-PEPTIDE LINKING
+
+>  <Formula>
+C7 H11 N3 O2
+
+>  <MolecularWeight>
+169.181
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+HIS
+
+>  <OneLetterCode>
+H
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H11N3O2/c1-10-3-5(9-4-10)2-6(8)7(11)12/h3-4,6H,2,8H2,1H3,(H,11,12)/t6-/m0/s1
+
+>  <InChIKey>
+BRMWTNUJHUMWMS-LURJTMIESA-N
+
+>  <SMILES>
+Cn1cc(nc1)C[C@@H](C(=O)O)N
+
+$$$$

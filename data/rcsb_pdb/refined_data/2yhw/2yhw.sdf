@@ -1,0 +1,108 @@
+2YHW_BM3_A_1718
+  RCSB PDB08012018233D
+Coordinates from PDB:2YHW:A:1718 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+  -11.4390   31.2200   17.2280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.4770   30.6520   17.9500   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.8320   30.1610   16.2990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.9050   30.8430   15.3430   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.8920   30.6190   14.0410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.5960   29.7670   13.4720   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.9660   31.5630   13.2470   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.1930   29.0690   17.1090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.5510   28.0780   16.2570   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.1920   29.6340   18.0690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.6570   28.5870   18.9070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.8020   30.7030   18.9370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.8850   31.4500   19.8470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.8260   32.1090   19.1850   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.4080   31.7220   18.1000   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1 15  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  5  7  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 15  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+2YHW_BM3_A_1718
+
+>  <ChemCompId>
+BM3
+
+>  <PdbId>
+2YHW
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1718
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O6
+
+>  <Name>
+2-acetamido-2-deoxy-alpha-D-mannopyranose
+
+>  <SystematicName>
+N-[(2S,3S,4R,5S,6R)-2,4,5-trihydroxy-6-(hydroxymethyl)oxan-3-yl]ethanamide
+
+>  <Synonyms>
+N-acetyl-alpha-D-mannosamine; 2-acetamido-2-deoxy-alpha-D-mannose; 2-acetamido-2-deoxy-D-mannose; 2-acetamido-2-deoxy-mannose; 2-(ACETYLAMINO)-2-DEOXY-ALPHA-D-MANNOPYRANOSE
+
+>  <Type>
+D-saccharide, alpha linking
+
+>  <Formula>
+C8 H15 N O6
+
+>  <MolecularWeight>
+221.208
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C8H15NO6/c1-3(11)9-5-7(13)6(12)4(2-10)15-8(5)14/h4-8,10,12-14H,2H2,1H3,(H,9,11)/t4-,5+,6-,7-,8+/m1/s1
+
+>  <InChIKey>
+OVRNDRQMDRJTHS-UOLFYFMNSA-N
+
+>  <SMILES>
+CC(=O)N[C@H]1[C@H]([C@@H]([C@H](O[C@@H]1O)CO)O)O
+
+$$$$

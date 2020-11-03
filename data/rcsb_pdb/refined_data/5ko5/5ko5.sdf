@@ -1,0 +1,94 @@
+5KO5_CYT_A_301
+  RCSB PDB08022002043D
+Coordinates from PDB:5KO5:A:301 Model:1 without hydrogens
+  8  8  0  0  0  0            999 V2000
+   -3.5170   72.0970   79.4700   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9830   70.9740   78.9880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4670   73.2200   79.0420   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7810   73.2360   79.5240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.2430   74.2750   80.0070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7540   69.8810   78.9730   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6470   70.9390   78.4820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.9340   72.0730   78.5360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  4  1  0  0  0  0
+  2  6  1  0  0  0  0
+  2  7  2  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  2  0  0  0  0
+  4  5  2  0  0  0  0
+  7  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+5KO5_CYT_A_301
+
+>  <ChemCompId>
+CYT
+
+>  <PdbId>
+5KO5
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N3 O
+
+>  <Name>
+6-AMINOPYRIMIDIN-2(1H)-ONE
+
+>  <SystematicName>
+4-amino-3H-pyrimidin-2-one
+
+>  <Synonyms>
+CYTOSINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H5 N3 O
+
+>  <MolecularWeight>
+111.102
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C4H5N3O/c5-3-1-2-6-4(8)7-3/h1-2H,(H3,5,6,7,8)
+
+>  <InChIKey>
+OPTASPLRGRRNAP-UHFFFAOYSA-N
+
+>  <SMILES>
+C1=C(NC(=O)N=C1)N
+
+$$$$

@@ -1,0 +1,96 @@
+6F1J_EDG_A_401
+  RCSB PDB08022004363D
+Coordinates from PDB:6F1J:A:401 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   -8.5150    3.6530  -28.2550   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.8640    3.9030  -27.8880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.9160    5.0850  -26.9260   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.7780    6.0850  -27.5600   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.7380    4.3120  -29.0850   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.5230    3.2470  -29.6140   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.6690    5.3970  -28.5250   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.2600    6.3850  -29.5250   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.2940    7.2920  -30.0540   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  5  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+6F1J_EDG_A_401
+
+>  <ChemCompId>
+EDG
+
+>  <PdbId>
+6F1J
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N O3
+
+>  <Name>
+1,4-DIDEOXY-1,4-IMINO-L-ARABINITOL
+
+>  <SystematicName>
+(2S,3S,4S)-2-(hydroxymethyl)pyrrolidine-3,4-diol
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C5 H11 N O3
+
+>  <MolecularWeight>
+133.146
+
+>  <ModifiedDate>
+2011-07-08
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H11NO3/c7-2-3-5(9)4(8)1-6-3/h3-9H,1-2H2/t3-,4-,5-/m0/s1
+
+>  <InChIKey>
+OQEBIHBLFRADNM-YUPRTTJUSA-N
+
+>  <SMILES>
+C1[C@@H]([C@H]([C@@H](N1)CO)O)O
+
+$$$$

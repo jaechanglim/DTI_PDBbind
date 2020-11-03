@@ -1,0 +1,114 @@
+5YFS_RI2_A_401
+  RCSB PDB08022003443D
+Coordinates from PDB:5YFS:A:401 Model:1 without hydrogens
+ 18 18  0  0  0  0            999 V2000
+  -29.3700  -17.7860   20.0020   P 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.8980  -13.8330   20.7500   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.0670  -12.4400   21.0900   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.0870  -14.6950   21.0920   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.6130  -14.3330   22.3730   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.3910  -16.0360   21.2090   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.0310  -17.0480   21.9050   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.1010  -15.6920   21.9690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.7880  -14.3950   21.4970   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.0120  -16.7100   21.8220   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -30.6070  -16.8910   20.4850   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.2150  -11.2840   19.9400   P 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.7680  -10.8270   19.5780   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -29.3870  -17.6680   18.4920   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.9700  -11.8390   18.6790   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.1980  -17.0560   20.6130   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.0330  -10.1840   20.6470   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -29.3540  -19.2080   20.5090   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 14  1  2  0  0  0  0
+ 11  1  1  0  0  0  0
+  1 18  1  0  0  0  0
+  1 16  1  0  0  0  0
+  4  2  1  0  0  0  0
+  3  2  1  0  0  0  0
+  2  9  1  0  0  0  0
+  3 12  1  0  0  0  0
+  5  4  1  0  0  0  0
+  4  6  1  0  0  0  0
+  7  6  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 15 12  2  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 17  1  0  0  0  0
+M  END
+>  <InstanceId>
+5YFS_RI2_A_401
+
+>  <ChemCompId>
+RI2
+
+>  <PdbId>
+5YFS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O11 P2
+
+>  <Name>
+1,5-di-O-phosphono-alpha-D-ribofuranose
+
+>  <SystematicName>
+[(2R,3R,4S,5R)-3,4-dihydroxy-5-(phosphonooxymethyl)oxolan-2-yl] dihydrogen phosphate
+
+>  <Synonyms>
+1,5-di-O-phosphono-alpha-D-ribose; 1,5-di-O-phosphono-D-ribose; 1,5-di-O-phosphono-ribose
+
+>  <Type>
+D-saccharide, alpha linking
+
+>  <Formula>
+C5 H12 O11 P2
+
+>  <MolecularWeight>
+310.09
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+RIB
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H12O11P2/c6-3-2(1-14-17(8,9)10)15-5(4(3)7)16-18(11,12)13/h2-7H,1H2,(H2,8,9,10)(H2,11,12,13)/t2-,3-,4-,5-/m1/s1
+
+>  <InChIKey>
+AAAFZMYJJHWUPN-TXICZTDVSA-N
+
+>  <SMILES>
+C([C@@H]1[C@H]([C@H]([C@H](O1)OP(=O)(O)O)O)O)OP(=O)(O)O
+
+$$$$

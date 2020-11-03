@@ -1,0 +1,96 @@
+2RA6_ETY_A_604
+  RCSB PDB08012017543D
+Coordinates from PDB:2RA6:A:604 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   27.3940   37.4130   43.5080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.7960   38.5060   42.6160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.3010   38.4270   42.4990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.4630   38.9120   43.5350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.0570   38.8380   43.4260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.6930   37.8600   41.3430   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.2890   37.7820   41.2250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.4780   38.2730   42.2720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.1150   38.2010   42.1630   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  6  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  8  2  0  0  0  0
+  6  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+2RA6_ETY_A_604
+
+>  <ChemCompId>
+ETY
+
+>  <PdbId>
+2RA6
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+604
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O
+
+>  <Name>
+4-ethylphenol
+
+>  <SystematicName>
+4-ethylphenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H10 O
+
+>  <MolecularWeight>
+122.164
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C8H10O/c1-2-7-3-5-8(9)6-4-7/h3-6,9H,2H2,1H3
+
+>  <InChIKey>
+HXDOZKJGKXYMEW-UHFFFAOYSA-N
+
+>  <SMILES>
+CCc1ccc(cc1)O
+
+$$$$

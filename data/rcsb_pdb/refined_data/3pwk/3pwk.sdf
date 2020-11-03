@@ -1,0 +1,102 @@
+3PWK_L14_A_368
+  RCSB PDB08012020113D
+Coordinates from PDB:3PWK:A:368 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+    2.2710   23.2630   43.9810   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5290   25.7130   47.0620   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.4250   24.8700   44.9880   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1020   25.3660   48.7120   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.3770   23.1890   46.0160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7430   23.5750   46.9810   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.6330   25.6210   45.3610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4870   26.0070   46.3000   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4200   24.1380   44.8660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4300   25.3350   47.5040   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.3430   24.3730   45.8710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4520   24.8430   46.4950   C 0  0  0  0  0  0  0  0  0  0  0  0
+  9  1  1  0  0  0  0
+ 10  2  1  0  0  0  0
+  3  9  2  0  0  0  0
+  4 10  2  0  0  0  0
+  6  5  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6 12  1  0  0  0  0
+  8  7  1  0  0  0  0
+ 11  7  1  0  0  0  0
+ 12  8  1  0  0  0  0
+ 11  9  1  0  0  0  0
+ 10 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+3PWK_L14_A_368
+
+>  <ChemCompId>
+L14
+
+>  <PdbId>
+3PWK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+368
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O4
+
+>  <Name>
+trans-cyclohexane-1,4-dicarboxylic acid
+
+>  <SystematicName>
+cyclohexane-1,4-dicarboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H12 O4
+
+>  <MolecularWeight>
+172.178
+
+>  <ModifiedDate>
+2011-12-30
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H12O4/c9-7(10)5-1-2-6(4-3-5)8(11)12/h5-6H,1-4H2,(H,9,10)(H,11,12)/t5-,6-
+
+>  <InChIKey>
+PXGZQGDTEZPERC-IZLXSQMJSA-N
+
+>  <SMILES>
+C1CC(CCC1C(=O)O)C(=O)O
+
+$$$$

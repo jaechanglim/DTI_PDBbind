@@ -1,0 +1,106 @@
+4L51_HSX_A_501
+  RCSB PDB08012022203D
+Coordinates from PDB:4L51:A:501 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+  -34.6040  -20.2880   -5.8800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.0660  -21.0570   -4.7030   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.2930  -18.9630   -5.3370   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.2300  -18.7840   -4.3670   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.4660  -18.7250   -4.5770   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.0110  -17.7320   -3.7380   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.8100  -20.1540   -3.9840   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.2100  -20.6000   -4.4860   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.6410  -21.6640   -3.6900   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.1410  -21.9720   -3.3940   P 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.0420  -20.6940   -3.5960   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.2240  -22.3810   -1.8710   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.5510  -23.1330   -4.2250   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.3660  -20.7650   -6.5860   O 0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  0  0  0  0
+  1 14  1  0  0  0  0
+  1  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  5  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  7  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  8  7  1  0  0  0  0
+  9  8  1  0  0  0  0
+ 10  9  1  0  0  0  0
+ 11 10  2  0  0  0  0
+ 13 10  1  0  0  0  0
+ 10 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+4L51_HSX_A_501
+
+>  <ChemCompId>
+HSX
+
+>  <PdbId>
+4L51
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+501
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O8 P
+
+>  <Name>
+5-O-phosphono-alpha-D-ribofuranose
+
+>  <SystematicName>
+[(2R,3S,4R,5S)-3,4,5-trihydroxyoxolan-2-yl]methyl dihydrogen phosphate
+
+>  <Synonyms>
+5-O-phosphono-alpha-D-ribose; 5-O-phosphono-D-ribose; 5-O-phosphono-ribose
+
+>  <Type>
+D-saccharide, alpha linking
+
+>  <Formula>
+C5 H11 O8 P
+
+>  <MolecularWeight>
+230.11
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+RIB
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H11O8P/c6-3-2(1-12-14(9,10)11)13-5(8)4(3)7/h2-8H,1H2,(H2,9,10,11)/t2-,3-,4-,5+/m1/s1
+
+>  <InChIKey>
+KTVPXOYAKDPRHY-AIHAYLRMSA-N
+
+>  <SMILES>
+C([C@@H]1[C@H]([C@H]([C@H](O1)O)O)O)OP(=O)(O)O
+
+$$$$

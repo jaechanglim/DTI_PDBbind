@@ -1,0 +1,102 @@
+2NND_PRZ_A_300
+  RCSB PDB08012017343D
+Coordinates from PDB:2NND:A:300 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   50.2220   22.7330   42.6440   N 0  0  0  0  0  0  0  0  0  0  0  0
+   50.2270   23.4220   41.4790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.3990   23.4670   40.7230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.4990   22.8350   41.1810   N 0  0  0  0  0  0  0  0  0  0  0  0
+   52.4750   22.1470   42.3280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.3130   22.1010   43.0850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   48.9370   24.0740   41.0140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   48.8530   25.5790   41.1280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   48.6560   26.0310   42.5680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   47.6780   26.0350   40.2720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.4490   24.1800   39.5540   O 0  0  0  0  0  0  0  0  0  0  0  0
+   52.6300   24.2120   38.7450   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 11 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+2NND_PRZ_A_300
+
+>  <ChemCompId>
+PRZ
+
+>  <PdbId>
+2NND
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N2 O
+
+>  <Name>
+2-ISOBUTYL-3-METHOXYPYRAZINE
+
+>  <SystematicName>
+2-methoxy-3-(2-methylpropyl)pyrazine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H14 N2 O
+
+>  <MolecularWeight>
+166.22
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H14N2O/c1-7(2)6-8-9(12-3)11-5-4-10-8/h4-5,7H,6H2,1-3H3
+
+>  <InChIKey>
+UXFSPRAGHGMRSQ-UHFFFAOYSA-N
+
+>  <SMILES>
+CC(C)Cc1c(nccn1)OC
+
+$$$$

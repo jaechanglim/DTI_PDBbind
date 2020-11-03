@@ -1,0 +1,106 @@
+5FCZ_TNX_A_601
+  RCSB PDB08022001213D
+Coordinates from PDB:5FCZ:A:601 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   -5.7930   66.6320   10.2830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3840   64.1840    9.0010   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1470   66.7350    9.0200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2980   67.5750    8.0570   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0550   68.0300    8.8600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5130   66.8540    9.7030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3790   67.3510   10.5870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8040   64.6540    8.2640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.5580   63.7200    7.3410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.1910   65.9040    8.4900   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0540   68.6280    7.5370   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0930   68.4710    7.9570   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5070   66.2840   10.5760   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5660   66.2670   10.9470   O 0  0  0  0  0  0  0  0  0  0  0  0
+  9  8  1  0  0  0  0
+ 11  4  1  0  0  0  0
+ 12  5  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  3  1  0  0  0  0
+  8 10  1  0  0  0  0
+  8  2  2  0  0  0  0
+ 10  3  1  0  0  0  0
+  5  6  1  0  0  0  0
+  3  1  2  0  0  0  0
+  6 13  1  0  0  0  0
+  6  7  1  0  0  0  0
+  1 13  1  0  0  0  0
+  7 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+5FCZ_TNX_A_601
+
+>  <ChemCompId>
+TNX
+
+>  <PdbId>
+5FCZ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+601
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O4 S
+
+>  <Name>
+1,5-anhydro-2-deoxy-2-(ethanethioylamino)-D-arabino-hex-1-enitol
+
+>  <SystematicName>
+~{N}-[(2~{R},3~{S},4~{R})-2-(hydroxymethyl)-3,4-bis(oxidanyl)-3,4-dihydro-2~{H}-pyran-5-yl]ethanethioamide
+
+>  <Synonyms>
+N-[(2R,3S,4R)-2-(hydroxymethyl)-3,4-bis(oxidanyl)-3,4-dihydro-2H-pyran-5-yl]ethanethioamide; N-thioacetyl-D-glucal; NTA-glucal
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C8 H13 N O4 S
+
+>  <MolecularWeight>
+219.258
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H13NO4S/c1-4(14)9-5-3-13-6(2-10)8(12)7(5)11/h3,6-8,10-12H,2H2,1H3,(H,9,14)/t6-,7-,8-/m1/s1
+
+>  <InChIKey>
+VWPHMQQBRGEPGS-BWZBUEFSSA-N
+
+>  <SMILES>
+CC(=S)NC1=CO[C@@H]([C@H]([C@@H]1O)O)CO
+
+$$$$

@@ -1,0 +1,91 @@
+3P7I_P7I_A_313
+  RCSB PDB08012020073D
+Coordinates from PDB:3P7I:A:313 Model:1 without hydrogens
+  7  6  0  0  0  0            999 V2000
+   -2.1720  -22.9120   10.8600   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.5470  -23.4670   13.8490   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3270  -20.9210   14.3340   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2780  -21.7710   12.0480   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.4380  -23.0540   11.5230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.6430  -21.9530   12.6210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2850  -22.0160   13.2830   P 0  0  0  0  0  0  0  0  0  0  0  0
+  1  5  1  0  0  0  0
+  7  2  1  0  0  0  0
+  7  3  1  0  0  0  0
+  4  7  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+M  END
+>  <InstanceId>
+3P7I_P7I_A_313
+
+>  <ChemCompId>
+P7I
+
+>  <PdbId>
+3P7I
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+313
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O3 P
+
+>  <Name>
+(2-aminoethyl)phosphonic acid
+
+>  <SystematicName>
+2-azanylethylphosphonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H8 N O3 P
+
+>  <MolecularWeight>
+125.064
+
+>  <ModifiedDate>
+2011-10-07
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H8NO3P/c3-1-2-7(4,5)6/h1-3H2,(H2,4,5,6)
+
+>  <InChIKey>
+QQVDJLLNRSOCEL-UHFFFAOYSA-N
+
+>  <SMILES>
+C(CP(=O)(O)O)N
+
+$$$$

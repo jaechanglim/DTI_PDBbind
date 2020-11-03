@@ -1,0 +1,113 @@
+4QSV_THM_A_1210
+  RCSB PDB08012023033D
+Coordinates from PDB:4QSV:A:1210 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   25.7640   48.8600   -9.1310   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.0050   49.2140   -8.5070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.1450   48.6300   -9.3280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.0660   47.2030   -9.2470   O 0  0  0  0  0  0  0  0  0  0  0  0
+   28.0740   49.0220  -10.8100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.1850   49.8360  -11.2330   O 0  0  0  0  0  0  0  0  0  0  0  0
+   28.0600   47.7220  -11.5820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.1230   46.6090  -10.5500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.0140   45.6890  -10.8580   N 0  0  0  0  0  0  0  0  0  0  0  0
+   27.2130   44.7310  -11.8990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.2890   44.6090  -12.5360   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.2440   43.8870  -12.2400   N 0  0  0  0  0  0  0  0  0  0  0  0
+   25.0590   43.9000  -11.6290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.2670   43.0530  -12.0160   O 0  0  0  0  0  0  0  0  0  0  0  0
+   24.7840   44.8690  -10.5390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4590   44.9280   -9.8100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.8220   45.7590  -10.2090   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  4  8  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 17  1  0  0  0  0
+ 10 11  2  0  0  0  0
+ 10 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 13 15  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 15 17  2  0  0  0  0
+M  END
+>  <InstanceId>
+4QSV_THM_A_1210
+
+>  <ChemCompId>
+THM
+
+>  <PdbId>
+4QSV
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1210
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O5
+
+>  <Name>
+THYMIDINE
+
+>  <SystematicName>
+1-[(2R,4S,5R)-4-hydroxy-5-(hydroxymethyl)oxolan-2-yl]-5-methyl-pyrimidine-2,4-dione
+
+>  <Synonyms>
+DEOXYTHYMIDINE; 2'-DEOXYTHYMIDINE
+
+>  <Type>
+DNA OH 5 prime terminus
+
+>  <Formula>
+C10 H14 N2 O5
+
+>  <MolecularWeight>
+242.229
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H14N2O5/c1-5-3-12(10(16)11-9(5)15)8-2-6(14)7(4-13)17-8/h3,6-8,13-14H,2,4H2,1H3,(H,11,15,16)/t6-,7+,8+/m0/s1
+
+>  <InChIKey>
+IQFYYKKMVGJFEH-XLPZGREQSA-N
+
+>  <SMILES>
+CC1=CN(C(=O)NC1=O)[C@H]2C[C@@H]([C@H](O2)CO)O
+
+$$$$

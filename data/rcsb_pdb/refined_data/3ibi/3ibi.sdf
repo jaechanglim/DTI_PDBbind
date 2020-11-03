@@ -1,0 +1,103 @@
+3IBI_BOW_A_300
+  RCSB PDB08012019193D
+Coordinates from PDB:3IBI:A:300 Model:1 without hydrogens
+ 13 12  0  0  0  0            999 V2000
+   -4.6580    1.9510   14.4930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2710   -0.5540   16.0610   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.0460    1.1170   16.2820   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.7060    0.8470   16.6520   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3980    3.1770   13.9770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3650    0.8830   18.0280   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8030    4.4940   14.4150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7890    1.9390   15.9590   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.6880    4.9990   13.5300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8810    6.1030   14.1580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1790    6.9960   13.1630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0890    7.8710   13.7560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5530    8.8460   14.8090   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  5  1  0  0  0  0
+  1  8  1  0  0  0  0
+  2  4  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  6  2  0  0  0  0
+  4  8  1  0  0  0  0
+  5  7  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+3IBI_BOW_A_300
+
+>  <ChemCompId>
+BOW
+
+>  <PdbId>
+3IBI
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O3 S
+
+>  <Name>
+octyl sulfamate
+
+>  <SystematicName>
+octyl sulfamate
+
+>  <Synonyms>
+n-Octyl sulfamate
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H19 N O3 S
+
+>  <MolecularWeight>
+209.306
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H19NO3S/c1-2-3-4-5-6-7-8-12-13(9,10)11/h2-8H2,1H3,(H2,9,10,11)
+
+>  <InChIKey>
+ZXWAFSSPWCHAJT-UHFFFAOYSA-N
+
+>  <SMILES>
+CCCCCCCCOS(=O)(=O)N
+
+$$$$

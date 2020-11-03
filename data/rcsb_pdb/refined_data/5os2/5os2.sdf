@@ -1,0 +1,112 @@
+5OS2_A7K_A_404
+  RCSB PDB08022002443D
+Coordinates from PDB:5OS2:A:404 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+  -12.1310   14.9710  -16.7760   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.8170   16.3650  -20.3650   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.6690   15.9030  -17.8840   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.2120   15.4410  -19.2360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.7670   14.0070  -19.4860   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.3140   13.1200  -18.4160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.1490   12.5130  -17.5810   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.3060   12.5670  -16.2030   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.0300   12.0270  -16.4520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.5550   11.0490  -15.5770   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.0630   12.0950  -15.1340   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.5680   11.1150  -14.3000   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.3190   10.5980  -14.5160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.3730   11.7930  -18.8600   N 0  3  0  0  0  0  0  0  0  0  0  0
+  -11.8360   13.5600  -17.0970   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.1470   15.6770  -21.5600   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 16  2  1  0  0  0  0
+  2  4  1  0  0  0  0
+  5  4  1  0  0  0  0
+  5  6  1  0  0  0  0
+  4  3  1  0  0  0  0
+ 14  7  1  0  0  0  0
+  6 15  1  0  0  0  0
+  3  1  1  0  0  0  0
+  7  9  1  0  0  0  0
+ 15  1  1  0  0  0  0
+ 15  8  1  0  0  0  0
+  9  8  2  0  0  0  0
+  9 10  1  0  0  0  0
+  8 11  1  0  0  0  0
+ 10 13  2  0  0  0  0
+ 11 12  2  0  0  0  0
+ 13 12  1  0  0  0  0
+M  CHG  1  14   1
+M  END
+>  <InstanceId>
+5OS2_A7K_A_404
+
+>  <ChemCompId>
+A7K
+
+>  <PdbId>
+5OS2
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+404
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 N2 O
+
+>  <Name>
+[2-[4-(hydroxymethyl)piperidin-1-yl]phenyl]methylazanium
+
+>  <SystematicName>
+[2-[4-(hydroxymethyl)piperidin-1-yl]phenyl]methylazanium
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H21 N2 O
+
+>  <MolecularWeight>
+221.319
+
+>  <ModifiedDate>
+2017-10-27
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H20N2O/c14-9-12-3-1-2-4-13(12)15-7-5-11(10-16)6-8-15/h1-4,11,16H,5-10,14H2/p+1
+
+>  <InChIKey>
+KXPYQPKQXZWYGM-UHFFFAOYSA-O
+
+>  <SMILES>
+c1ccc(c(c1)C[NH3+])N2CCC(CC2)CO
+
+$$$$

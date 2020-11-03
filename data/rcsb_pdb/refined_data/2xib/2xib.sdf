@@ -1,0 +1,98 @@
+2XIB_DFU_A_1472
+  RCSB PDB08012018163D
+Coordinates from PDB:2XIB:A:1472 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+    5.1360  -10.5880   88.1690   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0480  -10.7720   87.1030   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9560   -9.7270   87.3210   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.5800   -8.3350   87.2030   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.7040   -8.2030   88.2480   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3700   -6.8370   88.1120   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0910   -8.1350   85.8610   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.9210   -9.8720   86.3690   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.4950  -12.0840   87.1490   O 0  0  0  0  0  0  0  0  0  0  0  0
+    5.7130   -9.2330   88.0340   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  9  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+2XIB_DFU_A_1472
+
+>  <ChemCompId>
+DFU
+
+>  <PdbId>
+2XIB
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1472
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O3
+
+>  <Name>
+(2S,3R,4S,5R)-2-METHYLPIPERIDINE-3,4,5-TRIOL
+
+>  <SystematicName>
+(2S,3R,4S,5R)-2-methylpiperidine-3,4,5-triol
+
+>  <Synonyms>
+DEOXYFUCONOJIRIMYCIN
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H13 N O3
+
+>  <MolecularWeight>
+147.172
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C6H13NO3/c1-3-5(9)6(10)4(8)2-7-3/h3-10H,2H2,1H3/t3-,4+,5+,6-/m0/s1
+
+>  <InChIKey>
+VYOCYWDJTQRZLC-KCDKBNATSA-N
+
+>  <SMILES>
+C[C@H]1[C@H]([C@H]([C@@H](CN1)O)O)O
+
+$$$$

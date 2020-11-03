@@ -1,0 +1,103 @@
+2YK1_NCT_H_300
+  RCSB PDB08012018233D
+Coordinates from PDB:2YK1:H:300 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+  -20.4710    5.1740   -0.2320   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.2640    3.8980    0.0490   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.3020    3.0360    0.3630   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.6140    3.5480    0.3990   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.8070    4.8910    0.1100   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.7010    5.6960   -0.2000   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.9710    0.8160    1.4390   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.9690    1.5820    0.6460   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.9020    0.7260   -0.6510   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.7680   -0.6920   -0.0430   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.4880   -0.5700    1.3220   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.8490    1.1890    2.8630   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 11  1  0  0  0  0
+  7 12  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+2YK1_NCT_H_300
+
+>  <ChemCompId>
+NCT
+
+>  <PdbId>
+2YK1
+
+>  <ChainId>
+H
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2
+
+>  <Name>
+(S)-3-(1-METHYLPYRROLIDIN-2-YL)PYRIDINE
+
+>  <SystematicName>
+3-[(1R,2S)-1-methylpyrrolidin-2-yl]pyridine
+
+>  <Synonyms>
+(S)-(-)-NICOTINE; 3-[(2S)-1-METHYL-2-PYRROLIDINYL] PYRIDINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H14 N2
+
+>  <MolecularWeight>
+162.232
+
+>  <ModifiedDate>
+2020-05-27
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H14N2/c1-12-7-3-5-10(12)9-4-2-6-11-8-9/h2,4,6,8,10H,3,5,7H2,1H3/t10-/m0/s1
+
+>  <InChIKey>
+SNICXCGAKADSCV-JTQLQIEISA-N
+
+>  <SMILES>
+C[N@@]1CCC[C@H]1c2cccnc2
+
+$$$$

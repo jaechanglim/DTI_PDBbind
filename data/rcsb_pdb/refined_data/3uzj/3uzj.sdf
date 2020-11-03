@@ -1,0 +1,97 @@
+3UZJ_0CT_A_301
+  RCSB PDB08012020443D
+Coordinates from PDB:3UZJ:A:301 Model:1 without hydrogens
+  9 10  0  0  0  0            999 V2000
+   -0.4430   34.5000  -17.6240   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1920   35.3200  -16.8650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3750   35.9780  -17.0890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9980   36.8290  -16.2170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3180   37.0100  -15.0090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0810   36.3290  -14.7060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5180   35.4960  -15.6700   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.5780   34.7510  -15.7960   N 0  0  0  0  0  0  0  0  0  0  0  0
+    0.5810   34.2300  -16.9490   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  9  1  0  0  0  0
+  1  2  1  0  0  0  0
+  3  2  2  0  0  0  0
+  3  4  1  0  0  0  0
+  9  8  2  0  0  0  0
+  2  7  1  0  0  0  0
+  4  5  2  0  0  0  0
+  8  7  1  0  0  0  0
+  7  6  2  0  0  0  0
+  5  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+3UZJ_0CT_A_301
+
+>  <ChemCompId>
+0CT
+
+>  <PdbId>
+3UZJ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N3
+
+>  <Name>
+1H-benzotriazole
+
+>  <SystematicName>
+1H-benzotriazole
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H5 N3
+
+>  <MolecularWeight>
+119.124
+
+>  <ModifiedDate>
+2012-06-01
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H5N3/c1-2-4-6-5(3-1)7-9-8-6/h1-4H,(H,7,8,9)
+
+>  <InChIKey>
+QRUDEWIWKLJBPS-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)[nH]nn2
+
+$$$$

@@ -1,0 +1,111 @@
+3KMY_D8Y_A_501
+  RCSB PDB08012019363D
+Coordinates from PDB:3KMY:A:501 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+   21.6660   12.2540   25.8860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.1020   10.9870   25.6850   N 0  0  0  0  0  0  0  0  0  0  0  0
+   20.8610   13.8560   17.6940  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   21.9190   10.3290   24.5040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.3720    9.0560   24.3830   N 0  0  0  0  0  0  0  0  0  0  0  0
+   21.2630   10.9500   23.4220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.7960   12.2760   23.6080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.9930   12.9440   24.8450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.0580   10.2430   22.0870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.3730   10.1980   21.2380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.6360   11.5120   20.5070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.8040   12.2640   20.8240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.0580   13.5040   20.1700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.1440   13.9950   19.1950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.9760   13.2460   18.8720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.7220   12.0020   19.5250   C 0  0  0  0  0  0  0  0  0  0  0  0
+  8  1  2  0  0  0  0
+  2  1  1  0  0  0  0
+  4  2  2  0  0  0  0
+  3 15  1  0  0  0  0
+  6  4  1  0  0  0  0
+  5  4  1  0  0  0  0
+  9  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+ 10  9  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 16 11  2  0  0  0  0
+ 11 12  1  0  0  0  0
+ 13 12  2  0  0  0  0
+ 14 13  1  0  0  0  0
+ 15 14  2  0  0  0  0
+ 15 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+3KMY_D8Y_A_501
+
+>  <ChemCompId>
+D8Y
+
+>  <PdbId>
+3KMY
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+501
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 N2 Cl
+
+>  <Name>
+3-[2-(3-chlorophenyl)ethyl]pyridin-2-amine
+
+>  <SystematicName>
+3-[2-(3-chlorophenyl)ethyl]pyridin-2-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H13 Cl N2
+
+>  <MolecularWeight>
+232.709
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H13ClN2/c14-12-5-1-3-10(9-12)6-7-11-4-2-8-16-13(11)15/h1-5,8-9H,6-7H2,(H2,15,16)
+
+>  <InChIKey>
+XJCJGDOLNLEZIY-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(cc(c1)Cl)CCc2cccnc2N
+
+$$$$

@@ -1,0 +1,98 @@
+1OIF_IFM_A_1447
+  RCSB PDB08012015383D
+Coordinates from PDB:1OIF:A:1447 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   -1.2450   10.9210    6.4200   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8590   10.6970    7.7800   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.0200   11.9210    8.2090   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.1280   12.2160    7.3640   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.4770   11.8650    9.6770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6170   11.5090   10.6020   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4470   10.3550   10.1920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0480   10.5600    8.7840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9910    9.3730    8.4930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.2870    8.1680    8.8340   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1OIF_IFM_A_1447
+
+>  <ChemCompId>
+IFM
+
+>  <PdbId>
+1OIF
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1447
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O3
+
+>  <Name>
+5-HYDROXYMETHYL-3,4-DIHYDROXYPIPERIDINE
+
+>  <SystematicName>
+(3R,4R,5R)-5-(hydroxymethyl)piperidine-3,4-diol
+
+>  <Synonyms>
+Afegostat; isofagomine; (3R,4R,5R)-5-(HYDROXYMETHYL)PIPERIDINE-3,4-DIOL
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H13 N O3
+
+>  <MolecularWeight>
+147.172
+
+>  <ModifiedDate>
+2020-05-27
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13NO3/c8-3-4-1-7-2-5(9)6(4)10/h4-10H,1-3H2/t4-,5-,6-/m1/s1
+
+>  <InChIKey>
+QPYJXFZUIJOGNX-HSUXUTPPSA-N
+
+>  <SMILES>
+C1[C@@H]([C@H]([C@@H](CN1)O)O)CO
+
+$$$$

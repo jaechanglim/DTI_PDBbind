@@ -1,0 +1,99 @@
+1VFN_HPA_A_300
+  RCSB PDB08012016093D
+Coordinates from PDB:1VFN:A:300 Model:1 without hydrogens
+ 10 11  0  0  0  0            999 V2000
+   74.5940   49.8230   49.6500   N 0  0  0  0  0  0  0  0  0  0  0  0
+   75.5050   48.7720   49.5940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   75.1940   47.4740   49.7740   N 0  0  0  0  0  0  0  0  0  0  0  0
+   73.8670   47.3080   49.9700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   72.8860   48.2940   50.0930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   73.2290   49.6670   49.9560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   72.4870   50.6560   50.0020   O 0  0  0  0  0  0  0  0  0  0  0  0
+   71.6350   47.7090   50.3590   N 0  0  0  0  0  0  0  0  0  0  0  0
+   71.8970   46.4310   50.3920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   73.2370   46.1020   50.1700   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  8  1  0  0  0  0
+  6  7  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+1VFN_HPA_A_300
+
+>  <ChemCompId>
+HPA
+
+>  <PdbId>
+1VFN
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N4 O
+
+>  <Name>
+HYPOXANTHINE
+
+>  <SystematicName>
+1,7-dihydropurin-6-one
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H4 N4 O
+
+>  <MolecularWeight>
+136.111
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H4N4O/c10-5-3-4(7-1-6-3)8-2-9-5/h1-2H,(H2,6,7,8,9,10)
+
+>  <InChIKey>
+FDGQSTZJBFJUBT-UHFFFAOYSA-N
+
+>  <SMILES>
+c1[nH]c2c(n1)N=CNC2=O
+
+$$$$

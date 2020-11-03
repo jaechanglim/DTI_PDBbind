@@ -1,0 +1,99 @@
+4B34_ABV_A_1351
+  RCSB PDB08012021113D
+Coordinates from PDB:4B34:A:1351 Model:1 without hydrogens
+ 10 11  0  0  0  0            999 V2000
+   18.5620    5.3810   -1.6920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.3380    8.1850   -3.0520   N 0  0  0  0  0  0  0  0  0  0  0  0
+   18.2140    8.1340   -1.7700   S 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3440    4.3060   -2.0550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3780   10.3080   -2.7020   N 0  0  0  0  0  0  0  0  0  0  0  0
+   20.5100    4.5050   -2.7850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.8970    5.7900   -3.1440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.1130    6.8820   -2.7830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.9370    6.6520   -2.0490   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3920    8.9900   -2.5720   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  4  2  0  0  0  0
+  1  9  1  0  0  0  0
+  2  8  1  0  0  0  0
+  2 10  2  0  0  0  0
+  3  9  1  0  0  0  0
+  3 10  1  0  0  0  0
+  4  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+M  END
+>  <InstanceId>
+4B34_ABV_A_1351
+
+>  <ChemCompId>
+ABV
+
+>  <PdbId>
+4B34
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1351
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N2 S
+
+>  <Name>
+1,3-benzothiazol-2-amine
+
+>  <SystematicName>
+1,3-benzothiazol-2-amine
+
+>  <Synonyms>
+2-Aminobenzothiazole
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H6 N2 S
+
+>  <MolecularWeight>
+150.201
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H6N2S/c8-7-9-5-3-1-2-4-6(5)10-7/h1-4H,(H2,8,9)
+
+>  <InChIKey>
+UHGULLIUJBCTEF-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)nc(s2)N
+
+$$$$

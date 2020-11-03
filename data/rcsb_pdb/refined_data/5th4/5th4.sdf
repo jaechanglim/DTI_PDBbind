@@ -1,0 +1,95 @@
+5TH4_BEW_A_302
+  RCSB PDB08022003053D
+Coordinates from PDB:5TH4:A:302 Model:1 without hydrogens
+  8  8  0  0  0  0            999 V2000
+   -5.0380    3.3240   14.1170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8340    3.7430   15.1310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2410    2.8730   16.0690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0600    1.1070   15.0120   N 0  3  0  0  0  0  0  0  0  0  0  0
+   -4.6820   -0.1670   14.9460   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6430    1.9990   14.0500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8370    1.5150   15.9990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.3620    0.3940   17.2070   S 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  7  2  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  2  0  0  0  0
+  4  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+M  CHG  1   4   1
+M  END
+>  <InstanceId>
+5TH4_BEW_A_302
+
+>  <ChemCompId>
+BEW
+
+>  <PdbId>
+5TH4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N O S
+
+>  <Name>
+1-hydroxy-2-sulfanylpyridinium
+
+>  <SystematicName>
+1-hydroxypyridin-1-ium-2-thiol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H6 N O S
+
+>  <MolecularWeight>
+128.172
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H5NOS/c7-6-4-2-1-3-5(6)8/h1-4,7H/p+1
+
+>  <InChIKey>
+YBBJKCMMCRQZMA-UHFFFAOYSA-O
+
+>  <SMILES>
+c1cc[n+](c(c1)S)O
+
+$$$$

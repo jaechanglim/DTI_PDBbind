@@ -1,0 +1,102 @@
+3BUG_AEH_A_394
+  RCSB PDB08012018403D
+Coordinates from PDB:3BUG:A:394 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+  -21.8880   42.5680   89.8670   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.9760   40.4590   91.1360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.9740   39.8150   92.3530   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.9620   42.2620   88.3660   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.5030   40.2880   90.8800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.4220   39.9580   92.2110   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.0310   40.8860   91.8710   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.6890   40.7550   91.6160   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.6090   39.6690   92.1070   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.6670   40.7980   92.0590   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.7080   41.4010   90.4010   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.0780   41.5560   90.6360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  4  1  0  0  0  0
+  1 12  1  0  0  0  0
+  2  5  1  0  0  0  0
+  2  9  2  0  0  0  0
+  2 11  1  0  0  0  0
+  3  8  2  0  0  0  0
+  3  9  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6 10  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8 12  1  0  0  0  0
+ 11 12  2  0  0  0  0
+M  END
+>  <InstanceId>
+3BUG_AEH_A_394
+
+>  <ChemCompId>
+AEH
+
+>  <PdbId>
+3BUG
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+394
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N O
+
+>  <Name>
+4-(2-aminoethyl)-2-ethylphenol
+
+>  <SystematicName>
+4-(2-aminoethyl)-2-ethyl-phenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H15 N O
+
+>  <MolecularWeight>
+165.232
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H15NO/c1-2-9-7-8(5-6-11)3-4-10(9)12/h3-4,7,12H,2,5-6,11H2,1H3
+
+>  <InChIKey>
+LDAFQVRTSOETPE-UHFFFAOYSA-N
+
+>  <SMILES>
+CCc1cc(ccc1O)CCN
+
+$$$$

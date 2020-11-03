@@ -1,0 +1,100 @@
+2VPO_6CS_A_1312
+  RCSB PDB08012018033D
+Coordinates from PDB:2VPO:A:1312 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   43.5300   29.8500   33.4510   O 0  0  0  0  0  0  0  0  0  0  0  0
+   43.6750   31.0110   33.8780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.0070   31.2240   35.0690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   43.5020   32.1680   32.9050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   42.8700   31.7640   31.6420   N 0  0  0  0  0  0  0  0  0  0  0  0
+   42.1840   32.5680   30.9210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   41.5790   32.0840   29.6210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   41.9840   33.8400   31.2840   N 0  0  0  0  0  0  0  0  0  0  0  0
+   42.4050   34.4470   32.5450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   42.6500   33.2880   33.5100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   43.2810   33.8230   34.6840   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+2VPO_6CS_A_1312
+
+>  <ChemCompId>
+6CS
+
+>  <PdbId>
+2VPO
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1312
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N2 O3
+
+>  <Name>
+(4S,5S)-5-HYDROXY-2-METHYL-1,4,5,6-TETRAHYDROPYRIMIDINE-4-CARBOXYLIC ACID
+
+>  <SystematicName>
+(4S,5S)-5-hydroxy-2-methyl-1,4,5,6-tetrahydropyrimidine-4-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H10 N2 O3
+
+>  <MolecularWeight>
+158.155
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C6H10N2O3/c1-3-7-2-4(9)5(8-3)6(10)11/h4-5,9H,2H2,1H3,(H,7,8)(H,10,11)/t4-,5-/m0/s1
+
+>  <InChIKey>
+KIIBBJKLKFTNQO-WHFBIAKZSA-N
+
+>  <SMILES>
+CC1=N[C@@H]([C@H](CN1)O)C(=O)O
+
+$$$$

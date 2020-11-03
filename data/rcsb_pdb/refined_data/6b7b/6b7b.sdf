@@ -1,0 +1,103 @@
+6B7B_CWJ_A_201
+  RCSB PDB08022004013D
+Coordinates from PDB:6B7B:A:201 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+  -38.2170   32.3540   54.7750   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -38.3520   31.1750   54.0690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.8720   30.1670   51.6790   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -41.7940   32.0960   55.1920   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.9780   32.9620   54.9490   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.2610   30.5320   53.4970   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.8300   30.8970   54.1360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.3490   31.9100   54.8450   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.8680   32.3270   54.3790   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.0020   31.1240   53.6590   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.4220   32.7520   55.2150   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.9050   30.4740   53.0810   O 0  0  0  0  0  0  0  0  0  0  0  0
+  4  8  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7  2  1  0  0  0  0
+  8 11  1  0  0  0  0
+  2  6  2  0  0  0  0
+  2  1  1  0  0  0  0
+  6 10  1  0  0  0  0
+ 11  1  1  0  0  0  0
+  3 12  1  0  0  0  0
+  1  5  2  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10  9  2  0  0  0  0
+  5  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+6B7B_CWJ_A_201
+
+>  <ChemCompId>
+CWJ
+
+>  <PdbId>
+6B7B
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N O
+
+>  <Name>
+5-methoxy-2-methyl-1H-indole
+
+>  <SystematicName>
+5-methoxy-2-methyl-1~{H}-indole
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H11 N O
+
+>  <MolecularWeight>
+161.2
+
+>  <ModifiedDate>
+2017-12-22
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H11NO/c1-7-5-8-6-9(12-2)3-4-10(8)11-7/h3-6,11H,1-2H3
+
+>  <InChIKey>
+VSWGLJOQFUMFOQ-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1cc2cc(ccc2[nH]1)OC
+
+$$$$

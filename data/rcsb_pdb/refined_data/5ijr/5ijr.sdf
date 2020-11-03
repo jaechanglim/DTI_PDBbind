@@ -1,0 +1,103 @@
+5IJR_HRG_A_501
+  RCSB PDB08022001443D
+Coordinates from PDB:5IJR:A:501 Model:1 without hydrogens
+ 13 12  0  0  0  0            999 V2000
+   31.7130   -7.1170   27.2130   N 0  0  0  0  0  0  0  0  0  0  0  0
+   31.0220   -8.4120   27.3710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.0530   -9.4900   27.7060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.5530  -11.9090   28.1400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.4890  -10.8860   27.8930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.4000  -13.1560   27.3190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.4600  -14.1100   27.6310   N 0  0  0  0  0  0  0  0  0  0  0  0
+   33.3300  -15.4480   27.6590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.5350  -16.0980   26.5670   N 0  0  0  0  0  0  0  0  0  0  0  0
+   33.0100  -16.0600   28.8000   N 0  0  0  0  0  0  0  0  0  0  0  0
+   29.9800   -8.3010   28.4800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.9510   -9.0960   28.3590   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.1670   -7.5350   29.3870   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2 11  1  0  0  0  0
+  3  5  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 11 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+5IJR_HRG_A_501
+
+>  <ChemCompId>
+HRG
+
+>  <PdbId>
+5IJR
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+501
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N4 O2
+
+>  <Name>
+L-HOMOARGININE
+
+>  <SystematicName>
+(2S)-2-amino-6-carbamimidamido-hexanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+L-PEPTIDE LINKING
+
+>  <Formula>
+C7 H16 N4 O2
+
+>  <MolecularWeight>
+188.228
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+ARG
+
+>  <OneLetterCode>
+R
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H16N4O2/c8-5(6(12)13)3-1-2-4-11-7(9)10/h5H,1-4,8H2,(H,12,13)(H4,9,10,11)/t5-/m0/s1
+
+>  <InChIKey>
+QUOGESRFPZDMMT-YFKPBYRVSA-N
+
+>  <SMILES>
+C(CCNC(=N)N)C[C@@H](C(=O)O)N
+
+$$$$

@@ -1,0 +1,99 @@
+4TIM_2PG_B_300
+  RCSB PDB08012023143D
+Coordinates from PDB:4TIM:B:300 Model:1 without hydrogens
+ 11 10  0  0  0  0            999 V2000
+   46.2150   15.5080   -8.8920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   46.4340   15.5020  -10.4190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   46.7110   14.0360  -10.7190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   47.6070   16.8890  -12.4740   P 0  0  0  0  0  0  0  0  0  0  0  0
+   45.0640   15.2040   -8.4780   O 0  0  0  0  0  0  0  0  0  0  0  0
+   47.2080   15.7070   -8.1290   O 0  0  0  0  0  0  0  0  0  0  0  0
+   46.8930   13.2930   -9.5050   O 0  0  0  0  0  0  0  0  0  0  0  0
+   47.4740   16.4110  -10.8800   O 0  0  0  0  0  0  0  0  0  0  0  0
+   46.7530   15.8980  -13.2700   O 0  0  0  0  0  0  0  0  0  0  0  0
+   49.0950   16.8860  -12.8250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   47.0360   18.2980  -12.6070   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  5  2  0  0  0  0
+  1  6  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  7  1  0  0  0  0
+  4  8  1  0  0  0  0
+  4  9  2  0  0  0  0
+  4 10  1  0  0  0  0
+  4 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+4TIM_2PG_B_300
+
+>  <ChemCompId>
+2PG
+
+>  <PdbId>
+4TIM
+
+>  <ChainId>
+B
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C3 O7 P
+
+>  <Name>
+2-PHOSPHOGLYCERIC ACID
+
+>  <SystematicName>
+(2R)-3-hydroxy-2-phosphonooxy-propanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C3 H7 O7 P
+
+>  <MolecularWeight>
+186.057
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C3H7O7P/c4-1-2(3(5)6)10-11(7,8)9/h2,4H,1H2,(H,5,6)(H2,7,8,9)/t2-/m1/s1
+
+>  <InChIKey>
+GXIURPTVHJPJLF-UWTATZPHSA-N
+
+>  <SMILES>
+C([C@H](C(=O)O)OP(=O)(O)O)O
+
+$$$$

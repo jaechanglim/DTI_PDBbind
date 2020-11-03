@@ -1,0 +1,103 @@
+4N6G_2GQ_B_401
+  RCSB PDB08012022353D
+Coordinates from PDB:4N6G:B:401 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+   28.9930   29.2580   -5.5090   O 0  0  0  0  0  0  0  0  0  0  0  0
+   28.8210   28.8080   -4.3820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.6110   27.3760   -4.0900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.6870   26.4280   -5.1130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.5160   25.0800   -4.8340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.7820   29.6420   -3.2890   N 0  0  0  0  0  0  0  0  0  0  0  0
+   28.5580   29.2680   -1.9990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.3420   27.9340   -1.7020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.3640   26.9500   -2.7610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.1770   25.5820   -2.5140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.2550   24.6610   -3.5460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.5500   30.2420   -1.0730   N 0  0  0  0  0  0  0  0  0  0  0  0
+ 12  7  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  2  1  0  0  0  0
+  7  8  2  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  8  9  1  0  0  0  0
+  3  9  2  0  0  0  0
+  3  4  1  0  0  0  0
+  9 10  1  0  0  0  0
+  4  5  2  0  0  0  0
+ 10 11  2  0  0  0  0
+  5 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+4N6G_2GQ_B_401
+
+>  <ChemCompId>
+2GQ
+
+>  <PdbId>
+4N6G
+
+>  <ChainId>
+B
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+4
+
+>  <ObservedFormula>
+C9 N2 O
+
+>  <Name>
+3-(pyrrolidin-1-yl)isoquinolin-1(2H)-one
+
+>  <SystematicName>
+3-pyrrolidin-1-yl-2H-isoquinolin-1-one
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H14 N2 O
+
+>  <MolecularWeight>
+214.263
+
+>  <ModifiedDate>
+2013-12-13
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H14N2O/c16-13-11-6-2-1-5-10(11)9-12(14-13)15-7-3-4-8-15/h1-2,5-6,9H,3-4,7-8H2,(H,14,16)
+
+>  <InChIKey>
+YGHVWKFNYLLGEJ-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)C=C(NC2=O)N3CCCC3
+
+$$$$

@@ -1,0 +1,103 @@
+3OVN_MPV_A_213
+  RCSB PDB08012020053D
+Coordinates from PDB:3OVN:A:213 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+   24.2990    7.5140   11.0560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.4810    8.0050   10.5350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.3100    8.9620    9.6300   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.9230    9.1380    9.4760   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.3840    8.2720   10.3590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.9110    8.1130   10.4970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.8110    8.6870    9.3160   S 0  0  0  0  0  0  0  0  0  0  0  0
+   19.4770    8.0930   10.2200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.8980    7.4500   11.3750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.2890    7.4590   11.5420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.2200    9.8120    8.8030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.7080    7.5920   10.9210   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  5  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2 12  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6 10  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+3OVN_MPV_A_213
+
+>  <ChemCompId>
+MPV
+
+>  <PdbId>
+3OVN
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+213
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N3 S
+
+>  <Name>
+1-methyl-3-(thiophen-2-yl)-1H-pyrazol-5-amine
+
+>  <SystematicName>
+2-methyl-5-thiophen-2-yl-pyrazol-3-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H9 N3 S
+
+>  <MolecularWeight>
+179.242
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H9N3S/c1-11-8(9)5-6(10-11)7-3-2-4-12-7/h2-5H,9H2,1H3
+
+>  <InChIKey>
+NFTITKUYTQZKIZ-UHFFFAOYSA-N
+
+>  <SMILES>
+Cn1c(cc(n1)c2cccs2)N
+
+$$$$

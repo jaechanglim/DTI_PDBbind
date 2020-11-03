@@ -1,0 +1,107 @@
+6GHH_TDA_A_201
+  RCSB PDB08022004493D
+Coordinates from PDB:6GHH:A:201 Model:1 without hydrogens
+ 15 14  0  0  0  0            999 V2000
+   29.7480  -47.2550  113.2660   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.7870  -48.7350  112.0920   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.8360  -47.7210  112.8410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.1290  -47.0850  113.2630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.3130  -47.0480  112.3460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.6700  -47.2510  112.9400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.8290  -47.5070  112.0430   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.7160  -48.6770  112.2630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.0390  -48.7210  111.5800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.9800  -49.8400  111.8510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   40.2970  -49.7760  111.1800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   41.2220  -50.9210  111.2060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   42.4230  -50.7490  110.3780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   43.5160  -51.7270  110.4980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.6620  -51.5480  109.5740   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  1  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+6GHH_TDA_A_201
+
+>  <ChemCompId>
+TDA
+
+>  <PdbId>
+6GHH
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 O2
+
+>  <Name>
+N-TRIDECANOIC ACID
+
+>  <SystematicName>
+tridecanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H26 O2
+
+>  <MolecularWeight>
+214.344
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H26O2/c1-2-3-4-5-6-7-8-9-10-11-12-13(14)15/h2-12H2,1H3,(H,14,15)
+
+>  <InChIKey>
+SZHOJFHSIKHZHA-UHFFFAOYSA-N
+
+>  <SMILES>
+CCCCCCCCCCCCC(=O)O
+
+$$$$

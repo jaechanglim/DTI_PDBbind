@@ -1,0 +1,104 @@
+3K4D_EVA_A_604
+  RCSB PDB08012019333D
+Coordinates from PDB:3K4D:A:604 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+  -21.5210  -27.9660   -1.1480   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.4170  -26.4870   -0.8390   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.0500  -28.7430   -1.9020   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.4040  -27.2600   -0.1290   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.0800  -28.2150    0.8280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.0610  -27.4450    1.7120   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.0970  -28.8040    1.6680   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.6680  -26.2480   -0.3950   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.8800  -25.9180    1.6650   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.3680  -25.4940   -1.0420   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.1990  -26.8900    0.8840   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.6420  -28.3880    2.5970   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.3220  -27.7470   -1.1610   O 0  0  0  0  0  0  0  0  0  0  0  0
+  3  1  2  0  0  0  0
+ 13  1  1  0  0  0  0
+  1  4  1  0  0  0  0
+  2  8  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+ 11  6  1  0  0  0  0
+  6 12  1  0  0  0  0
+ 10  8  2  0  0  0  0
+  8 11  1  0  0  0  0
+ 11  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+3K4D_EVA_A_604
+
+>  <ChemCompId>
+EVA
+
+>  <PdbId>
+3K4D
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+604
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O6
+
+>  <Name>
+(2S,3R,4S,5R)-3,4,5-trihydroxy-6-oxopiperidine-2-carboxylic acid
+
+>  <SystematicName>
+(2S,3R,4S,5R)-3,4,5-trihydroxy-6-oxo-piperidine-2-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H9 N O6
+
+>  <MolecularWeight>
+191.139
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H9NO6/c8-2-1(6(12)13)7-5(11)4(10)3(2)9/h1-4,8-10H,(H,7,11)(H,12,13)/t1-,2+,3-,4+/m0/s1
+
+>  <InChIKey>
+YEWOHTVJCCDCCS-NTAGLIMJSA-N
+
+>  <SMILES>
+[C@@H]1([C@@H]([C@H](NC(=O)[C@@H]1O)C(=O)O)O)O
+
+$$$$

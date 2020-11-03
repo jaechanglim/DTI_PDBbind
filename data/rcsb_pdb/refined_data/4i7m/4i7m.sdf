@@ -1,0 +1,98 @@
+4I7M_2LP_A_202
+  RCSB PDB08012021593D
+Coordinates from PDB:4I7M:A:202 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+    4.1590    8.8570    0.6720   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.2490    9.3220    1.6030   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.8740    7.6040    0.1560   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3480    9.6180    0.2900   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.0950    8.5920    1.9620   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.5050   10.5480    2.1830   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.7170    6.8610    0.4720   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7870    7.3260    1.3850   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3180   10.7450   -0.6950   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.3430   10.7180   -1.8410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  2  6  1  0  0  0  0
+  3  7  2  0  0  0  0
+  4  9  1  0  0  0  0
+  5  8  2  0  0  0  0
+  7  8  1  0  0  0  0
+  9 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+4I7M_2LP_A_202
+
+>  <ChemCompId>
+2LP
+
+>  <PdbId>
+4I7M
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+202
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 O
+
+>  <Name>
+2-ALLYLPHENOL
+
+>  <SystematicName>
+2-prop-2-enylphenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H10 O
+
+>  <MolecularWeight>
+134.175
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H10O/c1-2-5-8-6-3-4-7-9(8)10/h2-4,6-7,10H,1,5H2
+
+>  <InChIKey>
+QIRNGVVZBINFMX-UHFFFAOYSA-N
+
+>  <SMILES>
+C=CCc1ccccc1O
+
+$$$$

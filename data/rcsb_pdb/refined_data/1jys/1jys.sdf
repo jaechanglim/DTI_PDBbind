@@ -1,0 +1,99 @@
+1JYS_ADE_A_233
+  RCSB PDB08012015163D
+Coordinates from PDB:1JYS:A:233 Model:1 without hydrogens
+ 10 11  0  0  0  0            999 V2000
+   -7.2690  -38.5160   -0.5560   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.1530  -37.9600   -1.7750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1740  -37.0530   -1.8720   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6320  -37.0380   -0.6110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5680  -36.3110   -0.0170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8590  -35.4220   -0.7110   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2920  -36.5620    1.3210   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0260  -37.4710    2.0100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0590  -38.2140    1.5360   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.3000  -37.9380    0.2120   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1JYS_ADE_A_233
+
+>  <ChemCompId>
+ADE
+
+>  <PdbId>
+1JYS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+233
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N5
+
+>  <Name>
+ADENINE
+
+>  <SystematicName>
+9H-purin-6-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H5 N5
+
+>  <MolecularWeight>
+135.127
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H5N5/c6-4-3-5(9-1-7-3)10-2-8-4/h1-2H,(H3,6,7,8,9,10)
+
+>  <InChIKey>
+GFFGJBXGBJISGV-UHFFFAOYSA-N
+
+>  <SMILES>
+c1[nH]c2c(n1)c(ncn2)N
+
+$$$$

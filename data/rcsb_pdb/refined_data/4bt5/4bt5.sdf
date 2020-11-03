@@ -1,0 +1,95 @@
+4BT5_23B_A_302
+  RCSB PDB08012021163D
+Coordinates from PDB:4BT5:A:302 Model:1 without hydrogens
+  9  8  0  0  0  0            999 V2000
+  -23.0130   31.8200   83.0380   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.9290   32.2090   82.2780   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.2010   30.4730   83.6560   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.9700   32.4810   83.2940   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.5630   30.4330   84.3820   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.1270   30.2950   84.6090   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.9210   29.0670   84.9190   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.5490   31.3810   85.4790   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.1050   29.3870   82.5710   C 0  0  0  0  0  0  0  0  0  0  0  0
+  4  1  2  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  9  3  1  0  0  0  0
+  3  5  1  0  0  0  0
+  3  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  5  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+4BT5_23B_A_302
+
+>  <ChemCompId>
+23B
+
+>  <PdbId>
+4BT5
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O4
+
+>  <Name>
+(2S,3R)-2,3-dihydroxy-2-methylbutanoic acid
+
+>  <SystematicName>
+(2S,3R)-2-methyl-2,3-bis(oxidanyl)butanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H10 O4
+
+>  <MolecularWeight>
+134.13
+
+>  <ModifiedDate>
+2013-09-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H10O4/c1-3(6)5(2,9)4(7)8/h3,6,9H,1-2H3,(H,7,8)/t3-,5+/m1/s1
+
+>  <InChIKey>
+AOWPAWLEXIYETE-WUJLRWPWSA-N
+
+>  <SMILES>
+C[C@H]([C@@](C)(C(=O)O)O)O
+
+$$$$

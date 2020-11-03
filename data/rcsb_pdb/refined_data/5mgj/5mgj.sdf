@@ -1,0 +1,106 @@
+5MGJ_7MX_A_1901
+  RCSB PDB08022002223D
+Coordinates from PDB:5MGJ:A:1901 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   40.8260  -38.6850   30.3100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   40.2420  -39.7550   29.4310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.8550  -39.7820   29.6700   O 0  0  0  0  0  0  0  0  0  0  0  0
+   38.1540  -40.6310   28.8130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.7740  -41.5130   28.2690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   36.6660  -40.4150   28.5800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.0610  -39.1290   29.0780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.6400  -38.8610   28.8780   N 0  0  0  0  0  0  0  0  0  0  0  0
+   34.0900  -37.6440   29.3520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.7880  -39.8270   28.1840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.6100  -39.5880   28.0220   O 0  0  0  0  0  0  0  0  0  0  0  0
+   34.3780  -41.1170   27.6770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.8150  -41.4000   27.8760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.4720  -42.9060   27.2790  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+ 14 13  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 12 10  1  0  0  0  0
+ 13  6  1  0  0  0  0
+ 11 10  2  0  0  0  0
+ 10  8  1  0  0  0  0
+  5  4  2  0  0  0  0
+  6  4  1  0  0  0  0
+  6  7  2  0  0  0  0
+  4  3  1  0  0  0  0
+  8  7  1  0  0  0  0
+  8  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  1  0  0  0  0
+M  END
+>  <InstanceId>
+5MGJ_7MX_A_1901
+
+>  <ChemCompId>
+7MX
+
+>  <PdbId>
+5MGJ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1901
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O3 Cl
+
+>  <Name>
+ethyl 4-chloranyl-1-methyl-6-oxidanylidene-pyridine-3-carboxylate
+
+>  <SystematicName>
+ethyl 4-chloranyl-1-methyl-6-oxidanylidene-pyridine-3-carboxylate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H10 Cl N O3
+
+>  <MolecularWeight>
+215.634
+
+>  <ModifiedDate>
+2017-04-07
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H10ClNO3/c1-3-14-9(13)6-5-11(2)8(12)4-7(6)10/h4-5H,3H2,1-2H3
+
+>  <InChIKey>
+WGSWOEOJYNQPRP-UHFFFAOYSA-N
+
+>  <SMILES>
+CCOC(=O)C1=CN(C(=O)C=C1Cl)C
+
+$$$$

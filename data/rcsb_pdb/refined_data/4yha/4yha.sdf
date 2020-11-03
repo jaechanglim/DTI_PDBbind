@@ -1,0 +1,106 @@
+4YHA_MZM_A_303
+  RCSB PDB08022000303D
+Coordinates from PDB:4YHA:A:303 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   50.6560   41.0620   91.0810   N 0  0  0  0  0  0  0  0  0  0  0  0
+   52.2830   41.1310   90.8950   S 0  0  0  0  0  0  0  0  0  0  0  0
+   52.8930   41.8310   91.9820   O 0  0  0  0  0  0  0  0  0  0  0  0
+   52.8650   39.8340   90.9260   O 0  0  0  0  0  0  0  0  0  0  0  0
+   52.6690   41.9830   89.4110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   53.3580   43.3390   89.3260   S 0  0  0  0  0  0  0  0  0  0  0  0
+   53.4560   43.7000   87.8430   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.8840   42.6250   87.1270   N 0  0  0  0  0  0  0  0  0  0  0  0
+   52.7770   42.5420   85.7210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.3790   41.5280   88.1220   N 0  0  0  0  0  0  0  0  0  0  0  0
+   54.0220   44.8670   87.2420   N 0  0  0  0  0  0  0  0  0  0  0  0
+   54.6060   45.9780   87.9280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   54.6690   46.0320   89.1350   O 0  0  0  0  0  0  0  0  0  0  0  0
+   55.1590   47.1480   87.1420   C 0  0  0  0  0  0  0  0  0  0  0  0
+  9  8  1  0  0  0  0
+  8  7  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 14 12  1  0  0  0  0
+ 11  7  2  0  0  0  0
+ 11 12  1  0  0  0  0
+  7  6  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 10  5  2  0  0  0  0
+  6  5  1  0  0  0  0
+  5  2  1  0  0  0  0
+  2  4  2  0  0  0  0
+  2  1  1  0  0  0  0
+  2  3  2  0  0  0  0
+M  END
+>  <InstanceId>
+4YHA_MZM_A_303
+
+>  <ChemCompId>
+MZM
+
+>  <PdbId>
+4YHA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N4 O3 S2
+
+>  <Name>
+N-(3-methyl-5-sulfamoyl-1,3,4-thiadiazol-2(3H)-ylidene)acetamide
+
+>  <SystematicName>
+(~{N}~{Z})-~{N}-(3-methyl-5-sulfamoyl-1,3,4-thiadiazol-2-ylidene)ethanamide
+
+>  <Synonyms>
+Methazolamide
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H8 N4 O3 S2
+
+>  <MolecularWeight>
+236.272
+
+>  <ModifiedDate>
+2016-03-28
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H8N4O3S2/c1-3(10)7-4-9(2)8-5(13-4)14(6,11)12/h1-2H3,(H2,6,11,12)/b7-4-
+
+>  <InChIKey>
+FLOSMHQXBMRNHR-DAXSKMNVSA-N
+
+>  <SMILES>
+CC(=O)/N=C\1/N(N=C(S1)S(=O)(=O)N)C
+
+$$$$

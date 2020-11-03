@@ -1,0 +1,97 @@
+4UMA_GZ3_A_1351
+  RCSB PDB08012023383D
+Coordinates from PDB:4UMA:A:1351 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   -5.2090  -84.8430    0.4120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6600  -85.5600   -0.4430   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5850  -83.9800    0.9960   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.6830  -84.9990    0.7740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.3630  -83.9210    1.6140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.2600  -86.3130    0.4820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.9860  -86.7260    0.7840   P 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.0490  -88.2980    0.6640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.2940  -86.4360    2.2710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.9360  -86.0380   -0.1660   O 0  0  0  0  0  0  0  0  0  0  0  0
+  8  7  1  0  0  0  0
+  7  9  1  0  0  0  0
+  7 10  2  0  0  0  0
+  7  6  1  0  0  0  0
+  6  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  4  1  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  2  2  0  0  0  0
+M  END
+>  <InstanceId>
+4UMA_GZ3_A_1351
+
+>  <ChemCompId>
+GZ3
+
+>  <PdbId>
+4UMA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1351
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 O5 P
+
+>  <Name>
+(E)-2-METHYL-3-PHOSPHONOACRYLATE
+
+>  <SystematicName>
+(E)-2-methyl-3-phosphono-prop-2-enoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C4 H7 O5 P
+
+>  <MolecularWeight>
+166.069
+
+>  <ModifiedDate>
+2014-10-03
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H7O5P/c1-3(4(5)6)2-10(7,8)9/h2H,1H3,(H,5,6)(H2,7,8,9)/b3-2+
+
+>  <InChIKey>
+XGDAHZFVQMTYCT-NSCUHMNNSA-N
+
+>  <SMILES>
+C/C(=C\P(=O)(O)O)/C(=O)O
+
+$$$$

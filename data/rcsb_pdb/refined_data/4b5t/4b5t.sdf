@@ -1,0 +1,91 @@
+4B5T_2KT_A_4000
+  RCSB PDB08012021113D
+Coordinates from PDB:4B5T:A:4000 Model:1 without hydrogens
+  7  6  0  0  0  0            999 V2000
+  -21.2680   -5.9260    8.2640   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.9830   -6.6600    9.5280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.6090   -6.4960   10.0520   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.7940   -5.9760    9.2930   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.3110   -6.9520   11.4640   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.1630   -6.8770   11.9930   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.2140   -7.5250   12.1260   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  2  0  0  0  0
+M  END
+>  <InstanceId>
+4B5T_2KT_A_4000
+
+>  <ChemCompId>
+2KT
+
+>  <PdbId>
+4B5T
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+4000
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 O3
+
+>  <Name>
+2-KETOBUTYRIC ACID
+
+>  <SystematicName>
+2-oxobutanoic acid
+
+>  <Synonyms>
+2-OXOBUTANOIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H6 O3
+
+>  <MolecularWeight>
+102.089
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H6O3/c1-2-3(5)4(6)7/h2H2,1H3,(H,6,7)
+
+>  <InChIKey>
+TYEYBOSBBBHJIV-UHFFFAOYSA-N
+
+>  <SMILES>
+CCC(=O)C(=O)O
+
+$$$$

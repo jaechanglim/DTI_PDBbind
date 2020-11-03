@@ -1,0 +1,103 @@
+4UP5_94W_A_1385
+  RCSB PDB08012023383D
+Coordinates from PDB:4UP5:A:1385 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+  -23.2340   11.5230   -4.6860   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.5870   11.7300   -4.6330   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.3540   10.8690   -3.7960   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.7490   10.2270   -4.7800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.3750   10.0490   -4.8330   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.4920   11.1320   -4.7930   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.0060   12.4240   -4.6990   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.3770   12.6140   -4.6460   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.1390   10.7970   -4.8550   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.9900    9.5000   -4.9380   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.8060    8.8820   -5.0120   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.4780    8.5610   -4.9510   S 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  4  1  0  0  0  0
+  1  8  2  0  0  0  0
+  2  3  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5 12  1  0  0  0  0
+  6  7  2  0  0  0  0
+  6  9  1  0  0  0  0
+  7  8  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+4UP5_94W_A_1385
+
+>  <ChemCompId>
+94W
+
+>  <PdbId>
+4UP5
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1385
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N2 O S
+
+>  <Name>
+6-methoxy-1,3-benzothiazol-2-amine
+
+>  <SystematicName>
+6-methoxy-1,3-benzothiazol-2-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C8 H8 N2 O S
+
+>  <MolecularWeight>
+180.227
+
+>  <ModifiedDate>
+2020-06-27
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H8N2OS/c1-11-5-2-3-6-7(4-5)12-8(9)10-6/h2-4H,1H3,(H2,9,10)
+
+>  <InChIKey>
+KZHGPDSVHSDCMX-UHFFFAOYSA-N
+
+>  <SMILES>
+COc1ccc2c(c1)sc(n2)N
+
+$$$$

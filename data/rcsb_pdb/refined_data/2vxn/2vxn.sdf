@@ -1,0 +1,97 @@
+2VXN_PGH_A_1251
+  RCSB PDB08012018043D
+Coordinates from PDB:2VXN:A:1251 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   26.4380   -2.5700   11.3190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.2920   -2.4850    9.8050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.5710   -1.9750   12.0050   N 0  0  0  0  0  0  0  0  0  0  0  0
+   25.5300   -2.1400   13.3190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.3860   -3.2570   11.7500   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.6160   -2.2880    9.2480   O 0  0  0  0  0  0  0  0  0  0  0  0
+   29.1510   -1.5580    7.4350   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.3610   -3.3360    6.9070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.6860   -0.9240    7.3470   O 0  0  0  0  0  0  0  0  0  0  0  0
+   27.6960   -2.0300    7.6410   P 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  5  2  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  1  0  0  0  0
+  6 10  1  0  0  0  0
+  7 10  2  0  0  0  0
+  8 10  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+2VXN_PGH_A_1251
+
+>  <ChemCompId>
+PGH
+
+>  <PdbId>
+2VXN
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1251
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O6 P
+
+>  <Name>
+PHOSPHOGLYCOLOHYDROXAMIC ACID
+
+>  <SystematicName>
+[2-(hydroxyamino)-2-oxo-ethyl] dihydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H6 N O6 P
+
+>  <MolecularWeight>
+171.046
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H6NO6P/c4-2(3-5)1-9-10(6,7)8/h5H,1H2,(H,3,4)(H2,6,7,8)
+
+>  <InChIKey>
+BAXHHWZKQZIJID-UHFFFAOYSA-N
+
+>  <SMILES>
+C(C(=O)NO)OP(=O)(O)O
+
+$$$$

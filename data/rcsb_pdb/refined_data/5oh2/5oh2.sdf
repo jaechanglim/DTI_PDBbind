@@ -1,0 +1,90 @@
+5OH2_BAQ_A_202
+  RCSB PDB08022002413D
+Coordinates from PDB:5OH2:A:202 Model:1 without hydrogens
+  6  6  0  0  0  0            999 V2000
+   21.4820   16.0720   -7.3520   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.4450   16.8130   -7.5170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.7050   18.0620   -6.7150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.1400   18.4330   -7.1170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.5360   17.5560   -8.3090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4350   16.6180   -8.3790   N 0  0  0  0  0  0  0  0  0  0  0  0
+  3  4  1  0  0  0  0
+  3  2  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  2  1  2  0  0  0  0
+  2  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+5OH2_BAQ_A_202
+
+>  <ChemCompId>
+BAQ
+
+>  <PdbId>
+5OH2
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+202
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N O
+
+>  <Name>
+pyrrolidin-2-one
+
+>  <SystematicName>
+pyrrolidin-2-one
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H7 N O
+
+>  <MolecularWeight>
+85.104
+
+>  <ModifiedDate>
+2013-09-27
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H7NO/c6-4-2-1-3-5-4/h1-3H2,(H,5,6)
+
+>  <InChIKey>
+HNJBEVLQSNELDL-UHFFFAOYSA-N
+
+>  <SMILES>
+C1CC(=O)NC1
+
+$$$$

@@ -1,0 +1,112 @@
+1G3D_108_A_601
+  RCSB PDB08012014573D
+Coordinates from PDB:1G3D:A:601 Model:1 without hydrogens
+ 17 17  0  0  0  0            999 V2000
+   43.9870   -2.6970   26.3260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   43.3470   -3.2410   27.4360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   43.1980   -2.5080   28.6200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   43.7030   -1.2100   28.6780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.3390   -0.6740   27.5640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.4800   -1.4050   26.4040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   42.5220   -3.1200   29.7500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   44.2130   -3.4920   25.1320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   43.6210   -0.4010   29.7540   O 0  0  0  0  0  0  0  0  0  0  0  0
+   44.6130   -2.9060   24.0120   N 0  0  0  0  0  0  0  0  0  0  0  0
+   44.0270   -4.8040   25.1560   N 0  0  0  0  0  0  0  0  0  0  0  0
+   42.3180   -2.5430   30.9020   N 0  0  0  0  0  0  0  0  0  0  0  0
+   41.6190   -3.3180   31.9250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   42.5800   -4.2920   32.5890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   40.9930   -2.4060   32.9730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   40.2610   -2.9110   33.8330   O 0  0  0  0  0  0  0  0  0  0  0  0
+   41.2740   -1.1530   32.8900   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  1  8  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  7  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  6  2  0  0  0  0
+  7 12  1  0  0  0  0
+  8 10  1  0  0  0  0
+  8 11  2  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 15  1  0  0  0  0
+ 15 16  2  0  0  0  0
+ 15 17  1  0  0  0  0
+M  END
+>  <InstanceId>
+1G3D_108_A_601
+
+>  <ChemCompId>
+108
+
+>  <PdbId>
+1G3D
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+601
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N3 O3
+
+>  <Name>
+2-(5-CARBAMIMIDOYL-2-HYDROXY-BENZYLAMINO)-PROPIONIC ACID
+
+>  <SystematicName>
+(2S)-2-[(5-carbamimidoyl-2-hydroxy-phenyl)methylamino]propanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H15 N3 O3
+
+>  <MolecularWeight>
+237.255
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H15N3O3/c1-6(11(16)17)14-5-8-4-7(10(12)13)2-3-9(8)15/h2-4,6,14-15H,5H2,1H3,(H3,12,13)(H,16,17)/t6-/m0/s1
+
+>  <InChIKey>
+CUGPJCUEKAARCR-LURJTMIESA-N
+
+>  <SMILES>
+C[C@@H](C(=O)O)NCc1cc(ccc1O)C(=N)N
+
+$$$$

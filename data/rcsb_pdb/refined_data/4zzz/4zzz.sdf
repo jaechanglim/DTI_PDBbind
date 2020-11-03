@@ -1,0 +1,115 @@
+4ZZZ_FSU_A_2019
+  RCSB PDB08022000423D
+Coordinates from PDB:4ZZZ:A:2019 Model:1 without hydrogens
+ 18 19  0  0  0  0            999 V2000
+   62.8020    6.6400    9.3510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   61.8780    6.2450   10.2280   N 0  0  0  0  0  0  0  0  0  0  0  0
+   63.7250    5.6810    9.1240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.3280    4.6380    9.9090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   64.8520    5.5880    8.3210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.2010    4.9840   10.5800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.3700    6.5490    7.4100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.7250    7.8790    8.8350   O 0  0  0  0  0  0  0  0  0  0  0  0
+   66.2530    6.2480    6.5850   O 0  0  0  0  0  0  0  0  0  0  0  0
+   64.8370    7.7840    7.4100   N 0  0  0  0  0  0  0  0  0  0  0  0
+   60.6770    7.0400   10.7410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   64.0230    3.4720    9.9640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.5880    4.3820    8.3670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   60.9170    7.6670   12.1330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.1650    3.3300    9.1750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   61.9000    9.7880   11.6040   O 0  0  0  0  0  0  0  0  0  0  0  0
+   62.1860    8.4780   12.1490   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.9840   10.3140   10.7940   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  8  2  0  0  0  0
+  2  6  1  0  0  0  0
+  2 11  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  4 12  1  0  0  0  0
+  5  7  1  0  0  0  0
+  5 13  2  0  0  0  0
+  7  9  2  0  0  0  0
+  7 10  1  0  0  0  0
+ 11 14  1  0  0  0  0
+ 12 15  2  0  0  0  0
+ 13 15  1  0  0  0  0
+ 14 17  1  0  0  0  0
+ 16 17  1  0  0  0  0
+ 16 18  1  0  0  0  0
+M  END
+>  <InstanceId>
+4ZZZ_FSU_A_2019
+
+>  <ChemCompId>
+FSU
+
+>  <PdbId>
+4ZZZ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2019
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 N2 O3
+
+>  <Name>
+2-(3-methoxypropyl)-3-oxo-2,3-dihydro-1H-isoindole-4-carboxamide
+
+>  <SystematicName>
+2-(3-methoxypropyl)-3-oxidanylidene-1H-isoindole-4-carboxamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H16 N2 O3
+
+>  <MolecularWeight>
+248.278
+
+>  <ModifiedDate>
+2015-08-07
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H16N2O3/c1-18-7-3-6-15-8-9-4-2-5-10(12(14)16)11(9)13(15)17/h2,4-5H,3,6-8H2,1H3,(H2,14,16)
+
+>  <InChIKey>
+VARCSQSOWLMGTH-UHFFFAOYSA-N
+
+>  <SMILES>
+COCCCN1Cc2cccc(c2C1=O)C(=O)N
+
+$$$$

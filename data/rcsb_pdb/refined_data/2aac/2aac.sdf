@@ -1,0 +1,100 @@
+2AAC_FCB_A_1
+  RCSB PDB08012016353D
+Coordinates from PDB:2AAC:A:1 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+    9.2970   38.5070   34.5850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.2430   39.5990   35.1110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.4160   39.0130   35.9040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.9260   38.0260   36.9500   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.9820   37.0050   36.2850   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.4100   35.9920   37.2590   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1750   39.0980   34.0400   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.7500   40.3550   34.0180   O 0  0  0  0  0  0  0  0  0  0  0  0
+   12.1070   40.0590   36.5430   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.2490   38.7180   37.9920   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.8740   37.6750   35.6550   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  7  1  0  0  0  0
+  1 11  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+2AAC_FCB_A_1
+
+>  <ChemCompId>
+FCB
+
+>  <PdbId>
+2AAC
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O5
+
+>  <Name>
+beta-D-fucopyranose
+
+>  <SystematicName>
+(2R,3R,4S,5R,6R)-6-methyloxane-2,3,4,5-tetrol
+
+>  <Synonyms>
+beta-D-fucose; 6-deoxy-beta-D-galactopyranose; D-fucose; fucose
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C6 H12 O5
+
+>  <MolecularWeight>
+164.156
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H12O5/c1-2-3(7)4(8)5(9)6(10)11-2/h2-10H,1H3/t2-,3+,4+,5-,6-/m1/s1
+
+>  <InChIKey>
+SHZGCJCMOBCMKK-FPRJBGLDSA-N
+
+>  <SMILES>
+C[C@@H]1[C@@H]([C@@H]([C@H]([C@@H](O1)O)O)O)O
+
+$$$$

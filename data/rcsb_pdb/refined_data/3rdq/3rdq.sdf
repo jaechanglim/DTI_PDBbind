@@ -1,0 +1,108 @@
+3RDQ_DTB_A_300
+  RCSB PDB08012020203D
+Coordinates from PDB:3RDQ:A:300 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+   15.4890   28.8780   -8.5450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.2310   29.1070   -8.2630   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.9200   28.3420   -9.6280   N 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3930   28.4730   -9.7300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.7610   28.9460   -8.3010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4590   29.2480   -7.7170   N 0  0  0  0  0  0  0  0  0  0  0  0
+   18.4750   27.8900   -7.4800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.9330   27.1070  -10.1580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5570   26.7890  -11.6120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.3290   25.5810  -12.1590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.6020   25.0070  -13.3870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.4390   23.8930  -14.0620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.7530   24.4100  -14.6200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.8200   23.7920  -14.3990   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.7370   25.4410  -15.3610   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  6  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  8  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 13 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+3RDQ_DTB_A_300
+
+>  <ChemCompId>
+DTB
+
+>  <PdbId>
+3RDQ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O3
+
+>  <Name>
+6-(5-METHYL-2-OXO-IMIDAZOLIDIN-4-YL)-HEXANOIC ACID
+
+>  <SystematicName>
+6-[(4R,5S)-5-methyl-2-oxidanylidene-imidazolidin-4-yl]hexanoic acid
+
+>  <Synonyms>
+D-DESTHIOBIOTIN
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H18 N2 O3
+
+>  <MolecularWeight>
+214.262
+
+>  <ModifiedDate>
+2016-03-30
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H18N2O3/c1-7-8(12-10(15)11-7)5-3-2-4-6-9(13)14/h7-8H,2-6H2,1H3,(H,13,14)(H2,11,12,15)/t7-,8+/m0/s1
+
+>  <InChIKey>
+AUTOLBMXDDTRRT-JGVFFNPUSA-N
+
+>  <SMILES>
+C[C@H]1[C@H](NC(=O)N1)CCCCCC(=O)O
+
+$$$$

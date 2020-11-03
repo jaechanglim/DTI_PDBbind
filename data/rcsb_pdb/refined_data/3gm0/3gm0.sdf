@@ -1,0 +1,107 @@
+3GM0_B41_A_600
+  RCSB PDB08012019073D
+Coordinates from PDB:3GM0:A:600 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+   -7.8340   -5.8670   16.5420   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.0540   -7.9350   17.1210   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6600   -1.9010   15.5060   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.1790   -3.2790   15.6260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1360   -4.2640   15.0710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.4810   -3.6020   17.1060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4120   -4.7920   17.2630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8100   -4.6140   17.1060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9020   -6.0760   17.5790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.6830   -5.7120   17.2670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7880   -7.1710   17.7310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1800   -6.9710   17.5770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7650   -0.9510   15.3770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.2840   -7.2220   16.8230   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1 14  1  0  0  0  0
+  1 10  1  0  0  0  0
+ 14  2  1  0  0  0  0
+  2 12  1  0  0  0  0
+ 13  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  5  4  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  8  7  2  0  0  0  0
+  7  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+  9 11  2  0  0  0  0
+ 10 12  2  0  0  0  0
+ 12 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+3GM0_B41_A_600
+
+>  <ChemCompId>
+B41
+
+>  <PdbId>
+3GM0
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+600
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N O2
+
+>  <Name>
+(2S)-1-(1,3-benzodioxol-5-yl)-N-methylpropan-2-amine
+
+>  <SystematicName>
+(2S)-1-(1,3-benzodioxol-5-yl)-N-methyl-propan-2-amine
+
+>  <Synonyms>
+3,4 methylenedioxy-n-methylamphetamine; MDMA; Ecstasy
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H15 N O2
+
+>  <MolecularWeight>
+193.242
+
+>  <ModifiedDate>
+2020-05-26
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H15NO2/c1-8(12-2)5-9-3-4-10-11(6-9)14-7-13-10/h3-4,6,8,12H,5,7H2,1-2H3/t8-/m0/s1
+
+>  <InChIKey>
+SHXWCVYOXRDMCX-QMMMGPOBSA-N
+
+>  <SMILES>
+C[C@@H](Cc1ccc2c(c1)OCO2)NC
+
+$$$$

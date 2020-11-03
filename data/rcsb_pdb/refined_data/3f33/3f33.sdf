@@ -1,0 +1,104 @@
+3F33_PFL_A_2001
+  RCSB PDB08012018593D
+Coordinates from PDB:3F33:A:2001 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   33.5450    0.2120   33.8030   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.8650    0.0430   35.0750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.8920   -0.0840   36.0670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.2210    0.0040   35.3720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.3130   -0.2580   37.3760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.3690   -0.0410   35.8070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.6680   -0.3090   37.6830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.6250   -0.1810   36.6810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.2680    0.1270   34.2530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.8180   -1.4590   35.6570   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.0190    0.8010   34.5870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.9660   -1.2240   34.0840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   37.2920    1.2120   34.6000   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  3  6  1  0  0  0  0
+  4  8  2  0  0  0  0
+  4  9  1  0  0  0  0
+  5  7  2  0  0  0  0
+  6 10  1  0  0  0  0
+  6 11  1  0  0  0  0
+  7  8  1  0  0  0  0
+  9 12  1  0  0  0  0
+  9 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+3F33_PFL_A_2001
+
+>  <ChemCompId>
+PFL
+
+>  <PdbId>
+3F33
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 O
+
+>  <Name>
+2,6-BIS(1-METHYLETHYL)PHENOL
+
+>  <SystematicName>
+2,6-di(propan-2-yl)phenol
+
+>  <Synonyms>
+2,6-DIISOPROPYLPHENOL; PROPOFOL
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H18 O
+
+>  <MolecularWeight>
+178.271
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H18O/c1-8(2)10-6-5-7-11(9(3)4)12(10)13/h5-9,13H,1-4H3
+
+>  <InChIKey>
+OLBCVFGFOZPWHH-UHFFFAOYSA-N
+
+>  <SMILES>
+CC(C)c1cccc(c1O)C(C)C
+
+$$$$

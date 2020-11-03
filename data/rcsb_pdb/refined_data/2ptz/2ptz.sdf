@@ -1,0 +1,95 @@
+2PTZ_PAH_A_600
+  RCSB PDB08012017453D
+Coordinates from PDB:2PTZ:A:600 Model:1 without hydrogens
+  9  8  0  0  0  0            999 V2000
+   11.6580   28.1130   36.3180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.1260   28.4200   36.3860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.5540   29.2950   35.5110   N 0  0  0  0  0  0  0  0  0  0  0  0
+   14.8410   29.7050   35.3980   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.8880   27.8380   37.1630   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.4960   30.3590   37.1800   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.8290   29.0880   38.7760   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.6010   28.1910   37.9080   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.8460   29.0270   37.6860   P 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  5  2  0  0  0  0
+  3  4  1  0  0  0  0
+  6  9  2  0  0  0  0
+  7  9  1  0  0  0  0
+  8  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+2PTZ_PAH_A_600
+
+>  <ChemCompId>
+PAH
+
+>  <PdbId>
+2PTZ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+600
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O5 P
+
+>  <Name>
+PHOSPHONOACETOHYDROXAMIC ACID
+
+>  <SystematicName>
+[2-(hydroxyamino)-2-oxo-ethyl]phosphonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H6 N O5 P
+
+>  <MolecularWeight>
+155.047
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H6NO5P/c4-2(3-5)1-9(6,7)8/h5H,1H2,(H,3,4)(H2,6,7,8)
+
+>  <InChIKey>
+LDKRAXXVBWHMRH-UHFFFAOYSA-N
+
+>  <SMILES>
+C(C(=O)NO)P(=O)(O)O
+
+$$$$

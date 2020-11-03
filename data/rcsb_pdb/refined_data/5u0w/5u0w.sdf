@@ -1,0 +1,103 @@
+5U0W_9MG_A_301
+  RCSB PDB08022003093D
+Coordinates from PDB:5U0W:A:301 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+    8.3260   -4.1710   27.6800   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.4030   -3.5590   26.3670   N 0  0  0  0  0  0  0  0  0  0  0  0
+    7.5380   -3.7700   25.3310   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.8850   -3.0610   24.2670   N 0  0  0  0  0  0  0  0  0  0  0  0
+    9.0120   -2.3860   24.6620   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.8120   -1.4680   23.9240   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.5920   -1.1350   22.7690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.8590   -1.0200   24.7090   N 0  0  0  0  0  0  0  0  0  0  0  0
+   11.1210   -1.3830   26.0270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.2330   -0.7800   26.5730   N 0  0  0  0  0  0  0  0  0  0  0  0
+   10.3750   -2.2210   26.6850   N 0  0  0  0  0  0  0  0  0  0  0  0
+    9.3530   -2.6740   25.9520   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2 12  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 12  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  2  0  0  0  0
+ 11 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+5U0W_9MG_A_301
+
+>  <ChemCompId>
+9MG
+
+>  <PdbId>
+5U0W
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N5 O
+
+>  <Name>
+9-METHYLGUANINE
+
+>  <SystematicName>
+2-amino-9-methyl-purin-6-ol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H7 N5 O
+
+>  <MolecularWeight>
+165.153
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H7N5O/c1-11-2-8-3-4(11)9-6(7)10-5(3)12/h2H,1H3,(H3,7,9,10,12)
+
+>  <InChIKey>
+UUWJNBOCAPUTBK-UHFFFAOYSA-N
+
+>  <SMILES>
+Cn1cnc2c1nc(nc2O)N
+
+$$$$

@@ -1,0 +1,103 @@
+3CYZ_9OD_A_124
+  RCSB PDB08012018473D
+Coordinates from PDB:3CYZ:A:124 Model:1 without hydrogens
+ 13 12  0  0  0  0            999 V2000
+   14.0790   -8.5530   -1.8040   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.9560   -7.4080   -2.2300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.6030   -6.8020   -2.4240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2100   -6.6170   -2.5500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0100   -5.1790   -3.0520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7570   -4.1870   -2.1480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4950   -3.0640   -2.8760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.9700   -3.4310   -2.8550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.8870   -2.6040   -3.7210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.1200   -3.1170   -3.8150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.1940   -2.4580   -4.5610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.3600   -2.8980   -4.4030   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.9420   -1.4680   -5.2810   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11 13  2  0  0  0  0
+M  END
+>  <InstanceId>
+3CYZ_9OD_A_124
+
+>  <ChemCompId>
+9OD
+
+>  <PdbId>
+3CYZ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+124
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 O3
+
+>  <Name>
+(2Z)-9-oxodec-2-enoic acid
+
+>  <SystematicName>
+(Z)-9-oxodec-2-enoic acid
+
+>  <Synonyms>
+9-keto-2(E)-decenoic acid
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H16 O3
+
+>  <MolecularWeight>
+184.232
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H16O3/c1-9(11)7-5-3-2-4-6-8-10(12)13/h6,8H,2-5,7H2,1H3,(H,12,13)/b8-6-
+
+>  <InChIKey>
+INJRDZMWIAYEMM-VURMDHGXSA-N
+
+>  <SMILES>
+CC(=O)CCCCC\C=C/C(=O)O
+
+$$$$

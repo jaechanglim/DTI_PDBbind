@@ -1,0 +1,110 @@
+4RFD_3O5_A_302
+  RCSB PDB08012023103D
+Coordinates from PDB:4RFD:A:302 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   -2.2080    7.0680   84.9310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7140    5.9770   85.6250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8930    4.8830   85.9020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5670    3.5110   86.7950   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0650    3.6000   88.1900   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0370    3.6190   86.6660   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0190    2.1210   86.1210   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5650    4.8850   85.4900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0660    5.9850   84.7950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8840    7.0770   84.5210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4030    8.1750   83.8410   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.9260    8.2570   83.5070   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.4610    9.5870   83.0930   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.6980   10.6130   84.1430   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.3720   11.8940   83.7670   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.7710   12.8090   84.7970   N 0  0  0  0  0  0  0  0  0  0  0  0
+ 13 12  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 12 11  1  0  0  0  0
+ 15 14  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 10  9  2  0  0  0  0
+ 10  1  1  0  0  0  0
+  9  8  1  0  0  0  0
+  1  2  2  0  0  0  0
+  8  3  2  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  7  4  1  0  0  0  0
+  6  4  2  0  0  0  0
+  4  5  2  0  0  0  0
+M  END
+>  <InstanceId>
+4RFD_3O5_A_302
+
+>  <ChemCompId>
+3O5
+
+>  <PdbId>
+4RFD
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O3 S
+
+>  <Name>
+4-(4-sulfamoyl-phenoxy)-butylammonium
+
+>  <SystematicName>
+4-(4-azanylbutoxy)benzenesulfonamide
+
+>  <Synonyms>
+4-(4-aminobutoxy)benzenesulfonamide
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H16 N2 O3 S
+
+>  <MolecularWeight>
+244.311
+
+>  <ModifiedDate>
+2015-04-10
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H16N2O3S/c11-7-1-2-8-15-9-3-5-10(6-4-9)16(12,13)14/h3-6H,1-2,7-8,11H2,(H2,12,13,14)
+
+>  <InChIKey>
+FRXJBOBSXLTMJW-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(ccc1OCCCCN)S(=O)(=O)N
+
+$$$$

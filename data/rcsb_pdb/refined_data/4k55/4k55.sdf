@@ -1,0 +1,107 @@
+4K55_H6P_A_201
+  RCSB PDB08012022123D
+Coordinates from PDB:4K55:A:201 Model:1 without hydrogens
+ 15 14  0  0  0  0            999 V2000
+   -5.2450   -9.9170   -8.7140   P 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5250   -9.5130   -9.9350   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.4560   -9.1740   -8.3000   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.0340   -9.9980   -7.5010   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9210   -8.9170   -6.7510   P 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9520   -9.4140   -5.3690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8250   -9.2900   -7.6380   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5690   -7.6000   -7.0010   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8990  -15.9370   -7.7120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.1600  -13.4620   -8.6780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.0720  -11.9370   -8.4020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8140  -11.4370   -8.8610   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.8920  -14.4320   -7.5040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.5770  -13.9080   -6.1440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.3350  -14.9480   -5.2250   O 0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  2  0  0  0  0
+  3  1  1  0  0  0  0
+  4  1  1  0  0  0  0
+  1 12  1  0  0  0  0
+  4  5  1  0  0  0  0
+  7  5  2  0  0  0  0
+  5  8  1  0  0  0  0
+  5  6  1  0  0  0  0
+  9 13  1  0  0  0  0
+ 13 10  2  0  0  0  0
+ 11 10  1  0  0  0  0
+ 12 11  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+4K55_H6P_A_201
+
+>  <ChemCompId>
+H6P
+
+>  <PdbId>
+4K55
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O8 P2
+
+>  <Name>
+(2E)-4-hydroxy-3-methylbut-2-en-1-yl trihydrogen diphosphate
+
+>  <SystematicName>
+[(E)-3-methyl-4-oxidanyl-but-2-enyl] phosphono hydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H12 O8 P2
+
+>  <MolecularWeight>
+262.092
+
+>  <ModifiedDate>
+2011-11-25
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H12O8P2/c1-5(4-6)2-3-12-15(10,11)13-14(7,8)9/h2,6H,3-4H2,1H3,(H,10,11)(H2,7,8,9)/b5-2+
+
+>  <InChIKey>
+MDSIZRKJVDMQOQ-GORDUTHDSA-N
+
+>  <SMILES>
+C/C(=C\CO[P@@](=O)(O)OP(=O)(O)O)/CO
+
+$$$$

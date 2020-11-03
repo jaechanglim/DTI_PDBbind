@@ -1,0 +1,106 @@
+3D78_NBB_A_120
+  RCSB PDB08012018493D
+Coordinates from PDB:3D78:A:120 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   15.7640   16.5820    2.2820   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6900   17.5370    2.0290   S 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9500   17.9750    0.6140   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6030   18.6870    3.1040   N 0  0  0  0  0  0  0  0  0  0  0  0
+   13.3370   19.3540    3.6400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.3130   19.8580    5.1230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.9490   20.1580    5.8020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.8010   21.3150    6.7910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.2840   16.7420    2.1630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.3770   16.6840    1.1190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.1630   16.0250    1.1880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.8280   15.3980    2.3690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.7040   15.4680    3.4480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.9320   16.1270    3.3550   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  2  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  9 10  2  0  0  0  0
+  9 14  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+M  END
+>  <InstanceId>
+3D78_NBB_A_120
+
+>  <ChemCompId>
+NBB
+
+>  <PdbId>
+3D78
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+120
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N O2 S
+
+>  <Name>
+N-BUTYL-BENZENESULFONAMIDE
+
+>  <SystematicName>
+N-butylbenzenesulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H15 N O2 S
+
+>  <MolecularWeight>
+213.297
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H15NO2S/c1-2-3-9-11-14(12,13)10-7-5-4-6-8-10/h4-8,11H,2-3,9H2,1H3
+
+>  <InChIKey>
+IPRJXAGUEGOFGG-UHFFFAOYSA-N
+
+>  <SMILES>
+CCCCNS(=O)(=O)c1ccccc1
+
+$$$$

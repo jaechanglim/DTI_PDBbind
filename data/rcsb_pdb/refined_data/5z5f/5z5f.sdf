@@ -1,0 +1,98 @@
+5Z5F_FUB_A_602
+  RCSB PDB08022003483D
+Coordinates from PDB:5Z5F:A:602 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+    7.5960    5.2650   15.8030   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.5790    6.1760   16.2860   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.9800    7.6250   16.0170   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.4060    7.7500   14.6560   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1430    8.0780   16.8700   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.7220    8.4670   18.1800   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.7270    9.1540   15.9650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.0570    9.5740   16.2540   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.6400    8.4890   14.5960   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.7450    7.6090   14.3400   O 0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  0  0  0  0
+  3  2  1  0  0  0  0
+  5  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  9  4  1  0  0  0  0
+  6  5  1  0  0  0  0
+  7  5  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+5Z5F_FUB_A_602
+
+>  <ChemCompId>
+FUB
+
+>  <PdbId>
+5Z5F
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+602
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O5
+
+>  <Name>
+beta-L-arabinofuranose
+
+>  <SystematicName>
+(2S,3R,4R,5S)-5-(hydroxymethyl)oxolane-2,3,4-triol
+
+>  <Synonyms>
+beta-L-arabinose; L-arabinose; arabinose
+
+>  <Type>
+L-saccharide, beta linking
+
+>  <Formula>
+C5 H10 O5
+
+>  <MolecularWeight>
+150.13
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H10O5/c6-1-2-3(7)4(8)5(9)10-2/h2-9H,1H2/t2-,3-,4+,5-/m0/s1
+
+>  <InChIKey>
+HMFHBZSHGGEWLO-KLVWXMOXSA-N
+
+>  <SMILES>
+C([C@H]1[C@@H]([C@H]([C@H](O1)O)O)O)O
+
+$$$$

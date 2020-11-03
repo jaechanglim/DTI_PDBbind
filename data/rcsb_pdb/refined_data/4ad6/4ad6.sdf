@@ -1,0 +1,109 @@
+4AD6_GSY_A_1159
+  RCSB PDB08012021063D
+Coordinates from PDB:4AD6:A:1159 Model:1 without hydrogens
+ 15 16  0  0  0  0            999 V2000
+    1.8940    2.1560   12.4740   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.2690    1.0340   11.8920   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.4050    0.3810   12.9620   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.3000   -0.5860   13.6790   N 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7310   -1.7150   13.0950   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.5560   -2.3020   11.8240   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.8490   -1.8090   10.9160   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.1540   -3.5330   11.5800   N 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9290   -4.1040   12.6240   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.4840   -5.2730   12.4900   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0560   -3.5200   13.8020   N 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4840   -2.3530   14.0680   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4620   -1.5880   15.1750   N 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7350   -0.5350   14.9270   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.4910    0.7360   16.1740   S 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 14  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 12  2  0  0  0  0
+  6  7  2  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  2  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 14 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+4AD6_GSY_A_1159
+
+>  <ChemCompId>
+GSY
+
+>  <PdbId>
+4AD6
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1159
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N5 O2 S
+
+>  <Name>
+7-(2-HYDROXYETHYL)-8-MERCAPTOGUANINE
+
+>  <SystematicName>
+2-azanyl-7-(2-hydroxyethyl)-8-sulfanyl-1H-purin-6-one
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C7 H9 N5 O2 S
+
+>  <MolecularWeight>
+227.244
+
+>  <ModifiedDate>
+2014-09-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H9N5O2S/c8-6-9-4-3(5(14)11-6)12(1-2-13)7(15)10-4/h13H,1-2H2,(H4,8,9,10,11,14,15)
+
+>  <InChIKey>
+OYFBJNRCXXDVIZ-UHFFFAOYSA-N
+
+>  <SMILES>
+C(CO)n1c2c(nc1S)N=C(NC2=O)N
+
+$$$$

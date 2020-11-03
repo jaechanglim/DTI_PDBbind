@@ -1,0 +1,96 @@
+4LLP_4ZE_A_801
+  RCSB PDB08012022243D
+Coordinates from PDB:4LLP:A:801 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+    3.3340   13.8450   40.3470   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.9090   13.3150   41.6390   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.3690   12.0040   41.7310   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.8960   11.5230   42.9280   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3410   10.2590   43.0300   N 0  0  0  0  0  0  0  0  0  0  0  0
+    4.9670   12.3520   44.0480   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.5040   13.6580   43.9540   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.9790   14.1370   42.7570   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.5410   15.3900   42.6840   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  9  8  1  0  0  0  0
+  8  7  2  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  2  0  0  0  0
+  7  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+4LLP_4ZE_A_801
+
+>  <ChemCompId>
+4ZE
+
+>  <PdbId>
+4LLP
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+801
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O
+
+>  <Name>
+4-amino-2-methylphenol
+
+>  <SystematicName>
+4-azanyl-2-methyl-phenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H9 N O
+
+>  <MolecularWeight>
+123.152
+
+>  <ModifiedDate>
+2014-02-21
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H9NO/c1-5-4-6(8)2-3-7(5)9/h2-4,9H,8H2,1H3
+
+>  <InChIKey>
+HDGMAACKJSBLMW-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1cc(ccc1O)N
+
+$$$$

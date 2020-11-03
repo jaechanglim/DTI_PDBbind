@@ -1,0 +1,116 @@
+6FV4_16G_A_402
+  RCSB PDB08022004433D
+Coordinates from PDB:6FV4:A:402 Model:1 without hydrogens
+ 19 19  0  0  0  0            999 V2000
+  123.5810 -113.6940  105.7860   C 0  0  0  0  0  0  0  0  0  0  0  0
+  122.6150 -113.4770  104.6180   C 0  0  0  0  0  0  0  0  0  0  0  0
+  123.2670 -113.8800  103.2940   C 0  0  0  0  0  0  0  0  0  0  0  0
+  124.6550 -113.2680  103.1410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  125.4910 -113.6070  104.3680   C 0  0  0  0  0  0  0  0  0  0  0  0
+  126.8920 -113.0420  104.3010   C 0  0  0  0  0  0  0  0  0  0  0  0
+  120.2420 -114.0160  104.1800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  119.1060 -114.9340  104.5220   C 0  0  0  0  0  0  0  0  0  0  0  0
+  121.3940 -114.2410  104.8300   N 0  0  0  0  0  0  0  0  0  0  0  0
+  123.7700 -115.0650  105.9890   O 0  0  0  0  0  0  0  0  0  0  0  0
+  122.4400 -113.4440  102.2220   O 0  0  0  0  0  0  0  0  0  0  0  0
+  125.2930 -113.7870  101.9790   O 0  0  0  0  0  0  0  0  0  0  0  0
+  124.8320 -113.0500  105.5100   O 0  0  0  0  0  0  0  0  0  0  0  0
+  126.8840 -111.8670  103.4640   O 0  0  0  0  0  0  0  0  0  0  0  0
+  120.1180 -113.1030  103.3690   O 0  0  0  0  0  0  0  0  0  0  0  0
+  128.2460 -111.1290  103.1200   P 0  0  0  0  0  0  0  0  0  0  0  0
+  129.0510 -112.1400  102.3090   O 0  0  0  0  0  0  0  0  0  0  0  0
+  128.0550 -109.8240  102.4260   O 0  0  0  0  0  0  0  0  0  0  0  0
+  128.8640 -110.9670  104.4690   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  1  0  0  0  0
+  1 13  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  9  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 12  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 13  1  0  0  0  0
+  6 14  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  7 15  2  0  0  0  0
+ 14 16  1  0  0  0  0
+ 16 17  2  0  0  0  0
+ 16 18  1  0  0  0  0
+ 16 19  1  0  0  0  0
+M  END
+>  <InstanceId>
+6FV4_16G_A_402
+
+>  <ChemCompId>
+16G
+
+>  <PdbId>
+6FV4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+402
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O9 P
+
+>  <Name>
+2-acetamido-2-deoxy-6-O-phosphono-alpha-D-glucopyranose
+
+>  <SystematicName>
+[(2R,3S,4R,5R,6S)-5-acetamido-3,4,6-trihydroxy-oxan-2-yl]methyl dihydrogen phosphate
+
+>  <Synonyms>
+N-ACETYL-D-GLUCOSAMINE-6-PHOSPHATE; N-acetyl-6-O-phosphono-alpha-D-glucosamine; 2-acetamido-2-deoxy-6-O-phosphono-alpha-D-glucose; 2-acetamido-2-deoxy-6-O-phosphono-D-glucose; 2-acetamido-2-deoxy-6-O-phosphono-glucose
+
+>  <Type>
+D-saccharide, alpha linking
+
+>  <Formula>
+C8 H16 N O9 P
+
+>  <MolecularWeight>
+301.188
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+NDG
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H16NO9P/c1-3(10)9-5-7(12)6(11)4(18-8(5)13)2-17-19(14,15)16/h4-8,11-13H,2H2,1H3,(H,9,10)(H2,14,15,16)/t4-,5-,6-,7-,8+/m1/s1
+
+>  <InChIKey>
+BRGMHAYQAZFZDJ-PVFLNQBWSA-N
+
+>  <SMILES>
+CC(=O)N[C@@H]1[C@H]([C@@H]([C@H](O[C@@H]1O)COP(=O)(O)O)O)O
+
+$$$$

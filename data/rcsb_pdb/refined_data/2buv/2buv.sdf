@@ -1,0 +1,100 @@
+2BUV_DHB_B_1542
+  RCSB PDB08012016433D
+Coordinates from PDB:2BUV:B:1542 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   12.1990  -13.9010   41.4500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.0860  -14.0810   42.2540   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.8260  -13.7250   41.7910   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.7140  -13.9070   42.6010   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.6810  -13.1840   40.5280   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.4270  -12.8270   40.0750   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.7930  -12.9990   39.7170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.0530  -13.3620   40.1760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.5210  -14.2720   41.9400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.9950  -13.6890   42.9500   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.1970  -15.1670   41.3600   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  8  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  9 10  2  0  0  0  0
+  9 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+2BUV_DHB_B_1542
+
+>  <ChemCompId>
+DHB
+
+>  <PdbId>
+2BUV
+
+>  <ChainId>
+B
+
+>  <ResidueNumber>
+1542
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O4
+
+>  <Name>
+3,4-DIHYDROXYBENZOIC ACID
+
+>  <SystematicName>
+3,4-dihydroxybenzoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H6 O4
+
+>  <MolecularWeight>
+154.12
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H6O4/c8-5-2-1-4(7(10)11)3-6(5)9/h1-3,8-9H,(H,10,11)
+
+>  <InChIKey>
+YQUVCSBJEUQKSH-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c(cc1C(=O)O)O)O
+
+$$$$

@@ -1,0 +1,109 @@
+4DST_9LI_A_201
+  RCSB PDB08012021313D
+Coordinates from PDB:4DST:A:201 Model:1 without hydrogens
+ 15 16  0  0  0  0            999 V2000
+   24.2620   14.2370   15.3680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.6120   12.6620   10.1390  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   24.3200   14.3760   13.8710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.1610   16.2420    8.0770  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   25.1460   13.7020   13.0460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.8570   14.1540   11.6710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.8280   15.1150   11.8120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.5300   15.2240   13.1510   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.3190   15.7460   10.6890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.8190   15.4300    9.4500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.8250   14.4890    9.2870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.3550   13.8450   10.3870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.1720   12.6870   13.4790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.4340   13.3990   13.9800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.4340   12.4020   14.3870   N 0  0  0  0  0  0  0  0  0  0  0  0
+  3  1  1  0  0  0  0
+  2 12  1  0  0  0  0
+  5  3  2  0  0  0  0
+  8  3  1  0  0  0  0
+  4 10  1  0  0  0  0
+  6  5  1  0  0  0  0
+  5 13  1  0  0  0  0
+ 12  6  2  0  0  0  0
+  6  7  1  0  0  0  0
+  9  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+ 10  9  1  0  0  0  0
+ 11 10  2  0  0  0  0
+ 11 12  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+4DST_9LI_A_201
+
+>  <ChemCompId>
+9LI
+
+>  <PdbId>
+4DST
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N2 Cl2
+
+>  <Name>
+2-(4,6-dichloro-2-methyl-1H-indol-3-yl)ethanamine
+
+>  <SystematicName>
+2-[4,6-bis(chloranyl)-2-methyl-1H-indol-3-yl]ethanamine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H12 Cl2 N2
+
+>  <MolecularWeight>
+243.132
+
+>  <ModifiedDate>
+2012-03-30
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H12Cl2N2/c1-6-8(2-3-14)11-9(13)4-7(12)5-10(11)15-6/h4-5,15H,2-3,14H2,1H3
+
+>  <InChIKey>
+JCTJISIFGZHOFY-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1c(c2c([nH]1)cc(cc2Cl)Cl)CCN
+
+$$$$

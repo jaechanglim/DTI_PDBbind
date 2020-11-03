@@ -1,0 +1,110 @@
+3BXG_BG6_A_401
+  RCSB PDB08012018413D
+Coordinates from PDB:3BXG:A:401 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   68.7950   84.7340   60.6060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   68.0100   85.4190   61.7310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   68.1560   84.8970   59.3530   O 0  0  0  0  0  0  0  0  0  0  0  0
+   69.0460   83.3600   60.9700   O 0  0  0  0  0  0  0  0  0  0  0  0
+   68.9700   85.5970   62.9110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   67.4420   86.6780   61.3140   O 0  0  0  0  0  0  0  0  0  0  0  0
+   69.7480   84.2630   63.1350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   68.1700   85.9160   64.1050   O 0  0  0  0  0  0  0  0  0  0  0  0
+   70.1130   83.3610   61.9260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   70.9670   84.5370   63.8340   O 0  0  0  0  0  0  0  0  0  0  0  0
+   70.4700   81.9430   62.4000   C 0  0  0  0  0  0  0  0  0  0  0  0
+   70.5590   80.9820   61.3250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   70.6440   79.3970   61.5930   P 0  0  0  0  0  0  0  0  0  0  0  0
+   70.4280   78.8050   60.2150   O 0  0  0  0  0  0  0  0  0  0  0  0
+   72.0320   79.1270   62.1250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   69.5120   79.0800   62.5640   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  2  6  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  7  1  0  0  0  0
+  5  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  7 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 15  1  0  0  0  0
+ 13 16  2  0  0  0  0
+M  END
+>  <InstanceId>
+3BXG_BG6_A_401
+
+>  <ChemCompId>
+BG6
+
+>  <PdbId>
+3BXG
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O9 P
+
+>  <Name>
+6-O-phosphono-beta-D-glucopyranose
+
+>  <SystematicName>
+[(2R,3S,4S,5R,6R)-3,4,5,6-tetrahydroxyoxan-2-yl]methyl dihydrogen phosphate
+
+>  <Synonyms>
+BETA-D-GLUCOSE-6-PHOSPHATE; 6-O-phosphono-beta-D-glucose; 6-O-phosphono-D-glucose; 6-O-phosphono-glucose
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C6 H13 O9 P
+
+>  <MolecularWeight>
+260.136
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+BGC
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13O9P/c7-3-2(1-14-16(11,12)13)15-6(10)5(9)4(3)8/h2-10H,1H2,(H2,11,12,13)/t2-,3-,4+,5-,6-/m1/s1
+
+>  <InChIKey>
+NBSCHQHZLSJFNQ-VFUOTHLCSA-N
+
+>  <SMILES>
+C([C@@H]1[C@H]([C@@H]([C@H]([C@@H](O1)O)O)O)O)OP(=O)(O)O
+
+$$$$

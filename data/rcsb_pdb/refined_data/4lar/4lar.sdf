@@ -1,0 +1,98 @@
+4LAR_1WE_H_300
+  RCSB PDB08012022223D
+Coordinates from PDB:4LAR:H:300 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   -3.2520   -1.7060   15.7760   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3340   -3.1340   15.6650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1240   -3.5060   14.9520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3090   -3.8580   17.0040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.1880   -4.8900   17.1200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4610   -4.7690   16.6340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8210   -6.0170   17.7880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.3590   -5.7880   16.7950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7070   -7.0300   17.9520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9930   -6.9230   17.4560   C 0  0  0  0  0  0  0  0  0  0  0  0
+  3  2  1  0  0  0  0
+  2  1  1  0  0  0  0
+  2  4  1  0  0  0  0
+  6  8  2  0  0  0  0
+  6  5  1  0  0  0  0
+  8 10  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  7  2  0  0  0  0
+ 10  9  2  0  0  0  0
+  7  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+4LAR_1WE_H_300
+
+>  <ChemCompId>
+1WE
+
+>  <PdbId>
+4LAR
+
+>  <ChainId>
+H
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N
+
+>  <Name>
+(2S)-1-phenylpropan-2-amine
+
+>  <SystematicName>
+(2S)-1-phenylpropan-2-amine
+
+>  <Synonyms>
+Dextroamphetamine; D-amphetamine; Dexamphetamine; Dexedrine; Dextrostat
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H13 N
+
+>  <MolecularWeight>
+135.206
+
+>  <ModifiedDate>
+2020-05-26
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H13N/c1-8(10)7-9-5-3-2-4-6-9/h2-6,8H,7,10H2,1H3/t8-/m0/s1
+
+>  <InChIKey>
+KWTSXDURSIMDCE-QMMMGPOBSA-N
+
+>  <SMILES>
+C[C@@H](Cc1ccccc1)N
+
+$$$$

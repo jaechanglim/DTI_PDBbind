@@ -1,0 +1,104 @@
+4NDU_AMG_A_101
+  RCSB PDB08012022373D
+Coordinates from PDB:4NDU:A:101 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   11.9350   17.8570   13.2570   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.6400   17.0990   14.5150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.8050   16.2330   14.8540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.1040   15.2990   13.7100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.3580   16.1420   12.4640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.6950   15.2560   11.2540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.1200   19.8300   12.6090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.0410   18.7260   13.5360   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.3610   18.0220   15.5870   O 0  0  0  0  0  0  0  0  0  0  0  0
+   12.5070   15.4970   16.0270   O 0  0  0  0  0  0  0  0  0  0  0  0
+   12.0140   14.4100   13.4590   O 0  0  0  0  0  0  0  0  0  0  0  0
+   12.2650   17.0080   12.1640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.9540   16.1030   10.1120   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  8  1  0  0  0  0
+  1 12  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  9  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 10  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 11  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 12  1  0  0  0  0
+  6 13  1  0  0  0  0
+  7  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+4NDU_AMG_A_101
+
+>  <ChemCompId>
+AMG
+
+>  <PdbId>
+4NDU
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+101
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O6
+
+>  <Name>
+methyl alpha-D-galactopyranoside
+
+>  <SystematicName>
+(2R,3R,4S,5R,6S)-2-(hydroxymethyl)-6-methoxy-oxane-3,4,5-triol
+
+>  <Synonyms>
+ALPHA-METHYL-D-GALACTOSIDE; methyl alpha-D-galactoside; methyl D-galactoside; methyl galactoside
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C7 H14 O6
+
+>  <MolecularWeight>
+194.182
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+GLA
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H14O6/c1-12-7-6(11)5(10)4(9)3(2-8)13-7/h3-11H,2H2,1H3/t3-,4+,5+,6-,7+/m1/s1
+
+>  <InChIKey>
+HOVAGTYPODGVJG-PZRMXXKTSA-N
+
+>  <SMILES>
+CO[C@@H]1[C@@H]([C@H]([C@H]([C@H](O1)CO)O)O)O
+
+$$$$

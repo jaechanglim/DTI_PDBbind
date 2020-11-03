@@ -1,0 +1,104 @@
+3DP4_AMQ_A_374
+  RCSB PDB08012018513D
+Coordinates from PDB:3DP4:A:374 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   20.9390   20.7800   13.3460   N 0  0  0  0  0  0  0  0  0  0  0  0
+   20.7560   19.5320   14.1660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.2250   19.1940   14.2990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.4180   19.9480   13.7350   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.9040   18.1840   14.9600   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.4330   19.7320   15.5520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.9190   20.0230   15.4450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.9770   19.0770   15.3030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.6270   21.1880   15.4500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.2810   22.6370   15.5590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.6400   17.7970   15.2600   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.2040   19.5110   15.2210   N 0  0  0  0  0  0  0  0  0  0  0  0
+   24.9800   20.9330   15.3200   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  5  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  2  0  0  0  0
+  8 11  1  0  0  0  0
+  8 12  2  0  0  0  0
+  9 10  1  0  0  0  0
+  9 13  1  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+3DP4_AMQ_A_374
+
+>  <ChemCompId>
+AMQ
+
+>  <PdbId>
+3DP4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+374
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N2 O4
+
+>  <Name>
+(S)-ALPHA-AMINO-3-HYDROXY-5-METHYL-4-ISOXAZOLEPROPIONIC ACID
+
+>  <SystematicName>
+(2S)-2-amino-3-(3-hydroxy-5-methyl-1,2-oxazol-4-yl)propanoic acid
+
+>  <Synonyms>
+AMPA
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H10 N2 O4
+
+>  <MolecularWeight>
+186.165
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H10N2O4/c1-3-4(6(10)9-13-3)2-5(8)7(11)12/h5H,2,8H2,1H3,(H,9,10)(H,11,12)/t5-/m0/s1
+
+>  <InChIKey>
+UUDAMDVQRQNNHZ-YFKPBYRVSA-N
+
+>  <SMILES>
+Cc1c(c(no1)O)C[C@@H](C(=O)O)N
+
+$$$$

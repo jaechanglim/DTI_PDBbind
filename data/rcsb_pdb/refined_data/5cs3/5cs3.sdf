@@ -1,0 +1,110 @@
+5CS3_EP1_B_301
+  RCSB PDB08022001003D
+Coordinates from PDB:5CS3:B:301 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   -4.7020   30.7240  -13.7350   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6300   30.1500  -12.7580   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.3640   28.9310  -13.2610   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.6390   31.2060  -12.3700   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6490   29.5150  -11.3380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5490   28.5770  -11.8470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7580   27.8730  -10.7270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6500   26.4020  -10.9310   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4280   25.7630   -9.6010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6680   24.4110   -9.6530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4980   24.4750  -10.5620   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0130   24.7180  -11.9200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6900   26.1030  -12.0230   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.4780   25.5120  -10.1420   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8200   24.8860   -9.7870   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.7420   25.0560  -10.8750   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 13  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11 14  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+5CS3_EP1_B_301
+
+>  <ChemCompId>
+EP1
+
+>  <PdbId>
+5CS3
+
+>  <ChainId>
+B
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N2 O4 S
+
+>  <Name>
+3-[4-(2-HYDROXYETHYL)PIPERAZIN-1-YL]PROPANE-1-SULFONIC ACID
+
+>  <SystematicName>
+3-[4-(2-hydroxyethyl)piperazin-1-yl]propane-1-sulfonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H20 N2 O4 S
+
+>  <MolecularWeight>
+252.331
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H20N2O4S/c12-8-7-11-5-3-10(4-6-11)2-1-9-16(13,14)15/h12H,1-9H2,(H,13,14,15)
+
+>  <InChIKey>
+OWXMKDGYPWMGEB-UHFFFAOYSA-N
+
+>  <SMILES>
+C1CN(CCN1CCCS(=O)(=O)O)CCO
+
+$$$$

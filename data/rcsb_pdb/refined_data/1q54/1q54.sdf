@@ -1,0 +1,109 @@
+1Q54_BHI_A_301
+  RCSB PDB08012015463D
+Coordinates from PDB:1Q54:A:301 Model:1 without hydrogens
+ 16 15  0  0  0  0            999 V2000
+    9.3570   10.2090   13.0290   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.8560    2.8650   10.9670   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.8540    1.6410   10.8650   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.9590    2.0290   12.9380   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.6890    2.6520   11.6000   P 0  0  0  0  0  0  0  0  0  0  0  0
+    9.9440    3.9800   11.7780   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.0340    6.1220   11.5380   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.7170    4.5940   13.2600   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.6270    5.2160   12.4240   P 0  0  0  0  0  0  0  0  0  0  0  0
+   10.3350    9.4300   15.3610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.0890    8.2680   13.3380   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.8750    6.8560   13.0410   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.7600    7.8970   14.1700   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.8540    8.9860   13.9510   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.6200    5.7080   13.4550   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.7290    9.3740   16.2740  Br 0  0  0  0  0  0  0  0  0  0  0  0
+  1 14  1  0  0  0  0
+  2  5  1  0  0  0  0
+  3  5  2  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  9  1  0  0  0  0
+  7  9  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 15  1  0  0  0  0
+ 10 14  1  0  0  0  0
+ 10 16  1  0  0  0  0
+ 11 14  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 15  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+1Q54_BHI_A_301
+
+>  <ChemCompId>
+BHI
+
+>  <PdbId>
+1Q54
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O8 P2 Br
+
+>  <Name>
+4-BROMO-3-HYDROXY-3-METHYL BUTYL DIPHOSPHATE
+
+>  <SystematicName>
+[(3R)-4-bromo-3-hydroxy-3-methyl-butyl] phosphono hydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H13 Br O8 P2
+
+>  <MolecularWeight>
+343.003
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H13BrO8P2/c1-5(7,4-6)2-3-13-16(11,12)14-15(8,9)10/h7H,2-4H2,1H3,(H,11,12)(H2,8,9,10)/t5-/m1/s1
+
+>  <InChIKey>
+YKAYCWPQDPILSA-RXMQYKEDSA-N
+
+>  <SMILES>
+C[C@@](CCO[P@](=O)(O)OP(=O)(O)O)(CBr)O
+
+$$$$

@@ -1,0 +1,98 @@
+1DRK_RIP_A_272
+  RCSB PDB08012014463D
+Coordinates from PDB:1DRK:A:272 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   49.7320   33.6320   43.6180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   49.0360   33.0990   44.8940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   48.7010   34.2690   45.8230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   49.9470   35.1320   46.0490   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.5770   35.5630   44.7470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.1480   32.5760   42.7790   O 0  0  0  0  0  0  0  0  0  0  0  0
+   47.8400   32.3830   44.5820   O 0  0  0  0  0  0  0  0  0  0  0  0
+   47.6530   35.0530   45.2730   O 0  0  0  0  0  0  0  0  0  0  0  0
+   49.6110   36.2780   46.7640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   50.8780   34.4250   43.9670   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1DRK_RIP_A_272
+
+>  <ChemCompId>
+RIP
+
+>  <PdbId>
+1DRK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+272
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O5
+
+>  <Name>
+beta-D-ribopyranose
+
+>  <SystematicName>
+(2R,3R,4R,5R)-oxane-2,3,4,5-tetrol
+
+>  <Synonyms>
+beta-D-ribose; D-ribose; ribose; RIBOSE(PYRANOSE FORM)
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C5 H10 O5
+
+>  <MolecularWeight>
+150.13
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H10O5/c6-2-1-10-5(9)4(8)3(2)7/h2-9H,1H2/t2-,3-,4-,5-/m1/s1
+
+>  <InChIKey>
+SRBFZHDQGSBBOR-TXICZTDVSA-N
+
+>  <SMILES>
+C1[C@H]([C@H]([C@H]([C@@H](O1)O)O)O)O
+
+$$$$

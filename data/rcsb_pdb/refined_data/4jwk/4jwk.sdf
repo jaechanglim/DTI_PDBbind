@@ -1,0 +1,113 @@
+4JWK_CTN_A_201
+  RCSB PDB08012022103D
+Coordinates from PDB:4JWK:A:201 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   -1.0750   12.3730   25.3260   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5530   13.6980   25.5890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0030   13.7640   27.0110   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.1770   14.5570   27.2290   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.3810   14.5620   28.6540   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.9470   15.7830   29.2660   N 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4740   15.6380   30.4950   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0270   16.7060   31.1910   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0350   17.9630   30.6030   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4990   18.1300   29.3670   N 0  0  0  0  0  0  0  0  0  0  0  0
+    1.9550   17.0860   28.6760   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.4840   17.3100   27.5370   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.5790   19.0090   31.2800   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0100   14.3050   29.2340   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.0120   13.0300   29.8930   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.9510   14.2910   28.0440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0440   13.3870   28.1980   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 16  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 14  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  1  0  0  0  0
+  7  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+  9 13  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 14 15  1  0  0  0  0
+ 14 16  1  0  0  0  0
+ 16 17  1  0  0  0  0
+M  END
+>  <InstanceId>
+4JWK_CTN_A_201
+
+>  <ChemCompId>
+CTN
+
+>  <PdbId>
+4JWK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N3 O5
+
+>  <Name>
+4-AMINO-1-BETA-D-RIBOFURANOSYL-2(1H)-PYRIMIDINONE
+
+>  <SystematicName>
+4-amino-1-[(2R,3R,4S,5R)-3,4-dihydroxy-5-(hydroxymethyl)oxolan-2-yl]pyrimidin-2-one
+
+>  <Synonyms>
+CYTIDINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H13 N3 O5
+
+>  <MolecularWeight>
+243.217
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H13N3O5/c10-5-1-2-12(9(16)11-5)8-7(15)6(14)4(3-13)17-8/h1-2,4,6-8,13-15H,3H2,(H2,10,11,16)/t4-,6-,7-,8-/m1/s1
+
+>  <InChIKey>
+UHDGCWIWMRVCDJ-XVFCMESISA-N
+
+>  <SMILES>
+C1=CN(C(=O)N=C1N)[C@H]2[C@@H]([C@@H]([C@H](O2)CO)O)O
+
+$$$$

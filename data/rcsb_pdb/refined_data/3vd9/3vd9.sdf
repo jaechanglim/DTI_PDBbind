@@ -1,0 +1,108 @@
+3VD9_IPT_A_2001
+  RCSB PDB08012020473D
+Coordinates from PDB:3VD9:A:2001 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+  -14.7000  -27.5380  -26.2770   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.3870  -27.3710  -25.4970   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.4640  -26.1970  -24.6960   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.1560  -27.2630  -26.4070   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.9520  -27.3730  -25.6270   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.1740  -28.3170  -27.5130   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.8920  -29.5990  -26.9410   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.5460  -28.3100  -28.1970   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.5440  -28.5940  -27.2190   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.7240  -29.3100  -29.3320   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.6340  -29.2570  -30.2580   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.0160  -27.9530  -25.1720   S 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.5960  -28.2970  -25.9160   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.6380  -27.3410  -25.3540   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.5950  -28.2580  -27.4440   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  1  0  0  0  0
+  1 12  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+3VD9_IPT_A_2001
+
+>  <ChemCompId>
+IPT
+
+>  <PdbId>
+3VD9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 O5 S
+
+>  <Name>
+1-methylethyl 1-thio-beta-D-galactopyranoside
+
+>  <SystematicName>
+(2R,3R,4S,5R,6S)-2-(hydroxymethyl)-6-propan-2-ylsulfanyl-oxane-3,4,5-triol
+
+>  <Synonyms>
+ISOPROPYL-1-BETA-D-THIOGALACTOSIDE; 1-(ISOPROPYLTHIO)-BETA-GALACTOPYRANSIDE; 1-methylethyl 1-thio-beta-D-galactoside; 1-methylethyl 1-thio-D-galactoside; 1-methylethyl 1-thio-galactoside
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C9 H18 O5 S
+
+>  <MolecularWeight>
+238.301
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H18O5S/c1-4(2)15-9-8(13)7(12)6(11)5(3-10)14-9/h4-13H,3H2,1-2H3/t5-,6+,7+,8-,9+/m1/s1
+
+>  <InChIKey>
+BPHPUYQFMNQIOC-NXRLNHOXSA-N
+
+>  <SMILES>
+CC(C)S[C@H]1[C@@H]([C@H]([C@H]([C@H](O1)CO)O)O)O
+
+$$$$

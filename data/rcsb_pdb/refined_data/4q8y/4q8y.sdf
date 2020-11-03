@@ -1,0 +1,103 @@
+4Q8Y_HQT_A_303
+  RCSB PDB08012022583D
+Coordinates from PDB:4Q8Y:A:303 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+   15.0320    0.1280   17.0050   S 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5520    1.2340   15.7460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3070    2.5790   15.8690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6170    3.0850   17.0380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.3860    4.4090   17.1650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.7960    5.3080   16.1320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4570    4.8140   14.9910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7130    3.4520   14.8700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3650    2.9710   13.7590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.6060    1.6640   13.6410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1980    0.7680   14.6720   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4490   -0.5340   14.5600   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 10  9  2  0  0  0  0
+ 10 11  1  0  0  0  0
+  9  8  1  0  0  0  0
+ 12 11  1  0  0  0  0
+ 11  2  1  0  0  0  0
+  8  7  2  0  0  0  0
+  8  3  1  0  0  0  0
+  7  6  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  2  0  0  0  0
+  3  4  2  0  0  0  0
+  6  5  2  0  0  0  0
+  4  5  1  0  0  0  0
+M  END
+>  <InstanceId>
+4Q8Y_HQT_A_303
+
+>  <ChemCompId>
+HQT
+
+>  <PdbId>
+4Q8Y
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O S
+
+>  <Name>
+2-hydroxyisoquinoline-1(2H)-thione
+
+>  <SystematicName>
+2-oxidanylisoquinoline-1-thione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H7 N O S
+
+>  <MolecularWeight>
+177.223
+
+>  <ModifiedDate>
+2015-03-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H7NOS/c11-10-6-5-7-3-1-2-4-8(7)9(10)12/h1-6,11H
+
+>  <InChIKey>
+RTPXYUZLLYULJQ-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)C=CN(C2=S)O
+
+$$$$

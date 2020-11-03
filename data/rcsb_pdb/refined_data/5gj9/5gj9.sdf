@@ -1,0 +1,96 @@
+5GJ9_VGL_A_402
+  RCSB PDB08022001293D
+Coordinates from PDB:5GJ9:A:402 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   12.9100   -6.4070  -35.1010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.6630   -6.4240  -35.5670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.3820   -6.3520  -34.2010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.3590   -6.4350  -35.5630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.6320   -6.3350  -33.7350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6520   -6.4170  -36.8020   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2510   -6.5020  -34.6790   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.9200   -6.4450  -35.9820   N 0  0  0  0  0  0  0  0  0  0  0  0
+   11.3730   -6.3130  -33.3190   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  4  1  0  0  0  0
+  1  5  1  0  0  0  0
+  1  8  2  0  0  0  0
+  2  3  2  0  0  0  0
+  2  8  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  6  2  0  0  0  0
+  4  7  1  0  0  0  0
+  5  9  2  0  0  0  0
+M  END
+>  <InstanceId>
+5GJ9_VGL_A_402
+
+>  <ChemCompId>
+VGL
+
+>  <PdbId>
+5GJ9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+402
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N2 O2
+
+>  <Name>
+PYRAZINE-2-CARBOXYLIC ACID
+
+>  <SystematicName>
+pyrazine-2-carboxylic acid
+
+>  <Synonyms>
+PYRAZINOIC ACID
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C5 H4 N2 O2
+
+>  <MolecularWeight>
+124.097
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H4N2O2/c8-5(9)4-3-6-1-2-7-4/h1-3H,(H,8,9)
+
+>  <InChIKey>
+NIPZZXUFJPQHNH-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cnc(cn1)C(=O)O
+
+$$$$

@@ -1,0 +1,97 @@
+3TAO_PGH_A_268
+  RCSB PDB08012020333D
+Coordinates from PDB:3TAO:A:268 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+  -22.2280    7.3000   12.3210   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.7250    7.4090   12.4640   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.6150    6.3080   12.9490   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.3250    5.9940   12.6460   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.5370    8.2480   11.5620   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.0590    8.7400   12.8080   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.5210   10.4580   13.8580   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.1630    8.0020   14.0740   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -26.4470    9.2160   11.9200   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.6050    9.0890   13.1770   P 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  5  2  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  1  0  0  0  0
+  6 10  1  0  0  0  0
+  7 10  2  0  0  0  0
+  8 10  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+3TAO_PGH_A_268
+
+>  <ChemCompId>
+PGH
+
+>  <PdbId>
+3TAO
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+268
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O6 P
+
+>  <Name>
+PHOSPHOGLYCOLOHYDROXAMIC ACID
+
+>  <SystematicName>
+[2-(hydroxyamino)-2-oxo-ethyl] dihydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H6 N O6 P
+
+>  <MolecularWeight>
+171.046
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H6NO6P/c4-2(3-5)1-9-10(6,7)8/h5H,1H2,(H,3,4)(H2,6,7,8)
+
+>  <InChIKey>
+BAXHHWZKQZIJID-UHFFFAOYSA-N
+
+>  <SMILES>
+C(C(=O)NO)OP(=O)(O)O
+
+$$$$

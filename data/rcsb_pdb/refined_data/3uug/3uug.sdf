@@ -1,0 +1,104 @@
+3UUG_BDP_A_331
+  RCSB PDB08012020433D
+Coordinates from PDB:3UUG:A:331 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+  -62.8200   16.1970    6.1490   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -64.2200   15.6490    5.9100   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -64.5700   14.7360    7.0740   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -63.5230   13.6300    7.1620   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -62.1090   14.2140    7.1560   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -61.0850   13.0860    7.0590   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -65.1710   16.6810    5.8090   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -65.8660   14.2150    6.8740   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -63.6900   12.8910    8.3540   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -61.9360   15.1020    6.0660   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -60.2460   13.1330    6.1450   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -62.4940   17.1280    5.1500   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -61.1340   12.1640    7.9030   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  1  0  0  0  0
+  1 12  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6 11  2  0  0  0  0
+  6 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+3UUG_BDP_A_331
+
+>  <ChemCompId>
+BDP
+
+>  <PdbId>
+3UUG
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+331
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O7
+
+>  <Name>
+beta-D-glucopyranuronic acid
+
+>  <SystematicName>
+(2S,3S,4S,5R,6R)-3,4,5,6-tetrahydroxyoxane-2-carboxylic acid
+
+>  <Synonyms>
+beta-D-glucuronic acid; D-glucuronic acid; glucuronic acid
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C6 H10 O7
+
+>  <MolecularWeight>
+194.139
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H10O7/c7-1-2(8)4(5(10)11)13-6(12)3(1)9/h1-4,6-9,12H,(H,10,11)/t1-,2-,3+,4-,6+/m0/s1
+
+>  <InChIKey>
+AEMOLEFTQBMNLQ-QIUUJYRFSA-N
+
+>  <SMILES>
+[C@@H]1([C@@H]([C@H](O[C@H]([C@@H]1O)O)C(=O)O)O)O
+
+$$$$

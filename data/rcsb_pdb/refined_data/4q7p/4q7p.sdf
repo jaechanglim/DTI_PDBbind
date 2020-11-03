@@ -1,0 +1,96 @@
+4Q7P_3MH_A_302
+  RCSB PDB08012022583D
+Coordinates from PDB:4Q7P:A:302 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   14.9530    0.1600   16.9840   S 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4520    1.3640   15.8250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0340    2.7110   15.9760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.2420    3.1260   17.1990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3750    3.6280   15.0510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1540    3.2590   13.9590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5240    1.9430   13.7910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2010    1.0040   14.7560   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5560   -0.2740   14.5890   O 0  0  0  0  0  0  0  0  0  0  0  0
+  7  6  2  0  0  0  0
+  7  8  1  0  0  0  0
+  6  5  1  0  0  0  0
+  9  8  1  0  0  0  0
+  8  2  1  0  0  0  0
+  5  3  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  2  0  0  0  0
+  3  4  1  0  0  0  0
+M  END
+>  <InstanceId>
+4Q7P_3MH_A_302
+
+>  <ChemCompId>
+3MH
+
+>  <PdbId>
+4Q7P
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O S
+
+>  <Name>
+1-hydroxy-3-methylpyridine-2(1H)-thione
+
+>  <SystematicName>
+3-methyl-1-oxidanyl-pyridine-2-thione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H7 N O S
+
+>  <MolecularWeight>
+141.191
+
+>  <ModifiedDate>
+2015-03-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H7NOS/c1-5-3-2-4-7(8)6(5)9/h2-4,8H,1H3
+
+>  <InChIKey>
+YFGDWYKLGMSVNE-UHFFFAOYSA-N
+
+>  <SMILES>
+CC1=CC=CN(C1=S)O
+
+$$$$

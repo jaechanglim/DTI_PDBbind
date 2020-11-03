@@ -1,0 +1,100 @@
+2WEH_FB1_A_1263
+  RCSB PDB08012018073D
+Coordinates from PDB:2WEH:A:1263 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   16.4040    6.1350   14.2890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.2720    5.5730   17.4890  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   16.8440    4.8510   14.0150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4800    3.7760   14.8180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6590    3.9230   15.9510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2350    5.2270   16.1830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5750    6.3030   15.3620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1850    2.6030   16.8580   S 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6700    1.2230   16.1740   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6260    2.7440   18.1820   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.7540    2.5670   16.8350   O 0  0  0  0  0  0  0  0  0  0  0  0
+  2  6  1  0  0  0  0
+  6  5  1  0  0  0  0
+  6  7  2  0  0  0  0
+  5  8  1  0  0  0  0
+  5  4  2  0  0  0  0
+  8 10  2  0  0  0  0
+  8 11  2  0  0  0  0
+  8  9  1  0  0  0  0
+  7  1  1  0  0  0  0
+  1  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+M  END
+>  <InstanceId>
+2WEH_FB1_A_1263
+
+>  <ChemCompId>
+FB1
+
+>  <PdbId>
+2WEH
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1263
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O2 S Cl
+
+>  <Name>
+2-CHLOROBENZENESULFONAMIDE
+
+>  <SystematicName>
+2-chlorobenzenesulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C6 H6 Cl N O2 S
+
+>  <MolecularWeight>
+191.635
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H6ClNO2S/c7-5-3-1-2-4-6(5)11(8,9)10/h1-4H,(H2,8,9,10)
+
+>  <InChIKey>
+JCCBZCMSYUSCFM-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(c(c1)S(=O)(=O)N)Cl
+
+$$$$

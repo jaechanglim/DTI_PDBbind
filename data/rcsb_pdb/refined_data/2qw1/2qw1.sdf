@@ -1,0 +1,104 @@
+2QW1_3MG_A_310
+  RCSB PDB08012017523D
+Coordinates from PDB:2QW1:A:310 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   -4.7020   22.2200  -14.8360   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0340   21.7430  -14.7590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2570   20.7100  -15.8450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2450   19.4170  -15.2250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.5900   20.9910  -16.5400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.5290   22.2590  -17.2120   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.9170   19.8490  -17.5040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.1780   20.0610  -18.1430   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.0430   20.2560  -19.5590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.8950   18.5150  -16.7590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.1790   17.4510  -17.6720   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.5170   18.3240  -16.1120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.4270   17.1000  -15.3680   O 0  0  0  0  0  0  0  0  0  0  0  0
+  9  8  1  0  0  0  0
+  8  7  1  0  0  0  0
+ 11 10  1  0  0  0  0
+  7 10  1  0  0  0  0
+  7  5  1  0  0  0  0
+  6  5  1  0  0  0  0
+ 10 12  1  0  0  0  0
+  5  3  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12  4  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  2  1  0  0  0  0
+  1  2  1  0  0  0  0
+M  END
+>  <InstanceId>
+2QW1_3MG_A_310
+
+>  <ChemCompId>
+3MG
+
+>  <PdbId>
+2QW1
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+310
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O6
+
+>  <Name>
+3-O-methyl-beta-D-glucopyranose
+
+>  <SystematicName>
+(2R,3R,4S,5R,6R)-6-(hydroxymethyl)-4-methoxy-oxane-2,3,5-triol
+
+>  <Synonyms>
+3-O-methyl-beta-D-glucose; 3-O-methyl-D-glucose; 3-O-methyl-glucose
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C7 H14 O6
+
+>  <MolecularWeight>
+194.182
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+BGC
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C7H14O6/c1-12-6-4(9)3(2-8)13-7(11)5(6)10/h3-11H,2H2,1H3/t3-,4-,5-,6+,7-/m1/s1
+
+>  <InChIKey>
+SCBBSJMAPKXHAH-BNWJMWRWSA-N
+
+>  <SMILES>
+CO[C@H]1[C@@H]([C@H](O[C@H]([C@@H]1O)O)CO)O
+
+$$$$

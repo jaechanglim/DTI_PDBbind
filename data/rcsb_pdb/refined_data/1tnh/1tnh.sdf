@@ -1,0 +1,97 @@
+1TNH_FBA_A_900
+  RCSB PDB08012016013D
+Coordinates from PDB:1TNH:A:900 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   29.1540   14.9450   16.6050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.5030   13.6110   16.6670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.4740   12.9380   17.8740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.0770   13.6200   19.0180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.7230   14.9550   18.9610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.7710   15.6060   17.7440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.1690   15.7050   15.2980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.4080   15.5270   14.6230   N 0  3  0  0  0  0  0  0  0  0  0  0
+   29.0060   12.9520   20.2340   F 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  1  7  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  6  2  0  0  0  0
+  7  8  1  0  0  0  0
+M  CHG  1   8   1
+M  END
+>  <InstanceId>
+1TNH_FBA_A_900
+
+>  <ChemCompId>
+FBA
+
+>  <PdbId>
+1TNH
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+900
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N F
+
+>  <Name>
+4-FLUOROBENZYLAMINE
+
+>  <SystematicName>
+(4-fluorophenyl)methylazanium
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H9 F N
+
+>  <MolecularWeight>
+126.151
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H8FN/c8-7-3-1-6(5-9)2-4-7/h1-4H,5,9H2/p+1
+
+>  <InChIKey>
+IIFVWLUQBAIPMJ-UHFFFAOYSA-O
+
+>  <SMILES>
+c1cc(ccc1C[NH3+])F
+
+$$$$

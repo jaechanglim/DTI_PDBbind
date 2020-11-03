@@ -1,0 +1,103 @@
+1C3X_8IG_A_306
+  RCSB PDB08012014403D
+Coordinates from PDB:1C3X:A:306 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+   11.5710  -22.0780    0.2450   I 0  0  0  0  0  0  0  0  0  0  0  0
+   12.8870  -17.6580   -4.0870   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.7540  -20.0820   -0.4660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.4030  -18.9810    0.2830   N 0  0  0  0  0  0  0  0  0  0  0  0
+   11.5660  -14.4200   -1.0230   N 0  0  0  0  0  0  0  0  0  0  0  0
+   12.2190  -16.0950   -2.5220   N 0  0  0  0  0  0  0  0  0  0  0  0
+   11.7280  -15.7480   -1.2290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.4390  -16.6470   -0.2180   N 0  0  0  0  0  0  0  0  0  0  0  0
+   11.6570  -17.9640   -0.5910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.1240  -18.4460   -1.7910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.4490  -17.4500   -2.8850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.1700  -19.8240   -1.7120   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  1  0  0  0  0
+  2 11  2  0  0  0  0
+  3  4  1  0  0  0  0
+  3 12  2  0  0  0  0
+  4  9  1  0  0  0  0
+  5  7  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  1  0  0  0  0
+  7  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+1C3X_8IG_A_306
+
+>  <ChemCompId>
+8IG
+
+>  <PdbId>
+1C3X
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+306
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N5 O I
+
+>  <Name>
+8-IODO-GUANINE
+
+>  <SystematicName>
+2-amino-8-iodo-1,9-dihydropurin-6-one
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H4 I N5 O
+
+>  <MolecularWeight>
+277.023
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H4IN5O/c6-4-8-1-2(9-4)10-5(7)11-3(1)12/h(H4,7,8,9,10,11,12)
+
+>  <InChIKey>
+SXGFECRAKVVEJT-UHFFFAOYSA-N
+
+>  <SMILES>
+c12c([nH]c(n1)I)N=C(NC2=O)N
+
+$$$$

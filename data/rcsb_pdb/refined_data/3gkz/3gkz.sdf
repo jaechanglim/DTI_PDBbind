@@ -1,0 +1,100 @@
+3GKZ_B40_A_500
+  RCSB PDB08012019073D
+Coordinates from PDB:3GKZ:A:500 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   -2.4400   -2.0580   15.3790   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9850   -3.4260   15.5530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8660   -4.4250   15.2400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.4840   -3.6220   17.0080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2340   -4.9300   17.1960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.6000   -6.0350   17.8080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.5720   -5.0410   16.7720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3030   -7.2380   17.9860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2780   -6.2490   16.9510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6430   -7.3480   17.5590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5180   -1.0470   15.3790   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1 11  1  0  0  0  0
+  1  2  1  0  0  0  0
+  3  2  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  7  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+ 10  8  1  0  0  0  0
+  9 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+3GKZ_B40_A_500
+
+>  <ChemCompId>
+B40
+
+>  <PdbId>
+3GKZ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+500
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N
+
+>  <Name>
+(2S)-N-methyl-1-phenylpropan-2-amine
+
+>  <SystematicName>
+(2S)-N-methyl-1-phenyl-propan-2-amine
+
+>  <Synonyms>
+Methamphetamine
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H15 N
+
+>  <MolecularWeight>
+149.233
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H15N/c1-9(11-2)8-10-6-4-3-5-7-10/h3-7,9,11H,8H2,1-2H3/t9-/m0/s1
+
+>  <InChIKey>
+MYWUZJCMWCOHBA-VIFPVBQESA-N
+
+>  <SMILES>
+C[C@@H](Cc1ccccc1)NC
+
+$$$$

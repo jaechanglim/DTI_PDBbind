@@ -1,0 +1,103 @@
+4RIV_LSA_A_302
+  RCSB PDB08012023103D
+Coordinates from PDB:4RIV:A:302 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+   -1.6180    4.9890   85.3780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0960    4.0290   86.2710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.7840    2.7090   86.0080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8450    0.8290   84.8220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8650    4.6250   84.2680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1920    1.2610   86.8690   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4960    0.1770   85.9360   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1700    0.2020   83.8110   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0330    2.3530   84.8960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5610    3.2950   84.0030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5670    1.1950   88.2020   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.6430    1.0960   86.9110   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  5  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  6  1  0  0  0  0
+  3  9  2  0  0  0  0
+  4  7  1  0  0  0  0
+  4  8  2  0  0  0  0
+  4  9  1  0  0  0  0
+  5 10  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 11  2  0  0  0  0
+  6 12  2  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+4RIV_LSA_A_302
+
+>  <ChemCompId>
+LSA
+
+>  <PdbId>
+4RIV
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O3 S
+
+>  <Name>
+1,2-BENZISOTHIAZOL-3(2H)-ONE 1,1-DIOXIDE
+
+>  <SystematicName>
+1,1-dioxo-1,2-benzothiazol-3-one
+
+>  <Synonyms>
+SACCHARIN
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H5 N O3 S
+
+>  <MolecularWeight>
+183.184
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C7H5NO3S/c9-7-5-3-1-2-4-6(5)12(10,11)8-7/h1-4H,(H,8,9)
+
+>  <InChIKey>
+CVHZOJJKTDOEJC-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)C(=O)NS2(=O)=O
+
+$$$$

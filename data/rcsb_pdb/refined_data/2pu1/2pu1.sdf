@@ -1,0 +1,97 @@
+2PU1_FSG_A_600
+  RCSB PDB08012017453D
+Coordinates from PDB:2PU1:A:600 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   26.6900   24.4750  -16.8690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   26.4250   25.8380  -16.3870   P 0  0  0  0  0  0  0  0  0  0  0  0
+   27.6630   26.5850  -16.1440   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.4870   25.9090  -15.2800   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.6410   26.7240  -17.7910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.8300   28.0530  -17.6240   F 0  0  0  0  0  0  0  0  0  0  0  0
+   24.1600   26.5140  -17.8150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4380   27.1010  -17.0480   O 0  0  0  0  0  0  0  0  0  0  0  0
+   23.7290   25.6730  -18.7300   N 0  0  0  0  0  0  0  0  0  0  0  0
+   22.4060   25.3770  -18.8540   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+2PU1_FSG_A_600
+
+>  <ChemCompId>
+FSG
+
+>  <PdbId>
+2PU1
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+600
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O5 P F
+
+>  <Name>
+[(1S)-1-FLUORO-2-(HYDROXYAMINO)-2-OXOETHYL]PHOSPHONIC ACID
+
+>  <SystematicName>
+[(1S)-1-fluoro-2-(hydroxyamino)-2-oxo-ethyl]phosphonic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H5 F N O5 P
+
+>  <MolecularWeight>
+173.037
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C2H5FNO5P/c3-1(2(5)4-6)10(7,8)9/h1,6H,(H,4,5)(H2,7,8,9)/t1-/m0/s1
+
+>  <InChIKey>
+PDPXHRBRYUQCQA-SFOWXEAESA-N
+
+>  <SMILES>
+[C@H](C(=O)NO)(F)P(=O)(O)O
+
+$$$$

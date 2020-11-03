@@ -1,0 +1,109 @@
+5NW7_9C2_A_502
+  RCSB PDB08022002363D
+Coordinates from PDB:5NW7:A:502 Model:1 without hydrogens
+ 16 15  0  0  0  0            999 V2000
+   21.8470   14.9130   10.5680   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.2180   16.5930    9.9010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.1370   16.9750   11.4020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.1320   17.4460    9.1960   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.2480   14.3870    9.5270   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.4620   18.2570   11.5510   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3200   20.7840   11.8300   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.1750   19.8910   10.4080   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.2470   19.4570   12.9290   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.3190   19.6400   11.6710   P 0  0  0  0  0  0  0  0  0  0  0  0
+   20.7050   15.1880    9.7320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.6050   14.1590    9.9700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.2030   12.9010    9.6630   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.4610   14.4230    9.0350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.5950   14.7490    7.8520   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1200   14.5270    8.7010   N 0  0  0  0  0  0  0  0  0  0  0  0
+ 15 14  2  0  0  0  0
+ 16  5  1  0  0  0  0
+ 14  5  1  0  0  0  0
+ 14 12  1  0  0  0  0
+  4  2  1  0  0  0  0
+ 13 12  1  0  0  0  0
+ 11  2  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11  1  1  0  0  0  0
+  2  3  1  0  0  0  0
+  8 10  2  0  0  0  0
+  3  6  1  0  0  0  0
+  6 10  1  0  0  0  0
+ 10  7  1  0  0  0  0
+ 10  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+5NW7_9C2_A_502
+
+>  <ChemCompId>
+9C2
+
+>  <PdbId>
+5NW7
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+502
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N2 O8 P
+
+>  <Name>
+[(2~{R},3~{R},4~{S})-5-diazanyl-2,3,4-tris(oxidanyl)-5-oxidanylidene-pentyl] dihydrogen phosphate
+
+>  <SystematicName>
+[(2~{R},3~{R},4~{S})-5-diazanyl-2,3,4-tris(oxidanyl)-5-oxidanylidene-pentyl] dihydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H13 N2 O8 P
+
+>  <MolecularWeight>
+260.139
+
+>  <ModifiedDate>
+2018-04-27
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H13N2O8P/c6-7-5(11)4(10)3(9)2(8)1-15-16(12,13)14/h2-4,8-10H,1,6H2,(H,7,11)(H2,12,13,14)/t2-,3-,4+/m1/s1
+
+>  <InChIKey>
+ZPAONOPLWIBTOD-JJYYJPOSSA-N
+
+>  <SMILES>
+C([C@H]([C@H]([C@@H](C(=O)NN)O)O)O)OP(=O)(O)O
+
+$$$$

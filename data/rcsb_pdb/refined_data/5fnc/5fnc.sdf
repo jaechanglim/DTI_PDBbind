@@ -1,0 +1,113 @@
+5FNC_IEE_A_1225
+  RCSB PDB08022001243D
+Coordinates from PDB:5FNC:A:1225 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+    0.6860   10.1820   26.1050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6390   10.1620   26.5130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0330    9.5030   28.0320  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6170   10.6290   25.7320   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2640   11.0940   24.5130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.2480   11.5290   23.7680   N 0  0  0  0  0  0  0  0  0  0  0  0
+    0.0230   11.1950   24.0730   N 0  0  0  0  0  0  0  0  0  0  0  0
+    0.9850   10.7230   24.8500   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.2690   10.6870   24.4930   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.1350   11.7760   23.9680   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.4260   11.2440   23.6570   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.6020    9.8660   23.3230   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.8480    9.3040   23.0010   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.9550   10.1110   23.0070   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1890    9.5570   22.7110   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.8000   11.4790   23.3530   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.5620   12.0460   23.6780   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  8  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11 17  2  0  0  0  0
+ 12 13  2  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 14 16  2  0  0  0  0
+ 16 17  1  0  0  0  0
+M  END
+>  <InstanceId>
+5FNC_IEE_A_1225
+
+>  <ChemCompId>
+IEE
+
+>  <PdbId>
+5FNC
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1225
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N4 Cl
+
+>  <Name>
+6-CHLORO-4-N-[(4-METHYLPHENYL)METHYL]PYRIMIDINE- 2,4-DIAMINE
+
+>  <SystematicName>
+6-chloranyl-N4-[(4-methylphenyl)methyl]pyrimidine-2,4-diamine
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C12 H13 Cl N4
+
+>  <MolecularWeight>
+248.711
+
+>  <ModifiedDate>
+2016-11-18
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H13ClN4/c1-8-2-4-9(5-3-8)7-15-11-6-10(13)16-12(14)17-11/h2-6H,7H2,1H3,(H3,14,15,16,17)
+
+>  <InChIKey>
+NOJKOTBYOAEOFZ-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1ccc(cc1)CNc2cc(nc(n2)N)Cl
+
+$$$$

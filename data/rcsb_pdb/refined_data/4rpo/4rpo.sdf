@@ -1,0 +1,98 @@
+4RPO_T6C_A_401
+  RCSB PDB08012023113D
+Coordinates from PDB:4RPO:A:401 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+  -33.0760  -10.9110   20.0170  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.8930  -12.1830   20.0640   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -30.5600  -11.8800   20.2480   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -29.6380  -12.9020   20.3280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.9720  -12.5140   20.5490  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  -30.1580  -10.5400   20.3720   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.2970  -13.4920   19.9250   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.3550  -14.4890   20.0020   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.9020  -16.1140   19.8720  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  -30.0230  -14.2210   20.2090   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  9  8  1  0  0  0  0
+  7  2  2  0  0  0  0
+  7  8  1  0  0  0  0
+  2  3  1  0  0  0  0
+  8 10  2  0  0  0  0
+  3  6  1  0  0  0  0
+  3  4  2  0  0  0  0
+ 10  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+M  END
+>  <InstanceId>
+4RPO_T6C_A_401
+
+>  <ChemCompId>
+T6C
+
+>  <PdbId>
+4RPO
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O Cl3
+
+>  <Name>
+2,4,6-trichlorophenol
+
+>  <SystematicName>
+2,4,6-tris(chloranyl)phenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H3 Cl3 O
+
+>  <MolecularWeight>
+197.446
+
+>  <ModifiedDate>
+2013-08-30
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H3Cl3O/c7-3-1-4(8)6(10)5(9)2-3/h1-2,10H
+
+>  <InChIKey>
+LINPIYWFGCPVIE-UHFFFAOYSA-N
+
+>  <SMILES>
+c1c(cc(c(c1Cl)O)Cl)Cl
+
+$$$$

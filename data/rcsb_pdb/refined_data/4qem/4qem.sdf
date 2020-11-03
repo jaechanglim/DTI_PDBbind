@@ -1,0 +1,102 @@
+4QEM_HC4_A_202
+  RCSB PDB08012023003D
+Coordinates from PDB:4QEM:A:202 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+    5.2640  -21.0250   -6.5830   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.0020  -21.6020   -5.7290   O 0  0  0  0  0  0  0  0  0  0  0  0
+    5.4940  -21.1250   -7.8480   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0780  -20.3040   -6.1040   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.2870  -20.7450   -5.1330   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.1240  -19.8870   -4.7600   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7780  -19.8190   -3.3970   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.7060  -18.9680   -3.0110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0300  -18.2910   -4.0100   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.2890  -18.3800   -5.3760   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.4100  -19.1610   -5.7320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0370  -17.5000   -3.5620   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  2  0  0  0  0
+  6 11  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+  9 12  1  0  0  0  0
+ 10 11  2  0  0  0  0
+M  END
+>  <InstanceId>
+4QEM_HC4_A_202
+
+>  <ChemCompId>
+HC4
+
+>  <PdbId>
+4QEM
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+202
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 O3
+
+>  <Name>
+4'-HYDROXYCINNAMIC ACID
+
+>  <SystematicName>
+(E)-3-(4-hydroxyphenyl)prop-2-enoic acid
+
+>  <Synonyms>
+PARA-COUMARIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H8 O3
+
+>  <MolecularWeight>
+164.158
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H8O3/c10-8-4-1-7(2-5-8)3-6-9(11)12/h1-6,10H,(H,11,12)/b6-3+
+
+>  <InChIKey>
+NGSWKAQJJWESNS-ZZXKWVIFSA-N
+
+>  <SMILES>
+c1cc(ccc1\C=C\C(=O)O)O
+
+$$$$

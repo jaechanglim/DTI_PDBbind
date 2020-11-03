@@ -1,0 +1,115 @@
+3Q2J_CKI_A_300
+  RCSB PDB08012020123D
+Coordinates from PDB:3Q2J:A:300 Model:1 without hydrogens
+ 18 19  0  0  0  0            999 V2000
+   29.2340   10.7470   69.9760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.8390   11.4140   71.0850   N 0  0  0  0  0  0  0  0  0  0  0  0
+   27.6260   11.1500   71.6580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.7850   10.1940   71.1220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.3390    8.3940   69.3230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.8400    7.9800   69.9300  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   26.7830    7.6990   68.1600   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.0050    8.0030   67.6070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.8420    9.0130   68.1990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   28.4050    9.7360   69.3860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   27.1770    9.4410   69.9370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.3800    9.3200   67.4130   S 0  0  0  0  0  0  0  0  0  0  0  0
+   31.4990    8.9680   68.3160   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.4760   10.7980   67.0700   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.4370    8.4430   66.0270   N 0  0  0  0  0  0  0  0  0  0  0  0
+   31.0630    7.1270   66.2590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.7990    6.4130   67.5980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   31.5860    5.2200   67.9390   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4 11  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  2  0  0  0  0
+  5 11  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+  9 12  1  0  0  0  0
+ 10 11  2  0  0  0  0
+ 12 13  2  0  0  0  0
+ 12 14  2  0  0  0  0
+ 12 15  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 16 17  1  0  0  0  0
+ 17 18  1  0  0  0  0
+M  END
+>  <InstanceId>
+3Q2J_CKI_A_300
+
+>  <ChemCompId>
+CKI
+
+>  <PdbId>
+3Q2J
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+300
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N3 O2 S Cl
+
+>  <Name>
+N-(2-AMINOETHYL)-5-CHLOROISOQUINOLINE-8-SULFONAMIDE
+
+>  <SystematicName>
+N-(2-aminoethyl)-5-chloro-isoquinoline-8-sulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H12 Cl N3 O2 S
+
+>  <MolecularWeight>
+285.75
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H12ClN3O2S/c12-10-1-2-11(18(16,17)15-6-4-13)9-7-14-5-3-8(9)10/h1-3,5,7,15H,4,6,13H2
+
+>  <InChIKey>
+OGKYMFFYOWUTKV-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c2ccncc2c1S(=O)(=O)NCCN)Cl
+
+$$$$

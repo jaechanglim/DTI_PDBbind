@@ -1,0 +1,102 @@
+3T2Q_149_A_2001
+  RCSB PDB08012020313D
+Coordinates from PDB:3T2Q:A:2001 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+  -11.9280  -27.2400  -25.5050   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.8350  -28.1550  -25.0040   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.0170  -28.7070  -26.1670   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.9060  -29.1120  -27.3420   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.7940  -27.9640  -27.8250   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.7100  -28.3930  -28.9700   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.2640  -26.2620  -24.8630   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.9570  -27.4860  -24.0850   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.2660  -29.8330  -25.6960   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.7350  -30.2020  -26.9470   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.6280  -27.5010  -26.7590   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.9660  -28.9120  -30.0820   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  7  2  0  0  0  0
+  1 11  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+3T2Q_149_A_2001
+
+>  <ChemCompId>
+149
+
+>  <PdbId>
+3T2Q
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O6
+
+>  <Name>
+D-galactonolactone
+
+>  <SystematicName>
+(3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-one
+
+>  <Synonyms>
+(3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-one
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C6 H10 O6
+
+>  <MolecularWeight>
+178.14
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H10O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-5,7-10H,1H2/t2-,3+,4+,5-/m1/s1
+
+>  <InChIKey>
+PHOQVHQSTUBQQK-MGCNEYSASA-N
+
+>  <SMILES>
+C([C@@H]1[C@@H]([C@@H]([C@H](C(=O)O1)O)O)O)O
+
+$$$$

@@ -1,0 +1,103 @@
+1M5W_DXP_A_1001
+  RCSB PDB08012015263D
+Coordinates from PDB:1M5W:A:1001 Model:1 without hydrogens
+ 13 12  0  0  0  0            999 V2000
+   28.4280    0.8800   36.3340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.3490    0.8640   35.0910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.1260    2.0340   34.9090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   30.7120    2.9560   35.7270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   32.1430    2.5180   35.8320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   29.3820   -0.0770   34.3100   O 0  0  0  0  0  0  0  0  0  0  0  0
+   29.4470    2.7240   34.0760   O 0  0  0  0  0  0  0  0  0  0  0  0
+   30.8490    4.3520   35.3480   O 0  0  0  0  0  0  0  0  0  0  0  0
+   33.1620    3.4640   36.1130   O 0  0  0  0  0  0  0  0  0  0  0  0
+   34.6060    3.1980   36.2560   P 0  0  0  0  0  0  0  0  0  0  0  0
+   35.2570    4.5790   36.5730   O 0  0  0  0  0  0  0  0  0  0  0  0
+   35.0110    2.5260   34.8630   O 0  0  0  0  0  0  0  0  0  0  0  0
+   34.6210    2.1850   37.5150   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  6  2  0  0  0  0
+  3  4  1  0  0  0  0
+  3  7  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  8  1  0  0  0  0
+  5  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 10 13  2  0  0  0  0
+M  END
+>  <InstanceId>
+1M5W_DXP_A_1001
+
+>  <ChemCompId>
+DXP
+
+>  <PdbId>
+1M5W
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O7 P
+
+>  <Name>
+1-DEOXY-D-XYLULOSE-5-PHOSPHATE
+
+>  <SystematicName>
+[(2R,3S)-2,3-dihydroxy-4-oxo-pentyl] dihydrogen phosphate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H11 O7 P
+
+>  <MolecularWeight>
+214.11
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H11O7P/c1-3(6)5(8)4(7)2-12-13(9,10)11/h4-5,7-8H,2H2,1H3,(H2,9,10,11)/t4-,5-/m1/s1
+
+>  <InChIKey>
+AJPADPZSRRUGHI-RFZPGFLSSA-N
+
+>  <SMILES>
+CC(=O)[C@H]([C@@H](COP(=O)(O)O)O)O
+
+$$$$

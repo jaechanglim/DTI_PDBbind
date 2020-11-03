@@ -1,0 +1,106 @@
+6GNW_F52_C_201
+  RCSB PDB08022004503D
+Coordinates from PDB:6GNW:C:201 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+  -18.0600   -3.0850  -38.4050   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.9020   -3.6660  -38.3030   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.3070   -4.1500  -39.2720   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.3000   -3.7280  -36.9270   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.2090   -2.8250  -36.8070   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.1870   -2.9500  -37.7240   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.2350   -2.4180  -38.9990   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.1740   -2.5790  -39.8700   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.2870   -1.8900  -41.4590  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.0360   -3.2820  -39.4770   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.6970   -3.4950  -40.5560  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.9660   -3.8310  -38.1880   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.0550   -3.6530  -37.3230   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.9820   -4.3260  -35.7260  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  9  8  1  0  0  0  0
+ 11 10  1  0  0  0  0
+  8 10  2  0  0  0  0
+  8  7  1  0  0  0  0
+ 10 12  1  0  0  0  0
+  3  2  2  0  0  0  0
+  7  6  2  0  0  0  0
+  1  2  1  0  0  0  0
+  2  4  1  0  0  0  0
+ 12 13  2  0  0  0  0
+  6 13  1  0  0  0  0
+  6  5  1  0  0  0  0
+ 13 14  1  0  0  0  0
+  4  5  1  0  0  0  0
+M  END
+>  <InstanceId>
+6GNW_F52_C_201
+
+>  <ChemCompId>
+F52
+
+>  <PdbId>
+6GNW
+
+>  <ChainId>
+C
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O3 Cl3
+
+>  <Name>
+2-[2,4,5-tris(chloranyl)phenoxy]ethanoic acid
+
+>  <SystematicName>
+2-[2,4,5-tris(chloranyl)phenoxy]ethanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H5 Cl3 O3
+
+>  <MolecularWeight>
+255.482
+
+>  <ModifiedDate>
+2018-07-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H5Cl3O3/c9-4-1-6(11)7(2-5(4)10)14-3-8(12)13/h1-2H,3H2,(H,12,13)
+
+>  <InChIKey>
+SMYMJHWAQXWPDB-UHFFFAOYSA-N
+
+>  <SMILES>
+c1c(c(cc(c1Cl)Cl)Cl)OCC(=O)O
+
+$$$$

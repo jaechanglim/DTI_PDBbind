@@ -1,0 +1,108 @@
+6D9X_FZM_A_502
+  RCSB PDB08022004213D
+Coordinates from PDB:6D9X:A:502 Model:1 without hydrogens
+ 14 16  0  0  0  0            999 V2000
+   -9.7590   24.4710    1.9190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.0450   26.5180    0.8760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.9450   25.5940    1.9060   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.6700   24.2810    0.8960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.9630   26.3300   -0.1470   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.4590   23.8360   -1.4950   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.7940   24.9830   -1.2360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.2450   25.2870   -2.9220   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.3280   24.0410   -2.5300   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.2950   25.9380   -2.1360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.7690   25.2010   -0.1430   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.0990   25.5250   -3.9520   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.3010   23.3590   -3.3370   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.7890   24.3350   -4.2510   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 14 12  1  0  0  0  0
+ 14 13  1  0  0  0  0
+ 12  8  1  0  0  0  0
+ 13  9  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+  9  6  2  0  0  0  0
+ 10  7  2  0  0  0  0
+  6  7  1  0  0  0  0
+  7 11  1  0  0  0  0
+  5 11  2  0  0  0  0
+  5  2  1  0  0  0  0
+ 11  4  1  0  0  0  0
+  2  3  2  0  0  0  0
+  4  1  2  0  0  0  0
+  3  1  1  0  0  0  0
+M  END
+>  <InstanceId>
+6D9X_FZM_A_502
+
+>  <ChemCompId>
+FZM
+
+>  <PdbId>
+6D9X
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+502
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N2
+
+>  <Name>
+2-phenyl-6,7-dihydro-5H-pyrrolo[1,2-a]imidazole
+
+>  <SystematicName>
+2-phenyl-6,7-dihydro-5~{H}-pyrrolo[1,2-a]imidazole
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H12 N2
+
+>  <MolecularWeight>
+184.237
+
+>  <ModifiedDate>
+2018-08-31
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H12N2/c1-2-5-10(6-3-1)11-9-14-8-4-7-12(14)13-11/h1-3,5-6,9H,4,7-8H2
+
+>  <InChIKey>
+PPYLPCSLYXBQRM-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)c2cn3c(n2)CCC3
+
+$$$$

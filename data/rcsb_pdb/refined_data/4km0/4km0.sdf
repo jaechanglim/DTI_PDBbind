@@ -1,0 +1,113 @@
+4KM0_CP6_A_201
+  RCSB PDB08012022163D
+Coordinates from PDB:4KM0:A:201 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+    2.4240   -1.7970    0.3350   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0380   -2.2150   -0.8020   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8430   -2.7720    1.0950   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8670   -4.1600    0.7880   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4790   -4.4960   -0.3900   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9790   -3.5270   -1.2070   N 0  0  0  0  0  0  0  0  0  0  0  0
+    1.3090   -5.1380    1.7200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0500   -5.1380    2.1050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5340   -6.0670    3.0670   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.4260   -6.9640    3.6340   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8110   -6.9680    3.3340   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.1880   -6.0620    2.3300   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.2210   -2.3370    2.2350   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.6380   -1.3800   -1.5720   N 0  0  0  0  0  0  0  0  0  0  0  0
+    2.5710   -5.9080   -0.9780   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0500   -6.3660   -1.0000   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1810   -8.1160    4.7940  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  2  0  0  0  0
+  2  6  2  0  0  0  0
+  2 14  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 13  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 15  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7 12  2  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  2  0  0  0  0
+ 10 17  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 15 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+4KM0_CP6_A_201
+
+>  <ChemCompId>
+CP6
+
+>  <PdbId>
+4KM0
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+201
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N4 Cl
+
+>  <Name>
+5-(4-CHLORO-PHENYL)-6-ETHYL-PYRIMIDINE-2,4-DIAMINE
+
+>  <SystematicName>
+5-(4-chlorophenyl)-6-ethyl-pyrimidine-2,4-diamine
+
+>  <Synonyms>
+PYRIMETHAMINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H13 Cl N4
+
+>  <MolecularWeight>
+248.711
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H13ClN4/c1-2-9-10(11(14)17-12(15)16-9)7-3-5-8(13)6-4-7/h3-6H,2H2,1H3,(H4,14,15,16,17)
+
+>  <InChIKey>
+WKSAUQYGYAYLPV-UHFFFAOYSA-N
+
+>  <SMILES>
+CCc1c(c(nc(n1)N)N)c2ccc(cc2)Cl
+
+$$$$

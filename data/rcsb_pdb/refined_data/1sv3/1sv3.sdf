@@ -1,0 +1,100 @@
+1SV3_ANN_A_347
+  RCSB PDB08012015583D
+Coordinates from PDB:1SV3:A:347 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   46.4200   30.7860    7.8740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   46.5350   30.4990    6.4750   O 0  0  0  0  0  0  0  0  0  0  0  0
+   47.5800   30.9340    5.6840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   47.6250   30.5410    4.3510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   48.6570   30.9560    3.5140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   49.6670   31.7750    4.0070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   49.6250   32.1760    5.3340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   48.5940   31.7570    6.1740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.7940   32.2310    3.1220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.6910   32.9540    3.5400   O 0  0  0  0  0  0  0  0  0  0  0  0
+   50.8170   31.8340    1.8630   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6  9  1  0  0  0  0
+  7  8  2  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  2  0  0  0  0
+M  END
+>  <InstanceId>
+1SV3_ANN_A_347
+
+>  <ChemCompId>
+ANN
+
+>  <PdbId>
+1SV3
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+347
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O3
+
+>  <Name>
+4-METHOXYBENZOIC ACID
+
+>  <SystematicName>
+4-methoxybenzoic acid
+
+>  <Synonyms>
+P-ANISIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H8 O3
+
+>  <MolecularWeight>
+152.147
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H8O3/c1-11-7-4-2-6(3-5-7)8(9)10/h2-5H,1H3,(H,9,10)
+
+>  <InChIKey>
+ZEYHEAKUIGZSGI-UHFFFAOYSA-N
+
+>  <SMILES>
+COc1ccc(cc1)C(=O)O
+
+$$$$

@@ -1,0 +1,104 @@
+1TX7_4CM_A_247
+  RCSB PDB08012016033D
+Coordinates from PDB:1TX7:A:247 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   -1.5920   14.6610   50.8870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1280   10.8900   47.1070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8390   13.2410   50.9130   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.2370   12.7330   46.1320   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3640   12.4240   49.8530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8340   16.7550   52.0190   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7490   14.9590   53.0020   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6400   13.0160   48.7520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4020   14.4620   48.7240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8770   15.2620   49.7980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0790   15.4950   52.0130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0360   11.9180   47.4190   P 0  0  0  0  0  0  0  0  0  0  0  0
+    1.5150   11.1200   48.0460   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  2  0  0  0  0
+  1 10  1  0  0  0  0
+  1 11  1  0  0  0  0
+  2 12  1  0  0  0  0
+  3  5  1  0  0  0  0
+  4 12  2  0  0  0  0
+  5  8  2  0  0  0  0
+  6 11  1  0  0  0  0
+  7 11  2  0  0  0  0
+  8  9  1  0  0  0  0
+  8 12  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+1TX7_4CM_A_247
+
+>  <ChemCompId>
+4CM
+
+>  <PdbId>
+1TX7
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+247
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N2 O2 P
+
+>  <Name>
+(4-CARBAMIMIDOYLPHENYL)-METHYL-PHOSPHINIC ACID
+
+>  <SystematicName>
+(4-carbamimidoylphenyl)-methyl-phosphinic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H11 N2 O2 P
+
+>  <MolecularWeight>
+198.159
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H11N2O2P/c1-13(11,12)7-4-2-6(3-5-7)8(9)10/h2-5H,1H3,(H3,9,10)(H,11,12)
+
+>  <InChIKey>
+CVABPMXIKVDCLF-UHFFFAOYSA-N
+
+>  <SMILES>
+C[P@](=O)(c1ccc(cc1)C(=N)N)O
+
+$$$$

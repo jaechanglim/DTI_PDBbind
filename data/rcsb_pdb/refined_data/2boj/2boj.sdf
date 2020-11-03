@@ -1,0 +1,100 @@
+2BOJ_ARW_A_1115
+  RCSB PDB08012016423D
+Coordinates from PDB:2BOJ:A:1115 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   22.4520   22.4300   30.0970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.7080   23.1710   28.9830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.7800   22.1860   28.2660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.8100   21.5500   29.2530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.5100   20.9630   30.4760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.2910   21.4520   29.4690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.6180   23.7930   28.0500   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.0100   22.9310   27.2990   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.9120   22.5670   29.7170   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.4680   21.8920   31.0140   O 0  0  0  0  0  0  0  0  0  0  0  0
+   24.1900   20.7990   30.3800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+2BOJ_ARW_A_1115
+
+>  <ChemCompId>
+ARW
+
+>  <PdbId>
+2BOJ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1115
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O5
+
+>  <Name>
+methyl beta-D-arabinopyranoside
+
+>  <SystematicName>
+(2R,3S,4R,5R)-2-methoxyoxane-3,4,5-triol
+
+>  <Synonyms>
+methyl beta-D-arabinoside; methyl D-arabinoside; methyl arabinoside
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C6 H12 O5
+
+>  <MolecularWeight>
+164.156
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+SEJ
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H12O5/c1-10-6-5(9)4(8)3(7)2-11-6/h3-9H,2H2,1H3/t3-,4-,5+,6-/m1/s1
+
+>  <InChIKey>
+ZBDGHWFPLXXWRD-ARQDHWQXSA-N
+
+>  <SMILES>
+CO[C@H]1[C@H]([C@@H]([C@@H](CO1)O)O)O
+
+$$$$

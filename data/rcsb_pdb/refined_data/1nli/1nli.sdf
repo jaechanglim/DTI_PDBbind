@@ -1,0 +1,99 @@
+1NLI_ADE_A_248
+  RCSB PDB08012015333D
+Coordinates from PDB:1NLI:A:248 Model:1 without hydrogens
+ 10 11  0  0  0  0            999 V2000
+    4.5680   32.5340   -0.2290   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.2820   32.6900   -0.6910   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8070   33.9300   -0.6340   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.8740   34.6390   -0.0940   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0330   36.0070    0.1700   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9950   36.8490   -0.0290   N 0  0  0  0  0  0  0  0  0  0  0  0
+    5.2400   36.4250    0.6620   N 0  0  0  0  0  0  0  0  0  0  0  0
+    6.1810   35.4860    0.8660   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.1060   34.1520    0.6520   N 0  0  0  0  0  0  0  0  0  0  0  0
+    4.9520   33.7900    0.1580   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1NLI_ADE_A_248
+
+>  <ChemCompId>
+ADE
+
+>  <PdbId>
+1NLI
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+248
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N5
+
+>  <Name>
+ADENINE
+
+>  <SystematicName>
+9H-purin-6-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H5 N5
+
+>  <MolecularWeight>
+135.127
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H5N5/c6-4-3-5(9-1-7-3)10-2-8-4/h1-2H,(H3,6,7,8,9,10)
+
+>  <InChIKey>
+GFFGJBXGBJISGV-UHFFFAOYSA-N
+
+>  <SMILES>
+c1[nH]c2c(n1)c(ncn2)N
+
+$$$$

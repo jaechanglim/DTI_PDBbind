@@ -1,0 +1,104 @@
+3CZV_AZM_A_263
+  RCSB PDB08012018473D
+Coordinates from PDB:3CZV:A:263 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   33.8190   59.3640   18.1560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   35.4080   60.0500   19.7330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.0940   61.9150   21.1990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   37.3070   62.4470   21.8940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   33.0630   59.1140   15.5560   N 0  0  0  0  0  0  0  0  0  0  0  0
+   35.6360   58.8370   19.2900   N 0  0  0  0  0  0  0  0  0  0  0  0
+   34.6980   58.4400   18.3630   N 0  0  0  0  0  0  0  0  0  0  0  0
+   36.2400   60.6350   20.6680   N 0  0  0  0  0  0  0  0  0  0  0  0
+   31.9450   57.8730   17.3260   O 0  0  0  0  0  0  0  0  0  0  0  0
+   31.6640   60.3250   17.1420   O 0  0  0  0  0  0  0  0  0  0  0  0
+   35.0410   62.5320   21.0950   O 0  0  0  0  0  0  0  0  0  0  0  0
+   32.4740   59.1560   17.0090   S 0  0  0  0  0  0  0  0  0  0  0  0
+   34.0170   60.8120   19.0530   S 0  0  0  0  0  0  0  0  0  0  0  0
+  1  7  2  0  0  0  0
+  1 12  1  0  0  0  0
+  1 13  1  0  0  0  0
+  2  6  2  0  0  0  0
+  2  8  1  0  0  0  0
+  2 13  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  3 11  2  0  0  0  0
+  5 12  1  0  0  0  0
+  6  7  1  0  0  0  0
+  9 12  2  0  0  0  0
+ 10 12  2  0  0  0  0
+M  END
+>  <InstanceId>
+3CZV_AZM_A_263
+
+>  <ChemCompId>
+AZM
+
+>  <PdbId>
+3CZV
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+263
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N4 O3 S2
+
+>  <Name>
+5-ACETAMIDO-1,3,4-THIADIAZOLE-2-SULFONAMIDE
+
+>  <SystematicName>
+N-(5-sulfamoyl-1,3,4-thiadiazol-2-yl)ethanamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H6 N4 O3 S2
+
+>  <MolecularWeight>
+222.245
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H6N4O3S2/c1-2(9)6-3-7-8-4(12-3)13(5,10)11/h1H3,(H2,5,10,11)(H,6,7,9)
+
+>  <InChIKey>
+BZKPWHYZMXOIDC-UHFFFAOYSA-N
+
+>  <SMILES>
+CC(=O)Nc1nnc(s1)S(=O)(=O)N
+
+$$$$

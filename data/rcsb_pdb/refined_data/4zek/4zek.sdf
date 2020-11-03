@@ -1,0 +1,112 @@
+4ZEK_LAH_A_601
+  RCSB PDB08022000373D
+Coordinates from PDB:4ZEK:A:601 Model:1 without hydrogens
+ 17 17  0  0  0  0            999 V2000
+  -13.3670  -26.2370   21.8030   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.8510  -26.0020   22.0710   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.2140  -25.7370   23.4990   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.6860  -26.9100   21.4320   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.6860  -26.4640   20.3100   P 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.8670  -27.4020   20.3190   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.1490  -25.0690   20.5760   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.9970  -26.4420   18.8850   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.8420  -27.5880   18.0160   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.4510  -27.9270   17.8610   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.8700  -28.3960   19.1450   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.1440  -28.8610   16.8420   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.5300  -30.1940   17.2210   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.8340  -28.5570   15.5280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.2020  -28.2330   15.7100   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.4390  -27.2340   16.6730   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.7920  -27.0330   16.7710   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 14 15  1  0  0  0  0
+ 14 12  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 16 17  1  0  0  0  0
+ 16  9  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 10  1  0  0  0  0
+ 10  9  1  0  0  0  0
+ 10 11  1  0  0  0  0
+  9  8  1  0  0  0  0
+  8  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  5  7  1  0  0  0  0
+  5  4  1  0  0  0  0
+  4  2  1  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+M  END
+>  <InstanceId>
+4ZEK_LAH_A_601
+
+>  <ChemCompId>
+LAH
+
+>  <PdbId>
+4ZEK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+601
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O8 P
+
+>  <Name>
+2-O-[(R)-hydroxy(propan-2-yloxy)phosphoryl]-alpha-L-arabinopyranose
+
+>  <SystematicName>
+propan-2-yl [(2R,3R,4S,5S)-2,4,5-tris(oxidanyl)oxan-3-yl] hydrogen phosphate
+
+>  <Synonyms>
+2-O-[(R)-hydroxy(propan-2-yloxy)phosphoryl]-alpha-L-arabinose; 2-O-[(R)-hydroxy(propan-2-yloxy)phosphoryl]-L-arabinose; 2-O-[(R)-hydroxy(propan-2-yloxy)phosphoryl]-arabinose
+
+>  <Type>
+L-saccharide, alpha linking
+
+>  <Formula>
+C8 H17 O8 P
+
+>  <MolecularWeight>
+272.19
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+ARA
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H17O8P/c1-4(2)15-17(12,13)16-7-6(10)5(9)3-14-8(7)11/h4-11H,3H2,1-2H3,(H,12,13)/t5-,6-,7+,8+/m0/s1
+
+>  <InChIKey>
+PYOXTDKMFCLRNS-RULNZFCNSA-N
+
+>  <SMILES>
+CC(C)OP(=O)(O)O[C@@H]1[C@H]([C@H](CO[C@H]1O)O)O
+
+$$$$

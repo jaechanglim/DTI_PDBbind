@@ -1,0 +1,115 @@
+5KA1_OTA_A_301
+  RCSB PDB08022002013D
+Coordinates from PDB:5KA1:A:301 Model:1 without hydrogens
+ 18 19  0  0  0  0            999 V2000
+    6.9520  117.6980   -6.5670   N 0  0  0  0  0  0  0  0  0  0  0  0
+    6.8800  118.2870   -5.2480   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.5060  118.7250   -4.7590   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.4010  118.2150   -5.5120   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.5650  117.3220   -6.6830   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.9050  116.7200   -6.8520   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.0090  119.6530   -3.5850   S 0  0  0  0  0  0  0  0  0  0  0  0
+    3.4510  119.5730   -3.7690   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0980  118.7620   -4.8590   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.6450  118.4970   -5.3530   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.6690  118.8160   -4.6230   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.4760  117.9930   -6.5370   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.3960  120.1520   -3.0480   N 0  0  0  0  0  0  0  0  0  0  0  0
+    2.5930  121.0030   -1.9750   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.2990  121.4910   -1.3720   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.1800  122.7110   -0.9940   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.3600  120.6560   -1.2920   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.7340  121.3220   -1.5660   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  7  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  6  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 13  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10 12  2  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 14 18  2  0  0  0  0
+ 15 16  1  0  0  0  0
+ 15 17  2  0  0  0  0
+M  END
+>  <InstanceId>
+5KA1_OTA_A_301
+
+>  <ChemCompId>
+OTA
+
+>  <PdbId>
+5KA1
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O5 S
+
+>  <Name>
+2-(OXALYL-AMINO)-4,5,6,7-TETRAHYDRO-THIENO[2,3-C]PYRIDINE-3-CARBOXYLIC ACID
+
+>  <SystematicName>
+2-(carboxycarbonylamino)-4,5,6,7-tetrahydrothieno[5,4-c]pyridine-3-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H10 N2 O5 S
+
+>  <MolecularWeight>
+270.262
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H10N2O5S/c13-7(10(16)17)12-8-6(9(14)15)4-1-2-11-3-5(4)18-8/h11H,1-3H2,(H,12,13)(H,14,15)(H,16,17)
+
+>  <InChIKey>
+ZIBMATWHOAGNTR-UHFFFAOYSA-N
+
+>  <SMILES>
+C1CNCc2c1c(c(s2)NC(=O)C(=O)O)C(=O)O
+
+$$$$

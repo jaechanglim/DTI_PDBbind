@@ -1,0 +1,121 @@
+5N0F_7K2_A_401
+  RCSB PDB08022002273D
+Coordinates from PDB:5N0F:A:401 Model:1 without hydrogens
+ 21 22  0  0  0  0            999 V2000
+    4.1020  -33.5750   -4.8190   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.2090  -32.8280   -5.6760   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4420  -31.8330   -4.8330   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.6560  -32.5100   -3.8260   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.3980  -30.7890   -4.2600   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.6680  -29.7110   -3.6390   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.2690  -30.1970   -5.3830   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.2700  -29.1680   -4.8620   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.9180  -31.1830   -6.2160   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0100  -32.1270   -6.8090   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9010  -31.4060   -8.0260   S 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0160  -30.7440   -9.2450   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.1370  -31.5840  -10.5250   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8280  -31.4480  -11.3170   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9670  -32.2400  -12.5580   N 0  0  0  0  0  0  0  0  0  0  0  0
+    4.0930  -31.9050  -13.4960   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3890  -32.0030  -12.6990   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.4830  -31.6390  -13.5950   O 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3200  -31.1610  -11.4160   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.5910  -31.2960  -10.6820   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.0930  -29.8050   -3.8910   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 18 17  1  0  0  0  0
+ 16 17  1  0  0  0  0
+ 16 15  1  0  0  0  0
+ 17 19  1  0  0  0  0
+ 15 14  1  0  0  0  0
+ 19 20  1  0  0  0  0
+ 19 13  1  0  0  0  0
+ 14 13  1  0  0  0  0
+ 13 12  1  0  0  0  0
+ 12 11  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 10  9  1  0  0  0  0
+ 10  2  1  0  0  0  0
+  9  7  1  0  0  0  0
+  2  1  1  0  0  0  0
+  2  3  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  5  1  0  0  0  0
+  3  5  1  0  0  0  0
+  3  4  1  0  0  0  0
+  5  6  1  0  0  0  0
+  8 21  1  0  0  0  0
+M  END
+>  <InstanceId>
+5N0F_7K2_A_401
+
+>  <ChemCompId>
+7K2
+
+>  <PdbId>
+5N0F
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N O7 S
+
+>  <Name>
+[(3S,4R,5R)-4,5-dihydroxypiperidin-3-yl]methyl 1-thio-alpha-D-mannopyranoside
+
+>  <SystematicName>
+(2~{R},3~{S},4~{S},5~{S},6~{R})-2-[[(3~{S},4~{R},5~{R})-4,5-bis(oxidanyl)piperidin-3-yl]methylsulfanyl]-6-(hydroxymethy l)oxane-3,4,5-triol
+
+>  <Synonyms>
+(2~{R},3~{S},4~{S},5~{S},6~{R})-2-[[(3~{S},4~{R},5~{R})-4,5-bis(oxidanyl)piperidin-3-yl]methylsulfanyl]-6-(hydroxymethy  l)oxane-3,4,5-triol; isofagomine-thiol-alpha-D-mannopyranoside; [(3S,4R,5R)-4,5-dihydroxypiperidin-3-yl]methyl 1-thio-alpha-D-mannoside; [(3S,4R,5R)-4,5-dihydroxypiperidin-3-yl]methyl 1-thio-D-mannoside; [(3S,4R,5R)-4,5-dihydroxypiperidin-3-yl]methyl 1-thio-mannoside
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C12 H23 N O7 S
+
+>  <MolecularWeight>
+325.379
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H23NO7S/c14-3-7-9(17)10(18)11(19)12(20-7)21-4-5-1-13-2-6(15)8(5)16/h5-19H,1-4H2/t5-,6-,7-,8-,9-,10+,11+,12-/m1/s1
+
+>  <InChIKey>
+KDPQETHZRPVZAI-TYMLGRTHSA-N
+
+>  <SMILES>
+C1[C@@H]([C@H]([C@@H](CN1)O)O)CS[C@@H]2[C@H]([C@H]([C@@H]([C@H](O2)CO)O)O)O
+
+$$$$

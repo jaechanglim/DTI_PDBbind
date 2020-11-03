@@ -1,0 +1,98 @@
+5TUO_1SA_A_303
+  RCSB PDB08022003073D
+Coordinates from PDB:5TUO:A:303 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+    9.0790  -39.4540  -76.7550   S 0  0  0  0  0  0  0  0  0  0  0  0
+    7.9800  -40.3400  -76.5860   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.0450  -38.2280  -77.4700   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.5870  -39.0700  -75.2260   N 0  0  0  0  0  0  0  0  0  0  0  0
+   10.3080  -41.6220  -78.0260   N 0  0  0  0  0  0  0  0  0  0  0  0
+   11.3210  -42.1720  -78.5380   N 0  0  0  0  0  0  0  0  0  0  0  0
+   12.0770  -40.0160  -77.7840   S 0  0  0  0  0  0  0  0  0  0  0  0
+   10.3530  -40.4120  -77.5080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.5010  -41.5670  -78.5750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.7140  -42.0070  -79.0850   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  2  0  0  0  0
+  1  4  1  0  0  0  0
+  1  8  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  8  2  0  0  0  0
+  6  9  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+5TUO_1SA_A_303
+
+>  <ChemCompId>
+1SA
+
+>  <PdbId>
+5TUO
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N4 O2 S2
+
+>  <Name>
+5-AMINO-1,3,4-THIADIAZOLE-2-SULFONAMIDE
+
+>  <SystematicName>
+5-amino-1,3,4-thiadiazole-2-sulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H4 N4 O2 S2
+
+>  <MolecularWeight>
+180.209
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H4N4O2S2/c3-1-5-6-2(9-1)10(4,7)8/h(H2,3,5)(H2,4,7,8)
+
+>  <InChIKey>
+VGMVBPQOACUDRU-UHFFFAOYSA-N
+
+>  <SMILES>
+c1(nnc(s1)S(=O)(=O)N)N
+
+$$$$

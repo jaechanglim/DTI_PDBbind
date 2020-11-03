@@ -1,0 +1,107 @@
+1G98_PA5_A_558
+  RCSB PDB08012014583D
+Coordinates from PDB:1G98:A:558 Model:1 without hydrogens
+ 15 14  0  0  0  0            999 V2000
+   13.8520    9.7460   28.4480   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.8530   10.4270   28.9870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2550   11.4550   28.4560   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2620    9.6400   30.2750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.5510    8.4270   30.6060   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7350    9.2390   29.9410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7520    8.3060   28.8820   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3870    8.4810   31.1480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3890    9.4260   32.2260   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.8390    8.1100   30.7400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.4830    9.4260   30.4310   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.0060    9.1200   29.9410   P 0  0  0  0  0  0  0  0  0  0  0  0
+   21.7690    8.3250   31.0230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.9980    8.2320   28.7070   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.6260   10.4930   29.6350   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  2  0  0  0  0
+ 12 14  1  0  0  0  0
+ 12 15  1  0  0  0  0
+M  END
+>  <InstanceId>
+1G98_PA5_A_558
+
+>  <ChemCompId>
+PA5
+
+>  <PdbId>
+1G98
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+558
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O9 P
+
+>  <Name>
+5-PHOSPHOARABINONIC ACID
+
+>  <SystematicName>
+(2S,3R,4R)-2,3,4-trihydroxy-5-phosphonooxy-pentanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+SACCHARIDE
+
+>  <Formula>
+C5 H11 O9 P
+
+>  <MolecularWeight>
+246.109
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H11O9P/c6-2(1-14-15(11,12)13)3(7)4(8)5(9)10/h2-4,6-8H,1H2,(H,9,10)(H2,11,12,13)/t2-,3-,4+/m1/s1
+
+>  <InChIKey>
+HNECGPFIYSOYHF-JJYYJPOSSA-N
+
+>  <SMILES>
+C([C@H]([C@H]([C@@H](C(=O)O)O)O)O)OP(=O)(O)O
+
+$$$$

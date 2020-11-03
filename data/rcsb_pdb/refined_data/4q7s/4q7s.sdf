@@ -1,0 +1,96 @@
+4Q7S_2YU_A_302
+  RCSB PDB08012022583D
+Coordinates from PDB:4Q7S:A:302 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   14.9010    0.2290   17.0040   S 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4220    1.2990   15.7810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.0830    2.6970   15.8550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5100    3.5510   14.8880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1320    4.9710   14.9420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3080    3.0660   13.8090   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.6510    1.7410   13.7530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1970    0.8410   14.7640   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5680   -0.4340   14.7350   O 0  0  0  0  0  0  0  0  0  0  0  0
+  7  6  2  0  0  0  0
+  7  8  1  0  0  0  0
+  6  4  1  0  0  0  0
+  9  8  1  0  0  0  0
+  8  2  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  3  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  2  0  0  0  0
+M  END
+>  <InstanceId>
+4Q7S_2YU_A_302
+
+>  <ChemCompId>
+2YU
+
+>  <PdbId>
+4Q7S
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O S
+
+>  <Name>
+1-hydroxy-4-methylpyridine-2(1H)-thione
+
+>  <SystematicName>
+4-methyl-1-oxidanyl-pyridine-2-thione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H7 N O S
+
+>  <MolecularWeight>
+141.191
+
+>  <ModifiedDate>
+2015-03-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H7NOS/c1-5-2-3-7(8)6(9)4-5/h2-4,8H,1H3
+
+>  <InChIKey>
+RCWJCTXRXJZSQK-UHFFFAOYSA-N
+
+>  <SMILES>
+CC1=CC(=S)N(C=C1)O
+
+$$$$

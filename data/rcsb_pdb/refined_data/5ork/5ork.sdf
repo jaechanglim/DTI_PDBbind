@@ -1,0 +1,111 @@
+5ORK_A4T_A_404
+  RCSB PDB08022002443D
+Coordinates from PDB:5ORK:A:404 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+   70.1780  139.6210  350.6580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   69.2390  140.0590  349.7390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   69.0320  141.4100  349.5140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   69.7540  142.3700  350.2250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   69.5030  143.8240  349.9920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   68.3360  144.4220  350.4640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   69.0980  146.5840  349.7700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   70.2640  146.0250  349.2840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   70.6800  141.9160  351.1560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   70.8880  140.5720  351.3790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   71.5980  143.0510  352.0840  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   70.5580  138.1640  350.8460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   70.7030  137.7250  352.2170   N 0  0  0  0  0  0  0  0  0  0  0  0
+   70.4320  144.6640  349.3880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   71.5130  144.1140  348.7930   F 0  0  0  0  0  0  0  0  0  0  0  0
+   68.1290  145.7850  350.3350   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 15 14  1  0  0  0  0
+  8 14  2  0  0  0  0
+  8  7  1  0  0  0  0
+ 14  5  1  0  0  0  0
+  3  2  2  0  0  0  0
+  3  4  1  0  0  0  0
+  2  1  1  0  0  0  0
+  7 16  2  0  0  0  0
+  5  4  1  0  0  0  0
+  5  6  2  0  0  0  0
+  4  9  2  0  0  0  0
+ 16  6  1  0  0  0  0
+  1 12  1  0  0  0  0
+  1 10  2  0  0  0  0
+ 12 13  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+5ORK_A4T_A_404
+
+>  <ChemCompId>
+A4T
+
+>  <PdbId>
+5ORK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+404
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 N F Cl
+
+>  <Name>
+[3-chloranyl-4-(2-fluorophenyl)phenyl]methanamine
+
+>  <SystematicName>
+[3-chloranyl-4-(2-fluorophenyl)phenyl]methanamine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H11 Cl F N
+
+>  <MolecularWeight>
+235.685
+
+>  <ModifiedDate>
+2018-02-23
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H11ClFN/c14-12-7-9(8-16)5-6-10(12)11-3-1-2-4-13(11)15/h1-7H,8,16H2
+
+>  <InChIKey>
+RDVSUVUAPHOYAU-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(c(c1)c2ccc(cc2Cl)CN)F
+
+$$$$

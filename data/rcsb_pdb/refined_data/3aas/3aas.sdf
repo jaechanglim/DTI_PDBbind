@@ -1,0 +1,114 @@
+3AAS_GUS_A_1001
+  RCSB PDB08012018313D
+Coordinates from PDB:3AAS:A:1001 Model:1 without hydrogens
+ 18 18  0  0  0  0            999 V2000
+   -0.5740   18.8000   21.2800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1730   16.8280   19.9230   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8440   19.9350   21.7300   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5760   18.1920   20.2970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9600   18.1480   20.9460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5540   14.2610   14.1580   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.5980   13.0080   14.5990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4520   12.6960   15.8630   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8830   13.1190   16.9890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.9960   12.3240   17.7080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3940   12.8190   18.8590   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8080   12.0190   13.7330   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1650   14.4030   17.4370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5660   14.9020   18.5850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.6740   14.1070   19.2990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.0680   14.5850   20.4190   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8480   16.2090   18.9750   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.4390   18.1220   21.5590   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  2  0  0  0  0
+  1  4  1  0  0  0  0
+  1 18  1  0  0  0  0
+  2  4  1  0  0  0  0
+  2 17  2  0  0  0  0
+  4  5  1  0  0  0  0
+  6  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 12  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+  9 13  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 15  2  0  0  0  0
+ 13 14  2  0  0  0  0
+ 14 15  1  0  0  0  0
+ 14 17  1  0  0  0  0
+ 15 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+3AAS_GUS_A_1001
+
+>  <ChemCompId>
+GUS
+
+>  <PdbId>
+3AAS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N4 O3
+
+>  <Name>
+(E)-N-[(5-carbamimidamido-2-hydroxyphenyl)methylidene]-L-alanine
+
+>  <SystematicName>
+(2S)-2-[(E)-(5-carbamimidamido-2-hydroxy-phenyl)methylideneamino]propanoic acid
+
+>  <Synonyms>
+m-guanidinosalicylidene-L-alanine
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H14 N4 O3
+
+>  <MolecularWeight>
+250.254
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H14N4O3/c1-6(10(17)18)14-5-7-4-8(15-11(12)13)2-3-9(7)16/h2-6,16H,1H3,(H,17,18)(H4,12,13,15)/b14-5+/t6-/m0/s1
+
+>  <InChIKey>
+XIDJFBOMDZEVTM-JHKKWMAKSA-N
+
+>  <SMILES>
+[H]/N=C(\N)/Nc1ccc(c(c1)/C=N/[C@@H](C)C(=O)O)O
+
+$$$$

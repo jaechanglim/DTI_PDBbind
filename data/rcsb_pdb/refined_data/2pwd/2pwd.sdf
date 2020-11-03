@@ -1,0 +1,100 @@
+2PWD_NOJ_A_8000
+  RCSB PDB08012017453D
+Coordinates from PDB:2PWD:A:8000 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+    5.9730    3.5020    3.0760   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.6440    4.3300    2.9520   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.7180    3.6460    2.1370   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.9660    5.7160    2.3550   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.7900    6.5230    2.2090   O 0  0  0  0  0  0  0  0  0  0  0  0
+    5.9570    6.4470    3.3000   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.2860    7.7570    2.7580   O 0  0  0  0  0  0  0  0  0  0  0  0
+    7.2400    5.5640    3.4760   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.9210    4.2250    3.9460   N 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1990    6.1920    4.5040   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.4640    6.1380    5.7720   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+2PWD_NOJ_A_8000
+
+>  <ChemCompId>
+NOJ
+
+>  <PdbId>
+2PWD
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+8000
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O4
+
+>  <Name>
+1-DEOXYNOJIRIMYCIN
+
+>  <SystematicName>
+(2R,3R,4R,5S)-2-(hydroxymethyl)piperidine-3,4,5-triol
+
+>  <Synonyms>
+MORANOLINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H13 N O4
+
+>  <MolecularWeight>
+163.172
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13NO4/c8-2-3-5(10)6(11)4(9)1-7-3/h3-11H,1-2H2/t3-,4+,5-,6-/m1/s1
+
+>  <InChIKey>
+LXBIFEVIBLOUGU-JGWLITMVSA-N
+
+>  <SMILES>
+C1[C@@H]([C@H]([C@@H]([C@H](N1)CO)O)O)O
+
+$$$$

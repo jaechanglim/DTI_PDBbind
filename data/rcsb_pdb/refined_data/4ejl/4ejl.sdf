@@ -1,0 +1,107 @@
+4EJL_IOP_A_106
+  RCSB PDB08012021363D
+Coordinates from PDB:4EJL:A:106 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+   -8.8780   21.7220  -25.1880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.7910   21.1570  -25.4010   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.0110   22.9620  -25.2640   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.0570   20.8510  -24.8280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.1160   21.6960  -24.1240   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.3850   19.1050  -22.7720   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.2180   19.4650  -23.3560   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.2060   20.8460  -23.5200   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.4060   21.3070  -23.0090   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.9040   22.6020  -22.9190   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.1690   22.7860  -22.3570   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.9130   21.7010  -21.8860   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.3970   20.4080  -21.9870   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.1330   20.2110  -22.5510   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  8  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6 14  1  0  0  0  0
+  7  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+  9 14  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+M  END
+>  <InstanceId>
+4EJL_IOP_A_106
+
+>  <ChemCompId>
+IOP
+
+>  <PdbId>
+4EJL
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+106
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N O2
+
+>  <Name>
+INDOLYLPROPIONIC ACID
+
+>  <SystematicName>
+3-(1H-indol-3-yl)propanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C11 H11 N O2
+
+>  <MolecularWeight>
+189.211
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H11NO2/c13-11(14)6-5-8-7-12-10-4-2-1-3-9(8)10/h1-4,7,12H,5-6H2,(H,13,14)
+
+>  <InChIKey>
+GOLXRNDWAUTYKT-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)c(c[nH]2)CCC(=O)O
+
+$$$$

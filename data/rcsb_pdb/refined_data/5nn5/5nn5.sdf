@@ -1,0 +1,100 @@
+5NN5_NOJ_A_1016
+  RCSB PDB08022002343D
+Coordinates from PDB:5NN5:A:1016 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+  -13.5510  -32.6490   95.0210   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.4140  -31.7060   95.4280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.2110  -32.2340   94.8890   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.3340  -31.5830   96.9530   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.2750  -30.6770   97.3000   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.6530  -31.0540   97.4960   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.5830  -30.9780   98.9190   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.8190  -31.9400   97.0760   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.7610  -32.1690   95.6430   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.1790  -31.3590   97.4740   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.3770  -30.0750   96.8790   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+5NN5_NOJ_A_1016
+
+>  <ChemCompId>
+NOJ
+
+>  <PdbId>
+5NN5
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1016
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O4
+
+>  <Name>
+1-DEOXYNOJIRIMYCIN
+
+>  <SystematicName>
+(2R,3R,4R,5S)-2-(hydroxymethyl)piperidine-3,4,5-triol
+
+>  <Synonyms>
+MORANOLINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H13 N O4
+
+>  <MolecularWeight>
+163.172
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13NO4/c8-2-3-5(10)6(11)4(9)1-7-3/h3-11H,1-2H2/t3-,4+,5-,6-/m1/s1
+
+>  <InChIKey>
+LXBIFEVIBLOUGU-JGWLITMVSA-N
+
+>  <SMILES>
+C1[C@@H]([C@H]([C@@H]([C@H](N1)CO)O)O)O
+
+$$$$

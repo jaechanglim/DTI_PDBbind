@@ -1,0 +1,107 @@
+5YJ8_8W9_A_701
+  RCSB PDB08022003453D
+Coordinates from PDB:5YJ8:A:701 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+   -5.2330   10.4830    4.1820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.7760   11.2930    3.2520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0950   11.7250    2.1890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.2220   10.4900    2.9670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9820   10.0630    4.0510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0170    9.4210    6.3400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.9890   12.4320    2.8660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7800   11.3190    2.0190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1560   10.2330    5.1140   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.0400   11.5610    3.6240   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.2710   10.9170    4.7630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.3590   10.9640    5.3760   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8980   10.0530    2.8300   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4760    9.9960    1.4200   N 0  0  0  0  0  0  0  0  0  0  0  0
+  8  3  2  0  0  0  0
+  8  4  1  0  0  0  0
+  3  2  1  0  0  0  0
+ 13  4  1  0  0  0  0
+ 13 14  1  0  0  0  0
+  7 10  1  0  0  0  0
+  4  5  2  0  0  0  0
+  2 10  1  0  0  0  0
+  2  1  2  0  0  0  0
+ 10 11  1  0  0  0  0
+  5  1  1  0  0  0  0
+  1  9  1  0  0  0  0
+ 11  9  1  0  0  0  0
+ 11 12  2  0  0  0  0
+  9  6  1  0  0  0  0
+M  END
+>  <InstanceId>
+5YJ8_8W9_A_701
+
+>  <ChemCompId>
+8W9
+
+>  <PdbId>
+5YJ8
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+701
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N3 O
+
+>  <Name>
+5-(aminomethyl)-1,3-dimethyl-benzimidazol-2-one
+
+>  <SystematicName>
+5-(aminomethyl)-1,3-dimethyl-benzimidazol-2-one
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H13 N3 O
+
+>  <MolecularWeight>
+191.23
+
+>  <ModifiedDate>
+2018-04-27
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H13N3O/c1-12-8-4-3-7(6-11)5-9(8)13(2)10(12)14/h3-5H,6,11H2,1-2H3
+
+>  <InChIKey>
+GDVGETHSXBLPHM-UHFFFAOYSA-N
+
+>  <SMILES>
+CN1c2ccc(cc2N(C1=O)C)CN
+
+$$$$

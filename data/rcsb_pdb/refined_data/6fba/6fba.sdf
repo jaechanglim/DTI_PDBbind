@@ -1,0 +1,103 @@
+6FBA_D48_A_402
+  RCSB PDB08022004383D
+Coordinates from PDB:6FBA:A:402 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+   63.6310   61.7220 -122.9730   O 0  0  0  0  0  0  0  0  0  0  0  0
+   63.5680   60.4400 -123.4260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   64.4870   59.9310 -124.2940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   64.4030   58.5830 -124.7190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.3530   58.0230 -125.5990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.2670   56.7200 -125.9680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   64.2140   55.9150 -125.5000   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.2580   56.4320 -124.6860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   63.3280   57.7740 -124.2550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.3710   58.3340 -123.3690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   62.4940   59.6330 -122.9630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   61.6500   60.2300 -122.0850   O 0  0  0  0  0  0  0  0  0  0  0  0
+  6  5  2  0  0  0  0
+  6  7  1  0  0  0  0
+  5  4  1  0  0  0  0
+  7  8  2  0  0  0  0
+  4  3  2  0  0  0  0
+  4  9  1  0  0  0  0
+  8  9  1  0  0  0  0
+  3  2  1  0  0  0  0
+  9 10  2  0  0  0  0
+  2  1  1  0  0  0  0
+  2 11  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+6FBA_D48_A_402
+
+>  <ChemCompId>
+D48
+
+>  <PdbId>
+6FBA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+402
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 O2
+
+>  <Name>
+naphthalene-2,3-diol
+
+>  <SystematicName>
+naphthalene-2,3-diol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H8 O2
+
+>  <MolecularWeight>
+160.169
+
+>  <ModifiedDate>
+2018-02-16
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H8O2/c11-9-5-7-3-1-2-4-8(7)6-10(9)12/h1-6,11-12H
+
+>  <InChIKey>
+JRNGUTKWMSBIBF-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2cc(c(cc2c1)O)O
+
+$$$$

@@ -29,18 +29,19 @@ from rdkit.Chem.rdmolops import GetDistanceMatrix
 from rdkit.Chem.Lipinski import RotatableBondSmarts
 random.seed(0)
 
-interaction_types = ['saltbridge', 'hbonds', 'pication',
-                     'pistack', 'halogen', 'waterbridge', 'hydrophobic', 'metal_complexes']
+interaction_types = ["saltbridge", "hbonds", "pication",
+                     "pistack", "halogen", "waterbridge", "hydrophobic", "metal_complexes"]
 
 
 def get_torsion_energy(m):
     mp = ChemicalForceFields.MMFFGetMoleculeProperties(m)
-    if mp is None: return 0.0
-    ffTerms = ('Bond', 'Angle', 'StretchBend', 'Torsion', 'Oop', 'VdW', 'Ele')
-    iTerm = 'Torsion'
+    if mp is None:
+        return 0.0
+    ffTerms = ("Bond", "Angle", "StretchBend", "Torsion", "Oop", "VdW", "Ele")
+    iTerm = "Torsion"
     for jTerm in ffTerms:
         state = (iTerm == jTerm)
-        setMethod = getattr(mp, 'SetMMFF' + jTerm + 'Term')
+        setMethod = getattr(mp, "SetMMFF" + jTerm + "Term")
         setMethod(state)
     ff = rdForceFieldHelpers.MMFFGetMoleculeForceField(m, mp)
     e = ff.CalcEnergy()
@@ -64,7 +65,8 @@ def get_epsilon_sigma_uff(m1, m2):
     for i1 in range(n1):
         for i2 in range(n2):
             param = GetUFFVdWParams(m_combine, i1, i1 + i2)
-            if param is None: continue
+            if param is None:
+                continue
             d, e = param
             vdw_epsilon[i1, i2] = e
             vdw_sigma[i1, i2] = d
@@ -81,7 +83,8 @@ def get_epsilon_sigma_mmff(m1, m2):
     for i1 in range(n1):
         for i2 in range(n2):
             param = mp.GetMMFFVdWParams(i1, i1 + i2)
-            if param is None: continue
+            if param is None:
+                continue
             d, e, _, _ = param
             vdw_epsilon[i1, i2] = e
             vdw_sigma[i1, i2] = d
@@ -99,13 +102,14 @@ def cal_torsion_energy(m):
         v = rdForceFieldHelpers.GetUFFTorsionParams(m, indice[0], indice[1],
                                                     indice[2], indice[3])
         hs = [str(m.GetAtomWithIdx(i).GetHybridization()) for i in indice]
-        if set([hs[1], hs[2]]) == set(['SP3', 'SP3']):
+        if set([hs[1], hs[2]]) == set(["SP3", "SP3"]):
             n, pi_zero = 3, math.pi
-        elif set([hs[1], hs[2]]) == set(['SP2', 'SP3']):
+        elif set([hs[1], hs[2]]) == set(["SP2", "SP3"]):
             n, pi_zero = 6, 0.0
         else:
             continue
-        energy += 0.5 * v * (1 - math.cos(n * pi_zero) * math.cos(n * angle / 180 * math.pi))
+        energy += 0.5 * v * (1 - math.cos(n * pi_zero) *
+                             math.cos(n * angle / 180 * math.pi))
     return energy
 
 
@@ -120,12 +124,16 @@ def cal_internal_vdw(m):
     for i1 in range(n):
         for i2 in range(0, i1):
             param = GetUFFVdWParams(m, i1, i2)
-            if param is None: continue
+            if param is None:
+                continue
             d, e = param
             d = d * 1.0
-            if adj[i1, i2] == 1: continue
-            if topological_dm[i1, i2] < 4: continue
-            retval += e * ((d / dm[i1, i2]) ** 12 - 2 * ((d / dm[i1, i2]) ** 6))
+            if adj[i1, i2] == 1:
+                continue
+            if topological_dm[i1, i2] < 4:
+                continue
+            retval += e * ((d / dm[i1, i2]) ** 12 -
+                           2 * ((d / dm[i1, i2]) ** 6))
             # print (i1, i2, e, d)
     return retval
 
@@ -137,18 +145,20 @@ def cal_charge(m):
     except:
         charges = None
     if charges is None:
-        charges = [float(m.GetAtomWithIdx(i).GetProp('_GasteigerCharge'))
+        charges = [float(m.GetAtomWithIdx(i).GetProp("_GasteigerCharge"))
                    for i in range(m.GetNumAtoms())]
     else:
         for i in range(m.GetNumAtoms()):
             if charges[i] > 3 or charges[i] < -3:
-                charges[i] = float(m.GetAtomWithIdx(i).GetProp('_GasteigerCharge'))
+                charges[i] = float(m.GetAtomWithIdx(
+                    i).GetProp("_GasteigerCharge"))
     return charges
 
 
 def one_of_k_encoding(x, allowable_set):
     if x not in allowable_set:
-        raise Exception("input {0} not in allowable set{1}:".format(x, allowable_set))
+        raise Exception(
+            "input {0} not in allowable set{1}:".format(x, allowable_set))
     return list(map(lambda s: x == s, allowable_set))
 
 
@@ -162,7 +172,7 @@ def one_of_k_encoding_unk(x, allowable_set):
 def atom_feature(m, atom_i, i_donor, i_acceptor):
     atom = m.GetAtomWithIdx(atom_i)
     return np.array(one_of_k_encoding_unk(atom.GetSymbol(),
-                                          ['C', 'N', 'O', 'S', 'F', 'P', 'Cl', 'Br', 'X']) +
+                                          ["C", "N", "O", "S", "F", "P", "Cl", "Br", "X"]) +
                     one_of_k_encoding_unk(atom.GetDegree(), [0, 1, 2, 3, 4, 5]) +
                     one_of_k_encoding_unk(atom.GetTotalNumHs(), [0, 1, 2, 3, 4]) +
                     one_of_k_encoding_unk(atom.GetImplicitValence(), [0, 1, 2, 3, 4, 5]) +
@@ -187,11 +197,6 @@ def rotate(molecule, angle, axis, fix_com=False):
     Since edge of each molecules are changing by different orientation,
     this funciton used to make molecules rotation-invariant and enables further
     self-supervised learning.
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 91e5d2c6a358c3495e69bbfb88438549302e8d9f
     :param molecule: rdkit molecule object
     :param anble: angle to rotate,
                   random value between 0, 360
@@ -207,7 +212,7 @@ def rotate(molecule, angle, axis, fix_com=False):
         d = d - ori_mean
     atoms = []
     for i in range(len(d)):
-        atoms.append(Atom('C', d[i]))
+        atoms.append(Atom("C", d[i]))
     atoms = Atoms(atoms)
     atoms.rotate(angle, axis)
     new_d = atoms.get_positions()
@@ -239,7 +244,7 @@ def extract_valid_amino_acid(m, amino_acids):
     """
     Divide molecule into PDB residues and only select the residues
     belong to amino acids. Then, combine the all of the residues
-    to make new molecule object. This is not 'real' molecule, just
+    to make new molecule object. This is not "real" molecule, just
     the information of the molecule with several residues
     :param m: rdkit molecule object
     :param amino_acids: lists of amino acids, total 22 exist
@@ -298,7 +303,8 @@ def classifyAtoms(mol, polar_atoms=[7, 8, 15, 16]):
 
     radii = []
     for atom in mol.GetAtoms():
-        atom.SetProp("SASAClassName", "Apolar")  # mark everything as apolar to start
+        # mark everything as apolar to start
+        atom.SetProp("SASAClassName", "Apolar")
         if atom.GetAtomicNum() in polar_atoms:  # identify polar atoms and change their marking
             atom.SetProp("SASAClassName", "Polar")  # mark as polar
         elif atom.GetAtomicNum() == 1:
@@ -319,10 +325,10 @@ def cal_sasa(m):
 
 
 def get_vdw_radius(a):
-    metal_symbols = ['Zn', 'Mn', 'Co', 'Mg', 'Ni', 'Fe', 'Ca', 'Cu']
+    metal_symbols = ["Zn", "Mn", "Co", "Mg", "Ni", "Fe", "Ca", "Cu"]
     atomic_number = a.GetAtomicNum()
-    atomic_number_to_radius = {6: 1.90, 7: 1.8, 8: 1.7, 16: 2.0, 15: 2.1, \
-                               9: 1.5, 17: 1.8, 35: 2.0, 53: 2.2, 30: 1.2, 25: 1.2, 26: 1.2, 27: 1.2, \
+    atomic_number_to_radius = {6: 1.90, 7: 1.8, 8: 1.7, 16: 2.0, 15: 2.1,
+                               9: 1.5, 17: 1.8, 35: 2.0, 53: 2.2, 30: 1.2, 25: 1.2, 26: 1.2, 27: 1.2,
                                12: 1.2, 28: 1.2, 20: 1.2, 29: 1.2}
     if atomic_number in atomic_number_to_radius.keys():
         return atomic_number_to_radius[atomic_number]
@@ -341,12 +347,13 @@ def get_hydrophobic_atom(m):
     for i in range(n):
         a = m.GetAtomWithIdx(i)
         s = a.GetSymbol()
-        if s.upper() in ['F', 'CL', 'BR', 'I']:
+        if s.upper() in ["F", "CL", "BR", "I"]:
             retval[i] = 1
-        elif s.upper() in ['C']:
+        elif s.upper() in ["C"]:
             n_a = [x.GetSymbol() for x in a.GetNeighbors()]
-            diff = list(set(n_a) - set(['C']))
-            if len(diff) == 0: retval[i] = 1
+            diff = list(set(n_a) - set(["C"]))
+            if len(diff) == 0:
+                retval[i] = 1
         else:
             continue
     return retval
@@ -365,7 +372,7 @@ def get_hbond_donor_indice(m):
     indice = np.array([i for i in indice])[:,0]
     return indice
     """
-    # smarts = ['[!$([#6,H0,-,-2,-3])]', '[!H0;#7,#8,#9]']
+    # smarts = ["[!$([#6,H0,-,-2,-3])]", "[!H0;#7,#8,#9]"]
     smarts = ["[!#6;!H0]"]
     indice = []
     for s in smarts:
@@ -376,9 +383,10 @@ def get_hbond_donor_indice(m):
 
 
 def get_hbond_acceptor_indice(m):
-    # smarts = ['[!$([#6,F,Cl,Br,I,o,s,nX3,#7v5,#15v5,#16v4,#16v6,*+1,*+2,*+3])]',
-    #          '[#6,#7;R0]=[#8]']
-    smarts = ["[$([!#6;+0]);!$([F,Cl,Br,I]);!$([o,s,nX3]);!$([Nv5,Pv5,Sv4,Sv6])]"]
+    # smarts = ["[!$([#6,F,Cl,Br,I,o,s,nX3,#7v5,#15v5,#16v4,#16v6,*+1,*+2,*+3])]",
+    #          "[#6,#7;R0]=[#8]"]
+    smarts = [
+        "[$([!#6;+0]);!$([F,Cl,Br,I]);!$([o,s,nX3]);!$([Nv5,Pv5,Sv4,Sv6])]"]
     indice = []
     for s in smarts:
         s = Chem.MolFromSmarts(s)
@@ -407,7 +415,7 @@ def get_A_hbond(m1, m2):
 def get_A_metal_complexes(m1, m2):
     h_acc_indice1 = get_hbond_acceptor_indice(m1)
     h_acc_indice2 = get_hbond_acceptor_indice(m2)
-    metal_symbols = ['Zn', 'Mn', 'Co', 'Mg', 'Ni', 'Fe', 'Ca', 'Cu']
+    metal_symbols = ["Zn", "Mn", "Co", "Mg", "Ni", "Fe", "Ca", "Cu"]
     metal_indice1 = np.array([i for i in range(m1.GetNumAtoms())
                               if m1.GetAtomWithIdx(i).GetSymbol() in metal_symbols])
     metal_indice2 = np.array([i for i in range(m2.GetNumAtoms())
@@ -463,7 +471,8 @@ def mol_to_feature(m1, m1_uff, m2, interaction_data, pos_noise_std):
 
     # get interaction matrix
     # A_int = get_interaction_matrix(d1, d2, interaction_data)
-    A_int = np.zeros((len(interaction_types), m1.GetNumAtoms(), m2.GetNumAtoms()))
+    A_int = np.zeros(
+        (len(interaction_types), m1.GetNumAtoms(), m2.GetNumAtoms()))
     A_int[-2] = get_A_hydrophobic(m1, m2)
     A_int[1] = get_A_hbond(m1, m2)
     A_int[-1] = get_A_metal_complexes(m1, m2)
@@ -502,7 +511,7 @@ def mol_to_feature(m1, m1_uff, m2, interaction_data, pos_noise_std):
     valid2 = np.ones((n2,))
 
     # no metal
-    metal_symbols = ['Zn', 'Mn', 'Co', 'Mg', 'Ni', 'Fe', 'Ca', 'Cu']
+    metal_symbols = ["Zn", "Mn", "Co", "Mg", "Ni", "Fe", "Ca", "Cu"]
     no_metal1 = np.array([1 if a.GetSymbol() not in metal_symbols else 0
                           for a in m1.GetAtoms()])
     no_metal2 = np.array([1 if a.GetSymbol() not in metal_symbols else 0
@@ -519,36 +528,37 @@ def mol_to_feature(m1, m1_uff, m2, interaction_data, pos_noise_std):
     # delta_uff = cal_torsion_energy(m1)+cal_internal_vdw(m1)
     delta_uff = 0.0
     sample = {
-        'h1': h1, \
-        'adj1': adj1, \
-        'h2': h2, \
-        'adj2': adj2, \
-        'A_int': A_int, \
-        'dmv': dmv, \
-        'dmv_rot': dmv_rot, \
-        'pos1': d1, \
-        'pos2': d2, \
-        'sasa': sasa, \
-        'dsasa': dsasa, \
-        'rotor': rotor, \
-        'charge1': charge1, \
-        'charge2': charge2, \
-        'vdw_radius1': vdw_radius1, \
-        'vdw_radius2': vdw_radius2, \
-        'vdw_epsilon': vdw_epsilon, \
-        'vdw_sigma': vdw_sigma, \
-        'delta_uff': delta_uff, \
-        'valid1': valid1, \
-        'valid2': valid2, \
-        'no_metal1': no_metal1, \
-        'no_metal2': no_metal2, \
-        }
+        "h1": h1,
+        "adj1": adj1,
+        "h2": h2,
+        "adj2": adj2,
+        "A_int": A_int,
+        "dmv": dmv,
+        "dmv_rot": dmv_rot,
+        "pos1": d1,
+        "pos2": d2,
+        "sasa": sasa,
+        "dsasa": dsasa,
+        "rotor": rotor,
+        "charge1": charge1,
+        "charge2": charge2,
+        "vdw_radius1": vdw_radius1,
+        "vdw_radius2": vdw_radius2,
+        "vdw_epsilon": vdw_epsilon,
+        "vdw_sigma": vdw_sigma,
+        "delta_uff": delta_uff,
+        "valid1": valid1,
+        "valid2": valid2,
+        "no_metal1": no_metal1,
+        "no_metal2": no_metal2,
+    }
     return sample
 
 
 def is_atoms_in_same_ring(i, j, ssr):
     for s in ssr:
-        if i in s and j in s: return True
+        if i in s and j in s:
+            return True
     return False
 
 
@@ -558,7 +568,8 @@ def count_active_rotatable_bond(m, dm):
     n = m.GetNumAtoms()
     RT = np.zeros((n,))
     for pair in rot_atom_pairs:
-        if is_atoms_in_same_ring(pair[0], pair[1], ssr): continue
+        if is_atoms_in_same_ring(pair[0], pair[1], ssr):
+            continue
         RT[pair[0]] += 0.5
         RT[pair[1]] += 0.5
     RT_copy = np.copy(RT)
@@ -569,7 +580,8 @@ def count_active_rotatable_bond(m, dm):
 
     hydrophobic_indice = get_hydrophobic_atom(m)
     for i in range(len(RT)):
-        if hydrophobic_indice[i] == 0: RT[i] = RT[i] * 0.5
+        if hydrophobic_indice[i] == 0:
+            RT[i] = RT[i] * 0.5
     return sum(RT)
 
 
@@ -581,9 +593,9 @@ class MolDataset(Dataset):
         self.data_dir = data_dir
         self.id_to_y = id_to_y
         self.random_rotation = random_rotation
-        self.amino_acids = ['ALA', 'ARG', 'ASN', 'ASP', 'ASX', 'CYS', 'GLU', 'GLN', 'GLX', \
-                            'GLY', 'HIS', 'ILE', 'LEU', 'LYS', 'MET', 'PHE', 'PRO', 'SER', \
-                            'THR', 'TRP', 'TYR', 'VAL']
+        self.amino_acids = ["ALA", "ARG", "ASN", "ASP", "ASX", "CYS", "GLU", "GLN", "GLX",
+                            "GLY", "HIS", "ILE", "LEU", "LYS", "MET", "PHE", "PRO", "SER",
+                            "THR", "TRP", "TYR", "VAL"]
         self.pos_noise_std = pos_noise_std
 
     def __len__(self):
@@ -591,12 +603,13 @@ class MolDataset(Dataset):
 
     def __getitem__(self, idx):
         key = self.keys[idx]
-        with open(self.data_dir + '/' + key, 'rb') as f:
+        with open(self.data_dir + "/" + key, "rb") as f:
             m1, m1_uff, m2, interaction_data = pickle.load(f)
 
-        sample = mol_to_feature(m1, m1_uff, m2, interaction_data, self.pos_noise_std)
-        sample['affinity'] = self.id_to_y[key] * -1.36
-        sample['key'] = key
+        sample = mol_to_feature(
+            m1, m1_uff, m2, interaction_data, self.pos_noise_std)
+        sample["affinity"] = self.id_to_y[key] * -1.36
+        sample["key"] = key
         return sample
 
 
@@ -618,7 +631,8 @@ class DTISampler(Sampler):
         self.replacement = replacement
 
     def __iter__(self):
-        retval = np.random.choice(len(self.weights), self.num_samples, replace=self.replacement, p=self.weights)
+        retval = np.random.choice(
+            len(self.weights), self.num_samples, replace=self.replacement, p=self.weights)
         return iter(retval.tolist())
 
     def __len__(self):
@@ -653,7 +667,7 @@ def collate_tensor(tensor, max_tensor, batch_idx):
 
 
 def tensor_collate_fn(batch):
-    # batch_items = [it for e in batch for it in e.items() if 'key' != it[0]]
+    # batch_items = [it for e in batch for it in e.items() if "key" != it[0]]
     batch_items = [it for e in batch for it in e.items()]
     dim_dict = dict()
     total_key, total_value = list(zip(*batch_items))
@@ -661,7 +675,8 @@ def tensor_collate_fn(batch):
     n_element = int(len(batch_items) / batch_size)
     total_key = total_key[0:n_element]
     for i, k in enumerate(total_key):
-        value_list = [v for j, v in enumerate(total_value) if j % n_element == i]
+        value_list = [v for j, v in enumerate(
+            total_value) if j % n_element == i]
         if isinstance(value_list[0], np.ndarray):
             dim_dict[k] = np.zeros(np.array(
                 [batch_size, *check_dimension(value_list)])
@@ -673,7 +688,8 @@ def tensor_collate_fn(batch):
 
     ret_dict = {}
     for j in range(batch_size):
-        if batch[j] == None: continue
+        if batch[j] == None:
+            continue
         keys = []
         for key, value in dim_dict.items():
             value = collate_tensor(batch[j][key], value, j)

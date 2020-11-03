@@ -1,0 +1,105 @@
+3S73_EVF_B_1
+  RCSB PDB08012020263D
+Coordinates from PDB:3S73:B:1 Model:1 without hydrogens
+ 13 14  0  0  0  0            999 V2000
+   16.0280   -0.4580   16.3100   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5760    0.8630   16.9590   S 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0890    0.8810   18.3500   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3400    3.3620   15.2620   S 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2220    2.1440   16.1020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.0980    1.0710   16.7710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5520    2.3610   15.9890   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.2270    3.9770   15.0040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.2970    5.1220   14.2150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.1630    5.8110   13.7210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.8830    5.2480   13.9760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7850    4.1120   14.7660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.8960    3.4650   15.2820   C 0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  0  0  0  0
+  5  2  1  0  0  0  0
+  3  2  2  0  0  0  0
+  2  6  2  0  0  0  0
+ 12  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  7  5  2  0  0  0  0
+ 13  7  1  0  0  0  0
+  9  8  1  0  0  0  0
+  8 13  2  0  0  0  0
+ 10  9  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+3S73_EVF_B_1
+
+>  <ChemCompId>
+EVF
+
+>  <PdbId>
+3S73
+
+>  <ChainId>
+B
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N2 O2 S2
+
+>  <Name>
+1,3-benzothiazole-2-sulfonamide
+
+>  <SystematicName>
+1,3-benzothiazole-2-sulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H6 N2 O2 S2
+
+>  <MolecularWeight>
+214.265
+
+>  <ModifiedDate>
+2011-12-16
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H6N2O2S2/c8-13(10,11)7-9-5-3-1-2-4-6(5)12-7/h1-4H,(H2,8,10,11)
+
+>  <InChIKey>
+SDYMYAFSQACTQP-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)nc(s2)S(=O)(=O)N
+
+$$$$

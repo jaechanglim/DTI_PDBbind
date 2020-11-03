@@ -1,0 +1,98 @@
+3FHB_GAB_A_601
+  RCSB PDB08012019013D
+Coordinates from PDB:3FHB:A:601 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   15.8290   -7.0170   11.2010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6310   -6.6170   11.2000   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.8390   -6.3450   11.5520   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1020   -8.4350   10.7320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.1930   -9.1380   11.2190   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.4080  -10.4350   10.7530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5740  -11.0240    9.8240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4900  -10.3050    9.3460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2560   -9.0150    9.8020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.4350  -11.1360   11.1990   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  2  0  0  0  0
+  5  6  2  0  0  0  0
+  6  7  1  0  0  0  0
+  6 10  1  0  0  0  0
+  7  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+3FHB_GAB_A_601
+
+>  <ChemCompId>
+GAB
+
+>  <PdbId>
+3FHB
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+601
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O2
+
+>  <Name>
+3-AMINOBENZOIC ACID
+
+>  <SystematicName>
+3-aminobenzoic acid
+
+>  <Synonyms>
+GABACULINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H7 N O2
+
+>  <MolecularWeight>
+137.136
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H7NO2/c8-6-3-1-2-5(4-6)7(9)10/h1-4H,8H2,(H,9,10)
+
+>  <InChIKey>
+XFDUHJPVQKIXHO-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(cc(c1)N)C(=O)O
+
+$$$$

@@ -1,0 +1,110 @@
+3O75_F1X_A_1
+  RCSB PDB08012019593D
+Coordinates from PDB:3O75:A:1 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   -0.8220    4.1160    4.3120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1880    3.6710    3.0150   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7150    4.5260    1.7380   P 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0280    4.7660    4.9670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7270    5.5740    4.0110   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.5940    5.6210    6.1490   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1390    6.9090    5.7410   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8640    5.6650    6.9610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6680    6.0550    8.3230   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.2400    4.2010    6.8430   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9360    3.8020    5.5010   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6840    3.9860    7.2240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6470    3.7460    8.6250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3060    5.8940    1.9590   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.7880    4.4910    1.8050   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3190    3.7870    0.5700   O 0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  0  0  0  0
+  1  4  1  0  0  0  0
+  3  2  1  0  0  0  0
+ 16  3  2  0  0  0  0
+  3 15  1  0  0  0  0
+  3 14  1  0  0  0  0
+  5  4  1  0  0  0  0
+  4 11  1  0  0  0  0
+  4  6  1  0  0  0  0
+  7  6  1  0  0  0  0
+  6  8  1  0  0  0  0
+ 10  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 10 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+3O75_F1X_A_1
+
+>  <ChemCompId>
+F1X
+
+>  <PdbId>
+3O75
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O9 P
+
+>  <Name>
+1-O-phosphono-beta-D-fructofuranose
+
+>  <SystematicName>
+[(2R,3S,4S,5R)-2,3,4-trihydroxy-5-(hydroxymethyl)oxolan-2-yl]methyl dihydrogen phosphate
+
+>  <Synonyms>
+beta D-Fructose 1-phosphate; 1-O-phosphono-beta-D-fructose; 1-O-phosphono-D-fructose; 1-O-phosphono-fructose
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C6 H13 O9 P
+
+>  <MolecularWeight>
+260.136
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+FRU
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13O9P/c7-1-3-4(8)5(9)6(10,15-3)2-14-16(11,12)13/h3-5,7-10H,1-2H2,(H2,11,12,13)/t3-,4-,5+,6-/m1/s1
+
+>  <InChIKey>
+RHKKZBWRNHGJEZ-ARQDHWQXSA-N
+
+>  <SMILES>
+C([C@@H]1[C@H]([C@@H]([C@](O1)(COP(=O)(O)O)O)O)O)O
+
+$$$$

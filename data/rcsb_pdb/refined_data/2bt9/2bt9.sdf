@@ -1,0 +1,102 @@
+2BT9_MFU_A_1091
+  RCSB PDB08012016433D
+Coordinates from PDB:2BT9:A:1091 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   -2.4350   36.7850   -2.3510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9190   36.6330   -0.9040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3520   37.0810   -0.7790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.2100   36.3010   -1.7940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6550   36.5190   -3.1780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3950   35.7690   -4.2550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4050   38.1720   -2.6310   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0960   37.4080    0.0330   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8330   36.9990    0.5560   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1700   34.9080   -1.5320   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.2760   36.0670   -3.2040   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.8430   38.4460   -3.8450   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  7  1  0  0  0  0
+  1 11  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  1  0  0  0  0
+  7 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+2BT9_MFU_A_1091
+
+>  <ChemCompId>
+MFU
+
+>  <PdbId>
+2BT9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1091
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O5
+
+>  <Name>
+methyl alpha-L-fucopyranoside
+
+>  <SystematicName>
+(2R,3S,4R,5S,6S)-2-methoxy-6-methyl-oxane-3,4,5-triol
+
+>  <Synonyms>
+ALPHA-L-METHYL-FUCOSE; methyl 6-deoxy-alpha-L-galactopyranoside; methyl alpha-L-fucoside; methyl L-fucoside; methyl fucoside
+
+>  <Type>
+L-saccharide
+
+>  <Formula>
+C7 H14 O5
+
+>  <MolecularWeight>
+178.183
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+FUC
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H14O5/c1-3-4(8)5(9)6(10)7(11-2)12-3/h3-10H,1-2H3/t3-,4+,5+,6-,7+/m0/s1
+
+>  <InChIKey>
+OHWCAVRRXKJCRB-CXNFULCWSA-N
+
+>  <SMILES>
+C[C@H]1[C@H]([C@H]([C@@H]([C@@H](O1)OC)O)O)O
+
+$$$$

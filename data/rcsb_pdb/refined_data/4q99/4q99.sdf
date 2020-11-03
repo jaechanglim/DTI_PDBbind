@@ -1,0 +1,96 @@
+4Q99_HT4_A_302
+  RCSB PDB08012022583D
+Coordinates from PDB:4Q99:A:302 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   14.2140    1.3660   17.9220   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6730    2.1440   16.8880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.2480    3.4300   16.7120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.7470    4.1880   15.6350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6610    3.6250   14.7680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1610    4.3690   13.6980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0900    2.2900   14.9670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5890    1.5620   16.0280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1330   -0.1570   16.2950   S 0  0  0  0  0  0  0  0  0  0  0  0
+  6  5  1  0  0  0  0
+  5  7  2  0  0  0  0
+  5  4  1  0  0  0  0
+  7  8  1  0  0  0  0
+  4  3  2  0  0  0  0
+  8  9  1  0  0  0  0
+  8  2  2  0  0  0  0
+  3  2  1  0  0  0  0
+  2  1  1  0  0  0  0
+M  END
+>  <InstanceId>
+4Q99_HT4_A_302
+
+>  <ChemCompId>
+HT4
+
+>  <PdbId>
+4Q99
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O S
+
+>  <Name>
+4-methyl-2-sulfanylphenol
+
+>  <SystematicName>
+4-methyl-2-sulfanyl-phenol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H8 O S
+
+>  <MolecularWeight>
+140.203
+
+>  <ModifiedDate>
+2015-03-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H8OS/c1-5-2-3-6(8)7(9)4-5/h2-4,8-9H,1H3
+
+>  <InChIKey>
+GWMWXFGQYATKBA-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1ccc(c(c1)S)O
+
+$$$$

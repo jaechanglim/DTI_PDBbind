@@ -1,0 +1,101 @@
+4ABB_K9S_A_1252
+  RCSB PDB08012021053D
+Coordinates from PDB:4ABB:A:1252 Model:1 without hydrogens
+ 11 12  0  0  0  0            999 V2000
+    1.2680  -15.3950   15.7530   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.9540  -16.1940   18.4390   N 0  0  0  0  0  0  0  0  0  0  0  0
+    1.1050  -14.6540   14.2090   S 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7750  -13.1340   14.7650   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.1480  -13.2550   16.1330   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8680  -14.4890   16.6930   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.0200  -11.9520   14.0810   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.6010  -10.8140   14.7530   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.1440  -14.7840   18.1170   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9120  -10.9230   16.0570   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.7090  -12.1640   16.8330   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  1  0  0  0  0
+  1  6  2  0  0  0  0
+  2  9  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  7  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  2  0  0  0  0
+  6  9  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+4ABB_K9S_A_1252
+
+>  <ChemCompId>
+K9S
+
+>  <PdbId>
+4ABB
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1252
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N S
+
+>  <Name>
+1-(1-BENZOTHIOPHEN-3-YL)METHANAMINE
+
+>  <SystematicName>
+1-benzothiophen-3-ylmethanamine
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C9 H9 N S
+
+>  <MolecularWeight>
+163.239
+
+>  <ModifiedDate>
+2014-09-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H9NS/c10-5-7-6-11-9-4-2-1-3-8(7)9/h1-4,6H,5,10H2
+
+>  <InChIKey>
+WHTPXNOFEHTZAD-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc2c(c1)c(cs2)CN
+
+$$$$

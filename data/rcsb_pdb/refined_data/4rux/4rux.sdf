@@ -1,0 +1,106 @@
+4RUX_3W3_A_302
+  RCSB PDB08012023123D
+Coordinates from PDB:4RUX:A:302 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   -5.5560    4.6420   14.9200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1200    3.4530   15.6310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3290    2.3870   15.8500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9580    0.9990   16.7160   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4280    1.1170   18.0640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.3760    1.1050   16.6060   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4020   -0.3510   16.0360   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9010    2.3690   15.4130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3940    3.4340   14.7770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2740    4.6240   14.5360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7880    5.7560   13.8930   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4240    5.8000   13.5280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.0740    7.2390   13.2220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.9970    8.0640   14.4890   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 13 12  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 12 11  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 10  9  2  0  0  0  0
+ 10  1  1  0  0  0  0
+  9  8  1  0  0  0  0
+  1  2  2  0  0  0  0
+  8  3  2  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  7  4  1  0  0  0  0
+  6  4  2  0  0  0  0
+  4  5  2  0  0  0  0
+M  END
+>  <InstanceId>
+4RUX_3W3_A_302
+
+>  <ChemCompId>
+3W3
+
+>  <PdbId>
+4RUX
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O3 S
+
+>  <Name>
+4-(allyloxy)benzenesulfonamide
+
+>  <SystematicName>
+4-prop-2-enoxybenzenesulfonamide
+
+>  <Synonyms>
+4-(prop-2-en-1-yloxy)benzenesulfonamide
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H11 N O3 S
+
+>  <MolecularWeight>
+213.254
+
+>  <ModifiedDate>
+2015-04-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H11NO3S/c1-2-7-13-8-3-5-9(6-4-8)14(10,11)12/h2-6H,1,7H2,(H2,10,11,12)
+
+>  <InChIKey>
+OYORSBMGLVESSS-UHFFFAOYSA-N
+
+>  <SMILES>
+C=CCOc1ccc(cc1)S(=O)(=O)N
+
+$$$$

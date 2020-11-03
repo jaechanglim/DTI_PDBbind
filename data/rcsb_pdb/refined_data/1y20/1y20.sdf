@@ -1,0 +1,92 @@
+1Y20_1AC_A_1001
+  RCSB PDB08012016253D
+Coordinates from PDB:1Y20:A:1001 Model:1 without hydrogens
+  7  7  0  0  0  0            999 V2000
+   20.0800   33.2810    8.2730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.8050   33.4790    6.9700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.3130   32.5010    8.0020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.6290   32.8060    8.6750   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.8360   34.0010    9.0280   O 0  0  0  0  0  0  0  0  0  0  0  0
+   23.3420   31.8240    8.9450   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.1810   31.0940    7.5520   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  7  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  2  0  0  0  0
+M  END
+>  <InstanceId>
+1Y20_1AC_A_1001
+
+>  <ChemCompId>
+1AC
+
+>  <PdbId>
+1Y20
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N O2
+
+>  <Name>
+1-AMINOCYCLOPROPANECARBOXYLIC ACID
+
+>  <SystematicName>
+1-aminocyclopropane-1-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+PEPTIDE LINKING
+
+>  <Formula>
+C4 H7 N O2
+
+>  <MolecularWeight>
+101.104
+
+>  <ModifiedDate>
+2011-08-17
+
+>  <Parent>
+ALA
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H7NO2/c5-4(1-2-4)3(6)7/h1-2,5H2,(H,6,7)
+
+>  <InChIKey>
+PAJPWUMXBYXFCZ-UHFFFAOYSA-N
+
+>  <SMILES>
+C1CC1(C(=O)O)N
+
+$$$$

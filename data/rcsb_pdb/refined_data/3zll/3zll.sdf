@@ -1,0 +1,113 @@
+3ZLL_4WF_A_400
+  RCSB PDB08012020593D
+Coordinates from PDB:3ZLL:A:400 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   36.8260    4.0340   10.0790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   34.9260    2.8040    9.3610   N 0  0  0  0  0  0  0  0  0  0  0  0
+   36.4190    5.1200    9.3640   O 0  0  0  0  0  0  0  0  0  0  0  0
+   36.0620    2.8560   10.0780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   36.4740    1.7350   10.8140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   39.4980    3.0930   12.1980   O 0  0  0  0  0  0  0  0  0  0  0  0
+   38.1930    8.4900   13.6930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   37.6640    7.2250   13.9270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.9290    8.7370   12.5400   C 0  0  0  0  0  0  0  0  0  0  0  0
+   37.8580    6.1920   13.0120   C 0  0  0  0  0  0  0  0  0  0  0  0
+   39.1180    7.6990   11.6310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.4530    3.0040   11.5530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.8430    5.3560   10.8050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   38.0170    4.1250   10.8300   N 0  0  0  0  0  0  0  0  0  0  0  0
+   35.8010    0.6850   10.8050   O 0  0  0  0  0  0  0  0  0  0  0  0
+   37.6850    1.8160   11.5510   N 0  0  0  0  0  0  0  0  0  0  0  0
+   38.5830    6.4290   11.8580   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  2  0  0  0  0
+  1 14  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5 15  2  0  0  0  0
+  5 16  1  0  0  0  0
+  6 12  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  2  0  0  0  0
+  8 10  2  0  0  0  0
+  9 11  1  0  0  0  0
+ 10 17  1  0  0  0  0
+ 11 17  2  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 17  1  0  0  0  0
+ 14 12  1  0  0  0  0
+ 12 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+3ZLL_4WF_A_400
+
+>  <ChemCompId>
+4WF
+
+>  <PdbId>
+3ZLL
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+400
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C11 N3 O3
+
+>  <Name>
+5-azanyl-6-oxidanyl-1-(phenylmethyl)pyrimidine-2,4-dione
+
+>  <SystematicName>
+5-azanyl-6-oxidanyl-1-(phenylmethyl)pyrimidine-2,4-dione
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C11 H11 N3 O3
+
+>  <MolecularWeight>
+233.223
+
+>  <ModifiedDate>
+2014-09-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C11H11N3O3/c12-8-9(15)13-11(17)14(10(8)16)6-7-4-2-1-3-5-7/h1-5,16H,6,12H2,(H,13,15,17)
+
+>  <InChIKey>
+HTIBHRPLOZXHDY-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)CN2C(=C(C(=O)NC2=O)N)O
+
+$$$$

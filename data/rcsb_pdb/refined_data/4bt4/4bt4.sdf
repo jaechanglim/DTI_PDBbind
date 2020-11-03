@@ -1,0 +1,95 @@
+4BT4_QFH_A_302
+  RCSB PDB08012021163D
+Coordinates from PDB:4BT4:A:302 Model:1 without hydrogens
+  9  8  0  0  0  0            999 V2000
+  -24.3900   30.8520   85.4200   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -25.5450   29.8000   83.5620   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.8170   29.0420   82.5070   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.9930   30.0670   83.6370   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.8980   29.9960   84.6080   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.8940   31.4530   83.0200   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -24.2980   29.8050   84.4320   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -23.8030   31.8290   82.2190   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.8570   32.1680   83.2320   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  7  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  4  7  1  0  0  0  0
+  6  9  2  0  0  0  0
+  6  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+4BT4_QFH_A_302
+
+>  <ChemCompId>
+QFH
+
+>  <PdbId>
+4BT4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O4
+
+>  <Name>
+(2S,3S)-2,3-dihydroxy-2-methylbutanoic acid
+
+>  <SystematicName>
+(2S,3S)-2-methyl-2,3-bis(oxidanyl)butanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C5 H10 O4
+
+>  <MolecularWeight>
+134.13
+
+>  <ModifiedDate>
+2014-09-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H10O4/c1-3(6)5(2,9)4(7)8/h3,6,9H,1-2H3,(H,7,8)/t3-,5-/m0/s1
+
+>  <InChIKey>
+AOWPAWLEXIYETE-UCORVYFPSA-N
+
+>  <SMILES>
+C[C@@H]([C@@](C)(C(=O)O)O)O
+
+$$$$

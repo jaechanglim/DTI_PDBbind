@@ -1,0 +1,103 @@
+4ABA_SW1_A_1256
+  RCSB PDB08012021053D
+Coordinates from PDB:4ABA:A:1256 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+    1.8110  -15.9810   18.2400   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.1200  -15.6030   18.8920   N 0  0  0  0  0  0  0  0  0  0  0  0
+    1.1450  -14.5090   14.5470   S 0  0  0  0  0  0  0  0  0  0  0  0
+    1.6800  -15.1300   16.9770   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.2500  -13.9070   16.6750   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.9420  -11.2810   15.7790   S 0  0  0  0  0  0  0  0  0  0  0  0
+    1.0550  -15.5770   15.8520   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.0500  -13.4350   15.4870   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.6050  -12.1410   15.0510   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.1160  -11.3860   14.0130   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8070  -10.1400   13.8480   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.8160   -9.9320   14.7280   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  4  1  0  0  0  0
+  3  7  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  7  2  0  0  0  0
+  5  8  2  0  0  0  0
+  6  9  1  0  0  0  0
+  6 12  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+M  END
+>  <InstanceId>
+4ABA_SW1_A_1256
+
+>  <ChemCompId>
+SW1
+
+>  <PdbId>
+4ABA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1256
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N2 S2
+
+>  <Name>
+1-[2-(thiophen-2-yl)-1,3-thiazol-4-yl]methanamine
+
+>  <SystematicName>
+(2-thiophen-2-yl-1,3-thiazol-4-yl)methanamine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H8 N2 S2
+
+>  <MolecularWeight>
+196.293
+
+>  <ModifiedDate>
+2011-08-19
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H8N2S2/c9-4-6-5-12-8(10-6)7-2-1-3-11-7/h1-3,5H,4,9H2
+
+>  <InChIKey>
+VZBJIPJKJKKWPH-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(sc1)c2nc(cs2)CN
+
+$$$$

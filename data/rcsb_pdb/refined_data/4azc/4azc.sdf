@@ -1,0 +1,107 @@
+4AZC_NGW_A_2042
+  RCSB PDB08012021103D
+Coordinates from PDB:4AZC:A:2042 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+  -31.9980  -22.2530  -51.7560   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.6900  -22.5500  -52.9670   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.7360  -22.2960  -54.1220   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.1400  -24.0030  -52.9780   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.2800  -20.9300  -54.0710   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.4100  -22.6430  -55.4800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.4290  -22.6800  -56.5890   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.0720  -24.0470  -55.4600   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -30.5100  -23.8160  -56.3480   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -29.7360  -24.1800  -57.6230   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.6270  -25.1380  -55.7860   S 0  0  0  0  0  0  0  0  0  0  0  0
+  -33.8140  -24.3720  -54.2120   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.1530  -24.2970  -51.8560   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.3000  -23.4600  -51.9990   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  3  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+ 11  8  1  0  0  0  0
+  8 12  1  0  0  0  0
+ 12  4  1  0  0  0  0
+  4 13  1  0  0  0  0
+ 14 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+4AZC_NGW_A_2042
+
+>  <ChemCompId>
+NGW
+
+>  <PdbId>
+4AZC
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+2042
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O4 S
+
+>  <Name>
+(2S,3aR,5R,6S,7R,7aR)-5-(hydroxymethyl)-2-methyl-2,3a,5,6,7,7a-hexahydro-1H-pyrano[3,2-d][1,3]thiazole-6,7-diol
+
+>  <SystematicName>
+(2S,3aR,5R,6S,7R,7aR)-5-(hydroxymethyl)-2-methyl-2,3a,5,6,7,7a-hexahydro-1H-pyrano[3,2-d][1,3]thiazole-6,7-diol
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C8 H15 N O4 S
+
+>  <MolecularWeight>
+221.274
+
+>  <ModifiedDate>
+2014-09-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H15NO4S/c1-3-9-5-7(12)6(11)4(2-10)13-8(5)14-3/h3-12H,2H2,1H3/t3-,4+,5+,6+,7+,8+/m0/s1
+
+>  <InChIKey>
+XWPUWEBFKDEDIF-GUHFPMLUSA-N
+
+>  <SMILES>
+C[C@H]1N[C@@H]2[C@H]([C@@H]([C@H](O[C@@H]2S1)CO)O)O
+
+$$$$

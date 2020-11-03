@@ -1,0 +1,105 @@
+2PWG_CTS_A_8000
+  RCSB PDB08012017453D
+Coordinates from PDB:2PWG:A:8000 Model:1 without hydrogens
+ 13 14  0  0  0  0            999 V2000
+   20.0830   34.2930  112.2200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.7070   34.5890  110.8970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.9780   35.5440  111.0290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.3490   35.9910  112.4640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.1740   34.8880  113.5380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.9750   35.3560  115.0110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.0120   33.3270  110.2660   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.7080   36.7660  110.3030   O 0  0  0  0  0  0  0  0  0  0  0  0
+   23.7120   36.4430  112.5220   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.5080   36.6620  115.3030   O 0  0  0  0  0  0  0  0  0  0  0  0
+   21.0370   33.9920  113.2870   N 0  0  0  0  0  0  0  0  0  0  0  0
+   20.4420   35.2890  115.1520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.2730   33.8860  114.5330   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 11  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6 10  1  0  0  0  0
+  6 12  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 12 13  1  0  0  0  0
+M  END
+>  <InstanceId>
+2PWG_CTS_A_8000
+
+>  <ChemCompId>
+CTS
+
+>  <PdbId>
+2PWG
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+8000
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O4
+
+>  <Name>
+CASTANOSPERMINE
+
+>  <SystematicName>
+(1S,4S,6S,7R,8R,8aR)-1,2,3,5,6,7,8,8a-octahydroindolizine-1,6,7,8-tetrol
+
+>  <Synonyms>
+(1S,6S,7R,8R,8AR)-1,6,7,8-TETRAHYDROXYINDOLIZIDINE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H15 N O4
+
+>  <MolecularWeight>
+189.209
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H15NO4/c10-4-1-2-9-3-5(11)7(12)8(13)6(4)9/h4-8,10-13H,1-3H2/t4-,5-,6+,7+,8+/m0/s1
+
+>  <InChIKey>
+JDVVGAQPNNXQDW-TVNFTVLESA-N
+
+>  <SMILES>
+C1C[N@]2C[C@@H]([C@H]([C@@H]([C@H]2[C@H]1O)O)O)O
+
+$$$$

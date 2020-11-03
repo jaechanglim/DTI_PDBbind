@@ -1,0 +1,102 @@
+3S0E_EOL_A_120
+  RCSB PDB08012020243D
+Coordinates from PDB:3S0E:A:120 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+    2.6470  -10.6740  -10.6630   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8980  -13.1590   -8.0060   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8070  -11.4940  -11.7850   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.5130  -10.4990   -8.2410   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.6910  -11.2420   -9.3920   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0330  -12.8590  -11.6300   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8680  -12.6100   -9.2510   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0590  -13.4270  -10.3610   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.7420  -10.9150  -13.1630   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.6280   -9.7660  -13.4730   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.8050   -9.6300  -12.8030   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.3600   -9.1300   -8.3130   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  2  0  0  0  0
+  1  5  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  6  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 12  1  0  0  0  0
+  5  7  2  0  0  0  0
+  6  8  2  0  0  0  0
+  7  8  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  2  0  0  0  0
+M  END
+>  <InstanceId>
+3S0E_EOL_A_120
+
+>  <ChemCompId>
+EOL
+
+>  <PdbId>
+3S0E
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+120
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 O2
+
+>  <Name>
+2-methoxy-4-(prop-2-en-1-yl)phenol
+
+>  <SystematicName>
+2-methoxy-4-prop-2-enyl-phenol
+
+>  <Synonyms>
+eugenol
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H12 O2
+
+>  <MolecularWeight>
+164.201
+
+>  <ModifiedDate>
+2011-11-25
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H12O2/c1-3-4-8-5-6-9(11)10(7-8)12-2/h3,5-7,11H,1,4H2,2H3
+
+>  <InChIKey>
+RRAFCDWBNXTKKO-UHFFFAOYSA-N
+
+>  <SMILES>
+COc1cc(ccc1O)CC=C
+
+$$$$

@@ -1,0 +1,113 @@
+5SZ5_72E_A_303
+  RCSB PDB08022002563D
+Coordinates from PDB:5SZ5:A:303 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   16.3020    7.7770   15.3830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5200    7.4000   14.5340   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.2180    8.4860   14.0170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3430    8.2960   13.2350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.7850    7.0130   12.9740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.0930    5.9220   13.4830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.9530    6.1000   14.2490   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.2630    4.8680   14.8420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.8870    4.7480   14.9410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3150    3.6390   15.5380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1460    2.6340   16.0290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4690    1.1950   16.8450   S 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0030    1.3020   18.2740   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.9180    1.2890   16.6460   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0960   -0.1370   16.1120   N 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5290    2.7450   15.9140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.0820    3.8690   15.3300   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  3  2  2  0  0  0  0
+  3  4  1  0  0  0  0
+  2  7  1  0  0  0  0
+  4  5  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7  6  2  0  0  0  0
+  5  6  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 17  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 17 16  2  0  0  0  0
+ 10 11  2  0  0  0  0
+ 16 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 15 12  1  0  0  0  0
+ 14 12  2  0  0  0  0
+ 12 13  2  0  0  0  0
+M  END
+>  <InstanceId>
+5SZ5_72E_A_303
+
+>  <ChemCompId>
+72E
+
+>  <PdbId>
+5SZ5
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 N O2 S
+
+>  <Name>
+4-(2-methylphenyl)-benzenesulfonamide
+
+>  <SystematicName>
+4-(2-methylphenyl)benzenesulfonamide
+
+>  <Synonyms>
+2'-methyl[1,1'-biphenyl]-4-sulfonamide
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C13 H13 N O2 S
+
+>  <MolecularWeight>
+247.313
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H13NO2S/c1-10-4-2-3-5-13(10)11-6-8-12(9-7-11)17(14,15)16/h2-9H,1H3,(H2,14,15,16)
+
+>  <InChIKey>
+YPAQIAZVIPIPPM-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1ccccc1c2ccc(cc2)S(=O)(=O)N
+
+$$$$

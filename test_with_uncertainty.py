@@ -26,25 +26,25 @@ with open(args.filename) as f:
     lines = [l.split() for l in lines]
     id_to_y = {l[0]:float(l[1]) for l in lines}
 
-with open(args.key_dir+'/test_keys.pkl', 'rb') as f:
+with open(args.key_dir+"/test_keys.pkl", "rb") as f:
     test_keys = pickle.load(f)
 
 
 #Model
 cmd = utils.set_cuda_visible_device(args.ngpu)
-os.environ['CUDA_VISIBLE_DEVICES']=cmd[:-1]
+os.environ["CUDA_VISIBLE_DEVICES"]=cmd[:-1]
 
-if args.potential=='morse': model = model.DTILJ(args)
-elif args.potential=='morse_all_pair': model = model.DTILJAllPair(args)
-elif args.potential=='harmonic': model = model.DTIHarmonic(args)
-elif args.potential=='harmonic_interaction_specified': model = model.DTIHarmonicIS(args)
+if args.potential=="morse": model = model.DTILJ(args)
+elif args.potential=="morse_all_pair": model = model.DTILJAllPair(args)
+elif args.potential=="harmonic": model = model.DTIHarmonic(args)
+elif args.potential=="harmonic_interaction_specified": model = model.DTIHarmonicIS(args)
 else:
-    print (f'No {args.potential} potential')
+    print (f"No {args.potential} potential")
     exit(-1)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 model = utils.initialize_model(model, device, load_save_file=True, file_path=args.restart_file)
-print ('number of parameters : ', sum(p.numel() for p in model.parameters() if p.requires_grad))
+print ("number of parameters : ", sum(p.numel() for p in model.parameters() if p.requires_grad))
 
 #Dataloader
 test_dataset = MolDataset(test_keys, args.data_dir, id_to_y)
@@ -65,8 +65,8 @@ for i_batch, sample in enumerate(test_data_loader):
     model.zero_grad()
     if sample is None : continue
     sample = utils.dic_to_device(sample, device)
-    keys = sample['key']
-    affinity = sample['affinity']
+    keys = sample["key"]
+    affinity = sample["affinity"]
 
     MC_component_pred = []
     ale_var = []
@@ -99,14 +99,14 @@ _, _, r_value, _, _ = stats.linregress(affinity_list, pred_list)
 end = time.time()
 
 #Write prediction
-w_test = open(args.test_result_filename, 'w')
+w_test = open(args.test_result_filename, "w")
 for k in sorted(key_list):
-    w_test.write(f'{k}\t{affinity_dict[k]:.5f}\t')  # Key, True value
-    w_test.write(f'{pred_dict[k]:.5f}\t')   # predicted total energy
-    w_test.write(f'{epi_var_dict[k]:.5f}\t')  # variance for predicting total energy
-    w_test.write(f'{ale_var_dict[k]:.7f}\t')  # variance for predicting total energy
-    w_test.write(f'{tot_var_dict[k]:.5f}\t')  # variance for predicting total energy
-    w_test.write('\n')
+    w_test.write(f"{k}\t{affinity_dict[k]:.5f}\t")  # Key, True value
+    w_test.write(f"{pred_dict[k]:.5f}\t")   # predicted total energy
+    w_test.write(f"{epi_var_dict[k]:.5f}\t")  # variance for predicting total energy
+    w_test.write(f"{ale_var_dict[k]:.7f}\t")  # variance for predicting total energy
+    w_test.write(f"{tot_var_dict[k]:.5f}\t")  # variance for predicting total energy
+    w_test.write("\n")
 w_test.close()
 
 print (f"R2: {test_r2:.3f}\n")

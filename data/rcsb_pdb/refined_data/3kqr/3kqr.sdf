@@ -1,0 +1,93 @@
+3KQR_OPE_A_700
+  RCSB PDB08012019373D
+Coordinates from PDB:3KQR:A:700 Model:1 without hydrogens
+  8  7  0  0  0  0            999 V2000
+   17.6950   14.1940   56.2520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.0060   13.6200   54.8940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4830   17.2880   56.8380   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.9730   17.3480   57.2680   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5610   15.6960   58.5480   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9680   15.3580   55.9940   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.8160   14.6110   54.1520   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.6900   16.3590   57.2420   P 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  8  1  0  0  0  0
+  5  8  2  0  0  0  0
+  6  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+3KQR_OPE_A_700
+
+>  <ChemCompId>
+OPE
+
+>  <PdbId>
+3KQR
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+700
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C2 N O4 P
+
+>  <Name>
+PHOSPHORIC ACID MONO-(2-AMINO-ETHYL) ESTER
+
+>  <SystematicName>
+2-aminoethyl dihydrogen phosphate
+
+>  <Synonyms>
+COLAMINE PHOSPHORIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C2 H8 N O4 P
+
+>  <MolecularWeight>
+141.063
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C2H8NO4P/c3-1-2-7-8(4,5)6/h1-3H2,(H2,4,5,6)
+
+>  <InChIKey>
+SUHOOTKUPISOBE-UHFFFAOYSA-N
+
+>  <SMILES>
+C(COP(=O)(O)O)N
+
+$$$$

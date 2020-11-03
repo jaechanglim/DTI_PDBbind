@@ -1,0 +1,98 @@
+4OWV_BE2_A_401
+  RCSB PDB08012022473D
+Coordinates from PDB:4OWV:A:401 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+    0.8990   38.1210  -16.3460   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.0120   38.2730  -17.2210   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8540   38.9220  -16.2540   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.8020   36.9630  -15.3860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.2910   35.9480  -15.5230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3730   34.8930  -14.6180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2170   36.0410  -16.5180   N 0  0  0  0  0  0  0  0  0  0  0  0
+    0.5680   34.7960  -13.6060   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.5810   35.7410  -13.4840   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7230   36.8170  -14.3470   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  1  0  0  0  0
+  6  8  2  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+4OWV_BE2_A_401
+
+>  <ChemCompId>
+BE2
+
+>  <PdbId>
+4OWV
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O2
+
+>  <Name>
+2-AMINOBENZOIC ACID
+
+>  <SystematicName>
+2-aminobenzoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+L-PEPTIDE LINKING
+
+>  <Formula>
+C7 H7 N O2
+
+>  <MolecularWeight>
+137.136
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+X
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H7NO2/c8-6-4-2-1-3-5(6)7(9)10/h1-4H,8H2,(H,9,10)
+
+>  <InChIKey>
+RWZYAGGXGHYGMB-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(c(c1)C(=O)O)N
+
+$$$$

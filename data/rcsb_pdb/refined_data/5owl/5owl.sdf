@@ -1,0 +1,113 @@
+5OWL_B0K_A_401
+  RCSB PDB08022002453D
+Coordinates from PDB:5OWL:A:401 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   -5.2050  -46.1440    4.8890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0960  -46.2670    6.2550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.7760  -45.3340    7.0940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.5380  -44.3110    6.5380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.6440  -44.1910    5.1490   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.4730  -47.1430    4.3240   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8740  -47.9100    7.7510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8250  -47.4340    9.9950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9840  -45.0980    4.3200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9110  -47.0150    8.5280   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9370  -47.8540    5.2990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3300  -46.3880   10.8670   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2870  -47.3520    6.4720   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.6760  -45.4390    9.0300  Br 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.4510  -43.0540    7.7110  Br 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.7140  -42.7580    4.3890  Br 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.1190  -44.9500    2.3860  Br 0  0  0  0  0  0  0  0  0  0  0  0
+ 16  5  1  0  0  0  0
+ 17  9  1  0  0  0  0
+  5  9  2  0  0  0  0
+  5  4  1  0  0  0  0
+  9  1  1  0  0  0  0
+ 15  4  1  0  0  0  0
+  4  3  2  0  0  0  0
+  1  6  1  0  0  0  0
+  1  2  2  0  0  0  0
+  6 11  2  0  0  0  0
+  3  2  1  0  0  0  0
+  3 14  1  0  0  0  0
+  2 13  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 13  7  1  0  0  0  0
+  7 10  1  0  0  0  0
+ 10  8  1  0  0  0  0
+  8 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+5OWL_B0K_A_401
+
+>  <ChemCompId>
+B0K
+
+>  <PdbId>
+5OWL
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N3 Br4
+
+>  <Name>
+3-[4,5,6,7-tetrakis(bromanyl)benzimidazol-1-yl]propan-1-amine
+
+>  <SystematicName>
+3-[4,5,6,7-tetrakis(bromanyl)benzimidazol-1-yl]propan-1-amine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H9 Br4 N3
+
+>  <MolecularWeight>
+490.815
+
+>  <ModifiedDate>
+2018-07-20
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H9Br4N3/c11-5-6(12)8(14)10-9(7(5)13)16-4-17(10)3-1-2-15/h4H,1-3,15H2
+
+>  <InChIKey>
+ZSGVCOITZQLDSD-UHFFFAOYSA-N
+
+>  <SMILES>
+c1nc2c(n1CCCN)c(c(c(c2Br)Br)Br)Br
+
+$$$$

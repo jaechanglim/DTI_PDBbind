@@ -1,0 +1,92 @@
+2REG_CHT_A_1
+  RCSB PDB08012017543D
+Coordinates from PDB:2REG:A:1 Model:1 without hydrogens
+  7  6  0  0  0  0            999 V2000
+   16.8080    1.7780    5.6370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4210    2.0610    7.0970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3570    3.3390    8.7640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.6250    4.5310    7.1760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.5390    3.5440    6.5260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.9650    2.5420    5.2740   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7470    3.3560    7.3430   N 0  3  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  7  1  0  0  0  0
+  4  7  1  0  0  0  0
+  5  7  1  0  0  0  0
+M  CHG  1   7   1
+M  END
+>  <InstanceId>
+2REG_CHT_A_1
+
+>  <ChemCompId>
+CHT
+
+>  <PdbId>
+2REG
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 N O
+
+>  <Name>
+CHOLINE ION
+
+>  <SystematicName>
+2-hydroxyethyl-trimethyl-azanium
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C5 H14 N O
+
+>  <MolecularWeight>
+104.171
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H14NO/c1-6(2,3)4-5-7/h7H,4-5H2,1-3H3/q+1
+
+>  <InChIKey>
+OEYIOHPDSNJKLS-UHFFFAOYSA-N
+
+>  <SMILES>
+C[N+](C)(C)CCO
+
+$$$$

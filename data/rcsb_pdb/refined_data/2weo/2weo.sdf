@@ -1,0 +1,100 @@
+2WEO_FBW_A_1263
+  RCSB PDB08012018073D
+Coordinates from PDB:2WEO:A:1263 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+    4.0980   -6.1420   14.4400   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.4490   -6.1390   14.7740   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.0130   -5.0620   15.4780   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.2440   -3.9490   15.8650   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.8750   -3.9820   15.5050   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.3170   -5.0570   14.7970   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.9150   -2.6880   16.7200   S 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3850   -1.3090   16.0960   N 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3890   -2.8420   18.0400   O 0  0  0  0  0  0  0  0  0  0  0  0
+    7.3490   -2.8070   16.5850   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.2380   -7.1950   14.4320   F 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  2  0  0  0  0
+  2  3  2  0  0  0  0
+  2 11  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  2  0  0  0  0
+  7 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+2WEO_FBW_A_1263
+
+>  <ChemCompId>
+FBW
+
+>  <PdbId>
+2WEO
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1263
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O2 S F
+
+>  <Name>
+3-fluorobenzenesulfonamide
+
+>  <SystematicName>
+3-fluorobenzenesulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C6 H6 F N O2 S
+
+>  <MolecularWeight>
+175.181
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H6FNO2S/c7-5-2-1-3-6(4-5)11(8,9)10/h1-4H,(H2,8,9,10)
+
+>  <InChIKey>
+CRINBBOGNYCAOV-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(cc(c1)S(=O)(=O)N)F
+
+$$$$

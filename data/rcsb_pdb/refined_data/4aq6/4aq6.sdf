@@ -1,0 +1,102 @@
+4AQ6_OMD_A_838
+  RCSB PDB08012021083D
+Coordinates from PDB:4AQ6:A:838 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   17.5990   42.2440    0.3040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.6750   42.3480   -0.8720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3800   42.6010   -2.1560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.6300   41.5670   -3.0450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.2920   41.8390   -4.2390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.5860   40.8510   -5.1460   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.6890   43.1340   -4.5390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.4250   44.1590   -3.6480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.7780   43.8960   -2.4500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5210   44.9320   -1.5620   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3150   42.8800    1.3550   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.6300   41.5150    0.2630   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 11  2  0  0  0  0
+  1 12  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  7  2  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+4AQ6_OMD_A_838
+
+>  <ChemCompId>
+OMD
+
+>  <PdbId>
+4AQ6
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+838
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 O4
+
+>  <Name>
+2-(3,6-DIHYDROXYPHENYL)ACETIC ACID
+
+>  <SystematicName>
+2-(2,5-dihydroxyphenyl)ethanoic acid
+
+>  <Synonyms>
+HOMOGENTISIC ACID
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H8 O4
+
+>  <MolecularWeight>
+168.147
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H8O4/c9-6-1-2-7(10)5(3-6)4-8(11)12/h1-3,9-10H,4H2,(H,11,12)
+
+>  <InChIKey>
+IGMNYECMUMZDDF-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c(cc1O)CC(=O)O)O
+
+$$$$

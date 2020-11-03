@@ -1,0 +1,102 @@
+4Q87_4FH_A_303
+  RCSB PDB08012022583D
+Coordinates from PDB:4Q87:A:303 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   14.7830    0.3710   16.9820   S 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4480    1.3790   15.7560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2030    2.8180   15.7800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7230    3.6030   14.8210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4660    5.1320   14.8420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9470    5.4590   15.9500   F 0  0  0  0  0  0  0  0  0  0  0  0
+   16.6370    5.7880   14.6820   F 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6710    5.4430   13.8930   F 0  0  0  0  0  0  0  0  0  0  0  0
+   16.5040    3.0350   13.7940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7370    1.6540   13.7730   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.1980    0.8380   14.7690   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4220   -0.4790   14.7460   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 10  9  2  0  0  0  0
+ 10 11  1  0  0  0  0
+  9  4  1  0  0  0  0
+  8  5  1  0  0  0  0
+  7  5  1  0  0  0  0
+ 12 11  1  0  0  0  0
+ 11  2  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  3  2  0  0  0  0
+  5  6  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  2  0  0  0  0
+M  END
+>  <InstanceId>
+4Q87_4FH_A_303
+
+>  <ChemCompId>
+4FH
+
+>  <PdbId>
+4Q87
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O S F3
+
+>  <Name>
+1-hydroxy-4-(trifluoromethyl)pyridine-2(1H)-thione
+
+>  <SystematicName>
+1-oxidanyl-4-(trifluoromethyl)pyridine-2-thione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H4 F3 N O S
+
+>  <MolecularWeight>
+195.162
+
+>  <ModifiedDate>
+2015-03-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H4F3NOS/c7-6(8,9)4-1-2-10(11)5(12)3-4/h1-3,11H
+
+>  <InChIKey>
+LFJNCYOAHJYDNR-UHFFFAOYSA-N
+
+>  <SMILES>
+C1=CN(C(=S)C=C1C(F)(F)F)O
+
+$$$$

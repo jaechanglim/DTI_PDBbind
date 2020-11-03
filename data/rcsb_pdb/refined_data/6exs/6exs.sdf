@@ -1,0 +1,115 @@
+6EXS_C3H_A_514
+  RCSB PDB08022004353D
+Coordinates from PDB:6EXS:A:514 Model:1 without hydrogens
+ 19 18  0  0  0  0            999 V2000
+   18.2000    2.2200   32.3260   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.9890    3.0050   33.1800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9450    3.7570   33.2150   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.9150    3.3020   34.3230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.3040    3.0730   34.0060   N 0  0  0  0  0  0  0  0  0  0  0  0
+   21.0450    4.0040   33.4290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.6920    4.6160   32.4320   O 0  0  0  0  0  0  0  0  0  0  0  0
+   22.3680    4.3340   34.0380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.7470    3.2740   34.9620   N 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4520    4.4370   32.9640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.9650    6.0980   32.4500   S 0  0  0  0  0  0  0  0  0  0  0  0
+   24.8400    7.0040   33.8350   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.1310    6.2640   34.0720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.8750    7.0570   35.0270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.4290    7.5520   36.3440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.3640    6.5860   37.3410   O 0  0  0  0  0  0  0  0  0  0  0  0
+   25.1470    8.4450   33.4360   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.4730    9.5150   34.2780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.8480   10.8970   33.8170   C 0  0  0  0  0  0  0  0  0  0  0  0
+  7  6  2  0  0  0  0
+ 11 10  1  0  0  0  0
+ 11 12  1  0  0  0  0
+  1  2  2  0  0  0  0
+ 10  8  1  0  0  0  0
+  6  5  1  0  0  0  0
+  6  8  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+ 17 12  1  0  0  0  0
+ 17 18  1  0  0  0  0
+ 19 18  1  0  0  0  0
+  5  4  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 12 14  1  0  0  0  0
+  8  9  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+6EXS_C3H_A_514
+
+>  <ChemCompId>
+C3H
+
+>  <PdbId>
+6EXS
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+514
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N2 O4 S
+
+>  <Name>
+2-[[(2~{R})-2-azanyl-3-[(3~{S})-3-methyl-1-oxidanyl-hexan-3-yl]sulfanyl-propanoyl]amino]ethanoic acid
+
+>  <SystematicName>
+2-[[(2~{R})-2-azanyl-3-[(3~{S})-3-methyl-1-oxidanyl-hexan-3-yl]sulfanyl-propanoyl]amino]ethanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H24 N2 O4 S
+
+>  <MolecularWeight>
+292.395
+
+>  <ModifiedDate>
+2018-06-22
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H24N2O4S/c1-3-4-12(2,5-6-15)19-8-9(13)11(18)14-7-10(16)17/h9,15H,3-8,13H2,1-2H3,(H,14,18)(H,16,17)/t9-,12-/m0/s1
+
+>  <InChIKey>
+FIKNGFBNGIHRJV-CABZTGNLSA-N
+
+>  <SMILES>
+CCC[C@@](C)(CCO)SC[C@@H](C(=O)NCC(=O)O)N
+
+$$$$

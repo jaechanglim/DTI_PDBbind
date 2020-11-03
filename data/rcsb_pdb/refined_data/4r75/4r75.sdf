@@ -1,0 +1,114 @@
+4R75_S7P_A_401
+  RCSB PDB08012023073D
+Coordinates from PDB:4R75:A:401 Model:1 without hydrogens
+ 18 18  0  0  0  0            999 V2000
+  -16.1190  -10.5370   14.9510   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.6440  -10.2030   13.6300   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.1260   -9.8820   13.6630   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.3870  -10.9700   14.0280   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.7540   -9.4260   12.3340   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.9710   -8.2110   12.4230   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.8900   -8.3010   11.4150   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.1690   -7.0980   11.3740   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.4260   -8.6080    9.9170   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.5230   -8.0720    8.9940   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.7990   -9.0100    7.9280   P 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.0070   -8.0560    7.0810   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -11.8550   -9.7580    7.1510   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.8820   -9.9800    8.6600   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.5390   -8.1990   13.8690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.1890   -6.8250   14.3210   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.7700   -8.6890   14.5200   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.6330   -9.0070   15.8940   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 12 11  2  0  0  0  0
+ 13 11  1  0  0  0  0
+ 11 14  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 10  9  1  0  0  0  0
+  9  7  1  0  0  0  0
+  8  7  1  0  0  0  0
+  7  6  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5  3  1  0  0  0  0
+  6 15  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 17  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 15 17  1  0  0  0  0
+ 17 18  1  0  0  0  0
+M  END
+>  <InstanceId>
+4R75_S7P_A_401
+
+>  <ChemCompId>
+S7P
+
+>  <PdbId>
+4R75
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O10 P
+
+>  <Name>
+1-C-(hydroxymethyl)-6-O-phosphono-beta-D-altrofuranose
+
+>  <SystematicName>
+[(2R)-2-[(2R,3S,4S,5R)-5-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxolan-2-yl]-2-oxidanyl-ethyl] dihydrogen phosphate
+
+>  <Synonyms>
+1-C-(hydroxymethyl)-6-O-phosphono-beta-D-altrose; 1-C-(hydroxymethyl)-6-O-phosphono-D-altrose; 1-C-(hydroxymethyl)-6-O-phosphono-altrose
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C7 H15 O10 P
+
+>  <MolecularWeight>
+290.162
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H15O10P/c8-2-7(12)6(11)4(10)5(17-7)3(9)1-16-18(13,14)15/h3-6,8-12H,1-2H2,(H2,13,14,15)/t3-,4-,5-,6+,7-/m1/s1
+
+>  <InChIKey>
+RKCHIPUTSFLEHR-BNWJMWRWSA-N
+
+>  <SMILES>
+C([C@H]([C@@H]1[C@H]([C@@H]([C@](O1)(CO)O)O)O)O)OP(=O)(O)O
+
+$$$$

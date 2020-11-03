@@ -1,0 +1,110 @@
+4BB9_F1P_A_702
+  RCSB PDB08012021133D
+Coordinates from PDB:4BB9:A:702 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   50.6400   31.4180   15.6160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   49.2680   31.2540   14.9520   C 0  0  0  0  0  0  0  0  0  0  0  0
+   48.1950   31.7850   15.8920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   46.8130   31.5870   15.3030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   46.5700   30.1030   15.0980   C 0  0  0  0  0  0  0  0  0  0  0  0
+   47.6610   29.6080   14.0850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.6800   30.6200   16.7980   O 0  0  0  0  0  0  0  0  0  0  0  0
+   49.2630   31.9930   13.7380   O 0  0  0  0  0  0  0  0  0  0  0  0
+   48.4020   33.1590   16.2250   O 0  0  0  0  0  0  0  0  0  0  0  0
+   45.8050   32.0310   16.2650   O 0  0  0  0  0  0  0  0  0  0  0  0
+   46.6830   29.3320   16.3310   O 0  0  0  0  0  0  0  0  0  0  0  0
+   48.9880   29.8660   14.7110   O 0  0  0  0  0  0  0  0  0  0  0  0
+   51.9560   30.7580   17.7460   P 0  0  0  0  0  0  0  0  0  0  0  0
+   51.7970   29.6020   18.7390   O 0  0  0  0  0  0  0  0  0  0  0  0
+   51.9440   32.1350   18.4600   O 0  0  0  0  0  0  0  0  0  0  0  0
+   53.2200   30.7000   16.8480   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  7  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  2 12  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  1  0  0  0  0
+  6 12  1  0  0  0  0
+  7 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 13 15  1  0  0  0  0
+ 13 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+4BB9_F1P_A_702
+
+>  <ChemCompId>
+F1P
+
+>  <PdbId>
+4BB9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+702
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O9 P
+
+>  <Name>
+1-O-phosphono-beta-D-fructopyranose
+
+>  <SystematicName>
+[(2R,3S,4R,5R)-2,3,4,5-tetrahydroxyoxan-2-yl]methyl dihydrogen phosphate
+
+>  <Synonyms>
+BETA-D-FRUCTOPYRANOSE-1-PHOSPHATE; ((2R,3S,4R,5R)-TETRAHYDRO-2,3,4,5-TETRAHYDROXY-2H-PYRAN-2-YL)METHYL DIHYDROGEN PHOSPHATE; 1-O-phosphono-beta-D-fructose; 1-O-phosphono-D-fructose; 1-O-phosphono-fructose
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C6 H13 O9 P
+
+>  <MolecularWeight>
+260.136
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+BDF
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13O9P/c7-3-1-14-6(10,5(9)4(3)8)2-15-16(11,12)13/h3-5,7-10H,1-2H2,(H2,11,12,13)/t3-,4-,5+,6-/m1/s1
+
+>  <InChIKey>
+HXRNACQBNUPKDX-ARQDHWQXSA-N
+
+>  <SMILES>
+C1[C@H]([C@H]([C@@H]([C@](O1)(COP(=O)(O)O)O)O)O)O
+
+$$$$

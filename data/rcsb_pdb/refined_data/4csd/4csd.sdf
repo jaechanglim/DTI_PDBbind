@@ -1,0 +1,102 @@
+4CSD_MFU_A_301
+  RCSB PDB08012021243D
+Coordinates from PDB:4CSD:A:301 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+  -11.5430   -4.0470   40.8300   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.1290   -4.1620   41.3860   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.0740   -5.3310   42.3880   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -10.5610   -6.5770   41.6270   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.0180   -6.3720   41.1640   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.5970   -7.5710   40.4060   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.4210   -3.6400   41.8820   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.7610   -2.9190   41.9790   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -8.7380   -5.4920   42.8800   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -9.7590   -6.9010   40.4780   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.0100   -5.2570   40.2510   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.7810   -3.4560   41.5070   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  7  1  0  0  0  0
+  1 11  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  8  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  9  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4 10  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 11  1  0  0  0  0
+  7 12  1  0  0  0  0
+M  END
+>  <InstanceId>
+4CSD_MFU_A_301
+
+>  <ChemCompId>
+MFU
+
+>  <PdbId>
+4CSD
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O5
+
+>  <Name>
+methyl alpha-L-fucopyranoside
+
+>  <SystematicName>
+(2R,3S,4R,5S,6S)-2-methoxy-6-methyl-oxane-3,4,5-triol
+
+>  <Synonyms>
+ALPHA-L-METHYL-FUCOSE; methyl 6-deoxy-alpha-L-galactopyranoside; methyl alpha-L-fucoside; methyl L-fucoside; methyl fucoside
+
+>  <Type>
+L-saccharide
+
+>  <Formula>
+C7 H14 O5
+
+>  <MolecularWeight>
+178.183
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+FUC
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H14O5/c1-3-4(8)5(9)6(10)7(11-2)12-3/h3-10H,1-2H3/t3-,4+,5+,6-,7+/m0/s1
+
+>  <InChIKey>
+OHWCAVRRXKJCRB-CXNFULCWSA-N
+
+>  <SMILES>
+C[C@H]1[C@H]([C@H]([C@@H]([C@@H](O1)OC)O)O)O
+
+$$$$

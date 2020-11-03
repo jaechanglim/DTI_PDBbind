@@ -1,0 +1,107 @@
+3WTO_N2Y_A_301
+  RCSB PDB08012020563D
+Coordinates from PDB:3WTO:A:301 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+  -18.8160   -0.1070   25.3150   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.0140    0.0550   24.4140   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.0280    0.2970   25.4060   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.5680    1.0350   26.4800   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.9780    1.3120   26.2230   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.2760    0.6650   24.8530   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.2020   -4.7040   22.2470   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.7140   -6.2910   21.7280  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.8550   -3.8400   21.3030   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.4470   -2.6020   21.5800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.3540   -2.1140   22.9140   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.7230   -3.0150   23.9650   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.1570   -4.3380   23.6370   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.8570   -0.6680   23.1230   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 13 12  1  0  0  0  0
+ 13  7  2  0  0  0  0
+  6  5  1  0  0  0  0
+  6  2  1  0  0  0  0
+ 12 11  2  0  0  0  0
+  8  7  1  0  0  0  0
+  7  9  1  0  0  0  0
+  5  4  1  0  0  0  0
+ 11 14  1  0  0  0  0
+ 11 10  1  0  0  0  0
+ 14  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  9 10  2  0  0  0  0
+  4  3  1  0  0  0  0
+  3  1  2  0  0  0  0
+M  END
+>  <InstanceId>
+3WTO_N2Y_A_301
+
+>  <ChemCompId>
+N2Y
+
+>  <PdbId>
+3WTO
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+301
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N4 Cl
+
+>  <Name>
+(2Z)-1-[(6-chloropyridin-3-yl)methyl]imidazolidin-2-imine
+
+>  <SystematicName>
+1-[(6-chloranylpyridin-3-yl)methyl]imidazolidin-2-imine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H11 Cl N4
+
+>  <MolecularWeight>
+210.663
+
+>  <ModifiedDate>
+2015-01-30
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H11ClN4/c10-8-2-1-7(5-13-8)6-14-4-3-12-9(14)11/h1-2,5H,3-4,6H2,(H2,11,12)
+
+>  <InChIKey>
+UEQZFAGVRGWPDK-UHFFFAOYSA-N
+
+>  <SMILES>
+[H]/N=C\1/NCCN1Cc2ccc(nc2)Cl
+
+$$$$

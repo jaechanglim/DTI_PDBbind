@@ -1,0 +1,107 @@
+3CTT_3CU_A_1001
+  RCSB PDB08012018463D
+Coordinates from PDB:3CTT:A:1001 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+    1.2030  -15.8810   23.4610   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.8370  -16.3910   22.1910   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.9850  -15.2550   21.1710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1130  -15.2920   20.0860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2480  -14.4570   20.3750   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.7050  -14.7420   18.9140   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.0420  -14.9370   17.6800   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8670  -15.7000   18.9980   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.0530  -15.2750   18.1130   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.3870  -13.9110   18.3650   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.2480  -15.5560   20.4210   N 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8580  -16.8060   20.9590   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7950  -17.5160   21.7440   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.0830  -18.3910   20.8650   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2 13  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 11  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 11  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+3CTT_3CU_A_1001
+
+>  <ChemCompId>
+3CU
+
+>  <PdbId>
+3CTT
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O5
+
+>  <Name>
+CASUARINE
+
+>  <SystematicName>
+(1R,2R,3R,4S,6S,7S,8R)-3-(hydroxymethyl)-2,3,5,6,7,8-hexahydro-1H-pyrrolizine-1,2,6,7-tetrol
+
+>  <Synonyms>
+(1R,2R,3R,6S,7S,7aR)-3-(hydroxymethyl)hexahydro-1H-pyrrolizine-1,2,6,7-tetrol
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C8 H15 N O5
+
+>  <MolecularWeight>
+205.208
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C8H15NO5/c10-2-3-6(12)8(14)5-7(13)4(11)1-9(3)5/h3-8,10-14H,1-2H2/t3-,4+,5-,6-,7-,8-/m1/s1
+
+>  <InChIKey>
+AXTGOJVKRHFYBT-XAZAIFFQSA-N
+
+>  <SMILES>
+C1[C@@H]([C@H]([C@H]2[N@@]1[C@@H]([C@H]([C@@H]2O)O)CO)O)O
+
+$$$$

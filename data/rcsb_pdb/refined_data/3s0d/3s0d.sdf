@@ -1,0 +1,99 @@
+3S0D_CTV_A_120
+  RCSB PDB08012020243D
+Coordinates from PDB:3S0D:A:120 Model:1 without hydrogens
+ 11 10  0  0  0  0            999 V2000
+    8.4290   10.5450   29.6370   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.3110   15.0570   33.2940   N 0  0  0  0  0  0  0  0  0  0  0  0
+    8.0320   12.4880   28.4760   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.4860   11.8660   29.5840   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.6150   12.6790   30.8830   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.8330   12.7030   31.6070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.0100   11.4250   32.3590   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.9170   11.5230   33.9240   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.4170   12.6810   34.6790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.2830   10.2120   34.8180   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.9130   13.8440   34.0050   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  4  1  0  0  0  0
+  2 11  3  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+M  END
+>  <InstanceId>
+3S0D_CTV_A_120
+
+>  <ChemCompId>
+CTV
+
+>  <PdbId>
+3S0D
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+120
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N
+
+>  <Name>
+(2Z)-3,7-dimethylocta-2,6-dienenitrile
+
+>  <SystematicName>
+(2Z)-3,7-dimethylocta-2,6-dienenitrile
+
+>  <Synonyms>
+citralva
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H15 N
+
+>  <MolecularWeight>
+149.233
+
+>  <ModifiedDate>
+2011-11-25
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H15N/c1-9(2)5-4-6-10(3)7-8-11/h5,7H,4,6H2,1-3H3/b10-7-
+
+>  <InChIKey>
+HLCSDJLATUNSSI-YFHOEESVSA-N
+
+>  <SMILES>
+CC(=CCC/C(=C\C#N)/C)C
+
+$$$$

@@ -1,0 +1,111 @@
+4URY_RV1_R_1167
+  RCSB PDB08012023393D
+Coordinates from PDB:4URY:R:1167 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+   56.8590   39.2320   63.4430   C 0  0  0  0  0  0  0  0  0  0  0  0
+   58.0660   39.0550   62.8280   N 0  0  0  0  0  0  0  0  0  0  0  0
+   52.0360   38.6630   65.2120   O 0  0  0  0  0  0  0  0  0  0  0  0
+   52.8430   39.8100   65.4980   S 0  0  0  0  0  0  0  0  0  0  0  0
+   55.7170   38.5640   62.9880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.1260   41.1500   64.8860   N 0  0  0  0  0  0  0  0  0  0  0  0
+   53.1030   40.1870   66.8570   O 0  0  0  0  0  0  0  0  0  0  0  0
+   54.4950   38.7360   63.6110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.1220   40.5490   62.6710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   54.3930   39.6120   64.6820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   55.5150   40.2680   65.1710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   56.7340   40.0900   64.5420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.8590   41.3580   63.5610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.1470   42.6570   63.2890   C 0  0  0  0  0  0  0  0  0  0  0  0
+   50.0370   42.6190   62.2970   C 0  0  0  0  0  0  0  0  0  0  0  0
+   51.2910   43.2900   61.9410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  5  2  0  0  0  0
+  1 12  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  6  1  0  0  0  0
+  4  7  2  0  0  0  0
+  4 10  1  0  0  0  0
+  5  8  1  0  0  0  0
+  6 13  1  0  0  0  0
+  8 10  2  0  0  0  0
+  9 13  2  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 14 16  1  0  0  0  0
+ 15 16  1  0  0  0  0
+M  END
+>  <InstanceId>
+4URY_RV1_R_1167
+
+>  <ChemCompId>
+RV1
+
+>  <PdbId>
+4URY
+
+>  <ChainId>
+R
+
+>  <ResidueNumber>
+1167
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O3 S
+
+>  <Name>
+N-[(4-aminophenyl)sulfonyl]cyclopropanecarboxamide
+
+>  <SystematicName>
+N-(4-aminophenyl)sulfonylcyclopropanecarboxamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H12 N2 O3 S
+
+>  <MolecularWeight>
+240.279
+
+>  <ModifiedDate>
+2015-02-27
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H12N2O3S/c11-8-3-5-9(6-4-8)16(14,15)12-10(13)7-1-2-7/h3-7H,1-2,11H2,(H,12,13)
+
+>  <InChIKey>
+KTKSMAGLIAHVSM-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(ccc1N)S(=O)(=O)NC(=O)C2CC2
+
+$$$$

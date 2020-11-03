@@ -1,0 +1,106 @@
+2VC9_NOK_A_1909
+  RCSB PDB08012018013D
+Coordinates from PDB:2VC9:A:1909 Model:1 without hydrogens
+ 14 14  0  0  0  0            999 V2000
+   14.7340   -6.4840    8.8170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.9560   -5.9140    8.1160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2130   -6.2660    6.9700   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.6820   -5.0530    8.8330   N 0  0  0  0  0  0  0  0  0  0  0  0
+   17.8820   -4.3870    8.3060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.6880   -2.8710    8.4320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.8510   -2.1770    7.8300   N 0  0  0  0  0  0  0  0  0  0  0  0
+   20.1760   -2.5420    8.4040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.2920   -1.9070    7.5630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.3240   -2.4800    6.2570   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.3850   -4.0670    8.4870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.5660   -4.3060    9.2740   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.1490   -4.8010    9.0610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.3150   -6.2210    9.0160   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  5 13  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 11  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+2VC9_NOK_A_1909
+
+>  <ChemCompId>
+NOK
+
+>  <PdbId>
+2VC9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1909
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N2 O4
+
+>  <Name>
+2-ACETAMIDO-1,2-DIDEOXYNOJIRMYCIN
+
+>  <SystematicName>
+N-[(3S,4R,5R,6R)-4,5-dihydroxy-6-(hydroxymethyl)piperidin-3-yl]ethanamide
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C8 H16 N2 O4
+
+>  <MolecularWeight>
+204.224
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C8H16N2O4/c1-4(12)10-5-2-9-6(3-11)8(14)7(5)13/h5-9,11,13-14H,2-3H2,1H3,(H,10,12)/t5-,6+,7+,8+/m0/s1
+
+>  <InChIKey>
+GBRAQQUMMCVTAV-LXGUWJNJSA-N
+
+>  <SMILES>
+CC(=O)N[C@H]1CN[C@@H]([C@H]([C@@H]1O)O)CO
+
+$$$$

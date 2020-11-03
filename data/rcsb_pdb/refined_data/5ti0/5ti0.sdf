@@ -1,0 +1,96 @@
+5TI0_7CZ_A_302
+  RCSB PDB08022003053D
+Coordinates from PDB:5TI0:A:302 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   -6.2320    0.3190   17.1540   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.8620    1.6780   16.2020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.2740    2.9800   16.6200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0580    4.2390   15.9580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4030    4.5240   14.7550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7910    3.5940   13.9040   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6690    2.2300   14.0030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1350    1.4110   14.9990   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.8080    0.1300   14.7240   O 0  0  0  0  0  0  0  0  0  0  0  0
+  6  7  1  0  0  0  0
+  6  5  2  0  0  0  0
+  7  8  2  0  0  0  0
+  5  4  1  0  0  0  0
+  9  8  1  0  0  0  0
+  8  2  1  0  0  0  0
+  4  3  2  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  2  0  0  0  0
+M  END
+>  <InstanceId>
+5TI0_7CZ_A_302
+
+>  <ChemCompId>
+7CZ
+
+>  <PdbId>
+5TI0
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O S
+
+>  <Name>
+2-hydroxycyclohepta-2,4,6-triene-1-thione
+
+>  <SystematicName>
+2-oxidanylcyclohepta-2,4,6-triene-1-thione
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H6 O S
+
+>  <MolecularWeight>
+138.187
+
+>  <ModifiedDate>
+2017-04-21
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H6OS/c8-6-4-2-1-3-5-7(6)9/h1-5H,(H,8,9)
+
+>  <InChIKey>
+DNBQDZRBEGFUEA-UHFFFAOYSA-N
+
+>  <SMILES>
+C1=CC=C(C(=S)C=C1)O
+
+$$$$

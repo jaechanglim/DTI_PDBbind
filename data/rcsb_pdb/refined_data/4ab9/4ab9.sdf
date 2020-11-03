@@ -1,0 +1,101 @@
+4AB9_VXQ_A_1251
+  RCSB PDB08012021053D
+Coordinates from PDB:4AB9:A:1251 Model:1 without hydrogens
+ 11 12  0  0  0  0            999 V2000
+    3.0210  -15.5680   19.0340   N 0  0  0  0  0  0  0  0  0  0  0  0
+    0.6420  -14.3630   13.6210   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7020  -15.8220   18.3710   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8140  -12.1730   14.1640   O 0  0  0  0  0  0  0  0  0  0  0  0
+    1.6410  -14.8380   17.2540   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.8170  -12.8230   13.3500   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7720  -13.0400   15.2490   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.1960  -15.1660   16.0180   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.2100  -13.6180   17.4810   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.2070  -14.2430   14.9990   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.2950  -12.6940   16.4760   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  1  0  0  0  0
+  2  6  1  0  0  0  0
+  2 10  1  0  0  0  0
+  3  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  4  7  1  0  0  0  0
+  5  8  2  0  0  0  0
+  5  9  1  0  0  0  0
+  7 10  2  0  0  0  0
+  7 11  1  0  0  0  0
+  8 10  1  0  0  0  0
+  9 11  2  0  0  0  0
+M  END
+>  <InstanceId>
+4AB9_VXQ_A_1251
+
+>  <ChemCompId>
+VXQ
+
+>  <PdbId>
+4AB9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1251
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N O
+
+>  <Name>
+1-(2,3-dihydro-1-benzofuran-5-yl)methanamine
+
+>  <SystematicName>
+2,3-dihydro-1-benzofuran-5-ylmethanamine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H11 N O
+
+>  <MolecularWeight>
+149.19
+
+>  <ModifiedDate>
+2012-02-03
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H11NO/c10-6-7-1-2-9-8(5-7)3-4-11-9/h1-2,5H,3-4,6,10H2
+
+>  <InChIKey>
+WQXWNTPLZFVZNX-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc2c(cc1CN)CCO2
+
+$$$$

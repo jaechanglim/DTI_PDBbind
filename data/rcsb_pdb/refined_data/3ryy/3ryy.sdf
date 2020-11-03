@@ -1,0 +1,110 @@
+3RYY_RYY_A_262
+  RCSB PDB08012020243D
+Coordinates from PDB:3RYY:A:262 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   18.5170    5.7450   13.5730   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1030    0.9020   16.8800   S 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7630    4.5320   14.6920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3780    4.4480   14.9410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.8680    3.3380   15.6160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7400    2.3080   16.0770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.1160    2.4270   15.8230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.6310    3.5150   15.1390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.2660    5.7260   13.9230   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4970    6.6680   13.6900   O 0  0  0  0  0  0  0  0  0  0  0  0
+   19.0250    6.8480   12.7240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.5680    8.2250   14.6180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.6560    0.9670   16.7210   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.0920    7.5370   13.4110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6430    0.9820   18.2400   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6800   -0.3700   16.1230   N 0  0  0  0  0  0  0  0  0  0  0  0
+ 11  1  1  0  0  0  0
+  1  9  1  0  0  0  0
+  6  2  1  0  0  0  0
+ 16  2  1  0  0  0  0
+  2 15  2  0  0  0  0
+  2 13  2  0  0  0  0
+  9  3  1  0  0  0  0
+  3  8  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5  6  1  0  0  0  0
+  7  6  2  0  0  0  0
+  8  7  1  0  0  0  0
+ 10  9  2  0  0  0  0
+ 14 11  1  0  0  0  0
+ 12 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+3RYY_RYY_A_262
+
+>  <ChemCompId>
+RYY
+
+>  <PdbId>
+3RYY
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+262
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 N2 O3 S
+
+>  <Name>
+N-propyl-4-sulfamoylbenzamide
+
+>  <SystematicName>
+N-propyl-4-sulfamoyl-benzamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H14 N2 O3 S
+
+>  <MolecularWeight>
+242.295
+
+>  <ModifiedDate>
+2011-08-05
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H14N2O3S/c1-2-7-12-10(13)8-3-5-9(6-4-8)16(11,14)15/h3-6H,2,7H2,1H3,(H,12,13)(H2,11,14,15)
+
+>  <InChIKey>
+YWNDDZRHHBUBPB-UHFFFAOYSA-N
+
+>  <SMILES>
+CCCNC(=O)c1ccc(cc1)S(=O)(=O)N
+
+$$$$

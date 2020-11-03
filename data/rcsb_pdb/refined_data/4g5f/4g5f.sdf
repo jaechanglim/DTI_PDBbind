@@ -1,0 +1,105 @@
+4G5F_0JD_A_402
+  RCSB PDB08012021463D
+Coordinates from PDB:4G5F:A:402 Model:1 without hydrogens
+ 13 14  0  0  0  0            999 V2000
+   15.3510   12.9380    3.7350   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3980   11.8060    3.4780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6690   11.3670    2.3650   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1710   10.6630    4.4500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.5400   11.2010    5.5880   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.0900   10.2450    6.4410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.6780   10.6390    7.6740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.3580    9.6910    8.6100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.4400    8.3710    8.3060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.8380    7.9630    7.0570   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.1550    8.9000    6.1240   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.3670    8.4670    4.8490   O 0  0  0  0  0  0  0  0  0  0  0  0
+   14.4360    9.4920    3.8830   C 0  0  0  0  0  0  0  0  0  0  0  0
+  3  2  2  0  0  0  0
+  2  1  1  0  0  0  0
+  2  4  1  0  0  0  0
+ 13  4  1  0  0  0  0
+ 13 12  1  0  0  0  0
+  4  5  1  0  0  0  0
+ 12 11  1  0  0  0  0
+  5  6  1  0  0  0  0
+ 11  6  2  0  0  0  0
+ 11 10  1  0  0  0  0
+  6  7  1  0  0  0  0
+ 10  9  2  0  0  0  0
+  7  8  2  0  0  0  0
+  9  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+4G5F_0JD_A_402
+
+>  <ChemCompId>
+0JD
+
+>  <PdbId>
+4G5F
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+402
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 O4
+
+>  <Name>
+(2S)-2,3-dihydro-1,4-benzodioxine-2-carboxylic acid
+
+>  <SystematicName>
+(3S)-2,3-dihydro-1,4-benzodioxine-3-carboxylic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H8 O4
+
+>  <MolecularWeight>
+180.157
+
+>  <ModifiedDate>
+2013-03-01
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H8O4/c10-9(11)8-5-12-6-3-1-2-4-7(6)13-8/h1-4,8H,5H2,(H,10,11)/t8-/m0/s1
+
+>  <InChIKey>
+HMBHAQMOBKLWRX-QMMMGPOBSA-N
+
+>  <SMILES>
+c1ccc2c(c1)OC[C@H](O2)C(=O)O
+
+$$$$

@@ -1,0 +1,98 @@
+5W1E_PHB_A_602
+  RCSB PDB08022003263D
+Coordinates from PDB:5W1E:A:602 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+    0.0280   71.0700   21.1380   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.8300   70.6370   20.2690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.0600   71.5930   20.7770   O 0  0  0  0  0  0  0  0  0  0  0  0
+    0.3670   70.9580   22.6260   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.5620   70.3820   23.0290   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.8640   70.2820   24.3790   C 0  0  0  0  0  0  0  0  0  0  0  0
+    0.9720   70.7560   25.3290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.2230   71.3300   24.9260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5240   71.4310   23.5770   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.2760   70.6540   26.6940   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  2  0  0  0  0
+  5  6  2  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+  7 10  1  0  0  0  0
+  8  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+5W1E_PHB_A_602
+
+>  <ChemCompId>
+PHB
+
+>  <PdbId>
+5W1E
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+602
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 O3
+
+>  <Name>
+P-HYDROXYBENZOIC ACID
+
+>  <SystematicName>
+4-oxidanylbenzoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H6 O3
+
+>  <MolecularWeight>
+138.121
+
+>  <ModifiedDate>
+2011-08-22
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H6O3/c8-6-3-1-5(2-4-6)7(9)10/h1-4,8H,(H,9,10)
+
+>  <InChIKey>
+FJKROLUGYXJWQN-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(ccc1C(=O)O)O
+
+$$$$

@@ -1,0 +1,98 @@
+3TB6_ARB_A_400
+  RCSB PDB08012020333D
+Coordinates from PDB:3TB6:A:400 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   -6.4780   -1.3320   18.8620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.9480   -1.6250   17.4560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.0300   -2.8450   17.4770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9090   -2.7250   18.5290   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5990   -2.5600   19.8630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.5120   -2.2770   19.2010   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -7.0600   -1.8740   16.5690   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5750   -3.1200   16.1470   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9860   -1.6220   18.3490   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.4000   -1.3670   19.8270   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  1  0  0  0  0
+  1 10  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+3TB6_ARB_A_400
+
+>  <ChemCompId>
+ARB
+
+>  <PdbId>
+3TB6
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+400
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C5 O5
+
+>  <Name>
+beta-L-arabinopyranose
+
+>  <SystematicName>
+(2S,3R,4S,5S)-oxane-2,3,4,5-tetrol
+
+>  <Synonyms>
+beta-L-arabinose; L-arabinose; arabinose
+
+>  <Type>
+L-saccharide, beta linking
+
+>  <Formula>
+C5 H10 O5
+
+>  <MolecularWeight>
+150.13
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C5H10O5/c6-2-1-10-5(9)4(8)3(2)7/h2-9H,1H2/t2-,3-,4+,5-/m0/s1
+
+>  <InChIKey>
+SRBFZHDQGSBBOR-KLVWXMOXSA-N
+
+>  <SMILES>
+C1[C@@H]([C@@H]([C@H]([C@H](O1)O)O)O)O
+
+$$$$

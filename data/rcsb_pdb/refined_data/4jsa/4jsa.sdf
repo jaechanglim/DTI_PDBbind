@@ -1,0 +1,98 @@
+4JSA_FB2_A_303
+  RCSB PDB08012022093D
+Coordinates from PDB:4JSA:A:303 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   16.5460    4.5980   14.2460   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3480    3.5240   14.6260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.8700    2.4000   15.3100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4820    2.4030   15.5800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.6810    3.4610   15.1490   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2040    4.5910   14.4710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.9430    0.9370   16.4320   S 0  0  0  0  0  0  0  0  0  0  0  0
+   13.4490    1.0210   16.6330   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.5400    0.8390   17.8140   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.4680   -0.4640   15.5280   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  6  2  0  0  0  0
+  2  3  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  7  9  2  0  0  0  0
+  7  8  2  0  0  0  0
+  7 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+4JSA_FB2_A_303
+
+>  <ChemCompId>
+FB2
+
+>  <PdbId>
+4JSA
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O2 S
+
+>  <Name>
+benzenesulfonamide
+
+>  <SystematicName>
+benzenesulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C6 H7 N O2 S
+
+>  <MolecularWeight>
+157.19
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H7NO2S/c7-10(8,9)6-4-2-1-3-5-6/h1-5H,(H2,7,8,9)
+
+>  <InChIKey>
+KHBQMWCZKVMBLN-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)S(=O)(=O)N
+
+$$$$

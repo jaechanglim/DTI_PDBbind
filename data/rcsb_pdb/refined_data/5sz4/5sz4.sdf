@@ -1,0 +1,111 @@
+5SZ4_72D_A_304
+  RCSB PDB08022002563D
+Coordinates from PDB:5SZ4:A:304 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+   17.9890    5.7380   15.5320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3580    4.4940   16.1160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0480    4.4340   16.2530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3670    2.9370   16.9760   S 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7530    2.9280   18.3780   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.8870    2.9640   16.8970   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.0190    1.5840   16.2080   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1360    5.5830   15.8470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.7020    6.6560   15.3390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.2070    6.7220   15.1640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.8340    7.9800   14.6110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.9440    7.9420   13.9100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.5310    9.2530   13.4000   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.9350   10.3940   13.6700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.6560   10.4230   14.4920   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.1440    9.2950   14.9340   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 13 12  2  0  0  0  0
+ 13 14  1  0  0  0  0
+ 12 11  1  0  0  0  0
+ 14 15  2  0  0  0  0
+ 11 10  1  0  0  0  0
+ 11 16  2  0  0  0  0
+ 15 16  1  0  0  0  0
+ 10  9  2  0  0  0  0
+ 10  1  1  0  0  0  0
+  9  8  1  0  0  0  0
+  1  2  2  0  0  0  0
+  8  3  2  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  7  4  1  0  0  0  0
+  6  4  2  0  0  0  0
+  4  5  2  0  0  0  0
+M  END
+>  <InstanceId>
+5SZ4_72D_A_304
+
+>  <ChemCompId>
+72D
+
+>  <PdbId>
+5SZ4
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+304
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N O2 S
+
+>  <Name>
+4-(phenyl)-benzenesulfonamide
+
+>  <SystematicName>
+4-phenylbenzenesulfonamide
+
+>  <Synonyms>
+[1,1'-biphenyl]-4-sulfonamide
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H11 N O2 S
+
+>  <MolecularWeight>
+233.286
+
+>  <ModifiedDate>
+2016-12-16
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H11NO2S/c13-16(14,15)12-8-6-11(7-9-12)10-4-2-1-3-5-10/h1-9H,(H2,13,14,15)
+
+>  <InChIKey>
+JVFCCRJSBNUDDU-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)c2ccc(cc2)S(=O)(=O)N
+
+$$$$

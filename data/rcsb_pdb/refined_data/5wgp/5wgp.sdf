@@ -1,0 +1,98 @@
+5WGP_AUD_A_302
+  RCSB PDB08022003303D
+Coordinates from PDB:5WGP:A:302 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   -1.3280    6.7000   84.4870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.3350    5.3380   85.1550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4410    4.9930   86.0240   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3650    3.6090   86.7840   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7510    3.2730   87.0720   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.4610    3.8270   87.8990   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.7140    2.4750   85.8840   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7240    2.8390   84.9550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1900    2.0230   84.2670   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3600    4.3830   84.8060   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2 10  2  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  2  0  0  0  0
+  4  6  2  0  0  0  0
+  4  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+5WGP_AUD_A_302
+
+>  <ChemCompId>
+AUD
+
+>  <PdbId>
+5WGP
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+302
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C4 N O4 S
+
+>  <Name>
+Acesulfame
+
+>  <SystematicName>
+6-methyl-2,2-bis(oxidanylidene)-1,2,3-oxathiazin-4-one
+
+>  <Synonyms>
+6-methyl-2H-1,2lambda~6~,3-oxathiazine-2,2,4(3H)-trione
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C4 H5 N O4 S
+
+>  <MolecularWeight>
+163.152
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C4H5NO4S/c1-3-2-4(6)5-10(7,8)9-3/h2H,1H3,(H,5,6)
+
+>  <InChIKey>
+YGCFIWIQZPHFLU-UHFFFAOYSA-N
+
+>  <SMILES>
+CC1=CC(=O)NS(=O)(=O)O1
+
+$$$$

@@ -1,0 +1,111 @@
+5M7S_NHT_A_1001
+  RCSB PDB08022002203D
+Coordinates from PDB:5M7S:A:1001 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+  -16.2160    3.7950   38.1880   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -16.2430    2.6540   37.1700   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.2040    1.5580   37.4110   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.8330    2.2080   37.6330   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -13.9310    3.1810   38.8050   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.6260    3.8770   39.1230   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.0950    2.2130   38.4410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.7700    0.9260   41.0490   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.6330    2.1500   37.2280   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -15.1730    0.6730   36.2790   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.8410    1.2150   37.9200   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -14.9010    4.2120   38.5130   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.2710    1.6210   38.7510   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -12.1490    4.6020   37.9840   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -17.1560    3.1380   39.6100   S 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.0580    1.8940   39.9440   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 14  6  1  0  0  0  0
+  6  5  1  0  0  0  0
+  5 12  1  0  0  0  0
+  5  4  1  0  0  0  0
+ 12  1  1  0  0  0  0
+  4 11  1  0  0  0  0
+  4  3  1  0  0  0  0
+  3 10  1  0  0  0  0
+  3  2  1  0  0  0  0
+  2  9  1  0  0  0  0
+  2  1  1  0  0  0  0
+  9  7  2  0  0  0  0
+  1 15  1  0  0  0  0
+ 15  7  1  0  0  0  0
+  7 13  1  0  0  0  0
+ 13 16  1  0  0  0  0
+ 16  8  1  0  0  0  0
+M  END
+>  <InstanceId>
+5M7S_NHT_A_1001
+
+>  <ChemCompId>
+NHT
+
+>  <PdbId>
+5M7S
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N2 O4 S
+
+>  <Name>
+(3AR,5R,6S,7R,7AR)-2-(ETHYLAMINO)-5-(HYDROXYMETHYL)-5,6,7,7A-TETRAHYDRO-3AH-PYRANO[3,2-D][1,3]THIAZOLE-6,7-DIOL
+
+>  <SystematicName>
+(3aR,5R,6S,7R,7aR)-2-ethylamino-5-(hydroxymethyl)-5,6,7,7a-tetrahydro-3aH-pyrano[5,6-d][1,3]thiazole-6,7-diol
+
+>  <Synonyms>
+
+
+>  <Type>
+non-polymer
+
+>  <Formula>
+C9 H16 N2 O4 S
+
+>  <MolecularWeight>
+248.299
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+
+
+>  <InChI>
+InChI=1S/C9H16N2O4S/c1-2-10-9-11-5-7(14)6(13)4(3-12)15-8(5)16-9/h4-8,12-14H,2-3H2,1H3,(H,10,11)/t4-,5-,6-,7-,8-/m1/s1
+
+>  <InChIKey>
+PPAIMZHKIXDJRN-FMDGEEDCSA-N
+
+>  <SMILES>
+CCNC1=N[C@@H]2[C@H]([C@@H]([C@H](O[C@@H]2S1)CO)O)O
+
+$$$$

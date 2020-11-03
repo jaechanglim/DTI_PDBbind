@@ -1,0 +1,97 @@
+3G0I_VPR_A_1
+  RCSB PDB08012019043D
+Coordinates from PDB:3G0I:A:1 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   26.5640   37.9770   58.6540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   26.1170   37.6150   60.0440   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.5980   37.6380   60.0160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.9640   36.6500   60.9940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.4400   36.7340   60.9810   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.9430   38.1590   61.2060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.9180   38.4800   60.1480   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.4050   35.2400   60.7170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.1070   34.6720   59.6360   N 0  0  0  0  0  0  0  0  0  0  0  0
+   25.1160   34.6170   61.6350   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  8  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  2  0  0  0  0
+M  END
+>  <InstanceId>
+3G0I_VPR_A_1
+
+>  <ChemCompId>
+VPR
+
+>  <PdbId>
+3G0I
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N O
+
+>  <Name>
+2-PROPYLPENTANAMIDE
+
+>  <SystematicName>
+2-propylpentanamide
+
+>  <Synonyms>
+VALPROMIDE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H17 N O
+
+>  <MolecularWeight>
+143.227
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H17NO/c1-3-5-7(6-4-2)8(9)10/h7H,3-6H2,1-2H3,(H2,9,10)
+
+>  <InChIKey>
+OMOMUFTZPTXCHP-UHFFFAOYSA-N
+
+>  <SMILES>
+CCCC(CCC)C(=O)N
+
+$$$$

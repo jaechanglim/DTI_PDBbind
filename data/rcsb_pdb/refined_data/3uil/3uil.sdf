@@ -1,0 +1,105 @@
+3UIL_DAO_D_202
+  RCSB PDB08012020413D
+Coordinates from PDB:3UIL:D:202 Model:1 without hydrogens
+ 14 13  0  0  0  0            999 V2000
+  -33.8270  -19.5430  -40.1730   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.1350  -17.5080  -40.9480   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -34.5280  -18.6870  -40.7760   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.9040  -19.0320  -41.3410   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.4340  -20.3920  -41.0010   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -36.3980  -21.2200  -42.2800   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.2000  -22.1680  -42.2610   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.5330  -23.5690  -42.7590   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -35.9690  -24.4390  -41.5880   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -37.3870  -24.9620  -41.7970   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -38.4550  -24.0550  -41.1900   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -39.8490  -24.3920  -41.7380   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.9670  -23.3740  -41.4660   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -40.7550  -22.4570  -40.2690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  3  2  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+M  END
+>  <InstanceId>
+3UIL_DAO_D_202
+
+>  <ChemCompId>
+DAO
+
+>  <PdbId>
+3UIL
+
+>  <ChainId>
+D
+
+>  <ResidueNumber>
+202
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 O2
+
+>  <Name>
+LAURIC ACID
+
+>  <SystematicName>
+dodecanoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H24 O2
+
+>  <MolecularWeight>
+200.318
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H24O2/c1-2-3-4-5-6-7-8-9-10-11-12(13)14/h2-11H2,1H3,(H,13,14)
+
+>  <InChIKey>
+POULHZVOKOAJMA-UHFFFAOYSA-N
+
+>  <SMILES>
+CCCCCCCCCCCC(=O)O
+
+$$$$

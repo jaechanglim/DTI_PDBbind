@@ -1,0 +1,110 @@
+2WF5_BG6_A_1831
+  RCSB PDB08012018073D
+Coordinates from PDB:2WF5:A:1831 Model:1 without hydrogens
+ 16 16  0  0  0  0            999 V2000
+   12.6590   -5.7030   12.5910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.5390   -6.5360   12.0530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.8670   -4.5760   11.7340   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.8610   -6.4490   12.5540   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.4000   -7.8880   12.7620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.3180   -5.8300   12.1620   O 0  0  0  0  0  0  0  0  0  0  0  0
+   12.7800   -8.5850   12.7700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.4130   -8.6660   12.1240   O 0  0  0  0  0  0  0  0  0  0  0  0
+   13.8330   -7.6290   13.3250   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.7230   -9.7570   13.5800   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2530   -8.2710   13.3620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6480   -8.4260   12.0380   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9780   -9.2600   11.6540   P 0  0  0  0  0  0  0  0  0  0  0  0
+   17.1640   -8.8820   10.1920   O 0  0  0  0  0  0  0  0  0  0  0  0
+   18.0740   -8.7340   12.5330   O 0  0  0  0  0  0  0  0  0  0  0  0
+   16.7130  -10.7150   11.8900   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  2  6  1  0  0  0  0
+  4  9  1  0  0  0  0
+  5  7  1  0  0  0  0
+  5  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  7 10  1  0  0  0  0
+  9 11  1  0  0  0  0
+ 11 12  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 13 15  1  0  0  0  0
+ 13 16  2  0  0  0  0
+M  END
+>  <InstanceId>
+2WF5_BG6_A_1831
+
+>  <ChemCompId>
+BG6
+
+>  <PdbId>
+2WF5
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1831
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O9 P
+
+>  <Name>
+6-O-phosphono-beta-D-glucopyranose
+
+>  <SystematicName>
+[(2R,3S,4S,5R,6R)-3,4,5,6-tetrahydroxyoxan-2-yl]methyl dihydrogen phosphate
+
+>  <Synonyms>
+BETA-D-GLUCOSE-6-PHOSPHATE; 6-O-phosphono-beta-D-glucose; 6-O-phosphono-D-glucose; 6-O-phosphono-glucose
+
+>  <Type>
+D-saccharide, beta linking
+
+>  <Formula>
+C6 H13 O9 P
+
+>  <MolecularWeight>
+260.136
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+BGC
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13O9P/c7-3-2(1-14-16(11,12)13)15-6(10)5(9)4(3)8/h2-10H,1H2,(H2,11,12,13)/t2-,3-,4+,5-,6-/m1/s1
+
+>  <InChIKey>
+NBSCHQHZLSJFNQ-VFUOTHLCSA-N
+
+>  <SMILES>
+C([C@@H]1[C@H]([C@@H]([C@H]([C@@H](O1)O)O)O)O)OP(=O)(O)O
+
+$$$$

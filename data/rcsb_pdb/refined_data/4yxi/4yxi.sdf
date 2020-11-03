@@ -1,0 +1,100 @@
+4YXI_4J8_A_303
+  RCSB PDB08022000333D
+Coordinates from PDB:4YXI:A:303 Model:1 without hydrogens
+ 11 11  0  0  0  0            999 V2000
+   -1.1120    4.6970   84.6020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3140    3.6280   84.9820   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.1690    2.5470   86.0310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.4560    4.6600   84.9470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -4.2550    1.2680   86.8560   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.8330    1.2080   86.9890   S 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.2880    1.3330   88.3180   O 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.3150   -0.1590   86.3580   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.8270    2.5540   85.6930   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -2.9940    3.5960   85.6550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5390    5.8690   83.8470   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 11  1  1  0  0  0  0
+  1  4  2  0  0  0  0
+  1  2  1  0  0  0  0
+  4 10  1  0  0  0  0
+  2  9  2  0  0  0  0
+ 10  3  2  0  0  0  0
+  9  3  1  0  0  0  0
+  3  6  1  0  0  0  0
+  8  6  1  0  0  0  0
+  5  6  2  0  0  0  0
+  6  7  2  0  0  0  0
+M  END
+>  <InstanceId>
+4YXI_4J8_A_303
+
+>  <ChemCompId>
+4J8
+
+>  <PdbId>
+4YXI
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N O2 S
+
+>  <Name>
+4-methylbenzenesulfonamide
+
+>  <SystematicName>
+4-methylbenzenesulfonamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H9 N O2 S
+
+>  <MolecularWeight>
+171.217
+
+>  <ModifiedDate>
+2016-01-29
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H9NO2S/c1-6-2-4-7(5-3-6)11(8,9)10/h2-5H,1H3,(H2,8,9,10)
+
+>  <InChIKey>
+LMYRWZFENFIFIT-UHFFFAOYSA-N
+
+>  <SMILES>
+Cc1ccc(cc1)S(=O)(=O)N
+
+$$$$

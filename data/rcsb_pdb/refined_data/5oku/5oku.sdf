@@ -1,0 +1,97 @@
+5OKU_0L1_A_401
+  RCSB PDB08022002423D
+Coordinates from PDB:5OKU:A:401 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   54.2870  355.6900   84.3180   O 0  0  0  0  0  0  0  0  0  0  0  0
+   53.9170  356.8620   83.9830   C 0  0  0  0  0  0  0  0  0  0  0  0
+   52.8960  357.0990   83.2930   O 0  0  0  0  0  0  0  0  0  0  0  0
+   54.6620  358.0980   84.4690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   56.0490  357.7860   85.0660   C 0  0  0  0  0  0  0  0  0  0  0  0
+   56.8890  359.0550   85.3100   C 0  0  0  0  0  0  0  0  0  0  0  0
+   58.3140  358.6990   85.8780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   59.2660  359.9210   85.9540   C 0  0  0  0  0  0  0  0  0  0  0  0
+   60.0300  360.2090   84.9710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   59.2570  360.6310   87.0070   O 0  0  0  0  0  0  0  0  0  0  0  0
+  3  2  2  0  0  0  0
+  2  4  1  0  0  0  0
+  2  1  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  2  0  0  0  0
+  8 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+5OKU_0L1_A_401
+
+>  <ChemCompId>
+0L1
+
+>  <PdbId>
+5OKU
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+401
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 O4
+
+>  <Name>
+hexanedioic acid
+
+>  <SystematicName>
+hexanedioic acid
+
+>  <Synonyms>
+Adipic acid
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H10 O4
+
+>  <MolecularWeight>
+146.141
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H10O4/c7-5(8)3-1-2-4-6(9)10/h1-4H2,(H,7,8)(H,9,10)
+
+>  <InChIKey>
+WNLRTRBMVRJNCN-UHFFFAOYSA-N
+
+>  <SMILES>
+C(CCC(=O)O)CC(=O)O
+
+$$$$

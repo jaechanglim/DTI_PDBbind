@@ -1,0 +1,98 @@
+4UFH_GIF_A_1001
+  RCSB PDB08012023303D
+Coordinates from PDB:4UFH:A:1001 Model:1 without hydrogens
+ 10 10  0  0  0  0            999 V2000
+   76.0300   88.9040   19.5160   C 0  0  0  0  0  0  0  0  0  0  0  0
+   76.3080   88.8770   18.0640   N 0  0  0  0  0  0  0  0  0  0  0  0
+   80.3260   87.4590   16.8500   O 0  0  0  0  0  0  0  0  0  0  0  0
+   77.2490   89.0740   20.3870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   77.9840   86.9000   20.2710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   78.3680   88.2100   19.9870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   76.8830   88.8070   21.7050   O 0  0  0  0  0  0  0  0  0  0  0  0
+   78.6980   88.2990   18.5420   C 0  0  0  0  0  0  0  0  0  0  0  0
+   77.4820   88.0860   17.6710   C 0  0  0  0  0  0  0  0  0  0  0  0
+   79.8080   87.3350   18.1300   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  4  1  0  0  0  0
+  2  9  1  0  0  0  0
+  3 10  1  0  0  0  0
+  4  6  1  0  0  0  0
+  4  7  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+4UFH_GIF_A_1001
+
+>  <ChemCompId>
+GIF
+
+>  <PdbId>
+4UFH
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O3
+
+>  <Name>
+D-galacto-isofagomine
+
+>  <SystematicName>
+(3R,4S,5R)-5-(hydroxymethyl)piperidine-3,4-diol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H13 N O3
+
+>  <MolecularWeight>
+147.172
+
+>  <ModifiedDate>
+2014-08-15
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13NO3/c8-3-4-1-7-2-5(9)6(4)10/h4-10H,1-3H2/t4-,5-,6+/m1/s1
+
+>  <InChIKey>
+QPYJXFZUIJOGNX-PBXRRBTRSA-N
+
+>  <SMILES>
+C1[C@@H]([C@@H]([C@@H](CN1)O)O)CO
+
+$$$$

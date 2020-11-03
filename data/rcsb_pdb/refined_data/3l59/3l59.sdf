@@ -1,0 +1,113 @@
+3L59_BDJ_A_1
+  RCSB PDB08012019403D
+Coordinates from PDB:3L59:A:1 Model:1 without hydrogens
+ 17 18  0  0  0  0            999 V2000
+   21.8790   10.2430   24.6060   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.8050   10.8280   25.8180   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.4080   12.4070   23.7710   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.2960   11.7210   24.2840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.0120   10.7430   23.7050   N 0  0  0  0  0  0  0  0  0  0  0  0
+   20.7700   11.8420   25.7270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.7220    9.2610   24.3100   N 0  0  0  0  0  0  0  0  0  0  0  0
+   19.5620   11.4830   26.6010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.3460   13.2660   25.9330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.8800   10.3020   22.3180   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.8480   11.0640   21.4370   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.5880   12.4270   21.1030   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.4990   13.1500   20.2760   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.6710   12.5130   19.7850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.9350   11.1570   20.1150   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.0270   10.4300   20.9410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   25.3620   10.3970   19.5100  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  5  1  0  0  0  0
+  1  7  2  0  0  0  0
+  2  6  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  5 10  1  0  0  0  0
+  6  8  1  0  0  0  0
+  6  9  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 11 16  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  2  0  0  0  0
+ 15 17  1  0  0  0  0
+M  END
+>  <InstanceId>
+3L59_BDJ_A_1
+
+>  <ChemCompId>
+BDJ
+
+>  <PdbId>
+3L59
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N3 O Cl
+
+>  <Name>
+(2Z)-3-(3-chlorobenzyl)-2-imino-5,5-dimethylimidazolidin-4-one
+
+>  <SystematicName>
+3-[(3-chlorophenyl)methyl]-2-imino-5,5-dimethyl-imidazolidin-4-one
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C12 H14 Cl N3 O
+
+>  <MolecularWeight>
+251.712
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H14ClN3O/c1-12(2)10(17)16(11(14)15-12)7-8-4-3-5-9(13)6-8/h3-6H,7H2,1-2H3,(H2,14,15)
+
+>  <InChIKey>
+NFQQEWLVDJRZJJ-UHFFFAOYSA-N
+
+>  <SMILES>
+[H]/N=C\1/NC(C(=O)N1Cc2cccc(c2)Cl)(C)C
+
+$$$$

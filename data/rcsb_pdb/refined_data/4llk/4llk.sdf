@@ -1,0 +1,103 @@
+4LLK_MEW_A_900
+  RCSB PDB08012022243D
+Coordinates from PDB:4LLK:A:900 Model:1 without hydrogens
+ 12 13  0  0  0  0            999 V2000
+    3.6590   14.0190   40.6910   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.9130   13.5330   42.0970   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.5340   14.2930   43.1470   N 0  0  0  0  0  0  0  0  0  0  0  0
+    3.7640   13.8490   44.4160   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.3510   14.6120   45.5020   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.5990   14.1330   46.7980   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.2290   12.9010   47.0200   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.6390   12.1310   45.9320   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.3940   12.6160   44.6360   C 0  0  0  0  0  0  0  0  0  0  0  0
+    4.7790   11.8710   43.5210   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3340   10.7940   43.6590   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.5240   12.3480   42.2800   N 0  0  0  0  0  0  0  0  0  0  0  0
+  5  6  2  0  0  0  0
+  5  4  1  0  0  0  0
+  6  7  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3  2  2  0  0  0  0
+  4  9  2  0  0  0  0
+  1  2  1  0  0  0  0
+  2 12  1  0  0  0  0
+  7  8  2  0  0  0  0
+  9  8  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 12 10  1  0  0  0  0
+ 10 11  2  0  0  0  0
+M  END
+>  <InstanceId>
+4LLK_MEW_A_900
+
+>  <ChemCompId>
+MEW
+
+>  <PdbId>
+4LLK
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+900
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N2 O
+
+>  <Name>
+2-methylquinazolin-4(3H)-one
+
+>  <SystematicName>
+2-methyl-3H-quinazolin-4-one
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H8 N2 O
+
+>  <MolecularWeight>
+160.173
+
+>  <ModifiedDate>
+2013-06-14
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H8N2O/c1-6-10-8-5-3-2-4-7(8)9(12)11-6/h2-5H,1H3,(H,10,11,12)
+
+>  <InChIKey>
+FIEYHAAMDAPVCH-UHFFFAOYSA-N
+
+>  <SMILES>
+CC1=Nc2ccccc2C(=O)N1
+
+$$$$

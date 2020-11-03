@@ -1,0 +1,94 @@
+1UTJ_ABN_A_246
+  RCSB PDB08012016063D
+Coordinates from PDB:1UTJ:A:246 Model:1 without hydrogens
+  8  8  0  0  0  0            999 V2000
+   25.8960   17.3950   57.6730   N 0  0  0  0  0  0  0  0  0  0  0  0
+   24.4380   17.2620   57.3720   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.7520   16.1380   58.0900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   24.2980   14.8560   58.0800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.6700   13.8080   58.7620   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.4890   14.0490   59.4560   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.9420   15.3230   59.4690   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.5730   16.3590   58.7880   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  3  8  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  2  0  0  0  0
+M  END
+>  <InstanceId>
+1UTJ_ABN_A_246
+
+>  <ChemCompId>
+ABN
+
+>  <PdbId>
+1UTJ
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+246
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N
+
+>  <Name>
+BENZYLAMINE
+
+>  <SystematicName>
+phenylmethanamine
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H9 N
+
+>  <MolecularWeight>
+107.153
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H9N/c8-6-7-4-2-1-3-5-7/h1-5H,6,8H2
+
+>  <InChIKey>
+WGQKYBSKWIADBV-UHFFFAOYSA-N
+
+>  <SMILES>
+c1ccc(cc1)CN
+
+$$$$

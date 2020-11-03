@@ -1,0 +1,107 @@
+5OST_AEZ_A_915
+  RCSB PDB08022002443D
+Coordinates from PDB:5OST:A:915 Model:1 without hydrogens
+ 14 15  0  0  0  0            999 V2000
+  -29.7280  -13.3650  -17.5360   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -29.1740  -13.6210  -18.9350   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.0420  -14.6460  -19.0010   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -30.3300  -14.0700  -19.7510   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.7160  -15.0260  -21.1390   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -30.7810  -12.2490  -17.6120   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.6730  -13.5190  -19.5600   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.0160  -12.5500  -18.4970   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.7060  -11.3880  -18.9730   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -28.6200  -12.9710  -16.7230   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -31.2530  -11.9540  -16.2900   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -27.3760  -14.5460  -20.2850   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -32.4590  -14.1460  -20.4290   N 0  0  0  0  0  0  0  0  0  0  0  0
+  -30.4280  -14.9910  -20.7250   N 0  0  0  0  0  0  0  0  0  0  0  0
+ 10  1  1  0  0  0  0
+ 11  6  1  0  0  0  0
+  1  6  1  0  0  0  0
+  1  2  1  0  0  0  0
+  6  8  1  0  0  0  0
+  3  2  1  0  0  0  0
+  3 12  1  0  0  0  0
+  2  4  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8  7  1  0  0  0  0
+  4  7  2  0  0  0  0
+  4 14  1  0  0  0  0
+  7 13  1  0  0  0  0
+ 14  5  1  0  0  0  0
+ 13  5  2  0  0  0  0
+M  END
+>  <InstanceId>
+5OST_AEZ_A_915
+
+>  <ChemCompId>
+AEZ
+
+>  <PdbId>
+5OST
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+915
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N2 O4
+
+>  <Name>
+(4~{S},5~{S},6~{R},7~{R})-7-(hydroxymethyl)-4,5,6,7-tetrahydro-1~{H}-benzimidazole-4,5,6-triol
+
+>  <SystematicName>
+(4~{S},5~{S},6~{R},7~{R})-7-(hydroxymethyl)-4,5,6,7-tetrahydro-1~{H}-benzimidazole-4,5,6-triol
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H12 N2 O4
+
+>  <MolecularWeight>
+200.192
+
+>  <ModifiedDate>
+2018-04-06
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H12N2O4/c11-1-3-4-5(10-2-9-4)7(13)8(14)6(3)12/h2-3,6-8,11-14H,1H2,(H,9,10)/t3-,6+,7-,8-/m0/s1
+
+>  <InChIKey>
+MTUBISADCTVQLI-FBXHKNTESA-N
+
+>  <SMILES>
+c1[nH]c2c(n1)[C@@H]([C@H]([C@@H]([C@H]2CO)O)O)O
+
+$$$$

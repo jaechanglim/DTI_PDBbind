@@ -1,0 +1,97 @@
+1POT_SPD_A_350
+  RCSB PDB08012015433D
+Coordinates from PDB:1POT:A:350 Model:1 without hydrogens
+ 10  9  0  0  0  0            999 V2000
+   66.7990   40.4000    4.7550   N 0  0  0  0  0  0  0  0  0  0  0  0
+   65.9220   39.7940    5.8220   C 0  0  0  0  0  0  0  0  0  0  0  0
+   66.4670   40.2840    7.1960   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.8930   41.6730    7.3910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.9020   42.1410    8.8050   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.0520   43.2980    8.8800   N 0  0  0  0  0  0  0  0  0  0  0  0
+   64.8010   44.0790   10.0130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.9350   45.0240   10.2850   C 0  0  0  0  0  0  0  0  0  0  0  0
+   65.7540   45.7360   11.5500   C 0  0  0  0  0  0  0  0  0  0  0  0
+   66.5480   47.0270   11.5690   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+M  END
+>  <InstanceId>
+1POT_SPD_A_350
+
+>  <ChemCompId>
+SPD
+
+>  <PdbId>
+1POT
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+350
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N3
+
+>  <Name>
+SPERMIDINE
+
+>  <SystematicName>
+N-(3-aminopropyl)butane-1,4-diamine
+
+>  <Synonyms>
+N-(2-AMINO-PROPYL)-1,4-DIAMINOBUTANE; PA(34)
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H19 N3
+
+>  <MolecularWeight>
+145.246
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H19N3/c8-4-1-2-6-10-7-3-5-9/h10H,1-9H2
+
+>  <InChIKey>
+ATHGHQPFGPMSJY-UHFFFAOYSA-N
+
+>  <SMILES>
+C(CCNCCCN)CN
+
+$$$$

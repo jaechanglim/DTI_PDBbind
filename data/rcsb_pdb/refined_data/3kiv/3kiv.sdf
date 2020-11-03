@@ -1,0 +1,95 @@
+3KIV_ACA_A_100
+  RCSB PDB08012019363D
+Coordinates from PDB:3KIV:A:100 Model:1 without hydrogens
+  9  8  0  0  0  0            999 V2000
+    8.2050   11.9810    4.0400   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.7650   12.6130    3.0210   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.2330   10.7450    4.2470   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.8920   12.9020    5.0800   C 0  0  0  0  0  0  0  0  0  0  0  0
+    9.5420   14.0690    4.2640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.0720   15.1500    5.2410   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.7850   14.5700    6.4320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.9690   15.2760    7.6940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.0190   14.7800    8.6560   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  3  1  0  0  0  0
+  1  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+3KIV_ACA_A_100
+
+>  <ChemCompId>
+ACA
+
+>  <PdbId>
+3KIV
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+100
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O2
+
+>  <Name>
+6-AMINOHEXANOIC ACID
+
+>  <SystematicName>
+6-aminohexanoic acid
+
+>  <Synonyms>
+AMINOCAPROIC ACID
+
+>  <Type>
+PEPTIDE LINKING
+
+>  <Formula>
+C6 H13 N O2
+
+>  <MolecularWeight>
+131.173
+
+>  <ModifiedDate>
+2013-04-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H13NO2/c7-5-3-1-2-4-6(8)9/h1-5,7H2,(H,8,9)
+
+>  <InChIKey>
+SLXKOJJOQWFEFD-UHFFFAOYSA-N
+
+>  <SMILES>
+C(CCC(=O)O)CCN
+
+$$$$

@@ -27,7 +27,7 @@ def load_data(filename):
         lines = f.readlines()[1:]
         lines = [l.strip() for l in lines]
         for l in lines:
-            l = l.split(',')
+            l = l.split(",")
             if len(l)==5: l.append(-100.0)
             k = l[1]
             if k not in data.keys(): data[k] = []
@@ -41,30 +41,30 @@ def set_cuda_visible_device(ngpus):
     import numpy as np
     empty = []
     if ngpus>0:
-        fn = f'/tmp/empty_gpu_check_{np.random.randint(0,10000000,1)[0]}'
+        fn = f"/tmp/empty_gpu_check_{np.random.randint(0,10000000,1)[0]}"
         for i in range(4):
-            os.system(f'nvidia-smi -i {i} | grep "No running" | wc -l > {fn}')
+            os.system(f"nvidia-smi -i {i} | grep 'No running' | wc -l > {fn}")
             with open(fn) as f:
                 out = int(f.read())
             if int(out)==1:
                 empty.append(i)
             if len(empty)==ngpus: break
         if len(empty)<ngpus:
-            print ('avaliable gpus are less than required', len(empty), ngpus)
+            print ("avaliable gpus are less than required", len(empty), ngpus)
             exit(-1)
-        os.system(f'rm -f {fn}')        
+        os.system(f"rm -f {fn}")        
     
-    cmd = ''
+    cmd = ""
     for i in range(ngpus):        
-        cmd+=str(empty[i])+','
+        cmd+=str(empty[i])+","
 
     return cmd
 
 
 def initialize_model(model, device, load_save_file=False):
     if load_save_file:
-        if device.type=='cpu':
-            model.load_state_dict(torch.load(load_save_file, map_location='cpu'), strict=False)
+        if device.type=="cpu":
+            model.load_state_dict(torch.load(load_save_file, map_location="cpu"), strict=False)
         else:
             model.load_state_dict(torch.load(load_save_file), strict=False)
     else:
@@ -89,9 +89,9 @@ def read_data(filename, key_dir):
         lines = f.readlines()
         lines = [l.split() for l in lines]
         id_to_y = {l[0]:float(l[1]) for l in lines}
-    with open(f'{key_dir}/train_keys.pkl', 'rb') as f:
+    with open(f"{key_dir}/train_keys.pkl", "rb") as f:
         train_keys = pickle.load(f)
-    with open(f'{key_dir}/test_keys.pkl', 'rb') as f:
+    with open(f"{key_dir}/test_keys.pkl", "rb") as f:
         test_keys = pickle.load(f)
     return train_keys, test_keys, id_to_y        
 
@@ -117,14 +117,14 @@ def get_dataset_dataloader(train_keys, test_keys, data_dir, id_to_y,
 
 
 def write_result(filename, pred, true):
-    with open(filename, 'w')  as w:
+    with open(filename, "w")  as w:
         for k in pred.keys():
-            w.write(f'{k}\t{true[k]:.3f}\t')
-            w.write(f'{pred[k].sum():.3f}\t')
-            w.write(f'{0.0}\t')
+            w.write(f"{k}\t{true[k]:.3f}\t")
+            w.write(f"{pred[k].sum():.3f}\t")
+            w.write(f"{0.0}\t")
             for j in range(pred[k].shape[0]):
-                w.write(f'{pred[k][j]:.3f}\t')
-            w.write('\n')
+                w.write(f"{pred[k][j]:.3f}\t")
+            w.write("\n")
     return
 
 def extract_binding_pocket(ligand, pdb):
@@ -137,16 +137,16 @@ def extract_binding_pocket(ligand, pdb):
 
     parser = PDBParser()
     if not os.path.exists(pdb) : 
-        #print ('AAAAAAAAAAA')
+        #print ("AAAAAAAAAAA")
         return None
-    structure = parser.get_structure('protein', pdb)
+    structure = parser.get_structure("protein", pdb)
     #print (count_residue(structure))
     ligand_positions = ligand.GetConformer().GetPositions()
 
     class GlySelect(Select):
         def accept_residue(self, residue):
             residue_positions = np.array([np.array(list(atom.get_vector())) \
-                for atom in residue.get_atoms() if 'H' not in atom.get_id()])
+                for atom in residue.get_atoms() if "H" not in atom.get_id()])
             #print (residue_positions)
             min_dis = np.min(distance_matrix(residue_positions, ligand_positions))
             if min_dis < 5.0:
@@ -157,25 +157,25 @@ def extract_binding_pocket(ligand, pdb):
     io.set_structure(structure)
 
     np.random.seed()
-    fn = '/tmp/BS_tmp_'+str(np.random.randint(0,100000,1)[0])+'.pdb'
-    #fd, fpath = tempfile.mkstemp(prefix='BS_tmp', dir=os.getcwd(), text=True)
+    fn = "/tmp/BS_tmp_"+str(np.random.randint(0,100000,1)[0])+".pdb"
+    #fd, fpath = tempfile.mkstemp(prefix="BS_tmp", dir=os.getcwd(), text=True)
     io.save(fn, GlySelect())
-    #structure = parser.get_structure('protein', fn)
+    #structure = parser.get_structure("protein", fn)
     #if count_residue(structure)<10: return None
     #print (count_residue(structure))
     m2 = Chem.MolFromPDBFile(fn)
     #os.unlink(fpath)
-    os.system('rm -f ' + fn)
+    os.system("rm -f " + fn)
 
     return m2
 
 def read_molecule(filename):
     from rdkit import Chem
-    if filename[-4:]=='.sdf':
+    if filename[-4:]==".sdf":
         return Chem.SDMolSupplier(filename)[0]
-    elif filename[-5:]=='.mol2':
+    elif filename[-5:]==".mol2":
         return Chem.MolFromMol2File(filename)
     else:
-        print (f'{filename} is wrong filename')
+        print (f"{filename} is wrong filename")
     exit(-1)
     return None

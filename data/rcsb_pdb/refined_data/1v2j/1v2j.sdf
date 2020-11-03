@@ -1,0 +1,96 @@
+1V2J_BEN_T_1
+  RCSB PDB08012016083D
+Coordinates from PDB:1V2J:T:1 Model:1 without hydrogens
+  9  9  0  0  0  0            999 V2000
+   -3.1810    9.0690   19.6770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.7990    8.8300   19.2450   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.1970    7.5130   19.3840   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -1.9660    6.4190   19.9580   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.3290    6.6410   20.3880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.9370    7.9570   20.2510   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.8250   10.4620   19.5310   C 0  0  0  0  0  0  0  0  0  0  0  0
+   -5.1290   10.5930   19.6880   N 0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0690   11.5130   19.2490   N 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  2  0  0  0  0
+  1  6  1  0  0  0  0
+  1  7  1  0  0  0  0
+  2  3  1  0  0  0  0
+  3  4  2  0  0  0  0
+  4  5  1  0  0  0  0
+  5  6  2  0  0  0  0
+  7  8  2  0  0  0  0
+  7  9  1  0  0  0  0
+M  END
+>  <InstanceId>
+1V2J_BEN_T_1
+
+>  <ChemCompId>
+BEN
+
+>  <PdbId>
+1V2J
+
+>  <ChainId>
+T
+
+>  <ResidueNumber>
+1
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C7 N2
+
+>  <Name>
+BENZAMIDINE
+
+>  <SystematicName>
+benzenecarboximidamide
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C7 H8 N2
+
+>  <MolecularWeight>
+120.152
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C7H8N2/c8-7(9)6-4-2-1-3-5-6/h1-5H,(H3,8,9)
+
+>  <InChIKey>
+PXXJHWLDUBFPOL-UHFFFAOYSA-N
+
+>  <SMILES>
+[H]/N=C(\c1ccccc1)/N
+
+$$$$

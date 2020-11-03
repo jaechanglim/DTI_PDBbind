@@ -1,0 +1,109 @@
+5EH7_5O5_A_303
+  RCSB PDB08022001133D
+Coordinates from PDB:5EH7:A:303 Model:1 without hydrogens
+ 15 16  0  0  0  0            999 V2000
+   15.4720    5.8950   15.3890  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   15.6050    4.5890   14.2740   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1220    4.7590   13.0130   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.3980    6.2670   12.5170  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2200    3.7150   12.1070   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.8000    2.5150   12.4780   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2740    2.3400   13.7610   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.8050    1.0670   14.0700   O 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3990    0.9040   15.3170   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3320    0.9650   16.3680   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1680    0.3040   16.3900   N 0  0  0  0  0  0  0  0  0  0  0  0
+   14.5290    0.6890   17.5100   N 0  0  0  0  0  0  0  0  0  0  0  0
+   15.2940    1.5450   18.1590   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4080    1.7430   17.4500   N 0  0  0  0  0  0  0  0  0  0  0  0
+   16.2000    3.3970   14.6480   C 0  0  0  0  0  0  0  0  0  0  0  0
+  5  6  2  0  0  0  0
+  5  3  1  0  0  0  0
+  6  7  1  0  0  0  0
+  4  3  1  0  0  0  0
+  3  2  2  0  0  0  0
+  7  8  1  0  0  0  0
+  7 15  2  0  0  0  0
+  8  9  1  0  0  0  0
+  2 15  1  0  0  0  0
+  2  1  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10 14  2  0  0  0  0
+ 11 12  1  0  0  0  0
+ 14 13  1  0  0  0  0
+ 12 13  2  0  0  0  0
+M  END
+>  <InstanceId>
+5EH7_5O5_A_303
+
+>  <ChemCompId>
+5O5
+
+>  <PdbId>
+5EH7
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C8 N4 O Cl2
+
+>  <Name>
+5-[[3,4-bis(chloranyl)phenoxy]methyl]-1~{H}-1,2,3,4-tetrazole
+
+>  <SystematicName>
+5-[[3,4-bis(chloranyl)phenoxy]methyl]-1~{H}-1,2,3,4-tetrazole
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C8 H6 Cl2 N4 O
+
+>  <MolecularWeight>
+245.065
+
+>  <ModifiedDate>
+2016-03-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C8H6Cl2N4O/c9-6-2-1-5(3-7(6)10)15-4-8-11-13-14-12-8/h1-3H,4H2,(H,11,12,13,14)
+
+>  <InChIKey>
+ZOGKJMQMVBATST-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c(cc1OCc2[nH]nnn2)Cl)Cl
+
+$$$$

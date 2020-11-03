@@ -1,0 +1,102 @@
+4YRD_3IT_A_402
+  RCSB PDB08022000323D
+Coordinates from PDB:4YRD:A:402 Model:1 without hydrogens
+ 12 12  0  0  0  0            999 V2000
+   21.5210    6.6420  -33.5670   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.0940    7.1440  -34.9320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   23.4160    7.8560  -34.7700   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.5090    6.8800  -36.2270   C 0  0  0  0  0  0  0  0  0  0  0  0
+   22.1470    7.3740  -37.3860   C 0  0  0  0  0  0  0  0  0  0  0  0
+   21.7630    7.2470  -38.7200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   20.6540    6.6020  -39.2880   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.5840    5.9500  -38.6770   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.4490    5.7060  -37.3260   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.4300    5.1060  -36.9750   O 0  0  0  0  0  0  0  0  0  0  0  0
+   20.3170    6.1160  -36.2940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.8940    5.6730  -35.1270   O 0  0  0  0  0  0  0  0  0  0  0  0
+  7  6  1  0  0  0  0
+  7  8  2  0  0  0  0
+  6  5  2  0  0  0  0
+  8  9  1  0  0  0  0
+  5  4  1  0  0  0  0
+  9 10  2  0  0  0  0
+  9 11  1  0  0  0  0
+ 11  4  2  0  0  0  0
+ 11 12  1  0  0  0  0
+  4  2  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  1  2  0  0  0  0
+M  END
+>  <InstanceId>
+4YRD_3IT_A_402
+
+>  <ChemCompId>
+3IT
+
+>  <PdbId>
+4YRD
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+402
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C10 O2
+
+>  <Name>
+2-hydroxy-3-(prop-1-en-2-yl)cyclohepta-2,4,6-trien-1-one
+
+>  <SystematicName>
+2-oxidanyl-3-prop-1-en-2-yl-cyclohepta-2,4,6-trien-1-one
+
+>  <Synonyms>
+3-isopropenyl-tropolone
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C10 H10 O2
+
+>  <MolecularWeight>
+162.185
+
+>  <ModifiedDate>
+2015-10-16
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C10H10O2/c1-7(2)8-5-3-4-6-9(11)10(8)12/h3-6H,1H2,2H3,(H,11,12)
+
+>  <InChIKey>
+AYEFINNLGCCCNK-UHFFFAOYSA-N
+
+>  <SMILES>
+CC(=C)C1=C(C(=O)C=CC=C1)O
+
+$$$$

@@ -1,0 +1,116 @@
+4XO8_KGM_A_501
+  RCSB PDB08022000223D
+Coordinates from PDB:4XO8:A:501 Model:1 without hydrogens
+ 19 19  0  0  0  0            999 V2000
+  -22.2160   -4.3380  -10.7620   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.5280   -4.9240  -12.0060   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.3320   -5.6830  -12.5430   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.9580   -5.5310  -18.9700   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.2300   -4.8260  -12.6590   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.9840   -6.8290  -11.6110   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.0380   -7.7460  -11.5850   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.7140   -7.5180  -12.1130   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.3200   -8.5040  -11.2000   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.6020   -6.4950  -12.2690   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -18.2590   -5.9540  -11.0180   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.0620   -5.3720  -13.1670   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.2970   -5.9050  -14.4620   O 0  0  0  0  0  0  0  0  0  0  0  0
+  -19.5660   -4.9570  -15.4730   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.0720   -5.7090  -16.6870   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -20.6800   -4.7590  -17.6970   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -22.1000   -4.5240  -22.4590   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.6630   -5.4220  -21.3230   C 0  0  0  0  0  0  0  0  0  0  0  0
+  -21.3670   -4.5980  -20.0880   C 0  0  0  0  0  0  0  0  0  0  0  0
+ 17 18  1  0  0  0  0
+ 18 19  1  0  0  0  0
+ 19  4  1  0  0  0  0
+  4 16  1  0  0  0  0
+ 16 15  1  0  0  0  0
+ 15 14  1  0  0  0  0
+ 14 13  1  0  0  0  0
+ 13 12  1  0  0  0  0
+ 12 10  1  0  0  0  0
+ 12  5  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 10  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  3  1  0  0  0  0
+  3  5  1  0  0  0  0
+  3  2  1  0  0  0  0
+  2  1  1  0  0  0  0
+M  END
+>  <InstanceId>
+4XO8_KGM_A_501
+
+>  <ChemCompId>
+KGM
+
+>  <PdbId>
+4XO8
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+501
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C13 O6
+
+>  <Name>
+heptyl alpha-D-mannopyranoside
+
+>  <SystematicName>
+(2S,3S,4S,5S,6R)-2-heptoxy-6-(hydroxymethyl)oxane-3,4,5-triol
+
+>  <Synonyms>
+Heptyl Alpha-D-mannopyrannoside; heptyl alpha-D-mannoside; heptyl D-mannoside; heptyl mannoside
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C13 H26 O6
+
+>  <MolecularWeight>
+278.342
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+MAN
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C13H26O6/c1-2-3-4-5-6-7-18-13-12(17)11(16)10(15)9(8-14)19-13/h9-17H,2-8H2,1H3/t9-,10-,11+,12+,13+/m1/s1
+
+>  <InChIKey>
+NIDYWHLDTIVRJT-BNDIWNMDSA-N
+
+>  <SMILES>
+CCCCCCCO[C@@H]1[C@H]([C@H]([C@@H]([C@H](O1)CO)O)O)O
+
+$$$$

@@ -1,0 +1,109 @@
+1PA9_CSN_A_737
+  RCSB PDB08012015423D
+Coordinates from PDB:1PA9:A:737 Model:1 without hydrogens
+ 15 15  0  0  0  0            999 V2000
+    5.8190   -8.5760   73.6040   S 0  0  0  0  0  0  0  0  0  0  0  0
+    4.3710   -8.8450   72.7660   O 0  0  0  0  0  0  0  0  0  0  0  0
+    5.4890   -8.1310   74.9110   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.5190   -7.5680   72.8330   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.5660   -9.8050   73.6820   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4450   -8.3330   74.7440   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.2260  -14.4920   72.6860   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.8230  -13.6900   71.5050   O 0  5  0  0  0  0  0  0  0  0  0  0
+    3.6980  -11.0680   72.5860   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.9630  -13.5210   72.3650   N 0  3  0  0  0  0  0  0  0  0  0  0
+    1.6220  -10.6910   74.6550   C 0  0  0  0  0  0  0  0  0  0  0  0
+    3.5100   -9.7340   73.2490   C 0  0  0  0  0  0  0  0  0  0  0  0
+    1.7890  -11.9930   74.0240   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.4610   -9.5690   74.2840   C 0  0  0  0  0  0  0  0  0  0  0  0
+    2.8270  -12.2100   72.9780   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  2  0  0  0  0
+  1  4  2  0  0  0  0
+  1  5  1  0  0  0  0
+  2 12  1  0  0  0  0
+  6 14  1  0  0  0  0
+  7 10  2  0  0  0  0
+  8 10  1  0  0  0  0
+  9 12  2  0  0  0  0
+  9 15  1  0  0  0  0
+ 10 15  1  0  0  0  0
+ 11 13  1  0  0  0  0
+ 11 14  2  0  0  0  0
+ 12 14  1  0  0  0  0
+ 13 15  2  0  0  0  0
+M  CHG  2   8  -1  10   1
+M  END
+>  <InstanceId>
+1PA9_CSN_A_737
+
+>  <ChemCompId>
+CSN
+
+>  <PdbId>
+1PA9
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+737
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C6 N O7 S
+
+>  <Name>
+N,4-DIHYDROXY-N-OXO-3-(SULFOOXY)BENZENAMINIUM
+
+>  <SystematicName>
+(2-hydroxy-5-nitro-phenyl) hydrogen sulfate
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C6 H5 N O7 S
+
+>  <MolecularWeight>
+235.171
+
+>  <ModifiedDate>
+2011-06-04
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C6H5NO7S/c8-5-2-1-4(7(9)10)3-6(5)14-15(11,12)13/h1-3,8H,(H,11,12,13)
+
+>  <InChIKey>
+XMCCOOONGGUOLA-UHFFFAOYSA-N
+
+>  <SMILES>
+c1cc(c(cc1[N+](=O)[O-])OS(=O)(=O)O)O
+
+$$$$

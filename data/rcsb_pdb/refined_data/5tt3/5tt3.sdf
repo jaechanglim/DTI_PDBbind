@@ -1,0 +1,111 @@
+5TT3_EZL_A_303
+  RCSB PDB08022003073D
+Coordinates from PDB:5TT3:A:303 Model:1 without hydrogens
+ 16 17  0  0  0  0            999 V2000
+   51.3810   40.4670   91.5590   N 0  0  0  0  0  0  0  0  0  0  0  0
+   53.7480   41.7170   87.6900   C 0  0  0  0  0  0  0  0  0  0  0  0
+   54.4630   42.8220   88.2390   C 0  0  0  0  0  0  0  0  0  0  0  0
+   55.0690   43.7420   87.3950   C 0  0  0  0  0  0  0  0  0  0  0  0
+   54.9780   43.5830   86.0080   C 0  0  0  0  0  0  0  0  0  0  0  0
+   55.7340   44.8280   84.1550   C 0  0  0  0  0  0  0  0  0  0  0  0
+   53.4480   41.3330   92.7620   O 0  0  0  0  0  0  0  0  0  0  0  0
+   53.6700   39.3710   91.7440   O 0  0  0  0  0  0  0  0  0  0  0  0
+   53.0130   40.6390   91.5810   S 0  0  0  0  0  0  0  0  0  0  0  0
+   53.5630   41.4640   90.1110   C 0  0  0  0  0  0  0  0  0  0  0  0
+   53.1740   40.8510   88.8870   N 0  0  0  0  0  0  0  0  0  0  0  0
+   54.3840   42.7210   89.7730   S 0  0  0  0  0  0  0  0  0  0  0  0
+   54.2720   42.4900   85.4650   C 0  0  0  0  0  0  0  0  0  0  0  0
+   53.6600   41.5630   86.3140   C 0  0  0  0  0  0  0  0  0  0  0  0
+   55.7060   44.6950   85.5570   O 0  0  0  0  0  0  0  0  0  0  0  0
+   57.1350   44.5590   83.6510   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  9  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2 11  1  0  0  0  0
+  2 14  1  0  0  0  0
+  3  4  1  0  0  0  0
+  3 12  1  0  0  0  0
+  4  5  2  0  0  0  0
+  5 13  1  0  0  0  0
+  5 15  1  0  0  0  0
+  6 15  1  0  0  0  0
+  6 16  1  0  0  0  0
+  7  9  2  0  0  0  0
+  8  9  2  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  2  0  0  0  0
+ 10 12  1  0  0  0  0
+ 13 14  2  0  0  0  0
+M  END
+>  <InstanceId>
+5TT3_EZL_A_303
+
+>  <ChemCompId>
+EZL
+
+>  <PdbId>
+5TT3
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 N2 O3 S2
+
+>  <Name>
+6-ethoxy-1,3-benzothiazole-2-sulfonamide
+
+>  <SystematicName>
+6-ethoxy-1,3-benzothiazole-2-sulfonamide
+
+>  <Synonyms>
+Ethoxzolamide
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H10 N2 O3 S2
+
+>  <MolecularWeight>
+258.317
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H10N2O3S2/c1-2-14-6-3-4-7-8(5-6)15-9(11-7)16(10,12)13/h3-5H,2H2,1H3,(H2,10,12,13)
+
+>  <InChIKey>
+OUZWUKMCLIBBOG-UHFFFAOYSA-N
+
+>  <SMILES>
+CCOc1ccc2c(c1)sc(n2)S(=O)(=O)N
+
+$$$$

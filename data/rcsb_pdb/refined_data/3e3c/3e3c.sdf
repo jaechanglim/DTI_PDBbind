@@ -1,0 +1,111 @@
+3E3C_HHG_A_150
+  RCSB PDB08012018543D
+Coordinates from PDB:3E3C:A:150 Model:1 without hydrogens
+ 17 16  0  0  0  0            999 V2000
+    4.0870   23.3010   33.3650   O 0  0  0  0  0  0  0  0  0  0  0  0
+    3.7870   24.6710   32.8000   P 0  0  0  0  0  0  0  0  0  0  0  0
+    4.1630   25.7980   33.7340   O 0  0  0  0  0  0  0  0  0  0  0  0
+    2.3510   24.8160   32.3310   O 0  0  0  0  0  0  0  0  0  0  0  0
+    4.7450   24.8130   31.5000   O 0  0  0  0  0  0  0  0  0  0  0  0
+    6.1400   25.0700   31.6270   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.7590   25.2070   30.2380   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.8910   25.9950   29.3960   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1260   25.8690   30.3880   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.7400   26.0070   29.1040   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.0610   25.4640   28.7940   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.7040   24.8510   29.6510   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.5960   25.6880   27.3910   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.9780   25.0790   27.1800   C 0  0  0  0  0  0  0  0  0  0  0  0
+   13.0310   26.1750   27.1530   C 0  0  0  0  0  0  0  0  0  0  0  0
+   14.0920   25.8870   26.1020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.3760   25.2960   26.6470   C 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  2  3  2  0  0  0  0
+  2  4  1  0  0  0  0
+  2  5  1  0  0  0  0
+  5  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  7  8  1  0  0  0  0
+  7  9  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 10 11  1  0  0  0  0
+ 11 12  2  0  0  0  0
+ 11 13  1  0  0  0  0
+ 13 14  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  1  0  0  0  0
+ 16 17  1  0  0  0  0
+M  END
+>  <InstanceId>
+3E3C_HHG_A_150
+
+>  <ChemCompId>
+HHG
+
+>  <PdbId>
+3E3C
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+150
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 O7 P
+
+>  <Name>
+(2R)-2-HYDROXY-3-(PHOSPHONOOXY)PROPYL HEXANOATE
+
+>  <SystematicName>
+[(2S)-2-hydroxy-3-phosphonooxy-propyl] hexanoate
+
+>  <Synonyms>
+1-MONOHEXANOYL-2-HYDROXY-SN-GLYCERO-3-PHOSPHATE
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H19 O7 P
+
+>  <MolecularWeight>
+270.217
+
+>  <ModifiedDate>
+2020-06-17
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H19O7P/c1-2-3-4-5-9(11)15-6-8(10)7-16-17(12,13)14/h8,10H,2-7H2,1H3,(H2,12,13,14)/t8-/m0/s1
+
+>  <InChIKey>
+FIMVTNBZKNVWDN-QMMMGPOBSA-N
+
+>  <SMILES>
+CCCCCC(=O)OC[C@@H](COP(=O)(O)O)O
+
+$$$$

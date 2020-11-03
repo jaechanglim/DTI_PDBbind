@@ -1,0 +1,122 @@
+3ZYF_147_A_1001
+  RCSB PDB08012021023D
+Coordinates from PDB:3ZYF:A:1001 Model:1 without hydrogens
+ 21 22  0  0  0  0            999 V2000
+    9.5260    8.6690    9.7630   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.8550    8.0270   10.0330   C 0  0  0  0  0  0  0  0  0  0  0  0
+   11.7640    8.9780   10.5390   O 0  0  0  0  0  0  0  0  0  0  0  0
+   11.4020    7.4110    8.8320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   12.6350    6.7180    9.2240   O 0  0  0  0  0  0  0  0  0  0  0  0
+   10.4900    6.5160    8.2380   C 0  0  0  0  0  0  0  0  0  0  0  0
+   10.3340    5.3310    9.0700   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.1420    7.1250    8.0180   C 0  0  0  0  0  0  0  0  0  0  0  0
+    8.1760    6.0910    7.5210   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.9930    6.5290    7.0080   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.6210    7.7650    9.2320   O 0  0  0  0  0  0  0  0  0  0  0  0
+    9.0210    9.1850   10.9590   O 0  0  0  0  0  0  0  0  0  0  0  0
+    8.0930   10.2620   10.6320   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.9120   10.6290    9.3240   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.9980   11.6920    8.9950   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.3270   12.3190    9.9830   C 0  0  0  0  0  0  0  0  0  0  0  0
+    6.5120   11.9420   11.3040   C 0  0  0  0  0  0  0  0  0  0  0  0
+    7.4140   10.8950   11.6250   C 0  0  0  0  0  0  0  0  0  0  0  0
+    5.3960   13.3880    9.6690   N 0  3  0  0  0  0  0  0  0  0  0  0
+    5.3250   13.8680    8.4230   O 0  5  0  0  0  0  0  0  0  0  0  0
+    4.5910   13.8340   10.5930   O 0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1 11  1  0  0  0  0
+  1 12  1  0  0  0  0
+  2  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  4  5  1  0  0  0  0
+  4  6  1  0  0  0  0
+  6  7  1  0  0  0  0
+  6  8  1  0  0  0  0
+  8  9  1  0  0  0  0
+  8 11  1  0  0  0  0
+  9 10  1  0  0  0  0
+ 12 13  1  0  0  0  0
+ 13 14  2  0  0  0  0
+ 13 18  1  0  0  0  0
+ 14 15  1  0  0  0  0
+ 15 16  2  0  0  0  0
+ 16 17  1  0  0  0  0
+ 16 19  1  0  0  0  0
+ 17 18  2  0  0  0  0
+ 19 20  1  0  0  0  0
+ 19 21  2  0  0  0  0
+M  CHG  2  19   1  20  -1
+M  END
+>  <InstanceId>
+3ZYF_147_A_1001
+
+>  <ChemCompId>
+147
+
+>  <PdbId>
+3ZYF
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+1001
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C12 N O8
+
+>  <Name>
+4-nitrophenyl beta-D-galactopyranoside
+
+>  <SystematicName>
+(2R,3R,4S,5R,6S)-2-(hydroxymethyl)-6-(4-nitrophenoxy)oxane-3,4,5-triol
+
+>  <Synonyms>
+1-O-[P-NITROPHENYL]-BETA-D-GALACTOPYRANOSE; 4-nitrophenyl beta-D-galactoside; 4-nitrophenyl D-galactoside; 4-nitrophenyl galactoside
+
+>  <Type>
+D-saccharide
+
+>  <Formula>
+C12 H15 N O8
+
+>  <MolecularWeight>
+301.249
+
+>  <ModifiedDate>
+2020-07-17
+
+>  <Parent>
+GAL
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C12H15NO8/c14-5-8-9(15)10(16)11(17)12(21-8)20-7-3-1-6(2-4-7)13(18)19/h1-4,8-12,14-17H,5H2/t8-,9+,10+,11-,12-/m1/s1
+
+>  <InChIKey>
+IFBHRQDFSNCLOZ-YBXAARCKSA-N
+
+>  <SMILES>
+c1cc(ccc1[N+](=O)[O-])O[C@H]2[C@@H]([C@H]([C@H]([C@H](O2)CO)O)O)O
+
+$$$$

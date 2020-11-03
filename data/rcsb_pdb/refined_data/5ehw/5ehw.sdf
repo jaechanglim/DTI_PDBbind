@@ -1,0 +1,104 @@
+5EHW_5OO_A_303
+  RCSB PDB08022001133D
+Coordinates from PDB:5EHW:A:303 Model:1 without hydrogens
+ 13 13  0  0  0  0            999 V2000
+   14.8410    1.2690   15.9360   O 0  0  0  0  0  0  0  0  0  0  0  0
+   15.9900    0.9440   15.5470   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.9840    2.0510   15.2790   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.4760    3.2900   15.1200   C 0  0  0  0  0  0  0  0  0  0  0  0
+   17.3510    4.4910   14.8640   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.8090    5.7550   15.0010   C 0  0  0  0  0  0  0  0  0  0  0  0
+   15.1350    5.9370   15.4450  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   17.5870    6.8750   14.7870   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.9140    6.7220   14.4320   C 0  0  0  0  0  0  0  0  0  0  0  0
+   19.8880    8.1380   14.1640  Cl 0  0  0  0  0  0  0  0  0  0  0  0
+   19.4710    5.4610   14.3020   C 0  0  0  0  0  0  0  0  0  0  0  0
+   18.6820    4.3420   14.5210   C 0  0  0  0  0  0  0  0  0  0  0  0
+   16.3350   -0.2530   15.4190   O 0  0  0  0  0  0  0  0  0  0  0  0
+ 10  9  1  0  0  0  0
+ 11  9  2  0  0  0  0
+ 11 12  1  0  0  0  0
+  9  8  1  0  0  0  0
+ 12  5  2  0  0  0  0
+  8  6  2  0  0  0  0
+  5  6  1  0  0  0  0
+  5  4  1  0  0  0  0
+  6  7  1  0  0  0  0
+  4  3  2  0  0  0  0
+  3  2  1  0  0  0  0
+ 13  2  2  0  0  0  0
+  2  1  1  0  0  0  0
+M  END
+>  <InstanceId>
+5EHW_5OO_A_303
+
+>  <ChemCompId>
+5OO
+
+>  <PdbId>
+5EHW
+
+>  <ChainId>
+A
+
+>  <ResidueNumber>
+303
+
+>  <InsertionCode>
+
+
+>  <Model>
+1
+
+>  <AltIds>
+
+
+>  <MissingHeavyAtoms>
+0
+
+>  <ObservedFormula>
+C9 O2 Cl2
+
+>  <Name>
+(~{E})-3-(2,4-dichlorophenyl)prop-2-enoic acid
+
+>  <SystematicName>
+(~{E})-3-(2,4-dichlorophenyl)prop-2-enoic acid
+
+>  <Synonyms>
+
+
+>  <Type>
+NON-POLYMER
+
+>  <Formula>
+C9 H6 Cl2 O2
+
+>  <MolecularWeight>
+217.049
+
+>  <ModifiedDate>
+2016-02-26
+
+>  <Parent>
+
+
+>  <OneLetterCode>
+
+
+>  <SubcomponentList>
+
+
+>  <AmbiguousFlag>
+N
+
+>  <InChI>
+InChI=1S/C9H6Cl2O2/c10-7-3-1-6(8(11)5-7)2-4-9(12)13/h1-5H,(H,12,13)/b4-2+
+
+>  <InChIKey>
+MEBWABJHRAYGFW-DUXPYHPUSA-N
+
+>  <SMILES>
+c1cc(c(cc1Cl)Cl)/C=C/C(=O)O
+
+$$$$
