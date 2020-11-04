@@ -1,9 +1,0 @@
-Namespace(batch_size=64, data_dir='/home/wykgroup/mseok/data/DTI_PDBbind/csar2/data', dev_vdw_radius=0.2, dim_gnn=128, dropout_rate=0.1, filename='/home/wykgroup/mseok/data/DTI_PDBbind/csar2/pdb_to_affinity.txt', filter_gamma=10.0, filter_spacing=0.5, grid_rotation=False, interaction_net=True, key_dir='/home/wykgroup/mseok/data/DTI_PDBbind/csar2/keys/', lattice_dim=20, max_vdw_interaction=0.0356, min_vdw_interaction=0.0178, n_gnn=3, ngpu=0, no_rotor_penalty=False, num_workers=0, pos_noise_std=0.0, potential='harmonic', restart_file='../save_8.0/save_1000.pt', scaling=0.5, test_result_filename='8/result_csar2_harmonic_1000', vdw_N=6.0, with_uncertainty=False)
-vina_hbond_coeff: 0.466
-vina_hydrophobic_coeff: 0.182
-rotor_coeff: 0.200
-vdw_coeff: 1.000
-number of parameters :  667790
-R2: -0.902
-R: 0.272
-Time: 33.752
