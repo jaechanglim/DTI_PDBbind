@@ -30,7 +30,6 @@ def predictive_index(pred, true):
 
 #make cluster
 try:
-    # with open('/home/wykgroup/mseok/data/DTI_PDBbind/CASF-2016/power_ranking/CoreSet.dat') as f:
     with open('../data/CASF-2016/power_ranking/CoreSet.dat') as f:
         lines = f.readlines()[1:]
 except FileNotFoundError as e:

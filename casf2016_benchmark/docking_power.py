@@ -14,7 +14,6 @@ def bootstrap_confidence(values, n=10000, confidence=0.9 ):
                 loc=np.mean(metrics), scale=np.std(metrics))
 
 #read rmsd
-# rmsd_filenames = glob.glob("/home/wykgroup/mseok/data/DTI_PDBbind/CASF-2016/decoys_docking/*_rmsd.dat")
 rmsd_filenames = glob.glob("../data/CASF-2016/decoys_docking/*_rmsd.dat")
 if len(rmsd_filenames) == 0:
     print("please download 'CASF-2016' dataset in '../data' directory.")

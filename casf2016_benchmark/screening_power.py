@@ -39,8 +39,7 @@ def choose_best_pose(id_to_pred):
 true_binder_list = []
 #make cluster
 try:
-    with open("/home/wykgroup/mseok/data/DTI_PDBbind/CASF-2016/power_screening/TargetInfo.dat") as f:
-    # with open("../data/CASF-2016/power_screening/TargetInfo.dat") as f:
+    with open("../data/CASF-2016/power_screening/TargetInfo.dat") as f:
         lines = f.readlines()[9:]
         for l in lines:
             l = l.split()
