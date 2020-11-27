@@ -2,7 +2,7 @@
 python -u ../../test.py \
 --batch_size=64 \
 --num_workers=0 \
---restart_file=../../../refactored3_5/results/Xhb_check0/save_1000.pt \
+--restart_file=../../save/save_1000.pt \
 --n_gnn=3 \
 --dim_gnn=128 \
 --dropout_rate=0.0 \
