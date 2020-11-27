@@ -21,6 +21,7 @@ def dic_to_device(dic, device):
     
     return dic
 
+
 def load_data(filename):
     data = dict()
     with open(filename) as f:
@@ -64,9 +65,10 @@ def set_cuda_visible_device(ngpus):
 def initialize_model(model, device, load_save_file=False):
     if load_save_file:
         if device.type=="cpu":
-            model.load_state_dict(torch.load(load_save_file, map_location="cpu"), strict=False)
+            load = torch.load(load_save_file, map_location="cpu")
         else:
-            model.load_state_dict(torch.load(load_save_file), strict=False)
+            load = torch.load(load_save_file)
+        model.load_state_dict(load)
     else:
         for param in model.parameters():
             if param.dim() == 1:

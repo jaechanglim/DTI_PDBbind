@@ -5,7 +5,7 @@ Code for the paper: "[PIGNET: A physics-informed deep learning model toward gene
 - [Running](#running)
     - [Data Preprocessing](#data-preprocessing)
     - [Train](#train)
-    - [CASF2016 benchmark](#casf2016-benchmark)
+    - [Model benchmark with CASF2016 benchmark and csar](#model-benchmark-with-casf2016-benchmark-and-csar)
 - [Command Examples](#command-examples)
 - [Citing this work](#citing-this-work)
 
@@ -30,10 +30,10 @@ conda activate pignet
 
 ## Running 
 ### Data Preprocessing
-To prepare our dataset for train and test, change directory to `data`, and follow the instructions.
+To prepare our dataset for train and test, change directory to [data](https://github.com/jaechanglim/DTI_PDBbind/tree/master/data), and follow the instructions.
 
 ### Train
-**Important**: Default values of the rest of the arguments are set as the best parameters, which generated our results in the paper. Also, set `interaction_net` argument as `True`. It will affect the model enormously.
+> **Important**: Default values of the rest of the arguments are set as the best parameters, which generated our results in the paper. Also, set `interaction_net` argument as `True`. It will affect the model enormously.
 
 PIGNet uses four dataset: original(`data_dir`), docking(`data_dir2`), random\_screening(`data_dir3`), and cross\_screening(`data_dir4`), and each dataset has three arguments for train.
 - `data_dir`: Directory consists of the preprocessed pickle data.
@@ -59,7 +59,9 @@ We also realized 3D CNN model of [KDEEP](https://pubs.acs.org/doi/10.1021/acs.jc
 - `lattice_dim`: Size of the 3D lattice.
 - `scaling`: Interval of the lattice points.
 
-### CASF2016 benchmark
+### Model benchmark with CASF2016 benchmark and csar
+> **Important**: To benchmark the model with CASF2016 benchmark, you should prepare `CASF-2016`, `csar1` and `csar2` data in [data](https://github.com/jaechanglim/DTI_PDBbind/tree/master/data) directory first.
+
 Inside the `benchmarks` directory, execute `../test.py` with the corresponding test datasets. We did several benchmark study with CASF-2016 and csar datasets.
 To test the model with specific dataset, give three arguments for test dataset.
 - `data_dir`: Directory consists of the preprocessed pickle data.
@@ -73,34 +75,48 @@ To test the model with uncertainty, add the following arguments:
 - `with_uncertainty`: Flag of model trained with or without uncertainty.
 - `n_mc_sampling`: Number of the Monte-Carlo sampling.
 
-For different test dataset, executing `../test.py` code will generate several different result files. Followings are the ways to get the score for each benchmark. Execute the commands at the `benchmarks` directory. To get the *R score*, you should forward the std output to `output_file` for each benchmark.
 
-> Csar1
+> **Important:** For different test dataset, executing `../test.py` code will generate several different result files. Followings are the ways to get the score for each benchmark. Execute the commands at the `benchmarks` directory. To get the *R score*, you should forward the std output to `output_file` for each benchmark.
+
+* Csar1
+
+You can just execute `csar1_test.sh` at the `benchmarks/csar1` directory. To get the R value from the forwarded `csar1_output_file`, just execute following:
 ```
 grep 'R:' {csar1_output_file}*
 ```
 
-> Csar2
+* Csar2
+
+You can just execute `csar2_test.sh` at the `benchmarks/csar2` directory. To get the R value from the forwarded `csar2_output_file`, just execute following:
 ```
 grep 'R:' {csar2_output_file}*
 ```
 
-> Scoring power
+* Scoring power
+
+You can just execute `scoring_test.sh` at the `benchmarks/scoring` directory. Then, execute the following command, where `scoring_result_file` is argument value of `test_result_filename` of `test.py`.
 ```
 python ../casf2016_benchmark/scoring_power.py {scoring_result_file} {epoch}
 ```
 
 * Ranking power
+
+Ranking power uses `scoring_result_file`. Just execute the following command, where `scoring_result_file` is argument value of `test_result_filename` of `test.py`.
 ```
 python ../casf2016_benchmark/ranking_power.py {scoring_result_file} {epoch}
 ```
 * docking power
+
+You can just execute `docking_test.sh` at the `benchmarks/docking` directory. Then, execute the following command, where `docking_result_file` is argument value of `test_result_filename` of `test.py`.
 ```
 python ../casf2016_benchmark/docking_power.py {docking_result_file} {epoch}
 ```
 * screening power
+
+To compute the screening power, you should iterate keys from 1 to 100 as shown in `benchmarks/screening/screening_test.sh`. Then, execute the following commands inside `benchmarks/screening` directory.
 ```
-python ../casf2016_benchmark/screening_power.py {screening_result_file} {epoch}
+cat result_* > total_result.txt
+python ../casf2016_benchmark/screening_power.py total_result.txt {epoch}
 ```
 
 ## Command Examples
@@ -141,7 +157,7 @@ python -u train.py \
 
 > Test
 
-`test.sh` in `benchmarks` directory is the code that we used for training the model.
+`test.sh` in `benchmarks` directory is the basic code that we used for training the model.
 
 We use `casf2016_scoring`, `casf2016_ranking`, `casf2016_docking`, `casf2016_screening`, `csar1`, `csar2` to benchmark the model.
 Use different `{benchmark name}`, `{benchmark data dir}`, `{benchmark data file path}`, and `{benchmark data key dir}` for each benchmark, in the following code example.

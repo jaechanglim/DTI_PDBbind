@@ -88,51 +88,7 @@ class DTIHarmonic(nn.Module):
             b = torch.rand(1, dtype=torch.float32,
                            device=device, requires_grad=True) ** 2
             self.cal_variance_r = lambda x: a * torch.exp(-b * x)
-
-    def cal_intercept(self, h, valid1, valid2, dm):
-        valid1_repeat = valid1.unsqueeze(2).repeat(1, 1, valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1, valid1.size(1), 1)
-        C1 = self.cal_intercept_A(h).squeeze(-1)*0.01
-        C2 = self.cal_intercept_B(h).squeeze(-1)*0.1+0.1
-        retval = C1*torch.exp(-torch.pow(C2*dm, 2))
-        retval = retval*valid1_repeat*valid2_repeat
-        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
-        return retval
-
-    def cal_coolomb_interaction(self, dm, h, charge1, charge2, valid1, valid2):
-        charge1_repeat = charge1.unsqueeze(2).repeat(1, 1, charge2.size(1))
-        charge2_repeat = charge2.unsqueeze(1).repeat(1, charge1.size(1), 1)
-        valid1_repeat = valid1.unsqueeze(2).repeat(1, 1, valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1, valid1.size(1), 1)
-        A = self.cal_coolomb_interaction_A(h).squeeze(-1)
-        #A = self.coolomb_coeff*self.coolomb_coeff
-        N = self.cal_coolomb_interaction_N(h).squeeze(-1)*2+1
-        charge12 = charge1_repeat*charge2_repeat
-        energy = A*charge12*torch.pow(1/dm, N)
-        energy = energy*valid1_repeat*valid2_repeat
-        energy = energy.clamp(min=-100, max=100)
-        energy = energy.sum(1).sum(1).unsqueeze(-1)
-        return energy
-
-    def vina_steric(self, dm, h, vdw_radius1, vdw_radius2, valid1, valid2):
-        valid1_repeat = valid1.unsqueeze(2).repeat(1, 1, valid2.size(1))
-        valid2_repeat = valid2.unsqueeze(1).repeat(1, valid1.size(1), 1)
-        vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
-            .repeat(1, 1, vdw_radius2.size(1))
-        vdw_radius2_repeat = vdw_radius2.unsqueeze(1)\
-            .repeat(1, vdw_radius1.size(1), 1)
-        dm_0 = vdw_radius1_repeat+vdw_radius2_repeat
-        dm = dm-dm_0
-        g1 = torch.exp(-torch.pow(dm/0.5, 2))*-0.0356
-        g2 = torch.exp(-torch.pow((dm-3)/2, 2))*-0.00516
-        repulsion = dm*dm*0.84
-        zero_vec = torch.zeros_like(repulsion)
-        repulsion = torch.where(dm > 0, zero_vec, repulsion)
-        retval = g1+g2+repulsion
-        retval = retval*valid1_repeat*valid2_repeat
-        retval = retval.sum(-1).sum(-1).unsqueeze(-1)
-        return retval
-
+            
     def vina_hbond(self, dm, h, vdw_radius1, vdw_radius2, A):
         vdw_radius1_repeat = vdw_radius1.unsqueeze(2)\
             .repeat(1, 1, vdw_radius2.size(1))
@@ -293,15 +249,15 @@ class DTIHarmonic(nn.Module):
                                                sample["no_metal2"]))
         # hbond
         retval.append(self.vina_hbond(
-            dm, h, vdw_radius1, vdw_radius2, A_int[:, 1]))
+            dm, h, vdw_radius1, vdw_radius2, A_int[:,1]))
 
         # metal complex
         retval.append(self.vina_hbond(
-            dm, h, vdw_radius1, vdw_radius2, A_int[:, -1]))
+            dm, h, vdw_radius1, vdw_radius2, A_int[:,-1]))
 
         # hydrophobic
         retval.append(self.vina_hydrophobic(dm, h, vdw_radius1, vdw_radius2,
-                                            A_int[:, -2]))
+                                            A_int[:,-2]))
 
         # torsion
         retval.append(self.cal_torsion_energy(sample["delta_uff"]))

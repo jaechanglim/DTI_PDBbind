@@ -3,17 +3,12 @@ Data preprocessing codes for DTI\_PDBbind.
 
 Follow `README.md` to preprocess the data.
 
-Before start, you should download following datasets.
-- pdbbind\_v.2019\_refined\_set from [pdbbind](http://www.pdbbind-cn.org)
-- CSAR\_NRC\_HiQ\_Set from [csardock](http://www.csardock.org)
-- CASF-2016 from [pdbbind](http://www.pdbbind-cn.org/casf.php)
-
-After downloading each dataset, use `tar -xvzf` to unzip the `tar.gz` files.
 
 `pdbbind_v2019_random_screening/chembl_27_chemreps.txt` and `pdbbind_v2019_random_screening/id_smiles.txt` are downloaded from [CHEMBL](https://chembl.gitbook.io/chembl-interface-documentation/) and [IBS](https://www.ibscreen.com), respectively.
 
 ## Workflow
 Do preprocess as following order:
+0. [Download](#download): Download all necessary data.
 1. [rcsb_pdb](#rcsb_pdb): Download ligand sdfs from [rcsb](https://www.rcsb.org) via crawling.
 2. [pdbbind_v2019_refined](#pdbbind_v2019_refined): Main dataset.
 3. [pdbbind_v2019_docking_nowater](#pdbbind_v2019_docking_nowater): Docking dataset.
@@ -22,6 +17,14 @@ Do preprocess as following order:
 6. [CASF-2016](#CASF-2016): CASF-2016 benchmark dataset for testing the model.
 7. [csar1](#csar1): CSAR_NRC_HiQ_Set1 for testing the model.
 8. [csar2](#csar2): CSAR_NRC_HiQ_Set2 for testing the model.
+
+### Download
+Before start, you should download following datasets.
+- pdbbind\_v.2019\_refined\_set from [pdbbind](http://www.pdbbind-cn.org)
+- CSAR\_NRC\_HiQ\_Set from [csardock](http://www.csardock.org)
+- CASF-2016 from [pdbbind](http://www.pdbbind-cn.org/casf.php)
+
+After downloading each dataset, use `tar -xvzf` to unzip the `tar.gz` files.
 
 ### rcsb_pdb
 - We had already downloaded and preprocessed ligand sdf from [rcsb](https://www.rcsb.org). The sdfs are prepared in `rcsb_pdb/refined_data` directory, so you can skip the `rcsb_pdb` process.
