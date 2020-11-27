@@ -92,31 +92,33 @@ You can just execute `csar2_test.sh` at the `benchmarks/csar2` directory. To get
 grep 'R:' {csar2_output_file}*
 ```
 
+> **Important:** To test our save file(`save/save_1000.pt`), you should set `{epoch}` as 1000.
+
 * Scoring power
 
 You can just execute `scoring_test.sh` at the `benchmarks/scoring` directory. Then, execute the following command, where `scoring_result_file` is argument value of `test_result_filename` of `test.py`.
 ```
-python ../casf2016_benchmark/scoring_power.py {scoring_result_file} {epoch}
+python ../../casf2016_benchmark/scoring_power.py {scoring_result_file} {epoch}
 ```
 
 * Ranking power
 
 Ranking power uses `scoring_result_file`. Just execute the following command, where `scoring_result_file` is argument value of `test_result_filename` of `test.py`.
 ```
-python ../casf2016_benchmark/ranking_power.py {scoring_result_file} {epoch}
+python ../../casf2016_benchmark/ranking_power.py {scoring_result_file} {epoch}
 ```
 * docking power
 
 You can just execute `docking_test.sh` at the `benchmarks/docking` directory. Then, execute the following command, where `docking_result_file` is argument value of `test_result_filename` of `test.py`.
 ```
-python ../casf2016_benchmark/docking_power.py {docking_result_file} {epoch}
+python ../../casf2016_benchmark/docking_power.py {docking_result_file} {epoch}
 ```
 * screening power
 
-To compute the screening power, you should iterate keys from 1 to 100 as shown in `benchmarks/screening/screening_test.sh`. Then, execute the following commands inside `benchmarks/screening` directory.
+To compute the screening power, you should iterate keys from 0 to 99 as shown in `benchmarks/screening/screening_test.sh`. Then, execute the following commands inside `benchmarks/screening` directory.
 ```
 cat result_* > total_result.txt
-python ../casf2016_benchmark/screening_power.py total_result.txt {epoch}
+python ../../casf2016_benchmark/screening_power.py total_result.txt {epoch}
 ```
 
 ## Command Examples
