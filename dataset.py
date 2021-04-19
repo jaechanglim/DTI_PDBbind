@@ -3,7 +3,6 @@ from torch.utils.data.sampler import Sampler
 import utils
 import numpy as np
 import torch
-import random
 from rdkit.Chem.rdmolops import GetAdjacencyMatrix
 from rdkit import Chem
 from ase.io import read
@@ -27,7 +26,7 @@ from rdkit.Chem.TorsionFingerprints import CalculateTorsionLists, CalculateTorsi
 import math
 from rdkit.Chem.rdmolops import GetDistanceMatrix
 from rdkit.Chem.Lipinski import RotatableBondSmarts
-random.seed(0)
+#random.seed(0)
 
 interaction_types = ['saltbridge', 'hbonds', 'pication', 
         'pistack', 'halogen', 'waterbridge', 'hydrophobic', 'metal_complexes']

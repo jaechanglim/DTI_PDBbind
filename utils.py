@@ -129,12 +129,12 @@ def extract_binding_pocket(ligand, pdb):
     structure = parser.get_structure('protein', pdb)
     #print (count_residue(structure))
     ligand_positions = ligand.GetConformer().GetPositions()
-
     class GlySelect(Select):
         def accept_residue(self, residue):
             residue_positions = np.array([np.array(list(atom.get_vector())) \
                 for atom in residue.get_atoms() if 'H' not in atom.get_id()])
             #print (residue_positions)
+            if len(residue_positions)==0: return 0
             min_dis = np.min(distance_matrix(residue_positions, ligand_positions))
             if min_dis < 5.0:
                 return 1

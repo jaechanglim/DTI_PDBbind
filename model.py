@@ -1,5 +1,3 @@
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
