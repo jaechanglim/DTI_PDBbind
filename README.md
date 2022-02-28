@@ -1,3 +1,7 @@
+This repository has been updated.  
+For an updated version, you can visit https://github.com/ACE-KAIST/PIGNet.
+---
+
 Code for the paper: "[PIGNET: A physics-informed deep learning model toward generalized drug-target interaction predictions](https://arxiv.org/abs/2008.12249)" by Seokhyun Moon, Wonho Zhung, Soojung Yang, Jaechang Lim, Woo Youn Kim
 
 # Table of Contents
